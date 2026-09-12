@@ -1,0 +1,43 @@
+# Lesson 08: Membership and Maintenance
+
+## Goal
+
+See how cluster topology and operational APIs preserve the same invariants as
+ordinary KV operations.
+
+## Important files
+
+- [membership/](../etcdserver/membership/)
+- [api/membership/](../etcdserver/api/membership/)
+- [api/rafthttp/](../etcdserver/api/rafthttp/)
+- [api/v3rpc/maintenance.go](../etcdserver/api/v3rpc/maintenance.go)
+
+## Membership state
+
+Membership tracks members, learners, IDs, URLs, cluster identity, configuration
+changes, and persisted membership metadata. A member change affects the cluster
+and must follow the replicated change path.
+
+## Peer transport
+
+rafthttp carries Raft messages and snapshots between members. It is distinct
+from client-facing gRPC. When debugging, decide first whether failure is
+client-to-server or member-to-member.
+
+## Maintenance APIs
+
+Maintenance includes status, alarms, defragmentation, hashes, and related
+operations. These APIs inspect or coordinate durable state without casually
+bypassing consistency rules.
+
+## Exercise
+
+Trace member-add from the membership RPC to apply and persisted membership.
+Separately trace status and explain why it may be a read rather than a mutation.
+
+## Checkpoint
+
+Why must changing the member list be a cluster operation rather than a local
+configuration edit?
+
+For the relationship between membership, peer transport, and Raft, see [Lesson 13](./13-raft-in-this-project.md).
