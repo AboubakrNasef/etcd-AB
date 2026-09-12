@@ -1,0 +1,818 @@
+{
+  "nodes": [
+    {
+      "id": "file:etcdserver/api/v3compactor/periodic.go",
+      "type": "file",
+      "name": "periodic.go",
+      "filePath": "etcdserver/api/v3compactor/periodic.go",
+      "summary": "Runs periodic automatic MVCC compaction based on elapsed time and revision progress, with pause and resume controls.",
+      "tags": [
+        "compaction",
+        "mvcc",
+        "scheduler",
+        "maintenance",
+        "concurrency"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using package-level APIs and concurrency primitives where required."
+    },
+    {
+      "id": "function:etcdserver/api/v3compactor/periodic.go:newPeriodic",
+      "type": "function",
+      "name": "newPeriodic",
+      "filePath": "etcdserver/api/v3compactor/periodic.go",
+      "lineRange": [
+        51,
+        63
+      ],
+      "summary": "Provides the newPeriodic operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v3compactor/periodic.go:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "etcdserver/api/v3compactor/periodic.go",
+      "lineRange": [
+        100,
+        163
+      ],
+      "summary": "Provides the Run operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/v3compactor/periodic.go:Stop",
+      "type": "function",
+      "name": "Stop",
+      "filePath": "etcdserver/api/v3compactor/periodic.go",
+      "lineRange": [
+        192,
+        194
+      ],
+      "summary": "Provides the Stop operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v3compactor/periodic.go:Pause",
+      "type": "function",
+      "name": "Pause",
+      "filePath": "etcdserver/api/v3compactor/periodic.go",
+      "lineRange": [
+        197,
+        201
+      ],
+      "summary": "Provides the Pause operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v3compactor/periodic.go:Resume",
+      "type": "function",
+      "name": "Resume",
+      "filePath": "etcdserver/api/v3compactor/periodic.go",
+      "lineRange": [
+        204,
+        208
+      ],
+      "summary": "Provides the Resume operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:etcdserver/api/v3compactor/periodic.go:Periodic",
+      "type": "class",
+      "name": "Periodic",
+      "filePath": "etcdserver/api/v3compactor/periodic.go",
+      "lineRange": [
+        32,
+        47
+      ],
+      "summary": "Represents the Periodic state and behavior for this module.",
+      "tags": [
+        "go",
+        "data-model",
+        "state",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdserver/api/v3compactor/revision.go",
+      "type": "file",
+      "name": "revision.go",
+      "filePath": "etcdserver/api/v3compactor/revision.go",
+      "summary": "Runs automatic MVCC compaction at a revision retention boundary, with lifecycle and pause controls.",
+      "tags": [
+        "compaction",
+        "mvcc",
+        "scheduler",
+        "retention",
+        "concurrency"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using package-level APIs and concurrency primitives where required."
+    },
+    {
+      "id": "function:etcdserver/api/v3compactor/revision.go:newRevision",
+      "type": "function",
+      "name": "newRevision",
+      "filePath": "etcdserver/api/v3compactor/revision.go",
+      "lineRange": [
+        50,
+        60
+      ],
+      "summary": "Provides the newRevision operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v3compactor/revision.go:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "etcdserver/api/v3compactor/revision.go",
+      "lineRange": [
+        65,
+        112
+      ],
+      "summary": "Provides the Run operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/v3compactor/revision.go:Stop",
+      "type": "function",
+      "name": "Stop",
+      "filePath": "etcdserver/api/v3compactor/revision.go",
+      "lineRange": [
+        115,
+        117
+      ],
+      "summary": "Provides the Stop operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v3compactor/revision.go:Pause",
+      "type": "function",
+      "name": "Pause",
+      "filePath": "etcdserver/api/v3compactor/revision.go",
+      "lineRange": [
+        120,
+        124
+      ],
+      "summary": "Provides the Pause operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v3compactor/revision.go:Resume",
+      "type": "function",
+      "name": "Resume",
+      "filePath": "etcdserver/api/v3compactor/revision.go",
+      "lineRange": [
+        127,
+        131
+      ],
+      "summary": "Provides the Resume operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:etcdserver/api/v3compactor/revision.go:Revision",
+      "type": "class",
+      "name": "Revision",
+      "filePath": "etcdserver/api/v3compactor/revision.go",
+      "lineRange": [
+        32,
+        46
+      ],
+      "summary": "Represents the Revision state and behavior for this module.",
+      "tags": [
+        "go",
+        "data-model",
+        "state",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "function:etcdserver/api/v3compactor/periodic.go:newPeriodic",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "function:etcdserver/api/v3compactor/periodic.go:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "function:etcdserver/api/v3compactor/periodic.go:Run",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "function:etcdserver/api/v3compactor/periodic.go:Stop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "function:etcdserver/api/v3compactor/periodic.go:Stop",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "function:etcdserver/api/v3compactor/periodic.go:Pause",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "function:etcdserver/api/v3compactor/periodic.go:Pause",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "function:etcdserver/api/v3compactor/periodic.go:Resume",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "function:etcdserver/api/v3compactor/periodic.go:Resume",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "class:etcdserver/api/v3compactor/periodic.go:Periodic",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "class:etcdserver/api/v3compactor/periodic.go:Periodic",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "file:storage/mvcc/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "file:storage/mvcc/hash.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "file:storage/mvcc/hash_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "file:storage/mvcc/index.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "file:storage/mvcc/index_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "file:storage/mvcc/index_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "file:storage/mvcc/key_index.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "file:storage/mvcc/key_index_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "file:storage/mvcc/kv.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "file:storage/mvcc/kv_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "file:storage/mvcc/kv_view.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "file:storage/mvcc/kvstore.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "file:storage/mvcc/kvstore_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "file:storage/mvcc/kvstore_compaction.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "file:storage/mvcc/kvstore_compaction_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "file:storage/mvcc/kvstore_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "file:storage/mvcc/kvstore_txn.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "file:storage/mvcc/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "file:storage/mvcc/metrics_txn.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "file:storage/mvcc/revision.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "file:storage/mvcc/store.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "file:storage/mvcc/store_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "file:storage/mvcc/watchable_store.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "file:storage/mvcc/watchable_store_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "file:storage/mvcc/watchable_store_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "file:storage/mvcc/watchable_store_txn.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "file:storage/mvcc/watcher.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "file:storage/mvcc/watcher_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "file:storage/mvcc/watcher_group.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic.go",
+      "target": "file:storage/mvcc/watcher_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "function:etcdserver/api/v3compactor/revision.go:newRevision",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "function:etcdserver/api/v3compactor/revision.go:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "function:etcdserver/api/v3compactor/revision.go:Run",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "function:etcdserver/api/v3compactor/revision.go:Stop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "function:etcdserver/api/v3compactor/revision.go:Stop",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "function:etcdserver/api/v3compactor/revision.go:Pause",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "function:etcdserver/api/v3compactor/revision.go:Pause",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "function:etcdserver/api/v3compactor/revision.go:Resume",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "function:etcdserver/api/v3compactor/revision.go:Resume",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "class:etcdserver/api/v3compactor/revision.go:Revision",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "class:etcdserver/api/v3compactor/revision.go:Revision",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "file:storage/mvcc/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "file:storage/mvcc/hash.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "file:storage/mvcc/hash_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "file:storage/mvcc/index.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "file:storage/mvcc/index_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "file:storage/mvcc/index_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "file:storage/mvcc/key_index.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "file:storage/mvcc/key_index_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "file:storage/mvcc/kv.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "file:storage/mvcc/kv_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "file:storage/mvcc/kv_view.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "file:storage/mvcc/kvstore.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "file:storage/mvcc/kvstore_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "file:storage/mvcc/kvstore_compaction.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "file:storage/mvcc/kvstore_compaction_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "file:storage/mvcc/kvstore_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "file:storage/mvcc/kvstore_txn.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "file:storage/mvcc/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "file:storage/mvcc/metrics_txn.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "file:storage/mvcc/revision.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "file:storage/mvcc/store.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "file:storage/mvcc/store_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "file:storage/mvcc/watchable_store.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "file:storage/mvcc/watchable_store_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "file:storage/mvcc/watchable_store_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "file:storage/mvcc/watchable_store_txn.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "file:storage/mvcc/watcher.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "file:storage/mvcc/watcher_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "file:storage/mvcc/watcher_group.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision.go",
+      "target": "file:storage/mvcc/watcher_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

@@ -1,0 +1,1152 @@
+{
+  "nodes": [
+    {
+      "id": "file:etcdserver/interface.go",
+      "type": "file",
+      "name": "interface.go",
+      "filePath": "etcdserver/interface.go",
+      "summary": "Defines small server lifecycle and linearizable-read interfaces used to decouple raft and API components.",
+      "tags": [
+        "service",
+        "utility",
+        "etcdserver"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/interface.go:ApplyWait",
+      "type": "function",
+      "name": "ApplyWait",
+      "filePath": "etcdserver/interface.go",
+      "lineRange": [
+        22,
+        24
+      ],
+      "summary": "Coordinates apply wait as part of the server lifecycle and request-processing pipeline.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/interface.go:Done",
+      "type": "function",
+      "name": "Done",
+      "filePath": "etcdserver/interface.go",
+      "lineRange": [
+        26,
+        28
+      ],
+      "summary": "Implements done behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/interface.go:LeaderChanged",
+      "type": "function",
+      "name": "LeaderChanged",
+      "filePath": "etcdserver/interface.go",
+      "lineRange": [
+        30,
+        32
+      ],
+      "summary": "Implements leader changed behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/interface.go:NextRequestID",
+      "type": "function",
+      "name": "NextRequestID",
+      "filePath": "etcdserver/interface.go",
+      "lineRange": [
+        34,
+        36
+      ],
+      "summary": "Implements next request id behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/interface.go:RequestTimeout",
+      "type": "function",
+      "name": "RequestTimeout",
+      "filePath": "etcdserver/interface.go",
+      "lineRange": [
+        38,
+        40
+      ],
+      "summary": "Implements request timeout behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/interface.go:Stopping",
+      "type": "function",
+      "name": "Stopping",
+      "filePath": "etcdserver/interface.go",
+      "lineRange": [
+        42,
+        44
+      ],
+      "summary": "Coordinates stopping as part of the server lifecycle and request-processing pipeline.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/interface.go:LinearizableReadNotify",
+      "type": "function",
+      "name": "LinearizableReadNotify",
+      "filePath": "etcdserver/interface.go",
+      "lineRange": [
+        46,
+        48
+      ],
+      "summary": "Implements linearizable read notify behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdserver/metrics.go",
+      "type": "file",
+      "name": "metrics.go",
+      "filePath": "etcdserver/metrics.go",
+      "summary": "Declares server-wide metrics and runtime file-descriptor monitoring.",
+      "tags": [
+        "monitoring",
+        "metrics",
+        "runtime"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/metrics.go:init",
+      "type": "function",
+      "name": "init",
+      "filePath": "etcdserver/metrics.go",
+      "lineRange": [
+        167,
+        194
+      ],
+      "summary": "Implements init behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/metrics.go:EnableAllRuntimeMetrics",
+      "type": "function",
+      "name": "EnableAllRuntimeMetrics",
+      "filePath": "etcdserver/metrics.go",
+      "lineRange": [
+        201,
+        213
+      ],
+      "summary": "Implements enable all runtime metrics behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/metrics.go:monitorFileDescriptor",
+      "type": "function",
+      "name": "monitorFileDescriptor",
+      "filePath": "etcdserver/metrics.go",
+      "lineRange": [
+        215,
+        245
+      ],
+      "summary": "Coordinates monitor file descriptor as part of the server lifecycle and request-processing pipeline.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdserver/raft.go",
+      "type": "file",
+      "name": "raft.go",
+      "filePath": "etcdserver/raft.go",
+      "summary": "Coordinates the raft node lifecycle, ready processing, persistence, application, message delivery, and shutdown.",
+      "tags": [
+        "raft",
+        "event-handler",
+        "service"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/raft.go:init",
+      "type": "function",
+      "name": "init",
+      "filePath": "etcdserver/raft.go",
+      "lineRange": [
+        55,
+        64
+      ],
+      "summary": "Implements init behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/raft.go:newRaftNode",
+      "type": "function",
+      "name": "newRaftNode",
+      "filePath": "etcdserver/raft.go",
+      "lineRange": [
+        123,
+        156
+      ],
+      "summary": "Implements new raft node behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/raft.go:start",
+      "type": "function",
+      "name": "start",
+      "filePath": "etcdserver/raft.go",
+      "lineRange": [
+        174,
+        342
+      ],
+      "summary": "Coordinates start as part of the server lifecycle and request-processing pipeline.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/raft.go:updateCommittedIndex",
+      "type": "function",
+      "name": "updateCommittedIndex",
+      "filePath": "etcdserver/raft.go",
+      "lineRange": [
+        344,
+        355
+      ],
+      "summary": "Implements update committed index behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/raft.go:processMessages",
+      "type": "function",
+      "name": "processMessages",
+      "filePath": "etcdserver/raft.go",
+      "lineRange": [
+        357,
+        402
+      ],
+      "summary": "Coordinates process messages as part of the server lifecycle and request-processing pipeline.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/raft.go:stop",
+      "type": "function",
+      "name": "stop",
+      "filePath": "etcdserver/raft.go",
+      "lineRange": [
+        408,
+        418
+      ],
+      "summary": "Coordinates stop as part of the server lifecycle and request-processing pipeline.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/raft.go:ReadState",
+      "type": "function",
+      "name": "ReadState",
+      "filePath": "etcdserver/raft.go",
+      "lineRange": [
+        451,
+        453
+      ],
+      "summary": "Implements read state behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdserver/raft_test.go",
+      "type": "file",
+      "name": "raft_test.go",
+      "filePath": "etcdserver/raft_test.go",
+      "summary": "Tests raft-node startup, application blocking, configuration changes, duplicate responses, status reporting, and repeated shutdown.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/raft_test.go:TestGetIDs",
+      "type": "function",
+      "name": "TestGetIDs",
+      "filePath": "etcdserver/raft_test.go",
+      "lineRange": [
+        39,
+        98
+      ],
+      "summary": "Verifies get ids behavior for the raft_test.go implementation.",
+      "tags": [
+        "test",
+        "validation",
+        "behavior"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/raft_test.go:TestCreateConfigChangeEnts",
+      "type": "function",
+      "name": "TestCreateConfigChangeEnts",
+      "filePath": "etcdserver/raft_test.go",
+      "lineRange": [
+        100,
+        179
+      ],
+      "summary": "Verifies create config change ents behavior for the raft_test.go implementation.",
+      "tags": [
+        "test",
+        "validation",
+        "behavior"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/raft_test.go:TestStopRaftWhenWaitingForApplyDone",
+      "type": "function",
+      "name": "TestStopRaftWhenWaitingForApplyDone",
+      "filePath": "etcdserver/raft_test.go",
+      "lineRange": [
+        181,
+        211
+      ],
+      "summary": "Verifies stop raft when waiting for apply done behavior for the raft_test.go implementation.",
+      "tags": [
+        "test",
+        "validation",
+        "behavior"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/raft_test.go:TestConfigChangeBlocksApply",
+      "type": "function",
+      "name": "TestConfigChangeBlocksApply",
+      "filePath": "etcdserver/raft_test.go",
+      "lineRange": [
+        214,
+        265
+      ],
+      "summary": "Verifies config change blocks apply behavior for the raft_test.go implementation.",
+      "tags": [
+        "test",
+        "validation",
+        "behavior"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/raft_test.go:TestProcessDuplicatedAppRespMessage",
+      "type": "function",
+      "name": "TestProcessDuplicatedAppRespMessage",
+      "filePath": "etcdserver/raft_test.go",
+      "lineRange": [
+        267,
+        305
+      ],
+      "summary": "Verifies process duplicated app resp message behavior for the raft_test.go implementation.",
+      "tags": [
+        "test",
+        "validation",
+        "behavior"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/raft_test.go:TestExpvarWithNoRaftStatus",
+      "type": "function",
+      "name": "TestExpvarWithNoRaftStatus",
+      "filePath": "etcdserver/raft_test.go",
+      "lineRange": [
+        309,
+        318
+      ],
+      "summary": "Verifies expvar with no raft status behavior for the raft_test.go implementation.",
+      "tags": [
+        "test",
+        "validation",
+        "behavior"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/raft_test.go:TestStopRaftNodeMoreThanOnce",
+      "type": "function",
+      "name": "TestStopRaftNodeMoreThanOnce",
+      "filePath": "etcdserver/raft_test.go",
+      "lineRange": [
+        320,
+        344
+      ],
+      "summary": "Verifies stop raft node more than once behavior for the raft_test.go implementation.",
+      "tags": [
+        "test",
+        "validation",
+        "behavior"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:etcdserver/interface.go",
+      "target": "function:etcdserver/interface.go:ApplyWait",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/interface.go",
+      "target": "function:etcdserver/interface.go:ApplyWait",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/interface.go",
+      "target": "function:etcdserver/interface.go:Done",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/interface.go",
+      "target": "function:etcdserver/interface.go:Done",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/interface.go",
+      "target": "function:etcdserver/interface.go:LeaderChanged",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/interface.go",
+      "target": "function:etcdserver/interface.go:LeaderChanged",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/interface.go",
+      "target": "function:etcdserver/interface.go:NextRequestID",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/interface.go",
+      "target": "function:etcdserver/interface.go:NextRequestID",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/interface.go",
+      "target": "function:etcdserver/interface.go:RequestTimeout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/interface.go",
+      "target": "function:etcdserver/interface.go:RequestTimeout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/interface.go",
+      "target": "function:etcdserver/interface.go:Stopping",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/interface.go",
+      "target": "function:etcdserver/interface.go:Stopping",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/interface.go",
+      "target": "function:etcdserver/interface.go:LinearizableReadNotify",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/interface.go",
+      "target": "function:etcdserver/interface.go:LinearizableReadNotify",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/metrics.go",
+      "target": "function:etcdserver/metrics.go:init",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/metrics.go",
+      "target": "function:etcdserver/metrics.go:EnableAllRuntimeMetrics",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/metrics.go",
+      "target": "function:etcdserver/metrics.go:EnableAllRuntimeMetrics",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/metrics.go",
+      "target": "function:etcdserver/metrics.go:monitorFileDescriptor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "function:etcdserver/raft.go:init",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "function:etcdserver/raft.go:newRaftNode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "function:etcdserver/raft.go:start",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "function:etcdserver/raft.go:updateCommittedIndex",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "function:etcdserver/raft.go:processMessages",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "function:etcdserver/raft.go:stop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "function:etcdserver/raft.go:ReadState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "function:etcdserver/raft.go:ReadState",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:etcdserver/api/rafthttp/coder.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:etcdserver/api/rafthttp/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:etcdserver/api/rafthttp/fake_roundtripper_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:etcdserver/api/rafthttp/functional_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:etcdserver/api/rafthttp/http.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:etcdserver/api/rafthttp/http_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:etcdserver/api/rafthttp/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:etcdserver/api/rafthttp/msg_codec.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:etcdserver/api/rafthttp/msg_codec_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:etcdserver/api/rafthttp/msgappv2_codec.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:etcdserver/api/rafthttp/msgappv2_codec_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:etcdserver/api/rafthttp/peer.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:etcdserver/api/rafthttp/peer_status.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:etcdserver/api/rafthttp/peer_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:etcdserver/api/rafthttp/pipeline.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:etcdserver/api/rafthttp/pipeline_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:etcdserver/api/rafthttp/probing_status.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:etcdserver/api/rafthttp/remote.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:etcdserver/api/rafthttp/snapshot_sender.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:etcdserver/api/rafthttp/snapshot_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:etcdserver/api/rafthttp/stream.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:etcdserver/api/rafthttp/stream_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:etcdserver/api/rafthttp/transport.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:etcdserver/api/rafthttp/transport_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:etcdserver/api/rafthttp/transport_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:etcdserver/api/rafthttp/urlpick.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:etcdserver/api/rafthttp/urlpick_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:etcdserver/api/rafthttp/util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:etcdserver/api/rafthttp/util_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:storage/backend.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:storage/hooks.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:storage/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:storage/quota.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:storage/quota_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:storage/storage.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:storage/util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft_test.go",
+      "target": "function:etcdserver/raft_test.go:TestGetIDs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/raft_test.go",
+      "target": "function:etcdserver/raft_test.go:TestGetIDs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/raft_test.go",
+      "target": "function:etcdserver/raft_test.go:TestCreateConfigChangeEnts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/raft_test.go",
+      "target": "function:etcdserver/raft_test.go:TestCreateConfigChangeEnts",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/raft_test.go",
+      "target": "function:etcdserver/raft_test.go:TestStopRaftWhenWaitingForApplyDone",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/raft_test.go",
+      "target": "function:etcdserver/raft_test.go:TestStopRaftWhenWaitingForApplyDone",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/raft_test.go",
+      "target": "function:etcdserver/raft_test.go:TestConfigChangeBlocksApply",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/raft_test.go",
+      "target": "function:etcdserver/raft_test.go:TestConfigChangeBlocksApply",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/raft_test.go",
+      "target": "function:etcdserver/raft_test.go:TestProcessDuplicatedAppRespMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/raft_test.go",
+      "target": "function:etcdserver/raft_test.go:TestProcessDuplicatedAppRespMessage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/raft_test.go",
+      "target": "function:etcdserver/raft_test.go:TestExpvarWithNoRaftStatus",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/raft_test.go",
+      "target": "function:etcdserver/raft_test.go:TestExpvarWithNoRaftStatus",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/raft_test.go",
+      "target": "function:etcdserver/raft_test.go:TestStopRaftNodeMoreThanOnce",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/raft_test.go",
+      "target": "function:etcdserver/raft_test.go:TestStopRaftNodeMoreThanOnce",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/raft_test.go",
+      "target": "file:etcdserver/api/membership/cluster.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft_test.go",
+      "target": "file:etcdserver/api/membership/cluster_opts.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft_test.go",
+      "target": "file:etcdserver/api/membership/cluster_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft_test.go",
+      "target": "file:etcdserver/api/membership/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft_test.go",
+      "target": "file:etcdserver/api/membership/errors.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft_test.go",
+      "target": "file:etcdserver/api/membership/member.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft_test.go",
+      "target": "file:etcdserver/api/membership/member_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft_test.go",
+      "target": "file:etcdserver/api/membership/membership_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft_test.go",
+      "target": "file:etcdserver/api/membership/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft_test.go",
+      "target": "file:etcdserver/api/membership/store.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft_test.go",
+      "target": "file:etcdserver/api/membership/storev2.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft_test.go",
+      "target": "file:etcdserver/api/membership/storev2_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft_test.go",
+      "target": "file:mock/mockstorage/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft_test.go",
+      "target": "file:mock/mockstorage/storage_recorder.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft_test.go",
+      "target": "file:storage/backend.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft_test.go",
+      "target": "file:storage/hooks.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft_test.go",
+      "target": "file:storage/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft_test.go",
+      "target": "file:storage/quota.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft_test.go",
+      "target": "file:storage/quota_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft_test.go",
+      "target": "file:storage/storage.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft_test.go",
+      "target": "file:storage/util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/raft.go",
+      "target": "file:etcdserver/raft_test.go",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

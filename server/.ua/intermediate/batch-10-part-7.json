@@ -1,0 +1,691 @@
+{
+  "nodes": [
+    {
+      "id": "file:proxy/grpcproxy/watch.go",
+      "type": "file",
+      "name": "watch.go",
+      "filePath": "proxy/grpcproxy/watch.go",
+      "summary": "Implements the gRPC watch proxy, coordinating authorization, range registration, receive/send loops, leader loss, and stream cleanup.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "watch",
+        "streaming"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Go implementation using protobuf RPC types, raft interfaces, concurrency primitives, and Prometheus or zap integration where applicable."
+    },
+    {
+      "id": "file:storage/metrics.go",
+      "type": "file",
+      "name": "metrics.go",
+      "filePath": "storage/metrics.go",
+      "summary": "Registers Prometheus metrics for the storage subsystem.",
+      "tags": [
+        "metrics",
+        "storage",
+        "prometheus",
+        "observability"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Go implementation using protobuf RPC types, raft interfaces, concurrency primitives, and Prometheus or zap integration where applicable."
+    },
+    {
+      "id": "file:storage/quota_test.go",
+      "type": "file",
+      "name": "quota_test.go",
+      "filePath": "storage/quota_test.go",
+      "summary": "Tests quota cost calculations for put operations and transactional request combinations.",
+      "tags": [
+        "test",
+        "quota",
+        "storage",
+        "validation"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using protobuf RPC types, raft interfaces, concurrency primitives, and Prometheus or zap integration where applicable."
+    },
+    {
+      "id": "file:storage/util.go",
+      "type": "file",
+      "name": "util.go",
+      "filePath": "storage/util.go",
+      "summary": "Builds raft configuration-change entries and derives effective voter and learner IDs from snapshots and WAL entries.",
+      "tags": [
+        "storage",
+        "raft",
+        "wal",
+        "membership"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using protobuf RPC types, raft interfaces, concurrency primitives, and Prometheus or zap integration where applicable."
+    },
+    {
+      "id": "function:proxy/grpcproxy/watch.go:NewWatchProxy",
+      "type": "function",
+      "name": "NewWatchProxy",
+      "filePath": "proxy/grpcproxy/watch.go",
+      "lineRange": [
+        54,
+        81
+      ],
+      "summary": "Implements NewWatchProxy behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "watch"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:proxy/grpcproxy/watch.go:Watch",
+      "type": "function",
+      "name": "Watch",
+      "filePath": "proxy/grpcproxy/watch.go",
+      "lineRange": [
+        83,
+        168
+      ],
+      "summary": "Implements Watch behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "watch"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:proxy/grpcproxy/watch.go:close",
+      "type": "function",
+      "name": "close",
+      "filePath": "proxy/grpcproxy/watch.go",
+      "lineRange": [
+        194,
+        211
+      ],
+      "summary": "Implements close behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "watch"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/watch.go:checkPermissionForWatch",
+      "type": "function",
+      "name": "checkPermissionForWatch",
+      "filePath": "proxy/grpcproxy/watch.go",
+      "lineRange": [
+        213,
+        229
+      ],
+      "summary": "Implements checkPermissionForWatch behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "watch"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/watch.go:recvLoop",
+      "type": "function",
+      "name": "recvLoop",
+      "filePath": "proxy/grpcproxy/watch.go",
+      "lineRange": [
+        231,
+        298
+      ],
+      "summary": "Implements recvLoop behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "watch"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:proxy/grpcproxy/watch.go:sendLoop",
+      "type": "function",
+      "name": "sendLoop",
+      "filePath": "proxy/grpcproxy/watch.go",
+      "lineRange": [
+        300,
+        314
+      ],
+      "summary": "Implements sendLoop behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "watch"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/watch.go:delete",
+      "type": "function",
+      "name": "delete",
+      "filePath": "proxy/grpcproxy/watch.go",
+      "lineRange": [
+        316,
+        332
+      ],
+      "summary": "Implements delete behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "watch"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:proxy/grpcproxy/watch.go:watchProxy",
+      "type": "class",
+      "name": "watchProxy",
+      "filePath": "proxy/grpcproxy/watch.go",
+      "lineRange": [
+        32,
+        52
+      ],
+      "summary": "Defines the watchProxy test or adapter abstraction and its associated state and methods.",
+      "tags": [
+        "go",
+        "type-definition",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:proxy/grpcproxy/watch.go:watchProxyStream",
+      "type": "class",
+      "name": "watchProxyStream",
+      "filePath": "proxy/grpcproxy/watch.go",
+      "lineRange": [
+        171,
+        192
+      ],
+      "summary": "Defines the watchProxyStream test or adapter abstraction and its associated state and methods.",
+      "tags": [
+        "go",
+        "type-definition",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/quota_test.go:TestCostTxn",
+      "type": "function",
+      "name": "TestCostTxn",
+      "filePath": "storage/quota_test.go",
+      "lineRange": [
+        25,
+        80
+      ],
+      "summary": "Tests CostTxn behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/util.go:CreateConfigChangeEnts",
+      "type": "function",
+      "name": "CreateConfigChangeEnts",
+      "filePath": "storage/util.go",
+      "lineRange": [
+        34,
+        93
+      ],
+      "summary": "Implements CreateConfigChangeEnts behavior in this component.",
+      "tags": [
+        "storage",
+        "raft",
+        "wal"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/util.go:GetEffectiveNodeIDsFromWALEntries",
+      "type": "function",
+      "name": "GetEffectiveNodeIDsFromWALEntries",
+      "filePath": "storage/util.go",
+      "lineRange": [
+        101,
+        137
+      ],
+      "summary": "Implements GetEffectiveNodeIDsFromWALEntries behavior in this component.",
+      "tags": [
+        "storage",
+        "raft",
+        "wal"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:proxy/grpcproxy/watch.go",
+      "target": "function:proxy/grpcproxy/watch.go:NewWatchProxy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch.go",
+      "target": "function:proxy/grpcproxy/watch.go:NewWatchProxy",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch.go",
+      "target": "function:proxy/grpcproxy/watch.go:Watch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch.go",
+      "target": "function:proxy/grpcproxy/watch.go:Watch",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch.go",
+      "target": "function:proxy/grpcproxy/watch.go:close",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch.go",
+      "target": "function:proxy/grpcproxy/watch.go:checkPermissionForWatch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch.go",
+      "target": "function:proxy/grpcproxy/watch.go:recvLoop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch.go",
+      "target": "function:proxy/grpcproxy/watch.go:sendLoop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch.go",
+      "target": "function:proxy/grpcproxy/watch.go:delete",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch.go",
+      "target": "class:proxy/grpcproxy/watch.go:watchProxy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch.go",
+      "target": "class:proxy/grpcproxy/watch.go:watchProxyStream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/quota_test.go",
+      "target": "function:storage/quota_test.go:TestCostTxn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/quota_test.go",
+      "target": "function:storage/quota_test.go:TestCostTxn",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/util.go",
+      "target": "function:storage/util.go:CreateConfigChangeEnts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/util.go",
+      "target": "function:storage/util.go:CreateConfigChangeEnts",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/util.go",
+      "target": "function:storage/util.go:GetEffectiveNodeIDsFromWALEntries",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/util.go",
+      "target": "function:storage/util.go:GetEffectiveNodeIDsFromWALEntries",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch.go",
+      "target": "file:etcdserver/api/v3rpc/auth.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch.go",
+      "target": "file:etcdserver/api/v3rpc/codec.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch.go",
+      "target": "file:etcdserver/api/v3rpc/grpc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch.go",
+      "target": "file:etcdserver/api/v3rpc/header.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch.go",
+      "target": "file:etcdserver/api/v3rpc/health.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch.go",
+      "target": "file:etcdserver/api/v3rpc/interceptor.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch.go",
+      "target": "file:etcdserver/api/v3rpc/key.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch.go",
+      "target": "file:etcdserver/api/v3rpc/key_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch.go",
+      "target": "file:etcdserver/api/v3rpc/lease.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch.go",
+      "target": "file:etcdserver/api/v3rpc/maintenance.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch.go",
+      "target": "file:etcdserver/api/v3rpc/member.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch.go",
+      "target": "file:etcdserver/api/v3rpc/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch.go",
+      "target": "file:etcdserver/api/v3rpc/quota.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch.go",
+      "target": "file:etcdserver/api/v3rpc/util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch.go",
+      "target": "file:etcdserver/api/v3rpc/util_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch.go",
+      "target": "file:etcdserver/api/v3rpc/validationfuzz_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch.go",
+      "target": "file:etcdserver/api/v3rpc/watch.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch.go",
+      "target": "file:etcdserver/api/v3rpc/watch_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/util.go",
+      "target": "file:etcdserver/api/membership/cluster.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/util.go",
+      "target": "file:etcdserver/api/membership/cluster_opts.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/util.go",
+      "target": "file:etcdserver/api/membership/cluster_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/util.go",
+      "target": "file:etcdserver/api/membership/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/util.go",
+      "target": "file:etcdserver/api/membership/errors.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/util.go",
+      "target": "file:etcdserver/api/membership/member.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/util.go",
+      "target": "file:etcdserver/api/membership/member_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/util.go",
+      "target": "file:etcdserver/api/membership/membership_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/util.go",
+      "target": "file:etcdserver/api/membership/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/util.go",
+      "target": "file:etcdserver/api/membership/store.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/util.go",
+      "target": "file:etcdserver/api/membership/storev2.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/util.go",
+      "target": "file:etcdserver/api/membership/storev2_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:proxy/grpcproxy/watch.go:Watch",
+      "target": "function:etcdserver/zap_raft.go:Error",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:proxy/grpcproxy/watch.go:Watch",
+      "target": "function:proxy/grpcproxy/adapter/chan_stream.go:Context",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:proxy/grpcproxy/watch.go:Watch",
+      "target": "function:proxy/grpcproxy/adapter/chan_stream.go:Context",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:proxy/grpcproxy/watch.go:Watch",
+      "target": "function:etcdserver/zap_raft.go:Error",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:proxy/grpcproxy/watch.go:recvLoop",
+      "target": "function:etcdserver/zap_raft.go:Error",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:proxy/grpcproxy/watch.go:recvLoop",
+      "target": "function:etcdserver/zap_raft.go:Error",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:proxy/grpcproxy/watch.go:recvLoop",
+      "target": "function:etcdserver/zap_raft.go:Debug",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:proxy/grpcproxy/watch.go:recvLoop",
+      "target": "function:etcdserver/zap_raft.go:Debug",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:proxy/grpcproxy/watch.go:recvLoop",
+      "target": "function:etcdserver/zap_raft.go:Error",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/util.go:CreateConfigChangeEnts",
+      "target": "function:etcdserver/zap_raft.go:Panic",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/util.go:CreateConfigChangeEnts",
+      "target": "function:etcdserver/zap_raft.go:Error",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/util.go:GetEffectiveNodeIDsFromWALEntries",
+      "target": "function:proxy/grpcproxy/watch.go:delete",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/util.go:GetEffectiveNodeIDsFromWALEntries",
+      "target": "function:etcdserver/zap_raft.go:Panic",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}
+

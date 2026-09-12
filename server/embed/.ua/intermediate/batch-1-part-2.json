@@ -1,0 +1,1107 @@
+{
+  "nodes": [
+    {
+      "id": "file:config_tracing_test.go",
+      "type": "file",
+      "name": "config_tracing_test.go",
+      "filePath": "config_tracing_test.go",
+      "summary": "Verifies sampler selection and tracing configuration behavior for the embedded server.",
+      "tags": [
+        "test",
+        "tracing",
+        "configuration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:config_tracing_test.go:TestDetermineSampler",
+      "type": "function",
+      "name": "TestDetermineSampler",
+      "filePath": "config_tracing_test.go",
+      "lineRange": [
+        23,
+        48
+      ],
+      "summary": "Verifies conversion of configured sampling rates into OpenTelemetry sampler decisions.",
+      "tags": [
+        "test",
+        "validation",
+        "go"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:config_tracing_test.go:TestTracingConfig",
+      "type": "function",
+      "name": "TestTracingConfig",
+      "filePath": "config_tracing_test.go",
+      "lineRange": [
+        50,
+        83
+      ],
+      "summary": "Covers tracing configuration validation and exporter construction behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "go"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:doc.go",
+      "type": "file",
+      "name": "doc.go",
+      "filePath": "doc.go",
+      "summary": "Documents the embed package as the API for configuring, starting, and stopping an etcd server inside another Go process.",
+      "tags": [
+        "documentation",
+        "package-api",
+        "embedding"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:etcd.go",
+      "type": "file",
+      "name": "etcd.go",
+      "filePath": "etcd.go",
+      "summary": "Owns the embedded server lifecycle: startup, peer and client listener creation, serving, metrics, gRPC gateway dialing, shutdown, and error propagation.",
+      "tags": [
+        "service",
+        "entry-point",
+        "lifecycle",
+        "networking",
+        "grpc"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcd.go:StartEtcd",
+      "type": "function",
+      "name": "StartEtcd",
+      "filePath": "etcd.go",
+      "lineRange": [
+        110,
+        303
+      ],
+      "summary": "Validates configuration, initializes tracing and logging, creates listeners, starts the etcd server, and launches peer, client, and metrics serving loops.",
+      "tags": [
+        "function",
+        "go",
+        "service"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcd.go:print",
+      "type": "function",
+      "name": "print",
+      "filePath": "etcd.go",
+      "lineRange": [
+        305,
+        385
+      ],
+      "summary": "Logs the effective startup configuration, version, resource limits, data directory state, URLs, and security posture.",
+      "tags": [
+        "function",
+        "go",
+        "service"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcd.go:Config",
+      "type": "function",
+      "name": "Config",
+      "filePath": "etcd.go",
+      "lineRange": [
+        388,
+        390
+      ],
+      "summary": "Implements config behavior for the etcd component.",
+      "tags": [
+        "function",
+        "go",
+        "configuration"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcd.go:Close",
+      "type": "function",
+      "name": "Close",
+      "filePath": "etcd.go",
+      "lineRange": [
+        413,
+        485
+      ],
+      "summary": "Performs coordinated, idempotent shutdown of listeners, HTTP and gRPC servers, handlers, tracing, and the underlying etcd server.",
+      "tags": [
+        "function",
+        "go",
+        "service"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcd.go:stopServers",
+      "type": "function",
+      "name": "stopServers",
+      "filePath": "etcd.go",
+      "lineRange": [
+        487,
+        522
+      ],
+      "summary": "Gracefully stops active HTTP and gRPC servers, falling back to forced shutdown when required.",
+      "tags": [
+        "function",
+        "go",
+        "networking"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcd.go:Err",
+      "type": "function",
+      "name": "Err",
+      "filePath": "etcd.go",
+      "lineRange": [
+        526,
+        528
+      ],
+      "summary": "Implements err behavior for the etcd component.",
+      "tags": [
+        "function",
+        "go",
+        "service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcd.go:configurePeerListeners",
+      "type": "function",
+      "name": "configurePeerListeners",
+      "filePath": "etcd.go",
+      "lineRange": [
+        530,
+        590
+      ],
+      "summary": "Creates peer listeners with TLS and socket options and detects an already initialized member.",
+      "tags": [
+        "function",
+        "go",
+        "configuration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcd.go:servePeers",
+      "type": "function",
+      "name": "servePeers",
+      "filePath": "etcd.go",
+      "lineRange": [
+        593,
+        642
+      ],
+      "summary": "Starts peer HTTP serving for each configured peer listener and tracks failures.",
+      "tags": [
+        "function",
+        "go",
+        "networking"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcd.go:configureClientListeners",
+      "type": "function",
+      "name": "configureClientListeners",
+      "filePath": "etcd.go",
+      "lineRange": [
+        644,
+        746
+      ],
+      "summary": "Creates client and client-HTTP listeners, applies TLS, and prepares secure and insecure serving contexts.",
+      "tags": [
+        "function",
+        "go",
+        "configuration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcd.go:resolveURL",
+      "type": "function",
+      "name": "resolveURL",
+      "filePath": "etcd.go",
+      "lineRange": [
+        748,
+        757
+      ],
+      "summary": "Implements resolve url behavior for the etcd component.",
+      "tags": [
+        "function",
+        "go",
+        "service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcd.go:serveClients",
+      "type": "function",
+      "name": "serveClients",
+      "filePath": "etcd.go",
+      "lineRange": [
+        759,
+        805
+      ],
+      "summary": "Starts the configured gRPC, gateway, and HTTP client endpoints across prepared listeners.",
+      "tags": [
+        "function",
+        "go",
+        "networking"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcd.go:grpcGatewayDial",
+      "type": "function",
+      "name": "grpcGatewayDial",
+      "filePath": "etcd.go",
+      "lineRange": [
+        807,
+        841
+      ],
+      "summary": "Builds the gateway dial function and transport credentials for connecting back to the local gRPC endpoint.",
+      "tags": [
+        "function",
+        "go",
+        "networking"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcd.go:createMetricsListener",
+      "type": "function",
+      "name": "createMetricsListener",
+      "filePath": "etcd.go",
+      "lineRange": [
+        854,
+        868
+      ],
+      "summary": "Creates a metrics listener and applies client TLS settings when the metrics URL requires HTTPS.",
+      "tags": [
+        "function",
+        "go",
+        "networking"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcd.go:serveMetrics",
+      "type": "function",
+      "name": "serveMetrics",
+      "filePath": "etcd.go",
+      "lineRange": [
+        870,
+        894
+      ],
+      "summary": "Serves metrics and health endpoints and reports listener failures.",
+      "tags": [
+        "function",
+        "go",
+        "networking"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcd.go:errHandler",
+      "type": "function",
+      "name": "errHandler",
+      "filePath": "etcd.go",
+      "lineRange": [
+        905,
+        918
+      ],
+      "summary": "Implements err handler behavior for the etcd component.",
+      "tags": [
+        "function",
+        "go",
+        "service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcd.go:GetLogger",
+      "type": "function",
+      "name": "GetLogger",
+      "filePath": "etcd.go",
+      "lineRange": [
+        921,
+        926
+      ],
+      "summary": "Implements get logger behavior for the etcd component.",
+      "tags": [
+        "function",
+        "go",
+        "logging"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcd.go:parseCompactionRetention",
+      "type": "function",
+      "name": "parseCompactionRetention",
+      "filePath": "etcd.go",
+      "lineRange": [
+        928,
+        947
+      ],
+      "summary": "Parses periodic or revision auto-compaction retention into the appropriate duration or revision value.",
+      "tags": [
+        "function",
+        "go",
+        "service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:etcd.go:Etcd",
+      "type": "class",
+      "name": "Etcd",
+      "filePath": "etcd.go",
+      "lineRange": [
+        70,
+        99
+      ],
+      "summary": "Represents a running embedded etcd instance and owns its server, listeners, error channels, HTTP/gRPC servers, and shutdown state.",
+      "tags": [
+        "component",
+        "data-model",
+        "go"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:etcd_test.go",
+      "type": "file",
+      "name": "etcd_test.go",
+      "filePath": "etcd_test.go",
+      "summary": "Checks metrics-listener creation when client TLS information is empty.",
+      "tags": [
+        "test",
+        "metrics",
+        "tls"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcd_test.go:TestEmptyClientTLSInfo_createMetricsListener",
+      "type": "function",
+      "name": "TestEmptyClientTLSInfo_createMetricsListener",
+      "filePath": "etcd_test.go",
+      "lineRange": [
+        26,
+        39
+      ],
+      "summary": "Tests test empty client tlsinfo create metrics listener behavior for the etcd_test component.",
+      "tags": [
+        "test",
+        "validation",
+        "go"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:serve.go",
+      "type": "file",
+      "name": "serve.go",
+      "filePath": "serve.go",
+      "summary": "Multiplexes gRPC and HTTP traffic, installs gateways and debug handlers, enforces host and CORS access rules, and coordinates listener shutdown.",
+      "tags": [
+        "service",
+        "http",
+        "grpc",
+        "middleware",
+        "networking"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:serve.go:startHandler",
+      "type": "function",
+      "name": "startHandler",
+      "filePath": "serve.go",
+      "lineRange": [
+        84,
+        94
+      ],
+      "summary": "Implements start handler behavior for the serve component.",
+      "tags": [
+        "function",
+        "go",
+        "service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:serve.go:newServeCtx",
+      "type": "function",
+      "name": "newServeCtx",
+      "filePath": "serve.go",
+      "lineRange": [
+        102,
+        114
+      ],
+      "summary": "Creates a serving context that owns one listener, its TLS state, handlers, servers, and shutdown synchronization.",
+      "tags": [
+        "function",
+        "go",
+        "networking"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:serve.go:serve",
+      "type": "function",
+      "name": "serve",
+      "filePath": "serve.go",
+      "lineRange": [
+        119,
+        305
+      ],
+      "summary": "Classifies listener traffic, constructs gRPC and HTTP servers, registers services, applies TLS, and runs multiplexed serving loops.",
+      "tags": [
+        "function",
+        "go",
+        "networking"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:serve.go:grpcHandlerFunc",
+      "type": "function",
+      "name": "grpcHandlerFunc",
+      "filePath": "serve.go",
+      "lineRange": [
+        316,
+        329
+      ],
+      "summary": "Routes HTTP/2 gRPC requests to the gRPC server and all other requests to the HTTP handler.",
+      "tags": [
+        "function",
+        "go",
+        "networking"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:serve.go:registerGateway",
+      "type": "function",
+      "name": "registerGateway",
+      "filePath": "serve.go",
+      "lineRange": [
+        333,
+        386
+      ],
+      "summary": "Dials the local gRPC service, registers gateway handlers, and ties the connection lifecycle to the serving context.",
+      "tags": [
+        "function",
+        "go",
+        "service"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:serve.go:Warnln",
+      "type": "function",
+      "name": "Warnln",
+      "filePath": "serve.go",
+      "lineRange": [
+        392,
+        394
+      ],
+      "summary": "Implements warnln behavior for the serve component.",
+      "tags": [
+        "function",
+        "go",
+        "service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:serve.go:Debugln",
+      "type": "function",
+      "name": "Debugln",
+      "filePath": "serve.go",
+      "lineRange": [
+        396,
+        398
+      ],
+      "summary": "Implements debugln behavior for the serve component.",
+      "tags": [
+        "function",
+        "go",
+        "service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:serve.go:createMux",
+      "type": "function",
+      "name": "createMux",
+      "filePath": "serve.go",
+      "lineRange": [
+        400,
+        427
+      ],
+      "summary": "Builds the HTTP handler tree for legacy APIs, gRPC gateway, user handlers, pprof, and tracing endpoints.",
+      "tags": [
+        "function",
+        "go",
+        "networking"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:serve.go:ServeHTTP",
+      "type": "function",
+      "name": "ServeHTTP",
+      "filePath": "serve.go",
+      "lineRange": [
+        446,
+        492
+      ],
+      "summary": "Processes an HTTP request through access-control and CORS policy before delegating to the wrapped handler.",
+      "tags": [
+        "function",
+        "go",
+        "networking"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:serve.go:errCVE20185702",
+      "type": "function",
+      "name": "errCVE20185702",
+      "filePath": "serve.go",
+      "lineRange": [
+        502,
+        513
+      ],
+      "summary": "Implements err cve20185702 behavior for the serve component.",
+      "tags": [
+        "function",
+        "go",
+        "service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:serve.go:WrapCORS",
+      "type": "function",
+      "name": "WrapCORS",
+      "filePath": "serve.go",
+      "lineRange": [
+        517,
+        522
+      ],
+      "summary": "Wraps an HTTP handler with origin checks and preflight response handling.",
+      "tags": [
+        "function",
+        "go",
+        "service"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:serve.go:serveCtx",
+      "type": "class",
+      "name": "serveCtx",
+      "filePath": "serve.go",
+      "lineRange": [
+        54,
+        82
+      ],
+      "summary": "Owns all state needed to serve one client listener, including TLS, multiplexers, handlers, servers, and lifecycle synchronization.",
+      "tags": [
+        "component",
+        "data-model",
+        "go"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:serve.go:wsProxyZapLogger",
+      "type": "class",
+      "name": "wsProxyZapLogger",
+      "filePath": "serve.go",
+      "lineRange": [
+        388,
+        390
+      ],
+      "summary": "Adapts zap logging to the websocket proxy logging interface.",
+      "tags": [
+        "component",
+        "data-model",
+        "go"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:serve_test.go",
+      "type": "file",
+      "name": "serve_test.go",
+      "filePath": "serve_test.go",
+      "summary": "Ensures embedded startup reports an error when the initial cluster token is invalid.",
+      "tags": [
+        "test",
+        "cluster-bootstrap",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:serve_test.go:TestStartEtcdWrongToken",
+      "type": "function",
+      "name": "TestStartEtcdWrongToken",
+      "filePath": "serve_test.go",
+      "lineRange": [
+        26,
+        39
+      ],
+      "summary": "Confirms startup fails predictably when peer discovery uses an invalid initial-cluster token.",
+      "tags": [
+        "test",
+        "validation",
+        "go"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:util.go",
+      "type": "file",
+      "name": "util.go",
+      "filePath": "util.go",
+      "summary": "Determines whether an embedded member has already initialized by checking for its persisted WAL.",
+      "tags": [
+        "utility",
+        "wal",
+        "startup"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:util_test.go",
+      "type": "file",
+      "name": "util_test.go",
+      "filePath": "util_test.go",
+      "summary": "Provides reusable dynamic URL fixtures and configuration helpers for embed package tests.",
+      "tags": [
+        "test",
+        "utility",
+        "networking"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:util_test.go:newConfigTestURLs",
+      "type": "function",
+      "name": "newConfigTestURLs",
+      "filePath": "util_test.go",
+      "lineRange": [
+        30,
+        42
+      ],
+      "summary": "Allocates isolated peer and client URLs and returns a matching initial-cluster fixture.",
+      "tags": [
+        "test",
+        "validation",
+        "go"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:util_test.go:ConfigTestURLs",
+      "type": "class",
+      "name": "ConfigTestURLs",
+      "filePath": "util_test.go",
+      "lineRange": [
+        23,
+        27
+      ],
+      "summary": "Groups peer URLs, client URLs, and the corresponding initial-cluster string used by tests.",
+      "tags": [
+        "test",
+        "data-model",
+        "go"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:config_tracing_test.go",
+      "target": "function:config_tracing_test.go:TestDetermineSampler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:config_tracing_test.go",
+      "target": "function:config_tracing_test.go:TestDetermineSampler",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:config_tracing_test.go",
+      "target": "function:config_tracing_test.go:TestTracingConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:config_tracing_test.go",
+      "target": "function:config_tracing_test.go:TestTracingConfig",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcd.go",
+      "target": "function:etcd.go:StartEtcd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcd.go",
+      "target": "function:etcd.go:StartEtcd",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcd.go",
+      "target": "function:etcd.go:print",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcd.go",
+      "target": "function:etcd.go:Config",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcd.go",
+      "target": "function:etcd.go:Config",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcd.go",
+      "target": "function:etcd.go:Close",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcd.go",
+      "target": "function:etcd.go:Close",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcd.go",
+      "target": "function:etcd.go:stopServers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcd.go",
+      "target": "function:etcd.go:Err",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcd.go",
+      "target": "function:etcd.go:Err",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcd.go",
+      "target": "function:etcd.go:configurePeerListeners",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcd.go",
+      "target": "function:etcd.go:servePeers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcd.go",
+      "target": "function:etcd.go:configureClientListeners",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcd.go",
+      "target": "function:etcd.go:resolveURL",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcd.go",
+      "target": "function:etcd.go:serveClients",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcd.go",
+      "target": "function:etcd.go:grpcGatewayDial",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcd.go",
+      "target": "function:etcd.go:createMetricsListener",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcd.go",
+      "target": "function:etcd.go:serveMetrics",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcd.go",
+      "target": "function:etcd.go:errHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcd.go",
+      "target": "function:etcd.go:GetLogger",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcd.go",
+      "target": "function:etcd.go:GetLogger",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcd.go",
+      "target": "function:etcd.go:parseCompactionRetention",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcd.go",
+      "target": "class:etcd.go:Etcd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcd.go",
+      "target": "class:etcd.go:Etcd",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcd_test.go",
+      "target": "function:etcd_test.go:TestEmptyClientTLSInfo_createMetricsListener",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcd_test.go",
+      "target": "function:etcd_test.go:TestEmptyClientTLSInfo_createMetricsListener",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:serve.go",
+      "target": "function:serve.go:startHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:serve.go",
+      "target": "function:serve.go:newServeCtx",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:serve.go",
+      "target": "function:serve.go:serve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:serve.go",
+      "target": "function:serve.go:grpcHandlerFunc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:serve.go",
+      "target": "function:serve.go:registerGateway",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:serve.go",
+      "target": "function:serve.go:Warnln",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:serve.go",
+      "target": "function:serve.go:Warnln",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:serve.go",
+      "target": "function:serve.go:Debugln",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:serve.go",
+      "target": "function:serve.go:Debugln",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:serve.go",
+      "target": "function:serve.go:createMux",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:serve.go",
+      "target": "function:serve.go:ServeHTTP",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:serve.go",
+      "target": "function:serve.go:ServeHTTP",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:serve.go",
+      "target": "function:serve.go:errCVE20185702",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:serve.go",
+      "target": "function:serve.go:WrapCORS",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:serve.go",
+      "target": "function:serve.go:WrapCORS",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:serve.go",
+      "target": "class:serve.go:serveCtx",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:serve.go",
+      "target": "class:serve.go:wsProxyZapLogger",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:serve_test.go",
+      "target": "function:serve_test.go:TestStartEtcdWrongToken",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:serve_test.go",
+      "target": "function:serve_test.go:TestStartEtcdWrongToken",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:util_test.go",
+      "target": "function:util_test.go:newConfigTestURLs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:util_test.go",
+      "target": "class:util_test.go:ConfigTestURLs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:util_test.go",
+      "target": "class:util_test.go:ConfigTestURLs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

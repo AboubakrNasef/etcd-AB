@@ -1,0 +1,1998 @@
+{
+  "nodes": [
+    {
+      "id": "file:etcdserver/api/v2store/node_extern_test.go",
+      "type": "file",
+      "name": "node_extern_test.go",
+      "filePath": "etcdserver/api/v2store/node_extern_test.go",
+      "summary": "Tests conversion between internal v2 store nodes and their external representations.",
+      "tags": [
+        "test",
+        "data-model",
+        "legacy-api",
+        "serialization"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using package-level APIs and concurrency primitives where required."
+    },
+    {
+      "id": "function:etcdserver/api/v2store/node_extern_test.go:TestNodeExternClone",
+      "type": "function",
+      "name": "TestNodeExternClone",
+      "filePath": "etcdserver/api/v2store/node_extern_test.go",
+      "lineRange": [
+        25,
+        101
+      ],
+      "summary": "Provides the TestNodeExternClone operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:etcdserver/api/v2store/node_test.go",
+      "type": "file",
+      "name": "node_test.go",
+      "filePath": "etcdserver/api/v2store/node_test.go",
+      "summary": "Tests hierarchical node creation, mutation, deletion, TTL handling, and externalization.",
+      "tags": [
+        "test",
+        "data-model",
+        "legacy-api",
+        "tree",
+        "ttl"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Go implementation using package-level APIs and concurrency primitives where required."
+    },
+    {
+      "id": "function:etcdserver/api/v2store/node_test.go:TestNewKVIs",
+      "type": "function",
+      "name": "TestNewKVIs",
+      "filePath": "etcdserver/api/v2store/node_test.go",
+      "lineRange": [
+        30,
+        44
+      ],
+      "summary": "Provides the TestNewKVIs operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/node_test.go:TestNewKVReadWriteCompare",
+      "type": "function",
+      "name": "TestNewKVReadWriteCompare",
+      "filePath": "etcdserver/api/v2store/node_test.go",
+      "lineRange": [
+        46,
+        71
+      ],
+      "summary": "Provides the TestNewKVReadWriteCompare operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/node_test.go:TestNewKVExpiration",
+      "type": "function",
+      "name": "TestNewKVExpiration",
+      "filePath": "etcdserver/api/v2store/node_test.go",
+      "lineRange": [
+        73,
+        96
+      ],
+      "summary": "Provides the TestNewKVExpiration operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/node_test.go:TestNewKVListReprCompareClone",
+      "type": "function",
+      "name": "TestNewKVListReprCompareClone",
+      "filePath": "etcdserver/api/v2store/node_test.go",
+      "lineRange": [
+        98,
+        120
+      ],
+      "summary": "Provides the TestNewKVListReprCompareClone operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/node_test.go:TestNewKVRemove",
+      "type": "function",
+      "name": "TestNewKVRemove",
+      "filePath": "etcdserver/api/v2store/node_test.go",
+      "lineRange": [
+        122,
+        158
+      ],
+      "summary": "Provides the TestNewKVRemove operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/node_test.go:TestNewDirIs",
+      "type": "function",
+      "name": "TestNewDirIs",
+      "filePath": "etcdserver/api/v2store/node_test.go",
+      "lineRange": [
+        160,
+        173
+      ],
+      "summary": "Provides the TestNewDirIs operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/node_test.go:TestNewDirReadWriteListReprClone",
+      "type": "function",
+      "name": "TestNewDirReadWriteListReprClone",
+      "filePath": "etcdserver/api/v2store/node_test.go",
+      "lineRange": [
+        175,
+        199
+      ],
+      "summary": "Provides the TestNewDirReadWriteListReprClone operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/node_test.go:TestNewDirExpirationTTL",
+      "type": "function",
+      "name": "TestNewDirExpirationTTL",
+      "filePath": "etcdserver/api/v2store/node_test.go",
+      "lineRange": [
+        201,
+        213
+      ],
+      "summary": "Provides the TestNewDirExpirationTTL operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/node_test.go:TestNewDirChild",
+      "type": "function",
+      "name": "TestNewDirChild",
+      "filePath": "etcdserver/api/v2store/node_test.go",
+      "lineRange": [
+        215,
+        233
+      ],
+      "summary": "Provides the TestNewDirChild operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:etcdserver/api/v2store/stats.go",
+      "type": "file",
+      "name": "stats.go",
+      "filePath": "etcdserver/api/v2store/stats.go",
+      "summary": "Defines statistics structures and calculations for v2 store usage.",
+      "tags": [
+        "statistics",
+        "metrics",
+        "legacy-api",
+        "v2-store"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using package-level APIs and concurrency primitives where required."
+    },
+    {
+      "id": "function:etcdserver/api/v2store/stats.go:clone",
+      "type": "function",
+      "name": "clone",
+      "filePath": "etcdserver/api/v2store/stats.go",
+      "lineRange": [
+        86,
+        105
+      ],
+      "summary": "Provides the clone operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/stats.go:Inc",
+      "type": "function",
+      "name": "Inc",
+      "filePath": "etcdserver/api/v2store/stats.go",
+      "lineRange": [
+        112,
+        145
+      ],
+      "summary": "Provides the Inc operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/api/v2store/stats.go:Stats",
+      "type": "class",
+      "name": "Stats",
+      "filePath": "etcdserver/api/v2store/stats.go",
+      "lineRange": [
+        40,
+        79
+      ],
+      "summary": "Represents the Stats state and behavior for this module.",
+      "tags": [
+        "go",
+        "data-model",
+        "state",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdserver/api/v2store/stats_test.go",
+      "type": "file",
+      "name": "stats_test.go",
+      "filePath": "etcdserver/api/v2store/stats_test.go",
+      "summary": "Tests v2 store statistics and JSON reporting behavior.",
+      "tags": [
+        "test",
+        "statistics",
+        "metrics",
+        "legacy-api"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using package-level APIs and concurrency primitives where required."
+    },
+    {
+      "id": "function:etcdserver/api/v2store/stats_test.go:TestStoreStatsGetSuccess",
+      "type": "function",
+      "name": "TestStoreStatsGetSuccess",
+      "filePath": "etcdserver/api/v2store/stats_test.go",
+      "lineRange": [
+        25,
+        30
+      ],
+      "summary": "Provides the TestStoreStatsGetSuccess operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/stats_test.go:TestStoreStatsGetFail",
+      "type": "function",
+      "name": "TestStoreStatsGetFail",
+      "filePath": "etcdserver/api/v2store/stats_test.go",
+      "lineRange": [
+        33,
+        38
+      ],
+      "summary": "Provides the TestStoreStatsGetFail operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/stats_test.go:TestStoreStatsCreateSuccess",
+      "type": "function",
+      "name": "TestStoreStatsCreateSuccess",
+      "filePath": "etcdserver/api/v2store/stats_test.go",
+      "lineRange": [
+        41,
+        45
+      ],
+      "summary": "Provides the TestStoreStatsCreateSuccess operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/stats_test.go:TestStoreStatsCreateFail",
+      "type": "function",
+      "name": "TestStoreStatsCreateFail",
+      "filePath": "etcdserver/api/v2store/stats_test.go",
+      "lineRange": [
+        48,
+        53
+      ],
+      "summary": "Provides the TestStoreStatsCreateFail operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/stats_test.go:TestStoreStatsUpdateSuccess",
+      "type": "function",
+      "name": "TestStoreStatsUpdateSuccess",
+      "filePath": "etcdserver/api/v2store/stats_test.go",
+      "lineRange": [
+        56,
+        61
+      ],
+      "summary": "Provides the TestStoreStatsUpdateSuccess operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/stats_test.go:TestStoreStatsUpdateFail",
+      "type": "function",
+      "name": "TestStoreStatsUpdateFail",
+      "filePath": "etcdserver/api/v2store/stats_test.go",
+      "lineRange": [
+        64,
+        68
+      ],
+      "summary": "Provides the TestStoreStatsUpdateFail operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/stats_test.go:TestStoreStatsCompareAndSwapSuccess",
+      "type": "function",
+      "name": "TestStoreStatsCompareAndSwapSuccess",
+      "filePath": "etcdserver/api/v2store/stats_test.go",
+      "lineRange": [
+        71,
+        76
+      ],
+      "summary": "Provides the TestStoreStatsCompareAndSwapSuccess operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/stats_test.go:TestStoreStatsCompareAndSwapFail",
+      "type": "function",
+      "name": "TestStoreStatsCompareAndSwapFail",
+      "filePath": "etcdserver/api/v2store/stats_test.go",
+      "lineRange": [
+        79,
+        84
+      ],
+      "summary": "Provides the TestStoreStatsCompareAndSwapFail operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/stats_test.go:TestStoreStatsDeleteSuccess",
+      "type": "function",
+      "name": "TestStoreStatsDeleteSuccess",
+      "filePath": "etcdserver/api/v2store/stats_test.go",
+      "lineRange": [
+        87,
+        92
+      ],
+      "summary": "Provides the TestStoreStatsDeleteSuccess operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/stats_test.go:TestStoreStatsDeleteFail",
+      "type": "function",
+      "name": "TestStoreStatsDeleteFail",
+      "filePath": "etcdserver/api/v2store/stats_test.go",
+      "lineRange": [
+        95,
+        99
+      ],
+      "summary": "Provides the TestStoreStatsDeleteFail operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/stats_test.go:TestStoreStatsExpireCount",
+      "type": "function",
+      "name": "TestStoreStatsExpireCount",
+      "filePath": "etcdserver/api/v2store/stats_test.go",
+      "lineRange": [
+        102,
+        112
+      ],
+      "summary": "Provides the TestStoreStatsExpireCount operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:etcdserver/api/v2store/store.go",
+      "type": "file",
+      "name": "store.go",
+      "filePath": "etcdserver/api/v2store/store.go",
+      "summary": "Implements the legacy v2 in-memory store, including CRUD, compare-and-swap, watches, TTL expiration, recovery, and statistics.",
+      "tags": [
+        "legacy-api",
+        "v2-store",
+        "watch",
+        "ttl",
+        "persistence"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Go implementation using package-level APIs and concurrency primitives where required."
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store.go:New",
+      "type": "function",
+      "name": "New",
+      "filePath": "etcdserver/api/v2store/store.go",
+      "lineRange": [
+        87,
+        91
+      ],
+      "summary": "Provides the New operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store.go:newStore",
+      "type": "function",
+      "name": "newStore",
+      "filePath": "etcdserver/api/v2store/store.go",
+      "lineRange": [
+        93,
+        105
+      ],
+      "summary": "Provides the newStore operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store.go:Version",
+      "type": "function",
+      "name": "Version",
+      "filePath": "etcdserver/api/v2store/store.go",
+      "lineRange": [
+        108,
+        110
+      ],
+      "summary": "Provides the Version operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store.go:Index",
+      "type": "function",
+      "name": "Index",
+      "filePath": "etcdserver/api/v2store/store.go",
+      "lineRange": [
+        113,
+        117
+      ],
+      "summary": "Provides the Index operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store.go:Get",
+      "type": "function",
+      "name": "Get",
+      "filePath": "etcdserver/api/v2store/store.go",
+      "lineRange": [
+        122,
+        157
+      ],
+      "summary": "Provides the Get operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store.go:Create",
+      "type": "function",
+      "name": "Create",
+      "filePath": "etcdserver/api/v2store/store.go",
+      "lineRange": [
+        162,
+        188
+      ],
+      "summary": "Provides the Create operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store.go:Set",
+      "type": "function",
+      "name": "Set",
+      "filePath": "etcdserver/api/v2store/store.go",
+      "lineRange": [
+        191,
+        245
+      ],
+      "summary": "Provides the Set operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store.go:getCompareFailCause",
+      "type": "function",
+      "name": "getCompareFailCause",
+      "filePath": "etcdserver/api/v2store/store.go",
+      "lineRange": [
+        248,
+        257
+      ],
+      "summary": "Provides the getCompareFailCause operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store.go:CompareAndSwap",
+      "type": "function",
+      "name": "CompareAndSwap",
+      "filePath": "etcdserver/api/v2store/store.go",
+      "lineRange": [
+        259,
+        332
+      ],
+      "summary": "Provides the CompareAndSwap operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store.go:Delete",
+      "type": "function",
+      "name": "Delete",
+      "filePath": "etcdserver/api/v2store/store.go",
+      "lineRange": [
+        336,
+        395
+      ],
+      "summary": "Provides the Delete operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store.go:CompareAndDelete",
+      "type": "function",
+      "name": "CompareAndDelete",
+      "filePath": "etcdserver/api/v2store/store.go",
+      "lineRange": [
+        397,
+        451
+      ],
+      "summary": "Provides the CompareAndDelete operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store.go:Watch",
+      "type": "function",
+      "name": "Watch",
+      "filePath": "etcdserver/api/v2store/store.go",
+      "lineRange": [
+        453,
+        468
+      ],
+      "summary": "Provides the Watch operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store.go:walk",
+      "type": "function",
+      "name": "walk",
+      "filePath": "etcdserver/api/v2store/store.go",
+      "lineRange": [
+        471,
+        489
+      ],
+      "summary": "Provides the walk operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store.go:Update",
+      "type": "function",
+      "name": "Update",
+      "filePath": "etcdserver/api/v2store/store.go",
+      "lineRange": [
+        494,
+        564
+      ],
+      "summary": "Provides the Update operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store.go:internalCreate",
+      "type": "function",
+      "name": "internalCreate",
+      "filePath": "etcdserver/api/v2store/store.go",
+      "lineRange": [
+        566,
+        646
+      ],
+      "summary": "Provides the internalCreate operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store.go:internalGet",
+      "type": "function",
+      "name": "internalGet",
+      "filePath": "etcdserver/api/v2store/store.go",
+      "lineRange": [
+        649,
+        671
+      ],
+      "summary": "Provides the internalGet operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store.go:DeleteExpiredKeys",
+      "type": "function",
+      "name": "DeleteExpiredKeys",
+      "filePath": "etcdserver/api/v2store/store.go",
+      "lineRange": [
+        674,
+        705
+      ],
+      "summary": "Provides the DeleteExpiredKeys operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store.go:checkDir",
+      "type": "function",
+      "name": "checkDir",
+      "filePath": "etcdserver/api/v2store/store.go",
+      "lineRange": [
+        711,
+        727
+      ],
+      "summary": "Provides the checkDir operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store.go:Save",
+      "type": "function",
+      "name": "Save",
+      "filePath": "etcdserver/api/v2store/store.go",
+      "lineRange": [
+        733,
+        740
+      ],
+      "summary": "Provides the Save operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store.go:SaveNoCopy",
+      "type": "function",
+      "name": "SaveNoCopy",
+      "filePath": "etcdserver/api/v2store/store.go",
+      "lineRange": [
+        742,
+        749
+      ],
+      "summary": "Provides the SaveNoCopy operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store.go:Clone",
+      "type": "function",
+      "name": "Clone",
+      "filePath": "etcdserver/api/v2store/store.go",
+      "lineRange": [
+        751,
+        763
+      ],
+      "summary": "Provides the Clone operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store.go:Recovery",
+      "type": "function",
+      "name": "Recovery",
+      "filePath": "etcdserver/api/v2store/store.go",
+      "lineRange": [
+        769,
+        781
+      ],
+      "summary": "Provides the Recovery operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store.go:JsonStats",
+      "type": "function",
+      "name": "JsonStats",
+      "filePath": "etcdserver/api/v2store/store.go",
+      "lineRange": [
+        784,
+        788
+      ],
+      "summary": "Provides the JsonStats operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store.go:HasTTLKeys",
+      "type": "function",
+      "name": "HasTTLKeys",
+      "filePath": "etcdserver/api/v2store/store.go",
+      "lineRange": [
+        790,
+        794
+      ],
+      "summary": "Provides the HasTTLKeys operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:etcdserver/api/v2store/store.go:Store",
+      "type": "class",
+      "name": "Store",
+      "filePath": "etcdserver/api/v2store/store.go",
+      "lineRange": [
+        41,
+        67
+      ],
+      "summary": "Represents the Store state and behavior for this module.",
+      "tags": [
+        "go",
+        "data-model",
+        "state",
+        "implementation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:etcdserver/api/v2store/store.go:store",
+      "type": "class",
+      "name": "store",
+      "filePath": "etcdserver/api/v2store/store.go",
+      "lineRange": [
+        74,
+        84
+      ],
+      "summary": "Represents the store state and behavior for this module.",
+      "tags": [
+        "go",
+        "data-model",
+        "state",
+        "implementation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:etcdserver/api/v2store/store_bench_test.go",
+      "type": "file",
+      "name": "store_bench_test.go",
+      "filePath": "etcdserver/api/v2store/store_bench_test.go",
+      "summary": "Benchmarks common v2 store operations and watcher or TTL workloads.",
+      "tags": [
+        "test",
+        "benchmark",
+        "legacy-api",
+        "performance"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using package-level APIs and concurrency primitives where required."
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store_bench_test.go:BenchmarkStoreSet128Bytes",
+      "type": "function",
+      "name": "BenchmarkStoreSet128Bytes",
+      "filePath": "etcdserver/api/v2store/store_bench_test.go",
+      "lineRange": [
+        24,
+        26
+      ],
+      "summary": "Provides the BenchmarkStoreSet128Bytes operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store_bench_test.go:BenchmarkStoreSet1024Bytes",
+      "type": "function",
+      "name": "BenchmarkStoreSet1024Bytes",
+      "filePath": "etcdserver/api/v2store/store_bench_test.go",
+      "lineRange": [
+        28,
+        30
+      ],
+      "summary": "Provides the BenchmarkStoreSet1024Bytes operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store_bench_test.go:BenchmarkStoreSet4096Bytes",
+      "type": "function",
+      "name": "BenchmarkStoreSet4096Bytes",
+      "filePath": "etcdserver/api/v2store/store_bench_test.go",
+      "lineRange": [
+        32,
+        34
+      ],
+      "summary": "Provides the BenchmarkStoreSet4096Bytes operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store_bench_test.go:BenchmarkStoreSetWithJson128Bytes",
+      "type": "function",
+      "name": "BenchmarkStoreSetWithJson128Bytes",
+      "filePath": "etcdserver/api/v2store/store_bench_test.go",
+      "lineRange": [
+        36,
+        38
+      ],
+      "summary": "Provides the BenchmarkStoreSetWithJson128Bytes operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store_bench_test.go:BenchmarkStoreSetWithJson1024Bytes",
+      "type": "function",
+      "name": "BenchmarkStoreSetWithJson1024Bytes",
+      "filePath": "etcdserver/api/v2store/store_bench_test.go",
+      "lineRange": [
+        40,
+        42
+      ],
+      "summary": "Provides the BenchmarkStoreSetWithJson1024Bytes operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store_bench_test.go:BenchmarkStoreSetWithJson4096Bytes",
+      "type": "function",
+      "name": "BenchmarkStoreSetWithJson4096Bytes",
+      "filePath": "etcdserver/api/v2store/store_bench_test.go",
+      "lineRange": [
+        44,
+        46
+      ],
+      "summary": "Provides the BenchmarkStoreSetWithJson4096Bytes operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store_bench_test.go:BenchmarkStoreDelete",
+      "type": "function",
+      "name": "BenchmarkStoreDelete",
+      "filePath": "etcdserver/api/v2store/store_bench_test.go",
+      "lineRange": [
+        48,
+        97
+      ],
+      "summary": "Provides the BenchmarkStoreDelete operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store_bench_test.go:BenchmarkWatch",
+      "type": "function",
+      "name": "BenchmarkWatch",
+      "filePath": "etcdserver/api/v2store/store_bench_test.go",
+      "lineRange": [
+        99,
+        124
+      ],
+      "summary": "Provides the BenchmarkWatch operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store_bench_test.go:BenchmarkWatchWithSet",
+      "type": "function",
+      "name": "BenchmarkWatchWithSet",
+      "filePath": "etcdserver/api/v2store/store_bench_test.go",
+      "lineRange": [
+        126,
+        138
+      ],
+      "summary": "Provides the BenchmarkWatchWithSet operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store_bench_test.go:BenchmarkWatchWithSetBatch",
+      "type": "function",
+      "name": "BenchmarkWatchWithSetBatch",
+      "filePath": "etcdserver/api/v2store/store_bench_test.go",
+      "lineRange": [
+        140,
+        159
+      ],
+      "summary": "Provides the BenchmarkWatchWithSetBatch operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store_bench_test.go:BenchmarkWatchOneKey",
+      "type": "function",
+      "name": "BenchmarkWatchOneKey",
+      "filePath": "etcdserver/api/v2store/store_bench_test.go",
+      "lineRange": [
+        161,
+        174
+      ],
+      "summary": "Provides the BenchmarkWatchOneKey operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store_bench_test.go:benchStoreSet",
+      "type": "function",
+      "name": "benchStoreSet",
+      "filePath": "etcdserver/api/v2store/store_bench_test.go",
+      "lineRange": [
+        176,
+        202
+      ],
+      "summary": "Provides the benchStoreSet operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store_bench_test.go:generateNRandomKV",
+      "type": "function",
+      "name": "generateNRandomKV",
+      "filePath": "etcdserver/api/v2store/store_bench_test.go",
+      "lineRange": [
+        204,
+        217
+      ],
+      "summary": "Provides the generateNRandomKV operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:etcdserver/api/v2store/node_extern_test.go",
+      "target": "function:etcdserver/api/v2store/node_extern_test.go:TestNodeExternClone",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node_extern_test.go",
+      "target": "function:etcdserver/api/v2store/node_extern_test.go:TestNodeExternClone",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node_test.go",
+      "target": "function:etcdserver/api/v2store/node_test.go:TestNewKVIs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node_test.go",
+      "target": "function:etcdserver/api/v2store/node_test.go:TestNewKVIs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node_test.go",
+      "target": "function:etcdserver/api/v2store/node_test.go:TestNewKVReadWriteCompare",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node_test.go",
+      "target": "function:etcdserver/api/v2store/node_test.go:TestNewKVReadWriteCompare",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node_test.go",
+      "target": "function:etcdserver/api/v2store/node_test.go:TestNewKVExpiration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node_test.go",
+      "target": "function:etcdserver/api/v2store/node_test.go:TestNewKVExpiration",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node_test.go",
+      "target": "function:etcdserver/api/v2store/node_test.go:TestNewKVListReprCompareClone",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node_test.go",
+      "target": "function:etcdserver/api/v2store/node_test.go:TestNewKVListReprCompareClone",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node_test.go",
+      "target": "function:etcdserver/api/v2store/node_test.go:TestNewKVRemove",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node_test.go",
+      "target": "function:etcdserver/api/v2store/node_test.go:TestNewKVRemove",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node_test.go",
+      "target": "function:etcdserver/api/v2store/node_test.go:TestNewDirIs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node_test.go",
+      "target": "function:etcdserver/api/v2store/node_test.go:TestNewDirIs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node_test.go",
+      "target": "function:etcdserver/api/v2store/node_test.go:TestNewDirReadWriteListReprClone",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node_test.go",
+      "target": "function:etcdserver/api/v2store/node_test.go:TestNewDirReadWriteListReprClone",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node_test.go",
+      "target": "function:etcdserver/api/v2store/node_test.go:TestNewDirExpirationTTL",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node_test.go",
+      "target": "function:etcdserver/api/v2store/node_test.go:TestNewDirExpirationTTL",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node_test.go",
+      "target": "function:etcdserver/api/v2store/node_test.go:TestNewDirChild",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node_test.go",
+      "target": "function:etcdserver/api/v2store/node_test.go:TestNewDirChild",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/stats.go",
+      "target": "function:etcdserver/api/v2store/stats.go:clone",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/stats.go",
+      "target": "function:etcdserver/api/v2store/stats.go:Inc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/stats.go",
+      "target": "function:etcdserver/api/v2store/stats.go:Inc",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/stats.go",
+      "target": "class:etcdserver/api/v2store/stats.go:Stats",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/stats.go",
+      "target": "class:etcdserver/api/v2store/stats.go:Stats",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/stats_test.go",
+      "target": "function:etcdserver/api/v2store/stats_test.go:TestStoreStatsGetSuccess",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/stats_test.go",
+      "target": "function:etcdserver/api/v2store/stats_test.go:TestStoreStatsGetSuccess",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/stats_test.go",
+      "target": "function:etcdserver/api/v2store/stats_test.go:TestStoreStatsGetFail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/stats_test.go",
+      "target": "function:etcdserver/api/v2store/stats_test.go:TestStoreStatsGetFail",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/stats_test.go",
+      "target": "function:etcdserver/api/v2store/stats_test.go:TestStoreStatsCreateSuccess",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/stats_test.go",
+      "target": "function:etcdserver/api/v2store/stats_test.go:TestStoreStatsCreateSuccess",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/stats_test.go",
+      "target": "function:etcdserver/api/v2store/stats_test.go:TestStoreStatsCreateFail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/stats_test.go",
+      "target": "function:etcdserver/api/v2store/stats_test.go:TestStoreStatsCreateFail",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/stats_test.go",
+      "target": "function:etcdserver/api/v2store/stats_test.go:TestStoreStatsUpdateSuccess",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/stats_test.go",
+      "target": "function:etcdserver/api/v2store/stats_test.go:TestStoreStatsUpdateSuccess",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/stats_test.go",
+      "target": "function:etcdserver/api/v2store/stats_test.go:TestStoreStatsUpdateFail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/stats_test.go",
+      "target": "function:etcdserver/api/v2store/stats_test.go:TestStoreStatsUpdateFail",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/stats_test.go",
+      "target": "function:etcdserver/api/v2store/stats_test.go:TestStoreStatsCompareAndSwapSuccess",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/stats_test.go",
+      "target": "function:etcdserver/api/v2store/stats_test.go:TestStoreStatsCompareAndSwapSuccess",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/stats_test.go",
+      "target": "function:etcdserver/api/v2store/stats_test.go:TestStoreStatsCompareAndSwapFail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/stats_test.go",
+      "target": "function:etcdserver/api/v2store/stats_test.go:TestStoreStatsCompareAndSwapFail",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/stats_test.go",
+      "target": "function:etcdserver/api/v2store/stats_test.go:TestStoreStatsDeleteSuccess",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/stats_test.go",
+      "target": "function:etcdserver/api/v2store/stats_test.go:TestStoreStatsDeleteSuccess",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/stats_test.go",
+      "target": "function:etcdserver/api/v2store/stats_test.go:TestStoreStatsDeleteFail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/stats_test.go",
+      "target": "function:etcdserver/api/v2store/stats_test.go:TestStoreStatsDeleteFail",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/stats_test.go",
+      "target": "function:etcdserver/api/v2store/stats_test.go:TestStoreStatsExpireCount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/stats_test.go",
+      "target": "function:etcdserver/api/v2store/stats_test.go:TestStoreStatsExpireCount",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:New",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:New",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:newStore",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:Version",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:Version",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:Index",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:Index",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:Get",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:Get",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:Create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:Create",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:Set",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:Set",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:getCompareFailCause",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:CompareAndSwap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:CompareAndSwap",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:Delete",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:Delete",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:CompareAndDelete",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:CompareAndDelete",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:Watch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:Watch",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:walk",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:Update",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:Update",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:internalCreate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:internalGet",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:DeleteExpiredKeys",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:DeleteExpiredKeys",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:checkDir",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:Save",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:Save",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:SaveNoCopy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:SaveNoCopy",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:Clone",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:Clone",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:Recovery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:Recovery",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:JsonStats",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:JsonStats",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:HasTTLKeys",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "function:etcdserver/api/v2store/store.go:HasTTLKeys",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "class:etcdserver/api/v2store/store.go:Store",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "class:etcdserver/api/v2store/store.go:Store",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "class:etcdserver/api/v2store/store.go:store",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "file:etcdserver/api/v2error/error.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store.go",
+      "target": "file:etcdserver/api/v2error/error_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_bench_test.go",
+      "target": "function:etcdserver/api/v2store/store_bench_test.go:BenchmarkStoreSet128Bytes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_bench_test.go",
+      "target": "function:etcdserver/api/v2store/store_bench_test.go:BenchmarkStoreSet128Bytes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_bench_test.go",
+      "target": "function:etcdserver/api/v2store/store_bench_test.go:BenchmarkStoreSet1024Bytes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_bench_test.go",
+      "target": "function:etcdserver/api/v2store/store_bench_test.go:BenchmarkStoreSet1024Bytes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_bench_test.go",
+      "target": "function:etcdserver/api/v2store/store_bench_test.go:BenchmarkStoreSet4096Bytes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_bench_test.go",
+      "target": "function:etcdserver/api/v2store/store_bench_test.go:BenchmarkStoreSet4096Bytes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_bench_test.go",
+      "target": "function:etcdserver/api/v2store/store_bench_test.go:BenchmarkStoreSetWithJson128Bytes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_bench_test.go",
+      "target": "function:etcdserver/api/v2store/store_bench_test.go:BenchmarkStoreSetWithJson128Bytes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_bench_test.go",
+      "target": "function:etcdserver/api/v2store/store_bench_test.go:BenchmarkStoreSetWithJson1024Bytes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_bench_test.go",
+      "target": "function:etcdserver/api/v2store/store_bench_test.go:BenchmarkStoreSetWithJson1024Bytes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_bench_test.go",
+      "target": "function:etcdserver/api/v2store/store_bench_test.go:BenchmarkStoreSetWithJson4096Bytes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_bench_test.go",
+      "target": "function:etcdserver/api/v2store/store_bench_test.go:BenchmarkStoreSetWithJson4096Bytes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_bench_test.go",
+      "target": "function:etcdserver/api/v2store/store_bench_test.go:BenchmarkStoreDelete",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_bench_test.go",
+      "target": "function:etcdserver/api/v2store/store_bench_test.go:BenchmarkStoreDelete",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_bench_test.go",
+      "target": "function:etcdserver/api/v2store/store_bench_test.go:BenchmarkWatch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_bench_test.go",
+      "target": "function:etcdserver/api/v2store/store_bench_test.go:BenchmarkWatch",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_bench_test.go",
+      "target": "function:etcdserver/api/v2store/store_bench_test.go:BenchmarkWatchWithSet",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_bench_test.go",
+      "target": "function:etcdserver/api/v2store/store_bench_test.go:BenchmarkWatchWithSet",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_bench_test.go",
+      "target": "function:etcdserver/api/v2store/store_bench_test.go:BenchmarkWatchWithSetBatch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_bench_test.go",
+      "target": "function:etcdserver/api/v2store/store_bench_test.go:BenchmarkWatchWithSetBatch",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_bench_test.go",
+      "target": "function:etcdserver/api/v2store/store_bench_test.go:BenchmarkWatchOneKey",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_bench_test.go",
+      "target": "function:etcdserver/api/v2store/store_bench_test.go:BenchmarkWatchOneKey",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_bench_test.go",
+      "target": "function:etcdserver/api/v2store/store_bench_test.go:benchStoreSet",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_bench_test.go",
+      "target": "function:etcdserver/api/v2store/store_bench_test.go:generateNRandomKV",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    }
+  ]
+}

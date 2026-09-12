@@ -1,0 +1,153 @@
+{
+  "scriptCompleted": true,
+  "directoryGroups": {
+    "config": [
+      "config:.ua/config.json"
+    ],
+    "test": [
+      "file:auth_test.go",
+      "file:config_test.go",
+      "file:config_tracing_test.go",
+      "file:etcd_test.go",
+      "file:serve_test.go",
+      "file:util_test.go"
+    ],
+    "go": [
+      "file:config.go",
+      "file:config_logging.go",
+      "file:config_logging_journal_unix.go",
+      "file:config_logging_journal_windows.go",
+      "file:config_tracing.go",
+      "file:doc.go",
+      "file:etcd.go",
+      "file:serve.go",
+      "file:util.go"
+    ]
+  },
+  "nodeTypeGroups": {
+    "config": [
+      "config:.ua/config.json"
+    ],
+    "file": [
+      "file:auth_test.go",
+      "file:config.go",
+      "file:config_logging.go",
+      "file:config_logging_journal_unix.go",
+      "file:config_logging_journal_windows.go",
+      "file:config_test.go",
+      "file:config_tracing.go",
+      "file:config_tracing_test.go",
+      "file:doc.go",
+      "file:etcd.go",
+      "file:etcd_test.go",
+      "file:serve.go",
+      "file:serve_test.go",
+      "file:util.go",
+      "file:util_test.go"
+    ]
+  },
+  "crossCategoryEdges": [
+    {
+      "fromType": "file",
+      "toType": "file",
+      "edgeType": "tested_by",
+      "count": 5
+    }
+  ],
+  "interGroupImports": [],
+  "intraGroupDensity": {
+    "config": {
+      "internalEdges": 0,
+      "totalEdges": 0,
+      "density": 0
+    },
+    "test": {
+      "internalEdges": 0,
+      "totalEdges": 0,
+      "density": 0
+    },
+    "go": {
+      "internalEdges": 0,
+      "totalEdges": 0,
+      "density": 0
+    }
+  },
+  "patternMatches": {
+    "test": "test",
+    "config": "config",
+    "go": "service"
+  },
+  "deploymentTopology": {
+    "hasDockerfile": false,
+    "hasCompose": false,
+    "hasK8s": false,
+    "hasTerraform": false,
+    "hasCI": false,
+    "infraFiles": []
+  },
+  "dataPipeline": {
+    "schemaFiles": [],
+    "migrationFiles": [],
+    "dataModelFiles": [],
+    "apiHandlerFiles": []
+  },
+  "docCoverage": {
+    "groupsWithDocs": 0,
+    "totalGroups": 3,
+    "coverageRatio": 0,
+    "undocumentedGroups": [
+      "config",
+      "test",
+      "go"
+    ]
+  },
+  "dependencyDirection": [],
+  "fileStats": {
+    "totalFileNodes": 16,
+    "filesPerGroup": {
+      "config": 1,
+      "test": 6,
+      "go": 9
+    },
+    "nodeTypeCounts": {
+      "config": 1,
+      "file": 15
+    }
+  },
+  "fileFanIn": {
+    "config:.ua/config.json": 0,
+    "file:auth_test.go": 0,
+    "file:config.go": 0,
+    "file:config_logging.go": 0,
+    "file:config_logging_journal_unix.go": 0,
+    "file:config_logging_journal_windows.go": 0,
+    "file:config_test.go": 0,
+    "file:config_tracing.go": 0,
+    "file:config_tracing_test.go": 0,
+    "file:doc.go": 0,
+    "file:etcd.go": 0,
+    "file:etcd_test.go": 0,
+    "file:serve.go": 0,
+    "file:serve_test.go": 0,
+    "file:util.go": 0,
+    "file:util_test.go": 0
+  },
+  "fileFanOut": {
+    "config:.ua/config.json": 0,
+    "file:auth_test.go": 0,
+    "file:config.go": 0,
+    "file:config_logging.go": 0,
+    "file:config_logging_journal_unix.go": 0,
+    "file:config_logging_journal_windows.go": 0,
+    "file:config_test.go": 0,
+    "file:config_tracing.go": 0,
+    "file:config_tracing_test.go": 0,
+    "file:doc.go": 0,
+    "file:etcd.go": 0,
+    "file:etcd_test.go": 0,
+    "file:serve.go": 0,
+    "file:serve_test.go": 0,
+    "file:util.go": 0,
+    "file:util_test.go": 0
+  }
+}

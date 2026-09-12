@@ -1,0 +1,281 @@
+{
+  "nodes": [
+    {
+      "id": "file:etcdserver/api/v3compactor/doc.go",
+      "type": "file",
+      "name": "doc.go",
+      "filePath": "etcdserver/api/v3compactor/doc.go",
+      "summary": "Documents the v3 compactor package, which provides periodic and revision-based MVCC compaction APIs.",
+      "tags": [
+        "service",
+        "utility",
+        "etcdserver"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:etcdserver/api/v3compactor/periodic_test.go",
+      "type": "file",
+      "name": "periodic_test.go",
+      "filePath": "etcdserver/api/v3compactor/periodic_test.go",
+      "summary": "Exercises periodic compaction scheduling across hourly, minute, pause, and unchanged-revision cases.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/v3compactor/periodic_test.go:TestPeriodicHourly",
+      "type": "function",
+      "name": "TestPeriodicHourly",
+      "filePath": "etcdserver/api/v3compactor/periodic_test.go",
+      "lineRange": [
+        31,
+        81
+      ],
+      "summary": "Verifies periodic hourly behavior for the periodic_test.go implementation.",
+      "tags": [
+        "test",
+        "validation",
+        "behavior"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/v3compactor/periodic_test.go:TestPeriodicMinutes",
+      "type": "function",
+      "name": "TestPeriodicMinutes",
+      "filePath": "etcdserver/api/v3compactor/periodic_test.go",
+      "lineRange": [
+        83,
+        131
+      ],
+      "summary": "Verifies periodic minutes behavior for the periodic_test.go implementation.",
+      "tags": [
+        "test",
+        "validation",
+        "behavior"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3compactor/periodic_test.go:TestPeriodicPause",
+      "type": "function",
+      "name": "TestPeriodicPause",
+      "filePath": "etcdserver/api/v3compactor/periodic_test.go",
+      "lineRange": [
+        133,
+        176
+      ],
+      "summary": "Verifies periodic pause behavior for the periodic_test.go implementation.",
+      "tags": [
+        "test",
+        "validation",
+        "behavior"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3compactor/periodic_test.go:TestPeriodicSkipRevNotChange",
+      "type": "function",
+      "name": "TestPeriodicSkipRevNotChange",
+      "filePath": "etcdserver/api/v3compactor/periodic_test.go",
+      "lineRange": [
+        178,
+        241
+      ],
+      "summary": "Verifies periodic skip rev not change behavior for the periodic_test.go implementation.",
+      "tags": [
+        "test",
+        "validation",
+        "behavior"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/v3compactor/periodic_test.go:waitWithRetry",
+      "type": "function",
+      "name": "waitWithRetry",
+      "filePath": "etcdserver/api/v3compactor/periodic_test.go",
+      "lineRange": [
+        249,
+        267
+      ],
+      "summary": "Implements wait with retry behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdserver/api/v3compactor/revision_test.go",
+      "type": "file",
+      "name": "revision_test.go",
+      "filePath": "etcdserver/api/v3compactor/revision_test.go",
+      "summary": "Tests revision-triggered compaction and pause behavior using fake clocks and recorder streams.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3compactor/revision_test.go:TestRevision",
+      "type": "function",
+      "name": "TestRevision",
+      "filePath": "etcdserver/api/v3compactor/revision_test.go",
+      "lineRange": [
+        29,
+        70
+      ],
+      "summary": "Verifies revision behavior for the revision_test.go implementation.",
+      "tags": [
+        "test",
+        "validation",
+        "behavior"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3compactor/revision_test.go:TestRevisionPause",
+      "type": "function",
+      "name": "TestRevisionPause",
+      "filePath": "etcdserver/api/v3compactor/revision_test.go",
+      "lineRange": [
+        72,
+        108
+      ],
+      "summary": "Verifies revision pause behavior for the revision_test.go implementation.",
+      "tags": [
+        "test",
+        "validation",
+        "behavior"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdserver/api/v3election/doc.go",
+      "type": "file",
+      "name": "doc.go",
+      "filePath": "etcdserver/api/v3election/doc.go",
+      "summary": "Documents the v3 election API package for coordinating leadership through etcd leases.",
+      "tags": [
+        "service",
+        "utility",
+        "etcdserver"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:etcdserver/api/v3lock/doc.go",
+      "type": "file",
+      "name": "doc.go",
+      "filePath": "etcdserver/api/v3lock/doc.go",
+      "summary": "Documents the v3 lock API package for distributed mutex acquisition and release.",
+      "tags": [
+        "service",
+        "utility",
+        "etcdserver"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic_test.go",
+      "target": "function:etcdserver/api/v3compactor/periodic_test.go:TestPeriodicHourly",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic_test.go",
+      "target": "function:etcdserver/api/v3compactor/periodic_test.go:TestPeriodicHourly",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic_test.go",
+      "target": "function:etcdserver/api/v3compactor/periodic_test.go:TestPeriodicMinutes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic_test.go",
+      "target": "function:etcdserver/api/v3compactor/periodic_test.go:TestPeriodicMinutes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic_test.go",
+      "target": "function:etcdserver/api/v3compactor/periodic_test.go:TestPeriodicPause",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic_test.go",
+      "target": "function:etcdserver/api/v3compactor/periodic_test.go:TestPeriodicPause",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic_test.go",
+      "target": "function:etcdserver/api/v3compactor/periodic_test.go:TestPeriodicSkipRevNotChange",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic_test.go",
+      "target": "function:etcdserver/api/v3compactor/periodic_test.go:TestPeriodicSkipRevNotChange",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/periodic_test.go",
+      "target": "function:etcdserver/api/v3compactor/periodic_test.go:waitWithRetry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision_test.go",
+      "target": "function:etcdserver/api/v3compactor/revision_test.go:TestRevision",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision_test.go",
+      "target": "function:etcdserver/api/v3compactor/revision_test.go:TestRevision",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision_test.go",
+      "target": "function:etcdserver/api/v3compactor/revision_test.go:TestRevisionPause",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/revision_test.go",
+      "target": "function:etcdserver/api/v3compactor/revision_test.go:TestRevisionPause",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

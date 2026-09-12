@@ -1,0 +1,1268 @@
+{
+  "nodes": [
+    {
+      "id": "file:storage/storage.go",
+      "type": "file",
+      "name": "storage.go",
+      "filePath": "storage/storage.go",
+      "summary": "Defines the storage abstraction used by the server, including WAL access, snapshot persistence, backend access, and lifecycle operations.",
+      "tags": [
+        "storage",
+        "lifecycle",
+        "abstraction",
+        "persistence"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:storage/storage.go:Storage",
+      "type": "class",
+      "name": "Storage",
+      "filePath": "storage/storage.go",
+      "lineRange": [
+        29,
+        43
+      ],
+      "summary": "Defines the Storage data structure used by this package, with methods for its core storage or protocol behavior.",
+      "tags": [
+        "data-model",
+        "serialization",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:storage/storage.go:storage",
+      "type": "class",
+      "name": "storage",
+      "filePath": "storage/storage.go",
+      "lineRange": [
+        45,
+        52
+      ],
+      "summary": "Defines the storage data structure used by this package, with methods for its core storage or protocol behavior.",
+      "tags": [
+        "data-model",
+        "serialization",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/storage.go:NewStorage",
+      "type": "function",
+      "name": "NewStorage",
+      "filePath": "storage/storage.go",
+      "lineRange": [
+        54,
+        56
+      ],
+      "summary": "Implements NewStorage, providing focused server configuration or test behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/storage.go:SaveSnap",
+      "type": "function",
+      "name": "SaveSnap",
+      "filePath": "storage/storage.go",
+      "lineRange": [
+        59,
+        70
+      ],
+      "summary": "Implements SaveSnap, providing focused server configuration or test behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/storage.go:Release",
+      "type": "function",
+      "name": "Release",
+      "filePath": "storage/storage.go",
+      "lineRange": [
+        75,
+        82
+      ],
+      "summary": "Implements Release, providing focused server configuration or test behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/storage.go:Save",
+      "type": "function",
+      "name": "Save",
+      "filePath": "storage/storage.go",
+      "lineRange": [
+        84,
+        88
+      ],
+      "summary": "Implements Save, providing focused server configuration or test behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/storage.go:Close",
+      "type": "function",
+      "name": "Close",
+      "filePath": "storage/storage.go",
+      "lineRange": [
+        90,
+        94
+      ],
+      "summary": "Implements Close, providing focused server configuration or test behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/storage.go:Sync",
+      "type": "function",
+      "name": "Sync",
+      "filePath": "storage/storage.go",
+      "lineRange": [
+        96,
+        100
+      ],
+      "summary": "Implements Sync, providing focused server configuration or test behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/storage.go:MinimalEtcdVersion",
+      "type": "function",
+      "name": "MinimalEtcdVersion",
+      "filePath": "storage/storage.go",
+      "lineRange": [
+        102,
+        121
+      ],
+      "summary": "Implements MinimalEtcdVersion, providing focused server configuration or test behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:storage/wal/decoder.go",
+      "type": "file",
+      "name": "decoder.go",
+      "filePath": "storage/wal/decoder.go",
+      "summary": "Decodes length-prefixed, CRC-protected WAL records from files and validates record framing and corruption conditions.",
+      "tags": [
+        "wal",
+        "storage",
+        "persistence",
+        "serialization"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:storage/wal/decoder.go:Decoder",
+      "type": "class",
+      "name": "Decoder",
+      "filePath": "storage/wal/decoder.go",
+      "lineRange": [
+        39,
+        44
+      ],
+      "summary": "Defines the Decoder data structure used by this package, with methods for its core storage or protocol behavior.",
+      "tags": [
+        "data-model",
+        "serialization",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:storage/wal/decoder.go:decoder",
+      "type": "class",
+      "name": "decoder",
+      "filePath": "storage/wal/decoder.go",
+      "lineRange": [
+        46,
+        58
+      ],
+      "summary": "Defines the decoder data structure used by this package, with methods for its core storage or protocol behavior.",
+      "tags": [
+        "data-model",
+        "serialization",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/decoder.go:NewDecoderAdvanced",
+      "type": "function",
+      "name": "NewDecoderAdvanced",
+      "filePath": "storage/wal/decoder.go",
+      "lineRange": [
+        60,
+        70
+      ],
+      "summary": "Implements NewDecoderAdvanced, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/decoder.go:NewDecoder",
+      "type": "function",
+      "name": "NewDecoder",
+      "filePath": "storage/wal/decoder.go",
+      "lineRange": [
+        72,
+        74
+      ],
+      "summary": "Implements NewDecoder, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/decoder.go:Decode",
+      "type": "function",
+      "name": "Decode",
+      "filePath": "storage/wal/decoder.go",
+      "lineRange": [
+        81,
+        86
+      ],
+      "summary": "Implements Decode, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/decoder.go:decodeRecord",
+      "type": "function",
+      "name": "decodeRecord",
+      "filePath": "storage/wal/decoder.go",
+      "lineRange": [
+        88,
+        155
+      ],
+      "summary": "Implements decodeRecord, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/wal/decoder.go:decodeFrameSize",
+      "type": "function",
+      "name": "decodeFrameSize",
+      "filePath": "storage/wal/decoder.go",
+      "lineRange": [
+        157,
+        166
+      ],
+      "summary": "Implements decodeFrameSize, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/decoder.go:isTornEntry",
+      "type": "function",
+      "name": "isTornEntry",
+      "filePath": "storage/wal/decoder.go",
+      "lineRange": [
+        170,
+        203
+      ],
+      "summary": "Implements isTornEntry, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/decoder.go:UpdateCRC",
+      "type": "function",
+      "name": "UpdateCRC",
+      "filePath": "storage/wal/decoder.go",
+      "lineRange": [
+        205,
+        207
+      ],
+      "summary": "Implements UpdateCRC, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/decoder.go:LastCRC",
+      "type": "function",
+      "name": "LastCRC",
+      "filePath": "storage/wal/decoder.go",
+      "lineRange": [
+        209,
+        211
+      ],
+      "summary": "Implements LastCRC, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/decoder.go:LastOffset",
+      "type": "function",
+      "name": "LastOffset",
+      "filePath": "storage/wal/decoder.go",
+      "lineRange": [
+        213,
+        213
+      ],
+      "summary": "Implements LastOffset, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/decoder.go:MustUnmarshalEntry",
+      "type": "function",
+      "name": "MustUnmarshalEntry",
+      "filePath": "storage/wal/decoder.go",
+      "lineRange": [
+        215,
+        219
+      ],
+      "summary": "Implements MustUnmarshalEntry, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/decoder.go:MustUnmarshalState",
+      "type": "function",
+      "name": "MustUnmarshalState",
+      "filePath": "storage/wal/decoder.go",
+      "lineRange": [
+        221,
+        225
+      ],
+      "summary": "Implements MustUnmarshalState, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:storage/wal/doc.go",
+      "type": "file",
+      "name": "doc.go",
+      "filePath": "storage/wal/doc.go",
+      "summary": "Documents the WAL package and its durable record format, recovery behavior, and file organization.",
+      "tags": [
+        "wal",
+        "storage",
+        "persistence",
+        "serialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:storage/wal/encoder.go",
+      "type": "file",
+      "name": "encoder.go",
+      "filePath": "storage/wal/encoder.go",
+      "summary": "Encodes WAL records with length framing, CRC updates, protobuf serialization, and durable file writes.",
+      "tags": [
+        "wal",
+        "storage",
+        "persistence",
+        "serialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:storage/wal/encoder.go:encoder",
+      "type": "class",
+      "name": "encoder",
+      "filePath": "storage/wal/encoder.go",
+      "lineRange": [
+        38,
+        45
+      ],
+      "summary": "Defines the encoder data structure used by this package, with methods for its core storage or protocol behavior.",
+      "tags": [
+        "data-model",
+        "serialization",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/encoder.go:encode",
+      "type": "function",
+      "name": "encode",
+      "filePath": "storage/wal/encoder.go",
+      "lineRange": [
+        66,
+        98
+      ],
+      "summary": "Implements encode, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/encoder.go:write",
+      "type": "function",
+      "name": "write",
+      "filePath": "storage/wal/encoder.go",
+      "lineRange": [
+        124,
+        140
+      ],
+      "summary": "Implements write, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:storage/wal/file_pipeline.go",
+      "type": "file",
+      "name": "file_pipeline.go",
+      "filePath": "storage/wal/file_pipeline.go",
+      "summary": "Implements the asynchronous file pipeline that serializes WAL writes and coordinates flush and sync operations.",
+      "tags": [
+        "wal",
+        "storage",
+        "persistence",
+        "serialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:storage/wal/file_pipeline.go:filePipeline",
+      "type": "class",
+      "name": "filePipeline",
+      "filePath": "storage/wal/file_pipeline.go",
+      "lineRange": [
+        28,
+        41
+      ],
+      "summary": "Defines the filePipeline data structure used by this package, with methods for its core storage or protocol behavior.",
+      "tags": [
+        "data-model",
+        "serialization",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/file_pipeline.go:newFilePipeline",
+      "type": "function",
+      "name": "newFilePipeline",
+      "filePath": "storage/wal/file_pipeline.go",
+      "lineRange": [
+        43,
+        57
+      ],
+      "summary": "Implements newFilePipeline, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/file_pipeline.go:Open",
+      "type": "function",
+      "name": "Open",
+      "filePath": "storage/wal/file_pipeline.go",
+      "lineRange": [
+        62,
+        68
+      ],
+      "summary": "Implements Open, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/file_pipeline.go:Close",
+      "type": "function",
+      "name": "Close",
+      "filePath": "storage/wal/file_pipeline.go",
+      "lineRange": [
+        70,
+        73
+      ],
+      "summary": "Implements Close, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/file_pipeline.go:alloc",
+      "type": "function",
+      "name": "alloc",
+      "filePath": "storage/wal/file_pipeline.go",
+      "lineRange": [
+        75,
+        88
+      ],
+      "summary": "Implements alloc, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/file_pipeline.go:run",
+      "type": "function",
+      "name": "run",
+      "filePath": "storage/wal/file_pipeline.go",
+      "lineRange": [
+        90,
+        106
+      ],
+      "summary": "Implements run, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:storage/wal/file_pipeline_test.go",
+      "type": "file",
+      "name": "file_pipeline_test.go",
+      "filePath": "storage/wal/file_pipeline_test.go",
+      "summary": "Tests asynchronous WAL file-pipeline ordering, write behavior, flushing, and shutdown handling.",
+      "tags": [
+        "wal",
+        "storage",
+        "persistence",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/wal/file_pipeline_test.go:TestFilePipeline",
+      "type": "function",
+      "name": "TestFilePipeline",
+      "filePath": "storage/wal/file_pipeline_test.go",
+      "lineRange": [
+        24,
+        35
+      ],
+      "summary": "Implements TestFilePipeline, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/file_pipeline_test.go:TestFilePipelineFailPreallocate",
+      "type": "function",
+      "name": "TestFilePipelineFailPreallocate",
+      "filePath": "storage/wal/file_pipeline_test.go",
+      "lineRange": [
+        37,
+        47
+      ],
+      "summary": "Implements TestFilePipelineFailPreallocate, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:storage/storage.go",
+      "target": "class:storage/storage.go:Storage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "class:storage/storage.go:Storage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "class:storage/storage.go:storage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "function:storage/storage.go:NewStorage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "function:storage/storage.go:NewStorage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "function:storage/storage.go:SaveSnap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "function:storage/storage.go:SaveSnap",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "function:storage/storage.go:Release",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "function:storage/storage.go:Release",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "function:storage/storage.go:Save",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "function:storage/storage.go:Save",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "function:storage/storage.go:Close",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "function:storage/storage.go:Close",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "function:storage/storage.go:Sync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "function:storage/storage.go:Sync",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "function:storage/storage.go:MinimalEtcdVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "function:storage/storage.go:MinimalEtcdVersion",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/decoder.go",
+      "target": "class:storage/wal/decoder.go:Decoder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/decoder.go",
+      "target": "class:storage/wal/decoder.go:Decoder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/decoder.go",
+      "target": "class:storage/wal/decoder.go:decoder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/decoder.go",
+      "target": "function:storage/wal/decoder.go:NewDecoderAdvanced",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/decoder.go",
+      "target": "function:storage/wal/decoder.go:NewDecoderAdvanced",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/decoder.go",
+      "target": "function:storage/wal/decoder.go:NewDecoder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/decoder.go",
+      "target": "function:storage/wal/decoder.go:NewDecoder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/decoder.go",
+      "target": "function:storage/wal/decoder.go:Decode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/decoder.go",
+      "target": "function:storage/wal/decoder.go:Decode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/decoder.go",
+      "target": "function:storage/wal/decoder.go:decodeRecord",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/decoder.go",
+      "target": "function:storage/wal/decoder.go:decodeFrameSize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/decoder.go",
+      "target": "function:storage/wal/decoder.go:isTornEntry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/decoder.go",
+      "target": "function:storage/wal/decoder.go:UpdateCRC",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/decoder.go",
+      "target": "function:storage/wal/decoder.go:UpdateCRC",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/decoder.go",
+      "target": "function:storage/wal/decoder.go:LastCRC",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/decoder.go",
+      "target": "function:storage/wal/decoder.go:LastCRC",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/decoder.go",
+      "target": "function:storage/wal/decoder.go:LastOffset",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/decoder.go",
+      "target": "function:storage/wal/decoder.go:LastOffset",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/decoder.go",
+      "target": "function:storage/wal/decoder.go:MustUnmarshalEntry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/decoder.go",
+      "target": "function:storage/wal/decoder.go:MustUnmarshalEntry",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/decoder.go",
+      "target": "function:storage/wal/decoder.go:MustUnmarshalState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/decoder.go",
+      "target": "function:storage/wal/decoder.go:MustUnmarshalState",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/encoder.go",
+      "target": "class:storage/wal/encoder.go:encoder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/encoder.go",
+      "target": "function:storage/wal/encoder.go:encode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/encoder.go",
+      "target": "function:storage/wal/encoder.go:write",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/file_pipeline.go",
+      "target": "class:storage/wal/file_pipeline.go:filePipeline",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/file_pipeline.go",
+      "target": "function:storage/wal/file_pipeline.go:newFilePipeline",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/file_pipeline.go",
+      "target": "function:storage/wal/file_pipeline.go:Open",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/file_pipeline.go",
+      "target": "function:storage/wal/file_pipeline.go:Open",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/file_pipeline.go",
+      "target": "function:storage/wal/file_pipeline.go:Close",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/file_pipeline.go",
+      "target": "function:storage/wal/file_pipeline.go:Close",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/file_pipeline.go",
+      "target": "function:storage/wal/file_pipeline.go:alloc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/file_pipeline.go",
+      "target": "function:storage/wal/file_pipeline.go:run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/file_pipeline_test.go",
+      "target": "function:storage/wal/file_pipeline_test.go:TestFilePipeline",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/file_pipeline_test.go",
+      "target": "function:storage/wal/file_pipeline_test.go:TestFilePipeline",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/file_pipeline_test.go",
+      "target": "function:storage/wal/file_pipeline_test.go:TestFilePipelineFailPreallocate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/file_pipeline_test.go",
+      "target": "function:storage/wal/file_pipeline_test.go:TestFilePipelineFailPreallocate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "file:etcdserver/api/snap/db.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "file:etcdserver/api/snap/db_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "file:etcdserver/api/snap/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "file:etcdserver/api/snap/message.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "file:etcdserver/api/snap/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "file:etcdserver/api/snap/snapshotter.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "file:etcdserver/api/snap/snapshotter_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "file:storage/wal/decoder.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "file:storage/wal/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "file:storage/wal/encoder.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "file:storage/wal/file_pipeline.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "file:storage/wal/file_pipeline_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "file:storage/wal/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "file:storage/wal/record_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "file:storage/wal/repair.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "file:storage/wal/repair_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "file:storage/wal/util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "file:storage/wal/version.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "file:storage/wal/version_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "file:storage/wal/wal.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "file:storage/wal/wal_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "file:storage/wal/wal_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "file:storage/wal/walpb/record.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "file:storage/wal/walpb/record.pb.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/storage.go",
+      "target": "file:storage/wal/walpb/record_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/wal/decoder.go",
+      "target": "file:storage/wal/walpb/record.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/wal/decoder.go",
+      "target": "file:storage/wal/walpb/record.pb.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/wal/decoder.go",
+      "target": "file:storage/wal/walpb/record_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:storage/wal/decoder.go:NewDecoder",
+      "target": "function:storage/wal/decoder.go:NewDecoderAdvanced",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/decoder.go:decodeRecord",
+      "target": "function:storage/wal/decoder.go:decodeFrameSize",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/encoder.go",
+      "target": "file:storage/wal/walpb/record.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/wal/encoder.go",
+      "target": "file:storage/wal/walpb/record.pb.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/wal/encoder.go",
+      "target": "file:storage/wal/walpb/record_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:storage/wal/encoder.go:encode",
+      "target": "function:storage/wal/encoder.go:write",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}
+

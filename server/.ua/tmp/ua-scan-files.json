@@ -1,0 +1,2433 @@
+{
+  "scriptCompleted": true,
+  "contentDigest": "218099ce475e22814b64e3742b883b4482bbc272f59e187cbb387c39b12dd432",
+  "files": [
+    {
+      "path": ".gomodguard.yaml",
+      "language": "yaml",
+      "sizeLines": 9,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".ua/config.json",
+      "language": "json",
+      "sizeLines": 3,
+      "fileCategory": "config"
+    },
+    {
+      "path": "auth/doc.go",
+      "language": "go",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "auth/jwt.go",
+      "language": "go",
+      "sizeLines": 177,
+      "fileCategory": "code"
+    },
+    {
+      "path": "auth/jwt_test.go",
+      "language": "go",
+      "sizeLines": 277,
+      "fileCategory": "code"
+    },
+    {
+      "path": "auth/main_test.go",
+      "language": "go",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "auth/metrics.go",
+      "language": "go",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "auth/nop.go",
+      "language": "go",
+      "sizeLines": 37,
+      "fileCategory": "code"
+    },
+    {
+      "path": "auth/options.go",
+      "language": "go",
+      "sizeLines": 235,
+      "fileCategory": "code"
+    },
+    {
+      "path": "auth/range_perm_cache.go",
+      "language": "go",
+      "sizeLines": 204,
+      "fileCategory": "code"
+    },
+    {
+      "path": "auth/range_perm_cache_test.go",
+      "language": "go",
+      "sizeLines": 221,
+      "fileCategory": "code"
+    },
+    {
+      "path": "auth/simple_token.go",
+      "language": "go",
+      "sizeLines": 258,
+      "fileCategory": "code"
+    },
+    {
+      "path": "auth/simple_token_test.go",
+      "language": "go",
+      "sizeLines": 70,
+      "fileCategory": "code"
+    },
+    {
+      "path": "auth/store.go",
+      "language": "go",
+      "sizeLines": 1237,
+      "fileCategory": "code"
+    },
+    {
+      "path": "auth/store_mock_test.go",
+      "language": "go",
+      "sizeLines": 137,
+      "fileCategory": "code"
+    },
+    {
+      "path": "auth/store_test.go",
+      "language": "go",
+      "sizeLines": 1179,
+      "fileCategory": "code"
+    },
+    {
+      "path": "config/config.go",
+      "language": "go",
+      "sizeLines": 356,
+      "fileCategory": "code"
+    },
+    {
+      "path": "config/config_test.go",
+      "language": "go",
+      "sizeLines": 225,
+      "fileCategory": "code"
+    },
+    {
+      "path": "embed/auth_test.go",
+      "language": "go",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    },
+    {
+      "path": "embed/config.go",
+      "language": "go",
+      "sizeLines": 1379,
+      "fileCategory": "code"
+    },
+    {
+      "path": "embed/config_logging.go",
+      "language": "go",
+      "sizeLines": 288,
+      "fileCategory": "code"
+    },
+    {
+      "path": "embed/config_logging_journal_unix.go",
+      "language": "go",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "embed/config_logging_journal_windows.go",
+      "language": "go",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "embed/config_test.go",
+      "language": "go",
+      "sizeLines": 946,
+      "fileCategory": "code"
+    },
+    {
+      "path": "embed/config_tracing.go",
+      "language": "go",
+      "sizeLines": 142,
+      "fileCategory": "code"
+    },
+    {
+      "path": "embed/config_tracing_test.go",
+      "language": "go",
+      "sizeLines": 83,
+      "fileCategory": "code"
+    },
+    {
+      "path": "embed/doc.go",
+      "language": "go",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "embed/etcd.go",
+      "language": "go",
+      "sizeLines": 947,
+      "fileCategory": "code"
+    },
+    {
+      "path": "embed/etcd_test.go",
+      "language": "go",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "embed/serve.go",
+      "language": "go",
+      "sizeLines": 569,
+      "fileCategory": "code"
+    },
+    {
+      "path": "embed/serve_test.go",
+      "language": "go",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "embed/util.go",
+      "language": "go",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    },
+    {
+      "path": "embed/util_test.go",
+      "language": "go",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdmain/config.go",
+      "language": "go",
+      "sizeLines": 254,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdmain/config_test.go",
+      "language": "go",
+      "sizeLines": 529,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdmain/doc.go",
+      "language": "go",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdmain/etcd.go",
+      "language": "go",
+      "sizeLines": 253,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdmain/gateway.go",
+      "language": "go",
+      "sizeLines": 181,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdmain/grpc_proxy.go",
+      "language": "go",
+      "sizeLines": 672,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdmain/grpc_proxy_logger.go",
+      "language": "go",
+      "sizeLines": 100,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdmain/grpc_proxy_logger_test.go",
+      "language": "go",
+      "sizeLines": 129,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdmain/help.go",
+      "language": "go",
+      "sizeLines": 302,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdmain/main.go",
+      "language": "go",
+      "sizeLines": 51,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdmain/util.go",
+      "language": "go",
+      "sizeLines": 89,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/adapters.go",
+      "language": "go",
+      "sizeLines": 85,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/capability.go",
+      "language": "go",
+      "sizeLines": 98,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/cluster.go",
+      "language": "go",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/doc.go",
+      "language": "go",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/etcdhttp/debug.go",
+      "language": "go",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/etcdhttp/doc.go",
+      "language": "go",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/etcdhttp/health.go",
+      "language": "go",
+      "sizeLines": 447,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/etcdhttp/health_test.go",
+      "language": "go",
+      "sizeLines": 470,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/etcdhttp/metrics.go",
+      "language": "go",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/etcdhttp/peer.go",
+      "language": "go",
+      "sizeLines": 174,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/etcdhttp/peer_test.go",
+      "language": "go",
+      "sizeLines": 287,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/etcdhttp/types/errors.go",
+      "language": "go",
+      "sizeLines": 51,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/etcdhttp/types/errors_test.go",
+      "language": "go",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/etcdhttp/utils.go",
+      "language": "go",
+      "sizeLines": 99,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/etcdhttp/version.go",
+      "language": "go",
+      "sizeLines": 65,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/etcdhttp/version_test.go",
+      "language": "go",
+      "sizeLines": 69,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/membership/cluster.go",
+      "language": "go",
+      "sizeLines": 921,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/membership/cluster_opts.go",
+      "language": "go",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/membership/cluster_test.go",
+      "language": "go",
+      "sizeLines": 1180,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/membership/doc.go",
+      "language": "go",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/membership/errors.go",
+      "language": "go",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/membership/member.go",
+      "language": "go",
+      "sizeLines": 132,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/membership/member_test.go",
+      "language": "go",
+      "sizeLines": 90,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/membership/membership_test.go",
+      "language": "go",
+      "sizeLines": 98,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/membership/metrics.go",
+      "language": "go",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/membership/store.go",
+      "language": "go",
+      "sizeLines": 57,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/membership/storev2.go",
+      "language": "go",
+      "sizeLines": 216,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/membership/storev2_test.go",
+      "language": "go",
+      "sizeLines": 76,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/rafthttp/coder.go",
+      "language": "go",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/rafthttp/doc.go",
+      "language": "go",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/rafthttp/fake_roundtripper_test.go",
+      "language": "go",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/rafthttp/functional_test.go",
+      "language": "go",
+      "sizeLines": 180,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/rafthttp/http.go",
+      "language": "go",
+      "sizeLines": 543,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/rafthttp/http_test.go",
+      "language": "go",
+      "sizeLines": 394,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/rafthttp/metrics.go",
+      "language": "go",
+      "sizeLines": 201,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/rafthttp/msg_codec.go",
+      "language": "go",
+      "sizeLines": 70,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/rafthttp/msg_codec_test.go",
+      "language": "go",
+      "sizeLines": 98,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/rafthttp/msgappv2_codec.go",
+      "language": "go",
+      "sizeLines": 254,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/rafthttp/msgappv2_codec_test.go",
+      "language": "go",
+      "sizeLines": 126,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/rafthttp/peer.go",
+      "language": "go",
+      "sizeLines": 353,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/rafthttp/peer_status.go",
+      "language": "go",
+      "sizeLines": 90,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/rafthttp/peer_test.go",
+      "language": "go",
+      "sizeLines": 87,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/rafthttp/pipeline.go",
+      "language": "go",
+      "sizeLines": 179,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/rafthttp/pipeline_test.go",
+      "language": "go",
+      "sizeLines": 313,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/rafthttp/probing_status.go",
+      "language": "go",
+      "sizeLines": 98,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/rafthttp/remote.go",
+      "language": "go",
+      "sizeLines": 95,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/rafthttp/snapshot_sender.go",
+      "language": "go",
+      "sizeLines": 199,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/rafthttp/snapshot_test.go",
+      "language": "go",
+      "sizeLines": 142,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/rafthttp/stream.go",
+      "language": "go",
+      "sizeLines": 719,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/rafthttp/stream_test.go",
+      "language": "go",
+      "sizeLines": 455,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/rafthttp/transport.go",
+      "language": "go",
+      "sizeLines": 454,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/rafthttp/transport_bench_test.go",
+      "language": "go",
+      "sizeLines": 118,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/rafthttp/transport_test.go",
+      "language": "go",
+      "sizeLines": 208,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/rafthttp/urlpick.go",
+      "language": "go",
+      "sizeLines": 57,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/rafthttp/urlpick_test.go",
+      "language": "go",
+      "sizeLines": 73,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/rafthttp/util.go",
+      "language": "go",
+      "sizeLines": 205,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/rafthttp/util_test.go",
+      "language": "go",
+      "sizeLines": 221,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/snap/db.go",
+      "language": "go",
+      "sizeLines": 132,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/snap/db_test.go",
+      "language": "go",
+      "sizeLines": 65,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/snap/doc.go",
+      "language": "go",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/snap/message.go",
+      "language": "go",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/snap/metrics.go",
+      "language": "go",
+      "sizeLines": 82,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/snap/snappb/snap.pb.go",
+      "language": "go",
+      "sizeLines": 133,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/snap/snappb/snap.proto",
+      "language": "protobuf",
+      "sizeLines": 9,
+      "fileCategory": "data"
+    },
+    {
+      "path": "etcdserver/api/snap/snapshotter.go",
+      "language": "go",
+      "sizeLines": 72,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/snap/snapshotter_test.go",
+      "language": "go",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v2error/error.go",
+      "language": "go",
+      "sizeLines": 161,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v2error/error_test.go",
+      "language": "go",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v2stats/leader.go",
+      "language": "go",
+      "sizeLines": 135,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v2stats/queue.go",
+      "language": "go",
+      "sizeLines": 109,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v2stats/server.go",
+      "language": "go",
+      "sizeLines": 142,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v2store/doc.go",
+      "language": "go",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v2store/event.go",
+      "language": "go",
+      "sizeLines": 71,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v2store/event_history.go",
+      "language": "go",
+      "sizeLines": 128,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v2store/event_queue.go",
+      "language": "go",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v2store/event_test.go",
+      "language": "go",
+      "sizeLines": 160,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v2store/heap_test.go",
+      "language": "go",
+      "sizeLines": 91,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v2store/metrics.go",
+      "language": "go",
+      "sizeLines": 141,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v2store/node.go",
+      "language": "go",
+      "sizeLines": 395,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v2store/node_extern.go",
+      "language": "go",
+      "sizeLines": 115,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v2store/node_extern_test.go",
+      "language": "go",
+      "sizeLines": 107,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v2store/node_test.go",
+      "language": "go",
+      "sizeLines": 246,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v2store/stats.go",
+      "language": "go",
+      "sizeLines": 145,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v2store/stats_test.go",
+      "language": "go",
+      "sizeLines": 112,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v2store/store.go",
+      "language": "go",
+      "sizeLines": 794,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v2store/store_bench_test.go",
+      "language": "go",
+      "sizeLines": 217,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v2store/store_ttl_test.go",
+      "language": "go",
+      "sizeLines": 369,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v2store/ttl_key_heap.go",
+      "language": "go",
+      "sizeLines": 97,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v2store/watcher.go",
+      "language": "go",
+      "sizeLines": 95,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v2store/watcher_hub.go",
+      "language": "go",
+      "sizeLines": 199,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v2store/watcher_hub_test.go",
+      "language": "go",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v2store/watcher_test.go",
+      "language": "go",
+      "sizeLines": 89,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3alarm/alarms.go",
+      "language": "go",
+      "sizeLines": 128,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3client/doc.go",
+      "language": "go",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3client/v3client.go",
+      "language": "go",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3compactor/compactor.go",
+      "language": "go",
+      "sizeLines": 73,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3compactor/compactor_test.go",
+      "language": "go",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3compactor/doc.go",
+      "language": "go",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3compactor/periodic.go",
+      "language": "go",
+      "sizeLines": 208,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3compactor/periodic_test.go",
+      "language": "go",
+      "sizeLines": 267,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3compactor/revision.go",
+      "language": "go",
+      "sizeLines": 131,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3compactor/revision_test.go",
+      "language": "go",
+      "sizeLines": 108,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3discovery/discovery.go",
+      "language": "go",
+      "sizeLines": 509,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3discovery/discovery_test.go",
+      "language": "go",
+      "sizeLines": 784,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3election/doc.go",
+      "language": "go",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3election/election.go",
+      "language": "go",
+      "sizeLines": 136,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go",
+      "language": "go",
+      "sizeLines": 405,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "language": "go",
+      "sizeLines": 619,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3election/v3electionpb/v3election.proto",
+      "language": "protobuf",
+      "sizeLines": 117,
+      "fileCategory": "data"
+    },
+    {
+      "path": "etcdserver/api/v3election/v3electionpb/v3election_grpc.pb.go",
+      "language": "go",
+      "sizeLines": 302,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3lock/doc.go",
+      "language": "go",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3lock/lock.go",
+      "language": "go",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3lock/v3lockpb/gw/v3lock.pb.gw.go",
+      "language": "go",
+      "sizeLines": 224,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3lock/v3lockpb/v3lock.pb.go",
+      "language": "go",
+      "sizeLines": 304,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3lock/v3lockpb/v3lock.proto",
+      "language": "protobuf",
+      "sizeLines": 63,
+      "fileCategory": "data"
+    },
+    {
+      "path": "etcdserver/api/v3lock/v3lockpb/v3lock_grpc.pb.go",
+      "language": "go",
+      "sizeLines": 182,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3rpc/auth.go",
+      "language": "go",
+      "sizeLines": 205,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3rpc/codec.go",
+      "language": "go",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3rpc/grpc.go",
+      "language": "go",
+      "sizeLines": 114,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3rpc/header.go",
+      "language": "go",
+      "sizeLines": 57,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3rpc/health.go",
+      "language": "go",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3rpc/interceptor.go",
+      "language": "go",
+      "sizeLines": 354,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3rpc/key.go",
+      "language": "go",
+      "sizeLines": 332,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3rpc/key_test.go",
+      "language": "go",
+      "sizeLines": 68,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3rpc/lease.go",
+      "language": "go",
+      "sizeLines": 158,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3rpc/maintenance.go",
+      "language": "go",
+      "sizeLines": 391,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3rpc/member.go",
+      "language": "go",
+      "sizeLines": 126,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3rpc/metrics.go",
+      "language": "go",
+      "sizeLines": 114,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3rpc/quota.go",
+      "language": "go",
+      "sizeLines": 95,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3rpc/util.go",
+      "language": "go",
+      "sizeLines": 152,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3rpc/util_test.go",
+      "language": "go",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3rpc/validationfuzz_test.go",
+      "language": "go",
+      "sizeLines": 182,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3rpc/watch.go",
+      "language": "go",
+      "sizeLines": 673,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/api/v3rpc/watch_test.go",
+      "language": "go",
+      "sizeLines": 117,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/apply/apply.go",
+      "language": "go",
+      "sizeLines": 53,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/apply/auth.go",
+      "language": "go",
+      "sizeLines": 275,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/apply/auth_test.go",
+      "language": "go",
+      "sizeLines": 1187,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/apply/backend.go",
+      "language": "go",
+      "sizeLines": 313,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/apply/capped.go",
+      "language": "go",
+      "sizeLines": 46,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/apply/corrupt.go",
+      "language": "go",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/apply/interface.go",
+      "language": "go",
+      "sizeLines": 126,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/apply/metrics.go",
+      "language": "go",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/apply/quota.go",
+      "language": "go",
+      "sizeLines": 61,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/apply/uber_applier.go",
+      "language": "go",
+      "sizeLines": 222,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/apply/uber_applier_test.go",
+      "language": "go",
+      "sizeLines": 281,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/bootstrap.go",
+      "language": "go",
+      "sizeLines": 773,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/bootstrap_test.go",
+      "language": "go",
+      "sizeLines": 295,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/cindex/cindex.go",
+      "language": "go",
+      "sizeLines": 178,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/cindex/cindex_test.go",
+      "language": "go",
+      "sizeLines": 147,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/cindex/doc.go",
+      "language": "go",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/cluster_util.go",
+      "language": "go",
+      "sizeLines": 447,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/cluster_util_test.go",
+      "language": "go",
+      "sizeLines": 178,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/corrupt.go",
+      "language": "go",
+      "sizeLines": 626,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/corrupt_test.go",
+      "language": "go",
+      "sizeLines": 580,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/doc.go",
+      "language": "go",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/errors/errors.go",
+      "language": "go",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/interface.go",
+      "language": "go",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/metrics.go",
+      "language": "go",
+      "sizeLines": 245,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/raft.go",
+      "language": "go",
+      "sizeLines": 453,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/raft_test.go",
+      "language": "go",
+      "sizeLines": 344,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/read/metrics.go",
+      "language": "go",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/read/read.go",
+      "language": "go",
+      "sizeLines": 258,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/read/read_test.go",
+      "language": "go",
+      "sizeLines": 251,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/read/util.go",
+      "language": "go",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/server.go",
+      "language": "go",
+      "sizeLines": 2461,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/server_access_control.go",
+      "language": "go",
+      "sizeLines": 65,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/server_access_control_test.go",
+      "language": "go",
+      "sizeLines": 119,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/server_test.go",
+      "language": "go",
+      "sizeLines": 1598,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/snapshot_merge.go",
+      "language": "go",
+      "sizeLines": 80,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/tracing.go",
+      "language": "go",
+      "sizeLines": 74,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/txn/delete.go",
+      "language": "go",
+      "sizeLines": 68,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/txn/metrics.go",
+      "language": "go",
+      "sizeLines": 71,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/txn/metrics_test.go",
+      "language": "go",
+      "sizeLines": 62,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/txn/put.go",
+      "language": "go",
+      "sizeLines": 115,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/txn/range.go",
+      "language": "go",
+      "sizeLines": 234,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/txn/range_bench_test.go",
+      "language": "go",
+      "sizeLines": 150,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/txn/txn.go",
+      "language": "go",
+      "sizeLines": 364,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/txn/txn_test.go",
+      "language": "go",
+      "sizeLines": 462,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/txn/util.go",
+      "language": "go",
+      "sizeLines": 107,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/txn/util_bench_test.go",
+      "language": "go",
+      "sizeLines": 62,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/txn/util_test.go",
+      "language": "go",
+      "sizeLines": 141,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/util.go",
+      "language": "go",
+      "sizeLines": 113,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/util_test.go",
+      "language": "go",
+      "sizeLines": 157,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/v3_server.go",
+      "language": "go",
+      "sizeLines": 1290,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/version/doc.go",
+      "language": "go",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/version/downgrade.go",
+      "language": "go",
+      "sizeLines": 76,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/version/downgrade_test.go",
+      "language": "go",
+      "sizeLines": 188,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/version/errors.go",
+      "language": "go",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/version/monitor.go",
+      "language": "go",
+      "sizeLines": 226,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/version/monitor_test.go",
+      "language": "go",
+      "sizeLines": 463,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/version/version.go",
+      "language": "go",
+      "sizeLines": 81,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/version/version_test.go",
+      "language": "go",
+      "sizeLines": 255,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/zap_raft.go",
+      "language": "go",
+      "sizeLines": 103,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcdserver/zap_raft_test.go",
+      "language": "go",
+      "sizeLines": 90,
+      "fileCategory": "code"
+    },
+    {
+      "path": "features/etcd_features.go",
+      "language": "go",
+      "sizeLines": 107,
+      "fileCategory": "code"
+    },
+    {
+      "path": "go.mod",
+      "language": "mod",
+      "sizeLines": 81,
+      "fileCategory": "config"
+    },
+    {
+      "path": "go.sum",
+      "language": "sum",
+      "sizeLines": 162,
+      "fileCategory": "config"
+    },
+    {
+      "path": "lease/doc.go",
+      "language": "go",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lease/lease.go",
+      "language": "go",
+      "sizeLines": 135,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lease/lease_queue.go",
+      "language": "go",
+      "sizeLines": 108,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lease/lease_queue_test.go",
+      "language": "go",
+      "sizeLines": 83,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lease/leasehttp/doc.go",
+      "language": "go",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lease/leasehttp/http.go",
+      "language": "go",
+      "sizeLines": 300,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lease/leasehttp/http_test.go",
+      "language": "go",
+      "sizeLines": 125,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lease/leasepb/lease.pb.go",
+      "language": "go",
+      "sizeLines": 240,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lease/leasepb/lease.proto",
+      "language": "protobuf",
+      "sizeLines": 20,
+      "fileCategory": "data"
+    },
+    {
+      "path": "lease/lessor.go",
+      "language": "go",
+      "sizeLines": 887,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lease/lessor_bench_test.go",
+      "language": "go",
+      "sizeLines": 213,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lease/lessor_test.go",
+      "language": "go",
+      "sizeLines": 717,
+      "fileCategory": "code"
+    },
+    {
+      "path": "lease/metrics.go",
+      "language": "go",
+      "sizeLines": 60,
+      "fileCategory": "code"
+    },
+    {
+      "path": "main.go",
+      "language": "go",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mock/mockstorage/doc.go",
+      "language": "go",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mock/mockstorage/storage_recorder.go",
+      "language": "go",
+      "sizeLines": 63,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mock/mockstore/doc.go",
+      "language": "go",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mock/mockstore/store_recorder.go",
+      "language": "go",
+      "sizeLines": 172,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mock/mockwait/doc.go",
+      "language": "go",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "mock/mockwait/wait_recorder.go",
+      "language": "go",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "language": "go",
+      "sizeLines": 97,
+      "fileCategory": "code"
+    },
+    {
+      "path": "proxy/grpcproxy/adapter/chan_stream.go",
+      "language": "go",
+      "sizeLines": 173,
+      "fileCategory": "code"
+    },
+    {
+      "path": "proxy/grpcproxy/adapter/chan_stream_test.go",
+      "language": "go",
+      "sizeLines": 83,
+      "fileCategory": "code"
+    },
+    {
+      "path": "proxy/grpcproxy/adapter/cluster_client_adapter.go",
+      "language": "go",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    },
+    {
+      "path": "proxy/grpcproxy/adapter/doc.go",
+      "language": "go",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "proxy/grpcproxy/adapter/election_client_adapter.go",
+      "language": "go",
+      "sizeLines": 82,
+      "fileCategory": "code"
+    },
+    {
+      "path": "proxy/grpcproxy/adapter/kv_client_adapter.go",
+      "language": "go",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    },
+    {
+      "path": "proxy/grpcproxy/adapter/lease_client_adapter.go",
+      "language": "go",
+      "sizeLines": 84,
+      "fileCategory": "code"
+    },
+    {
+      "path": "proxy/grpcproxy/adapter/lock_client_adapter.go",
+      "language": "go",
+      "sizeLines": 37,
+      "fileCategory": "code"
+    },
+    {
+      "path": "proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "language": "go",
+      "sizeLines": 94,
+      "fileCategory": "code"
+    },
+    {
+      "path": "proxy/grpcproxy/adapter/watch_client_adapter.go",
+      "language": "go",
+      "sizeLines": 69,
+      "fileCategory": "code"
+    },
+    {
+      "path": "proxy/grpcproxy/auth.go",
+      "language": "go",
+      "sizeLines": 100,
+      "fileCategory": "code"
+    },
+    {
+      "path": "proxy/grpcproxy/cache/store.go",
+      "language": "go",
+      "sizeLines": 174,
+      "fileCategory": "code"
+    },
+    {
+      "path": "proxy/grpcproxy/cluster.go",
+      "language": "go",
+      "sizeLines": 184,
+      "fileCategory": "code"
+    },
+    {
+      "path": "proxy/grpcproxy/doc.go",
+      "language": "go",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "proxy/grpcproxy/election.go",
+      "language": "go",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "proxy/grpcproxy/health.go",
+      "language": "go",
+      "sizeLines": 82,
+      "fileCategory": "code"
+    },
+    {
+      "path": "proxy/grpcproxy/kv.go",
+      "language": "go",
+      "sizeLines": 244,
+      "fileCategory": "code"
+    },
+    {
+      "path": "proxy/grpcproxy/leader.go",
+      "language": "go",
+      "sizeLines": 113,
+      "fileCategory": "code"
+    },
+    {
+      "path": "proxy/grpcproxy/lease.go",
+      "language": "go",
+      "sizeLines": 388,
+      "fileCategory": "code"
+    },
+    {
+      "path": "proxy/grpcproxy/lock.go",
+      "language": "go",
+      "sizeLines": 40,
+      "fileCategory": "code"
+    },
+    {
+      "path": "proxy/grpcproxy/maintenance.go",
+      "language": "go",
+      "sizeLines": 90,
+      "fileCategory": "code"
+    },
+    {
+      "path": "proxy/grpcproxy/metrics.go",
+      "language": "go",
+      "sizeLines": 122,
+      "fileCategory": "code"
+    },
+    {
+      "path": "proxy/grpcproxy/register.go",
+      "language": "go",
+      "sizeLines": 104,
+      "fileCategory": "code"
+    },
+    {
+      "path": "proxy/grpcproxy/util.go",
+      "language": "go",
+      "sizeLines": 75,
+      "fileCategory": "code"
+    },
+    {
+      "path": "proxy/grpcproxy/watch.go",
+      "language": "go",
+      "sizeLines": 332,
+      "fileCategory": "code"
+    },
+    {
+      "path": "proxy/grpcproxy/watch_broadcast.go",
+      "language": "go",
+      "sizeLines": 167,
+      "fileCategory": "code"
+    },
+    {
+      "path": "proxy/grpcproxy/watch_broadcasts.go",
+      "language": "go",
+      "sizeLines": 135,
+      "fileCategory": "code"
+    },
+    {
+      "path": "proxy/grpcproxy/watch_ranges.go",
+      "language": "go",
+      "sizeLines": 69,
+      "fileCategory": "code"
+    },
+    {
+      "path": "proxy/grpcproxy/watcher.go",
+      "language": "go",
+      "sizeLines": 132,
+      "fileCategory": "code"
+    },
+    {
+      "path": "proxy/tcpproxy/doc.go",
+      "language": "go",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "proxy/tcpproxy/userspace.go",
+      "language": "go",
+      "sizeLines": 229,
+      "fileCategory": "code"
+    },
+    {
+      "path": "proxy/tcpproxy/userspace_test.go",
+      "language": "go",
+      "sizeLines": 131,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/backend.go",
+      "language": "go",
+      "sizeLines": 114,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/backend/backend.go",
+      "language": "go",
+      "sizeLines": 734,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/backend/backend_bench_test.go",
+      "language": "go",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/backend/backend_test.go",
+      "language": "go",
+      "sizeLines": 351,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/backend/batch_tx.go",
+      "language": "go",
+      "sizeLines": 406,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/backend/batch_tx_test.go",
+      "language": "go",
+      "sizeLines": 476,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/backend/config_default.go",
+      "language": "go",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/backend/config_linux.go",
+      "language": "go",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/backend/config_windows.go",
+      "language": "go",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/backend/doc.go",
+      "language": "go",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/backend/export_test.go",
+      "language": "go",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/backend/hooks.go",
+      "language": "go",
+      "sizeLines": 36,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/backend/hooks_test.go",
+      "language": "go",
+      "sizeLines": 139,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/backend/metrics.go",
+      "language": "go",
+      "sizeLines": 103,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/backend/read_tx.go",
+      "language": "go",
+      "sizeLines": 151,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/backend/testing/betesting.go",
+      "language": "go",
+      "sizeLines": 53,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/backend/tx_buffer.go",
+      "language": "go",
+      "sizeLines": 259,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/backend/tx_buffer_test.go",
+      "language": "go",
+      "sizeLines": 142,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/backend/verify.go",
+      "language": "go",
+      "sizeLines": 117,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/backend/verify_test.go",
+      "language": "go",
+      "sizeLines": 107,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/datadir/datadir.go",
+      "language": "go",
+      "sizeLines": 49,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/datadir/datadir_test.go",
+      "language": "go",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/datadir/doc.go",
+      "language": "go",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/hooks.go",
+      "language": "go",
+      "sizeLines": 61,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/metrics.go",
+      "language": "go",
+      "sizeLines": 30,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/mvcc/doc.go",
+      "language": "go",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/mvcc/hash.go",
+      "language": "go",
+      "sizeLines": 180,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/mvcc/hash_test.go",
+      "language": "go",
+      "sizeLines": 234,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/mvcc/index.go",
+      "language": "go",
+      "sizeLines": 266,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/mvcc/index_bench_test.go",
+      "language": "go",
+      "sizeLines": 69,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/mvcc/index_test.go",
+      "language": "go",
+      "sizeLines": 930,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/mvcc/key_index.go",
+      "language": "go",
+      "sizeLines": 389,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/mvcc/key_index_test.go",
+      "language": "go",
+      "sizeLines": 797,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/mvcc/kv.go",
+      "language": "go",
+      "sizeLines": 149,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/mvcc/kv_test.go",
+      "language": "go",
+      "sizeLines": 895,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/mvcc/kv_view.go",
+      "language": "go",
+      "sizeLines": 56,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/mvcc/kvstore.go",
+      "language": "go",
+      "sizeLines": 550,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/mvcc/kvstore_bench_test.go",
+      "language": "go",
+      "sizeLines": 171,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/mvcc/kvstore_compaction.go",
+      "language": "go",
+      "sizeLines": 100,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/mvcc/kvstore_compaction_test.go",
+      "language": "go",
+      "sizeLines": 149,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/mvcc/kvstore_test.go",
+      "language": "go",
+      "sizeLines": 1106,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/mvcc/kvstore_txn.go",
+      "language": "go",
+      "sizeLines": 348,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/mvcc/metrics.go",
+      "language": "go",
+      "sizeLines": 321,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/mvcc/metrics_txn.go",
+      "language": "go",
+      "sizeLines": 71,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/mvcc/revision.go",
+      "language": "go",
+      "sizeLines": 126,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/mvcc/store.go",
+      "language": "go",
+      "sizeLines": 60,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/mvcc/store_test.go",
+      "language": "go",
+      "sizeLines": 107,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/mvcc/testutil/hash.go",
+      "language": "go",
+      "sizeLines": 150,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/mvcc/watchable_store.go",
+      "language": "go",
+      "sizeLines": 622,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/mvcc/watchable_store_bench_test.go",
+      "language": "go",
+      "sizeLines": 200,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/mvcc/watchable_store_test.go",
+      "language": "go",
+      "sizeLines": 989,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/mvcc/watchable_store_txn.go",
+      "language": "go",
+      "sizeLines": 56,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/mvcc/watcher.go",
+      "language": "go",
+      "sizeLines": 210,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/mvcc/watcher_bench_test.go",
+      "language": "go",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/mvcc/watcher_group.go",
+      "language": "go",
+      "sizeLines": 295,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/mvcc/watcher_test.go",
+      "language": "go",
+      "sizeLines": 510,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/quota.go",
+      "language": "go",
+      "sizeLines": 178,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/quota_test.go",
+      "language": "go",
+      "sizeLines": 80,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/schema/actions.go",
+      "language": "go",
+      "sizeLines": 93,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/schema/actions_test.go",
+      "language": "go",
+      "sizeLines": 169,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/schema/alarm.go",
+      "language": "go",
+      "sizeLines": 106,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/schema/auth.go",
+      "language": "go",
+      "sizeLines": 152,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/schema/auth_roles.go",
+      "language": "go",
+      "sizeLines": 106,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/schema/auth_roles_test.go",
+      "language": "go",
+      "sizeLines": 235,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/schema/auth_test.go",
+      "language": "go",
+      "sizeLines": 131,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/schema/auth_users.go",
+      "language": "go",
+      "sizeLines": 109,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/schema/auth_users_test.go",
+      "language": "go",
+      "sizeLines": 211,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/schema/bucket.go",
+      "language": "go",
+      "sizeLines": 100,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/schema/changes.go",
+      "language": "go",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/schema/changes_test.go",
+      "language": "go",
+      "sizeLines": 61,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/schema/cindex.go",
+      "language": "go",
+      "sizeLines": 95,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/schema/confstate.go",
+      "language": "go",
+      "sizeLines": 59,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/schema/confstate_test.go",
+      "language": "go",
+      "sizeLines": 78,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/schema/lease.go",
+      "language": "go",
+      "sizeLines": 86,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/schema/lease_test.go",
+      "language": "go",
+      "sizeLines": 112,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/schema/membership.go",
+      "language": "go",
+      "sizeLines": 241,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/schema/migration.go",
+      "language": "go",
+      "sizeLines": 108,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/schema/migration_test.go",
+      "language": "go",
+      "sizeLines": 240,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/schema/schema.go",
+      "language": "go",
+      "sizeLines": 140,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/schema/schema_test.go",
+      "language": "go",
+      "sizeLines": 375,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/schema/version.go",
+      "language": "go",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/schema/version_test.go",
+      "language": "go",
+      "sizeLines": 131,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/storage.go",
+      "language": "go",
+      "sizeLines": 121,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/util.go",
+      "language": "go",
+      "sizeLines": 137,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/wal/decoder.go",
+      "language": "go",
+      "sizeLines": 231,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/wal/doc.go",
+      "language": "go",
+      "sizeLines": 78,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/wal/encoder.go",
+      "language": "go",
+      "sizeLines": 140,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/wal/file_pipeline.go",
+      "language": "go",
+      "sizeLines": 106,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/wal/file_pipeline_test.go",
+      "language": "go",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/wal/metrics.go",
+      "language": "go",
+      "sizeLines": 52,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/wal/record_test.go",
+      "language": "go",
+      "sizeLines": 109,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/wal/repair.go",
+      "language": "go",
+      "sizeLines": 116,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/wal/repair_test.go",
+      "language": "go",
+      "sizeLines": 210,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/wal/testdata/TestNew.wal",
+      "language": "wal",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/wal/testing/waltesting.go",
+      "language": "go",
+      "sizeLines": 92,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/wal/util.go",
+      "language": "go",
+      "sizeLines": 112,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/wal/version.go",
+      "language": "go",
+      "sizeLines": 280,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/wal/version_test.go",
+      "language": "go",
+      "sizeLines": 301,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/wal/wal.go",
+      "language": "go",
+      "sizeLines": 1098,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/wal/wal_bench_test.go",
+      "language": "go",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/wal/wal_test.go",
+      "language": "go",
+      "sizeLines": 1251,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/wal/walpb/record.go",
+      "language": "go",
+      "sizeLines": 57,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/wal/walpb/record.pb.go",
+      "language": "go",
+      "sizeLines": 212,
+      "fileCategory": "code"
+    },
+    {
+      "path": "storage/wal/walpb/record.proto",
+      "language": "protobuf",
+      "sizeLines": 20,
+      "fileCategory": "data"
+    },
+    {
+      "path": "storage/wal/walpb/record_test.go",
+      "language": "go",
+      "sizeLines": 52,
+      "fileCategory": "code"
+    },
+    {
+      "path": "verify/doc.go",
+      "language": "go",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "verify/verify.go",
+      "language": "go",
+      "sizeLines": 148,
+      "fileCategory": "code"
+    }
+  ],
+  "totalFiles": 401,
+  "filteredByIgnore": 0,
+  "estimatedComplexity": "large",
+  "failures": [],
+  "stats": {
+    "filesScanned": 401,
+    "byCategory": {
+      "config": 4,
+      "code": 392,
+      "data": 5
+    },
+    "byLanguage": {
+      "yaml": 1,
+      "json": 1,
+      "go": 391,
+      "protobuf": 5,
+      "mod": 1,
+      "sum": 1,
+      "wal": 1
+    }
+  }
+}

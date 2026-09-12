@@ -1,0 +1,72 @@
+[
+  {
+    "order": 1,
+    "title": "Process Entry Points",
+    "description": "Begin with the two executable-facing files: the root package entry point delegates to etcdmain, while etcdmain/main.go owns command startup and optional systemd readiness notification. Together they explain how the server module becomes a running etcd process and establish the boundary between a stable binary wrapper and the real startup implementation.",
+    "nodeIds": ["file:main.go", "file:etcdmain/main.go"],
+    "languageLesson": "In Go, an executable is a package named main with a main function; keeping the thin root entry point separate from the implementation preserves a clean importable module boundary."
+  },
+  {
+    "order": 2,
+    "title": "Embedding and Configuration",
+    "description": "The embedded-server layer turns configuration into a complete etcd instance, constructing listeners, services, metrics, and shutdown coordination. Read embed/config.go alongside embed/etcd.go to see how defaults, URLs, TLS, discovery, and validation are assembled before the core server starts.",
+    "nodeIds": ["file:embed/config.go", "file:embed/etcd.go"],
+    "languageLesson": "Go commonly exposes lifecycle through methods on a struct such as Etcd; explicit Start and Close methods make ownership and shutdown responsibilities visible without a framework-managed runtime."
+  },
+  {
+    "order": 3,
+    "title": "Cluster Bootstrap",
+    "description": "bootstrap.go is the bridge from configuration to a functioning cluster: it initializes or recovers the backend, membership state, WAL, snapshots, and Raft node. This is the point where a fresh data directory and a previously persisted node converge into the same server orchestration path.",
+    "nodeIds": ["file:etcdserver/bootstrap.go", "file:storage/wal/wal.go", "file:etcdserver/api/snap/snapshotter.go"],
+    "languageLesson": "Go error returns make recovery branches explicit; bootstrap code can distinguish initialization, reopening, and corruption without hidden exceptions."
+  },
+  {
+    "order": 4,
+    "title": "Core Server Lifecycle",
+    "description": "The central server file coordinates Raft integration, request application, snapshots, membership changes, readiness, and shutdown, while v3_server.go exposes the client-facing server behavior built on that lifecycle. These files are the architectural hub: nearly every subsystem introduced later exists to support or constrain this coordination loop.",
+    "nodeIds": ["file:etcdserver/server.go", "file:etcdserver/v3_server.go"],
+    "languageLesson": "Goroutines let the server run independent loops for Raft, lease expiry, and maintenance, while channels and context cancellation provide structured coordination during shutdown."
+  },
+  {
+    "order": 5,
+    "title": "Committed Request Application",
+    "description": "Once Raft commits a proposal, apply.go defines the applier boundary and apply/backend.go translates committed requests into storage, membership, alarm, and authentication actions. This separation keeps consensus ordering in the core server while concentrating durable side effects in a dedicated apply layer.",
+    "nodeIds": ["file:etcdserver/apply/apply.go", "file:etcdserver/apply/backend.go"],
+    "languageLesson": "Go interfaces and small implementation boundaries are useful here: the apply layer can depend on contracts for storage and cluster actions, which makes deterministic tests and alternate backends practical."
+  },
+  {
+    "order": 6,
+    "title": "MVCC Key-Value State",
+    "description": "The MVCC kvstore is the durable logical model behind etcd reads, writes, transactions, revisions, compaction, and hashing. It receives the ordered effects from the apply layer and turns them into versioned key-value state that clients can observe consistently across revisions.",
+    "nodeIds": ["file:storage/mvcc/kvstore.go", "file:storage/backend/backend.go"],
+    "languageLesson": "Go method receivers let a stateful store expose a cohesive API while keeping its internal fields private; callers interact through operations rather than mutating MVCC state directly."
+  },
+  {
+    "order": 7,
+    "title": "Durability and Recovery",
+    "description": "The WAL records Raft metadata and entries with rotation, syncing, reopening, and recovery logic, while the snapshotter manages snapshot database handles so compacted state can be transferred or restored safely. Together these persistence mechanisms explain how etcd survives process restarts and bounds the amount of log history it must replay.",
+    "nodeIds": ["file:storage/wal/wal.go", "file:etcdserver/api/snap/snapshotter.go", "schema:etcdserver/api/snap/snappb/snap.proto"],
+    "languageLesson": "The protobuf snapshot schema uses stable field numbers; serialized protocols must preserve those numbers so newer and older server versions can exchange snapshots safely."
+  },
+  {
+    "order": 8,
+    "title": "Membership and Maintenance",
+    "description": "Membership state tracks Raft members, learners, configuration changes, persistence, and version transitions, while the maintenance RPC surface exposes operational actions such as status, alarms, defragmentation, and hashes. This step shows how administrative APIs reach the same coordinated state machine without bypassing server invariants.",
+    "nodeIds": ["file:etcdserver/api/membership/cluster.go", "file:etcdserver/api/v3rpc/maintenance.go"],
+    "languageLesson": "Go’s explicit interface contracts make RPC handlers testable: the handler can validate a request, call a server-facing interface, and translate the result into a protocol response."
+  },
+  {
+    "order": 9,
+    "title": "Authentication and Leases",
+    "description": "The auth store owns users, roles, permissions, password checks, revisions, and token-provider integration, protecting the operations that the apply layer executes. The lessor complements this security path by managing lease-backed liveness and expiry, which also supports ephemeral keys and distributed coordination features.",
+    "nodeIds": ["file:auth/store.go", "file:lease/lessor.go"],
+    "languageLesson": "Go’s composition-by-embedding and interface-based dependencies help security and lease implementations plug into the server without requiring inheritance or a global service locator."
+  },
+  {
+    "order": 10,
+    "title": "Protocol Contracts and Dependencies",
+    "description": "The election protobuf schema defines the externally visible campaign, observe, leader, resign, and proclaim operations, giving the API layer a durable contract for distributed coordination. Finish with go.mod, which records the server module identity, toolchain, dependencies, and local sibling-module replacements needed to build the complete stack.",
+    "nodeIds": ["schema:etcdserver/api/v3election/v3electionpb/v3election.proto", "endpoint:etcdserver/api/v3election/v3electionpb/v3election.proto:rpc-Election.Campaign", "config:go.mod"],
+    "languageLesson": "In Go modules, go.mod is part of the build contract: semantic module paths and versioned dependencies make imports reproducible, while replace directives can bind a multi-module repository to local development copies."
+  }
+]

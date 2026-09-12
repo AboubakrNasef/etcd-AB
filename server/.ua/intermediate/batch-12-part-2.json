@@ -1,0 +1,1030 @@
+{
+  "nodes": [
+    {
+      "id": "file:embed/config_test.go",
+      "type": "file",
+      "name": "config_test.go",
+      "filePath": "embed/config_test.go",
+      "summary": "Validates embedded etcd configuration-file parsing, feature gates, addresses, compaction, discovery, logging, TLS, and lease settings.",
+      "tags": [
+        "test",
+        "config",
+        "validation",
+        "tls",
+        "feature-gates"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:embed/config_test.go:TestConfigFileOtherFields",
+      "type": "function",
+      "name": "TestConfigFileOtherFields",
+      "filePath": "embed/config_test.go",
+      "lineRange": [
+        48,
+        97
+      ],
+      "summary": "TestConfigFileOtherFields implements TestConfigFileOtherFields behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/config_test.go:TestConfigFileFeatureGates",
+      "type": "function",
+      "name": "TestConfigFileFeatureGates",
+      "filePath": "embed/config_test.go",
+      "lineRange": [
+        99,
+        219
+      ],
+      "summary": "TestConfigFileFeatureGates implements TestConfigFileFeatureGates behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:embed/config_test.go:TestUpdateDefaultClusterFromName",
+      "type": "function",
+      "name": "TestUpdateDefaultClusterFromName",
+      "filePath": "embed/config_test.go",
+      "lineRange": [
+        222,
+        240
+      ],
+      "summary": "TestUpdateDefaultClusterFromName implements TestUpdateDefaultClusterFromName behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/config_test.go:TestUpdateDefaultClusterFromNameOverwrite",
+      "type": "function",
+      "name": "TestUpdateDefaultClusterFromNameOverwrite",
+      "filePath": "embed/config_test.go",
+      "lineRange": [
+        244,
+        267
+      ],
+      "summary": "TestUpdateDefaultClusterFromNameOverwrite implements TestUpdateDefaultClusterFromNameOverwrite behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/config_test.go:TestInferLocalAddr",
+      "type": "function",
+      "name": "TestInferLocalAddr",
+      "filePath": "embed/config_test.go",
+      "lineRange": [
+        269,
+        398
+      ],
+      "summary": "TestInferLocalAddr implements TestInferLocalAddr behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:embed/config_test.go:TestSetMemberLocalAddrValidate",
+      "type": "function",
+      "name": "TestSetMemberLocalAddrValidate",
+      "filePath": "embed/config_test.go",
+      "lineRange": [
+        400,
+        421
+      ],
+      "summary": "TestSetMemberLocalAddrValidate implements TestSetMemberLocalAddrValidate behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/config_test.go:equals",
+      "type": "function",
+      "name": "equals",
+      "filePath": "embed/config_test.go",
+      "lineRange": [
+        423,
+        432
+      ],
+      "summary": "equals implements equals behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/config_test.go:compareSlices",
+      "type": "function",
+      "name": "compareSlices",
+      "filePath": "embed/config_test.go",
+      "lineRange": [
+        434,
+        444
+      ],
+      "summary": "compareSlices implements compareSlices behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/config_test.go:mustCreateCfgFile",
+      "type": "function",
+      "name": "mustCreateCfgFile",
+      "filePath": "embed/config_test.go",
+      "lineRange": [
+        446,
+        458
+      ],
+      "summary": "mustCreateCfgFile implements mustCreateCfgFile behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/config_test.go:TestAutoCompactionModeInvalid",
+      "type": "function",
+      "name": "TestAutoCompactionModeInvalid",
+      "filePath": "embed/config_test.go",
+      "lineRange": [
+        460,
+        469
+      ],
+      "summary": "TestAutoCompactionModeInvalid implements TestAutoCompactionModeInvalid behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/config_test.go:TestAutoCompactionModeParse",
+      "type": "function",
+      "name": "TestAutoCompactionModeParse",
+      "filePath": "embed/config_test.go",
+      "lineRange": [
+        471,
+        510
+      ],
+      "summary": "TestAutoCompactionModeParse implements TestAutoCompactionModeParse behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/config_test.go:TestPeerURLsMapAndTokenFromSRV",
+      "type": "function",
+      "name": "TestPeerURLsMapAndTokenFromSRV",
+      "filePath": "embed/config_test.go",
+      "lineRange": [
+        512,
+        590
+      ],
+      "summary": "TestPeerURLsMapAndTokenFromSRV implements TestPeerURLsMapAndTokenFromSRV behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/config_test.go:TestLeaseCheckpointValidate",
+      "type": "function",
+      "name": "TestLeaseCheckpointValidate",
+      "filePath": "embed/config_test.go",
+      "lineRange": [
+        592,
+        625
+      ],
+      "summary": "TestLeaseCheckpointValidate implements TestLeaseCheckpointValidate behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/config_test.go:TestLogRotation",
+      "type": "function",
+      "name": "TestLogRotation",
+      "filePath": "embed/config_test.go",
+      "lineRange": [
+        627,
+        707
+      ],
+      "summary": "TestLogRotation implements TestLogRotation behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:embed/config_test.go:TestTLSVersionMinMax",
+      "type": "function",
+      "name": "TestTLSVersionMinMax",
+      "filePath": "embed/config_test.go",
+      "lineRange": [
+        709,
+        784
+      ],
+      "summary": "TestTLSVersionMinMax implements TestTLSVersionMinMax behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/config_test.go:TestUndefinedAutoCompactionModeValidate",
+      "type": "function",
+      "name": "TestUndefinedAutoCompactionModeValidate",
+      "filePath": "embed/config_test.go",
+      "lineRange": [
+        786,
+        791
+      ],
+      "summary": "TestUndefinedAutoCompactionModeValidate implements TestUndefinedAutoCompactionModeValidate behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/config_test.go:TestMatchNewConfigAddFlags",
+      "type": "function",
+      "name": "TestMatchNewConfigAddFlags",
+      "filePath": "embed/config_test.go",
+      "lineRange": [
+        793,
+        804
+      ],
+      "summary": "TestMatchNewConfigAddFlags implements TestMatchNewConfigAddFlags behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/config_test.go:TestCheckHostURLs",
+      "type": "function",
+      "name": "TestCheckHostURLs",
+      "filePath": "embed/config_test.go",
+      "lineRange": [
+        806,
+        867
+      ],
+      "summary": "TestCheckHostURLs implements TestCheckHostURLs behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/config_test.go:TestDiscoveryCfg",
+      "type": "function",
+      "name": "TestDiscoveryCfg",
+      "filePath": "embed/config_test.go",
+      "lineRange": [
+        869,
+        915
+      ],
+      "summary": "TestDiscoveryCfg implements TestDiscoveryCfg behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/config_test.go:TestFastLeaseKeepAliveValidate",
+      "type": "function",
+      "name": "TestFastLeaseKeepAliveValidate",
+      "filePath": "embed/config_test.go",
+      "lineRange": [
+        917,
+        946
+      ],
+      "summary": "TestFastLeaseKeepAliveValidate implements TestFastLeaseKeepAliveValidate behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:embed/config_tracing.go",
+      "type": "file",
+      "name": "config_tracing.go",
+      "filePath": "embed/config_tracing.go",
+      "summary": "Configures OpenTelemetry tracing for embedded etcd, including exporter creation, sampling, resource identity, and shutdown.",
+      "tags": [
+        "config",
+        "tracing",
+        "observability",
+        "opentelemetry"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/config_tracing.go:validateTracingConfig",
+      "type": "function",
+      "name": "validateTracingConfig",
+      "filePath": "embed/config_tracing.go",
+      "lineRange": [
+        34,
+        43
+      ],
+      "summary": "validateTracingConfig implements validateTracingConfig behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/config_tracing.go:newTracingExporter",
+      "type": "function",
+      "name": "newTracingExporter",
+      "filePath": "embed/config_tracing.go",
+      "lineRange": [
+        51,
+        113
+      ],
+      "summary": "newTracingExporter implements newTracingExporter behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/config_tracing.go:Close",
+      "type": "function",
+      "name": "Close",
+      "filePath": "embed/config_tracing.go",
+      "lineRange": [
+        115,
+        122
+      ],
+      "summary": "Close implements Close behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:embed/config_tracing_test.go",
+      "type": "file",
+      "name": "config_tracing_test.go",
+      "filePath": "embed/config_tracing_test.go",
+      "summary": "Tests tracing sampler selection and embedded etcd tracing configuration validation.",
+      "tags": [
+        "test",
+        "tracing",
+        "config",
+        "observability"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/config_tracing_test.go:TestDetermineSampler",
+      "type": "function",
+      "name": "TestDetermineSampler",
+      "filePath": "embed/config_tracing_test.go",
+      "lineRange": [
+        23,
+        48
+      ],
+      "summary": "TestDetermineSampler implements TestDetermineSampler behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/config_tracing_test.go:TestTracingConfig",
+      "type": "function",
+      "name": "TestTracingConfig",
+      "filePath": "embed/config_tracing_test.go",
+      "lineRange": [
+        50,
+        83
+      ],
+      "summary": "TestTracingConfig implements TestTracingConfig behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:embed/doc.go",
+      "type": "file",
+      "name": "doc.go",
+      "filePath": "embed/doc.go",
+      "summary": "Documents the embedded etcd package and its public embedding surface.",
+      "tags": [
+        "documentation",
+        "package",
+        "embedded-server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:embed/etcd_test.go",
+      "type": "file",
+      "name": "etcd_test.go",
+      "filePath": "embed/etcd_test.go",
+      "summary": "Tests embedded etcd listener setup when client TLS information is empty.",
+      "tags": [
+        "test",
+        "tls",
+        "listener",
+        "embedded-server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:embed/etcd_test.go:TestEmptyClientTLSInfo_createMetricsListener",
+      "type": "function",
+      "name": "TestEmptyClientTLSInfo_createMetricsListener",
+      "filePath": "embed/etcd_test.go",
+      "lineRange": [
+        26,
+        39
+      ],
+      "summary": "TestEmptyClientTLSInfo_createMetricsListener implements TestEmptyClientTLSInfo createMetricsListener behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:TestConfigFileOtherFields",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:TestConfigFileOtherFields",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:TestConfigFileFeatureGates",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:TestConfigFileFeatureGates",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:TestUpdateDefaultClusterFromName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:TestUpdateDefaultClusterFromName",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:TestUpdateDefaultClusterFromNameOverwrite",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:TestUpdateDefaultClusterFromNameOverwrite",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:TestInferLocalAddr",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:TestInferLocalAddr",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:TestSetMemberLocalAddrValidate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:TestSetMemberLocalAddrValidate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:equals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:compareSlices",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:mustCreateCfgFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:TestAutoCompactionModeInvalid",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:TestAutoCompactionModeInvalid",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:TestAutoCompactionModeParse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:TestAutoCompactionModeParse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:TestPeerURLsMapAndTokenFromSRV",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:TestPeerURLsMapAndTokenFromSRV",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:TestLeaseCheckpointValidate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:TestLeaseCheckpointValidate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:TestLogRotation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:TestLogRotation",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:TestTLSVersionMinMax",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:TestTLSVersionMinMax",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:TestUndefinedAutoCompactionModeValidate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:TestUndefinedAutoCompactionModeValidate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:TestMatchNewConfigAddFlags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:TestMatchNewConfigAddFlags",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:TestCheckHostURLs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:TestCheckHostURLs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:TestDiscoveryCfg",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:TestDiscoveryCfg",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:TestFastLeaseKeepAliveValidate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "function:embed/config_test.go:TestFastLeaseKeepAliveValidate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "file:etcdserver/api/v3discovery/discovery.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config_test.go",
+      "target": "file:features/etcd_features.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config_tracing.go",
+      "target": "function:embed/config_tracing.go:validateTracingConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config_tracing.go",
+      "target": "function:embed/config_tracing.go:newTracingExporter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config_tracing.go",
+      "target": "function:embed/config_tracing.go:Close",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config_tracing.go",
+      "target": "function:embed/config_tracing.go:Close",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/config_tracing_test.go",
+      "target": "function:embed/config_tracing_test.go:TestDetermineSampler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config_tracing_test.go",
+      "target": "function:embed/config_tracing_test.go:TestDetermineSampler",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/config_tracing_test.go",
+      "target": "function:embed/config_tracing_test.go:TestTracingConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config_tracing_test.go",
+      "target": "function:embed/config_tracing_test.go:TestTracingConfig",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/etcd_test.go",
+      "target": "function:embed/etcd_test.go:TestEmptyClientTLSInfo_createMetricsListener",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/etcd_test.go",
+      "target": "function:embed/etcd_test.go:TestEmptyClientTLSInfo_createMetricsListener",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:embed/config_test.go:TestConfigFileOtherFields",
+      "target": "function:embed/config_test.go:equals",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:embed/config_test.go:TestConfigFileOtherFields",
+      "target": "function:embed/config_test.go:equals",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:embed/config_test.go:TestUpdateDefaultClusterFromName",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:embed/config_test.go:TestUpdateDefaultClusterFromName",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:embed/config_test.go:TestUpdateDefaultClusterFromName",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:embed/config_test.go:TestUpdateDefaultClusterFromName",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:embed/config_test.go:TestUpdateDefaultClusterFromName",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:embed/config_test.go:TestUpdateDefaultClusterFromName",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:embed/config_test.go:TestUpdateDefaultClusterFromNameOverwrite",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:embed/config_test.go:TestUpdateDefaultClusterFromNameOverwrite",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:embed/config_test.go:TestUpdateDefaultClusterFromNameOverwrite",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:embed/config_test.go:equals",
+      "target": "function:embed/config_test.go:compareSlices",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:embed/config_test.go:equals",
+      "target": "function:embed/config_test.go:compareSlices",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:embed/config_test.go:TestPeerURLsMapAndTokenFromSRV",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:embed/config_test.go:TestPeerURLsMapAndTokenFromSRV",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:embed/config_test.go:TestLogRotation",
+      "target": "function:embed/config_logging.go:GetLogger",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:embed/config_test.go:TestMatchNewConfigAddFlags",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:embed/config_test.go:TestMatchNewConfigAddFlags",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:embed/config_tracing.go:newTracingExporter",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:embed/config_tracing.go:newTracingExporter",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:embed/config_tracing.go:newTracingExporter",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:embed/config_tracing.go:newTracingExporter",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:embed/config_tracing_test.go:TestTracingConfig",
+      "target": "function:embed/config_tracing.go:validateTracingConfig",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}
+

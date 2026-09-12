@@ -1,0 +1,23 @@
+{
+  "projectRoot": "D:/Programming/0.Practice/etcd/etcd-AB/server",
+  "batchFiles": [
+    {"path":".ua/config.json","language":"json","sizeLines":3,"fileCategory":"config"},
+    {"path":"etcdserver/api/snap/snappb/snap.pb.go","language":"go","sizeLines":133,"fileCategory":"code"},
+    {"path":"etcdserver/api/snap/snappb/snap.proto","language":"protobuf","sizeLines":9,"fileCategory":"data"},
+    {"path":"etcdserver/api/v3election/v3electionpb/v3election.proto","language":"protobuf","sizeLines":117,"fileCategory":"data"},
+    {"path":"etcdserver/api/v3lock/v3lockpb/v3lock.proto","language":"protobuf","sizeLines":63,"fileCategory":"data"},
+    {"path":"lease/leasepb/lease.proto","language":"protobuf","sizeLines":20,"fileCategory":"data"},
+    {"path":"storage/wal/testdata/TestNew.wal","language":"wal","sizeLines":0,"fileCategory":"code"},
+    {"path":"storage/wal/walpb/record.proto","language":"protobuf","sizeLines":20,"fileCategory":"data"}
+  ],
+  "batchImportData": {
+    ".ua/config.json": [],
+    "etcdserver/api/snap/snappb/snap.pb.go": [],
+    "etcdserver/api/snap/snappb/snap.proto": [],
+    "etcdserver/api/v3election/v3electionpb/v3election.proto": [],
+    "etcdserver/api/v3lock/v3lockpb/v3lock.proto": [],
+    "lease/leasepb/lease.proto": [],
+    "storage/wal/testdata/TestNew.wal": [],
+    "storage/wal/walpb/record.proto": []
+  }
+}

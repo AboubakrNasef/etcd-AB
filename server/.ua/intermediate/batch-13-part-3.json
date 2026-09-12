@@ -1,0 +1,1386 @@
+{
+  "nodes": [
+    {
+      "id": "file:proxy/grpcproxy/leader.go",
+      "type": "file",
+      "name": "leader.go",
+      "filePath": "proxy/grpcproxy/leader.go",
+      "summary": "Leader-tracking helper coordinating watch-based leader state and notification channels.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "middleware"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:proxy/grpcproxy/leader.go:leader",
+      "type": "class",
+      "name": "leader",
+      "filePath": "proxy/grpcproxy/leader.go",
+      "lineRange": [
+        32,
+        40
+      ],
+      "summary": "Defines the leader abstraction and its 6 service or coordination methods.",
+      "tags": [
+        "go",
+        "type-definition",
+        "service",
+        "interface"
+      ]
+    },
+    {
+      "id": "function:proxy/grpcproxy/leader.go:newLeader",
+      "type": "function",
+      "name": "newLeader",
+      "filePath": "proxy/grpcproxy/leader.go",
+      "lineRange": [
+        42,
+        54
+      ],
+      "summary": "Implements newLeader for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/leader.go:recvLoop",
+      "type": "function",
+      "name": "recvLoop",
+      "filePath": "proxy/grpcproxy/leader.go",
+      "lineRange": [
+        56,
+        80
+      ],
+      "summary": "Implements recvLoop for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:proxy/grpcproxy/lease.go",
+      "type": "file",
+      "name": "lease.go",
+      "filePath": "proxy/grpcproxy/lease.go",
+      "summary": "Lease proxy implementing lease RPC forwarding and multiplexed keep-alive stream management.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "middleware"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:proxy/grpcproxy/lease.go:leaseProxy",
+      "type": "class",
+      "name": "leaseProxy",
+      "filePath": "proxy/grpcproxy/lease.go",
+      "lineRange": [
+        35,
+        53
+      ],
+      "summary": "Defines the leaseProxy abstraction and its 5 service or coordination methods.",
+      "tags": [
+        "go",
+        "type-definition",
+        "service",
+        "interface"
+      ]
+    },
+    {
+      "id": "class:proxy/grpcproxy/lease.go:leaseProxyStream",
+      "type": "class",
+      "name": "leaseProxyStream",
+      "filePath": "proxy/grpcproxy/lease.go",
+      "lineRange": [
+        232,
+        247
+      ],
+      "summary": "Defines the leaseProxyStream abstraction and its 5 service or coordination methods.",
+      "tags": [
+        "go",
+        "type-definition",
+        "service",
+        "interface"
+      ]
+    },
+    {
+      "id": "class:proxy/grpcproxy/lease.go:atomicCounter",
+      "type": "class",
+      "name": "atomicCounter",
+      "filePath": "proxy/grpcproxy/lease.go",
+      "lineRange": [
+        378,
+        380
+      ],
+      "summary": "Defines the atomicCounter abstraction and its 2 service or coordination methods.",
+      "tags": [
+        "go",
+        "type-definition",
+        "service",
+        "interface"
+      ]
+    },
+    {
+      "id": "function:proxy/grpcproxy/lease.go:NewLeaseProxy",
+      "type": "function",
+      "name": "NewLeaseProxy",
+      "filePath": "proxy/grpcproxy/lease.go",
+      "lineRange": [
+        55,
+        78
+      ],
+      "summary": "Implements NewLeaseProxy for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:proxy/grpcproxy/lease.go:LeaseGrant",
+      "type": "function",
+      "name": "LeaseGrant",
+      "filePath": "proxy/grpcproxy/lease.go",
+      "lineRange": [
+        80,
+        87
+      ],
+      "summary": "Implements LeaseGrant for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/lease.go:LeaseRevoke",
+      "type": "function",
+      "name": "LeaseRevoke",
+      "filePath": "proxy/grpcproxy/lease.go",
+      "lineRange": [
+        89,
+        96
+      ],
+      "summary": "Implements LeaseRevoke for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/lease.go:LeaseTimeToLive",
+      "type": "function",
+      "name": "LeaseTimeToLive",
+      "filePath": "proxy/grpcproxy/lease.go",
+      "lineRange": [
+        98,
+        119
+      ],
+      "summary": "Implements LeaseTimeToLive for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:proxy/grpcproxy/lease.go:LeaseLeases",
+      "type": "function",
+      "name": "LeaseLeases",
+      "filePath": "proxy/grpcproxy/lease.go",
+      "lineRange": [
+        121,
+        135
+      ],
+      "summary": "Implements LeaseLeases for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/lease.go:LeaseKeepAlive",
+      "type": "function",
+      "name": "LeaseKeepAlive",
+      "filePath": "proxy/grpcproxy/lease.go",
+      "lineRange": [
+        137,
+        230
+      ],
+      "summary": "Implements LeaseKeepAlive for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:proxy/grpcproxy/lease.go:recvLoop",
+      "type": "function",
+      "name": "recvLoop",
+      "filePath": "proxy/grpcproxy/lease.go",
+      "lineRange": [
+        249,
+        274
+      ],
+      "summary": "Implements recvLoop for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:proxy/grpcproxy/lease.go:keepAliveLoop",
+      "type": "function",
+      "name": "keepAliveLoop",
+      "filePath": "proxy/grpcproxy/lease.go",
+      "lineRange": [
+        276,
+        338
+      ],
+      "summary": "Implements keepAliveLoop for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:proxy/grpcproxy/lease.go:replyToClient",
+      "type": "function",
+      "name": "replyToClient",
+      "filePath": "proxy/grpcproxy/lease.go",
+      "lineRange": [
+        340,
+        352
+      ],
+      "summary": "Implements replyToClient for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/lease.go:sendLoop",
+      "type": "function",
+      "name": "sendLoop",
+      "filePath": "proxy/grpcproxy/lease.go",
+      "lineRange": [
+        354,
+        368
+      ],
+      "summary": "Implements sendLoop for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:proxy/grpcproxy/lock.go",
+      "type": "file",
+      "name": "lock.go",
+      "filePath": "proxy/grpcproxy/lock.go",
+      "summary": "Server-side lock API implementation that delegates lock and unlock operations to the embedded coordination client.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "middleware"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:proxy/grpcproxy/lock.go:lockProxy",
+      "type": "class",
+      "name": "lockProxy",
+      "filePath": "proxy/grpcproxy/lock.go",
+      "lineRange": [
+        24,
+        28
+      ],
+      "summary": "Defines the lockProxy abstraction and its 2 service or coordination methods.",
+      "tags": [
+        "go",
+        "type-definition",
+        "service",
+        "interface"
+      ]
+    },
+    {
+      "id": "function:proxy/grpcproxy/lock.go:NewLockProxy",
+      "type": "function",
+      "name": "NewLockProxy",
+      "filePath": "proxy/grpcproxy/lock.go",
+      "lineRange": [
+        30,
+        32
+      ],
+      "summary": "Implements NewLockProxy for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/lock.go:Lock",
+      "type": "function",
+      "name": "Lock",
+      "filePath": "proxy/grpcproxy/lock.go",
+      "lineRange": [
+        34,
+        36
+      ],
+      "summary": "Implements Lock for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/lock.go:Unlock",
+      "type": "function",
+      "name": "Unlock",
+      "filePath": "proxy/grpcproxy/lock.go",
+      "lineRange": [
+        38,
+        40
+      ],
+      "summary": "Implements Unlock for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:proxy/grpcproxy/maintenance.go",
+      "type": "file",
+      "name": "maintenance.go",
+      "filePath": "proxy/grpcproxy/maintenance.go",
+      "summary": "Maintenance proxy forwarding defragmentation, snapshot, hash, alarm, status, leader-move, and downgrade RPCs.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "middleware"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:proxy/grpcproxy/maintenance.go:maintenanceProxy",
+      "type": "class",
+      "name": "maintenanceProxy",
+      "filePath": "proxy/grpcproxy/maintenance.go",
+      "lineRange": [
+        26,
+        30
+      ],
+      "summary": "Defines the maintenanceProxy abstraction and its 8 service or coordination methods.",
+      "tags": [
+        "go",
+        "type-definition",
+        "service",
+        "interface"
+      ]
+    },
+    {
+      "id": "function:proxy/grpcproxy/maintenance.go:NewMaintenanceProxy",
+      "type": "function",
+      "name": "NewMaintenanceProxy",
+      "filePath": "proxy/grpcproxy/maintenance.go",
+      "lineRange": [
+        32,
+        36
+      ],
+      "summary": "Implements NewMaintenanceProxy for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/maintenance.go:Defragment",
+      "type": "function",
+      "name": "Defragment",
+      "filePath": "proxy/grpcproxy/maintenance.go",
+      "lineRange": [
+        38,
+        40
+      ],
+      "summary": "Implements Defragment for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/maintenance.go:Snapshot",
+      "type": "function",
+      "name": "Snapshot",
+      "filePath": "proxy/grpcproxy/maintenance.go",
+      "lineRange": [
+        42,
+        66
+      ],
+      "summary": "Implements Snapshot for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:proxy/grpcproxy/maintenance.go:Hash",
+      "type": "function",
+      "name": "Hash",
+      "filePath": "proxy/grpcproxy/maintenance.go",
+      "lineRange": [
+        68,
+        70
+      ],
+      "summary": "Implements Hash for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/maintenance.go:HashKV",
+      "type": "function",
+      "name": "HashKV",
+      "filePath": "proxy/grpcproxy/maintenance.go",
+      "lineRange": [
+        72,
+        74
+      ],
+      "summary": "Implements HashKV for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/maintenance.go:Alarm",
+      "type": "function",
+      "name": "Alarm",
+      "filePath": "proxy/grpcproxy/maintenance.go",
+      "lineRange": [
+        76,
+        78
+      ],
+      "summary": "Implements Alarm for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/maintenance.go:Status",
+      "type": "function",
+      "name": "Status",
+      "filePath": "proxy/grpcproxy/maintenance.go",
+      "lineRange": [
+        80,
+        82
+      ],
+      "summary": "Implements Status for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/maintenance.go:MoveLeader",
+      "type": "function",
+      "name": "MoveLeader",
+      "filePath": "proxy/grpcproxy/maintenance.go",
+      "lineRange": [
+        84,
+        86
+      ],
+      "summary": "Implements MoveLeader for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/maintenance.go:Downgrade",
+      "type": "function",
+      "name": "Downgrade",
+      "filePath": "proxy/grpcproxy/maintenance.go",
+      "lineRange": [
+        88,
+        90
+      ],
+      "summary": "Implements Downgrade for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:proxy/grpcproxy/register.go",
+      "type": "file",
+      "name": "register.go",
+      "filePath": "proxy/grpcproxy/register.go",
+      "summary": "Service registration helper publishing proxy metadata and maintaining a resolver registration session.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "middleware"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:proxy/grpcproxy/register.go:Register",
+      "type": "function",
+      "name": "Register",
+      "filePath": "proxy/grpcproxy/register.go",
+      "lineRange": [
+        35,
+        62
+      ],
+      "summary": "Implements Register for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:proxy/grpcproxy/register.go:registerSession",
+      "type": "function",
+      "name": "registerSession",
+      "filePath": "proxy/grpcproxy/register.go",
+      "lineRange": [
+        64,
+        87
+      ],
+      "summary": "Implements registerSession for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:proxy/grpcproxy/util.go",
+      "type": "file",
+      "name": "util.go",
+      "filePath": "proxy/grpcproxy/util.go",
+      "summary": "Shared gRPC proxy authentication metadata and client interceptor utilities.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "middleware"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:proxy/grpcproxy/util.go:proxyTokenCredential",
+      "type": "class",
+      "name": "proxyTokenCredential",
+      "filePath": "proxy/grpcproxy/util.go",
+      "lineRange": [
+        45,
+        47
+      ],
+      "summary": "Defines the proxyTokenCredential abstraction and its 2 service or coordination methods.",
+      "tags": [
+        "go",
+        "type-definition",
+        "service",
+        "interface"
+      ]
+    },
+    {
+      "id": "function:proxy/grpcproxy/util.go:getAuthTokenFromClient",
+      "type": "function",
+      "name": "getAuthTokenFromClient",
+      "filePath": "proxy/grpcproxy/util.go",
+      "lineRange": [
+        26,
+        35
+      ],
+      "summary": "Implements getAuthTokenFromClient for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/util.go:RequireTransportSecurity",
+      "type": "function",
+      "name": "RequireTransportSecurity",
+      "filePath": "proxy/grpcproxy/util.go",
+      "lineRange": [
+        49,
+        51
+      ],
+      "summary": "Implements RequireTransportSecurity for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/util.go:GetRequestMetadata",
+      "type": "function",
+      "name": "GetRequestMetadata",
+      "filePath": "proxy/grpcproxy/util.go",
+      "lineRange": [
+        53,
+        57
+      ],
+      "summary": "Implements GetRequestMetadata for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/util.go:AuthUnaryClientInterceptor",
+      "type": "function",
+      "name": "AuthUnaryClientInterceptor",
+      "filePath": "proxy/grpcproxy/util.go",
+      "lineRange": [
+        59,
+        66
+      ],
+      "summary": "Implements AuthUnaryClientInterceptor for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/util.go:AuthStreamClientInterceptor",
+      "type": "function",
+      "name": "AuthStreamClientInterceptor",
+      "filePath": "proxy/grpcproxy/util.go",
+      "lineRange": [
+        68,
+        75
+      ],
+      "summary": "Implements AuthStreamClientInterceptor for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:proxy/grpcproxy/watch_broadcast.go",
+      "type": "file",
+      "name": "watch_broadcast.go",
+      "filePath": "proxy/grpcproxy/watch_broadcast.go",
+      "summary": "Broadcast coordinator coalescing watch responses for a set of compatible watchers.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "middleware"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:proxy/grpcproxy/watch_broadcast.go:watchBroadcast",
+      "type": "class",
+      "name": "watchBroadcast",
+      "filePath": "proxy/grpcproxy/watch_broadcast.go",
+      "lineRange": [
+        29,
+        43
+      ],
+      "summary": "Defines the watchBroadcast abstraction and its 6 service or coordination methods.",
+      "tags": [
+        "go",
+        "type-definition",
+        "service",
+        "interface"
+      ]
+    },
+    {
+      "id": "function:proxy/grpcproxy/watch_broadcast.go:newWatchBroadcast",
+      "type": "function",
+      "name": "newWatchBroadcast",
+      "filePath": "proxy/grpcproxy/watch_broadcast.go",
+      "lineRange": [
+        45,
+        77
+      ],
+      "summary": "Implements newWatchBroadcast for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:proxy/grpcproxy/watch_broadcast.go:bcast",
+      "type": "function",
+      "name": "bcast",
+      "filePath": "proxy/grpcproxy/watch_broadcast.go",
+      "lineRange": [
+        79,
+        93
+      ],
+      "summary": "Implements bcast for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/watch_broadcast.go:add",
+      "type": "function",
+      "name": "add",
+      "filePath": "proxy/grpcproxy/watch_broadcast.go",
+      "lineRange": [
+        97,
+        128
+      ],
+      "summary": "Implements add for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:proxy/grpcproxy/watch_broadcast.go:delete",
+      "type": "function",
+      "name": "delete",
+      "filePath": "proxy/grpcproxy/watch_broadcast.go",
+      "lineRange": [
+        130,
+        141
+      ],
+      "summary": "Implements delete for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/watch_broadcast.go:stop",
+      "type": "function",
+      "name": "stop",
+      "filePath": "proxy/grpcproxy/watch_broadcast.go",
+      "lineRange": [
+        151,
+        167
+      ],
+      "summary": "Implements stop for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:proxy/grpcproxy/leader.go",
+      "target": "class:proxy/grpcproxy/leader.go:leader",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/leader.go",
+      "target": "function:proxy/grpcproxy/leader.go:newLeader",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/leader.go",
+      "target": "function:proxy/grpcproxy/leader.go:recvLoop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/lease.go",
+      "target": "class:proxy/grpcproxy/lease.go:leaseProxy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/lease.go",
+      "target": "class:proxy/grpcproxy/lease.go:leaseProxyStream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/lease.go",
+      "target": "class:proxy/grpcproxy/lease.go:atomicCounter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/lease.go",
+      "target": "function:proxy/grpcproxy/lease.go:NewLeaseProxy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/lease.go",
+      "target": "function:proxy/grpcproxy/lease.go:LeaseGrant",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/lease.go",
+      "target": "function:proxy/grpcproxy/lease.go:LeaseRevoke",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/lease.go",
+      "target": "function:proxy/grpcproxy/lease.go:LeaseTimeToLive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/lease.go",
+      "target": "function:proxy/grpcproxy/lease.go:LeaseLeases",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/lease.go",
+      "target": "function:proxy/grpcproxy/lease.go:LeaseKeepAlive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/lease.go",
+      "target": "function:proxy/grpcproxy/lease.go:recvLoop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/lease.go",
+      "target": "function:proxy/grpcproxy/lease.go:keepAliveLoop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/lease.go",
+      "target": "function:proxy/grpcproxy/lease.go:replyToClient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/lease.go",
+      "target": "function:proxy/grpcproxy/lease.go:sendLoop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/lease.go",
+      "target": "function:proxy/grpcproxy/lease.go:NewLeaseProxy",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/lease.go",
+      "target": "function:proxy/grpcproxy/lease.go:LeaseGrant",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/lease.go",
+      "target": "function:proxy/grpcproxy/lease.go:LeaseRevoke",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/lease.go",
+      "target": "function:proxy/grpcproxy/lease.go:LeaseTimeToLive",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/lease.go",
+      "target": "function:proxy/grpcproxy/lease.go:LeaseLeases",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/lease.go",
+      "target": "function:proxy/grpcproxy/lease.go:LeaseKeepAlive",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/lock.go",
+      "target": "class:proxy/grpcproxy/lock.go:lockProxy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/lock.go",
+      "target": "function:proxy/grpcproxy/lock.go:NewLockProxy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/lock.go",
+      "target": "function:proxy/grpcproxy/lock.go:Lock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/lock.go",
+      "target": "function:proxy/grpcproxy/lock.go:Unlock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/lock.go",
+      "target": "function:proxy/grpcproxy/lock.go:NewLockProxy",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/lock.go",
+      "target": "function:proxy/grpcproxy/lock.go:Lock",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/lock.go",
+      "target": "function:proxy/grpcproxy/lock.go:Unlock",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/lock.go",
+      "target": "file:etcdserver/api/v3lock/v3lockpb/v3lock.pb.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:proxy/grpcproxy/lock.go",
+      "target": "file:etcdserver/api/v3lock/v3lockpb/v3lock_grpc.pb.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:proxy/grpcproxy/maintenance.go",
+      "target": "class:proxy/grpcproxy/maintenance.go:maintenanceProxy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/maintenance.go",
+      "target": "function:proxy/grpcproxy/maintenance.go:NewMaintenanceProxy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/maintenance.go",
+      "target": "function:proxy/grpcproxy/maintenance.go:Defragment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/maintenance.go",
+      "target": "function:proxy/grpcproxy/maintenance.go:Snapshot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/maintenance.go",
+      "target": "function:proxy/grpcproxy/maintenance.go:Hash",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/maintenance.go",
+      "target": "function:proxy/grpcproxy/maintenance.go:HashKV",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/maintenance.go",
+      "target": "function:proxy/grpcproxy/maintenance.go:Alarm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/maintenance.go",
+      "target": "function:proxy/grpcproxy/maintenance.go:Status",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/maintenance.go",
+      "target": "function:proxy/grpcproxy/maintenance.go:MoveLeader",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/maintenance.go",
+      "target": "function:proxy/grpcproxy/maintenance.go:Downgrade",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/maintenance.go",
+      "target": "function:proxy/grpcproxy/maintenance.go:NewMaintenanceProxy",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/maintenance.go",
+      "target": "function:proxy/grpcproxy/maintenance.go:Defragment",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/maintenance.go",
+      "target": "function:proxy/grpcproxy/maintenance.go:Snapshot",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/maintenance.go",
+      "target": "function:proxy/grpcproxy/maintenance.go:Hash",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/maintenance.go",
+      "target": "function:proxy/grpcproxy/maintenance.go:HashKV",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/maintenance.go",
+      "target": "function:proxy/grpcproxy/maintenance.go:Alarm",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/maintenance.go",
+      "target": "function:proxy/grpcproxy/maintenance.go:Status",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/maintenance.go",
+      "target": "function:proxy/grpcproxy/maintenance.go:MoveLeader",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/maintenance.go",
+      "target": "function:proxy/grpcproxy/maintenance.go:Downgrade",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/register.go",
+      "target": "function:proxy/grpcproxy/register.go:Register",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/register.go",
+      "target": "function:proxy/grpcproxy/register.go:registerSession",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/register.go",
+      "target": "function:proxy/grpcproxy/register.go:Register",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:proxy/grpcproxy/register.go:Register",
+      "target": "function:proxy/grpcproxy/register.go:registerSession",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/util.go",
+      "target": "class:proxy/grpcproxy/util.go:proxyTokenCredential",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/util.go",
+      "target": "function:proxy/grpcproxy/util.go:getAuthTokenFromClient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/util.go",
+      "target": "function:proxy/grpcproxy/util.go:RequireTransportSecurity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/util.go",
+      "target": "function:proxy/grpcproxy/util.go:GetRequestMetadata",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/util.go",
+      "target": "function:proxy/grpcproxy/util.go:AuthUnaryClientInterceptor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/util.go",
+      "target": "function:proxy/grpcproxy/util.go:AuthStreamClientInterceptor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/util.go",
+      "target": "function:proxy/grpcproxy/util.go:RequireTransportSecurity",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/util.go",
+      "target": "function:proxy/grpcproxy/util.go:GetRequestMetadata",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/util.go",
+      "target": "function:proxy/grpcproxy/util.go:AuthUnaryClientInterceptor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/util.go",
+      "target": "function:proxy/grpcproxy/util.go:AuthStreamClientInterceptor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:proxy/grpcproxy/util.go:AuthUnaryClientInterceptor",
+      "target": "function:proxy/grpcproxy/util.go:getAuthTokenFromClient",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch_broadcast.go",
+      "target": "class:proxy/grpcproxy/watch_broadcast.go:watchBroadcast",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch_broadcast.go",
+      "target": "function:proxy/grpcproxy/watch_broadcast.go:newWatchBroadcast",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch_broadcast.go",
+      "target": "function:proxy/grpcproxy/watch_broadcast.go:bcast",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch_broadcast.go",
+      "target": "function:proxy/grpcproxy/watch_broadcast.go:add",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch_broadcast.go",
+      "target": "function:proxy/grpcproxy/watch_broadcast.go:delete",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch_broadcast.go",
+      "target": "function:proxy/grpcproxy/watch_broadcast.go:stop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    }
+  ]
+}
+

@@ -1,0 +1,671 @@
+{
+  "nodes": [
+    {
+      "id": "file:etcdserver/api/rafthttp/msg_codec.go",
+      "type": "file",
+      "name": "msg_codec.go",
+      "filePath": "etcdserver/api/rafthttp/msg_codec.go",
+      "summary": "Provides codecs for encoding and decoding raft messages over HTTP.",
+      "tags": [
+        "raft-transport",
+        "http",
+        "api-handler",
+        "peer-communication"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go package analyzed with tree-sitter structure and call-graph extraction."
+    },
+    {
+      "id": "class:etcdserver/api/rafthttp/msg_codec.go:messageDecoder",
+      "type": "class",
+      "name": "messageDecoder",
+      "filePath": "etcdserver/api/rafthttp/msg_codec.go",
+      "lineRange": [
+        43,
+        45
+      ],
+      "summary": "Type messageDecoder implements a focused part of etcdserver/api/rafthttp/msg_codec behavior.",
+      "tags": [
+        "raft-transport",
+        "http",
+        "api-handler",
+        "peer-communication"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/msg_codec.go:decodeLimit",
+      "type": "function",
+      "name": "decodeLimit",
+      "filePath": "etcdserver/api/rafthttp/msg_codec.go",
+      "lineRange": [
+        56,
+        70
+      ],
+      "summary": "Function decodeLimit implements a focused part of etcdserver/api/rafthttp/msg_codec behavior.",
+      "tags": [
+        "raft-transport",
+        "http",
+        "api-handler",
+        "peer-communication"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:etcdserver/api/rafthttp/msgappv2_codec_test.go",
+      "type": "file",
+      "name": "msgappv2_codec_test.go",
+      "filePath": "etcdserver/api/rafthttp/msgappv2_codec_test.go",
+      "summary": "Tests version-two append-message encoding, decoding, and transport statistics behavior.",
+      "tags": [
+        "raft-transport",
+        "http",
+        "api-handler",
+        "peer-communication"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go package analyzed with tree-sitter structure and call-graph extraction."
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/msgappv2_codec_test.go:TestMsgAppV2",
+      "type": "function",
+      "name": "TestMsgAppV2",
+      "filePath": "etcdserver/api/rafthttp/msgappv2_codec_test.go",
+      "lineRange": [
+        28,
+        126
+      ],
+      "summary": "Test case validating msgappv2 behavior.",
+      "tags": [
+        "raft-transport",
+        "http",
+        "api-handler",
+        "peer-communication"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdserver/api/rafthttp/msgappv2_codec.go",
+      "type": "file",
+      "name": "msgappv2_codec.go",
+      "filePath": "etcdserver/api/rafthttp/msgappv2_codec.go",
+      "summary": "Implements the version-two append-message codec with request statistics and streaming limits.",
+      "tags": [
+        "raft-transport",
+        "http",
+        "api-handler",
+        "peer-communication"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Go package analyzed with tree-sitter structure and call-graph extraction."
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/msgappv2_codec.go:encode",
+      "type": "function",
+      "name": "encode",
+      "filePath": "etcdserver/api/rafthttp/msgappv2_codec.go",
+      "lineRange": [
+        87,
+        155
+      ],
+      "summary": "Function encode implements a focused part of etcdserver/api/rafthttp/msgappv2_codec behavior.",
+      "tags": [
+        "raft-transport",
+        "http",
+        "api-handler",
+        "peer-communication"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/msgappv2_codec.go:newMsgAppV2Decoder",
+      "type": "function",
+      "name": "newMsgAppV2Decoder",
+      "filePath": "etcdserver/api/rafthttp/msgappv2_codec.go",
+      "lineRange": [
+        168,
+        177
+      ],
+      "summary": "Function newMsgAppV2Decoder implements a focused part of etcdserver/api/rafthttp/msgappv2_codec behavior.",
+      "tags": [
+        "raft-transport",
+        "http",
+        "api-handler",
+        "peer-communication"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/msgappv2_codec.go:decode",
+      "type": "function",
+      "name": "decode",
+      "filePath": "etcdserver/api/rafthttp/msgappv2_codec.go",
+      "lineRange": [
+        179,
+        254
+      ],
+      "summary": "Function decode implements a focused part of etcdserver/api/rafthttp/msgappv2_codec behavior.",
+      "tags": [
+        "raft-transport",
+        "http",
+        "api-handler",
+        "peer-communication"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdserver/api/rafthttp/peer_status.go",
+      "type": "file",
+      "name": "peer_status.go",
+      "filePath": "etcdserver/api/rafthttp/peer_status.go",
+      "summary": "Tracks remote peer activity, activation timestamps, and categorized connection failures.",
+      "tags": [
+        "raft-transport",
+        "http",
+        "api-handler",
+        "peer-communication"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go package analyzed with tree-sitter structure and call-graph extraction."
+    },
+    {
+      "id": "class:etcdserver/api/rafthttp/peer_status.go:peerStatus",
+      "type": "class",
+      "name": "peerStatus",
+      "filePath": "etcdserver/api/rafthttp/peer_status.go",
+      "lineRange": [
+        33,
+        40
+      ],
+      "summary": "Type peerStatus implements a focused part of etcdserver/api/rafthttp/peer_status behavior.",
+      "tags": [
+        "raft-transport",
+        "http",
+        "api-handler",
+        "peer-communication"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/peer_status.go:activate",
+      "type": "function",
+      "name": "activate",
+      "filePath": "etcdserver/api/rafthttp/peer_status.go",
+      "lineRange": [
+        49,
+        59
+      ],
+      "summary": "Function activate implements a focused part of etcdserver/api/rafthttp/peer_status behavior.",
+      "tags": [
+        "raft-transport",
+        "http",
+        "api-handler",
+        "peer-communication"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/peer_status.go:deactivate",
+      "type": "function",
+      "name": "deactivate",
+      "filePath": "etcdserver/api/rafthttp/peer_status.go",
+      "lineRange": [
+        61,
+        78
+      ],
+      "summary": "Function deactivate implements a focused part of etcdserver/api/rafthttp/peer_status behavior.",
+      "tags": [
+        "raft-transport",
+        "http",
+        "api-handler",
+        "peer-communication"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:etcdserver/api/rafthttp/peer.go",
+      "type": "file",
+      "name": "peer.go",
+      "filePath": "etcdserver/api/rafthttp/peer.go",
+      "summary": "Manages a remote raft peer, coordinating message writers, readers, snapshots, pause/resume state, and peer health.",
+      "tags": [
+        "raft-transport",
+        "http",
+        "api-handler",
+        "peer-communication"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Go package analyzed with tree-sitter structure and call-graph extraction."
+    },
+    {
+      "id": "class:etcdserver/api/rafthttp/peer.go:Peer",
+      "type": "class",
+      "name": "Peer",
+      "filePath": "etcdserver/api/rafthttp/peer.go",
+      "lineRange": [
+        63,
+        88
+      ],
+      "summary": "Peer transport state coordinating raft message delivery and connection lifecycle.",
+      "tags": [
+        "raft-transport",
+        "http",
+        "api-handler",
+        "peer-communication"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/api/rafthttp/peer.go:peer",
+      "type": "class",
+      "name": "peer",
+      "filePath": "etcdserver/api/rafthttp/peer.go",
+      "lineRange": [
+        101,
+        129
+      ],
+      "summary": "Peer transport state coordinating raft message delivery and connection lifecycle.",
+      "tags": [
+        "raft-transport",
+        "http",
+        "api-handler",
+        "peer-communication"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/peer.go:startPeer",
+      "type": "function",
+      "name": "startPeer",
+      "filePath": "etcdserver/api/rafthttp/peer.go",
+      "lineRange": [
+        131,
+        234
+      ],
+      "summary": "Function startPeer implements a focused part of etcdserver/api/rafthttp/peer behavior.",
+      "tags": [
+        "raft-transport",
+        "http",
+        "api-handler",
+        "peer-communication"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/peer.go:send",
+      "type": "function",
+      "name": "send",
+      "filePath": "etcdserver/api/rafthttp/peer.go",
+      "lineRange": [
+        236,
+        266
+      ],
+      "summary": "Function send implements a focused part of etcdserver/api/rafthttp/peer behavior.",
+      "tags": [
+        "raft-transport",
+        "http",
+        "api-handler",
+        "peer-communication"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/peer.go:attachOutgoingConn",
+      "type": "function",
+      "name": "attachOutgoingConn",
+      "filePath": "etcdserver/api/rafthttp/peer.go",
+      "lineRange": [
+        276,
+        291
+      ],
+      "summary": "Function attachOutgoingConn implements a focused part of etcdserver/api/rafthttp/peer behavior.",
+      "tags": [
+        "raft-transport",
+        "http",
+        "api-handler",
+        "peer-communication"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/peer.go:Pause",
+      "type": "function",
+      "name": "Pause",
+      "filePath": "etcdserver/api/rafthttp/peer.go",
+      "lineRange": [
+        297,
+        303
+      ],
+      "summary": "Function Pause implements a focused part of etcdserver/api/rafthttp/peer behavior.",
+      "tags": [
+        "raft-transport",
+        "http",
+        "api-handler",
+        "peer-communication"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/peer.go:Resume",
+      "type": "function",
+      "name": "Resume",
+      "filePath": "etcdserver/api/rafthttp/peer.go",
+      "lineRange": [
+        306,
+        312
+      ],
+      "summary": "Function Resume implements a focused part of etcdserver/api/rafthttp/peer behavior.",
+      "tags": [
+        "raft-transport",
+        "http",
+        "api-handler",
+        "peer-communication"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/peer.go:stop",
+      "type": "function",
+      "name": "stop",
+      "filePath": "etcdserver/api/rafthttp/peer.go",
+      "lineRange": [
+        314,
+        333
+      ],
+      "summary": "Function stop implements a focused part of etcdserver/api/rafthttp/peer behavior.",
+      "tags": [
+        "raft-transport",
+        "http",
+        "api-handler",
+        "peer-communication"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/peer.go:pick",
+      "type": "function",
+      "name": "pick",
+      "filePath": "etcdserver/api/rafthttp/peer.go",
+      "lineRange": [
+        337,
+        349
+      ],
+      "summary": "Function pick implements a focused part of etcdserver/api/rafthttp/peer behavior.",
+      "tags": [
+        "raft-transport",
+        "http",
+        "api-handler",
+        "peer-communication"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:etcdserver/api/rafthttp/msg_codec.go",
+      "target": "class:etcdserver/api/rafthttp/msg_codec.go:messageDecoder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/msg_codec.go",
+      "target": "function:etcdserver/api/rafthttp/msg_codec.go:decodeLimit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/msgappv2_codec_test.go",
+      "target": "function:etcdserver/api/rafthttp/msgappv2_codec_test.go:TestMsgAppV2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/msgappv2_codec_test.go",
+      "target": "function:etcdserver/api/rafthttp/msgappv2_codec_test.go:TestMsgAppV2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/msgappv2_codec_test.go",
+      "target": "file:etcdserver/api/v2stats/leader.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/msgappv2_codec_test.go",
+      "target": "file:etcdserver/api/v2stats/queue.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/msgappv2_codec_test.go",
+      "target": "file:etcdserver/api/v2stats/server.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/msgappv2_codec.go",
+      "target": "function:etcdserver/api/rafthttp/msgappv2_codec.go:encode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/msgappv2_codec.go",
+      "target": "function:etcdserver/api/rafthttp/msgappv2_codec.go:newMsgAppV2Decoder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/msgappv2_codec.go",
+      "target": "function:etcdserver/api/rafthttp/msgappv2_codec.go:decode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/msgappv2_codec.go",
+      "target": "file:etcdserver/api/v2stats/leader.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/msgappv2_codec.go",
+      "target": "file:etcdserver/api/v2stats/queue.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/msgappv2_codec.go",
+      "target": "file:etcdserver/api/v2stats/server.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/peer_status.go",
+      "target": "class:etcdserver/api/rafthttp/peer_status.go:peerStatus",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/peer_status.go",
+      "target": "function:etcdserver/api/rafthttp/peer_status.go:activate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/peer_status.go",
+      "target": "function:etcdserver/api/rafthttp/peer_status.go:deactivate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/peer.go",
+      "target": "class:etcdserver/api/rafthttp/peer.go:Peer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/peer.go",
+      "target": "class:etcdserver/api/rafthttp/peer.go:Peer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/peer.go",
+      "target": "class:etcdserver/api/rafthttp/peer.go:peer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/peer.go",
+      "target": "function:etcdserver/api/rafthttp/peer.go:startPeer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/peer.go",
+      "target": "function:etcdserver/api/rafthttp/peer.go:send",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/peer.go",
+      "target": "function:etcdserver/api/rafthttp/peer.go:attachOutgoingConn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/peer.go",
+      "target": "function:etcdserver/api/rafthttp/peer.go:Pause",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/peer.go",
+      "target": "function:etcdserver/api/rafthttp/peer.go:Pause",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/peer.go",
+      "target": "function:etcdserver/api/rafthttp/peer.go:Resume",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/peer.go",
+      "target": "function:etcdserver/api/rafthttp/peer.go:Resume",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/peer.go",
+      "target": "function:etcdserver/api/rafthttp/peer.go:stop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/peer.go",
+      "target": "function:etcdserver/api/rafthttp/peer.go:pick",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/peer.go",
+      "target": "file:etcdserver/api/snap/db.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/peer.go",
+      "target": "file:etcdserver/api/snap/db_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/peer.go",
+      "target": "file:etcdserver/api/snap/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/peer.go",
+      "target": "file:etcdserver/api/snap/message.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/peer.go",
+      "target": "file:etcdserver/api/snap/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/peer.go",
+      "target": "file:etcdserver/api/snap/snapshotter.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/peer.go",
+      "target": "file:etcdserver/api/snap/snapshotter_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/peer.go",
+      "target": "file:etcdserver/api/v2stats/leader.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/peer.go",
+      "target": "file:etcdserver/api/v2stats/queue.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/peer.go",
+      "target": "file:etcdserver/api/v2stats/server.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

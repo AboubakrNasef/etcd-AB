@@ -1,0 +1,1102 @@
+{
+  "nodes": [
+    {
+      "id": "file:etcdserver/api/v2store/store_ttl_test.go",
+      "type": "file",
+      "name": "store_ttl_test.go",
+      "filePath": "etcdserver/api/v2store/store_ttl_test.go",
+      "summary": "Tests TTL expiration and cleanup behavior in the v2 store.",
+      "tags": [
+        "test",
+        "ttl",
+        "legacy-api",
+        "watch",
+        "timers"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Go implementation using package-level APIs and concurrency primitives where required."
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store_ttl_test.go:TestMinExpireTime",
+      "type": "function",
+      "name": "TestMinExpireTime",
+      "filePath": "etcdserver/api/v2store/store_ttl_test.go",
+      "lineRange": [
+        29,
+        46
+      ],
+      "summary": "Provides the TestMinExpireTime operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store_ttl_test.go:TestStoreGetDirectory",
+      "type": "function",
+      "name": "TestStoreGetDirectory",
+      "filePath": "etcdserver/api/v2store/store_ttl_test.go",
+      "lineRange": [
+        50,
+        95
+      ],
+      "summary": "Provides the TestStoreGetDirectory operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store_ttl_test.go:TestStoreUpdateValueTTL",
+      "type": "function",
+      "name": "TestStoreUpdateValueTTL",
+      "filePath": "etcdserver/api/v2store/store_ttl_test.go",
+      "lineRange": [
+        98,
+        117
+      ],
+      "summary": "Provides the TestStoreUpdateValueTTL operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store_ttl_test.go:TestStoreUpdateDirTTL",
+      "type": "function",
+      "name": "TestStoreUpdateDirTTL",
+      "filePath": "etcdserver/api/v2store/store_ttl_test.go",
+      "lineRange": [
+        120,
+        145
+      ],
+      "summary": "Provides the TestStoreUpdateDirTTL operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store_ttl_test.go:TestStoreWatchExpire",
+      "type": "function",
+      "name": "TestStoreWatchExpire",
+      "filePath": "etcdserver/api/v2store/store_ttl_test.go",
+      "lineRange": [
+        148,
+        183
+      ],
+      "summary": "Provides the TestStoreWatchExpire operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store_ttl_test.go:TestStoreWatchExpireRefresh",
+      "type": "function",
+      "name": "TestStoreWatchExpireRefresh",
+      "filePath": "etcdserver/api/v2store/store_ttl_test.go",
+      "lineRange": [
+        186,
+        219
+      ],
+      "summary": "Provides the TestStoreWatchExpireRefresh operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store_ttl_test.go:TestStoreWatchExpireEmptyRefresh",
+      "type": "function",
+      "name": "TestStoreWatchExpireEmptyRefresh",
+      "filePath": "etcdserver/api/v2store/store_ttl_test.go",
+      "lineRange": [
+        222,
+        244
+      ],
+      "summary": "Provides the TestStoreWatchExpireEmptyRefresh operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store_ttl_test.go:TestStoreWatchNoRefresh",
+      "type": "function",
+      "name": "TestStoreWatchNoRefresh",
+      "filePath": "etcdserver/api/v2store/store_ttl_test.go",
+      "lineRange": [
+        247,
+        270
+      ],
+      "summary": "Provides the TestStoreWatchNoRefresh operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store_ttl_test.go:TestStoreRefresh",
+      "type": "function",
+      "name": "TestStoreRefresh",
+      "filePath": "etcdserver/api/v2store/store_ttl_test.go",
+      "lineRange": [
+        273,
+        292
+      ],
+      "summary": "Provides the TestStoreRefresh operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store_ttl_test.go:TestStoreRecoverWithExpiration",
+      "type": "function",
+      "name": "TestStoreRecoverWithExpiration",
+      "filePath": "etcdserver/api/v2store/store_ttl_test.go",
+      "lineRange": [
+        295,
+        326
+      ],
+      "summary": "Provides the TestStoreRecoverWithExpiration operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/store_ttl_test.go:TestStoreWatchExpireWithHiddenKey",
+      "type": "function",
+      "name": "TestStoreWatchExpireWithHiddenKey",
+      "filePath": "etcdserver/api/v2store/store_ttl_test.go",
+      "lineRange": [
+        329,
+        350
+      ],
+      "summary": "Provides the TestStoreWatchExpireWithHiddenKey operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdserver/api/v2store/ttl_key_heap.go",
+      "type": "file",
+      "name": "ttl_key_heap.go",
+      "filePath": "etcdserver/api/v2store/ttl_key_heap.go",
+      "summary": "Maintains a time-ordered heap of v2 store keys scheduled for TTL expiration.",
+      "tags": [
+        "ttl",
+        "heap",
+        "legacy-api",
+        "expiration"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using package-level APIs and concurrency primitives where required."
+    },
+    {
+      "id": "function:etcdserver/api/v2store/ttl_key_heap.go:Len",
+      "type": "function",
+      "name": "Len",
+      "filePath": "etcdserver/api/v2store/ttl_key_heap.go",
+      "lineRange": [
+        31,
+        33
+      ],
+      "summary": "Provides the Len operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/ttl_key_heap.go:Less",
+      "type": "function",
+      "name": "Less",
+      "filePath": "etcdserver/api/v2store/ttl_key_heap.go",
+      "lineRange": [
+        35,
+        37
+      ],
+      "summary": "Provides the Less operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/ttl_key_heap.go:Swap",
+      "type": "function",
+      "name": "Swap",
+      "filePath": "etcdserver/api/v2store/ttl_key_heap.go",
+      "lineRange": [
+        39,
+        46
+      ],
+      "summary": "Provides the Swap operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/ttl_key_heap.go:Push",
+      "type": "function",
+      "name": "Push",
+      "filePath": "etcdserver/api/v2store/ttl_key_heap.go",
+      "lineRange": [
+        48,
+        52
+      ],
+      "summary": "Provides the Push operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/ttl_key_heap.go:Pop",
+      "type": "function",
+      "name": "Pop",
+      "filePath": "etcdserver/api/v2store/ttl_key_heap.go",
+      "lineRange": [
+        54,
+        65
+      ],
+      "summary": "Provides the Pop operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:etcdserver/api/v2store/ttl_key_heap.go:ttlKeyHeap",
+      "type": "class",
+      "name": "ttlKeyHeap",
+      "filePath": "etcdserver/api/v2store/ttl_key_heap.go",
+      "lineRange": [
+        20,
+        23
+      ],
+      "summary": "Represents the ttlKeyHeap state and behavior for this module.",
+      "tags": [
+        "go",
+        "data-model",
+        "state",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdserver/api/v2store/watcher.go",
+      "type": "file",
+      "name": "watcher.go",
+      "filePath": "etcdserver/api/v2store/watcher.go",
+      "summary": "Defines individual v2 store watchers and event delivery channels.",
+      "tags": [
+        "watch",
+        "event",
+        "legacy-api",
+        "concurrency"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using package-level APIs and concurrency primitives where required."
+    },
+    {
+      "id": "function:etcdserver/api/v2store/watcher.go:EventChan",
+      "type": "function",
+      "name": "EventChan",
+      "filePath": "etcdserver/api/v2store/watcher.go",
+      "lineRange": [
+        34,
+        36
+      ],
+      "summary": "Provides the EventChan operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/watcher.go:StartIndex",
+      "type": "function",
+      "name": "StartIndex",
+      "filePath": "etcdserver/api/v2store/watcher.go",
+      "lineRange": [
+        38,
+        40
+      ],
+      "summary": "Provides the StartIndex operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/watcher.go:notify",
+      "type": "function",
+      "name": "notify",
+      "filePath": "etcdserver/api/v2store/watcher.go",
+      "lineRange": [
+        44,
+        75
+      ],
+      "summary": "Provides the notify operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/watcher.go:Remove",
+      "type": "function",
+      "name": "Remove",
+      "filePath": "etcdserver/api/v2store/watcher.go",
+      "lineRange": [
+        79,
+        87
+      ],
+      "summary": "Provides the Remove operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/watcher.go:NewNopWatcher",
+      "type": "function",
+      "name": "NewNopWatcher",
+      "filePath": "etcdserver/api/v2store/watcher.go",
+      "lineRange": [
+        92,
+        92
+      ],
+      "summary": "Provides the NewNopWatcher operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:etcdserver/api/v2store/watcher.go:Watcher",
+      "type": "class",
+      "name": "Watcher",
+      "filePath": "etcdserver/api/v2store/watcher.go",
+      "lineRange": [
+        17,
+        21
+      ],
+      "summary": "Represents the Watcher state and behavior for this module.",
+      "tags": [
+        "go",
+        "data-model",
+        "state",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/api/v2store/watcher.go:watcher",
+      "type": "class",
+      "name": "watcher",
+      "filePath": "etcdserver/api/v2store/watcher.go",
+      "lineRange": [
+        23,
+        32
+      ],
+      "summary": "Represents the watcher state and behavior for this module.",
+      "tags": [
+        "go",
+        "data-model",
+        "state",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/api/v2store/watcher.go:nopWatcher",
+      "type": "class",
+      "name": "nopWatcher",
+      "filePath": "etcdserver/api/v2store/watcher.go",
+      "lineRange": [
+        90,
+        90
+      ],
+      "summary": "Represents the nopWatcher state and behavior for this module.",
+      "tags": [
+        "go",
+        "data-model",
+        "state",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdserver/api/v2store/watcher_hub.go",
+      "type": "file",
+      "name": "watcher_hub.go",
+      "filePath": "etcdserver/api/v2store/watcher_hub.go",
+      "summary": "Coordinates v2 store watchers, filters events by key range, and broadcasts changes safely.",
+      "tags": [
+        "watch",
+        "event",
+        "legacy-api",
+        "concurrency",
+        "routing"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using package-level APIs and concurrency primitives where required."
+    },
+    {
+      "id": "function:etcdserver/api/v2store/watcher_hub.go:watch",
+      "type": "function",
+      "name": "watch",
+      "filePath": "etcdserver/api/v2store/watcher_hub.go",
+      "lineRange": [
+        59,
+        115
+      ],
+      "summary": "Provides the watch operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/watcher_hub.go:notify",
+      "type": "function",
+      "name": "notify",
+      "filePath": "etcdserver/api/v2store/watcher_hub.go",
+      "lineRange": [
+        122,
+        138
+      ],
+      "summary": "Provides the notify operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/watcher_hub.go:notifyWatchers",
+      "type": "function",
+      "name": "notifyWatchers",
+      "filePath": "etcdserver/api/v2store/watcher_hub.go",
+      "lineRange": [
+        140,
+        175
+      ],
+      "summary": "Provides the notifyWatchers operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/watcher_hub.go:isHidden",
+      "type": "function",
+      "name": "isHidden",
+      "filePath": "etcdserver/api/v2store/watcher_hub.go",
+      "lineRange": [
+        189,
+        199
+      ],
+      "summary": "Provides the isHidden operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:etcdserver/api/v2store/watcher_hub.go:watcherHub",
+      "type": "class",
+      "name": "watcherHub",
+      "filePath": "etcdserver/api/v2store/watcher_hub.go",
+      "lineRange": [
+        33,
+        42
+      ],
+      "summary": "Represents the watcherHub state and behavior for this module.",
+      "tags": [
+        "go",
+        "data-model",
+        "state",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdserver/api/v2store/watcher_hub_test.go",
+      "type": "file",
+      "name": "watcher_hub_test.go",
+      "filePath": "etcdserver/api/v2store/watcher_hub_test.go",
+      "summary": "Tests watcher hub registration, event filtering, cancellation, and broadcast behavior.",
+      "tags": [
+        "test",
+        "watch",
+        "event",
+        "legacy-api"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using package-level APIs and concurrency primitives where required."
+    },
+    {
+      "id": "function:etcdserver/api/v2store/watcher_hub_test.go:TestIsHidden",
+      "type": "function",
+      "name": "TestIsHidden",
+      "filePath": "etcdserver/api/v2store/watcher_hub_test.go",
+      "lineRange": [
+        20,
+        64
+      ],
+      "summary": "Provides the TestIsHidden operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:etcdserver/api/v2store/watcher_test.go",
+      "type": "file",
+      "name": "watcher_test.go",
+      "filePath": "etcdserver/api/v2store/watcher_test.go",
+      "summary": "Tests v2 watcher event delivery and key-range behavior.",
+      "tags": [
+        "test",
+        "watch",
+        "event",
+        "legacy-api"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using package-level APIs and concurrency primitives where required."
+    },
+    {
+      "id": "function:etcdserver/api/v2store/watcher_test.go:TestWatcher",
+      "type": "function",
+      "name": "TestWatcher",
+      "filePath": "etcdserver/api/v2store/watcher_test.go",
+      "lineRange": [
+        19,
+        89
+      ],
+      "summary": "Provides the TestWatcher operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:etcdserver/api/v2store/store_ttl_test.go",
+      "target": "function:etcdserver/api/v2store/store_ttl_test.go:TestMinExpireTime",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_ttl_test.go",
+      "target": "function:etcdserver/api/v2store/store_ttl_test.go:TestMinExpireTime",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_ttl_test.go",
+      "target": "function:etcdserver/api/v2store/store_ttl_test.go:TestStoreGetDirectory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_ttl_test.go",
+      "target": "function:etcdserver/api/v2store/store_ttl_test.go:TestStoreGetDirectory",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_ttl_test.go",
+      "target": "function:etcdserver/api/v2store/store_ttl_test.go:TestStoreUpdateValueTTL",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_ttl_test.go",
+      "target": "function:etcdserver/api/v2store/store_ttl_test.go:TestStoreUpdateValueTTL",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_ttl_test.go",
+      "target": "function:etcdserver/api/v2store/store_ttl_test.go:TestStoreUpdateDirTTL",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_ttl_test.go",
+      "target": "function:etcdserver/api/v2store/store_ttl_test.go:TestStoreUpdateDirTTL",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_ttl_test.go",
+      "target": "function:etcdserver/api/v2store/store_ttl_test.go:TestStoreWatchExpire",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_ttl_test.go",
+      "target": "function:etcdserver/api/v2store/store_ttl_test.go:TestStoreWatchExpire",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_ttl_test.go",
+      "target": "function:etcdserver/api/v2store/store_ttl_test.go:TestStoreWatchExpireRefresh",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_ttl_test.go",
+      "target": "function:etcdserver/api/v2store/store_ttl_test.go:TestStoreWatchExpireRefresh",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_ttl_test.go",
+      "target": "function:etcdserver/api/v2store/store_ttl_test.go:TestStoreWatchExpireEmptyRefresh",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_ttl_test.go",
+      "target": "function:etcdserver/api/v2store/store_ttl_test.go:TestStoreWatchExpireEmptyRefresh",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_ttl_test.go",
+      "target": "function:etcdserver/api/v2store/store_ttl_test.go:TestStoreWatchNoRefresh",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_ttl_test.go",
+      "target": "function:etcdserver/api/v2store/store_ttl_test.go:TestStoreWatchNoRefresh",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_ttl_test.go",
+      "target": "function:etcdserver/api/v2store/store_ttl_test.go:TestStoreRefresh",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_ttl_test.go",
+      "target": "function:etcdserver/api/v2store/store_ttl_test.go:TestStoreRefresh",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_ttl_test.go",
+      "target": "function:etcdserver/api/v2store/store_ttl_test.go:TestStoreRecoverWithExpiration",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_ttl_test.go",
+      "target": "function:etcdserver/api/v2store/store_ttl_test.go:TestStoreRecoverWithExpiration",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_ttl_test.go",
+      "target": "function:etcdserver/api/v2store/store_ttl_test.go:TestStoreWatchExpireWithHiddenKey",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_ttl_test.go",
+      "target": "function:etcdserver/api/v2store/store_ttl_test.go:TestStoreWatchExpireWithHiddenKey",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_ttl_test.go",
+      "target": "file:etcdserver/api/v2error/error.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v2store/store_ttl_test.go",
+      "target": "file:etcdserver/api/v2error/error_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v2store/ttl_key_heap.go",
+      "target": "function:etcdserver/api/v2store/ttl_key_heap.go:Len",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/ttl_key_heap.go",
+      "target": "function:etcdserver/api/v2store/ttl_key_heap.go:Len",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/ttl_key_heap.go",
+      "target": "function:etcdserver/api/v2store/ttl_key_heap.go:Less",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/ttl_key_heap.go",
+      "target": "function:etcdserver/api/v2store/ttl_key_heap.go:Less",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/ttl_key_heap.go",
+      "target": "function:etcdserver/api/v2store/ttl_key_heap.go:Swap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/ttl_key_heap.go",
+      "target": "function:etcdserver/api/v2store/ttl_key_heap.go:Swap",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/ttl_key_heap.go",
+      "target": "function:etcdserver/api/v2store/ttl_key_heap.go:Push",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/ttl_key_heap.go",
+      "target": "function:etcdserver/api/v2store/ttl_key_heap.go:Push",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/ttl_key_heap.go",
+      "target": "function:etcdserver/api/v2store/ttl_key_heap.go:Pop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/ttl_key_heap.go",
+      "target": "function:etcdserver/api/v2store/ttl_key_heap.go:Pop",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/ttl_key_heap.go",
+      "target": "class:etcdserver/api/v2store/ttl_key_heap.go:ttlKeyHeap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/watcher.go",
+      "target": "function:etcdserver/api/v2store/watcher.go:EventChan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/watcher.go",
+      "target": "function:etcdserver/api/v2store/watcher.go:EventChan",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/watcher.go",
+      "target": "function:etcdserver/api/v2store/watcher.go:StartIndex",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/watcher.go",
+      "target": "function:etcdserver/api/v2store/watcher.go:StartIndex",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/watcher.go",
+      "target": "function:etcdserver/api/v2store/watcher.go:notify",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/watcher.go",
+      "target": "function:etcdserver/api/v2store/watcher.go:Remove",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/watcher.go",
+      "target": "function:etcdserver/api/v2store/watcher.go:Remove",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/watcher.go",
+      "target": "function:etcdserver/api/v2store/watcher.go:NewNopWatcher",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/watcher.go",
+      "target": "function:etcdserver/api/v2store/watcher.go:NewNopWatcher",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/watcher.go",
+      "target": "function:etcdserver/api/v2store/watcher.go:EventChan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/watcher.go",
+      "target": "function:etcdserver/api/v2store/watcher.go:EventChan",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/watcher.go",
+      "target": "function:etcdserver/api/v2store/watcher.go:StartIndex",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/watcher.go",
+      "target": "function:etcdserver/api/v2store/watcher.go:StartIndex",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/watcher.go",
+      "target": "function:etcdserver/api/v2store/watcher.go:Remove",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/watcher.go",
+      "target": "function:etcdserver/api/v2store/watcher.go:Remove",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/watcher.go",
+      "target": "class:etcdserver/api/v2store/watcher.go:Watcher",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/watcher.go",
+      "target": "class:etcdserver/api/v2store/watcher.go:Watcher",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/watcher.go",
+      "target": "class:etcdserver/api/v2store/watcher.go:watcher",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/watcher.go",
+      "target": "class:etcdserver/api/v2store/watcher.go:nopWatcher",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/watcher_hub.go",
+      "target": "function:etcdserver/api/v2store/watcher_hub.go:watch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/watcher_hub.go",
+      "target": "function:etcdserver/api/v2store/watcher_hub.go:notify",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/watcher_hub.go",
+      "target": "function:etcdserver/api/v2store/watcher_hub.go:notifyWatchers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/watcher_hub.go",
+      "target": "function:etcdserver/api/v2store/watcher_hub.go:isHidden",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/watcher_hub.go",
+      "target": "class:etcdserver/api/v2store/watcher_hub.go:watcherHub",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/watcher_hub.go",
+      "target": "file:etcdserver/api/v2error/error.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v2store/watcher_hub.go",
+      "target": "file:etcdserver/api/v2error/error_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v2store/watcher_hub_test.go",
+      "target": "function:etcdserver/api/v2store/watcher_hub_test.go:TestIsHidden",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/watcher_hub_test.go",
+      "target": "function:etcdserver/api/v2store/watcher_hub_test.go:TestIsHidden",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/watcher_test.go",
+      "target": "function:etcdserver/api/v2store/watcher_test.go:TestWatcher",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/watcher_test.go",
+      "target": "function:etcdserver/api/v2store/watcher_test.go:TestWatcher",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

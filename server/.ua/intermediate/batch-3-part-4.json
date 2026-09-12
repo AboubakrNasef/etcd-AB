@@ -1,0 +1,1542 @@
+{
+  "nodes": [
+    {
+      "id": "file:storage/schema/actions_test.go",
+      "type": "file",
+      "name": "actions_test.go",
+      "filePath": "storage/schema/actions_test.go",
+      "summary": "Tests the actions storage behavior, including persistence, transactions, and edge cases.",
+      "tags": [
+        "test",
+        "schema",
+        "backend",
+        "persistence"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using backend transactions and protobuf-backed storage structures."
+    },
+    {
+      "id": "file:storage/schema/alarm.go",
+      "type": "file",
+      "name": "alarm.go",
+      "filePath": "storage/schema/alarm.go",
+      "summary": "Defines backend persistence helpers for alarm data, including safe reads, writes, and bucket management.",
+      "tags": [
+        "schema",
+        "backend",
+        "persistence",
+        "serialization"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using backend transactions and protobuf-backed storage structures."
+    },
+    {
+      "id": "file:storage/schema/auth.go",
+      "type": "file",
+      "name": "auth.go",
+      "filePath": "storage/schema/auth.go",
+      "summary": "Defines backend persistence helpers for auth data, including safe reads, writes, and bucket management.",
+      "tags": [
+        "schema",
+        "backend",
+        "persistence",
+        "serialization"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using backend transactions and protobuf-backed storage structures."
+    },
+    {
+      "id": "function:storage/schema/actions_test.go:TestActionIsReversible",
+      "type": "function",
+      "name": "TestActionIsReversible",
+      "filePath": "storage/schema/actions_test.go",
+      "lineRange": [
+        31,
+        93
+      ],
+      "summary": "Implements ActionIsReversible behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/schema/actions_test.go:TestActionListRevert",
+      "type": "function",
+      "name": "TestActionListRevert",
+      "filePath": "storage/schema/actions_test.go",
+      "lineRange": [
+        95,
+        142
+      ],
+      "summary": "Implements ActionListRevert behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/schema/actions_test.go:assertBucketState",
+      "type": "function",
+      "name": "assertBucketState",
+      "filePath": "storage/schema/actions_test.go",
+      "lineRange": [
+        158,
+        169
+      ],
+      "summary": "Implements assertBucketState behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/alarm.go:NewAlarmBackend",
+      "type": "function",
+      "name": "NewAlarmBackend",
+      "filePath": "storage/schema/alarm.go",
+      "lineRange": [
+        38,
+        43
+      ],
+      "summary": "Implements NewAlarmBackend behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/alarm.go:CreateAlarmBucket",
+      "type": "function",
+      "name": "CreateAlarmBucket",
+      "filePath": "storage/schema/alarm.go",
+      "lineRange": [
+        45,
+        50
+      ],
+      "summary": "Implements CreateAlarmBucket behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/alarm.go:MustPutAlarm",
+      "type": "function",
+      "name": "MustPutAlarm",
+      "filePath": "storage/schema/alarm.go",
+      "lineRange": [
+        52,
+        57
+      ],
+      "summary": "Implements PutAlarm behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/alarm.go:MustDeleteAlarm",
+      "type": "function",
+      "name": "MustDeleteAlarm",
+      "filePath": "storage/schema/alarm.go",
+      "lineRange": [
+        68,
+        73
+      ],
+      "summary": "Implements DeleteAlarm behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/alarm.go:GetAllAlarms",
+      "type": "function",
+      "name": "GetAllAlarms",
+      "filePath": "storage/schema/alarm.go",
+      "lineRange": [
+        84,
+        89
+      ],
+      "summary": "Implements GetAllAlarms behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/alarm.go:unsafeGetAllAlarms",
+      "type": "function",
+      "name": "unsafeGetAllAlarms",
+      "filePath": "storage/schema/alarm.go",
+      "lineRange": [
+        91,
+        102
+      ],
+      "summary": "Implements unsafeGetAllAlarms behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/alarm.go:ForceCommit",
+      "type": "function",
+      "name": "ForceCommit",
+      "filePath": "storage/schema/alarm.go",
+      "lineRange": [
+        104,
+        106
+      ],
+      "summary": "Implements ForceCommit behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:storage/schema/alarm.go:AlarmBackend",
+      "type": "class",
+      "name": "AlarmBackend",
+      "filePath": "storage/schema/alarm.go",
+      "lineRange": [
+        25,
+        31
+      ],
+      "summary": "Defines the AlarmBackend storage abstraction and its associated state.",
+      "tags": [
+        "storage",
+        "type-definition",
+        "backend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:storage/schema/alarm.go:alarmBackend",
+      "type": "class",
+      "name": "alarmBackend",
+      "filePath": "storage/schema/alarm.go",
+      "lineRange": [
+        33,
+        36
+      ],
+      "summary": "Defines the alarmBackend storage abstraction and its associated state.",
+      "tags": [
+        "storage",
+        "type-definition",
+        "backend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/schema/auth.go:NewAuthBackend",
+      "type": "function",
+      "name": "NewAuthBackend",
+      "filePath": "storage/schema/auth.go",
+      "lineRange": [
+        43,
+        48
+      ],
+      "summary": "Implements NewAuthBackend behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/auth.go:CreateAuthBuckets",
+      "type": "function",
+      "name": "CreateAuthBuckets",
+      "filePath": "storage/schema/auth.go",
+      "lineRange": [
+        50,
+        57
+      ],
+      "summary": "Implements CreateAuthBuckets behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/auth.go:ForceCommit",
+      "type": "function",
+      "name": "ForceCommit",
+      "filePath": "storage/schema/auth.go",
+      "lineRange": [
+        59,
+        61
+      ],
+      "summary": "Implements ForceCommit behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/auth.go:ReadTx",
+      "type": "function",
+      "name": "ReadTx",
+      "filePath": "storage/schema/auth.go",
+      "lineRange": [
+        63,
+        65
+      ],
+      "summary": "Implements ReadTx behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/auth.go:BatchTx",
+      "type": "function",
+      "name": "BatchTx",
+      "filePath": "storage/schema/auth.go",
+      "lineRange": [
+        67,
+        69
+      ],
+      "summary": "Implements BatchTx behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/auth.go:UnsafeSaveAuthEnabled",
+      "type": "function",
+      "name": "UnsafeSaveAuthEnabled",
+      "filePath": "storage/schema/auth.go",
+      "lineRange": [
+        86,
+        92
+      ],
+      "summary": "Implements SaveAuthEnabled behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/auth.go:UnsafeSaveAuthRevision",
+      "type": "function",
+      "name": "UnsafeSaveAuthRevision",
+      "filePath": "storage/schema/auth.go",
+      "lineRange": [
+        94,
+        98
+      ],
+      "summary": "Implements SaveAuthRevision behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/auth.go:UnsafeReadAuthEnabled",
+      "type": "function",
+      "name": "UnsafeReadAuthEnabled",
+      "filePath": "storage/schema/auth.go",
+      "lineRange": [
+        100,
+        102
+      ],
+      "summary": "Implements ReadAuthEnabled behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/auth.go:UnsafeReadAuthRevision",
+      "type": "function",
+      "name": "UnsafeReadAuthRevision",
+      "filePath": "storage/schema/auth.go",
+      "lineRange": [
+        104,
+        106
+      ],
+      "summary": "Implements ReadAuthRevision behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/auth.go:Lock",
+      "type": "function",
+      "name": "Lock",
+      "filePath": "storage/schema/auth.go",
+      "lineRange": [
+        108,
+        110
+      ],
+      "summary": "Implements Lock behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/auth.go:Unlock",
+      "type": "function",
+      "name": "Unlock",
+      "filePath": "storage/schema/auth.go",
+      "lineRange": [
+        112,
+        117
+      ],
+      "summary": "Implements Unlock behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/auth.go:RLock",
+      "type": "function",
+      "name": "RLock",
+      "filePath": "storage/schema/auth.go",
+      "lineRange": [
+        146,
+        148
+      ],
+      "summary": "Implements RLock behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/auth.go:RUnlock",
+      "type": "function",
+      "name": "RUnlock",
+      "filePath": "storage/schema/auth.go",
+      "lineRange": [
+        150,
+        152
+      ],
+      "summary": "Implements RUnlock behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:storage/schema/auth.go:authBackend",
+      "type": "class",
+      "name": "authBackend",
+      "filePath": "storage/schema/auth.go",
+      "lineRange": [
+        36,
+        39
+      ],
+      "summary": "Defines the authBackend storage abstraction and its associated state.",
+      "tags": [
+        "storage",
+        "type-definition",
+        "backend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:storage/schema/auth.go:authReadTx",
+      "type": "class",
+      "name": "authReadTx",
+      "filePath": "storage/schema/auth.go",
+      "lineRange": [
+        71,
+        74
+      ],
+      "summary": "Defines the authReadTx storage abstraction and its associated state.",
+      "tags": [
+        "storage",
+        "type-definition",
+        "backend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:storage/schema/auth.go:authBatchTx",
+      "type": "class",
+      "name": "authBatchTx",
+      "filePath": "storage/schema/auth.go",
+      "lineRange": [
+        76,
+        79
+      ],
+      "summary": "Defines the authBatchTx storage abstraction and its associated state.",
+      "tags": [
+        "storage",
+        "type-definition",
+        "backend"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:storage/schema/actions_test.go",
+      "target": "function:storage/schema/actions_test.go:TestActionIsReversible",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/actions_test.go",
+      "target": "function:storage/schema/actions_test.go:TestActionIsReversible",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/actions_test.go",
+      "target": "function:storage/schema/actions_test.go:TestActionListRevert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/actions_test.go",
+      "target": "function:storage/schema/actions_test.go:TestActionListRevert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/actions_test.go",
+      "target": "function:storage/schema/actions_test.go:assertBucketState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/alarm.go",
+      "target": "function:storage/schema/alarm.go:NewAlarmBackend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/alarm.go",
+      "target": "function:storage/schema/alarm.go:NewAlarmBackend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/alarm.go",
+      "target": "function:storage/schema/alarm.go:CreateAlarmBucket",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/alarm.go",
+      "target": "function:storage/schema/alarm.go:CreateAlarmBucket",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/alarm.go",
+      "target": "function:storage/schema/alarm.go:MustPutAlarm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/alarm.go",
+      "target": "function:storage/schema/alarm.go:MustPutAlarm",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/alarm.go",
+      "target": "function:storage/schema/alarm.go:MustDeleteAlarm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/alarm.go",
+      "target": "function:storage/schema/alarm.go:MustDeleteAlarm",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/alarm.go",
+      "target": "function:storage/schema/alarm.go:GetAllAlarms",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/alarm.go",
+      "target": "function:storage/schema/alarm.go:GetAllAlarms",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/alarm.go",
+      "target": "function:storage/schema/alarm.go:unsafeGetAllAlarms",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/alarm.go",
+      "target": "function:storage/schema/alarm.go:ForceCommit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/alarm.go",
+      "target": "function:storage/schema/alarm.go:ForceCommit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/alarm.go",
+      "target": "class:storage/schema/alarm.go:AlarmBackend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/alarm.go",
+      "target": "class:storage/schema/alarm.go:AlarmBackend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/alarm.go",
+      "target": "class:storage/schema/alarm.go:alarmBackend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "function:storage/schema/auth.go:NewAuthBackend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "function:storage/schema/auth.go:NewAuthBackend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "function:storage/schema/auth.go:CreateAuthBuckets",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "function:storage/schema/auth.go:CreateAuthBuckets",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "function:storage/schema/auth.go:ForceCommit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "function:storage/schema/auth.go:ForceCommit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "function:storage/schema/auth.go:ReadTx",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "function:storage/schema/auth.go:ReadTx",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "function:storage/schema/auth.go:BatchTx",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "function:storage/schema/auth.go:BatchTx",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "function:storage/schema/auth.go:UnsafeSaveAuthEnabled",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "function:storage/schema/auth.go:UnsafeSaveAuthEnabled",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "function:storage/schema/auth.go:UnsafeSaveAuthRevision",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "function:storage/schema/auth.go:UnsafeSaveAuthRevision",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "function:storage/schema/auth.go:UnsafeReadAuthEnabled",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "function:storage/schema/auth.go:UnsafeReadAuthEnabled",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "function:storage/schema/auth.go:UnsafeReadAuthRevision",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "function:storage/schema/auth.go:UnsafeReadAuthRevision",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "function:storage/schema/auth.go:Lock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "function:storage/schema/auth.go:Lock",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "function:storage/schema/auth.go:Unlock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "function:storage/schema/auth.go:Unlock",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "function:storage/schema/auth.go:RLock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "function:storage/schema/auth.go:RLock",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "function:storage/schema/auth.go:RUnlock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "function:storage/schema/auth.go:RUnlock",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "class:storage/schema/auth.go:authBackend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "class:storage/schema/auth.go:authReadTx",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "class:storage/schema/auth.go:authBatchTx",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/actions_test.go",
+      "target": "file:storage/backend/backend.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/actions_test.go",
+      "target": "file:storage/backend/backend_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/actions_test.go",
+      "target": "file:storage/backend/backend_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/actions_test.go",
+      "target": "file:storage/backend/batch_tx.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/actions_test.go",
+      "target": "file:storage/backend/batch_tx_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/actions_test.go",
+      "target": "file:storage/backend/config_default.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/actions_test.go",
+      "target": "file:storage/backend/config_linux.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/actions_test.go",
+      "target": "file:storage/backend/config_windows.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/actions_test.go",
+      "target": "file:storage/backend/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/actions_test.go",
+      "target": "file:storage/backend/export_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/actions_test.go",
+      "target": "file:storage/backend/hooks.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/actions_test.go",
+      "target": "file:storage/backend/hooks_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/actions_test.go",
+      "target": "file:storage/backend/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/actions_test.go",
+      "target": "file:storage/backend/read_tx.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/actions_test.go",
+      "target": "file:storage/backend/testing/betesting.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/actions_test.go",
+      "target": "file:storage/backend/tx_buffer.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/actions_test.go",
+      "target": "file:storage/backend/tx_buffer_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/actions_test.go",
+      "target": "file:storage/backend/verify.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/actions_test.go",
+      "target": "file:storage/backend/verify_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/alarm.go",
+      "target": "file:storage/backend/backend.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/alarm.go",
+      "target": "file:storage/backend/backend_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/alarm.go",
+      "target": "file:storage/backend/backend_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/alarm.go",
+      "target": "file:storage/backend/batch_tx.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/alarm.go",
+      "target": "file:storage/backend/batch_tx_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/alarm.go",
+      "target": "file:storage/backend/config_default.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/alarm.go",
+      "target": "file:storage/backend/config_linux.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/alarm.go",
+      "target": "file:storage/backend/config_windows.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/alarm.go",
+      "target": "file:storage/backend/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/alarm.go",
+      "target": "file:storage/backend/export_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/alarm.go",
+      "target": "file:storage/backend/hooks.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/alarm.go",
+      "target": "file:storage/backend/hooks_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/alarm.go",
+      "target": "file:storage/backend/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/alarm.go",
+      "target": "file:storage/backend/read_tx.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/alarm.go",
+      "target": "file:storage/backend/tx_buffer.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/alarm.go",
+      "target": "file:storage/backend/tx_buffer_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/alarm.go",
+      "target": "file:storage/backend/verify.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/alarm.go",
+      "target": "file:storage/backend/verify_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "file:auth/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "file:auth/jwt.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "file:auth/jwt_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "file:auth/main_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "file:auth/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "file:auth/nop.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "file:auth/options.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "file:auth/range_perm_cache.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "file:auth/range_perm_cache_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "file:auth/simple_token.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "file:auth/simple_token_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "file:auth/store.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "file:auth/store_mock_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "file:auth/store_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "file:storage/backend/backend.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "file:storage/backend/backend_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "file:storage/backend/backend_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "file:storage/backend/batch_tx.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "file:storage/backend/batch_tx_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "file:storage/backend/config_default.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "file:storage/backend/config_linux.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "file:storage/backend/config_windows.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "file:storage/backend/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "file:storage/backend/export_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "file:storage/backend/hooks.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "file:storage/backend/hooks_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "file:storage/backend/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "file:storage/backend/read_tx.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "file:storage/backend/tx_buffer.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "file:storage/backend/tx_buffer_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "file:storage/backend/verify.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "file:storage/backend/verify_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:storage/schema/actions_test.go:TestActionIsReversible",
+      "target": "function:storage/schema/cindex.go:UnsafeCreateMetaBucket",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/actions_test.go:TestActionListRevert",
+      "target": "function:storage/schema/cindex.go:UnsafeCreateMetaBucket",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/actions_test.go:assertBucketState",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeRange",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/actions_test.go:assertBucketState",
+      "target": "function:storage/mvcc/kvstore_test.go:Equal",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/alarm.go:CreateAlarmBucket",
+      "target": "function:storage/mvcc/kvstore_test.go:LockOutsideApply",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/alarm.go:CreateAlarmBucket",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeCreateBucket",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/alarm.go:MustPutAlarm",
+      "target": "function:storage/mvcc/kvstore_test.go:LockInsideApply",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/alarm.go:MustDeleteAlarm",
+      "target": "function:storage/mvcc/kvstore_test.go:LockInsideApply",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/alarm.go:unsafeGetAllAlarms",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeForEach",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth.go:CreateAuthBuckets",
+      "target": "function:storage/mvcc/kvstore_test.go:BatchTx",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth.go:CreateAuthBuckets",
+      "target": "function:storage/mvcc/kvstore_test.go:LockOutsideApply",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth.go:CreateAuthBuckets",
+      "target": "function:storage/mvcc/kvstore_test.go:Unlock",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth.go:CreateAuthBuckets",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeCreateBucket",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth.go:CreateAuthBuckets",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeCreateBucket",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth.go:CreateAuthBuckets",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeCreateBucket",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth.go:ReadTx",
+      "target": "function:storage/mvcc/kvstore_test.go:ReadTx",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth.go:BatchTx",
+      "target": "function:storage/mvcc/kvstore_test.go:BatchTx",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth.go:UnsafeSaveAuthEnabled",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafePut",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth.go:UnsafeSaveAuthEnabled",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafePut",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth.go:UnsafeSaveAuthRevision",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafePut",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth.go:Lock",
+      "target": "function:storage/mvcc/kvstore_test.go:LockInsideApply",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth.go:Unlock",
+      "target": "function:storage/mvcc/kvstore_test.go:Unlock",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth.go:Unlock",
+      "target": "function:storage/mvcc/kvstore_test.go:Commit",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth.go:RLock",
+      "target": "function:storage/mvcc/kvstore_test.go:RLock",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth.go:RUnlock",
+      "target": "function:storage/mvcc/kvstore_test.go:RUnlock",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/auth.go",
+      "target": "file:storage/schema/auth_test.go",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

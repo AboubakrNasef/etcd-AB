@@ -1,0 +1,1727 @@
+{
+  "nodes": [
+    {
+      "id": "file:config/config.go",
+      "type": "file",
+      "name": "config.go",
+      "filePath": "config/config.go",
+      "summary": "Defines the server configuration surface, bootstrap validation, cluster URL checks, timing helpers, data-directory layout, and request-size calculations.",
+      "tags": [
+        "configuration",
+        "validation",
+        "cluster-bootstrap",
+        "service"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:config/config.go:ServerConfig",
+      "type": "class",
+      "name": "ServerConfig",
+      "filePath": "config/config.go",
+      "lineRange": [
+        42,
+        203
+      ],
+      "summary": "Defines the ServerConfig data structure used by this package, with methods for its core storage or protocol behavior.",
+      "tags": [
+        "data-model",
+        "serialization",
+        "storage"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:config/config.go:VerifyBootstrap",
+      "type": "function",
+      "name": "VerifyBootstrap",
+      "filePath": "config/config.go",
+      "lineRange": [
+        207,
+        221
+      ],
+      "summary": "Implements VerifyBootstrap, providing focused server configuration or test behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:config/config.go:VerifyJoinExisting",
+      "type": "function",
+      "name": "VerifyJoinExisting",
+      "filePath": "config/config.go",
+      "lineRange": [
+        225,
+        238
+      ],
+      "summary": "Implements VerifyJoinExisting, providing focused server configuration or test behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:config/config.go:advertiseMatchesCluster",
+      "type": "function",
+      "name": "advertiseMatchesCluster",
+      "filePath": "config/config.go",
+      "lineRange": [
+        249,
+        298
+      ],
+      "summary": "Implements advertiseMatchesCluster, providing focused server configuration or test behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:config/config.go:MemberDir",
+      "type": "function",
+      "name": "MemberDir",
+      "filePath": "config/config.go",
+      "lineRange": [
+        300,
+        300
+      ],
+      "summary": "Implements MemberDir, providing focused server configuration or test behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:config/config.go:WALDir",
+      "type": "function",
+      "name": "WALDir",
+      "filePath": "config/config.go",
+      "lineRange": [
+        302,
+        307
+      ],
+      "summary": "Implements WALDir, providing focused server configuration or test behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:config/config.go:SnapDir",
+      "type": "function",
+      "name": "SnapDir",
+      "filePath": "config/config.go",
+      "lineRange": [
+        309,
+        309
+      ],
+      "summary": "Implements SnapDir, providing focused server configuration or test behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:config/config.go:ShouldDiscover",
+      "type": "function",
+      "name": "ShouldDiscover",
+      "filePath": "config/config.go",
+      "lineRange": [
+        311,
+        313
+      ],
+      "summary": "Implements ShouldDiscover, providing focused server configuration or test behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:config/config.go:ReqTimeout",
+      "type": "function",
+      "name": "ReqTimeout",
+      "filePath": "config/config.go",
+      "lineRange": [
+        316,
+        320
+      ],
+      "summary": "Implements ReqTimeout, providing focused server configuration or test behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:config/config.go:ElectionTimeout",
+      "type": "function",
+      "name": "ElectionTimeout",
+      "filePath": "config/config.go",
+      "lineRange": [
+        322,
+        324
+      ],
+      "summary": "Implements ElectionTimeout, providing focused server configuration or test behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:config/config.go:PeerDialTimeout",
+      "type": "function",
+      "name": "PeerDialTimeout",
+      "filePath": "config/config.go",
+      "lineRange": [
+        326,
+        329
+      ],
+      "summary": "Implements PeerDialTimeout, providing focused server configuration or test behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:config/config.go:CheckDuplicateURL",
+      "type": "function",
+      "name": "CheckDuplicateURL",
+      "filePath": "config/config.go",
+      "lineRange": [
+        331,
+        343
+      ],
+      "summary": "Implements CheckDuplicateURL, providing focused server configuration or test behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:config/config.go:BootstrapTimeoutEffective",
+      "type": "function",
+      "name": "BootstrapTimeoutEffective",
+      "filePath": "config/config.go",
+      "lineRange": [
+        345,
+        350
+      ],
+      "summary": "Implements BootstrapTimeoutEffective, providing focused server configuration or test behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:config/config.go:BackendPath",
+      "type": "function",
+      "name": "BackendPath",
+      "filePath": "config/config.go",
+      "lineRange": [
+        352,
+        352
+      ],
+      "summary": "Implements BackendPath, providing focused server configuration or test behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:config/config.go:MaxRequestBytesWithOverhead",
+      "type": "function",
+      "name": "MaxRequestBytesWithOverhead",
+      "filePath": "config/config.go",
+      "lineRange": [
+        354,
+        356
+      ],
+      "summary": "Implements MaxRequestBytesWithOverhead, providing focused server configuration or test behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:embed/util.go",
+      "type": "file",
+      "name": "util.go",
+      "filePath": "embed/util.go",
+      "summary": "Provides the embedded-server initialization check by inspecting the configured member directory for an existing WAL.",
+      "tags": [
+        "storage",
+        "lifecycle",
+        "abstraction",
+        "persistence"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:etcdserver/bootstrap_test.go",
+      "type": "file",
+      "name": "bootstrap_test.go",
+      "filePath": "etcdserver/bootstrap_test.go",
+      "summary": "Integration tests for bootstrapping existing clusters and backends, including creation of data directories, WAL snapshot records, and backend databases.",
+      "tags": [
+        "test",
+        "cluster-bootstrap",
+        "backend",
+        "integration-test"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/bootstrap_test.go:TestBootstrapExistingClusterNoWALMaxLearner",
+      "type": "function",
+      "name": "TestBootstrapExistingClusterNoWALMaxLearner",
+      "filePath": "etcdserver/bootstrap_test.go",
+      "lineRange": [
+        47,
+        109
+      ],
+      "summary": "Implements TestBootstrapExistingClusterNoWALMaxLearner, providing focused server configuration or test behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/bootstrap_test.go:RoundTrip",
+      "type": "function",
+      "name": "RoundTrip",
+      "filePath": "etcdserver/bootstrap_test.go",
+      "lineRange": [
+        113,
+        115
+      ],
+      "summary": "Implements RoundTrip, providing focused server configuration or test behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/bootstrap_test.go:mockBootstrapRoundTrip",
+      "type": "function",
+      "name": "mockBootstrapRoundTrip",
+      "filePath": "etcdserver/bootstrap_test.go",
+      "lineRange": [
+        117,
+        139
+      ],
+      "summary": "Implements mockBootstrapRoundTrip, providing focused server configuration or test behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/bootstrap_test.go:TestBootstrapBackend",
+      "type": "function",
+      "name": "TestBootstrapBackend",
+      "filePath": "etcdserver/bootstrap_test.go",
+      "lineRange": [
+        152,
+        211
+      ],
+      "summary": "Implements TestBootstrapBackend, providing focused server configuration or test behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/bootstrap_test.go:createDataDir",
+      "type": "function",
+      "name": "createDataDir",
+      "filePath": "etcdserver/bootstrap_test.go",
+      "lineRange": [
+        213,
+        231
+      ],
+      "summary": "Implements createDataDir, providing focused server configuration or test behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/bootstrap_test.go:createWALFileWithSnapshotRecord",
+      "type": "function",
+      "name": "createWALFileWithSnapshotRecord",
+      "filePath": "etcdserver/bootstrap_test.go",
+      "lineRange": [
+        244,
+        268
+      ],
+      "summary": "Implements createWALFileWithSnapshotRecord, providing focused server configuration or test behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/bootstrap_test.go:createSnapshotAndBackendDB",
+      "type": "function",
+      "name": "createSnapshotAndBackendDB",
+      "filePath": "etcdserver/bootstrap_test.go",
+      "lineRange": [
+        270,
+        295
+      ],
+      "summary": "Implements createSnapshotAndBackendDB, providing focused server configuration or test behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:storage/datadir/datadir.go",
+      "type": "file",
+      "name": "datadir.go",
+      "filePath": "storage/datadir/datadir.go",
+      "summary": "Centralizes the canonical member, WAL, snapshot, and backend paths derived from an etcd data directory.",
+      "tags": [
+        "storage",
+        "path-management",
+        "utility",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/datadir/datadir.go:ToBackendFileName",
+      "type": "function",
+      "name": "ToBackendFileName",
+      "filePath": "storage/datadir/datadir.go",
+      "lineRange": [
+        26,
+        28
+      ],
+      "summary": "Implements ToBackendFileName, providing focused server configuration or test behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/datadir/datadir.go:ToSnapDir",
+      "type": "function",
+      "name": "ToSnapDir",
+      "filePath": "storage/datadir/datadir.go",
+      "lineRange": [
+        30,
+        32
+      ],
+      "summary": "Implements ToSnapDir, providing focused server configuration or test behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/datadir/datadir.go:ToWalDir",
+      "type": "function",
+      "name": "ToWalDir",
+      "filePath": "storage/datadir/datadir.go",
+      "lineRange": [
+        39,
+        41
+      ],
+      "summary": "Implements ToWalDir, providing focused server configuration or test behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/datadir/datadir.go:ToWALDir",
+      "type": "function",
+      "name": "ToWALDir",
+      "filePath": "storage/datadir/datadir.go",
+      "lineRange": [
+        43,
+        45
+      ],
+      "summary": "Implements ToWALDir, providing focused server configuration or test behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/datadir/datadir.go:ToMemberDir",
+      "type": "function",
+      "name": "ToMemberDir",
+      "filePath": "storage/datadir/datadir.go",
+      "lineRange": [
+        47,
+        49
+      ],
+      "summary": "Implements ToMemberDir, providing focused server configuration or test behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:storage/datadir/datadir_test.go",
+      "type": "file",
+      "name": "datadir_test.go",
+      "filePath": "storage/datadir/datadir_test.go",
+      "summary": "Tests the canonical etcd data-directory path transformations and file-name helpers.",
+      "tags": [
+        "storage",
+        "path-management",
+        "utility",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/datadir/datadir_test.go:TestToBackendFileName",
+      "type": "function",
+      "name": "TestToBackendFileName",
+      "filePath": "storage/datadir/datadir_test.go",
+      "lineRange": [
+        25,
+        28
+      ],
+      "summary": "Implements TestToBackendFileName, providing focused server configuration or test behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/datadir/datadir_test.go:TestToMemberDir",
+      "type": "function",
+      "name": "TestToMemberDir",
+      "filePath": "storage/datadir/datadir_test.go",
+      "lineRange": [
+        30,
+        33
+      ],
+      "summary": "Implements TestToMemberDir, providing focused server configuration or test behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/datadir/datadir_test.go:TestToSnapDir",
+      "type": "function",
+      "name": "TestToSnapDir",
+      "filePath": "storage/datadir/datadir_test.go",
+      "lineRange": [
+        35,
+        38
+      ],
+      "summary": "Implements TestToSnapDir, providing focused server configuration or test behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/datadir/datadir_test.go:TestToWALDir",
+      "type": "function",
+      "name": "TestToWALDir",
+      "filePath": "storage/datadir/datadir_test.go",
+      "lineRange": [
+        40,
+        43
+      ],
+      "summary": "Implements TestToWALDir, providing focused server configuration or test behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/datadir/datadir_test.go:TestToWALDirSlash",
+      "type": "function",
+      "name": "TestToWALDirSlash",
+      "filePath": "storage/datadir/datadir_test.go",
+      "lineRange": [
+        45,
+        48
+      ],
+      "summary": "Implements TestToWALDirSlash, providing focused server configuration or test behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:storage/datadir/doc.go",
+      "type": "file",
+      "name": "doc.go",
+      "filePath": "storage/datadir/doc.go",
+      "summary": "Package documentation describing the storage data-directory layout and path helpers.",
+      "tags": [
+        "storage",
+        "path-management",
+        "utility",
+        "test"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:config/config.go",
+      "target": "class:config/config.go:ServerConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:config/config.go",
+      "target": "class:config/config.go:ServerConfig",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:config/config.go",
+      "target": "function:config/config.go:VerifyBootstrap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:config/config.go",
+      "target": "function:config/config.go:VerifyBootstrap",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:config/config.go",
+      "target": "function:config/config.go:VerifyJoinExisting",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:config/config.go",
+      "target": "function:config/config.go:VerifyJoinExisting",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:config/config.go",
+      "target": "function:config/config.go:advertiseMatchesCluster",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:config/config.go",
+      "target": "function:config/config.go:MemberDir",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:config/config.go",
+      "target": "function:config/config.go:MemberDir",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:config/config.go",
+      "target": "function:config/config.go:WALDir",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:config/config.go",
+      "target": "function:config/config.go:WALDir",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:config/config.go",
+      "target": "function:config/config.go:SnapDir",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:config/config.go",
+      "target": "function:config/config.go:SnapDir",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:config/config.go",
+      "target": "function:config/config.go:ShouldDiscover",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:config/config.go",
+      "target": "function:config/config.go:ShouldDiscover",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:config/config.go",
+      "target": "function:config/config.go:ReqTimeout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:config/config.go",
+      "target": "function:config/config.go:ReqTimeout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:config/config.go",
+      "target": "function:config/config.go:ElectionTimeout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:config/config.go",
+      "target": "function:config/config.go:ElectionTimeout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:config/config.go",
+      "target": "function:config/config.go:PeerDialTimeout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:config/config.go",
+      "target": "function:config/config.go:PeerDialTimeout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:config/config.go",
+      "target": "function:config/config.go:CheckDuplicateURL",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:config/config.go",
+      "target": "function:config/config.go:CheckDuplicateURL",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:config/config.go",
+      "target": "function:config/config.go:BootstrapTimeoutEffective",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:config/config.go",
+      "target": "function:config/config.go:BootstrapTimeoutEffective",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:config/config.go",
+      "target": "function:config/config.go:BackendPath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:config/config.go",
+      "target": "function:config/config.go:BackendPath",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:config/config.go",
+      "target": "function:config/config.go:MaxRequestBytesWithOverhead",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:config/config.go",
+      "target": "function:config/config.go:MaxRequestBytesWithOverhead",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "function:etcdserver/bootstrap_test.go:TestBootstrapExistingClusterNoWALMaxLearner",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "function:etcdserver/bootstrap_test.go:TestBootstrapExistingClusterNoWALMaxLearner",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "function:etcdserver/bootstrap_test.go:RoundTrip",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "function:etcdserver/bootstrap_test.go:RoundTrip",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "function:etcdserver/bootstrap_test.go:mockBootstrapRoundTrip",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "function:etcdserver/bootstrap_test.go:TestBootstrapBackend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "function:etcdserver/bootstrap_test.go:TestBootstrapBackend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "function:etcdserver/bootstrap_test.go:createDataDir",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "function:etcdserver/bootstrap_test.go:createWALFileWithSnapshotRecord",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "function:etcdserver/bootstrap_test.go:createSnapshotAndBackendDB",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/datadir/datadir.go",
+      "target": "function:storage/datadir/datadir.go:ToBackendFileName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/datadir/datadir.go",
+      "target": "function:storage/datadir/datadir.go:ToBackendFileName",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/datadir/datadir.go",
+      "target": "function:storage/datadir/datadir.go:ToSnapDir",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/datadir/datadir.go",
+      "target": "function:storage/datadir/datadir.go:ToSnapDir",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/datadir/datadir.go",
+      "target": "function:storage/datadir/datadir.go:ToWalDir",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/datadir/datadir.go",
+      "target": "function:storage/datadir/datadir.go:ToWalDir",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/datadir/datadir.go",
+      "target": "function:storage/datadir/datadir.go:ToWALDir",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/datadir/datadir.go",
+      "target": "function:storage/datadir/datadir.go:ToWALDir",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/datadir/datadir.go",
+      "target": "function:storage/datadir/datadir.go:ToMemberDir",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/datadir/datadir.go",
+      "target": "function:storage/datadir/datadir.go:ToMemberDir",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/datadir/datadir_test.go",
+      "target": "function:storage/datadir/datadir_test.go:TestToBackendFileName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/datadir/datadir_test.go",
+      "target": "function:storage/datadir/datadir_test.go:TestToBackendFileName",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/datadir/datadir_test.go",
+      "target": "function:storage/datadir/datadir_test.go:TestToMemberDir",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/datadir/datadir_test.go",
+      "target": "function:storage/datadir/datadir_test.go:TestToMemberDir",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/datadir/datadir_test.go",
+      "target": "function:storage/datadir/datadir_test.go:TestToSnapDir",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/datadir/datadir_test.go",
+      "target": "function:storage/datadir/datadir_test.go:TestToSnapDir",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/datadir/datadir_test.go",
+      "target": "function:storage/datadir/datadir_test.go:TestToWALDir",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/datadir/datadir_test.go",
+      "target": "function:storage/datadir/datadir_test.go:TestToWALDir",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/datadir/datadir_test.go",
+      "target": "function:storage/datadir/datadir_test.go:TestToWALDirSlash",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/datadir/datadir_test.go",
+      "target": "function:storage/datadir/datadir_test.go:TestToWALDirSlash",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:config/config.go",
+      "target": "file:etcdserver/api/v3discovery/discovery.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:config/config.go",
+      "target": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:config/config.go",
+      "target": "file:storage/datadir/datadir.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:config/config.go",
+      "target": "file:storage/datadir/datadir_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:config/config.go",
+      "target": "file:storage/datadir/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:config/config.go:VerifyBootstrap",
+      "target": "function:config/config.go:CheckDuplicateURL",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:config/config.go:VerifyJoinExisting",
+      "target": "function:config/config.go:CheckDuplicateURL",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/util.go",
+      "target": "file:storage/wal/decoder.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/util.go",
+      "target": "file:storage/wal/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/util.go",
+      "target": "file:storage/wal/encoder.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/util.go",
+      "target": "file:storage/wal/file_pipeline.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/util.go",
+      "target": "file:storage/wal/file_pipeline_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/util.go",
+      "target": "file:storage/wal/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/util.go",
+      "target": "file:storage/wal/record_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/util.go",
+      "target": "file:storage/wal/repair.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/util.go",
+      "target": "file:storage/wal/repair_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/util.go",
+      "target": "file:storage/wal/util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/util.go",
+      "target": "file:storage/wal/version.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/util.go",
+      "target": "file:storage/wal/version_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/util.go",
+      "target": "file:storage/wal/wal.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/util.go",
+      "target": "file:storage/wal/wal_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/util.go",
+      "target": "file:storage/wal/wal_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:config/config.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:config/config_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:etcdserver/api/membership/cluster.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:etcdserver/api/membership/cluster_opts.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:etcdserver/api/membership/cluster_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:etcdserver/api/membership/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:etcdserver/api/membership/errors.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:etcdserver/api/membership/member.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:etcdserver/api/membership/member_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:etcdserver/api/membership/membership_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:etcdserver/api/membership/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:etcdserver/api/membership/store.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:etcdserver/api/membership/storev2.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:etcdserver/api/membership/storev2_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/backend.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/datadir/datadir.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/datadir/datadir_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/datadir/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/hooks.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/quota.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/quota_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/schema/actions.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/schema/actions_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/schema/alarm.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/schema/auth.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/schema/auth_roles.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/schema/auth_roles_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/schema/auth_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/schema/auth_users.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/schema/auth_users_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/schema/bucket.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/schema/changes.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/schema/changes_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/schema/cindex.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/schema/confstate.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/schema/confstate_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/schema/lease.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/schema/lease_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/schema/membership.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/schema/migration.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/schema/migration_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/schema/schema.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/schema/schema_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/schema/version.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/schema/version_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/storage.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/wal/decoder.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/wal/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/wal/encoder.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/wal/file_pipeline.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/wal/file_pipeline_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/wal/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/wal/record_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/wal/repair.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/wal/repair_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/wal/util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/wal/version.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/wal/version_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/wal/wal.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/wal/wal_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/wal/wal_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/wal/walpb/record.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/wal/walpb/record.pb.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/bootstrap_test.go",
+      "target": "file:storage/wal/walpb/record_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:etcdserver/bootstrap_test.go:TestBootstrapExistingClusterNoWALMaxLearner",
+      "target": "function:etcdserver/bootstrap_test.go:mockBootstrapRoundTrip",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/bootstrap_test.go:TestBootstrapBackend",
+      "target": "function:etcdserver/bootstrap_test.go:createDataDir",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/datadir/datadir.go:ToBackendFileName",
+      "target": "function:storage/datadir/datadir.go:ToSnapDir",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/datadir/datadir.go:ToSnapDir",
+      "target": "function:storage/datadir/datadir.go:ToMemberDir",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/datadir/datadir.go:ToWalDir",
+      "target": "function:storage/datadir/datadir.go:ToWALDir",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/datadir/datadir.go:ToWALDir",
+      "target": "function:storage/datadir/datadir.go:ToMemberDir",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/datadir/datadir_test.go",
+      "target": "file:storage/datadir/datadir.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/datadir/datadir_test.go",
+      "target": "file:storage/datadir/datadir_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/datadir/datadir_test.go",
+      "target": "file:storage/datadir/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}
+

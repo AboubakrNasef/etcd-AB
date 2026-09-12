@@ -1,0 +1,810 @@
+{
+  "nodes": [
+    {
+      "id": "file:etcdserver/api/v3rpc/quota.go",
+      "type": "file",
+      "name": "quota.go",
+      "filePath": "etcdserver/api/v3rpc/quota.go",
+      "summary": "Wraps KV and lease RPC services with backend-quota checks and quota alarm activation.",
+      "tags": [
+        "api-handler",
+        "grpc",
+        "service"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/quota.go:check",
+      "type": "function",
+      "name": "check",
+      "filePath": "etcdserver/api/v3rpc/quota.go",
+      "lineRange": [
+        40,
+        51
+      ],
+      "summary": "Validates check inputs and returns an error when the request or state is invalid.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/quota.go:NewQuotaKVServer",
+      "type": "function",
+      "name": "NewQuotaKVServer",
+      "filePath": "etcdserver/api/v3rpc/quota.go",
+      "lineRange": [
+        53,
+        58
+      ],
+      "summary": "Constructs and initializes the new quota kvserver component used by the server.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/quota.go:Put",
+      "type": "function",
+      "name": "Put",
+      "filePath": "etcdserver/api/v3rpc/quota.go",
+      "lineRange": [
+        60,
+        65
+      ],
+      "summary": "Implements put behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/quota.go:Txn",
+      "type": "function",
+      "name": "Txn",
+      "filePath": "etcdserver/api/v3rpc/quota.go",
+      "lineRange": [
+        67,
+        72
+      ],
+      "summary": "Implements txn behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/quota.go:LeaseGrant",
+      "type": "function",
+      "name": "LeaseGrant",
+      "filePath": "etcdserver/api/v3rpc/quota.go",
+      "lineRange": [
+        79,
+        84
+      ],
+      "summary": "Implements lease grant behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/quota.go:NewQuotaLeaseServer",
+      "type": "function",
+      "name": "NewQuotaLeaseServer",
+      "filePath": "etcdserver/api/v3rpc/quota.go",
+      "lineRange": [
+        86,
+        91
+      ],
+      "summary": "Constructs and initializes the new quota lease server component used by the server.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdserver/api/v3rpc/watch_test.go",
+      "type": "file",
+      "name": "watch_test.go",
+      "filePath": "etcdserver/api/v3rpc/watch_test.go",
+      "summary": "Tests watch response fragmentation and protobuf field-count compatibility.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/watch_test.go:TestSendFragment",
+      "type": "function",
+      "name": "TestSendFragment",
+      "filePath": "etcdserver/api/v3rpc/watch_test.go",
+      "lineRange": [
+        28,
+        85
+      ],
+      "summary": "Verifies send fragment behavior for the watch_test.go implementation.",
+      "tags": [
+        "test",
+        "validation",
+        "behavior"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/watch_test.go:TestWatchResponseProtoFieldCount",
+      "type": "function",
+      "name": "TestWatchResponseProtoFieldCount",
+      "filePath": "etcdserver/api/v3rpc/watch_test.go",
+      "lineRange": [
+        87,
+        105
+      ],
+      "summary": "Verifies watch response proto field count behavior for the watch_test.go implementation.",
+      "tags": [
+        "test",
+        "validation",
+        "behavior"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/watch_test.go:createResponse",
+      "type": "function",
+      "name": "createResponse",
+      "filePath": "etcdserver/api/v3rpc/watch_test.go",
+      "lineRange": [
+        107,
+        117
+      ],
+      "summary": "Computes or assembles create response for downstream server processing.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdserver/apply/apply.go",
+      "type": "file",
+      "name": "apply.go",
+      "filePath": "etcdserver/apply/apply.go",
+      "summary": "Defines the applier entry point that executes committed raft requests while separating side-effect-free operations.",
+      "tags": [
+        "service",
+        "utility",
+        "etcdserver"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/apply/apply.go:Apply",
+      "type": "function",
+      "name": "Apply",
+      "filePath": "etcdserver/apply/apply.go",
+      "lineRange": [
+        27,
+        49
+      ],
+      "summary": "Coordinates apply as part of the server lifecycle and request-processing pipeline.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdserver/apply/capped.go",
+      "type": "file",
+      "name": "capped.go",
+      "filePath": "etcdserver/apply/capped.go",
+      "summary": "Provides a capped applier wrapper that rejects writes when backend quota is exhausted.",
+      "tags": [
+        "service",
+        "utility",
+        "etcdserver"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/apply/capped.go:Put",
+      "type": "function",
+      "name": "Put",
+      "filePath": "etcdserver/apply/capped.go",
+      "lineRange": [
+        33,
+        35
+      ],
+      "summary": "Implements put behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/apply/capped.go:Txn",
+      "type": "function",
+      "name": "Txn",
+      "filePath": "etcdserver/apply/capped.go",
+      "lineRange": [
+        37,
+        42
+      ],
+      "summary": "Implements txn behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/apply/capped.go:LeaseGrant",
+      "type": "function",
+      "name": "LeaseGrant",
+      "filePath": "etcdserver/apply/capped.go",
+      "lineRange": [
+        44,
+        46
+      ],
+      "summary": "Implements lease grant behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdserver/apply/metrics.go",
+      "type": "file",
+      "name": "metrics.go",
+      "filePath": "etcdserver/apply/metrics.go",
+      "summary": "Registers metrics used to observe raft request application.",
+      "tags": [
+        "monitoring",
+        "metrics",
+        "runtime"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "function:etcdserver/api/v3rpc/quota.go:check",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "function:etcdserver/api/v3rpc/quota.go:NewQuotaKVServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "function:etcdserver/api/v3rpc/quota.go:NewQuotaKVServer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "function:etcdserver/api/v3rpc/quota.go:Put",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "function:etcdserver/api/v3rpc/quota.go:Put",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "function:etcdserver/api/v3rpc/quota.go:Txn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "function:etcdserver/api/v3rpc/quota.go:Txn",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "function:etcdserver/api/v3rpc/quota.go:LeaseGrant",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "function:etcdserver/api/v3rpc/quota.go:LeaseGrant",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "function:etcdserver/api/v3rpc/quota.go:NewQuotaLeaseServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "function:etcdserver/api/v3rpc/quota.go:NewQuotaLeaseServer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "file:etcdserver/adapters.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "file:etcdserver/bootstrap.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "file:etcdserver/bootstrap_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "file:etcdserver/cluster_util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "file:etcdserver/cluster_util_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "file:etcdserver/corrupt.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "file:etcdserver/corrupt_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "file:etcdserver/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "file:etcdserver/interface.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "file:etcdserver/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "file:etcdserver/raft.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "file:etcdserver/raft_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "file:etcdserver/server.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "file:etcdserver/server_access_control.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "file:etcdserver/server_access_control_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "file:etcdserver/server_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "file:etcdserver/snapshot_merge.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "file:etcdserver/tracing.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "file:etcdserver/util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "file:etcdserver/util_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "file:etcdserver/v3_server.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "file:etcdserver/zap_raft.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "file:etcdserver/zap_raft_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "file:storage/backend.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "file:storage/hooks.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "file:storage/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "file:storage/quota.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "file:storage/quota_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "file:storage/storage.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/quota.go",
+      "target": "file:storage/util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/watch_test.go",
+      "target": "function:etcdserver/api/v3rpc/watch_test.go:TestSendFragment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/watch_test.go",
+      "target": "function:etcdserver/api/v3rpc/watch_test.go:TestSendFragment",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/watch_test.go",
+      "target": "function:etcdserver/api/v3rpc/watch_test.go:TestWatchResponseProtoFieldCount",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/watch_test.go",
+      "target": "function:etcdserver/api/v3rpc/watch_test.go:TestWatchResponseProtoFieldCount",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/watch_test.go",
+      "target": "function:etcdserver/api/v3rpc/watch_test.go:createResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/apply/apply.go",
+      "target": "function:etcdserver/apply/apply.go:Apply",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/apply/apply.go",
+      "target": "function:etcdserver/apply/apply.go:Apply",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/apply/apply.go",
+      "target": "file:etcdserver/api/membership/cluster.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/apply/apply.go",
+      "target": "file:etcdserver/api/membership/cluster_opts.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/apply/apply.go",
+      "target": "file:etcdserver/api/membership/cluster_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/apply/apply.go",
+      "target": "file:etcdserver/api/membership/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/apply/apply.go",
+      "target": "file:etcdserver/api/membership/errors.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/apply/apply.go",
+      "target": "file:etcdserver/api/membership/member.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/apply/apply.go",
+      "target": "file:etcdserver/api/membership/member_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/apply/apply.go",
+      "target": "file:etcdserver/api/membership/membership_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/apply/apply.go",
+      "target": "file:etcdserver/api/membership/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/apply/apply.go",
+      "target": "file:etcdserver/api/membership/store.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/apply/apply.go",
+      "target": "file:etcdserver/api/membership/storev2.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/apply/apply.go",
+      "target": "file:etcdserver/api/membership/storev2_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/apply/capped.go",
+      "target": "function:etcdserver/apply/capped.go:Put",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/apply/capped.go",
+      "target": "function:etcdserver/apply/capped.go:Put",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/apply/capped.go",
+      "target": "function:etcdserver/apply/capped.go:Txn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/apply/capped.go",
+      "target": "function:etcdserver/apply/capped.go:Txn",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/apply/capped.go",
+      "target": "function:etcdserver/apply/capped.go:LeaseGrant",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/apply/capped.go",
+      "target": "function:etcdserver/apply/capped.go:LeaseGrant",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/apply/capped.go",
+      "target": "file:etcdserver/errors/errors.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/apply/capped.go",
+      "target": "file:storage/backend.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/apply/capped.go",
+      "target": "file:storage/hooks.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/apply/capped.go",
+      "target": "file:storage/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/apply/capped.go",
+      "target": "file:storage/quota.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/apply/capped.go",
+      "target": "file:storage/quota_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/apply/capped.go",
+      "target": "file:storage/storage.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/apply/capped.go",
+      "target": "file:storage/util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

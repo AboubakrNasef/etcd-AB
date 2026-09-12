@@ -1,0 +1,462 @@
+{
+  "nodes": [
+    {
+      "id": "file:etcdserver/api/etcdhttp/version.go",
+      "type": "file",
+      "name": "version.go",
+      "filePath": "etcdserver/api/etcdhttp/version.go",
+      "summary": "Implements the HTTP version endpoint that reports server and cluster version information.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go package analyzed with tree-sitter structure and call-graph extraction."
+    },
+    {
+      "id": "function:etcdserver/api/etcdhttp/version.go:HandleVersion",
+      "type": "function",
+      "name": "HandleVersion",
+      "filePath": "etcdserver/api/etcdhttp/version.go",
+      "lineRange": [
+        30,
+        32
+      ],
+      "summary": "HTTP handler or constructor that exposes server behavior through the peer API.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/etcdhttp/version.go:versionHandler",
+      "type": "function",
+      "name": "versionHandler",
+      "filePath": "etcdserver/api/etcdhttp/version.go",
+      "lineRange": [
+        34,
+        47
+      ],
+      "summary": "HTTP handler or constructor that exposes server behavior through the peer API.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/etcdhttp/version.go:serveVersion",
+      "type": "function",
+      "name": "serveVersion",
+      "filePath": "etcdserver/api/etcdhttp/version.go",
+      "lineRange": [
+        49,
+        65
+      ],
+      "summary": "Function serveVersion implements a focused part of etcdserver/api/etcdhttp/version behavior.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:etcdserver/api/membership/cluster_opts.go",
+      "type": "file",
+      "name": "cluster_opts.go",
+      "filePath": "etcdserver/api/membership/cluster_opts.go",
+      "summary": "Defines optional membership-cluster construction settings, including the maximum learner count.",
+      "tags": [
+        "membership",
+        "cluster-state",
+        "reconfiguration",
+        "validation"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Go package analyzed with tree-sitter structure and call-graph extraction."
+    },
+    {
+      "id": "class:etcdserver/api/membership/cluster_opts.go:ClusterOptions",
+      "type": "class",
+      "name": "ClusterOptions",
+      "filePath": "etcdserver/api/membership/cluster_opts.go",
+      "lineRange": [
+        19,
+        21
+      ],
+      "summary": "Type ClusterOptions implements a focused part of etcdserver/api/membership/cluster_opts behavior.",
+      "tags": [
+        "membership",
+        "cluster-state",
+        "reconfiguration",
+        "validation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster_opts.go:WithMaxLearners",
+      "type": "function",
+      "name": "WithMaxLearners",
+      "filePath": "etcdserver/api/membership/cluster_opts.go",
+      "lineRange": [
+        39,
+        43
+      ],
+      "summary": "Function WithMaxLearners implements a focused part of etcdserver/api/membership/cluster_opts behavior.",
+      "tags": [
+        "membership",
+        "cluster-state",
+        "reconfiguration",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:etcdserver/api/membership/doc.go",
+      "type": "file",
+      "name": "doc.go",
+      "filePath": "etcdserver/api/membership/doc.go",
+      "summary": "Documents the membership package responsible for cluster member state and reconfiguration.",
+      "tags": [
+        "membership",
+        "cluster-state",
+        "reconfiguration",
+        "validation"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Go package analyzed with tree-sitter structure and call-graph extraction."
+    },
+    {
+      "id": "file:etcdserver/api/membership/errors.go",
+      "type": "file",
+      "name": "errors.go",
+      "filePath": "etcdserver/api/membership/errors.go",
+      "summary": "Defines membership-specific errors used when cluster member operations fail.",
+      "tags": [
+        "membership",
+        "cluster-state",
+        "reconfiguration",
+        "validation"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Go package analyzed with tree-sitter structure and call-graph extraction."
+    },
+    {
+      "id": "file:etcdserver/api/membership/member_test.go",
+      "type": "file",
+      "name": "member_test.go",
+      "filePath": "etcdserver/api/membership/member_test.go",
+      "summary": "Tests member timestamps and cloning semantics for membership data.",
+      "tags": [
+        "membership",
+        "cluster-state",
+        "reconfiguration",
+        "validation"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go package analyzed with tree-sitter structure and call-graph extraction."
+    },
+    {
+      "id": "function:etcdserver/api/membership/member_test.go:TestMemberTime",
+      "type": "function",
+      "name": "TestMemberTime",
+      "filePath": "etcdserver/api/membership/member_test.go",
+      "lineRange": [
+        34,
+        56
+      ],
+      "summary": "Test case validating membertime behavior.",
+      "tags": [
+        "membership",
+        "cluster-state",
+        "reconfiguration",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/member_test.go:TestMemberClone",
+      "type": "function",
+      "name": "TestMemberClone",
+      "filePath": "etcdserver/api/membership/member_test.go",
+      "lineRange": [
+        58,
+        74
+      ],
+      "summary": "Test case validating memberclone behavior.",
+      "tags": [
+        "membership",
+        "cluster-state",
+        "reconfiguration",
+        "validation"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:etcdserver/api/etcdhttp/version.go",
+      "target": "function:etcdserver/api/etcdhttp/version.go:HandleVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/etcdhttp/version.go",
+      "target": "function:etcdserver/api/etcdhttp/version.go:HandleVersion",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/etcdhttp/version.go",
+      "target": "function:etcdserver/api/etcdhttp/version.go:versionHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/etcdhttp/version.go",
+      "target": "function:etcdserver/api/etcdhttp/version.go:serveVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/etcdhttp/version.go",
+      "target": "file:etcdserver/adapters.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/etcdhttp/version.go",
+      "target": "file:etcdserver/bootstrap.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/etcdhttp/version.go",
+      "target": "file:etcdserver/bootstrap_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/etcdhttp/version.go",
+      "target": "file:etcdserver/cluster_util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/etcdhttp/version.go",
+      "target": "file:etcdserver/cluster_util_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/etcdhttp/version.go",
+      "target": "file:etcdserver/corrupt.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/etcdhttp/version.go",
+      "target": "file:etcdserver/corrupt_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/etcdhttp/version.go",
+      "target": "file:etcdserver/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/etcdhttp/version.go",
+      "target": "file:etcdserver/interface.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/etcdhttp/version.go",
+      "target": "file:etcdserver/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/etcdhttp/version.go",
+      "target": "file:etcdserver/raft.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/etcdhttp/version.go",
+      "target": "file:etcdserver/raft_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/etcdhttp/version.go",
+      "target": "file:etcdserver/server.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/etcdhttp/version.go",
+      "target": "file:etcdserver/server_access_control.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/etcdhttp/version.go",
+      "target": "file:etcdserver/server_access_control_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/etcdhttp/version.go",
+      "target": "file:etcdserver/server_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/etcdhttp/version.go",
+      "target": "file:etcdserver/snapshot_merge.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/etcdhttp/version.go",
+      "target": "file:etcdserver/tracing.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/etcdhttp/version.go",
+      "target": "file:etcdserver/util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/etcdhttp/version.go",
+      "target": "file:etcdserver/util_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/etcdhttp/version.go",
+      "target": "file:etcdserver/v3_server.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/etcdhttp/version.go",
+      "target": "file:etcdserver/zap_raft.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/etcdhttp/version.go",
+      "target": "file:etcdserver/zap_raft_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_opts.go",
+      "target": "class:etcdserver/api/membership/cluster_opts.go:ClusterOptions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_opts.go",
+      "target": "class:etcdserver/api/membership/cluster_opts.go:ClusterOptions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_opts.go",
+      "target": "function:etcdserver/api/membership/cluster_opts.go:WithMaxLearners",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_opts.go",
+      "target": "function:etcdserver/api/membership/cluster_opts.go:WithMaxLearners",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/errors.go",
+      "target": "file:etcdserver/api/v2error/error.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/errors.go",
+      "target": "file:etcdserver/api/v2error/error_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/member_test.go",
+      "target": "function:etcdserver/api/membership/member_test.go:TestMemberTime",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/member_test.go",
+      "target": "function:etcdserver/api/membership/member_test.go:TestMemberTime",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/member_test.go",
+      "target": "function:etcdserver/api/membership/member_test.go:TestMemberClone",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/member_test.go",
+      "target": "function:etcdserver/api/membership/member_test.go:TestMemberClone",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

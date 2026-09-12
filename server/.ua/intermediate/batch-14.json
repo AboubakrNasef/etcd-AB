@@ -1,0 +1,35 @@
+{
+  "nodes": [
+    {
+      "id": "config:.gomodguard.yaml",
+      "type": "config",
+      "name": ".gomodguard.yaml",
+      "filePath": ".gomodguard.yaml",
+      "summary": "gomodguard policy configuration that blocks the legacy etcd module paths and directs dependency checks away from forbidden modules.",
+      "tags": ["configuration", "dependency-policy", "go", "security"],
+      "complexity": "simple",
+      "languageNotes": "YAML policy uses a blocked-modules map with per-module reasons."
+    },
+    {
+      "id": "config:go.mod",
+      "type": "config",
+      "name": "go.mod",
+      "filePath": "go.mod",
+      "summary": "Go module manifest for go.etcd.io/etcd/server/v3, declaring the Go and toolchain versions, direct and indirect dependencies, and local replacements for sibling etcd modules.",
+      "tags": ["configuration", "go", "dependency-management", "build-system"],
+      "complexity": "moderate",
+      "languageNotes": "The manifest separates direct and indirect requirements and uses relative replace directives for local module development."
+    },
+    {
+      "id": "config:go.sum",
+      "type": "config",
+      "name": "go.sum",
+      "filePath": "go.sum",
+      "summary": "Go module checksum database recording cryptographic hashes for the server module's resolved dependencies and their go.mod files.",
+      "tags": ["configuration", "go", "dependency-management", "integrity"],
+      "complexity": "moderate",
+      "languageNotes": "Entries provide reproducible dependency verification for module downloads."
+    }
+  ],
+  "edges": []
+}

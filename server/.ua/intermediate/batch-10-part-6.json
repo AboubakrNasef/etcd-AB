@@ -1,0 +1,1346 @@
+{
+  "nodes": [
+    {
+      "id": "file:proxy/grpcproxy/adapter/kv_client_adapter.go",
+      "type": "file",
+      "name": "kv_client_adapter.go",
+      "filePath": "proxy/grpcproxy/adapter/kv_client_adapter.go",
+      "summary": "Adapts key-value RPCs, including unary and streaming operations, to proxy clients.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter",
+        "client"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Go implementation using protobuf RPC types, raft interfaces, concurrency primitives, and Prometheus or zap integration where applicable."
+    },
+    {
+      "id": "file:proxy/grpcproxy/adapter/lease_client_adapter.go",
+      "type": "file",
+      "name": "lease_client_adapter.go",
+      "filePath": "proxy/grpcproxy/adapter/lease_client_adapter.go",
+      "summary": "Adapts lease RPCs and keep-alive streaming between gRPC server and client interfaces.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter",
+        "client"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using protobuf RPC types, raft interfaces, concurrency primitives, and Prometheus or zap integration where applicable."
+    },
+    {
+      "id": "file:proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "type": "file",
+      "name": "maintenance_client_adapter.go",
+      "filePath": "proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "summary": "Adapts maintenance RPCs and snapshot streaming to proxy client calls.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter",
+        "client"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using protobuf RPC types, raft interfaces, concurrency primitives, and Prometheus or zap integration where applicable."
+    },
+    {
+      "id": "file:proxy/grpcproxy/adapter/watch_client_adapter.go",
+      "type": "file",
+      "name": "watch_client_adapter.go",
+      "filePath": "proxy/grpcproxy/adapter/watch_client_adapter.go",
+      "summary": "Adapts watch creation and bidirectional watch streaming for the gRPC proxy.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter",
+        "client"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using protobuf RPC types, raft interfaces, concurrency primitives, and Prometheus or zap integration where applicable."
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/kv_client_adapter.go:KvServerToKvClient",
+      "type": "function",
+      "name": "KvServerToKvClient",
+      "filePath": "proxy/grpcproxy/adapter/kv_client_adapter.go",
+      "lineRange": [
+        29,
+        31
+      ],
+      "summary": "Implements KvServerToKvClient behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/kv_client_adapter.go:Range",
+      "type": "function",
+      "name": "Range",
+      "filePath": "proxy/grpcproxy/adapter/kv_client_adapter.go",
+      "lineRange": [
+        33,
+        35
+      ],
+      "summary": "Implements Range behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/kv_client_adapter.go:Put",
+      "type": "function",
+      "name": "Put",
+      "filePath": "proxy/grpcproxy/adapter/kv_client_adapter.go",
+      "lineRange": [
+        37,
+        39
+      ],
+      "summary": "Implements Put behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/kv_client_adapter.go:DeleteRange",
+      "type": "function",
+      "name": "DeleteRange",
+      "filePath": "proxy/grpcproxy/adapter/kv_client_adapter.go",
+      "lineRange": [
+        41,
+        43
+      ],
+      "summary": "Implements DeleteRange behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/kv_client_adapter.go:Txn",
+      "type": "function",
+      "name": "Txn",
+      "filePath": "proxy/grpcproxy/adapter/kv_client_adapter.go",
+      "lineRange": [
+        45,
+        47
+      ],
+      "summary": "Implements Txn behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/kv_client_adapter.go:Compact",
+      "type": "function",
+      "name": "Compact",
+      "filePath": "proxy/grpcproxy/adapter/kv_client_adapter.go",
+      "lineRange": [
+        49,
+        51
+      ],
+      "summary": "Implements Compact behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/kv_client_adapter.go:RangeStream",
+      "type": "function",
+      "name": "RangeStream",
+      "filePath": "proxy/grpcproxy/adapter/kv_client_adapter.go",
+      "lineRange": [
+        53,
+        55
+      ],
+      "summary": "Implements RangeStream behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:proxy/grpcproxy/adapter/kv_client_adapter.go:kvs2kvc",
+      "type": "class",
+      "name": "kvs2kvc",
+      "filePath": "proxy/grpcproxy/adapter/kv_client_adapter.go",
+      "lineRange": [
+        27,
+        27
+      ],
+      "summary": "Defines the kvs2kvc test or adapter abstraction and its associated state and methods.",
+      "tags": [
+        "go",
+        "type-definition",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/lease_client_adapter.go:LeaseServerToLeaseClient",
+      "type": "function",
+      "name": "LeaseServerToLeaseClient",
+      "filePath": "proxy/grpcproxy/adapter/lease_client_adapter.go",
+      "lineRange": [
+        29,
+        31
+      ],
+      "summary": "Implements LeaseServerToLeaseClient behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/lease_client_adapter.go:LeaseGrant",
+      "type": "function",
+      "name": "LeaseGrant",
+      "filePath": "proxy/grpcproxy/adapter/lease_client_adapter.go",
+      "lineRange": [
+        33,
+        35
+      ],
+      "summary": "Implements LeaseGrant behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/lease_client_adapter.go:LeaseRevoke",
+      "type": "function",
+      "name": "LeaseRevoke",
+      "filePath": "proxy/grpcproxy/adapter/lease_client_adapter.go",
+      "lineRange": [
+        37,
+        39
+      ],
+      "summary": "Implements LeaseRevoke behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/lease_client_adapter.go:LeaseKeepAlive",
+      "type": "function",
+      "name": "LeaseKeepAlive",
+      "filePath": "proxy/grpcproxy/adapter/lease_client_adapter.go",
+      "lineRange": [
+        41,
+        46
+      ],
+      "summary": "Implements LeaseKeepAlive behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/lease_client_adapter.go:LeaseTimeToLive",
+      "type": "function",
+      "name": "LeaseTimeToLive",
+      "filePath": "proxy/grpcproxy/adapter/lease_client_adapter.go",
+      "lineRange": [
+        48,
+        50
+      ],
+      "summary": "Implements LeaseTimeToLive behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/lease_client_adapter.go:LeaseLeases",
+      "type": "function",
+      "name": "LeaseLeases",
+      "filePath": "proxy/grpcproxy/adapter/lease_client_adapter.go",
+      "lineRange": [
+        52,
+        54
+      ],
+      "summary": "Implements LeaseLeases behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/lease_client_adapter.go:Send",
+      "type": "function",
+      "name": "Send",
+      "filePath": "proxy/grpcproxy/adapter/lease_client_adapter.go",
+      "lineRange": [
+        62,
+        64
+      ],
+      "summary": "Implements Send behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/lease_client_adapter.go:Recv",
+      "type": "function",
+      "name": "Recv",
+      "filePath": "proxy/grpcproxy/adapter/lease_client_adapter.go",
+      "lineRange": [
+        66,
+        72
+      ],
+      "summary": "Implements Recv behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:proxy/grpcproxy/adapter/lease_client_adapter.go:ls2lc",
+      "type": "class",
+      "name": "ls2lc",
+      "filePath": "proxy/grpcproxy/adapter/lease_client_adapter.go",
+      "lineRange": [
+        25,
+        27
+      ],
+      "summary": "Defines the ls2lc test or adapter abstraction and its associated state and methods.",
+      "tags": [
+        "go",
+        "type-definition",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:proxy/grpcproxy/adapter/lease_client_adapter.go:ls2lcClientStream",
+      "type": "class",
+      "name": "ls2lcClientStream",
+      "filePath": "proxy/grpcproxy/adapter/lease_client_adapter.go",
+      "lineRange": [
+        57,
+        57
+      ],
+      "summary": "Defines the ls2lcClientStream test or adapter abstraction and its associated state and methods.",
+      "tags": [
+        "go",
+        "type-definition",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:proxy/grpcproxy/adapter/lease_client_adapter.go:ls2lcServerStream",
+      "type": "class",
+      "name": "ls2lcServerStream",
+      "filePath": "proxy/grpcproxy/adapter/lease_client_adapter.go",
+      "lineRange": [
+        60,
+        60
+      ],
+      "summary": "Defines the ls2lcServerStream test or adapter abstraction and its associated state and methods.",
+      "tags": [
+        "go",
+        "type-definition",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:MaintenanceServerToMaintenanceClient",
+      "type": "function",
+      "name": "MaintenanceServerToMaintenanceClient",
+      "filePath": "proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "lineRange": [
+        27,
+        29
+      ],
+      "summary": "Implements MaintenanceServerToMaintenanceClient behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:Alarm",
+      "type": "function",
+      "name": "Alarm",
+      "filePath": "proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "lineRange": [
+        31,
+        33
+      ],
+      "summary": "Implements Alarm behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:Status",
+      "type": "function",
+      "name": "Status",
+      "filePath": "proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "lineRange": [
+        35,
+        37
+      ],
+      "summary": "Implements Status behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:Defragment",
+      "type": "function",
+      "name": "Defragment",
+      "filePath": "proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "lineRange": [
+        39,
+        41
+      ],
+      "summary": "Implements Defragment behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:Hash",
+      "type": "function",
+      "name": "Hash",
+      "filePath": "proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "lineRange": [
+        43,
+        45
+      ],
+      "summary": "Implements Hash behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:HashKV",
+      "type": "function",
+      "name": "HashKV",
+      "filePath": "proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "lineRange": [
+        47,
+        49
+      ],
+      "summary": "Implements HashKV behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:MoveLeader",
+      "type": "function",
+      "name": "MoveLeader",
+      "filePath": "proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "lineRange": [
+        51,
+        53
+      ],
+      "summary": "Implements MoveLeader behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:Downgrade",
+      "type": "function",
+      "name": "Downgrade",
+      "filePath": "proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "lineRange": [
+        55,
+        57
+      ],
+      "summary": "Implements Downgrade behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:Snapshot",
+      "type": "function",
+      "name": "Snapshot",
+      "filePath": "proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "lineRange": [
+        59,
+        64
+      ],
+      "summary": "Implements Snapshot behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:Send",
+      "type": "function",
+      "name": "Send",
+      "filePath": "proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "lineRange": [
+        72,
+        74
+      ],
+      "summary": "Implements Send behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:Recv",
+      "type": "function",
+      "name": "Recv",
+      "filePath": "proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "lineRange": [
+        76,
+        82
+      ],
+      "summary": "Implements Recv behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:proxy/grpcproxy/adapter/maintenance_client_adapter.go:mts2mtc",
+      "type": "class",
+      "name": "mts2mtc",
+      "filePath": "proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "lineRange": [
+        25,
+        25
+      ],
+      "summary": "Defines the mts2mtc test or adapter abstraction and its associated state and methods.",
+      "tags": [
+        "go",
+        "type-definition",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:proxy/grpcproxy/adapter/maintenance_client_adapter.go:ss2scClientStream",
+      "type": "class",
+      "name": "ss2scClientStream",
+      "filePath": "proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "lineRange": [
+        67,
+        67
+      ],
+      "summary": "Defines the ss2scClientStream test or adapter abstraction and its associated state and methods.",
+      "tags": [
+        "go",
+        "type-definition",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:proxy/grpcproxy/adapter/maintenance_client_adapter.go:ss2scServerStream",
+      "type": "class",
+      "name": "ss2scServerStream",
+      "filePath": "proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "lineRange": [
+        70,
+        70
+      ],
+      "summary": "Defines the ss2scServerStream test or adapter abstraction and its associated state and methods.",
+      "tags": [
+        "go",
+        "type-definition",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/watch_client_adapter.go:WatchServerToWatchClient",
+      "type": "function",
+      "name": "WatchServerToWatchClient",
+      "filePath": "proxy/grpcproxy/adapter/watch_client_adapter.go",
+      "lineRange": [
+        30,
+        32
+      ],
+      "summary": "Implements WatchServerToWatchClient behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/watch_client_adapter.go:Watch",
+      "type": "function",
+      "name": "Watch",
+      "filePath": "proxy/grpcproxy/adapter/watch_client_adapter.go",
+      "lineRange": [
+        34,
+        39
+      ],
+      "summary": "Implements Watch behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/watch_client_adapter.go:Send",
+      "type": "function",
+      "name": "Send",
+      "filePath": "proxy/grpcproxy/adapter/watch_client_adapter.go",
+      "lineRange": [
+        47,
+        49
+      ],
+      "summary": "Implements Send behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/watch_client_adapter.go:Recv",
+      "type": "function",
+      "name": "Recv",
+      "filePath": "proxy/grpcproxy/adapter/watch_client_adapter.go",
+      "lineRange": [
+        51,
+        57
+      ],
+      "summary": "Implements Recv behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:proxy/grpcproxy/adapter/watch_client_adapter.go:ws2wcClientStream",
+      "type": "class",
+      "name": "ws2wcClientStream",
+      "filePath": "proxy/grpcproxy/adapter/watch_client_adapter.go",
+      "lineRange": [
+        42,
+        42
+      ],
+      "summary": "Defines the ws2wcClientStream test or adapter abstraction and its associated state and methods.",
+      "tags": [
+        "go",
+        "type-definition",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:proxy/grpcproxy/adapter/watch_client_adapter.go:ws2wcServerStream",
+      "type": "class",
+      "name": "ws2wcServerStream",
+      "filePath": "proxy/grpcproxy/adapter/watch_client_adapter.go",
+      "lineRange": [
+        45,
+        45
+      ],
+      "summary": "Defines the ws2wcServerStream test or adapter abstraction and its associated state and methods.",
+      "tags": [
+        "go",
+        "type-definition",
+        "server"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:proxy/grpcproxy/adapter/kv_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/kv_client_adapter.go:KvServerToKvClient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/kv_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/kv_client_adapter.go:KvServerToKvClient",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/kv_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/kv_client_adapter.go:Range",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/kv_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/kv_client_adapter.go:Range",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/kv_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/kv_client_adapter.go:Put",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/kv_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/kv_client_adapter.go:Put",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/kv_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/kv_client_adapter.go:DeleteRange",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/kv_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/kv_client_adapter.go:DeleteRange",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/kv_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/kv_client_adapter.go:Txn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/kv_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/kv_client_adapter.go:Txn",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/kv_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/kv_client_adapter.go:Compact",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/kv_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/kv_client_adapter.go:Compact",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/kv_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/kv_client_adapter.go:RangeStream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/kv_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/kv_client_adapter.go:RangeStream",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/kv_client_adapter.go",
+      "target": "class:proxy/grpcproxy/adapter/kv_client_adapter.go:kvs2kvc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/lease_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/lease_client_adapter.go:LeaseServerToLeaseClient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/lease_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/lease_client_adapter.go:LeaseServerToLeaseClient",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/lease_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/lease_client_adapter.go:LeaseGrant",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/lease_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/lease_client_adapter.go:LeaseGrant",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/lease_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/lease_client_adapter.go:LeaseRevoke",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/lease_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/lease_client_adapter.go:LeaseRevoke",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/lease_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/lease_client_adapter.go:LeaseKeepAlive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/lease_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/lease_client_adapter.go:LeaseKeepAlive",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/lease_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/lease_client_adapter.go:LeaseTimeToLive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/lease_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/lease_client_adapter.go:LeaseTimeToLive",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/lease_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/lease_client_adapter.go:LeaseLeases",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/lease_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/lease_client_adapter.go:LeaseLeases",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/lease_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/lease_client_adapter.go:Send",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/lease_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/lease_client_adapter.go:Send",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/lease_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/lease_client_adapter.go:Recv",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/lease_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/lease_client_adapter.go:Recv",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/lease_client_adapter.go",
+      "target": "class:proxy/grpcproxy/adapter/lease_client_adapter.go:ls2lc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/lease_client_adapter.go",
+      "target": "class:proxy/grpcproxy/adapter/lease_client_adapter.go:ls2lcClientStream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/lease_client_adapter.go",
+      "target": "class:proxy/grpcproxy/adapter/lease_client_adapter.go:ls2lcServerStream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:MaintenanceServerToMaintenanceClient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:MaintenanceServerToMaintenanceClient",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:Alarm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:Alarm",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:Status",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:Status",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:Defragment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:Defragment",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:Hash",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:Hash",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:HashKV",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:HashKV",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:MoveLeader",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:MoveLeader",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:Downgrade",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:Downgrade",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:Snapshot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:Snapshot",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:Send",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:Send",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:Recv",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:Recv",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "target": "class:proxy/grpcproxy/adapter/maintenance_client_adapter.go:mts2mtc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "target": "class:proxy/grpcproxy/adapter/maintenance_client_adapter.go:ss2scClientStream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "target": "class:proxy/grpcproxy/adapter/maintenance_client_adapter.go:ss2scServerStream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/watch_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/watch_client_adapter.go:WatchServerToWatchClient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/watch_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/watch_client_adapter.go:WatchServerToWatchClient",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/watch_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/watch_client_adapter.go:Watch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/watch_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/watch_client_adapter.go:Watch",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/watch_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/watch_client_adapter.go:Send",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/watch_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/watch_client_adapter.go:Send",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/watch_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/watch_client_adapter.go:Recv",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/watch_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/watch_client_adapter.go:Recv",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/watch_client_adapter.go",
+      "target": "class:proxy/grpcproxy/adapter/watch_client_adapter.go:ws2wcClientStream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/watch_client_adapter.go",
+      "target": "class:proxy/grpcproxy/adapter/watch_client_adapter.go:ws2wcServerStream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:proxy/grpcproxy/adapter/kv_client_adapter.go:Compact",
+      "target": "function:etcdserver/server_test.go:Compact",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:proxy/grpcproxy/adapter/kv_client_adapter.go:RangeStream",
+      "target": "function:etcdserver/zap_raft.go:Error",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:proxy/grpcproxy/adapter/lease_client_adapter.go:LeaseKeepAlive",
+      "target": "function:proxy/grpcproxy/adapter/chan_stream.go:newPipeStream",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:proxy/grpcproxy/adapter/lease_client_adapter.go:Send",
+      "target": "function:proxy/grpcproxy/adapter/chan_stream.go:SendMsg",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:proxy/grpcproxy/adapter/lease_client_adapter.go:Recv",
+      "target": "function:proxy/grpcproxy/adapter/chan_stream.go:RecvMsg",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:proxy/grpcproxy/adapter/lease_client_adapter.go:Send",
+      "target": "function:proxy/grpcproxy/adapter/chan_stream.go:SendMsg",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:proxy/grpcproxy/adapter/lease_client_adapter.go:Recv",
+      "target": "function:proxy/grpcproxy/adapter/chan_stream.go:RecvMsg",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:Status",
+      "target": "function:etcdserver/server_test.go:Status",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:Snapshot",
+      "target": "function:proxy/grpcproxy/adapter/chan_stream.go:newPipeStream",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:Send",
+      "target": "function:proxy/grpcproxy/adapter/chan_stream.go:SendMsg",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:Recv",
+      "target": "function:proxy/grpcproxy/adapter/chan_stream.go:RecvMsg",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:Send",
+      "target": "function:proxy/grpcproxy/adapter/chan_stream.go:SendMsg",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:Recv",
+      "target": "function:proxy/grpcproxy/adapter/chan_stream.go:RecvMsg",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:proxy/grpcproxy/adapter/watch_client_adapter.go:Watch",
+      "target": "function:proxy/grpcproxy/adapter/chan_stream.go:newPipeStream",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:proxy/grpcproxy/adapter/watch_client_adapter.go:Watch",
+      "target": "function:proxy/grpcproxy/watch.go:Watch",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:proxy/grpcproxy/adapter/watch_client_adapter.go:Send",
+      "target": "function:proxy/grpcproxy/adapter/chan_stream.go:SendMsg",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:proxy/grpcproxy/adapter/watch_client_adapter.go:Recv",
+      "target": "function:proxy/grpcproxy/adapter/chan_stream.go:RecvMsg",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:proxy/grpcproxy/adapter/watch_client_adapter.go:Send",
+      "target": "function:proxy/grpcproxy/adapter/chan_stream.go:SendMsg",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:proxy/grpcproxy/adapter/watch_client_adapter.go:Recv",
+      "target": "function:proxy/grpcproxy/adapter/chan_stream.go:RecvMsg",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}
+

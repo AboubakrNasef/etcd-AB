@@ -1,0 +1,13 @@
+{
+  "fixedSectionOk": true,
+  "nodesRecovered": 0,
+  "edgesRestored": 0,
+  "crossBatchEdgesAdded": 0,
+  "typesRemapped": 0,
+  "complexityRemapped": 0,
+  "notes": [
+    "The merge counts and tested-by linker additions are reasonable; no mechanical warnings or dropped items were reported.",
+    "All assembled edges resolve to existing nodes, and all node types and complexity values are valid.",
+    "No cross-batch import edges could be added because all 16 import-map entries are empty."
+  ]
+}

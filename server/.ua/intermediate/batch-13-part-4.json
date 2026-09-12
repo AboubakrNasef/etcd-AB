@@ -1,0 +1,590 @@
+{
+  "nodes": [
+    {
+      "id": "file:proxy/grpcproxy/watch_broadcasts.go",
+      "type": "file",
+      "name": "watch_broadcasts.go",
+      "filePath": "proxy/grpcproxy/watch_broadcasts.go",
+      "summary": "Manager for watch broadcast groups, including coalescing, membership, updates, and shutdown.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "middleware"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:proxy/grpcproxy/watch_broadcasts.go:watchBroadcasts",
+      "type": "class",
+      "name": "watchBroadcasts",
+      "filePath": "proxy/grpcproxy/watch_broadcasts.go",
+      "lineRange": [
+        21,
+        31
+      ],
+      "summary": "Defines the watchBroadcasts abstraction and its 5 service or coordination methods.",
+      "tags": [
+        "go",
+        "type-definition",
+        "service",
+        "interface"
+      ]
+    },
+    {
+      "id": "function:proxy/grpcproxy/watch_broadcasts.go:newWatchBroadcasts",
+      "type": "function",
+      "name": "newWatchBroadcasts",
+      "filePath": "proxy/grpcproxy/watch_broadcasts.go",
+      "lineRange": [
+        36,
+        51
+      ],
+      "summary": "Implements newWatchBroadcasts for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/watch_broadcasts.go:coalesce",
+      "type": "function",
+      "name": "coalesce",
+      "filePath": "proxy/grpcproxy/watch_broadcasts.go",
+      "lineRange": [
+        53,
+        83
+      ],
+      "summary": "Implements coalesce for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:proxy/grpcproxy/watch_broadcasts.go:add",
+      "type": "function",
+      "name": "add",
+      "filePath": "proxy/grpcproxy/watch_broadcasts.go",
+      "lineRange": [
+        85,
+        99
+      ],
+      "summary": "Implements add for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/watch_broadcasts.go:delete",
+      "type": "function",
+      "name": "delete",
+      "filePath": "proxy/grpcproxy/watch_broadcasts.go",
+      "lineRange": [
+        102,
+        117
+      ],
+      "summary": "Implements delete for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/watch_broadcasts.go:stop",
+      "type": "function",
+      "name": "stop",
+      "filePath": "proxy/grpcproxy/watch_broadcasts.go",
+      "lineRange": [
+        119,
+        128
+      ],
+      "summary": "Implements stop for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:proxy/grpcproxy/watch_ranges.go",
+      "type": "file",
+      "name": "watch_ranges.go",
+      "filePath": "proxy/grpcproxy/watch_ranges.go",
+      "summary": "Manager grouping watch ranges and connecting them to broadcast groups.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "middleware"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:proxy/grpcproxy/watch_ranges.go:watchRanges",
+      "type": "class",
+      "name": "watchRanges",
+      "filePath": "proxy/grpcproxy/watch_ranges.go",
+      "lineRange": [
+        22,
+        27
+      ],
+      "summary": "Defines the watchRanges abstraction and its 3 service or coordination methods.",
+      "tags": [
+        "go",
+        "type-definition",
+        "service",
+        "interface"
+      ]
+    },
+    {
+      "id": "function:proxy/grpcproxy/watch_ranges.go:add",
+      "type": "function",
+      "name": "add",
+      "filePath": "proxy/grpcproxy/watch_ranges.go",
+      "lineRange": [
+        36,
+        47
+      ],
+      "summary": "Implements add for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/watch_ranges.go:delete",
+      "type": "function",
+      "name": "delete",
+      "filePath": "proxy/grpcproxy/watch_ranges.go",
+      "lineRange": [
+        49,
+        60
+      ],
+      "summary": "Implements delete for this server or proxy component.",
+      "tags": [
+        "go",
+        "grpc-proxy",
+        "api",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:proxy/tcpproxy/doc.go",
+      "type": "file",
+      "name": "doc.go",
+      "filePath": "proxy/tcpproxy/doc.go",
+      "summary": "Package documentation marker for the proxy package.",
+      "tags": [
+        "go",
+        "documentation",
+        "package",
+        "metadata"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:proxy/tcpproxy/userspace.go",
+      "type": "file",
+      "name": "userspace.go",
+      "filePath": "proxy/tcpproxy/userspace.go",
+      "summary": "Userspace TCP proxy that selects active remote endpoints, serves connections, and monitors endpoint health.",
+      "tags": [
+        "go",
+        "tcp-proxy",
+        "networking",
+        "service"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:proxy/tcpproxy/userspace.go:remote",
+      "type": "class",
+      "name": "remote",
+      "filePath": "proxy/tcpproxy/userspace.go",
+      "lineRange": [
+        28,
+        33
+      ],
+      "summary": "Defines the remote abstraction and its 3 service or coordination methods.",
+      "tags": [
+        "go",
+        "type-definition",
+        "service",
+        "interface"
+      ]
+    },
+    {
+      "id": "class:proxy/tcpproxy/userspace.go:TCPProxy",
+      "type": "class",
+      "name": "TCPProxy",
+      "filePath": "proxy/tcpproxy/userspace.go",
+      "lineRange": [
+        59,
+        70
+      ],
+      "summary": "Defines the TCPProxy abstraction and its 5 service or coordination methods.",
+      "tags": [
+        "go",
+        "type-definition",
+        "service",
+        "interface"
+      ]
+    },
+    {
+      "id": "function:proxy/tcpproxy/userspace.go:tryReactivate",
+      "type": "function",
+      "name": "tryReactivate",
+      "filePath": "proxy/tcpproxy/userspace.go",
+      "lineRange": [
+        41,
+        51
+      ],
+      "summary": "Implements tryReactivate for this server or proxy component.",
+      "tags": [
+        "go",
+        "tcp-proxy",
+        "networking",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/tcpproxy/userspace.go:Run",
+      "type": "function",
+      "name": "Run",
+      "filePath": "proxy/tcpproxy/userspace.go",
+      "lineRange": [
+        72,
+        97
+      ],
+      "summary": "Implements Run for this server or proxy component.",
+      "tags": [
+        "go",
+        "tcp-proxy",
+        "networking",
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:proxy/tcpproxy/userspace.go:pick",
+      "type": "function",
+      "name": "pick",
+      "filePath": "proxy/tcpproxy/userspace.go",
+      "lineRange": [
+        99,
+        154
+      ],
+      "summary": "Implements pick for this server or proxy component.",
+      "tags": [
+        "go",
+        "tcp-proxy",
+        "networking",
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:proxy/tcpproxy/userspace.go:serve",
+      "type": "function",
+      "name": "serve",
+      "filePath": "proxy/tcpproxy/userspace.go",
+      "lineRange": [
+        156,
+        194
+      ],
+      "summary": "Implements serve for this server or proxy component.",
+      "tags": [
+        "go",
+        "tcp-proxy",
+        "networking",
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:proxy/tcpproxy/userspace.go:runMonitor",
+      "type": "function",
+      "name": "runMonitor",
+      "filePath": "proxy/tcpproxy/userspace.go",
+      "lineRange": [
+        196,
+        222
+      ],
+      "summary": "Implements runMonitor for this server or proxy component.",
+      "tags": [
+        "go",
+        "tcp-proxy",
+        "networking",
+        "function"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:proxy/tcpproxy/userspace.go:Stop",
+      "type": "function",
+      "name": "Stop",
+      "filePath": "proxy/tcpproxy/userspace.go",
+      "lineRange": [
+        224,
+        229
+      ],
+      "summary": "Implements Stop for this server or proxy component.",
+      "tags": [
+        "go",
+        "tcp-proxy",
+        "networking",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:proxy/tcpproxy/userspace_test.go",
+      "type": "file",
+      "name": "userspace_test.go",
+      "filePath": "proxy/tcpproxy/userspace_test.go",
+      "summary": "Tests for userspace TCP proxy routing, endpoint selection, and priority behavior.",
+      "tags": [
+        "go",
+        "test",
+        "integration",
+        "proxy"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:proxy/tcpproxy/userspace_test.go:TestUserspaceProxy",
+      "type": "function",
+      "name": "TestUserspaceProxy",
+      "filePath": "proxy/tcpproxy/userspace_test.go",
+      "lineRange": [
+        27,
+        69
+      ],
+      "summary": "Implements TestUserspaceProxy for this server or proxy component.",
+      "tags": [
+        "go",
+        "test",
+        "integration",
+        "function"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:proxy/tcpproxy/userspace_test.go:TestUserspaceProxyPriority",
+      "type": "function",
+      "name": "TestUserspaceProxyPriority",
+      "filePath": "proxy/tcpproxy/userspace_test.go",
+      "lineRange": [
+        71,
+        131
+      ],
+      "summary": "Implements TestUserspaceProxyPriority for this server or proxy component.",
+      "tags": [
+        "go",
+        "test",
+        "integration",
+        "function"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:proxy/grpcproxy/watch_broadcasts.go",
+      "target": "class:proxy/grpcproxy/watch_broadcasts.go:watchBroadcasts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch_broadcasts.go",
+      "target": "function:proxy/grpcproxy/watch_broadcasts.go:newWatchBroadcasts",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch_broadcasts.go",
+      "target": "function:proxy/grpcproxy/watch_broadcasts.go:coalesce",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch_broadcasts.go",
+      "target": "function:proxy/grpcproxy/watch_broadcasts.go:add",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch_broadcasts.go",
+      "target": "function:proxy/grpcproxy/watch_broadcasts.go:delete",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch_broadcasts.go",
+      "target": "function:proxy/grpcproxy/watch_broadcasts.go:stop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:proxy/grpcproxy/watch_broadcasts.go:coalesce",
+      "target": "function:proxy/grpcproxy/watch_broadcasts.go:delete",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch_ranges.go",
+      "target": "class:proxy/grpcproxy/watch_ranges.go:watchRanges",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch_ranges.go",
+      "target": "function:proxy/grpcproxy/watch_ranges.go:add",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/watch_ranges.go",
+      "target": "function:proxy/grpcproxy/watch_ranges.go:delete",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/tcpproxy/userspace.go",
+      "target": "class:proxy/tcpproxy/userspace.go:remote",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/tcpproxy/userspace.go",
+      "target": "class:proxy/tcpproxy/userspace.go:TCPProxy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/tcpproxy/userspace.go",
+      "target": "function:proxy/tcpproxy/userspace.go:tryReactivate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/tcpproxy/userspace.go",
+      "target": "function:proxy/tcpproxy/userspace.go:Run",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/tcpproxy/userspace.go",
+      "target": "function:proxy/tcpproxy/userspace.go:pick",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/tcpproxy/userspace.go",
+      "target": "function:proxy/tcpproxy/userspace.go:serve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/tcpproxy/userspace.go",
+      "target": "function:proxy/tcpproxy/userspace.go:runMonitor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/tcpproxy/userspace.go",
+      "target": "function:proxy/tcpproxy/userspace.go:Stop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/tcpproxy/userspace.go",
+      "target": "class:proxy/tcpproxy/userspace.go:TCPProxy",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/tcpproxy/userspace.go",
+      "target": "function:proxy/tcpproxy/userspace.go:Run",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/tcpproxy/userspace.go",
+      "target": "function:proxy/tcpproxy/userspace.go:Stop",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/tcpproxy/userspace_test.go",
+      "target": "function:proxy/tcpproxy/userspace_test.go:TestUserspaceProxy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/tcpproxy/userspace_test.go",
+      "target": "function:proxy/tcpproxy/userspace_test.go:TestUserspaceProxyPriority",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/tcpproxy/userspace_test.go",
+      "target": "function:proxy/tcpproxy/userspace_test.go:TestUserspaceProxy",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/tcpproxy/userspace_test.go",
+      "target": "function:proxy/tcpproxy/userspace_test.go:TestUserspaceProxyPriority",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}
+

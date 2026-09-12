@@ -1,0 +1,1628 @@
+{
+  "nodes": [
+    {
+      "id": "file:storage/mvcc/watchable_store.go",
+      "type": "file",
+      "name": "watchable_store.go",
+      "filePath": "storage/mvcc/watchable_store.go",
+      "summary": "Provides the watchable MVCC store, coordinating watcher registration, event delivery, progress notifications, victims, restoration, and synchronization.",
+      "tags": [
+        "mvcc",
+        "storage",
+        "persistence",
+        "transactions"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Go implementation using backend transactions and protobuf-backed storage structures."
+    },
+    {
+      "id": "file:storage/quota.go",
+      "type": "file",
+      "name": "quota.go",
+      "filePath": "storage/quota.go",
+      "summary": "Defines backend quota interfaces and calculates request costs and remaining capacity for puts and transactions.",
+      "tags": [
+        "quota",
+        "storage",
+        "limits",
+        "backend"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using backend transactions and protobuf-backed storage structures."
+    },
+    {
+      "id": "file:storage/schema/actions.go",
+      "type": "file",
+      "name": "actions.go",
+      "filePath": "storage/schema/actions.go",
+      "summary": "Defines backend persistence helpers for actions data, including safe reads, writes, and bucket management.",
+      "tags": [
+        "schema",
+        "backend",
+        "persistence",
+        "serialization"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using backend transactions and protobuf-backed storage structures."
+    },
+    {
+      "id": "function:storage/mvcc/watchable_store.go:ChanBufLen",
+      "type": "function",
+      "name": "ChanBufLen",
+      "filePath": "storage/mvcc/watchable_store.go",
+      "lineRange": [
+        47,
+        47
+      ],
+      "summary": "Implements ChanBufLen behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/watchable_store.go:New",
+      "type": "function",
+      "name": "New",
+      "filePath": "storage/mvcc/watchable_store.go",
+      "lineRange": [
+        84,
+        90
+      ],
+      "summary": "Implements New behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/watchable_store.go:newWatchableStore",
+      "type": "function",
+      "name": "newWatchableStore",
+      "filePath": "storage/mvcc/watchable_store.go",
+      "lineRange": [
+        92,
+        110
+      ],
+      "summary": "Implements newWatchableStore behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/watchable_store.go:Close",
+      "type": "function",
+      "name": "Close",
+      "filePath": "storage/mvcc/watchable_store.go",
+      "lineRange": [
+        112,
+        116
+      ],
+      "summary": "Implements Close behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/watchable_store.go:NewWatchStream",
+      "type": "function",
+      "name": "NewWatchStream",
+      "filePath": "storage/mvcc/watchable_store.go",
+      "lineRange": [
+        118,
+        126
+      ],
+      "summary": "Implements NewWatchStream behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/watchable_store.go:watch",
+      "type": "function",
+      "name": "watch",
+      "filePath": "storage/mvcc/watchable_store.go",
+      "lineRange": [
+        128,
+        158
+      ],
+      "summary": "Implements watch behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/mvcc/watchable_store.go:cancelWatcher",
+      "type": "function",
+      "name": "cancelWatcher",
+      "filePath": "storage/mvcc/watchable_store.go",
+      "lineRange": [
+        161,
+        205
+      ],
+      "summary": "Implements cancelWatcher behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/mvcc/watchable_store.go:Restore",
+      "type": "function",
+      "name": "Restore",
+      "filePath": "storage/mvcc/watchable_store.go",
+      "lineRange": [
+        207,
+        221
+      ],
+      "summary": "Implements Restore behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/watchable_store.go:syncWatchersLoop",
+      "type": "function",
+      "name": "syncWatchersLoop",
+      "filePath": "storage/mvcc/watchable_store.go",
+      "lineRange": [
+        224,
+        255
+      ],
+      "summary": "Implements syncWatchersLoop behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/mvcc/watchable_store.go:syncVictimsLoop",
+      "type": "function",
+      "name": "syncVictimsLoop",
+      "filePath": "storage/mvcc/watchable_store.go",
+      "lineRange": [
+        259,
+        282
+      ],
+      "summary": "Implements syncVictimsLoop behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/mvcc/watchable_store.go:moveVictims",
+      "type": "function",
+      "name": "moveVictims",
+      "filePath": "storage/mvcc/watchable_store.go",
+      "lineRange": [
+        285,
+        340
+      ],
+      "summary": "Implements moveVictims behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/mvcc/watchable_store.go:syncWatchers",
+      "type": "function",
+      "name": "syncWatchers",
+      "filePath": "storage/mvcc/watchable_store.go",
+      "lineRange": [
+        347,
+        416
+      ],
+      "summary": "Implements syncWatchers behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/mvcc/watchable_store.go:rangeEvents",
+      "type": "function",
+      "name": "rangeEvents",
+      "filePath": "storage/mvcc/watchable_store.go",
+      "lineRange": [
+        419,
+        439
+      ],
+      "summary": "Implements rangeEvents behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/mvcc/watchable_store.go:kvsToEvents",
+      "type": "function",
+      "name": "kvsToEvents",
+      "filePath": "storage/mvcc/watchable_store.go",
+      "lineRange": [
+        446,
+        466
+      ],
+      "summary": "Implements kvsToEvents behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/mvcc/watchable_store.go:notify",
+      "type": "function",
+      "name": "notify",
+      "filePath": "storage/mvcc/watchable_store.go",
+      "lineRange": [
+        470,
+        494
+      ],
+      "summary": "Implements notify behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/mvcc/watchable_store.go:addVictim",
+      "type": "function",
+      "name": "addVictim",
+      "filePath": "storage/mvcc/watchable_store.go",
+      "lineRange": [
+        496,
+        505
+      ],
+      "summary": "Implements addVictim behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/watchable_store.go:progressIfSync",
+      "type": "function",
+      "name": "progressIfSync",
+      "filePath": "storage/mvcc/watchable_store.go",
+      "lineRange": [
+        517,
+        543
+      ],
+      "summary": "Implements progressIfSync behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/mvcc/watchable_store.go:send",
+      "type": "function",
+      "name": "send",
+      "filePath": "storage/mvcc/watchable_store.go",
+      "lineRange": [
+        577,
+        622
+      ],
+      "summary": "Implements send behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:storage/mvcc/watchable_store.go:watchable",
+      "type": "class",
+      "name": "watchable",
+      "filePath": "storage/mvcc/watchable_store.go",
+      "lineRange": [
+        49,
+        54
+      ],
+      "summary": "Defines the watchable storage abstraction and its associated state.",
+      "tags": [
+        "storage",
+        "type-definition",
+        "backend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:storage/mvcc/watchable_store.go:watchableStore",
+      "type": "class",
+      "name": "watchableStore",
+      "filePath": "storage/mvcc/watchable_store.go",
+      "lineRange": [
+        56,
+        76
+      ],
+      "summary": "Defines the watchableStore storage abstraction and its associated state.",
+      "tags": [
+        "storage",
+        "type-definition",
+        "backend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:storage/mvcc/watchable_store.go:watcher",
+      "type": "class",
+      "name": "watcher",
+      "filePath": "storage/mvcc/watchable_store.go",
+      "lineRange": [
+        545,
+        575
+      ],
+      "summary": "Defines the watcher storage abstraction and its associated state.",
+      "tags": [
+        "storage",
+        "type-definition",
+        "backend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/quota.go:Available",
+      "type": "function",
+      "name": "Available",
+      "filePath": "storage/quota.go",
+      "lineRange": [
+        50,
+        50
+      ],
+      "summary": "Implements Available behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/quota.go:Cost",
+      "type": "function",
+      "name": "Cost",
+      "filePath": "storage/quota.go",
+      "lineRange": [
+        51,
+        51
+      ],
+      "summary": "Implements Cost behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/quota.go:Remaining",
+      "type": "function",
+      "name": "Remaining",
+      "filePath": "storage/quota.go",
+      "lineRange": [
+        52,
+        52
+      ],
+      "summary": "Implements Remaining behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/quota.go:NewBackendQuota",
+      "type": "function",
+      "name": "NewBackendQuota",
+      "filePath": "storage/quota.go",
+      "lineRange": [
+        75,
+        124
+      ],
+      "summary": "Implements NewBackendQuota behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/quota.go:costTxn",
+      "type": "function",
+      "name": "costTxn",
+      "filePath": "storage/quota.go",
+      "lineRange": [
+        161,
+        174
+      ],
+      "summary": "Implements costTxn behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:storage/quota.go:Quota",
+      "type": "class",
+      "name": "Quota",
+      "filePath": "storage/quota.go",
+      "lineRange": [
+        39,
+        46
+      ],
+      "summary": "Defines the Quota storage abstraction and its associated state.",
+      "tags": [
+        "storage",
+        "type-definition",
+        "backend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:storage/quota.go:passthroughQuota",
+      "type": "class",
+      "name": "passthroughQuota",
+      "filePath": "storage/quota.go",
+      "lineRange": [
+        48,
+        48
+      ],
+      "summary": "Defines the passthroughQuota storage abstraction and its associated state.",
+      "tags": [
+        "storage",
+        "type-definition",
+        "backend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:storage/quota.go:BackendQuota",
+      "type": "class",
+      "name": "BackendQuota",
+      "filePath": "storage/quota.go",
+      "lineRange": [
+        54,
+        57
+      ],
+      "summary": "Defines the BackendQuota storage abstraction and its associated state.",
+      "tags": [
+        "storage",
+        "type-definition",
+        "backend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/schema/actions.go:restoreFieldValueAction",
+      "type": "function",
+      "name": "restoreFieldValueAction",
+      "filePath": "storage/schema/actions.go",
+      "lineRange": [
+        52,
+        65
+      ],
+      "summary": "Implements restoreFieldValueAction behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/actions.go:unsafeExecute",
+      "type": "function",
+      "name": "unsafeExecute",
+      "filePath": "storage/schema/actions.go",
+      "lineRange": [
+        71,
+        82
+      ],
+      "summary": "Implements unsafeExecute behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "function:storage/mvcc/watchable_store.go:ChanBufLen",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "function:storage/mvcc/watchable_store.go:ChanBufLen",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "function:storage/mvcc/watchable_store.go:New",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "function:storage/mvcc/watchable_store.go:New",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "function:storage/mvcc/watchable_store.go:newWatchableStore",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "function:storage/mvcc/watchable_store.go:Close",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "function:storage/mvcc/watchable_store.go:Close",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "function:storage/mvcc/watchable_store.go:NewWatchStream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "function:storage/mvcc/watchable_store.go:NewWatchStream",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "function:storage/mvcc/watchable_store.go:watch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "function:storage/mvcc/watchable_store.go:cancelWatcher",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "function:storage/mvcc/watchable_store.go:Restore",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "function:storage/mvcc/watchable_store.go:Restore",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "function:storage/mvcc/watchable_store.go:syncWatchersLoop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "function:storage/mvcc/watchable_store.go:syncVictimsLoop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "function:storage/mvcc/watchable_store.go:moveVictims",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "function:storage/mvcc/watchable_store.go:syncWatchers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "function:storage/mvcc/watchable_store.go:rangeEvents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "function:storage/mvcc/watchable_store.go:kvsToEvents",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "function:storage/mvcc/watchable_store.go:notify",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "function:storage/mvcc/watchable_store.go:addVictim",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "function:storage/mvcc/watchable_store.go:progressIfSync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "function:storage/mvcc/watchable_store.go:send",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "class:storage/mvcc/watchable_store.go:watchable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "class:storage/mvcc/watchable_store.go:watchableStore",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "class:storage/mvcc/watchable_store.go:watcher",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/quota.go",
+      "target": "function:storage/quota.go:Available",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/quota.go",
+      "target": "function:storage/quota.go:Available",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/quota.go",
+      "target": "function:storage/quota.go:Cost",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/quota.go",
+      "target": "function:storage/quota.go:Cost",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/quota.go",
+      "target": "function:storage/quota.go:Remaining",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/quota.go",
+      "target": "function:storage/quota.go:Remaining",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/quota.go",
+      "target": "function:storage/quota.go:NewBackendQuota",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/quota.go",
+      "target": "function:storage/quota.go:NewBackendQuota",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/quota.go",
+      "target": "function:storage/quota.go:costTxn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/quota.go",
+      "target": "class:storage/quota.go:Quota",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/quota.go",
+      "target": "class:storage/quota.go:Quota",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/quota.go",
+      "target": "class:storage/quota.go:passthroughQuota",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/quota.go",
+      "target": "class:storage/quota.go:BackendQuota",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/quota.go",
+      "target": "class:storage/quota.go:BackendQuota",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/actions.go",
+      "target": "function:storage/schema/actions.go:restoreFieldValueAction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/actions.go",
+      "target": "function:storage/schema/actions.go:unsafeExecute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:lease/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:lease/lease.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:lease/lease_queue.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:lease/lease_queue_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:lease/lessor.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:lease/lessor_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:lease/lessor_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:lease/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/backend/backend.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/backend/backend_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/backend/backend_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/backend/batch_tx.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/backend/batch_tx_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/backend/config_default.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/backend/config_linux.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/backend/config_windows.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/backend/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/backend/export_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/backend/hooks.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/backend/hooks_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/backend/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/backend/read_tx.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/backend/tx_buffer.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/backend/tx_buffer_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/backend/verify.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/backend/verify_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/schema/actions.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/schema/actions_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/schema/alarm.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/schema/auth.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/schema/auth_roles.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/schema/auth_roles_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/schema/auth_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/schema/auth_users.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/schema/auth_users_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/schema/bucket.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/schema/changes.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/schema/changes_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/schema/cindex.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/schema/confstate.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/schema/confstate_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/schema/lease.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/schema/lease_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/schema/membership.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/schema/migration.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/schema/migration_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/schema/schema.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/schema/schema_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/schema/version.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/watchable_store.go",
+      "target": "file:storage/schema/version_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/quota.go",
+      "target": "file:storage/backend/backend.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/quota.go",
+      "target": "file:storage/backend/backend_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/quota.go",
+      "target": "file:storage/backend/backend_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/quota.go",
+      "target": "file:storage/backend/batch_tx.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/quota.go",
+      "target": "file:storage/backend/batch_tx_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/quota.go",
+      "target": "file:storage/backend/config_default.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/quota.go",
+      "target": "file:storage/backend/config_linux.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/quota.go",
+      "target": "file:storage/backend/config_windows.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/quota.go",
+      "target": "file:storage/backend/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/quota.go",
+      "target": "file:storage/backend/export_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/quota.go",
+      "target": "file:storage/backend/hooks.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/quota.go",
+      "target": "file:storage/backend/hooks_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/quota.go",
+      "target": "file:storage/backend/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/quota.go",
+      "target": "file:storage/backend/read_tx.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/quota.go",
+      "target": "file:storage/backend/tx_buffer.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/quota.go",
+      "target": "file:storage/backend/tx_buffer_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/quota.go",
+      "target": "file:storage/backend/verify.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/quota.go",
+      "target": "file:storage/backend/verify_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/actions.go",
+      "target": "file:storage/backend/backend.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/actions.go",
+      "target": "file:storage/backend/backend_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/actions.go",
+      "target": "file:storage/backend/backend_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/actions.go",
+      "target": "file:storage/backend/batch_tx.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/actions.go",
+      "target": "file:storage/backend/batch_tx_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/actions.go",
+      "target": "file:storage/backend/config_default.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/actions.go",
+      "target": "file:storage/backend/config_linux.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/actions.go",
+      "target": "file:storage/backend/config_windows.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/actions.go",
+      "target": "file:storage/backend/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/actions.go",
+      "target": "file:storage/backend/export_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/actions.go",
+      "target": "file:storage/backend/hooks.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/actions.go",
+      "target": "file:storage/backend/hooks_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/actions.go",
+      "target": "file:storage/backend/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/actions.go",
+      "target": "file:storage/backend/read_tx.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/actions.go",
+      "target": "file:storage/backend/tx_buffer.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/actions.go",
+      "target": "file:storage/backend/tx_buffer_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/actions.go",
+      "target": "file:storage/backend/verify.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/actions.go",
+      "target": "file:storage/backend/verify_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:storage/mvcc/watchable_store.go:newWatchableStore",
+      "target": "function:storage/mvcc/kvstore_txn.go:Write",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/watchable_store.go:Close",
+      "target": "function:storage/mvcc/kvstore_test.go:Close",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/watchable_store.go:cancelWatcher",
+      "target": "function:storage/mvcc/kvstore_txn.go:delete",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/watchable_store.go:cancelWatcher",
+      "target": "function:storage/mvcc/kvstore_txn.go:delete",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/watchable_store.go:cancelWatcher",
+      "target": "function:storage/mvcc/kvstore_txn.go:delete",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/watchable_store.go:syncWatchers",
+      "target": "function:storage/mvcc/kvstore_txn.go:delete",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/watchable_store.go:syncWatchers",
+      "target": "function:storage/mvcc/kvstore_txn.go:delete",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/watchable_store.go:rangeEvents",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeRange",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/watchable_store.go:notify",
+      "target": "function:storage/mvcc/kvstore_txn.go:delete",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/watchable_store.go:send",
+      "target": "function:verify/verify.go:Verify",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/quota.go:NewBackendQuota",
+      "target": "function:storage/schema/bucket.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/quota.go:NewBackendQuota",
+      "target": "function:storage/schema/bucket.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/quota.go:NewBackendQuota",
+      "target": "function:storage/schema/bucket.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/quota.go:NewBackendQuota",
+      "target": "function:storage/schema/bucket.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/quota.go:NewBackendQuota",
+      "target": "function:storage/schema/bucket.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/quota.go:NewBackendQuota",
+      "target": "function:storage/schema/bucket.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/quota.go:NewBackendQuota",
+      "target": "function:storage/schema/bucket.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/quota.go:NewBackendQuota",
+      "target": "function:storage/schema/bucket.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/quota.go:Available",
+      "target": "function:storage/mvcc/kvstore_test.go:Size",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/quota.go:Remaining",
+      "target": "function:storage/mvcc/kvstore_test.go:Size",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/actions.go:restoreFieldValueAction",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeRange",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/actions.go",
+      "target": "file:storage/schema/actions_test.go",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

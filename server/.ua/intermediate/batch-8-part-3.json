@@ -1,0 +1,777 @@
+{
+  "nodes": [
+    {
+      "id": "file:etcdserver/api/snap/db.go",
+      "type": "file",
+      "name": "db.go",
+      "filePath": "etcdserver/api/snap/db.go",
+      "summary": "Creates, opens, and synchronizes snapshot database files while coordinating temporary snapshot directories.",
+      "tags": [
+        "snapshot",
+        "storage",
+        "raft"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Go implementation using interfaces, goroutines, synchronization, and protobuf/HTTP integration where applicable."
+    },
+    {
+      "id": "file:etcdserver/api/snap/db_test.go",
+      "type": "file",
+      "name": "db_test.go",
+      "filePath": "etcdserver/api/snap/db_test.go",
+      "summary": "Verifies snapshot database persistence and directory synchronization.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Go implementation using interfaces, goroutines, synchronization, and protobuf/HTTP integration where applicable."
+    },
+    {
+      "id": "file:etcdserver/api/snap/doc.go",
+      "type": "file",
+      "name": "doc.go",
+      "filePath": "etcdserver/api/snap/doc.go",
+      "summary": "Documents the snapshot API package.",
+      "tags": [
+        "snapshot",
+        "storage",
+        "raft"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Go implementation using interfaces, goroutines, synchronization, and protobuf/HTTP integration where applicable."
+    },
+    {
+      "id": "file:etcdserver/api/snap/message.go",
+      "type": "file",
+      "name": "message.go",
+      "filePath": "etcdserver/api/snap/message.go",
+      "summary": "Defines snapshot message lifecycle helpers and close-notification behavior.",
+      "tags": [
+        "snapshot",
+        "storage",
+        "raft"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Go implementation using interfaces, goroutines, synchronization, and protobuf/HTTP integration where applicable."
+    },
+    {
+      "id": "file:etcdserver/api/snap/metrics.go",
+      "type": "file",
+      "name": "metrics.go",
+      "filePath": "etcdserver/api/snap/metrics.go",
+      "summary": "Registers Prometheus metrics for snapshot operations.",
+      "tags": [
+        "snapshot",
+        "storage",
+        "raft"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Go implementation using interfaces, goroutines, synchronization, and protobuf/HTTP integration where applicable."
+    },
+    {
+      "id": "file:etcdserver/api/snap/snapshotter.go",
+      "type": "file",
+      "name": "snapshotter.go",
+      "filePath": "etcdserver/api/snap/snapshotter.go",
+      "summary": "Defines the snapshotter interface and manages the lifetime of snapshot database handles.",
+      "tags": [
+        "snapshot",
+        "storage",
+        "raft"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Go implementation using interfaces, goroutines, synchronization, and protobuf/HTTP integration where applicable."
+    },
+    {
+      "id": "file:etcdserver/api/snap/snapshotter_test.go",
+      "type": "file",
+      "name": "snapshotter_test.go",
+      "filePath": "etcdserver/api/snap/snapshotter_test.go",
+      "summary": "Tests releasing snapshot database handles and cleanup behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Go implementation using interfaces, goroutines, synchronization, and protobuf/HTTP integration where applicable."
+    },
+    {
+      "id": "file:etcdserver/api/v2stats/leader.go",
+      "type": "file",
+      "name": "leader.go",
+      "filePath": "etcdserver/api/v2stats/leader.go",
+      "summary": "Tracks raft leader and follower request statistics, rates, and leadership transitions.",
+      "tags": [
+        "statistics",
+        "raft",
+        "monitoring"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Go implementation using interfaces, goroutines, synchronization, and protobuf/HTTP integration where applicable."
+    },
+    {
+      "id": "function:etcdserver/api/snap/db.go:SaveDBFrom",
+      "type": "function",
+      "name": "SaveDBFrom",
+      "filePath": "etcdserver/api/snap/db.go",
+      "lineRange": [
+        37,
+        94
+      ],
+      "summary": "Implements SaveDBFrom for db behavior.",
+      "tags": [
+        "snapshot",
+        "storage",
+        "raft"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/snap/db.go:DBFilePath",
+      "type": "function",
+      "name": "DBFilePath",
+      "filePath": "etcdserver/api/snap/db.go",
+      "lineRange": [
+        98,
+        115
+      ],
+      "summary": "Implements DBFilePath for db behavior.",
+      "tags": [
+        "snapshot",
+        "storage",
+        "raft"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/snap/db.go:fsyncSnapDir",
+      "type": "function",
+      "name": "fsyncSnapDir",
+      "filePath": "etcdserver/api/snap/db.go",
+      "lineRange": [
+        123,
+        132
+      ],
+      "summary": "Implements fsyncSnapDir for db behavior.",
+      "tags": [
+        "snapshot",
+        "storage",
+        "raft"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/snap/db_test.go:TestSaveDBFromSyncsDirectory",
+      "type": "function",
+      "name": "TestSaveDBFromSyncsDirectory",
+      "filePath": "etcdserver/api/snap/db_test.go",
+      "lineRange": [
+        24,
+        65
+      ],
+      "summary": "Implements TestSaveDBFromSyncsDirectory for db_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/snap/message.go:NewMessage",
+      "type": "function",
+      "name": "NewMessage",
+      "filePath": "etcdserver/api/snap/message.go",
+      "lineRange": [
+        41,
+        48
+      ],
+      "summary": "Implements NewMessage for message behavior.",
+      "tags": [
+        "snapshot",
+        "storage",
+        "raft"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/snap/message.go:CloseNotify",
+      "type": "function",
+      "name": "CloseNotify",
+      "filePath": "etcdserver/api/snap/message.go",
+      "lineRange": [
+        53,
+        55
+      ],
+      "summary": "Implements CloseNotify for message behavior.",
+      "tags": [
+        "snapshot",
+        "storage",
+        "raft"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/snap/message.go:CloseWithError",
+      "type": "function",
+      "name": "CloseWithError",
+      "filePath": "etcdserver/api/snap/message.go",
+      "lineRange": [
+        57,
+        66
+      ],
+      "summary": "Implements CloseWithError for message behavior.",
+      "tags": [
+        "snapshot",
+        "storage",
+        "raft"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:etcdserver/api/snap/message.go:Message",
+      "type": "class",
+      "name": "Message",
+      "filePath": "etcdserver/api/snap/message.go",
+      "lineRange": [
+        34,
+        39
+      ],
+      "summary": "Defines the Message state or interface used by message.",
+      "tags": [
+        "snapshot",
+        "storage",
+        "type-definition"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/snap/snapshotter.go:New",
+      "type": "function",
+      "name": "New",
+      "filePath": "etcdserver/api/snap/snapshotter.go",
+      "lineRange": [
+        34,
+        43
+      ],
+      "summary": "Implements New for snapshotter behavior.",
+      "tags": [
+        "snapshot",
+        "storage",
+        "raft"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/snap/snapshotter.go:ReleaseSnapDBs",
+      "type": "function",
+      "name": "ReleaseSnapDBs",
+      "filePath": "etcdserver/api/snap/snapshotter.go",
+      "lineRange": [
+        45,
+        72
+      ],
+      "summary": "Implements ReleaseSnapDBs for snapshotter behavior.",
+      "tags": [
+        "snapshot",
+        "storage",
+        "raft"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/api/snap/snapshotter.go:Snapshotter",
+      "type": "class",
+      "name": "Snapshotter",
+      "filePath": "etcdserver/api/snap/snapshotter.go",
+      "lineRange": [
+        28,
+        32
+      ],
+      "summary": "Defines the Snapshotter state or interface used by snapshotter.",
+      "tags": [
+        "snapshot",
+        "storage",
+        "type-definition"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/snap/snapshotter_test.go:TestReleaseSnapDBs",
+      "type": "function",
+      "name": "TestReleaseSnapDBs",
+      "filePath": "etcdserver/api/snap/snapshotter_test.go",
+      "lineRange": [
+        29,
+        66
+      ],
+      "summary": "Implements TestReleaseSnapDBs for snapshotter_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/v2stats/leader.go:NewLeaderStats",
+      "type": "function",
+      "name": "NewLeaderStats",
+      "filePath": "etcdserver/api/v2stats/leader.go",
+      "lineRange": [
+        42,
+        53
+      ],
+      "summary": "Implements NewLeaderStats for leader behavior.",
+      "tags": [
+        "statistics",
+        "raft",
+        "monitoring"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2stats/leader.go:JSON",
+      "type": "function",
+      "name": "JSON",
+      "filePath": "etcdserver/api/v2stats/leader.go",
+      "lineRange": [
+        55,
+        65
+      ],
+      "summary": "Implements JSON for leader behavior.",
+      "tags": [
+        "statistics",
+        "raft",
+        "monitoring"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2stats/leader.go:Follower",
+      "type": "function",
+      "name": "Follower",
+      "filePath": "etcdserver/api/v2stats/leader.go",
+      "lineRange": [
+        67,
+        77
+      ],
+      "summary": "Implements Follower for leader behavior.",
+      "tags": [
+        "statistics",
+        "raft",
+        "monitoring"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2stats/leader.go:Succ",
+      "type": "function",
+      "name": "Succ",
+      "filePath": "etcdserver/api/v2stats/leader.go",
+      "lineRange": [
+        104,
+        128
+      ],
+      "summary": "Implements Succ for leader behavior.",
+      "tags": [
+        "statistics",
+        "raft",
+        "monitoring"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v2stats/leader.go:Fail",
+      "type": "function",
+      "name": "Fail",
+      "filePath": "etcdserver/api/v2stats/leader.go",
+      "lineRange": [
+        131,
+        135
+      ],
+      "summary": "Implements Fail for leader behavior.",
+      "tags": [
+        "statistics",
+        "raft",
+        "monitoring"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:etcdserver/api/v2stats/leader.go:LeaderStats",
+      "type": "class",
+      "name": "LeaderStats",
+      "filePath": "etcdserver/api/v2stats/leader.go",
+      "lineRange": [
+        28,
+        32
+      ],
+      "summary": "Defines the LeaderStats state or interface used by leader.",
+      "tags": [
+        "statistics",
+        "raft",
+        "type-definition"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/api/v2stats/leader.go:FollowerStats",
+      "type": "class",
+      "name": "FollowerStats",
+      "filePath": "etcdserver/api/v2stats/leader.go",
+      "lineRange": [
+        80,
+        85
+      ],
+      "summary": "Defines the FollowerStats state or interface used by leader.",
+      "tags": [
+        "statistics",
+        "raft",
+        "type-definition"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/api/v2stats/leader.go:LatencyStats",
+      "type": "class",
+      "name": "LatencyStats",
+      "filePath": "etcdserver/api/v2stats/leader.go",
+      "lineRange": [
+        88,
+        95
+      ],
+      "summary": "Defines the LatencyStats state or interface used by leader.",
+      "tags": [
+        "statistics",
+        "raft",
+        "type-definition"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/api/v2stats/leader.go:CountsStats",
+      "type": "class",
+      "name": "CountsStats",
+      "filePath": "etcdserver/api/v2stats/leader.go",
+      "lineRange": [
+        98,
+        101
+      ],
+      "summary": "Defines the CountsStats state or interface used by leader.",
+      "tags": [
+        "statistics",
+        "raft",
+        "type-definition"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:etcdserver/api/snap/db.go",
+      "target": "function:etcdserver/api/snap/db.go:SaveDBFrom",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/snap/db.go",
+      "target": "function:etcdserver/api/snap/db.go:SaveDBFrom",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/snap/db.go",
+      "target": "function:etcdserver/api/snap/db.go:DBFilePath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/snap/db.go",
+      "target": "function:etcdserver/api/snap/db.go:DBFilePath",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/snap/db.go",
+      "target": "function:etcdserver/api/snap/db.go:fsyncSnapDir",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/snap/db_test.go",
+      "target": "function:etcdserver/api/snap/db_test.go:TestSaveDBFromSyncsDirectory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/snap/db_test.go",
+      "target": "function:etcdserver/api/snap/db_test.go:TestSaveDBFromSyncsDirectory",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/snap/message.go",
+      "target": "function:etcdserver/api/snap/message.go:NewMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/snap/message.go",
+      "target": "function:etcdserver/api/snap/message.go:NewMessage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/snap/message.go",
+      "target": "function:etcdserver/api/snap/message.go:CloseNotify",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/snap/message.go",
+      "target": "function:etcdserver/api/snap/message.go:CloseNotify",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/snap/message.go",
+      "target": "function:etcdserver/api/snap/message.go:CloseWithError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/snap/message.go",
+      "target": "function:etcdserver/api/snap/message.go:CloseWithError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/snap/message.go",
+      "target": "class:etcdserver/api/snap/message.go:Message",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/snap/message.go",
+      "target": "class:etcdserver/api/snap/message.go:Message",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/snap/snapshotter.go",
+      "target": "function:etcdserver/api/snap/snapshotter.go:New",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/snap/snapshotter.go",
+      "target": "function:etcdserver/api/snap/snapshotter.go:New",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/snap/snapshotter.go",
+      "target": "function:etcdserver/api/snap/snapshotter.go:ReleaseSnapDBs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/snap/snapshotter.go",
+      "target": "function:etcdserver/api/snap/snapshotter.go:ReleaseSnapDBs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/snap/snapshotter.go",
+      "target": "class:etcdserver/api/snap/snapshotter.go:Snapshotter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/snap/snapshotter.go",
+      "target": "class:etcdserver/api/snap/snapshotter.go:Snapshotter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/snap/snapshotter_test.go",
+      "target": "function:etcdserver/api/snap/snapshotter_test.go:TestReleaseSnapDBs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/snap/snapshotter_test.go",
+      "target": "function:etcdserver/api/snap/snapshotter_test.go:TestReleaseSnapDBs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/leader.go",
+      "target": "function:etcdserver/api/v2stats/leader.go:NewLeaderStats",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/leader.go",
+      "target": "function:etcdserver/api/v2stats/leader.go:NewLeaderStats",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/leader.go",
+      "target": "function:etcdserver/api/v2stats/leader.go:JSON",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/leader.go",
+      "target": "function:etcdserver/api/v2stats/leader.go:JSON",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/leader.go",
+      "target": "function:etcdserver/api/v2stats/leader.go:Follower",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/leader.go",
+      "target": "function:etcdserver/api/v2stats/leader.go:Follower",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/leader.go",
+      "target": "function:etcdserver/api/v2stats/leader.go:Succ",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/leader.go",
+      "target": "function:etcdserver/api/v2stats/leader.go:Succ",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/leader.go",
+      "target": "function:etcdserver/api/v2stats/leader.go:Fail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/leader.go",
+      "target": "function:etcdserver/api/v2stats/leader.go:Fail",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/leader.go",
+      "target": "class:etcdserver/api/v2stats/leader.go:LeaderStats",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/leader.go",
+      "target": "class:etcdserver/api/v2stats/leader.go:LeaderStats",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/leader.go",
+      "target": "class:etcdserver/api/v2stats/leader.go:FollowerStats",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/leader.go",
+      "target": "class:etcdserver/api/v2stats/leader.go:FollowerStats",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/leader.go",
+      "target": "class:etcdserver/api/v2stats/leader.go:LatencyStats",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/leader.go",
+      "target": "class:etcdserver/api/v2stats/leader.go:LatencyStats",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/leader.go",
+      "target": "class:etcdserver/api/v2stats/leader.go:CountsStats",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/leader.go",
+      "target": "class:etcdserver/api/v2stats/leader.go:CountsStats",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/snap/db.go",
+      "target": "file:etcdserver/api/snap/db_test.go",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:etcdserver/api/snap/snapshotter.go",
+      "target": "file:etcdserver/api/snap/snapshotter_test.go",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}
+

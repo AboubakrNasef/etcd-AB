@@ -1,0 +1,2459 @@
+{
+  "nodes": [
+    {
+      "id": "file:etcdserver/api/rafthttp/stream_test.go",
+      "type": "file",
+      "name": "stream_test.go",
+      "filePath": "etcdserver/api/rafthttp/stream_test.go",
+      "summary": "Tests stream readers and writers, connection attachment, framing, retries, and stream lifecycle behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Go implementation using interfaces, goroutines, synchronization, and protobuf/HTTP integration where applicable."
+    },
+    {
+      "id": "file:etcdserver/api/rafthttp/transport.go",
+      "type": "file",
+      "name": "transport.go",
+      "filePath": "etcdserver/api/rafthttp/transport.go",
+      "summary": "Coordinates rafthttp peer transports, HTTP handlers, raft message routing, snapshots, and peer membership lifecycle.",
+      "tags": [
+        "raft",
+        "http",
+        "peer-communication"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Go implementation using interfaces, goroutines, synchronization, and protobuf/HTTP integration where applicable."
+    },
+    {
+      "id": "file:etcdserver/api/rafthttp/transport_bench_test.go",
+      "type": "file",
+      "name": "transport_bench_test.go",
+      "filePath": "etcdserver/api/rafthttp/transport_bench_test.go",
+      "summary": "Benchmarks raft message transmission through the rafthttp transport and provides test raft hooks.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Go implementation using interfaces, goroutines, synchronization, and protobuf/HTTP integration where applicable."
+    },
+    {
+      "id": "file:etcdserver/api/rafthttp/transport_test.go",
+      "type": "file",
+      "name": "transport_test.go",
+      "filePath": "etcdserver/api/rafthttp/transport_test.go",
+      "summary": "Tests transport startup, message delivery, peer cutting and mending, and transport shutdown.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using interfaces, goroutines, synchronization, and protobuf/HTTP integration where applicable."
+    },
+    {
+      "id": "file:etcdserver/api/rafthttp/urlpick.go",
+      "type": "file",
+      "name": "urlpick.go",
+      "filePath": "etcdserver/api/rafthttp/urlpick.go",
+      "summary": "Selects reachable peer URLs and marks endpoints unreachable for subsequent requests.",
+      "tags": [
+        "raft",
+        "http",
+        "peer-communication"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Go implementation using interfaces, goroutines, synchronization, and protobuf/HTTP integration where applicable."
+    },
+    {
+      "id": "file:etcdserver/api/rafthttp/urlpick_test.go",
+      "type": "file",
+      "name": "urlpick_test.go",
+      "filePath": "etcdserver/api/rafthttp/urlpick_test.go",
+      "summary": "Verifies URL picker selection, update, and unreachable-endpoint behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Go implementation using interfaces, goroutines, synchronization, and protobuf/HTTP integration where applicable."
+    },
+    {
+      "id": "file:etcdserver/api/rafthttp/util.go",
+      "type": "file",
+      "name": "util.go",
+      "filePath": "etcdserver/api/rafthttp/util.go",
+      "summary": "Provides rafthttp listeners, round trippers, stream transport helpers, request builders, and response checks.",
+      "tags": [
+        "raft",
+        "http",
+        "peer-communication"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using interfaces, goroutines, synchronization, and protobuf/HTTP integration where applicable."
+    },
+    {
+      "id": "file:etcdserver/api/rafthttp/util_test.go",
+      "type": "file",
+      "name": "util_test.go",
+      "filePath": "etcdserver/api/rafthttp/util_test.go",
+      "summary": "Tests rafthttp utility behavior including version comparison, transport helpers, and HTTP responses.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using interfaces, goroutines, synchronization, and protobuf/HTTP integration where applicable."
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/stream_test.go:TestStreamWriterAttachOutgoingConn",
+      "type": "function",
+      "name": "TestStreamWriterAttachOutgoingConn",
+      "filePath": "etcdserver/api/rafthttp/stream_test.go",
+      "lineRange": [
+        41,
+        89
+      ],
+      "summary": "Implements TestStreamWriterAttachOutgoingConn for stream_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/stream_test.go:TestStreamWriterAttachBadOutgoingConn",
+      "type": "function",
+      "name": "TestStreamWriterAttachBadOutgoingConn",
+      "filePath": "etcdserver/api/rafthttp/stream_test.go",
+      "lineRange": [
+        93,
+        109
+      ],
+      "summary": "Implements TestStreamWriterAttachBadOutgoingConn for stream_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/stream_test.go:TestStreamReaderDialRequest",
+      "type": "function",
+      "name": "TestStreamReaderDialRequest",
+      "filePath": "etcdserver/api/rafthttp/stream_test.go",
+      "lineRange": [
+        111,
+        142
+      ],
+      "summary": "Implements TestStreamReaderDialRequest for stream_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/stream_test.go:TestStreamReaderDialResult",
+      "type": "function",
+      "name": "TestStreamReaderDialResult",
+      "filePath": "etcdserver/api/rafthttp/stream_test.go",
+      "lineRange": [
+        146,
+        184
+      ],
+      "summary": "Implements TestStreamReaderDialResult for stream_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/stream_test.go:TestStreamReaderStopOnDial",
+      "type": "function",
+      "name": "TestStreamReaderStopOnDial",
+      "filePath": "etcdserver/api/rafthttp/stream_test.go",
+      "lineRange": [
+        187,
+        215
+      ],
+      "summary": "Implements TestStreamReaderStopOnDial for stream_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/stream_test.go:RoundTrip",
+      "type": "function",
+      "name": "RoundTrip",
+      "filePath": "etcdserver/api/rafthttp/stream_test.go",
+      "lineRange": [
+        222,
+        227
+      ],
+      "summary": "Implements RoundTrip for stream_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/stream_test.go:Read",
+      "type": "function",
+      "name": "Read",
+      "filePath": "etcdserver/api/rafthttp/stream_test.go",
+      "lineRange": [
+        232,
+        235
+      ],
+      "summary": "Implements Read for stream_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/stream_test.go:Close",
+      "type": "function",
+      "name": "Close",
+      "filePath": "etcdserver/api/rafthttp/stream_test.go",
+      "lineRange": [
+        237,
+        240
+      ],
+      "summary": "Implements Close for stream_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/stream_test.go:TestStreamReaderDialDetectUnsupport",
+      "type": "function",
+      "name": "TestStreamReaderDialDetectUnsupport",
+      "filePath": "etcdserver/api/rafthttp/stream_test.go",
+      "lineRange": [
+        244,
+        263
+      ],
+      "summary": "Implements TestStreamReaderDialDetectUnsupport for stream_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/stream_test.go:TestStream",
+      "type": "function",
+      "name": "TestStream",
+      "filePath": "etcdserver/api/rafthttp/stream_test.go",
+      "lineRange": [
+        267,
+        348
+      ],
+      "summary": "Implements TestStream for stream_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/stream_test.go:TestCheckStreamSupport",
+      "type": "function",
+      "name": "TestCheckStreamSupport",
+      "filePath": "etcdserver/api/rafthttp/stream_test.go",
+      "lineRange": [
+        350,
+        380
+      ],
+      "summary": "Implements TestCheckStreamSupport for stream_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/stream_test.go:TestStreamSupportCurrentVersion",
+      "type": "function",
+      "name": "TestStreamSupportCurrentVersion",
+      "filePath": "etcdserver/api/rafthttp/stream_test.go",
+      "lineRange": [
+        382,
+        388
+      ],
+      "summary": "Implements TestStreamSupportCurrentVersion for stream_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/stream_test.go:Write",
+      "type": "function",
+      "name": "Write",
+      "filePath": "etcdserver/api/rafthttp/stream_test.go",
+      "lineRange": [
+        406,
+        415
+      ],
+      "summary": "Implements Write for stream_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/stream_test.go:Flush",
+      "type": "function",
+      "name": "Flush",
+      "filePath": "etcdserver/api/rafthttp/stream_test.go",
+      "lineRange": [
+        417,
+        417
+      ],
+      "summary": "Implements Flush for stream_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/stream_test.go:Close#2",
+      "type": "function",
+      "name": "Close#2",
+      "filePath": "etcdserver/api/rafthttp/stream_test.go",
+      "lineRange": [
+        419,
+        422
+      ],
+      "summary": "Implements Close for stream_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/stream_test.go:Written",
+      "type": "function",
+      "name": "Written",
+      "filePath": "etcdserver/api/rafthttp/stream_test.go",
+      "lineRange": [
+        424,
+        428
+      ],
+      "summary": "Implements Written for stream_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/stream_test.go:Closed",
+      "type": "function",
+      "name": "Closed",
+      "filePath": "etcdserver/api/rafthttp/stream_test.go",
+      "lineRange": [
+        430,
+        437
+      ],
+      "summary": "Implements Closed for stream_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/stream_test.go:ServeHTTP",
+      "type": "function",
+      "name": "ServeHTTP",
+      "filePath": "etcdserver/api/rafthttp/stream_test.go",
+      "lineRange": [
+        444,
+        455
+      ],
+      "summary": "Implements ServeHTTP for stream_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:etcdserver/api/rafthttp/stream_test.go:waitReadCloser",
+      "type": "class",
+      "name": "waitReadCloser",
+      "filePath": "etcdserver/api/rafthttp/stream_test.go",
+      "lineRange": [
+        229,
+        229
+      ],
+      "summary": "Defines the waitReadCloser state or interface used by stream_test.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "type-definition"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/api/rafthttp/stream_test.go:fakeWriteFlushCloser",
+      "type": "class",
+      "name": "fakeWriteFlushCloser",
+      "filePath": "etcdserver/api/rafthttp/stream_test.go",
+      "lineRange": [
+        390,
+        396
+      ],
+      "summary": "Defines the fakeWriteFlushCloser state or interface used by stream_test.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "type-definition"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/transport.go:Start",
+      "type": "function",
+      "name": "Start",
+      "filePath": "etcdserver/api/rafthttp/transport.go",
+      "lineRange": [
+        134,
+        156
+      ],
+      "summary": "Implements Start for transport behavior.",
+      "tags": [
+        "raft",
+        "http",
+        "peer-communication"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/transport.go:Handler",
+      "type": "function",
+      "name": "Handler",
+      "filePath": "etcdserver/api/rafthttp/transport.go",
+      "lineRange": [
+        158,
+        168
+      ],
+      "summary": "Implements Handler for transport behavior.",
+      "tags": [
+        "raft",
+        "http",
+        "peer-communication"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/transport.go:Get",
+      "type": "function",
+      "name": "Get",
+      "filePath": "etcdserver/api/rafthttp/transport.go",
+      "lineRange": [
+        170,
+        174
+      ],
+      "summary": "Implements Get for transport behavior.",
+      "tags": [
+        "raft",
+        "http",
+        "peer-communication"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/transport.go:Send",
+      "type": "function",
+      "name": "Send",
+      "filePath": "etcdserver/api/rafthttp/transport.go",
+      "lineRange": [
+        176,
+        210
+      ],
+      "summary": "Implements Send for transport behavior.",
+      "tags": [
+        "raft",
+        "http",
+        "peer-communication"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/transport.go:Stop",
+      "type": "function",
+      "name": "Stop",
+      "filePath": "etcdserver/api/rafthttp/transport.go",
+      "lineRange": [
+        212,
+        231
+      ],
+      "summary": "Implements Stop for transport behavior.",
+      "tags": [
+        "raft",
+        "http",
+        "peer-communication"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/transport.go:CutPeer",
+      "type": "function",
+      "name": "CutPeer",
+      "filePath": "etcdserver/api/rafthttp/transport.go",
+      "lineRange": [
+        234,
+        246
+      ],
+      "summary": "Implements CutPeer for transport behavior.",
+      "tags": [
+        "raft",
+        "http",
+        "peer-communication"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/transport.go:MendPeer",
+      "type": "function",
+      "name": "MendPeer",
+      "filePath": "etcdserver/api/rafthttp/transport.go",
+      "lineRange": [
+        249,
+        261
+      ],
+      "summary": "Implements MendPeer for transport behavior.",
+      "tags": [
+        "raft",
+        "http",
+        "peer-communication"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/transport.go:AddRemote",
+      "type": "function",
+      "name": "AddRemote",
+      "filePath": "etcdserver/api/rafthttp/transport.go",
+      "lineRange": [
+        263,
+        294
+      ],
+      "summary": "Implements AddRemote for transport behavior.",
+      "tags": [
+        "raft",
+        "http",
+        "peer-communication"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/transport.go:AddPeer",
+      "type": "function",
+      "name": "AddPeer",
+      "filePath": "etcdserver/api/rafthttp/transport.go",
+      "lineRange": [
+        296,
+        325
+      ],
+      "summary": "Implements AddPeer for transport behavior.",
+      "tags": [
+        "raft",
+        "http",
+        "peer-communication"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/transport.go:RemovePeer",
+      "type": "function",
+      "name": "RemovePeer",
+      "filePath": "etcdserver/api/rafthttp/transport.go",
+      "lineRange": [
+        327,
+        331
+      ],
+      "summary": "Implements RemovePeer for transport behavior.",
+      "tags": [
+        "raft",
+        "http",
+        "peer-communication"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/transport.go:RemoveAllPeers",
+      "type": "function",
+      "name": "RemoveAllPeers",
+      "filePath": "etcdserver/api/rafthttp/transport.go",
+      "lineRange": [
+        333,
+        339
+      ],
+      "summary": "Implements RemoveAllPeers for transport behavior.",
+      "tags": [
+        "raft",
+        "http",
+        "peer-communication"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/transport.go:removePeer",
+      "type": "function",
+      "name": "removePeer",
+      "filePath": "etcdserver/api/rafthttp/transport.go",
+      "lineRange": [
+        342,
+        368
+      ],
+      "summary": "Implements removePeer for transport behavior.",
+      "tags": [
+        "raft",
+        "http",
+        "peer-communication"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/transport.go:UpdatePeer",
+      "type": "function",
+      "name": "UpdatePeer",
+      "filePath": "etcdserver/api/rafthttp/transport.go",
+      "lineRange": [
+        370,
+        398
+      ],
+      "summary": "Implements UpdatePeer for transport behavior.",
+      "tags": [
+        "raft",
+        "http",
+        "peer-communication"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/transport.go:ActiveSince",
+      "type": "function",
+      "name": "ActiveSince",
+      "filePath": "etcdserver/api/rafthttp/transport.go",
+      "lineRange": [
+        400,
+        407
+      ],
+      "summary": "Implements ActiveSince for transport behavior.",
+      "tags": [
+        "raft",
+        "http",
+        "peer-communication"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/transport.go:SendSnapshot",
+      "type": "function",
+      "name": "SendSnapshot",
+      "filePath": "etcdserver/api/rafthttp/transport.go",
+      "lineRange": [
+        409,
+        418
+      ],
+      "summary": "Implements SendSnapshot for transport behavior.",
+      "tags": [
+        "raft",
+        "http",
+        "peer-communication"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/transport.go:Pause",
+      "type": "function",
+      "name": "Pause",
+      "filePath": "etcdserver/api/rafthttp/transport.go",
+      "lineRange": [
+        426,
+        432
+      ],
+      "summary": "Implements Pause for transport behavior.",
+      "tags": [
+        "raft",
+        "http",
+        "peer-communication"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/transport.go:Resume",
+      "type": "function",
+      "name": "Resume",
+      "filePath": "etcdserver/api/rafthttp/transport.go",
+      "lineRange": [
+        434,
+        440
+      ],
+      "summary": "Implements Resume for transport behavior.",
+      "tags": [
+        "raft",
+        "http",
+        "peer-communication"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/transport.go:ActivePeers",
+      "type": "function",
+      "name": "ActivePeers",
+      "filePath": "etcdserver/api/rafthttp/transport.go",
+      "lineRange": [
+        445,
+        454
+      ],
+      "summary": "Implements ActivePeers for transport behavior.",
+      "tags": [
+        "raft",
+        "http",
+        "peer-communication"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:etcdserver/api/rafthttp/transport.go:Raft",
+      "type": "class",
+      "name": "Raft",
+      "filePath": "etcdserver/api/rafthttp/transport.go",
+      "lineRange": [
+        36,
+        41
+      ],
+      "summary": "Defines the Raft state or interface used by transport.",
+      "tags": [
+        "raft",
+        "http",
+        "type-definition"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/api/rafthttp/transport.go:Transporter",
+      "type": "class",
+      "name": "Transporter",
+      "filePath": "etcdserver/api/rafthttp/transport.go",
+      "lineRange": [
+        43,
+        90
+      ],
+      "summary": "Defines the Transporter state or interface used by transport.",
+      "tags": [
+        "raft",
+        "http",
+        "type-definition"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:etcdserver/api/rafthttp/transport.go:Transport",
+      "type": "class",
+      "name": "Transport",
+      "filePath": "etcdserver/api/rafthttp/transport.go",
+      "lineRange": [
+        98,
+        132
+      ],
+      "summary": "Defines the Transport state or interface used by transport.",
+      "tags": [
+        "raft",
+        "http",
+        "type-definition"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:etcdserver/api/rafthttp/transport.go:Pausable",
+      "type": "class",
+      "name": "Pausable",
+      "filePath": "etcdserver/api/rafthttp/transport.go",
+      "lineRange": [
+        421,
+        424
+      ],
+      "summary": "Defines the Pausable state or interface used by transport.",
+      "tags": [
+        "raft",
+        "http",
+        "type-definition"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/transport_bench_test.go:BenchmarkSendingMsgApp",
+      "type": "function",
+      "name": "BenchmarkSendingMsgApp",
+      "filePath": "etcdserver/api/rafthttp/transport_bench_test.go",
+      "lineRange": [
+        32,
+        94
+      ],
+      "summary": "Implements BenchmarkSendingMsgApp for transport_bench_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/transport_bench_test.go:Process",
+      "type": "function",
+      "name": "Process",
+      "filePath": "etcdserver/api/rafthttp/transport_bench_test.go",
+      "lineRange": [
+        101,
+        106
+      ],
+      "summary": "Implements Process for transport_bench_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/transport_bench_test.go:IsIDRemoved",
+      "type": "function",
+      "name": "IsIDRemoved",
+      "filePath": "etcdserver/api/rafthttp/transport_bench_test.go",
+      "lineRange": [
+        108,
+        108
+      ],
+      "summary": "Implements IsIDRemoved for transport_bench_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/transport_bench_test.go:ReportUnreachable",
+      "type": "function",
+      "name": "ReportUnreachable",
+      "filePath": "etcdserver/api/rafthttp/transport_bench_test.go",
+      "lineRange": [
+        110,
+        110
+      ],
+      "summary": "Implements ReportUnreachable for transport_bench_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/transport_bench_test.go:ReportSnapshot",
+      "type": "function",
+      "name": "ReportSnapshot",
+      "filePath": "etcdserver/api/rafthttp/transport_bench_test.go",
+      "lineRange": [
+        112,
+        112
+      ],
+      "summary": "Implements ReportSnapshot for transport_bench_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:etcdserver/api/rafthttp/transport_bench_test.go:countRaft",
+      "type": "class",
+      "name": "countRaft",
+      "filePath": "etcdserver/api/rafthttp/transport_bench_test.go",
+      "lineRange": [
+        96,
+        99
+      ],
+      "summary": "Defines the countRaft state or interface used by transport_bench_test.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "type-definition"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/transport_test.go:TestTransportSend",
+      "type": "function",
+      "name": "TestTransportSend",
+      "filePath": "etcdserver/api/rafthttp/transport_test.go",
+      "lineRange": [
+        36,
+        69
+      ],
+      "summary": "Implements TestTransportSend for transport_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/transport_test.go:TestTransportCutMend",
+      "type": "function",
+      "name": "TestTransportCutMend",
+      "filePath": "etcdserver/api/rafthttp/transport_test.go",
+      "lineRange": [
+        71,
+        98
+      ],
+      "summary": "Implements TestTransportCutMend for transport_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/transport_test.go:TestTransportAdd",
+      "type": "function",
+      "name": "TestTransportAdd",
+      "filePath": "etcdserver/api/rafthttp/transport_test.go",
+      "lineRange": [
+        100,
+        128
+      ],
+      "summary": "Implements TestTransportAdd for transport_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/transport_test.go:TestTransportRemove",
+      "type": "function",
+      "name": "TestTransportRemove",
+      "filePath": "etcdserver/api/rafthttp/transport_test.go",
+      "lineRange": [
+        130,
+        145
+      ],
+      "summary": "Implements TestTransportRemove for transport_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/transport_test.go:TestTransportRemoveIsIdempotent",
+      "type": "function",
+      "name": "TestTransportRemoveIsIdempotent",
+      "filePath": "etcdserver/api/rafthttp/transport_test.go",
+      "lineRange": [
+        147,
+        164
+      ],
+      "summary": "Implements TestTransportRemoveIsIdempotent for transport_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/transport_test.go:TestTransportUpdate",
+      "type": "function",
+      "name": "TestTransportUpdate",
+      "filePath": "etcdserver/api/rafthttp/transport_test.go",
+      "lineRange": [
+        166,
+        179
+      ],
+      "summary": "Implements TestTransportUpdate for transport_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/transport_test.go:TestTransportErrorc",
+      "type": "function",
+      "name": "TestTransportErrorc",
+      "filePath": "etcdserver/api/rafthttp/transport_test.go",
+      "lineRange": [
+        181,
+        208
+      ],
+      "summary": "Implements TestTransportErrorc for transport_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/api/rafthttp/urlpick.go:urlPicker",
+      "type": "class",
+      "name": "urlPicker",
+      "filePath": "etcdserver/api/rafthttp/urlpick.go",
+      "lineRange": [
+        24,
+        28
+      ],
+      "summary": "Defines the urlPicker state or interface used by urlpick.",
+      "tags": [
+        "raft",
+        "http",
+        "type-definition"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/urlpick_test.go:TestURLPickerPickTwice",
+      "type": "function",
+      "name": "TestURLPickerPickTwice",
+      "filePath": "etcdserver/api/rafthttp/urlpick_test.go",
+      "lineRange": [
+        26,
+        43
+      ],
+      "summary": "Implements TestURLPickerPickTwice for urlpick_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/urlpick_test.go:TestURLPickerUpdate",
+      "type": "function",
+      "name": "TestURLPickerUpdate",
+      "filePath": "etcdserver/api/rafthttp/urlpick_test.go",
+      "lineRange": [
+        45,
+        57
+      ],
+      "summary": "Implements TestURLPickerUpdate for urlpick_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/urlpick_test.go:TestURLPickerUnreachable",
+      "type": "function",
+      "name": "TestURLPickerUnreachable",
+      "filePath": "etcdserver/api/rafthttp/urlpick_test.go",
+      "lineRange": [
+        59,
+        68
+      ],
+      "summary": "Implements TestURLPickerUnreachable for urlpick_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/util.go:NewListener",
+      "type": "function",
+      "name": "NewListener",
+      "filePath": "etcdserver/api/rafthttp/util.go",
+      "lineRange": [
+        41,
+        43
+      ],
+      "summary": "Implements NewListener for util behavior.",
+      "tags": [
+        "raft",
+        "http",
+        "peer-communication"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/util.go:NewRoundTripper",
+      "type": "function",
+      "name": "NewRoundTripper",
+      "filePath": "etcdserver/api/rafthttp/util.go",
+      "lineRange": [
+        47,
+        52
+      ],
+      "summary": "Implements NewRoundTripper for util behavior.",
+      "tags": [
+        "raft",
+        "http",
+        "peer-communication"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/util.go:createPostRequest",
+      "type": "function",
+      "name": "createPostRequest",
+      "filePath": "etcdserver/api/rafthttp/util.go",
+      "lineRange": [
+        64,
+        81
+      ],
+      "summary": "Implements createPostRequest for util behavior.",
+      "tags": [
+        "raft",
+        "http",
+        "peer-communication"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/util.go:checkPostResponse",
+      "type": "function",
+      "name": "checkPostResponse",
+      "filePath": "etcdserver/api/rafthttp/util.go",
+      "lineRange": [
+        85,
+        117
+      ],
+      "summary": "Implements checkPostResponse for util behavior.",
+      "tags": [
+        "raft",
+        "http",
+        "peer-communication"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/util.go:compareMajorMinorVersion",
+      "type": "function",
+      "name": "compareMajorMinorVersion",
+      "filePath": "etcdserver/api/rafthttp/util.go",
+      "lineRange": [
+        134,
+        145
+      ],
+      "summary": "Implements compareMajorMinorVersion for util behavior.",
+      "tags": [
+        "raft",
+        "http",
+        "peer-communication"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/util.go:checkVersionCompatibility",
+      "type": "function",
+      "name": "checkVersionCompatibility",
+      "filePath": "etcdserver/api/rafthttp/util.go",
+      "lineRange": [
+        169,
+        183
+      ],
+      "summary": "Implements checkVersionCompatibility for util behavior.",
+      "tags": [
+        "raft",
+        "http",
+        "peer-communication"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/util.go:setPeerURLsHeader",
+      "type": "function",
+      "name": "setPeerURLsHeader",
+      "filePath": "etcdserver/api/rafthttp/util.go",
+      "lineRange": [
+        186,
+        196
+      ],
+      "summary": "Implements setPeerURLsHeader for util behavior.",
+      "tags": [
+        "raft",
+        "http",
+        "peer-communication"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/util_test.go:TestEntry",
+      "type": "function",
+      "name": "TestEntry",
+      "filePath": "etcdserver/api/rafthttp/util_test.go",
+      "lineRange": [
+        31,
+        52
+      ],
+      "summary": "Implements TestEntry for util_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/util_test.go:TestCompareMajorMinorVersion",
+      "type": "function",
+      "name": "TestCompareMajorMinorVersion",
+      "filePath": "etcdserver/api/rafthttp/util_test.go",
+      "lineRange": [
+        54,
+        95
+      ],
+      "summary": "Implements TestCompareMajorMinorVersion for util_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/util_test.go:TestServerVersion",
+      "type": "function",
+      "name": "TestServerVersion",
+      "filePath": "etcdserver/api/rafthttp/util_test.go",
+      "lineRange": [
+        97,
+        122
+      ],
+      "summary": "Implements TestServerVersion for util_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/util_test.go:TestMinClusterVersion",
+      "type": "function",
+      "name": "TestMinClusterVersion",
+      "filePath": "etcdserver/api/rafthttp/util_test.go",
+      "lineRange": [
+        124,
+        149
+      ],
+      "summary": "Implements TestMinClusterVersion for util_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/util_test.go:TestCheckVersionCompatibility",
+      "type": "function",
+      "name": "TestCheckVersionCompatibility",
+      "filePath": "etcdserver/api/rafthttp/util_test.go",
+      "lineRange": [
+        151,
+        196
+      ],
+      "summary": "Implements TestCheckVersionCompatibility for util_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/util_test.go:writeEntryTo",
+      "type": "function",
+      "name": "writeEntryTo",
+      "filePath": "etcdserver/api/rafthttp/util_test.go",
+      "lineRange": [
+        198,
+        209
+      ],
+      "summary": "Implements writeEntryTo for util_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/util_test.go:readEntryFrom",
+      "type": "function",
+      "name": "readEntryFrom",
+      "filePath": "etcdserver/api/rafthttp/util_test.go",
+      "lineRange": [
+        211,
+        221
+      ],
+      "summary": "Implements readEntryFrom for util_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "function:etcdserver/api/rafthttp/stream_test.go:TestStreamWriterAttachOutgoingConn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "function:etcdserver/api/rafthttp/stream_test.go:TestStreamWriterAttachOutgoingConn",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "function:etcdserver/api/rafthttp/stream_test.go:TestStreamWriterAttachBadOutgoingConn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "function:etcdserver/api/rafthttp/stream_test.go:TestStreamWriterAttachBadOutgoingConn",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "function:etcdserver/api/rafthttp/stream_test.go:TestStreamReaderDialRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "function:etcdserver/api/rafthttp/stream_test.go:TestStreamReaderDialRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "function:etcdserver/api/rafthttp/stream_test.go:TestStreamReaderDialResult",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "function:etcdserver/api/rafthttp/stream_test.go:TestStreamReaderDialResult",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "function:etcdserver/api/rafthttp/stream_test.go:TestStreamReaderStopOnDial",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "function:etcdserver/api/rafthttp/stream_test.go:TestStreamReaderStopOnDial",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "function:etcdserver/api/rafthttp/stream_test.go:RoundTrip",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "function:etcdserver/api/rafthttp/stream_test.go:RoundTrip",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "function:etcdserver/api/rafthttp/stream_test.go:Read",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "function:etcdserver/api/rafthttp/stream_test.go:Read",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "function:etcdserver/api/rafthttp/stream_test.go:Close",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "function:etcdserver/api/rafthttp/stream_test.go:Close",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "function:etcdserver/api/rafthttp/stream_test.go:TestStreamReaderDialDetectUnsupport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "function:etcdserver/api/rafthttp/stream_test.go:TestStreamReaderDialDetectUnsupport",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "function:etcdserver/api/rafthttp/stream_test.go:TestStream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "function:etcdserver/api/rafthttp/stream_test.go:TestStream",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "function:etcdserver/api/rafthttp/stream_test.go:TestCheckStreamSupport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "function:etcdserver/api/rafthttp/stream_test.go:TestCheckStreamSupport",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "function:etcdserver/api/rafthttp/stream_test.go:TestStreamSupportCurrentVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "function:etcdserver/api/rafthttp/stream_test.go:TestStreamSupportCurrentVersion",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "function:etcdserver/api/rafthttp/stream_test.go:Write",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "function:etcdserver/api/rafthttp/stream_test.go:Write",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "function:etcdserver/api/rafthttp/stream_test.go:Flush",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "function:etcdserver/api/rafthttp/stream_test.go:Flush",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "function:etcdserver/api/rafthttp/stream_test.go:Close#2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "function:etcdserver/api/rafthttp/stream_test.go:Close#2",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "function:etcdserver/api/rafthttp/stream_test.go:Written",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "function:etcdserver/api/rafthttp/stream_test.go:Written",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "function:etcdserver/api/rafthttp/stream_test.go:Closed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "function:etcdserver/api/rafthttp/stream_test.go:Closed",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "function:etcdserver/api/rafthttp/stream_test.go:ServeHTTP",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "function:etcdserver/api/rafthttp/stream_test.go:ServeHTTP",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "class:etcdserver/api/rafthttp/stream_test.go:waitReadCloser",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "class:etcdserver/api/rafthttp/stream_test.go:fakeWriteFlushCloser",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "file:etcdserver/api/v2stats/leader.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "file:etcdserver/api/v2stats/queue.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/stream_test.go",
+      "target": "file:etcdserver/api/v2stats/server.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "function:etcdserver/api/rafthttp/transport.go:Start",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "function:etcdserver/api/rafthttp/transport.go:Start",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "function:etcdserver/api/rafthttp/transport.go:Handler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "function:etcdserver/api/rafthttp/transport.go:Handler",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "function:etcdserver/api/rafthttp/transport.go:Get",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "function:etcdserver/api/rafthttp/transport.go:Get",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "function:etcdserver/api/rafthttp/transport.go:Send",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "function:etcdserver/api/rafthttp/transport.go:Send",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "function:etcdserver/api/rafthttp/transport.go:Stop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "function:etcdserver/api/rafthttp/transport.go:Stop",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "function:etcdserver/api/rafthttp/transport.go:CutPeer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "function:etcdserver/api/rafthttp/transport.go:CutPeer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "function:etcdserver/api/rafthttp/transport.go:MendPeer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "function:etcdserver/api/rafthttp/transport.go:MendPeer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "function:etcdserver/api/rafthttp/transport.go:AddRemote",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "function:etcdserver/api/rafthttp/transport.go:AddRemote",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "function:etcdserver/api/rafthttp/transport.go:AddPeer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "function:etcdserver/api/rafthttp/transport.go:AddPeer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "function:etcdserver/api/rafthttp/transport.go:RemovePeer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "function:etcdserver/api/rafthttp/transport.go:RemovePeer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "function:etcdserver/api/rafthttp/transport.go:RemoveAllPeers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "function:etcdserver/api/rafthttp/transport.go:RemoveAllPeers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "function:etcdserver/api/rafthttp/transport.go:removePeer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "function:etcdserver/api/rafthttp/transport.go:UpdatePeer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "function:etcdserver/api/rafthttp/transport.go:UpdatePeer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "function:etcdserver/api/rafthttp/transport.go:ActiveSince",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "function:etcdserver/api/rafthttp/transport.go:ActiveSince",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "function:etcdserver/api/rafthttp/transport.go:SendSnapshot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "function:etcdserver/api/rafthttp/transport.go:SendSnapshot",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "function:etcdserver/api/rafthttp/transport.go:Pause",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "function:etcdserver/api/rafthttp/transport.go:Pause",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "function:etcdserver/api/rafthttp/transport.go:Resume",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "function:etcdserver/api/rafthttp/transport.go:Resume",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "function:etcdserver/api/rafthttp/transport.go:ActivePeers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "function:etcdserver/api/rafthttp/transport.go:ActivePeers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "class:etcdserver/api/rafthttp/transport.go:Raft",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "class:etcdserver/api/rafthttp/transport.go:Raft",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "class:etcdserver/api/rafthttp/transport.go:Transporter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "class:etcdserver/api/rafthttp/transport.go:Transporter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "class:etcdserver/api/rafthttp/transport.go:Transport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "class:etcdserver/api/rafthttp/transport.go:Transport",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "class:etcdserver/api/rafthttp/transport.go:Pausable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "class:etcdserver/api/rafthttp/transport.go:Pausable",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "file:etcdserver/api/snap/db.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "file:etcdserver/api/snap/db_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "file:etcdserver/api/snap/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "file:etcdserver/api/snap/message.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "file:etcdserver/api/snap/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "file:etcdserver/api/snap/snapshotter.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "file:etcdserver/api/snap/snapshotter_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "file:etcdserver/api/v2stats/leader.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "file:etcdserver/api/v2stats/queue.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "file:etcdserver/api/v2stats/server.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport_bench_test.go",
+      "target": "function:etcdserver/api/rafthttp/transport_bench_test.go:BenchmarkSendingMsgApp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport_bench_test.go",
+      "target": "function:etcdserver/api/rafthttp/transport_bench_test.go:BenchmarkSendingMsgApp",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport_bench_test.go",
+      "target": "function:etcdserver/api/rafthttp/transport_bench_test.go:Process",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport_bench_test.go",
+      "target": "function:etcdserver/api/rafthttp/transport_bench_test.go:Process",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport_bench_test.go",
+      "target": "function:etcdserver/api/rafthttp/transport_bench_test.go:IsIDRemoved",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport_bench_test.go",
+      "target": "function:etcdserver/api/rafthttp/transport_bench_test.go:IsIDRemoved",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport_bench_test.go",
+      "target": "function:etcdserver/api/rafthttp/transport_bench_test.go:ReportUnreachable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport_bench_test.go",
+      "target": "function:etcdserver/api/rafthttp/transport_bench_test.go:ReportUnreachable",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport_bench_test.go",
+      "target": "function:etcdserver/api/rafthttp/transport_bench_test.go:ReportSnapshot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport_bench_test.go",
+      "target": "function:etcdserver/api/rafthttp/transport_bench_test.go:ReportSnapshot",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport_bench_test.go",
+      "target": "class:etcdserver/api/rafthttp/transport_bench_test.go:countRaft",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport_bench_test.go",
+      "target": "file:etcdserver/api/v2stats/leader.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport_bench_test.go",
+      "target": "file:etcdserver/api/v2stats/queue.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport_bench_test.go",
+      "target": "file:etcdserver/api/v2stats/server.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport_test.go",
+      "target": "function:etcdserver/api/rafthttp/transport_test.go:TestTransportSend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport_test.go",
+      "target": "function:etcdserver/api/rafthttp/transport_test.go:TestTransportSend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport_test.go",
+      "target": "function:etcdserver/api/rafthttp/transport_test.go:TestTransportCutMend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport_test.go",
+      "target": "function:etcdserver/api/rafthttp/transport_test.go:TestTransportCutMend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport_test.go",
+      "target": "function:etcdserver/api/rafthttp/transport_test.go:TestTransportAdd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport_test.go",
+      "target": "function:etcdserver/api/rafthttp/transport_test.go:TestTransportAdd",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport_test.go",
+      "target": "function:etcdserver/api/rafthttp/transport_test.go:TestTransportRemove",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport_test.go",
+      "target": "function:etcdserver/api/rafthttp/transport_test.go:TestTransportRemove",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport_test.go",
+      "target": "function:etcdserver/api/rafthttp/transport_test.go:TestTransportRemoveIsIdempotent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport_test.go",
+      "target": "function:etcdserver/api/rafthttp/transport_test.go:TestTransportRemoveIsIdempotent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport_test.go",
+      "target": "function:etcdserver/api/rafthttp/transport_test.go:TestTransportUpdate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport_test.go",
+      "target": "function:etcdserver/api/rafthttp/transport_test.go:TestTransportUpdate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport_test.go",
+      "target": "function:etcdserver/api/rafthttp/transport_test.go:TestTransportErrorc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport_test.go",
+      "target": "function:etcdserver/api/rafthttp/transport_test.go:TestTransportErrorc",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport_test.go",
+      "target": "file:etcdserver/api/v2stats/leader.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport_test.go",
+      "target": "file:etcdserver/api/v2stats/queue.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport_test.go",
+      "target": "file:etcdserver/api/v2stats/server.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/urlpick.go",
+      "target": "class:etcdserver/api/rafthttp/urlpick.go:urlPicker",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/urlpick_test.go",
+      "target": "function:etcdserver/api/rafthttp/urlpick_test.go:TestURLPickerPickTwice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/urlpick_test.go",
+      "target": "function:etcdserver/api/rafthttp/urlpick_test.go:TestURLPickerPickTwice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/urlpick_test.go",
+      "target": "function:etcdserver/api/rafthttp/urlpick_test.go:TestURLPickerUpdate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/urlpick_test.go",
+      "target": "function:etcdserver/api/rafthttp/urlpick_test.go:TestURLPickerUpdate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/urlpick_test.go",
+      "target": "function:etcdserver/api/rafthttp/urlpick_test.go:TestURLPickerUnreachable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/urlpick_test.go",
+      "target": "function:etcdserver/api/rafthttp/urlpick_test.go:TestURLPickerUnreachable",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/util.go",
+      "target": "function:etcdserver/api/rafthttp/util.go:NewListener",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/util.go",
+      "target": "function:etcdserver/api/rafthttp/util.go:NewListener",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/util.go",
+      "target": "function:etcdserver/api/rafthttp/util.go:NewRoundTripper",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/util.go",
+      "target": "function:etcdserver/api/rafthttp/util.go:NewRoundTripper",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/util.go",
+      "target": "function:etcdserver/api/rafthttp/util.go:createPostRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/util.go",
+      "target": "function:etcdserver/api/rafthttp/util.go:checkPostResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/util.go",
+      "target": "function:etcdserver/api/rafthttp/util.go:compareMajorMinorVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/util.go",
+      "target": "function:etcdserver/api/rafthttp/util.go:checkVersionCompatibility",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/util.go",
+      "target": "function:etcdserver/api/rafthttp/util.go:setPeerURLsHeader",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/util_test.go",
+      "target": "function:etcdserver/api/rafthttp/util_test.go:TestEntry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/util_test.go",
+      "target": "function:etcdserver/api/rafthttp/util_test.go:TestEntry",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/util_test.go",
+      "target": "function:etcdserver/api/rafthttp/util_test.go:TestCompareMajorMinorVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/util_test.go",
+      "target": "function:etcdserver/api/rafthttp/util_test.go:TestCompareMajorMinorVersion",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/util_test.go",
+      "target": "function:etcdserver/api/rafthttp/util_test.go:TestServerVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/util_test.go",
+      "target": "function:etcdserver/api/rafthttp/util_test.go:TestServerVersion",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/util_test.go",
+      "target": "function:etcdserver/api/rafthttp/util_test.go:TestMinClusterVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/util_test.go",
+      "target": "function:etcdserver/api/rafthttp/util_test.go:TestMinClusterVersion",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/util_test.go",
+      "target": "function:etcdserver/api/rafthttp/util_test.go:TestCheckVersionCompatibility",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/util_test.go",
+      "target": "function:etcdserver/api/rafthttp/util_test.go:TestCheckVersionCompatibility",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/util_test.go",
+      "target": "function:etcdserver/api/rafthttp/util_test.go:writeEntryTo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/util_test.go",
+      "target": "function:etcdserver/api/rafthttp/util_test.go:readEntryFrom",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "file:etcdserver/api/rafthttp/transport_bench_test.go",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/transport.go",
+      "target": "file:etcdserver/api/rafthttp/transport_test.go",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/urlpick.go",
+      "target": "file:etcdserver/api/rafthttp/urlpick_test.go",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/util.go",
+      "target": "file:etcdserver/api/rafthttp/util_test.go",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}
+

@@ -1,0 +1,859 @@
+{
+  "nodes": [
+    {
+      "id": "file:mock/mockstore/doc.go",
+      "type": "file",
+      "name": "doc.go",
+      "filePath": "mock/mockstore/doc.go",
+      "summary": "Documents the Go package and its role in the etcd server support layers.",
+      "tags": [
+        "mock",
+        "recorder",
+        "interface",
+        "support"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Go implementation using protobuf RPC types, raft interfaces, concurrency primitives, and Prometheus or zap integration where applicable."
+    },
+    {
+      "id": "file:mock/mockwait/doc.go",
+      "type": "file",
+      "name": "doc.go",
+      "filePath": "mock/mockwait/doc.go",
+      "summary": "Documents the Go package and its role in the etcd server support layers.",
+      "tags": [
+        "mock",
+        "recorder",
+        "interface",
+        "support"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Go implementation using protobuf RPC types, raft interfaces, concurrency primitives, and Prometheus or zap integration where applicable."
+    },
+    {
+      "id": "file:mock/mockwait/wait_recorder.go",
+      "type": "file",
+      "name": "wait_recorder.go",
+      "filePath": "mock/mockwait/wait_recorder.go",
+      "summary": "Provides wait and notification recorders for deterministic server tests.",
+      "tags": [
+        "mock",
+        "recorder",
+        "interface",
+        "support"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Go implementation using protobuf RPC types, raft interfaces, concurrency primitives, and Prometheus or zap integration where applicable."
+    },
+    {
+      "id": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "type": "file",
+      "name": "auth_client_adapter.go",
+      "filePath": "proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "summary": "Adapts the gRPC authentication server interface to a proxy client implementation.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter",
+        "client"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using protobuf RPC types, raft interfaces, concurrency primitives, and Prometheus or zap integration where applicable."
+    },
+    {
+      "id": "function:mock/mockwait/wait_recorder.go:NewRecorder",
+      "type": "function",
+      "name": "NewRecorder",
+      "filePath": "mock/mockwait/wait_recorder.go",
+      "lineRange": [
+        31,
+        34
+      ],
+      "summary": "Implements NewRecorder behavior in this component.",
+      "tags": [
+        "mock",
+        "recorder",
+        "interface"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mock/mockwait/wait_recorder.go:NewNop",
+      "type": "function",
+      "name": "NewNop",
+      "filePath": "mock/mockwait/wait_recorder.go",
+      "lineRange": [
+        35,
+        35
+      ],
+      "summary": "Implements NewNop behavior in this component.",
+      "tags": [
+        "mock",
+        "recorder",
+        "interface"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mock/mockwait/wait_recorder.go:Register",
+      "type": "function",
+      "name": "Register",
+      "filePath": "mock/mockwait/wait_recorder.go",
+      "lineRange": [
+        37,
+        40
+      ],
+      "summary": "Implements Register behavior in this component.",
+      "tags": [
+        "mock",
+        "recorder",
+        "interface"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mock/mockwait/wait_recorder.go:Trigger",
+      "type": "function",
+      "name": "Trigger",
+      "filePath": "mock/mockwait/wait_recorder.go",
+      "lineRange": [
+        42,
+        44
+      ],
+      "summary": "Implements Trigger behavior in this component.",
+      "tags": [
+        "mock",
+        "recorder",
+        "interface"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:mock/mockwait/wait_recorder.go:IsRegistered",
+      "type": "function",
+      "name": "IsRegistered",
+      "filePath": "mock/mockwait/wait_recorder.go",
+      "lineRange": [
+        46,
+        48
+      ],
+      "summary": "Implements IsRegistered behavior in this component.",
+      "tags": [
+        "mock",
+        "recorder",
+        "interface"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:mock/mockwait/wait_recorder.go:WaitRecorder",
+      "type": "class",
+      "name": "WaitRecorder",
+      "filePath": "mock/mockwait/wait_recorder.go",
+      "lineRange": [
+        22,
+        25
+      ],
+      "summary": "Defines the WaitRecorder test or adapter abstraction and its associated state and methods.",
+      "tags": [
+        "go",
+        "type-definition",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:mock/mockwait/wait_recorder.go:waitRecorder",
+      "type": "class",
+      "name": "waitRecorder",
+      "filePath": "mock/mockwait/wait_recorder.go",
+      "lineRange": [
+        27,
+        29
+      ],
+      "summary": "Defines the waitRecorder test or adapter abstraction and its associated state and methods.",
+      "tags": [
+        "go",
+        "type-definition",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:AuthServerToAuthClient",
+      "type": "function",
+      "name": "AuthServerToAuthClient",
+      "filePath": "proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "lineRange": [
+        27,
+        29
+      ],
+      "summary": "Implements AuthServerToAuthClient behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:AuthEnable",
+      "type": "function",
+      "name": "AuthEnable",
+      "filePath": "proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "lineRange": [
+        31,
+        33
+      ],
+      "summary": "Implements AuthEnable behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:AuthDisable",
+      "type": "function",
+      "name": "AuthDisable",
+      "filePath": "proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "lineRange": [
+        35,
+        37
+      ],
+      "summary": "Implements AuthDisable behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:AuthStatus",
+      "type": "function",
+      "name": "AuthStatus",
+      "filePath": "proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "lineRange": [
+        39,
+        41
+      ],
+      "summary": "Implements AuthStatus behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:Authenticate",
+      "type": "function",
+      "name": "Authenticate",
+      "filePath": "proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "lineRange": [
+        43,
+        45
+      ],
+      "summary": "Implements Authenticate behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:RoleAdd",
+      "type": "function",
+      "name": "RoleAdd",
+      "filePath": "proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "lineRange": [
+        47,
+        49
+      ],
+      "summary": "Implements RoleAdd behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:RoleDelete",
+      "type": "function",
+      "name": "RoleDelete",
+      "filePath": "proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "lineRange": [
+        51,
+        53
+      ],
+      "summary": "Implements RoleDelete behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:RoleGet",
+      "type": "function",
+      "name": "RoleGet",
+      "filePath": "proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "lineRange": [
+        55,
+        57
+      ],
+      "summary": "Implements RoleGet behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:RoleList",
+      "type": "function",
+      "name": "RoleList",
+      "filePath": "proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "lineRange": [
+        59,
+        61
+      ],
+      "summary": "Implements RoleList behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:RoleRevokePermission",
+      "type": "function",
+      "name": "RoleRevokePermission",
+      "filePath": "proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "lineRange": [
+        63,
+        65
+      ],
+      "summary": "Implements RoleRevokePermission behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:RoleGrantPermission",
+      "type": "function",
+      "name": "RoleGrantPermission",
+      "filePath": "proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "lineRange": [
+        67,
+        69
+      ],
+      "summary": "Implements RoleGrantPermission behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:UserDelete",
+      "type": "function",
+      "name": "UserDelete",
+      "filePath": "proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "lineRange": [
+        71,
+        73
+      ],
+      "summary": "Implements UserDelete behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:UserAdd",
+      "type": "function",
+      "name": "UserAdd",
+      "filePath": "proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "lineRange": [
+        75,
+        77
+      ],
+      "summary": "Implements UserAdd behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:UserGet",
+      "type": "function",
+      "name": "UserGet",
+      "filePath": "proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "lineRange": [
+        79,
+        81
+      ],
+      "summary": "Implements UserGet behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:UserList",
+      "type": "function",
+      "name": "UserList",
+      "filePath": "proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "lineRange": [
+        83,
+        85
+      ],
+      "summary": "Implements UserList behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:UserGrantRole",
+      "type": "function",
+      "name": "UserGrantRole",
+      "filePath": "proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "lineRange": [
+        87,
+        89
+      ],
+      "summary": "Implements UserGrantRole behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:UserRevokeRole",
+      "type": "function",
+      "name": "UserRevokeRole",
+      "filePath": "proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "lineRange": [
+        91,
+        93
+      ],
+      "summary": "Implements UserRevokeRole behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:UserChangePassword",
+      "type": "function",
+      "name": "UserChangePassword",
+      "filePath": "proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "lineRange": [
+        95,
+        97
+      ],
+      "summary": "Implements UserChangePassword behavior in this component.",
+      "tags": [
+        "grpc",
+        "proxy",
+        "adapter"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:proxy/grpcproxy/adapter/auth_client_adapter.go:as2ac",
+      "type": "class",
+      "name": "as2ac",
+      "filePath": "proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "lineRange": [
+        25,
+        25
+      ],
+      "summary": "Defines the as2ac test or adapter abstraction and its associated state and methods.",
+      "tags": [
+        "go",
+        "type-definition",
+        "server"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:mock/mockwait/wait_recorder.go",
+      "target": "function:mock/mockwait/wait_recorder.go:NewRecorder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mock/mockwait/wait_recorder.go",
+      "target": "function:mock/mockwait/wait_recorder.go:NewRecorder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mock/mockwait/wait_recorder.go",
+      "target": "function:mock/mockwait/wait_recorder.go:NewNop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mock/mockwait/wait_recorder.go",
+      "target": "function:mock/mockwait/wait_recorder.go:NewNop",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mock/mockwait/wait_recorder.go",
+      "target": "function:mock/mockwait/wait_recorder.go:Register",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mock/mockwait/wait_recorder.go",
+      "target": "function:mock/mockwait/wait_recorder.go:Register",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mock/mockwait/wait_recorder.go",
+      "target": "function:mock/mockwait/wait_recorder.go:Trigger",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mock/mockwait/wait_recorder.go",
+      "target": "function:mock/mockwait/wait_recorder.go:Trigger",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mock/mockwait/wait_recorder.go",
+      "target": "function:mock/mockwait/wait_recorder.go:IsRegistered",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mock/mockwait/wait_recorder.go",
+      "target": "function:mock/mockwait/wait_recorder.go:IsRegistered",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mock/mockwait/wait_recorder.go",
+      "target": "class:mock/mockwait/wait_recorder.go:WaitRecorder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:mock/mockwait/wait_recorder.go",
+      "target": "class:mock/mockwait/wait_recorder.go:WaitRecorder",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:mock/mockwait/wait_recorder.go",
+      "target": "class:mock/mockwait/wait_recorder.go:waitRecorder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:AuthServerToAuthClient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:AuthServerToAuthClient",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:AuthEnable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:AuthEnable",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:AuthDisable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:AuthDisable",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:AuthStatus",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:AuthStatus",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:Authenticate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:Authenticate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:RoleAdd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:RoleAdd",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:RoleDelete",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:RoleDelete",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:RoleGet",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:RoleGet",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:RoleList",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:RoleList",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:RoleRevokePermission",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:RoleRevokePermission",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:RoleGrantPermission",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:RoleGrantPermission",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:UserDelete",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:UserDelete",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:UserAdd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:UserAdd",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:UserGet",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:UserGet",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:UserList",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:UserList",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:UserGrantRole",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:UserGrantRole",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:UserRevokeRole",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:UserRevokeRole",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:UserChangePassword",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "function:proxy/grpcproxy/adapter/auth_client_adapter.go:UserChangePassword",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "target": "class:proxy/grpcproxy/adapter/auth_client_adapter.go:as2ac",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    }
+  ]
+}
+

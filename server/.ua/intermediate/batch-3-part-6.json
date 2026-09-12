@@ -1,0 +1,1250 @@
+{
+  "nodes": [
+    {
+      "id": "file:storage/schema/auth_users.go",
+      "type": "file",
+      "name": "auth_users.go",
+      "filePath": "storage/schema/auth_users.go",
+      "summary": "Defines backend persistence helpers for auth users data, including safe reads, writes, and bucket management.",
+      "tags": [
+        "schema",
+        "backend",
+        "persistence",
+        "serialization"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using backend transactions and protobuf-backed storage structures."
+    },
+    {
+      "id": "file:storage/schema/auth_users_test.go",
+      "type": "file",
+      "name": "auth_users_test.go",
+      "filePath": "storage/schema/auth_users_test.go",
+      "summary": "Tests the auth_users storage behavior, including persistence, transactions, and edge cases.",
+      "tags": [
+        "test",
+        "schema",
+        "backend",
+        "persistence"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using backend transactions and protobuf-backed storage structures."
+    },
+    {
+      "id": "file:storage/schema/bucket.go",
+      "type": "file",
+      "name": "bucket.go",
+      "filePath": "storage/schema/bucket.go",
+      "summary": "Defines backend persistence helpers for bucket data, including safe reads, writes, and bucket management.",
+      "tags": [
+        "schema",
+        "backend",
+        "persistence",
+        "serialization"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using backend transactions and protobuf-backed storage structures."
+    },
+    {
+      "id": "function:storage/schema/auth_users.go:GetUser",
+      "type": "function",
+      "name": "GetUser",
+      "filePath": "storage/schema/auth_users.go",
+      "lineRange": [
+        25,
+        30
+      ],
+      "summary": "Implements GetUser behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/auth_users.go:UnsafeGetUser",
+      "type": "function",
+      "name": "UnsafeGetUser",
+      "filePath": "storage/schema/auth_users.go",
+      "lineRange": [
+        32,
+        34
+      ],
+      "summary": "Implements GetUser behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/auth_users.go:UnsafeGetAllUsers",
+      "type": "function",
+      "name": "UnsafeGetAllUsers",
+      "filePath": "storage/schema/auth_users.go",
+      "lineRange": [
+        36,
+        38
+      ],
+      "summary": "Implements GetAllUsers behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/auth_users.go:UnsafePutUser",
+      "type": "function",
+      "name": "UnsafePutUser",
+      "filePath": "storage/schema/auth_users.go",
+      "lineRange": [
+        40,
+        46
+      ],
+      "summary": "Implements PutUser behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/auth_users.go:UnsafeDeleteUser",
+      "type": "function",
+      "name": "UnsafeDeleteUser",
+      "filePath": "storage/schema/auth_users.go",
+      "lineRange": [
+        48,
+        50
+      ],
+      "summary": "Implements DeleteUser behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/auth_users.go:unsafeGetUser",
+      "type": "function",
+      "name": "unsafeGetUser",
+      "filePath": "storage/schema/auth_users.go",
+      "lineRange": [
+        56,
+        72
+      ],
+      "summary": "Implements unsafeGetUser behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/auth_users.go:GetAllUsers",
+      "type": "function",
+      "name": "GetAllUsers",
+      "filePath": "storage/schema/auth_users.go",
+      "lineRange": [
+        74,
+        79
+      ],
+      "summary": "Implements GetAllUsers behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/auth_users.go:unsafeGetAllUsers",
+      "type": "function",
+      "name": "unsafeGetAllUsers",
+      "filePath": "storage/schema/auth_users.go",
+      "lineRange": [
+        85,
+        109
+      ],
+      "summary": "Implements unsafeGetAllUsers behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/schema/auth_users_test.go:TestGetAllUsers",
+      "type": "function",
+      "name": "TestGetAllUsers",
+      "filePath": "storage/schema/auth_users_test.go",
+      "lineRange": [
+        31,
+        124
+      ],
+      "summary": "Implements GetAllUsers behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/schema/auth_users_test.go:TestGetUser",
+      "type": "function",
+      "name": "TestGetUser",
+      "filePath": "storage/schema/auth_users_test.go",
+      "lineRange": [
+        126,
+        211
+      ],
+      "summary": "Implements GetUser behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/schema/bucket.go:ID",
+      "type": "function",
+      "name": "ID",
+      "filePath": "storage/schema/bucket.go",
+      "lineRange": [
+        67,
+        67
+      ],
+      "summary": "Implements ID behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/bucket.go:Name",
+      "type": "function",
+      "name": "Name",
+      "filePath": "storage/schema/bucket.go",
+      "lineRange": [
+        68,
+        68
+      ],
+      "summary": "Implements Name behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/bucket.go:String",
+      "type": "function",
+      "name": "String",
+      "filePath": "storage/schema/bucket.go",
+      "lineRange": [
+        69,
+        69
+      ],
+      "summary": "Implements String behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/bucket.go:IsSafeRangeBucket",
+      "type": "function",
+      "name": "IsSafeRangeBucket",
+      "filePath": "storage/schema/bucket.go",
+      "lineRange": [
+        70,
+        70
+      ],
+      "summary": "Implements IsSafeRangeBucket behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/bucket.go:DefaultIgnores",
+      "type": "function",
+      "name": "DefaultIgnores",
+      "filePath": "storage/schema/bucket.go",
+      "lineRange": [
+        90,
+        96
+      ],
+      "summary": "Implements DefaultIgnores behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/bucket.go:BackendMemberKey",
+      "type": "function",
+      "name": "BackendMemberKey",
+      "filePath": "storage/schema/bucket.go",
+      "lineRange": [
+        98,
+        100
+      ],
+      "summary": "Implements BackendMemberKey behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:storage/schema/bucket.go:bucket",
+      "type": "class",
+      "name": "bucket",
+      "filePath": "storage/schema/bucket.go",
+      "lineRange": [
+        61,
+        65
+      ],
+      "summary": "Defines the bucket storage abstraction and its associated state.",
+      "tags": [
+        "storage",
+        "type-definition",
+        "backend"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:storage/schema/auth_users.go",
+      "target": "function:storage/schema/auth_users.go:GetUser",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/auth_users.go",
+      "target": "function:storage/schema/auth_users.go:GetUser",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/auth_users.go",
+      "target": "function:storage/schema/auth_users.go:UnsafeGetUser",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/auth_users.go",
+      "target": "function:storage/schema/auth_users.go:UnsafeGetUser",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/auth_users.go",
+      "target": "function:storage/schema/auth_users.go:UnsafeGetAllUsers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/auth_users.go",
+      "target": "function:storage/schema/auth_users.go:UnsafeGetAllUsers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/auth_users.go",
+      "target": "function:storage/schema/auth_users.go:UnsafePutUser",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/auth_users.go",
+      "target": "function:storage/schema/auth_users.go:UnsafePutUser",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/auth_users.go",
+      "target": "function:storage/schema/auth_users.go:UnsafeDeleteUser",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/auth_users.go",
+      "target": "function:storage/schema/auth_users.go:UnsafeDeleteUser",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/auth_users.go",
+      "target": "function:storage/schema/auth_users.go:unsafeGetUser",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/auth_users.go",
+      "target": "function:storage/schema/auth_users.go:GetAllUsers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/auth_users.go",
+      "target": "function:storage/schema/auth_users.go:GetAllUsers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/auth_users.go",
+      "target": "function:storage/schema/auth_users.go:unsafeGetAllUsers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "function:storage/schema/auth_users_test.go:TestGetAllUsers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "function:storage/schema/auth_users_test.go:TestGetAllUsers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "function:storage/schema/auth_users_test.go:TestGetUser",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "function:storage/schema/auth_users_test.go:TestGetUser",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/bucket.go",
+      "target": "function:storage/schema/bucket.go:ID",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/bucket.go",
+      "target": "function:storage/schema/bucket.go:ID",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/bucket.go",
+      "target": "function:storage/schema/bucket.go:Name",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/bucket.go",
+      "target": "function:storage/schema/bucket.go:Name",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/bucket.go",
+      "target": "function:storage/schema/bucket.go:String",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/bucket.go",
+      "target": "function:storage/schema/bucket.go:String",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/bucket.go",
+      "target": "function:storage/schema/bucket.go:IsSafeRangeBucket",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/bucket.go",
+      "target": "function:storage/schema/bucket.go:IsSafeRangeBucket",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/bucket.go",
+      "target": "function:storage/schema/bucket.go:DefaultIgnores",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/bucket.go",
+      "target": "function:storage/schema/bucket.go:DefaultIgnores",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/bucket.go",
+      "target": "function:storage/schema/bucket.go:BackendMemberKey",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/bucket.go",
+      "target": "function:storage/schema/bucket.go:BackendMemberKey",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/bucket.go",
+      "target": "class:storage/schema/bucket.go:bucket",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/auth_users.go",
+      "target": "file:storage/backend/backend.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users.go",
+      "target": "file:storage/backend/backend_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users.go",
+      "target": "file:storage/backend/backend_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users.go",
+      "target": "file:storage/backend/batch_tx.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users.go",
+      "target": "file:storage/backend/batch_tx_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users.go",
+      "target": "file:storage/backend/config_default.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users.go",
+      "target": "file:storage/backend/config_linux.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users.go",
+      "target": "file:storage/backend/config_windows.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users.go",
+      "target": "file:storage/backend/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users.go",
+      "target": "file:storage/backend/export_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users.go",
+      "target": "file:storage/backend/hooks.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users.go",
+      "target": "file:storage/backend/hooks_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users.go",
+      "target": "file:storage/backend/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users.go",
+      "target": "file:storage/backend/read_tx.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users.go",
+      "target": "file:storage/backend/tx_buffer.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users.go",
+      "target": "file:storage/backend/tx_buffer_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users.go",
+      "target": "file:storage/backend/verify.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users.go",
+      "target": "file:storage/backend/verify_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "file:auth/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "file:auth/jwt.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "file:auth/jwt_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "file:auth/main_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "file:auth/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "file:auth/nop.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "file:auth/options.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "file:auth/range_perm_cache.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "file:auth/range_perm_cache_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "file:auth/simple_token.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "file:auth/simple_token_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "file:auth/store.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "file:auth/store_mock_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "file:auth/store_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "file:storage/backend/backend.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "file:storage/backend/backend_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "file:storage/backend/backend_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "file:storage/backend/batch_tx.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "file:storage/backend/batch_tx_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "file:storage/backend/config_default.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "file:storage/backend/config_linux.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "file:storage/backend/config_windows.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "file:storage/backend/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "file:storage/backend/export_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "file:storage/backend/hooks.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "file:storage/backend/hooks_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "file:storage/backend/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "file:storage/backend/read_tx.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "file:storage/backend/testing/betesting.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "file:storage/backend/tx_buffer.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "file:storage/backend/tx_buffer_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "file:storage/backend/verify.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/auth_users_test.go",
+      "target": "file:storage/backend/verify_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/bucket.go",
+      "target": "file:storage/backend/backend.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/bucket.go",
+      "target": "file:storage/backend/backend_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/bucket.go",
+      "target": "file:storage/backend/backend_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/bucket.go",
+      "target": "file:storage/backend/batch_tx.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/bucket.go",
+      "target": "file:storage/backend/batch_tx_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/bucket.go",
+      "target": "file:storage/backend/config_default.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/bucket.go",
+      "target": "file:storage/backend/config_linux.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/bucket.go",
+      "target": "file:storage/backend/config_windows.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/bucket.go",
+      "target": "file:storage/backend/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/bucket.go",
+      "target": "file:storage/backend/export_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/bucket.go",
+      "target": "file:storage/backend/hooks.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/bucket.go",
+      "target": "file:storage/backend/hooks_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/bucket.go",
+      "target": "file:storage/backend/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/bucket.go",
+      "target": "file:storage/backend/read_tx.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/bucket.go",
+      "target": "file:storage/backend/tx_buffer.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/bucket.go",
+      "target": "file:storage/backend/tx_buffer_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/bucket.go",
+      "target": "file:storage/backend/verify.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/bucket.go",
+      "target": "file:storage/backend/verify_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:storage/schema/auth_users.go:UnsafePutUser",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafePut",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth_users.go:UnsafeDeleteUser",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeDelete",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth_users.go:unsafeGetUser",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeRange",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth_users.go:unsafeGetUser",
+      "target": "function:storage/schema/bucket.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth_users.go:unsafeGetAllUsers",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeForEach",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth_users_test.go:TestGetAllUsers",
+      "target": "function:storage/schema/auth_users.go:UnsafePutUser",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth_users_test.go:TestGetAllUsers",
+      "target": "function:storage/schema/auth_users.go:UnsafePutUser",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth_users_test.go:TestGetAllUsers",
+      "target": "function:storage/schema/auth_users.go:UnsafePutUser",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth_users_test.go:TestGetAllUsers",
+      "target": "function:storage/schema/auth_users.go:UnsafeDeleteUser",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth_users_test.go:TestGetAllUsers",
+      "target": "function:storage/schema/auth_users.go:UnsafePutUser",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth_users_test.go:TestGetAllUsers",
+      "target": "function:storage/schema/auth_users.go:UnsafePutUser",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth_users_test.go:TestGetAllUsers",
+      "target": "function:storage/schema/auth_users.go:UnsafePutUser",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth_users_test.go:TestGetAllUsers",
+      "target": "function:storage/schema/auth.go:NewAuthBackend",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth_users_test.go:TestGetAllUsers",
+      "target": "function:storage/schema/auth.go:CreateAuthBuckets",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth_users_test.go:TestGetAllUsers",
+      "target": "function:storage/schema/auth.go:NewAuthBackend",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth_users_test.go:TestGetAllUsers",
+      "target": "function:storage/schema/auth_users.go:UnsafeGetAllUsers",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth_users_test.go:TestGetUser",
+      "target": "function:storage/schema/auth_users.go:UnsafePutUser",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth_users_test.go:TestGetUser",
+      "target": "function:storage/schema/auth_users.go:UnsafePutUser",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth_users_test.go:TestGetUser",
+      "target": "function:storage/schema/auth_users.go:UnsafeDeleteUser",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth_users_test.go:TestGetUser",
+      "target": "function:storage/schema/auth_users.go:UnsafePutUser",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth_users_test.go:TestGetUser",
+      "target": "function:storage/schema/auth_users.go:UnsafePutUser",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth_users_test.go:TestGetUser",
+      "target": "function:storage/schema/auth.go:NewAuthBackend",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth_users_test.go:TestGetUser",
+      "target": "function:storage/schema/auth.go:CreateAuthBuckets",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth_users_test.go:TestGetUser",
+      "target": "function:storage/schema/auth.go:NewAuthBackend",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/auth_users_test.go:TestGetUser",
+      "target": "function:storage/schema/auth_users.go:GetUser",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/bucket.go:DefaultIgnores",
+      "target": "function:storage/mvcc/kvstore_test.go:Equal",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/bucket.go:DefaultIgnores",
+      "target": "function:storage/mvcc/kvstore_test.go:Equal",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/bucket.go:DefaultIgnores",
+      "target": "function:storage/mvcc/kvstore_test.go:Equal",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/bucket.go:DefaultIgnores",
+      "target": "function:storage/mvcc/kvstore_test.go:Equal",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/auth_users.go",
+      "target": "file:storage/schema/auth_users_test.go",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

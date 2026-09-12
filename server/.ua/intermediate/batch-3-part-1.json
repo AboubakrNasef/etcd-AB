@@ -1,0 +1,3654 @@
+{
+  "nodes": [
+    {
+      "id": "file:storage/mvcc/kvstore_bench_test.go",
+      "type": "file",
+      "name": "kvstore_bench_test.go",
+      "filePath": "storage/mvcc/kvstore_bench_test.go",
+      "summary": "Tests the kvstore_bench storage behavior, including persistence, transactions, and edge cases.",
+      "tags": [
+        "test",
+        "mvcc",
+        "storage",
+        "transactions"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using backend transactions and protobuf-backed storage structures."
+    },
+    {
+      "id": "file:storage/mvcc/kvstore_compaction.go",
+      "type": "file",
+      "name": "kvstore_compaction.go",
+      "filePath": "storage/mvcc/kvstore_compaction.go",
+      "summary": "Schedules MVCC compaction, removes obsolete revisions from the backend, records compaction metrics, and updates compaction state.",
+      "tags": [
+        "mvcc",
+        "storage",
+        "persistence",
+        "transactions"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using backend transactions and protobuf-backed storage structures."
+    },
+    {
+      "id": "file:storage/mvcc/kvstore_test.go",
+      "type": "file",
+      "name": "kvstore_test.go",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "summary": "Tests the kvstore storage behavior, including persistence, transactions, and edge cases.",
+      "tags": [
+        "test",
+        "mvcc",
+        "storage",
+        "transactions"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Go implementation using backend transactions and protobuf-backed storage structures."
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_bench_test.go:BenchmarkStorePut",
+      "type": "function",
+      "name": "BenchmarkStorePut",
+      "filePath": "storage/mvcc/kvstore_bench_test.go",
+      "lineRange": [
+        30,
+        44
+      ],
+      "summary": "Implements StorePut behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_bench_test.go:BenchmarkStoreRangeKey1",
+      "type": "function",
+      "name": "BenchmarkStoreRangeKey1",
+      "filePath": "storage/mvcc/kvstore_bench_test.go",
+      "lineRange": [
+        46,
+        46
+      ],
+      "summary": "Implements StoreRangeKey1 behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_bench_test.go:BenchmarkStoreRangeKey100",
+      "type": "function",
+      "name": "BenchmarkStoreRangeKey100",
+      "filePath": "storage/mvcc/kvstore_bench_test.go",
+      "lineRange": [
+        47,
+        47
+      ],
+      "summary": "Implements StoreRangeKey100 behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_bench_test.go:benchmarkStoreRange",
+      "type": "function",
+      "name": "benchmarkStoreRange",
+      "filePath": "storage/mvcc/kvstore_bench_test.go",
+      "lineRange": [
+        49,
+        74
+      ],
+      "summary": "Implements benchmarkStoreRange behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_bench_test.go:BenchmarkConsistentIndex",
+      "type": "function",
+      "name": "BenchmarkConsistentIndex",
+      "filePath": "storage/mvcc/kvstore_bench_test.go",
+      "lineRange": [
+        76,
+        95
+      ],
+      "summary": "Implements ConsistentIndex behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_bench_test.go:BenchmarkStorePutUpdate",
+      "type": "function",
+      "name": "BenchmarkStorePutUpdate",
+      "filePath": "storage/mvcc/kvstore_bench_test.go",
+      "lineRange": [
+        98,
+        111
+      ],
+      "summary": "Implements StorePutUpdate behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_bench_test.go:BenchmarkStoreTxnPut",
+      "type": "function",
+      "name": "BenchmarkStoreTxnPut",
+      "filePath": "storage/mvcc/kvstore_bench_test.go",
+      "lineRange": [
+        116,
+        133
+      ],
+      "summary": "Implements StoreTxnPut behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_bench_test.go:benchmarkStoreRestore",
+      "type": "function",
+      "name": "benchmarkStoreRestore",
+      "filePath": "storage/mvcc/kvstore_bench_test.go",
+      "lineRange": [
+        136,
+        159
+      ],
+      "summary": "Implements benchmarkStoreRestore behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_bench_test.go:BenchmarkStoreRestoreRevs1",
+      "type": "function",
+      "name": "BenchmarkStoreRestoreRevs1",
+      "filePath": "storage/mvcc/kvstore_bench_test.go",
+      "lineRange": [
+        161,
+        163
+      ],
+      "summary": "Implements StoreRestoreRevs1 behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_bench_test.go:BenchmarkStoreRestoreRevs10",
+      "type": "function",
+      "name": "BenchmarkStoreRestoreRevs10",
+      "filePath": "storage/mvcc/kvstore_bench_test.go",
+      "lineRange": [
+        165,
+        167
+      ],
+      "summary": "Implements StoreRestoreRevs10 behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_bench_test.go:BenchmarkStoreRestoreRevs20",
+      "type": "function",
+      "name": "BenchmarkStoreRestoreRevs20",
+      "filePath": "storage/mvcc/kvstore_bench_test.go",
+      "lineRange": [
+        169,
+        171
+      ],
+      "summary": "Implements StoreRestoreRevs20 behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_compaction.go:scheduleCompaction",
+      "type": "function",
+      "name": "scheduleCompaction",
+      "filePath": "storage/mvcc/kvstore_compaction.go",
+      "lineRange": [
+        28,
+        100
+      ],
+      "summary": "Implements scheduleCompaction behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:TestStoreRev",
+      "type": "function",
+      "name": "TestStoreRev",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        48,
+        59
+      ],
+      "summary": "Implements StoreRev behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:TestStorePut",
+      "type": "function",
+      "name": "TestStorePut",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        61,
+        181
+      ],
+      "summary": "Implements StorePut behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:TestStoreRange",
+      "type": "function",
+      "name": "TestStoreRange",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        183,
+        254
+      ],
+      "summary": "Implements StoreRange behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:TestStoreDeleteRange",
+      "type": "function",
+      "name": "TestStoreDeleteRange",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        256,
+        330
+      ],
+      "summary": "Implements StoreDeleteRange behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:TestStoreCompact",
+      "type": "function",
+      "name": "TestStoreCompact",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        332,
+        372
+      ],
+      "summary": "Implements StoreCompact behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:TestStoreRestore",
+      "type": "function",
+      "name": "TestStoreRestore",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        374,
+        436
+      ],
+      "summary": "Implements StoreRestore behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:TestRestoreDelete",
+      "type": "function",
+      "name": "TestRestoreDelete",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        438,
+        486
+      ],
+      "summary": "Implements RestoreDelete behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:TestRestoreContinueUnfinishedCompaction",
+      "type": "function",
+      "name": "TestRestoreContinueUnfinishedCompaction",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        488,
+        547
+      ],
+      "summary": "Implements RestoreContinueUnfinishedCompaction behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:TestHashKVWhenCompacting",
+      "type": "function",
+      "name": "TestHashKVWhenCompacting",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        555,
+        650
+      ],
+      "summary": "Implements HashKVWhenCompacting behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:TestHashKVWithCompactedAndFutureRevisions",
+      "type": "function",
+      "name": "TestHashKVWithCompactedAndFutureRevisions",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        654,
+        683
+      ],
+      "summary": "Implements HashKVWithCompactedAndFutureRevisions behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:TestHashKVZeroRevision",
+      "type": "function",
+      "name": "TestHashKVZeroRevision",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        687,
+        712
+      ],
+      "summary": "Implements HashKVZeroRevision behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:TestTxnPut",
+      "type": "function",
+      "name": "TestTxnPut",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        714,
+        733
+      ],
+      "summary": "Implements TxnPut behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:TestConcurrentReadNotBlockingWrite",
+      "type": "function",
+      "name": "TestConcurrentReadNotBlockingWrite",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        736,
+        795
+      ],
+      "summary": "Implements ConcurrentReadNotBlockingWrite behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:TestConcurrentReadTxAndWrite",
+      "type": "function",
+      "name": "TestConcurrentReadTxAndWrite",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        798,
+        876
+      ],
+      "summary": "Implements ConcurrentReadTxAndWrite behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:Len",
+      "type": "function",
+      "name": "Len",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        885,
+        885
+      ],
+      "summary": "Implements Len behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:Less",
+      "type": "function",
+      "name": "Less",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        886,
+        886
+      ],
+      "summary": "Implements Less behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:Swap",
+      "type": "function",
+      "name": "Swap",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        887,
+        887
+      ],
+      "summary": "Implements Swap behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:merge",
+      "type": "function",
+      "name": "merge",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        889,
+        902
+      ],
+      "summary": "Implements merge behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:newFakeStore",
+      "type": "function",
+      "name": "newFakeStore",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        916,
+        938
+      ],
+      "summary": "Implements newFakeStore behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:LockInsideApply",
+      "type": "function",
+      "name": "LockInsideApply",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        960,
+        960
+      ],
+      "summary": "Implements LockInsideApply behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:LockOutsideApply",
+      "type": "function",
+      "name": "LockOutsideApply",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        961,
+        961
+      ],
+      "summary": "Implements LockOutsideApply behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:Lock",
+      "type": "function",
+      "name": "Lock",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        962,
+        962
+      ],
+      "summary": "Implements Lock behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:Unlock",
+      "type": "function",
+      "name": "Unlock",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        963,
+        963
+      ],
+      "summary": "Implements Unlock behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:RLock",
+      "type": "function",
+      "name": "RLock",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        964,
+        964
+      ],
+      "summary": "Implements RLock behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:RUnlock",
+      "type": "function",
+      "name": "RUnlock",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        965,
+        965
+      ],
+      "summary": "Implements RUnlock behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:UnsafeCreateBucket",
+      "type": "function",
+      "name": "UnsafeCreateBucket",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        966,
+        966
+      ],
+      "summary": "Implements CreateBucket behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:UnsafeDeleteBucket",
+      "type": "function",
+      "name": "UnsafeDeleteBucket",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        967,
+        967
+      ],
+      "summary": "Implements DeleteBucket behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:UnsafePut",
+      "type": "function",
+      "name": "UnsafePut",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        968,
+        970
+      ],
+      "summary": "Implements Put behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:UnsafeSeqPut",
+      "type": "function",
+      "name": "UnsafeSeqPut",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        972,
+        974
+      ],
+      "summary": "Implements SeqPut behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:UnsafeRange",
+      "type": "function",
+      "name": "UnsafeRange",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        976,
+        980
+      ],
+      "summary": "Implements Range behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:UnsafeDelete",
+      "type": "function",
+      "name": "UnsafeDelete",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        982,
+        984
+      ],
+      "summary": "Implements Delete behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:UnsafeForEach",
+      "type": "function",
+      "name": "UnsafeForEach",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        986,
+        988
+      ],
+      "summary": "Implements ForEach behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:Commit",
+      "type": "function",
+      "name": "Commit",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        989,
+        989
+      ],
+      "summary": "Implements Commit behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:CommitAndStop",
+      "type": "function",
+      "name": "CommitAndStop",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        990,
+        990
+      ],
+      "summary": "Implements CommitAndStop behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:BatchTx",
+      "type": "function",
+      "name": "BatchTx",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        996,
+        996
+      ],
+      "summary": "Implements BatchTx behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:ReadTx",
+      "type": "function",
+      "name": "ReadTx",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        997,
+        997
+      ],
+      "summary": "Implements ReadTx behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:ConcurrentReadTx",
+      "type": "function",
+      "name": "ConcurrentReadTx",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        998,
+        998
+      ],
+      "summary": "Implements ConcurrentReadTx behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:Hash",
+      "type": "function",
+      "name": "Hash",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        999,
+        999
+      ],
+      "summary": "Implements Hash behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:Size",
+      "type": "function",
+      "name": "Size",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        1000,
+        1000
+      ],
+      "summary": "Implements Size behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:SizeInUse",
+      "type": "function",
+      "name": "SizeInUse",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        1001,
+        1001
+      ],
+      "summary": "Implements SizeInUse behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:OpenReadTxN",
+      "type": "function",
+      "name": "OpenReadTxN",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        1002,
+        1002
+      ],
+      "summary": "Implements OpenReadTxN behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:Snapshot",
+      "type": "function",
+      "name": "Snapshot",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        1003,
+        1003
+      ],
+      "summary": "Implements Snapshot behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:ForceCommit",
+      "type": "function",
+      "name": "ForceCommit",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        1004,
+        1004
+      ],
+      "summary": "Implements ForceCommit behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:Defrag",
+      "type": "function",
+      "name": "Defrag",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        1005,
+        1005
+      ],
+      "summary": "Implements Defrag behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:Close",
+      "type": "function",
+      "name": "Close",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        1006,
+        1006
+      ],
+      "summary": "Implements Close behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:SetTxPostLockInsideApplyHook",
+      "type": "function",
+      "name": "SetTxPostLockInsideApplyHook",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        1007,
+        1007
+      ],
+      "summary": "Implements SetTxPostLockInsideApplyHook behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:Revisions",
+      "type": "function",
+      "name": "Revisions",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        1036,
+        1042
+      ],
+      "summary": "Implements Revisions behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:CountRevisions",
+      "type": "function",
+      "name": "CountRevisions",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        1044,
+        1047
+      ],
+      "summary": "Implements CountRevisions behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:Get",
+      "type": "function",
+      "name": "Get",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        1049,
+        1053
+      ],
+      "summary": "Implements Get behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:Range",
+      "type": "function",
+      "name": "Range",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        1055,
+        1059
+      ],
+      "summary": "Implements Range behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:Put",
+      "type": "function",
+      "name": "Put",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        1061,
+        1063
+      ],
+      "summary": "Implements Put behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:Tombstone",
+      "type": "function",
+      "name": "Tombstone",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        1065,
+        1068
+      ],
+      "summary": "Implements Tombstone behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:RangeSince",
+      "type": "function",
+      "name": "RangeSince",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        1070,
+        1074
+      ],
+      "summary": "Implements RangeSince behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:Compact",
+      "type": "function",
+      "name": "Compact",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        1076,
+        1079
+      ],
+      "summary": "Implements Compact behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:Keep",
+      "type": "function",
+      "name": "Keep",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        1081,
+        1084
+      ],
+      "summary": "Implements Keep behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:Equal",
+      "type": "function",
+      "name": "Equal",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        1085,
+        1085
+      ],
+      "summary": "Implements Equal behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:Insert",
+      "type": "function",
+      "name": "Insert",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        1087,
+        1089
+      ],
+      "summary": "Implements Insert behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:KeyIndex",
+      "type": "function",
+      "name": "KeyIndex",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        1091,
+        1094
+      ],
+      "summary": "Implements KeyIndex behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/mvcc/kvstore_test.go:createBytesSlice",
+      "type": "function",
+      "name": "createBytesSlice",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        1096,
+        1106
+      ],
+      "summary": "Implements createBytesSlice behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:storage/mvcc/kvstore_test.go:fakeBatchTx",
+      "type": "class",
+      "name": "fakeBatchTx",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        955,
+        958
+      ],
+      "summary": "Defines the fakeBatchTx storage abstraction and its associated state.",
+      "tags": [
+        "storage",
+        "type-definition",
+        "backend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:storage/mvcc/kvstore_test.go:fakeBackend",
+      "type": "class",
+      "name": "fakeBackend",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        992,
+        994
+      ],
+      "summary": "Defines the fakeBackend storage abstraction and its associated state.",
+      "tags": [
+        "storage",
+        "type-definition",
+        "backend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:storage/mvcc/kvstore_test.go:fakeIndex",
+      "type": "class",
+      "name": "fakeIndex",
+      "filePath": "storage/mvcc/kvstore_test.go",
+      "lineRange": [
+        1028,
+        1034
+      ],
+      "summary": "Defines the fakeIndex storage abstraction and its associated state.",
+      "tags": [
+        "storage",
+        "type-definition",
+        "backend"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "function:storage/mvcc/kvstore_bench_test.go:BenchmarkStorePut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "function:storage/mvcc/kvstore_bench_test.go:BenchmarkStorePut",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "function:storage/mvcc/kvstore_bench_test.go:BenchmarkStoreRangeKey1",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "function:storage/mvcc/kvstore_bench_test.go:BenchmarkStoreRangeKey1",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "function:storage/mvcc/kvstore_bench_test.go:BenchmarkStoreRangeKey100",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "function:storage/mvcc/kvstore_bench_test.go:BenchmarkStoreRangeKey100",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "function:storage/mvcc/kvstore_bench_test.go:benchmarkStoreRange",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "function:storage/mvcc/kvstore_bench_test.go:BenchmarkConsistentIndex",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "function:storage/mvcc/kvstore_bench_test.go:BenchmarkConsistentIndex",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "function:storage/mvcc/kvstore_bench_test.go:BenchmarkStorePutUpdate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "function:storage/mvcc/kvstore_bench_test.go:BenchmarkStorePutUpdate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "function:storage/mvcc/kvstore_bench_test.go:BenchmarkStoreTxnPut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "function:storage/mvcc/kvstore_bench_test.go:BenchmarkStoreTxnPut",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "function:storage/mvcc/kvstore_bench_test.go:benchmarkStoreRestore",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "function:storage/mvcc/kvstore_bench_test.go:BenchmarkStoreRestoreRevs1",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "function:storage/mvcc/kvstore_bench_test.go:BenchmarkStoreRestoreRevs1",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "function:storage/mvcc/kvstore_bench_test.go:BenchmarkStoreRestoreRevs10",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "function:storage/mvcc/kvstore_bench_test.go:BenchmarkStoreRestoreRevs10",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "function:storage/mvcc/kvstore_bench_test.go:BenchmarkStoreRestoreRevs20",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "function:storage/mvcc/kvstore_bench_test.go:BenchmarkStoreRestoreRevs20",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_compaction.go",
+      "target": "function:storage/mvcc/kvstore_compaction.go:scheduleCompaction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:TestStoreRev",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:TestStoreRev",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:TestStorePut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:TestStorePut",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:TestStoreRange",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:TestStoreRange",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:TestStoreDeleteRange",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:TestStoreDeleteRange",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:TestStoreCompact",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:TestStoreCompact",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:TestStoreRestore",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:TestStoreRestore",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:TestRestoreDelete",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:TestRestoreDelete",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:TestRestoreContinueUnfinishedCompaction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:TestRestoreContinueUnfinishedCompaction",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:TestHashKVWhenCompacting",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:TestHashKVWhenCompacting",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:TestHashKVWithCompactedAndFutureRevisions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:TestHashKVWithCompactedAndFutureRevisions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:TestHashKVZeroRevision",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:TestHashKVZeroRevision",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:TestTxnPut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:TestTxnPut",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:TestConcurrentReadNotBlockingWrite",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:TestConcurrentReadNotBlockingWrite",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:TestConcurrentReadTxAndWrite",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:TestConcurrentReadTxAndWrite",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Len",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Len",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Less",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Less",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Swap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Swap",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:merge",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:newFakeStore",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:LockInsideApply",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:LockInsideApply",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:LockOutsideApply",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:LockOutsideApply",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Lock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Lock",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Unlock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Unlock",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:RLock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:RLock",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:RUnlock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:RUnlock",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeCreateBucket",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeCreateBucket",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeDeleteBucket",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeDeleteBucket",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafePut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafePut",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeSeqPut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeSeqPut",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeRange",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeRange",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeDelete",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeDelete",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeForEach",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeForEach",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Commit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Commit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:CommitAndStop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:CommitAndStop",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:BatchTx",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:BatchTx",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:ReadTx",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:ReadTx",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:ConcurrentReadTx",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:ConcurrentReadTx",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Hash",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Hash",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Size",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Size",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:SizeInUse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:SizeInUse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:OpenReadTxN",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:OpenReadTxN",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Snapshot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Snapshot",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:ForceCommit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:ForceCommit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Defrag",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Defrag",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Close",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Close",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:SetTxPostLockInsideApplyHook",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:SetTxPostLockInsideApplyHook",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Revisions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Revisions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:CountRevisions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:CountRevisions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Get",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Get",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Range",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Range",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Put",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Put",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Tombstone",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Tombstone",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:RangeSince",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:RangeSince",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Compact",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Compact",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Keep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Keep",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Equal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Equal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Insert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:Insert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:KeyIndex",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:KeyIndex",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "function:storage/mvcc/kvstore_test.go:createBytesSlice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "class:storage/mvcc/kvstore_test.go:fakeBatchTx",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "class:storage/mvcc/kvstore_test.go:fakeBackend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "class:storage/mvcc/kvstore_test.go:fakeIndex",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "file:etcdserver/cindex/cindex.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "file:etcdserver/cindex/cindex_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "file:etcdserver/cindex/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "file:lease/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "file:lease/lease.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "file:lease/lease_queue.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "file:lease/lease_queue_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "file:lease/lessor.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "file:lease/lessor_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "file:lease/lessor_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "file:lease/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "file:storage/backend/testing/betesting.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "file:storage/schema/actions.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "file:storage/schema/actions_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "file:storage/schema/alarm.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "file:storage/schema/auth.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "file:storage/schema/auth_roles.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "file:storage/schema/auth_roles_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "file:storage/schema/auth_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "file:storage/schema/auth_users.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "file:storage/schema/auth_users_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "file:storage/schema/bucket.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "file:storage/schema/changes.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "file:storage/schema/changes_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "file:storage/schema/cindex.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "file:storage/schema/confstate.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "file:storage/schema/confstate_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "file:storage/schema/lease.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "file:storage/schema/lease_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "file:storage/schema/membership.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "file:storage/schema/migration.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "file:storage/schema/migration_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "file:storage/schema/schema.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "file:storage/schema/schema_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "file:storage/schema/version.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_bench_test.go",
+      "target": "file:storage/schema/version_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_compaction.go",
+      "target": "file:storage/schema/actions.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_compaction.go",
+      "target": "file:storage/schema/actions_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_compaction.go",
+      "target": "file:storage/schema/alarm.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_compaction.go",
+      "target": "file:storage/schema/auth.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_compaction.go",
+      "target": "file:storage/schema/auth_roles.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_compaction.go",
+      "target": "file:storage/schema/auth_roles_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_compaction.go",
+      "target": "file:storage/schema/auth_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_compaction.go",
+      "target": "file:storage/schema/auth_users.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_compaction.go",
+      "target": "file:storage/schema/auth_users_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_compaction.go",
+      "target": "file:storage/schema/bucket.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_compaction.go",
+      "target": "file:storage/schema/changes.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_compaction.go",
+      "target": "file:storage/schema/changes_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_compaction.go",
+      "target": "file:storage/schema/cindex.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_compaction.go",
+      "target": "file:storage/schema/confstate.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_compaction.go",
+      "target": "file:storage/schema/confstate_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_compaction.go",
+      "target": "file:storage/schema/lease.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_compaction.go",
+      "target": "file:storage/schema/lease_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_compaction.go",
+      "target": "file:storage/schema/membership.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_compaction.go",
+      "target": "file:storage/schema/migration.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_compaction.go",
+      "target": "file:storage/schema/migration_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_compaction.go",
+      "target": "file:storage/schema/schema.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_compaction.go",
+      "target": "file:storage/schema/schema_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_compaction.go",
+      "target": "file:storage/schema/version.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_compaction.go",
+      "target": "file:storage/schema/version_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:lease/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:lease/lease.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:lease/lease_queue.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:lease/lease_queue_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:lease/lessor.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:lease/lessor_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:lease/lessor_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:lease/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/backend/backend.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/backend/backend_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/backend/backend_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/backend/batch_tx.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/backend/batch_tx_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/backend/config_default.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/backend/config_linux.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/backend/config_windows.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/backend/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/backend/export_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/backend/hooks.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/backend/hooks_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/backend/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/backend/read_tx.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/backend/testing/betesting.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/backend/tx_buffer.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/backend/tx_buffer_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/backend/verify.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/backend/verify_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/schema/actions.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/schema/actions_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/schema/alarm.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/schema/auth.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/schema/auth_roles.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/schema/auth_roles_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/schema/auth_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/schema/auth_users.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/schema/auth_users_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/schema/bucket.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/schema/changes.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/schema/changes_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/schema/cindex.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/schema/confstate.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/schema/confstate_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/schema/lease.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/schema/lease_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/schema/membership.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/schema/migration.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/schema/migration_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/schema/schema.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/schema/schema_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/schema/version.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/mvcc/kvstore_test.go",
+      "target": "file:storage/schema/version_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_bench_test.go:BenchmarkStorePut",
+      "target": "function:storage/mvcc/kvstore_test.go:createBytesSlice",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_bench_test.go:BenchmarkStorePut",
+      "target": "function:storage/mvcc/kvstore_test.go:createBytesSlice",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_bench_test.go:benchmarkStoreRange",
+      "target": "function:storage/mvcc/kvstore_test.go:createBytesSlice",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_bench_test.go:benchmarkStoreRange",
+      "target": "function:storage/mvcc/kvstore_test.go:createBytesSlice",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_bench_test.go:benchmarkStoreRange",
+      "target": "function:storage/mvcc/kvstore_test.go:Commit",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_bench_test.go:BenchmarkConsistentIndex",
+      "target": "function:storage/schema/cindex.go:UnsafeCreateMetaBucket",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_bench_test.go:BenchmarkStorePutUpdate",
+      "target": "function:storage/mvcc/kvstore_test.go:createBytesSlice",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_bench_test.go:BenchmarkStorePutUpdate",
+      "target": "function:storage/mvcc/kvstore_test.go:createBytesSlice",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_bench_test.go:BenchmarkStoreTxnPut",
+      "target": "function:storage/mvcc/kvstore_test.go:createBytesSlice",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_bench_test.go:BenchmarkStoreTxnPut",
+      "target": "function:storage/mvcc/kvstore_test.go:createBytesSlice",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_bench_test.go:BenchmarkStoreTxnPut",
+      "target": "function:storage/mvcc/kvstore_txn.go:Write",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_bench_test.go:BenchmarkStoreTxnPut",
+      "target": "function:storage/mvcc/kvstore_txn.go:End",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_bench_test.go:benchmarkStoreRestore",
+      "target": "function:storage/mvcc/kvstore_test.go:createBytesSlice",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_bench_test.go:benchmarkStoreRestore",
+      "target": "function:storage/mvcc/kvstore_test.go:createBytesSlice",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_bench_test.go:benchmarkStoreRestore",
+      "target": "function:storage/mvcc/kvstore_txn.go:Write",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_bench_test.go:benchmarkStoreRestore",
+      "target": "function:storage/mvcc/kvstore_txn.go:End",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_compaction.go:scheduleCompaction",
+      "target": "function:storage/mvcc/kvstore_test.go:Compact",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_compaction.go:scheduleCompaction",
+      "target": "function:storage/mvcc/kvstore_test.go:LockOutsideApply",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_compaction.go:scheduleCompaction",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeRange",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_compaction.go:scheduleCompaction",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeDelete",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_compaction.go:scheduleCompaction",
+      "target": "function:storage/mvcc/store.go:UnsafeSetFinishedCompact",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_compaction.go:scheduleCompaction",
+      "target": "function:storage/mvcc/kvstore_test.go:Hash",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_compaction.go:scheduleCompaction",
+      "target": "function:storage/mvcc/kvstore_test.go:Size",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_compaction.go:scheduleCompaction",
+      "target": "function:storage/mvcc/kvstore_test.go:SizeInUse",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_compaction.go:scheduleCompaction",
+      "target": "function:storage/schema/bucket.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_compaction.go:scheduleCompaction",
+      "target": "function:storage/schema/bucket.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestStoreRev",
+      "target": "function:storage/mvcc/watchable_store.go:Close",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestStoreRev",
+      "target": "function:storage/mvcc/kvstore_txn.go:Put",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestStoreRev",
+      "target": "function:storage/mvcc/kvstore_txn.go:Rev",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestStorePut",
+      "target": "function:storage/mvcc/kvstore_txn.go:Put",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestStorePut",
+      "target": "function:storage/mvcc/watchable_store.go:Close",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestStoreRange",
+      "target": "function:storage/mvcc/kvstore_txn.go:Range",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestStoreRange",
+      "target": "function:storage/mvcc/watchable_store.go:Close",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestStoreDeleteRange",
+      "target": "function:storage/mvcc/kvstore_txn.go:DeleteRange",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestStoreDeleteRange",
+      "target": "function:storage/mvcc/watchable_store.go:Close",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestStoreCompact",
+      "target": "function:storage/mvcc/watchable_store.go:Close",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestStoreRestore",
+      "target": "function:storage/mvcc/watchable_store.go:Close",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestRestoreDelete",
+      "target": "function:storage/mvcc/watchable_store.go:Close",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestRestoreDelete",
+      "target": "function:storage/mvcc/kvstore_txn.go:Put",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestRestoreDelete",
+      "target": "function:storage/mvcc/kvstore_txn.go:Put",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestRestoreDelete",
+      "target": "function:storage/mvcc/kvstore_txn.go:DeleteRange",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestRestoreDelete",
+      "target": "function:storage/mvcc/kvstore_txn.go:delete",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestRestoreDelete",
+      "target": "function:storage/mvcc/watchable_store.go:Close",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestRestoreDelete",
+      "target": "function:storage/mvcc/watchable_store.go:Close",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestRestoreDelete",
+      "target": "function:storage/mvcc/kvstore_txn.go:Range",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestRestoreContinueUnfinishedCompaction",
+      "target": "function:storage/mvcc/kvstore_txn.go:Put",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestRestoreContinueUnfinishedCompaction",
+      "target": "function:storage/mvcc/kvstore_txn.go:Put",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestRestoreContinueUnfinishedCompaction",
+      "target": "function:storage/mvcc/kvstore_txn.go:Put",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestRestoreContinueUnfinishedCompaction",
+      "target": "function:storage/schema/auth.go:BatchTx",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestRestoreContinueUnfinishedCompaction",
+      "target": "function:storage/schema/auth.go:Lock",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestRestoreContinueUnfinishedCompaction",
+      "target": "function:storage/mvcc/store.go:UnsafeSetScheduledCompact",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestRestoreContinueUnfinishedCompaction",
+      "target": "function:storage/schema/auth.go:Unlock",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestRestoreContinueUnfinishedCompaction",
+      "target": "function:storage/mvcc/watchable_store.go:Close",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestRestoreContinueUnfinishedCompaction",
+      "target": "function:storage/mvcc/watchable_store.go:Restore",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestRestoreContinueUnfinishedCompaction",
+      "target": "function:storage/mvcc/kvstore_txn.go:Range",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestRestoreContinueUnfinishedCompaction",
+      "target": "function:storage/schema/auth.go:BatchTx",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestRestoreContinueUnfinishedCompaction",
+      "target": "function:storage/schema/auth.go:Lock",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestRestoreContinueUnfinishedCompaction",
+      "target": "function:storage/schema/auth.go:Unlock",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestHashKVWhenCompacting",
+      "target": "function:storage/mvcc/kvstore_txn.go:Put",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestHashKVWithCompactedAndFutureRevisions",
+      "target": "function:storage/mvcc/kvstore_txn.go:Put",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestHashKVZeroRevision",
+      "target": "function:storage/mvcc/kvstore_txn.go:Put",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestTxnPut",
+      "target": "function:storage/mvcc/kvstore_txn.go:Write",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestTxnPut",
+      "target": "function:storage/mvcc/kvstore_txn.go:Put",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestTxnPut",
+      "target": "function:storage/mvcc/kvstore_txn.go:End",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestConcurrentReadNotBlockingWrite",
+      "target": "function:storage/mvcc/kvstore_txn.go:Put",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestConcurrentReadNotBlockingWrite",
+      "target": "function:storage/mvcc/kvstore_txn.go:Read",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestConcurrentReadNotBlockingWrite",
+      "target": "function:storage/mvcc/kvstore_txn.go:Put",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestConcurrentReadNotBlockingWrite",
+      "target": "function:storage/mvcc/kvstore_txn.go:Read",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestConcurrentReadNotBlockingWrite",
+      "target": "function:storage/mvcc/kvstore_txn.go:Range",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestConcurrentReadNotBlockingWrite",
+      "target": "function:storage/mvcc/kvstore_txn.go:End",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestConcurrentReadNotBlockingWrite",
+      "target": "function:storage/mvcc/kvstore_txn.go:Range",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestConcurrentReadNotBlockingWrite",
+      "target": "function:storage/mvcc/kvstore_txn.go:End",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestConcurrentReadTxAndWrite",
+      "target": "function:storage/mvcc/kvstore_txn.go:Write",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestConcurrentReadTxAndWrite",
+      "target": "function:storage/mvcc/kvstore_txn.go:Put",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestConcurrentReadTxAndWrite",
+      "target": "function:storage/schema/auth.go:Lock",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestConcurrentReadTxAndWrite",
+      "target": "function:storage/mvcc/kvstore_txn.go:End",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestConcurrentReadTxAndWrite",
+      "target": "function:storage/schema/auth.go:Unlock",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestConcurrentReadTxAndWrite",
+      "target": "function:storage/schema/auth.go:Lock",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestConcurrentReadTxAndWrite",
+      "target": "function:storage/mvcc/kvstore_txn.go:Read",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestConcurrentReadTxAndWrite",
+      "target": "function:storage/schema/auth.go:Unlock",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestConcurrentReadTxAndWrite",
+      "target": "function:storage/mvcc/kvstore_txn.go:Range",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:TestConcurrentReadTxAndWrite",
+      "target": "function:storage/mvcc/kvstore_txn.go:End",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:Revisions",
+      "target": "function:storage/mvcc/kvstore_txn.go:Range",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:CountRevisions",
+      "target": "function:storage/mvcc/kvstore_txn.go:Range",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/mvcc/kvstore_test.go:createBytesSlice",
+      "target": "function:storage/mvcc/kvstore_txn.go:Read",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

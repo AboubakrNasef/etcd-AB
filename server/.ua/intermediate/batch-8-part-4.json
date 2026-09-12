@@ -1,0 +1,1202 @@
+{
+  "nodes": [
+    {
+      "id": "file:etcdserver/api/v2stats/queue.go",
+      "type": "file",
+      "name": "queue.go",
+      "filePath": "etcdserver/api/v2stats/queue.go",
+      "summary": "Maintains a synchronized request-size queue and computes packet and bandwidth rates.",
+      "tags": [
+        "statistics",
+        "raft",
+        "monitoring"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Go implementation using interfaces, goroutines, synchronization, and protobuf/HTTP integration where applicable."
+    },
+    {
+      "id": "file:etcdserver/api/v2stats/server.go",
+      "type": "file",
+      "name": "server.go",
+      "filePath": "etcdserver/api/v2stats/server.go",
+      "summary": "Aggregates server-side raft append statistics and serializes them for legacy v2 status reporting.",
+      "tags": [
+        "statistics",
+        "raft",
+        "monitoring"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Go implementation using interfaces, goroutines, synchronization, and protobuf/HTTP integration where applicable."
+    },
+    {
+      "id": "file:etcdserver/api/v3client/v3client.go",
+      "type": "file",
+      "name": "v3client.go",
+      "filePath": "etcdserver/api/v3client/v3client.go",
+      "summary": "Builds an in-process v3 client facade from server RPC implementations, including quota-aware KV, lease, watch, cluster, maintenance, and auth clients.",
+      "tags": [
+        "client",
+        "grpc",
+        "api"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Go implementation using interfaces, goroutines, synchronization, and protobuf/HTTP integration where applicable."
+    },
+    {
+      "id": "file:etcdserver/api/v3compactor/compactor.go",
+      "type": "file",
+      "name": "compactor.go",
+      "filePath": "etcdserver/api/v3compactor/compactor.go",
+      "summary": "Defines compaction interfaces and constructs periodic or revision-based compactor implementations.",
+      "tags": [
+        "compaction",
+        "maintenance",
+        "service"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Go implementation using interfaces, goroutines, synchronization, and protobuf/HTTP integration where applicable."
+    },
+    {
+      "id": "file:etcdserver/api/v3compactor/compactor_test.go",
+      "type": "file",
+      "name": "compactor_test.go",
+      "filePath": "etcdserver/api/v3compactor/compactor_test.go",
+      "summary": "Provides fake compaction and revision sources for compactor tests.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Go implementation using interfaces, goroutines, synchronization, and protobuf/HTTP integration where applicable."
+    },
+    {
+      "id": "function:etcdserver/api/v2stats/queue.go:Len",
+      "type": "function",
+      "name": "Len",
+      "filePath": "etcdserver/api/v2stats/queue.go",
+      "lineRange": [
+        42,
+        44
+      ],
+      "summary": "Implements Len for queue behavior.",
+      "tags": [
+        "statistics",
+        "raft",
+        "monitoring"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2stats/queue.go:ReqSize",
+      "type": "function",
+      "name": "ReqSize",
+      "filePath": "etcdserver/api/v2stats/queue.go",
+      "lineRange": [
+        46,
+        48
+      ],
+      "summary": "Implements ReqSize for queue behavior.",
+      "tags": [
+        "statistics",
+        "raft",
+        "monitoring"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2stats/queue.go:Insert",
+      "type": "function",
+      "name": "Insert",
+      "filePath": "etcdserver/api/v2stats/queue.go",
+      "lineRange": [
+        62,
+        77
+      ],
+      "summary": "Implements Insert for queue behavior.",
+      "tags": [
+        "statistics",
+        "raft",
+        "monitoring"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v2stats/queue.go:Rate",
+      "type": "function",
+      "name": "Rate",
+      "filePath": "etcdserver/api/v2stats/queue.go",
+      "lineRange": [
+        80,
+        99
+      ],
+      "summary": "Implements Rate for queue behavior.",
+      "tags": [
+        "statistics",
+        "raft",
+        "monitoring"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v2stats/queue.go:Clear",
+      "type": "function",
+      "name": "Clear",
+      "filePath": "etcdserver/api/v2stats/queue.go",
+      "lineRange": [
+        102,
+        109
+      ],
+      "summary": "Implements Clear for queue behavior.",
+      "tags": [
+        "statistics",
+        "raft",
+        "monitoring"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:etcdserver/api/v2stats/queue.go:RequestStats",
+      "type": "class",
+      "name": "RequestStats",
+      "filePath": "etcdserver/api/v2stats/queue.go",
+      "lineRange": [
+        28,
+        31
+      ],
+      "summary": "Defines the RequestStats state or interface used by queue.",
+      "tags": [
+        "statistics",
+        "raft",
+        "type-definition"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/api/v2stats/queue.go:statsQueue",
+      "type": "class",
+      "name": "statsQueue",
+      "filePath": "etcdserver/api/v2stats/queue.go",
+      "lineRange": [
+        33,
+        40
+      ],
+      "summary": "Defines the statsQueue state or interface used by queue.",
+      "tags": [
+        "statistics",
+        "raft",
+        "type-definition"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/v2stats/server.go:NewServerStats",
+      "type": "function",
+      "name": "NewServerStats",
+      "filePath": "etcdserver/api/v2stats/server.go",
+      "lineRange": [
+        33,
+        46
+      ],
+      "summary": "Implements NewServerStats for server behavior.",
+      "tags": [
+        "statistics",
+        "raft",
+        "monitoring"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2stats/server.go:JSON",
+      "type": "function",
+      "name": "JSON",
+      "filePath": "etcdserver/api/v2stats/server.go",
+      "lineRange": [
+        74,
+        87
+      ],
+      "summary": "Implements JSON for server behavior.",
+      "tags": [
+        "statistics",
+        "raft",
+        "monitoring"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2stats/server.go:RecvAppendReq",
+      "type": "function",
+      "name": "RecvAppendReq",
+      "filePath": "etcdserver/api/v2stats/server.go",
+      "lineRange": [
+        91,
+        110
+      ],
+      "summary": "Implements RecvAppendReq for server behavior.",
+      "tags": [
+        "statistics",
+        "raft",
+        "monitoring"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v2stats/server.go:SendAppendReq",
+      "type": "function",
+      "name": "SendAppendReq",
+      "filePath": "etcdserver/api/v2stats/server.go",
+      "lineRange": [
+        114,
+        128
+      ],
+      "summary": "Implements SendAppendReq for server behavior.",
+      "tags": [
+        "statistics",
+        "raft",
+        "monitoring"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2stats/server.go:BecomeLeader",
+      "type": "function",
+      "name": "BecomeLeader",
+      "filePath": "etcdserver/api/v2stats/server.go",
+      "lineRange": [
+        130,
+        134
+      ],
+      "summary": "Implements BecomeLeader for server behavior.",
+      "tags": [
+        "statistics",
+        "raft",
+        "monitoring"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:etcdserver/api/v2stats/server.go:ServerStats",
+      "type": "class",
+      "name": "ServerStats",
+      "filePath": "etcdserver/api/v2stats/server.go",
+      "lineRange": [
+        28,
+        31
+      ],
+      "summary": "Defines the ServerStats state or interface used by server.",
+      "tags": [
+        "statistics",
+        "raft",
+        "type-definition"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:etcdserver/api/v2stats/server.go:serverStats",
+      "type": "class",
+      "name": "serverStats",
+      "filePath": "etcdserver/api/v2stats/server.go",
+      "lineRange": [
+        48,
+        72
+      ],
+      "summary": "Defines the serverStats state or interface used by server.",
+      "tags": [
+        "statistics",
+        "raft",
+        "type-definition"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3client/v3client.go:New",
+      "type": "function",
+      "name": "New",
+      "filePath": "etcdserver/api/v3client/v3client.go",
+      "lineRange": [
+        30,
+        52
+      ],
+      "summary": "Implements New for v3client behavior.",
+      "tags": [
+        "client",
+        "grpc",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3client/v3client.go:String",
+      "type": "function",
+      "name": "String",
+      "filePath": "etcdserver/api/v3client/v3client.go",
+      "lineRange": [
+        59,
+        59
+      ],
+      "summary": "Implements String for v3client behavior.",
+      "tags": [
+        "client",
+        "grpc",
+        "api"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v3client/v3client.go:Watch",
+      "type": "function",
+      "name": "Watch",
+      "filePath": "etcdserver/api/v3client/v3client.go",
+      "lineRange": [
+        65,
+        67
+      ],
+      "summary": "Implements Watch for v3client behavior.",
+      "tags": [
+        "client",
+        "grpc",
+        "api"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v3compactor/compactor.go:New",
+      "type": "function",
+      "name": "New",
+      "filePath": "etcdserver/api/v3compactor/compactor.go",
+      "lineRange": [
+        55,
+        73
+      ],
+      "summary": "Implements New for compactor behavior.",
+      "tags": [
+        "compaction",
+        "maintenance",
+        "service"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/api/v3compactor/compactor.go:Compactor",
+      "type": "class",
+      "name": "Compactor",
+      "filePath": "etcdserver/api/v3compactor/compactor.go",
+      "lineRange": [
+        34,
+        44
+      ],
+      "summary": "Defines the Compactor state or interface used by compactor.",
+      "tags": [
+        "compaction",
+        "maintenance",
+        "type-definition"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/api/v3compactor/compactor.go:Compactable",
+      "type": "class",
+      "name": "Compactable",
+      "filePath": "etcdserver/api/v3compactor/compactor.go",
+      "lineRange": [
+        46,
+        48
+      ],
+      "summary": "Defines the Compactable state or interface used by compactor.",
+      "tags": [
+        "compaction",
+        "maintenance",
+        "type-definition"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/api/v3compactor/compactor.go:RevGetter",
+      "type": "class",
+      "name": "RevGetter",
+      "filePath": "etcdserver/api/v3compactor/compactor.go",
+      "lineRange": [
+        50,
+        52
+      ],
+      "summary": "Defines the RevGetter state or interface used by compactor.",
+      "tags": [
+        "compaction",
+        "maintenance",
+        "type-definition"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3compactor/compactor_test.go:Compact",
+      "type": "function",
+      "name": "Compact",
+      "filePath": "etcdserver/api/v3compactor/compactor_test.go",
+      "lineRange": [
+        29,
+        32
+      ],
+      "summary": "Implements Compact for compactor_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v3compactor/compactor_test.go:Rev",
+      "type": "function",
+      "name": "Rev",
+      "filePath": "etcdserver/api/v3compactor/compactor_test.go",
+      "lineRange": [
+        39,
+        43
+      ],
+      "summary": "Implements Rev for compactor_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v3compactor/compactor_test.go:SetRev",
+      "type": "function",
+      "name": "SetRev",
+      "filePath": "etcdserver/api/v3compactor/compactor_test.go",
+      "lineRange": [
+        45,
+        47
+      ],
+      "summary": "Implements SetRev for compactor_test behavior.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:etcdserver/api/v3compactor/compactor_test.go:fakeRevGetter",
+      "type": "class",
+      "name": "fakeRevGetter",
+      "filePath": "etcdserver/api/v3compactor/compactor_test.go",
+      "lineRange": [
+        34,
+        37
+      ],
+      "summary": "Defines the fakeRevGetter state or interface used by compactor_test.",
+      "tags": [
+        "test",
+        "raft-transport",
+        "type-definition"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:etcdserver/api/v2stats/queue.go",
+      "target": "function:etcdserver/api/v2stats/queue.go:Len",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/queue.go",
+      "target": "function:etcdserver/api/v2stats/queue.go:Len",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/queue.go",
+      "target": "function:etcdserver/api/v2stats/queue.go:ReqSize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/queue.go",
+      "target": "function:etcdserver/api/v2stats/queue.go:ReqSize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/queue.go",
+      "target": "function:etcdserver/api/v2stats/queue.go:Insert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/queue.go",
+      "target": "function:etcdserver/api/v2stats/queue.go:Insert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/queue.go",
+      "target": "function:etcdserver/api/v2stats/queue.go:Rate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/queue.go",
+      "target": "function:etcdserver/api/v2stats/queue.go:Rate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/queue.go",
+      "target": "function:etcdserver/api/v2stats/queue.go:Clear",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/queue.go",
+      "target": "function:etcdserver/api/v2stats/queue.go:Clear",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/queue.go",
+      "target": "class:etcdserver/api/v2stats/queue.go:RequestStats",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/queue.go",
+      "target": "class:etcdserver/api/v2stats/queue.go:RequestStats",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/queue.go",
+      "target": "class:etcdserver/api/v2stats/queue.go:statsQueue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/server.go",
+      "target": "function:etcdserver/api/v2stats/server.go:NewServerStats",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/server.go",
+      "target": "function:etcdserver/api/v2stats/server.go:NewServerStats",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/server.go",
+      "target": "function:etcdserver/api/v2stats/server.go:JSON",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/server.go",
+      "target": "function:etcdserver/api/v2stats/server.go:JSON",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/server.go",
+      "target": "function:etcdserver/api/v2stats/server.go:RecvAppendReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/server.go",
+      "target": "function:etcdserver/api/v2stats/server.go:RecvAppendReq",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/server.go",
+      "target": "function:etcdserver/api/v2stats/server.go:SendAppendReq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/server.go",
+      "target": "function:etcdserver/api/v2stats/server.go:SendAppendReq",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/server.go",
+      "target": "function:etcdserver/api/v2stats/server.go:BecomeLeader",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/server.go",
+      "target": "function:etcdserver/api/v2stats/server.go:BecomeLeader",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/server.go",
+      "target": "class:etcdserver/api/v2stats/server.go:ServerStats",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/server.go",
+      "target": "class:etcdserver/api/v2stats/server.go:ServerStats",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2stats/server.go",
+      "target": "class:etcdserver/api/v2stats/server.go:serverStats",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "function:etcdserver/api/v3client/v3client.go:New",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "function:etcdserver/api/v3client/v3client.go:New",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "function:etcdserver/api/v3client/v3client.go:String",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "function:etcdserver/api/v3client/v3client.go:String",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "function:etcdserver/api/v3client/v3client.go:Watch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "function:etcdserver/api/v3client/v3client.go:Watch",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/adapters.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/api/v3rpc/auth.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/api/v3rpc/codec.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/api/v3rpc/grpc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/api/v3rpc/header.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/api/v3rpc/health.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/api/v3rpc/interceptor.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/api/v3rpc/key.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/api/v3rpc/key_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/api/v3rpc/lease.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/api/v3rpc/maintenance.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/api/v3rpc/member.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/api/v3rpc/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/api/v3rpc/quota.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/api/v3rpc/util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/api/v3rpc/util_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/api/v3rpc/validationfuzz_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/api/v3rpc/watch.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/api/v3rpc/watch_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/bootstrap.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/bootstrap_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/cluster_util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/cluster_util_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/corrupt.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/corrupt_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/interface.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/raft.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/raft_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/server.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/server_access_control.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/server_access_control_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/server_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/snapshot_merge.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/tracing.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/util_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/v3_server.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/zap_raft.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:etcdserver/zap_raft_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:proxy/grpcproxy/adapter/auth_client_adapter.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:proxy/grpcproxy/adapter/chan_stream.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:proxy/grpcproxy/adapter/chan_stream_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:proxy/grpcproxy/adapter/cluster_client_adapter.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:proxy/grpcproxy/adapter/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:proxy/grpcproxy/adapter/election_client_adapter.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:proxy/grpcproxy/adapter/kv_client_adapter.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:proxy/grpcproxy/adapter/lease_client_adapter.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:proxy/grpcproxy/adapter/lock_client_adapter.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:proxy/grpcproxy/adapter/maintenance_client_adapter.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3client/v3client.go",
+      "target": "file:proxy/grpcproxy/adapter/watch_client_adapter.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/compactor.go",
+      "target": "function:etcdserver/api/v3compactor/compactor.go:New",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/compactor.go",
+      "target": "function:etcdserver/api/v3compactor/compactor.go:New",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/compactor.go",
+      "target": "class:etcdserver/api/v3compactor/compactor.go:Compactor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/compactor.go",
+      "target": "class:etcdserver/api/v3compactor/compactor.go:Compactor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/compactor.go",
+      "target": "class:etcdserver/api/v3compactor/compactor.go:Compactable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/compactor.go",
+      "target": "class:etcdserver/api/v3compactor/compactor.go:Compactable",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/compactor.go",
+      "target": "class:etcdserver/api/v3compactor/compactor.go:RevGetter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/compactor.go",
+      "target": "class:etcdserver/api/v3compactor/compactor.go:RevGetter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/compactor_test.go",
+      "target": "function:etcdserver/api/v3compactor/compactor_test.go:Compact",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/compactor_test.go",
+      "target": "function:etcdserver/api/v3compactor/compactor_test.go:Compact",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/compactor_test.go",
+      "target": "function:etcdserver/api/v3compactor/compactor_test.go:Rev",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/compactor_test.go",
+      "target": "function:etcdserver/api/v3compactor/compactor_test.go:Rev",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/compactor_test.go",
+      "target": "function:etcdserver/api/v3compactor/compactor_test.go:SetRev",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/compactor_test.go",
+      "target": "function:etcdserver/api/v3compactor/compactor_test.go:SetRev",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/compactor_test.go",
+      "target": "class:etcdserver/api/v3compactor/compactor_test.go:fakeRevGetter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3compactor/compactor.go",
+      "target": "file:etcdserver/api/v3compactor/compactor_test.go",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}
+

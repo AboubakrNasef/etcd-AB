@@ -1,0 +1,1213 @@
+{
+  "nodes": [
+    {
+      "id": "file:embed/util_test.go",
+      "type": "file",
+      "name": "util_test.go",
+      "filePath": "embed/util_test.go",
+      "summary": "Provides shared URL configuration fixtures and helpers for embedded etcd tests.",
+      "tags": [
+        "test",
+        "utility",
+        "config",
+        "networking"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/util_test.go:newConfigTestURLs",
+      "type": "function",
+      "name": "newConfigTestURLs",
+      "filePath": "embed/util_test.go",
+      "lineRange": [
+        30,
+        42
+      ],
+      "summary": "newConfigTestURLs implements newConfigTestURLs behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:embed/util_test.go:ConfigTestURLs",
+      "type": "class",
+      "name": "ConfigTestURLs",
+      "filePath": "embed/util_test.go",
+      "lineRange": [
+        23,
+        27
+      ],
+      "summary": "Defines ConfigTestURLs, a test double or test suite used by the etcd runtime APIs.",
+      "tags": [
+        "test",
+        "mocking",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdmain/config_test.go",
+      "type": "file",
+      "name": "config_test.go",
+      "filePath": "etcdmain/config_test.go",
+      "summary": "Tests command-line and file-based etcd configuration parsing, conflicts, validation, election settings, and feature-gate flags.",
+      "tags": [
+        "test",
+        "config",
+        "cli",
+        "validation",
+        "feature-gates"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdmain/config_test.go:TestConfigParsingMemberFlags",
+      "type": "function",
+      "name": "TestConfigParsingMemberFlags",
+      "filePath": "etcdmain/config_test.go",
+      "lineRange": [
+        38,
+        59
+      ],
+      "summary": "TestConfigParsingMemberFlags implements TestConfigParsingMemberFlags behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/config_test.go:TestConfigFileMemberFields",
+      "type": "function",
+      "name": "TestConfigFileMemberFields",
+      "filePath": "etcdmain/config_test.go",
+      "lineRange": [
+        61,
+        100
+      ],
+      "summary": "TestConfigFileMemberFields implements TestConfigFileMemberFields behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/config_test.go:TestConfigParsingClusteringFlags",
+      "type": "function",
+      "name": "TestConfigParsingClusteringFlags",
+      "filePath": "etcdmain/config_test.go",
+      "lineRange": [
+        102,
+        117
+      ],
+      "summary": "TestConfigParsingClusteringFlags implements TestConfigParsingClusteringFlags behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/config_test.go:TestConfigFileClusteringFields",
+      "type": "function",
+      "name": "TestConfigFileClusteringFields",
+      "filePath": "etcdmain/config_test.go",
+      "lineRange": [
+        119,
+        150
+      ],
+      "summary": "TestConfigFileClusteringFields implements TestConfigFileClusteringFields behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/config_test.go:TestConfigFileClusteringFlags",
+      "type": "function",
+      "name": "TestConfigFileClusteringFlags",
+      "filePath": "etcdmain/config_test.go",
+      "lineRange": [
+        152,
+        203
+      ],
+      "summary": "TestConfigFileClusteringFlags implements TestConfigFileClusteringFlags behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/config_test.go:TestConfigParsingConflictClusteringFlags",
+      "type": "function",
+      "name": "TestConfigParsingConflictClusteringFlags",
+      "filePath": "etcdmain/config_test.go",
+      "lineRange": [
+        205,
+        232
+      ],
+      "summary": "TestConfigParsingConflictClusteringFlags implements TestConfigParsingConflictClusteringFlags behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/config_test.go:TestConfigFileConflictClusteringFlags",
+      "type": "function",
+      "name": "TestConfigFileConflictClusteringFlags",
+      "filePath": "etcdmain/config_test.go",
+      "lineRange": [
+        234,
+        281
+      ],
+      "summary": "TestConfigFileConflictClusteringFlags implements TestConfigFileConflictClusteringFlags behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/config_test.go:TestConfigParsingMissedAdvertiseClientURLsFlag",
+      "type": "function",
+      "name": "TestConfigParsingMissedAdvertiseClientURLsFlag",
+      "filePath": "etcdmain/config_test.go",
+      "lineRange": [
+        283,
+        323
+      ],
+      "summary": "TestConfigParsingMissedAdvertiseClientURLsFlag implements TestConfigParsingMissedAdvertiseClientURLsFlag behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/config_test.go:TestConfigIsNewCluster",
+      "type": "function",
+      "name": "TestConfigIsNewCluster",
+      "filePath": "etcdmain/config_test.go",
+      "lineRange": [
+        325,
+        342
+      ],
+      "summary": "TestConfigIsNewCluster implements TestConfigIsNewCluster behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/config_test.go:TestConfigFileElectionTimeout",
+      "type": "function",
+      "name": "TestConfigFileElectionTimeout",
+      "filePath": "etcdmain/config_test.go",
+      "lineRange": [
+        344,
+        388
+      ],
+      "summary": "TestConfigFileElectionTimeout implements TestConfigFileElectionTimeout behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/config_test.go:TestFlagsPresentInHelp",
+      "type": "function",
+      "name": "TestFlagsPresentInHelp",
+      "filePath": "etcdmain/config_test.go",
+      "lineRange": [
+        390,
+        403
+      ],
+      "summary": "TestFlagsPresentInHelp implements TestFlagsPresentInHelp behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/config_test.go:TestParseFeatureGateFlags",
+      "type": "function",
+      "name": "TestParseFeatureGateFlags",
+      "filePath": "etcdmain/config_test.go",
+      "lineRange": [
+        405,
+        448
+      ],
+      "summary": "TestParseFeatureGateFlags implements TestParseFeatureGateFlags behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/config_test.go:mustCreateCfgFile",
+      "type": "function",
+      "name": "mustCreateCfgFile",
+      "filePath": "etcdmain/config_test.go",
+      "lineRange": [
+        450,
+        466
+      ],
+      "summary": "mustCreateCfgFile implements mustCreateCfgFile behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/config_test.go:validateMemberFlags",
+      "type": "function",
+      "name": "validateMemberFlags",
+      "filePath": "etcdmain/config_test.go",
+      "lineRange": [
+        468,
+        504
+      ],
+      "summary": "validateMemberFlags implements validateMemberFlags behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/config_test.go:validateClusteringFlags",
+      "type": "function",
+      "name": "validateClusteringFlags",
+      "filePath": "etcdmain/config_test.go",
+      "lineRange": [
+        506,
+        529
+      ],
+      "summary": "validateClusteringFlags implements validateClusteringFlags behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdmain/doc.go",
+      "type": "file",
+      "name": "doc.go",
+      "filePath": "etcdmain/doc.go",
+      "summary": "Documents the etcd command package.",
+      "tags": [
+        "documentation",
+        "package",
+        "entry-point"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:etcdmain/etcd.go",
+      "type": "file",
+      "name": "etcd.go",
+      "filePath": "etcdmain/etcd.go",
+      "summary": "Implements etcd startup orchestration, proxy selection, data-directory discovery, and architecture support checks.",
+      "tags": [
+        "entry-point",
+        "startup",
+        "configuration",
+        "proxy"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdmain/etcd.go:startEtcdOrProxyV2",
+      "type": "function",
+      "name": "startEtcdOrProxyV2",
+      "filePath": "etcdmain/etcd.go",
+      "lineRange": [
+        43,
+        177
+      ],
+      "summary": "startEtcdOrProxyV2 implements startEtcdOrProxyV2 behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdmain/etcd.go:startEtcd",
+      "type": "function",
+      "name": "startEtcd",
+      "filePath": "etcdmain/etcd.go",
+      "lineRange": [
+        180,
+        191
+      ],
+      "summary": "startEtcd implements startEtcd behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/etcd.go:identifyDataDirOrDie",
+      "type": "function",
+      "name": "identifyDataDirOrDie",
+      "filePath": "etcdmain/etcd.go",
+      "lineRange": [
+        195,
+        230
+      ],
+      "summary": "identifyDataDirOrDie implements identifyDataDirOrDie behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/etcd.go:checkSupportArch",
+      "type": "function",
+      "name": "checkSupportArch",
+      "filePath": "etcdmain/etcd.go",
+      "lineRange": [
+        232,
+        253
+      ],
+      "summary": "checkSupportArch implements checkSupportArch behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdmain/gateway.go",
+      "type": "file",
+      "name": "gateway.go",
+      "filePath": "etcdmain/gateway.go",
+      "summary": "Defines the etcd gateway command and starts the HTTP-to-client gateway with endpoint normalization.",
+      "tags": [
+        "entry-point",
+        "gateway",
+        "api-handler",
+        "networking"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/gateway.go:newGatewayStartCommand",
+      "type": "function",
+      "name": "newGatewayStartCommand",
+      "filePath": "etcdmain/gateway.go",
+      "lineRange": [
+        62,
+        80
+      ],
+      "summary": "newGatewayStartCommand implements newGatewayStartCommand behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/gateway.go:stripSchema",
+      "type": "function",
+      "name": "stripSchema",
+      "filePath": "etcdmain/gateway.go",
+      "lineRange": [
+        82,
+        91
+      ],
+      "summary": "stripSchema implements stripSchema behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/gateway.go:startGateway",
+      "type": "function",
+      "name": "startGateway",
+      "filePath": "etcdmain/gateway.go",
+      "lineRange": [
+        93,
+        181
+      ],
+      "summary": "startGateway implements startGateway behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:embed/util_test.go",
+      "target": "function:embed/util_test.go:newConfigTestURLs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/util_test.go",
+      "target": "class:embed/util_test.go:ConfigTestURLs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/util_test.go",
+      "target": "class:embed/util_test.go:ConfigTestURLs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "function:etcdmain/config_test.go:TestConfigParsingMemberFlags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "function:etcdmain/config_test.go:TestConfigParsingMemberFlags",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "function:etcdmain/config_test.go:TestConfigFileMemberFields",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "function:etcdmain/config_test.go:TestConfigFileMemberFields",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "function:etcdmain/config_test.go:TestConfigParsingClusteringFlags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "function:etcdmain/config_test.go:TestConfigParsingClusteringFlags",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "function:etcdmain/config_test.go:TestConfigFileClusteringFields",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "function:etcdmain/config_test.go:TestConfigFileClusteringFields",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "function:etcdmain/config_test.go:TestConfigFileClusteringFlags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "function:etcdmain/config_test.go:TestConfigFileClusteringFlags",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "function:etcdmain/config_test.go:TestConfigParsingConflictClusteringFlags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "function:etcdmain/config_test.go:TestConfigParsingConflictClusteringFlags",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "function:etcdmain/config_test.go:TestConfigFileConflictClusteringFlags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "function:etcdmain/config_test.go:TestConfigFileConflictClusteringFlags",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "function:etcdmain/config_test.go:TestConfigParsingMissedAdvertiseClientURLsFlag",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "function:etcdmain/config_test.go:TestConfigParsingMissedAdvertiseClientURLsFlag",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "function:etcdmain/config_test.go:TestConfigIsNewCluster",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "function:etcdmain/config_test.go:TestConfigIsNewCluster",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "function:etcdmain/config_test.go:TestConfigFileElectionTimeout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "function:etcdmain/config_test.go:TestConfigFileElectionTimeout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "function:etcdmain/config_test.go:TestFlagsPresentInHelp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "function:etcdmain/config_test.go:TestFlagsPresentInHelp",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "function:etcdmain/config_test.go:TestParseFeatureGateFlags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "function:etcdmain/config_test.go:TestParseFeatureGateFlags",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "function:etcdmain/config_test.go:mustCreateCfgFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "function:etcdmain/config_test.go:validateMemberFlags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "function:etcdmain/config_test.go:validateClusteringFlags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "file:embed/auth_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "file:embed/config.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "file:embed/config_logging.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "file:embed/config_logging_journal_unix.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "file:embed/config_logging_journal_windows.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "file:embed/config_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "file:embed/config_tracing.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "file:embed/config_tracing_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "file:embed/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "file:embed/etcd.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "file:embed/etcd_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "file:embed/serve.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "file:embed/serve_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "file:embed/util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "file:embed/util_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "file:etcdserver/api/v3discovery/discovery.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config_test.go",
+      "target": "file:features/etcd_features.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/etcd.go",
+      "target": "function:etcdmain/etcd.go:startEtcdOrProxyV2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/etcd.go",
+      "target": "function:etcdmain/etcd.go:startEtcd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/etcd.go",
+      "target": "function:etcdmain/etcd.go:identifyDataDirOrDie",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/etcd.go",
+      "target": "function:etcdmain/etcd.go:checkSupportArch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/etcd.go",
+      "target": "file:embed/auth_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/etcd.go",
+      "target": "file:embed/config.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/etcd.go",
+      "target": "file:embed/config_logging.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/etcd.go",
+      "target": "file:embed/config_logging_journal_unix.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/etcd.go",
+      "target": "file:embed/config_logging_journal_windows.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/etcd.go",
+      "target": "file:embed/config_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/etcd.go",
+      "target": "file:embed/config_tracing.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/etcd.go",
+      "target": "file:embed/config_tracing_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/etcd.go",
+      "target": "file:embed/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/etcd.go",
+      "target": "file:embed/etcd.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/etcd.go",
+      "target": "file:embed/etcd_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/etcd.go",
+      "target": "file:embed/serve.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/etcd.go",
+      "target": "file:embed/serve_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/etcd.go",
+      "target": "file:embed/util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/etcd.go",
+      "target": "file:embed/util_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/etcd.go",
+      "target": "file:etcdserver/errors/errors.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/gateway.go",
+      "target": "function:etcdmain/gateway.go:newGatewayStartCommand",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/gateway.go",
+      "target": "function:etcdmain/gateway.go:stripSchema",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/gateway.go",
+      "target": "function:etcdmain/gateway.go:startGateway",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/gateway.go",
+      "target": "file:proxy/tcpproxy/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/gateway.go",
+      "target": "file:proxy/tcpproxy/userspace.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/gateway.go",
+      "target": "file:proxy/tcpproxy/userspace_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:embed/util_test.go:newConfigTestURLs",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/config_test.go:TestConfigParsingMemberFlags",
+      "target": "function:etcdmain/config_test.go:validateMemberFlags",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/config_test.go:TestConfigFileMemberFields",
+      "target": "function:etcdmain/config_test.go:validateMemberFlags",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/config_test.go:TestConfigParsingClusteringFlags",
+      "target": "function:etcdmain/config_test.go:validateClusteringFlags",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/config_test.go:TestConfigFileClusteringFields",
+      "target": "function:etcdmain/config_test.go:validateClusteringFlags",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/etcd.go:startEtcdOrProxyV2",
+      "target": "function:embed/config_logging.go:GetLogger",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/etcd.go:startEtcdOrProxyV2",
+      "target": "function:embed/config_logging.go:SetupGlobalLoggers",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/etcd.go:startEtcdOrProxyV2",
+      "target": "function:embed/config_logging.go:GetLogger",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/etcd.go:startEtcdOrProxyV2",
+      "target": "function:embed/config_logging.go:Sync",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/etcd.go:startEtcdOrProxyV2",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/etcd.go:startEtcdOrProxyV2",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/etcd.go:startEtcdOrProxyV2",
+      "target": "function:etcdmain/etcd.go:identifyDataDirOrDie",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/etcd.go:startEtcdOrProxyV2",
+      "target": "function:embed/config_logging.go:GetLogger",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/etcd.go:startEtcdOrProxyV2",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/etcd.go:startEtcdOrProxyV2",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/etcd.go:startEtcdOrProxyV2",
+      "target": "function:etcdmain/etcd.go:startEtcd",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/etcd.go:startEtcdOrProxyV2",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/etcd.go:startEtcdOrProxyV2",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/etcd.go:startEtcdOrProxyV2",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/etcd.go:startEtcdOrProxyV2",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/etcd.go:startEtcdOrProxyV2",
+      "target": "function:etcdmain/etcd.go:startEtcd",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/etcd.go:startEtcdOrProxyV2",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/etcd.go:startEtcdOrProxyV2",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/etcd.go:identifyDataDirOrDie",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/etcd.go:identifyDataDirOrDie",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/etcd.go:identifyDataDirOrDie",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/etcd.go:checkSupportArch",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/etcd.go:checkSupportArch",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/gateway.go:startGateway",
+      "target": "function:etcdmain/util.go:discoverEndpoints",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/gateway.go:startGateway",
+      "target": "function:etcdmain/gateway.go:stripSchema",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}
+

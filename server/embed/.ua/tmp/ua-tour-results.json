@@ -1,0 +1,787 @@
+{
+  "scriptCompleted": true,
+  "entryPointCandidates": [
+    {
+      "id": "file:etcd.go",
+      "score": 6,
+      "name": "etcd.go",
+      "summary": "Owns the embedded server lifecycle: startup, peer and client listener creation, serving, metrics, gRPC gateway dialing, shutdown, and error propagation."
+    },
+    {
+      "id": "file:auth_test.go",
+      "score": 3,
+      "name": "auth_test.go",
+      "summary": "Exercises embedded-server startup and the complete role, user, grant, and authentication-enablement sequence through the v3 client."
+    },
+    {
+      "id": "file:config_logging.go",
+      "score": 3,
+      "name": "config_logging.go",
+      "summary": "Builds and manages zap logging for embedded etcd, including output selection, global logger wiring, rotation, and synchronization."
+    },
+    {
+      "id": "file:config_test.go",
+      "score": 3,
+      "name": "config_test.go",
+      "summary": "Covers configuration parsing, defaults, validation, discovery, TLS versions, log rotation, URL safety, feature gates, and lease options."
+    },
+    {
+      "id": "file:config_tracing_test.go",
+      "score": 3,
+      "name": "config_tracing_test.go",
+      "summary": "Verifies sampler selection and tracing configuration behavior for the embedded server."
+    }
+  ],
+  "fanInRanking": [
+    {
+      "id": "class:config.go:Config",
+      "fanIn": 2,
+      "name": "Config"
+    },
+    {
+      "id": "class:etcd.go:Etcd",
+      "fanIn": 2,
+      "name": "Etcd"
+    },
+    {
+      "id": "class:util_test.go:ConfigTestURLs",
+      "fanIn": 2,
+      "name": "ConfigTestURLs"
+    },
+    {
+      "id": "function:auth_test.go:TestEnableAuth",
+      "fanIn": 2,
+      "name": "TestEnableAuth"
+    },
+    {
+      "id": "function:config_logging.go:GetLogger",
+      "fanIn": 2,
+      "name": "GetLogger"
+    },
+    {
+      "id": "function:config_logging.go:NewZapLoggerBuilder",
+      "fanIn": 2,
+      "name": "NewZapLoggerBuilder"
+    },
+    {
+      "id": "function:config_logging.go:SetupGlobalLoggers",
+      "fanIn": 2,
+      "name": "SetupGlobalLoggers"
+    },
+    {
+      "id": "function:config_logging.go:Sync",
+      "fanIn": 2,
+      "name": "Sync"
+    },
+    {
+      "id": "function:config_test.go:TestAutoCompactionModeInvalid",
+      "fanIn": 2,
+      "name": "TestAutoCompactionModeInvalid"
+    },
+    {
+      "id": "function:config_test.go:TestAutoCompactionModeParse",
+      "fanIn": 2,
+      "name": "TestAutoCompactionModeParse"
+    },
+    {
+      "id": "function:config_test.go:TestCheckHostURLs",
+      "fanIn": 2,
+      "name": "TestCheckHostURLs"
+    },
+    {
+      "id": "function:config_test.go:TestConfigFileFeatureGates",
+      "fanIn": 2,
+      "name": "TestConfigFileFeatureGates"
+    },
+    {
+      "id": "function:config_test.go:TestConfigFileOtherFields",
+      "fanIn": 2,
+      "name": "TestConfigFileOtherFields"
+    },
+    {
+      "id": "function:config_test.go:TestDiscoveryCfg",
+      "fanIn": 2,
+      "name": "TestDiscoveryCfg"
+    },
+    {
+      "id": "function:config_test.go:TestFastLeaseKeepAliveValidate",
+      "fanIn": 2,
+      "name": "TestFastLeaseKeepAliveValidate"
+    },
+    {
+      "id": "function:config_test.go:TestInferLocalAddr",
+      "fanIn": 2,
+      "name": "TestInferLocalAddr"
+    },
+    {
+      "id": "function:config_test.go:TestLeaseCheckpointValidate",
+      "fanIn": 2,
+      "name": "TestLeaseCheckpointValidate"
+    },
+    {
+      "id": "function:config_test.go:TestLogRotation",
+      "fanIn": 2,
+      "name": "TestLogRotation"
+    },
+    {
+      "id": "function:config_test.go:TestMatchNewConfigAddFlags",
+      "fanIn": 2,
+      "name": "TestMatchNewConfigAddFlags"
+    },
+    {
+      "id": "function:config_test.go:TestPeerURLsMapAndTokenFromSRV",
+      "fanIn": 2,
+      "name": "TestPeerURLsMapAndTokenFromSRV"
+    }
+  ],
+  "fanOutRanking": [
+    {
+      "id": "file:config_test.go",
+      "fanOut": 37,
+      "name": "config_test.go"
+    },
+    {
+      "id": "file:config.go",
+      "fanOut": 34,
+      "name": "config.go"
+    },
+    {
+      "id": "file:etcd.go",
+      "fanOut": 25,
+      "name": "etcd.go"
+    },
+    {
+      "id": "file:serve.go",
+      "fanOut": 18,
+      "name": "serve.go"
+    },
+    {
+      "id": "file:config_logging.go",
+      "fanOut": 10,
+      "name": "config_logging.go"
+    },
+    {
+      "id": "file:config_tracing.go",
+      "fanOut": 5,
+      "name": "config_tracing.go"
+    },
+    {
+      "id": "file:config_tracing_test.go",
+      "fanOut": 4,
+      "name": "config_tracing_test.go"
+    },
+    {
+      "id": "file:util_test.go",
+      "fanOut": 3,
+      "name": "util_test.go"
+    },
+    {
+      "id": "file:auth_test.go",
+      "fanOut": 2,
+      "name": "auth_test.go"
+    },
+    {
+      "id": "file:etcd_test.go",
+      "fanOut": 2,
+      "name": "etcd_test.go"
+    },
+    {
+      "id": "file:serve_test.go",
+      "fanOut": 2,
+      "name": "serve_test.go"
+    },
+    {
+      "id": "file:util.go",
+      "fanOut": 1,
+      "name": "util.go"
+    },
+    {
+      "id": "class:config.go:Config",
+      "fanOut": 0,
+      "name": "Config"
+    },
+    {
+      "id": "class:etcd.go:Etcd",
+      "fanOut": 0,
+      "name": "Etcd"
+    },
+    {
+      "id": "class:serve.go:serveCtx",
+      "fanOut": 0,
+      "name": "serveCtx"
+    },
+    {
+      "id": "class:serve.go:wsProxyZapLogger",
+      "fanOut": 0,
+      "name": "wsProxyZapLogger"
+    },
+    {
+      "id": "class:util_test.go:ConfigTestURLs",
+      "fanOut": 0,
+      "name": "ConfigTestURLs"
+    },
+    {
+      "id": "config:.ua/config.json",
+      "fanOut": 0,
+      "name": "config.json"
+    },
+    {
+      "id": "file:config_logging_journal_unix.go",
+      "fanOut": 0,
+      "name": "config_logging_journal_unix.go"
+    },
+    {
+      "id": "file:config_logging_journal_windows.go",
+      "fanOut": 0,
+      "name": "config_logging_journal_windows.go"
+    }
+  ],
+  "bfsTraversal": {
+    "startNode": "file:etcd.go",
+    "order": [
+      "file:etcd.go"
+    ],
+    "depthMap": {
+      "file:etcd.go": 0
+    },
+    "byDepth": {
+      "0": [
+        "file:etcd.go"
+      ]
+    }
+  },
+  "nonCodeFiles": {
+    "documentation": [],
+    "infrastructure": [],
+    "data": [],
+    "config": [
+      {
+        "id": "config:.ua/config.json",
+        "name": "config.json",
+        "type": "config",
+        "summary": "Stores Understand Anything output-language preferences for this component graph."
+      }
+    ]
+  },
+  "clusters": [],
+  "layers": {
+    "count": 1,
+    "list": [
+      {}
+    ]
+  },
+  "nodeSummaryIndex": {
+    "config:.ua/config.json": {
+      "name": "config.json",
+      "type": "config",
+      "summary": "Stores Understand Anything output-language preferences for this component graph."
+    },
+    "file:auth_test.go": {
+      "name": "auth_test.go",
+      "type": "file",
+      "summary": "Exercises embedded-server startup and the complete role, user, grant, and authentication-enablement sequence through the v3 client."
+    },
+    "function:auth_test.go:TestEnableAuth": {
+      "name": "TestEnableAuth",
+      "type": "function",
+      "summary": "Starts an embedded member and verifies that role creation, user creation, role assignment, and authentication enablement succeed."
+    },
+    "file:config.go": {
+      "name": "config.go",
+      "type": "file",
+      "summary": "Defines the embedded etcd configuration surface, default construction, CLI flag binding, file loading, validation, discovery, URL handling, and TLS helpers."
+    },
+    "function:config.go:NewConfig": {
+      "name": "NewConfig",
+      "type": "function",
+      "summary": "Constructs a Config populated with safe defaults, default URLs, feature gates, timing, storage, authentication, and logging settings."
+    },
+    "function:config.go:AddFlags": {
+      "name": "AddFlags",
+      "type": "function",
+      "summary": "Registers the complete embedded-server configuration surface on a flag set and binds each option to the Config instance."
+    },
+    "function:config.go:ConfigFromFile": {
+      "name": "ConfigFromFile",
+      "type": "function",
+      "summary": "Loads an embedded-server configuration from a YAML file and returns the normalized Config."
+    },
+    "function:config.go:configFromFile": {
+      "name": "configFromFile",
+      "type": "function",
+      "summary": "Decodes YAML configuration, reconciles legacy JSON-shaped fields, applies defaults, and validates the resulting Config."
+    },
+    "function:config.go:updateCipherSuites": {
+      "name": "updateCipherSuites",
+      "type": "function",
+      "summary": "Implements update cipher suites behavior for the config component."
+    },
+    "function:config.go:updateMinMaxVersions": {
+      "name": "updateMinMaxVersions",
+      "type": "function",
+      "summary": "Implements update min max versions behavior for the config component."
+    },
+    "function:config.go:Validate": {
+      "name": "Validate",
+      "type": "function",
+      "summary": "Checks cross-field invariants for URLs, timing, TLS, discovery, compaction, authentication, leases, tracing, and feature gates."
+    },
+    "function:config.go:PeerURLsMapAndToken": {
+      "name": "PeerURLsMapAndToken",
+      "type": "function",
+      "summary": "Builds the initial peer URL map and cluster token from static or discovery-based configuration."
+    },
+    "function:config.go:GetDNSClusterNames": {
+      "name": "GetDNSClusterNames",
+      "type": "function",
+      "summary": "Queries DNS SRV discovery and derives secure or insecure cluster membership names."
+    },
+    "function:config.go:InitialClusterFromName": {
+      "name": "InitialClusterFromName",
+      "type": "function",
+      "summary": "Creates the initial-cluster string for a single member from its advertised peer URLs."
+    },
+    "function:config.go:InferLocalAddr": {
+      "name": "InferLocalAddr",
+      "type": "function",
+      "summary": "Infers the local member name and peer URL from the configured initial cluster."
+    },
+    "function:config.go:IsNewCluster": {
+      "name": "IsNewCluster",
+      "type": "function",
+      "summary": "Implements is new cluster behavior for the config component."
+    },
+    "function:config.go:ElectionTicks": {
+      "name": "ElectionTicks",
+      "type": "function",
+      "summary": "Implements election ticks behavior for the config component."
+    },
+    "function:config.go:ClientSelfCert": {
+      "name": "ClientSelfCert",
+      "type": "function",
+      "summary": "Generates client-facing self-signed TLS material when automatic client TLS is enabled."
+    },
+    "function:config.go:PeerSelfCert": {
+      "name": "PeerSelfCert",
+      "type": "function",
+      "summary": "Generates peer-facing self-signed TLS material when automatic peer TLS is enabled."
+    },
+    "function:config.go:UpdateDefaultClusterFromName": {
+      "name": "UpdateDefaultClusterFromName",
+      "type": "function",
+      "summary": "Rewrites default cluster and advertise URLs to match a customized member name and listening addresses."
+    },
+    "function:config.go:checkBindURLs": {
+      "name": "checkBindURLs",
+      "type": "function",
+      "summary": "Validates that listen URLs use supported schemes and bindable host forms."
+    },
+    "function:config.go:checkHostURLs": {
+      "name": "checkHostURLs",
+      "type": "function",
+      "summary": "Validates advertised URLs and rejects unsafe wildcard or malformed hosts."
+    },
+    "class:config.go:Config": {
+      "name": "Config",
+      "type": "class",
+      "summary": "Aggregates every embedded etcd runtime option, including storage, Raft timing, networking, TLS, discovery, authentication, observability, and feature gates."
+    },
+    "file:config_logging.go": {
+      "name": "config_logging.go",
+      "type": "file",
+      "summary": "Builds and manages zap logging for embedded etcd, including output selection, global logger wiring, rotation, and synchronization."
+    },
+    "function:config_logging.go:GetLogger": {
+      "name": "GetLogger",
+      "type": "function",
+      "summary": "Implements get logger behavior for the config_logging component."
+    },
+    "function:config_logging.go:setupLogging": {
+      "name": "setupLogging",
+      "type": "function",
+      "summary": "Creates the configured zap logger, chooses output sinks and format, enables optional rotation, and installs the logger on Config."
+    },
+    "function:config_logging.go:NewZapLoggerBuilder": {
+      "name": "NewZapLoggerBuilder",
+      "type": "function",
+      "summary": "Returns a server logger factory that derives named loggers from the configured base logger."
+    },
+    "function:config_logging.go:SetupGlobalLoggers": {
+      "name": "SetupGlobalLoggers",
+      "type": "function",
+      "summary": "Installs the configured zap logger into etcd and gRPC global logging adapters."
+    },
+    "function:config_logging.go:Sync": {
+      "name": "Sync",
+      "type": "function",
+      "summary": "Implements sync behavior for the config_logging component."
+    },
+    "function:config_logging.go:setupLogRotation": {
+      "name": "setupLogRotation",
+      "type": "function",
+      "summary": "Parses rotation settings and creates lumberjack-backed zap sinks for configured log outputs."
+    },
+    "file:config_logging_journal_unix.go": {
+      "name": "config_logging_journal_unix.go",
+      "type": "file",
+      "summary": "Provides the Unix journal-backed zap write synchronizer used when journal logging is selected."
+    },
+    "file:config_logging_journal_windows.go": {
+      "name": "config_logging_journal_windows.go",
+      "type": "file",
+      "summary": "Rejects journal logging on Windows through the platform-specific write-synchronizer implementation."
+    },
+    "file:config_test.go": {
+      "name": "config_test.go",
+      "type": "file",
+      "summary": "Covers configuration parsing, defaults, validation, discovery, TLS versions, log rotation, URL safety, feature gates, and lease options."
+    },
+    "function:config_test.go:TestConfigFileOtherFields": {
+      "name": "TestConfigFileOtherFields",
+      "type": "function",
+      "summary": "Verifies that representative non-URL fields load correctly from configuration files."
+    },
+    "function:config_test.go:TestConfigFileFeatureGates": {
+      "name": "TestConfigFileFeatureGates",
+      "type": "function",
+      "summary": "Exercises server feature-gate parsing from configuration files."
+    },
+    "function:config_test.go:TestUpdateDefaultClusterFromName": {
+      "name": "TestUpdateDefaultClusterFromName",
+      "type": "function",
+      "summary": "Tests test update default cluster from name behavior for the config_test component."
+    },
+    "function:config_test.go:TestUpdateDefaultClusterFromNameOverwrite": {
+      "name": "TestUpdateDefaultClusterFromNameOverwrite",
+      "type": "function",
+      "summary": "Tests test update default cluster from name overwrite behavior for the config_test component."
+    },
+    "function:config_test.go:TestInferLocalAddr": {
+      "name": "TestInferLocalAddr",
+      "type": "function",
+      "summary": "Covers inference of local member identity and addresses from initial-cluster configuration."
+    },
+    "function:config_test.go:TestSetMemberLocalAddrValidate": {
+      "name": "TestSetMemberLocalAddrValidate",
+      "type": "function",
+      "summary": "Tests test set member local addr validate behavior for the config_test component."
+    },
+    "function:config_test.go:equals": {
+      "name": "equals",
+      "type": "function",
+      "summary": "Implements equals behavior for the config_test component."
+    },
+    "function:config_test.go:compareSlices": {
+      "name": "compareSlices",
+      "type": "function",
+      "summary": "Implements compare slices behavior for the config_test component."
+    },
+    "function:config_test.go:mustCreateCfgFile": {
+      "name": "mustCreateCfgFile",
+      "type": "function",
+      "summary": "Implements must create cfg file behavior for the config_test component."
+    },
+    "function:config_test.go:TestAutoCompactionModeInvalid": {
+      "name": "TestAutoCompactionModeInvalid",
+      "type": "function",
+      "summary": "Tests test auto compaction mode invalid behavior for the config_test component."
+    },
+    "function:config_test.go:TestAutoCompactionModeParse": {
+      "name": "TestAutoCompactionModeParse",
+      "type": "function",
+      "summary": "Tests test auto compaction mode parse behavior for the config_test component."
+    },
+    "function:config_test.go:TestPeerURLsMapAndTokenFromSRV": {
+      "name": "TestPeerURLsMapAndTokenFromSRV",
+      "type": "function",
+      "summary": "Tests DNS SRV discovery conversion into peer URL maps and cluster tokens."
+    },
+    "function:config_test.go:TestLeaseCheckpointValidate": {
+      "name": "TestLeaseCheckpointValidate",
+      "type": "function",
+      "summary": "Tests test lease checkpoint validate behavior for the config_test component."
+    },
+    "function:config_test.go:TestLogRotation": {
+      "name": "TestLogRotation",
+      "type": "function",
+      "summary": "Verifies rotating-log configuration parsing and output behavior."
+    },
+    "function:config_test.go:TestTLSVersionMinMax": {
+      "name": "TestTLSVersionMinMax",
+      "type": "function",
+      "summary": "Covers supported and invalid TLS minimum and maximum version combinations."
+    },
+    "function:config_test.go:TestUndefinedAutoCompactionModeValidate": {
+      "name": "TestUndefinedAutoCompactionModeValidate",
+      "type": "function",
+      "summary": "Tests test undefined auto compaction mode validate behavior for the config_test component."
+    },
+    "function:config_test.go:TestMatchNewConfigAddFlags": {
+      "name": "TestMatchNewConfigAddFlags",
+      "type": "function",
+      "summary": "Tests test match new config add flags behavior for the config_test component."
+    },
+    "function:config_test.go:TestCheckHostURLs": {
+      "name": "TestCheckHostURLs",
+      "type": "function",
+      "summary": "Exercises advertised-host validation against valid, wildcard, and malformed URLs."
+    },
+    "function:config_test.go:TestDiscoveryCfg": {
+      "name": "TestDiscoveryCfg",
+      "type": "function",
+      "summary": "Tests test discovery cfg behavior for the config_test component."
+    },
+    "function:config_test.go:TestFastLeaseKeepAliveValidate": {
+      "name": "TestFastLeaseKeepAliveValidate",
+      "type": "function",
+      "summary": "Tests test fast lease keep alive validate behavior for the config_test component."
+    },
+    "file:config_tracing.go": {
+      "name": "config_tracing.go",
+      "type": "file",
+      "summary": "Validates distributed-tracing settings and constructs an OpenTelemetry OTLP exporter, sampler, resource identity, and shutdown wrapper."
+    },
+    "function:config_tracing.go:validateTracingConfig": {
+      "name": "validateTracingConfig",
+      "type": "function",
+      "summary": "Rejects incomplete or invalid distributed-tracing endpoint, service, and sampling settings."
+    },
+    "function:config_tracing.go:newTracingExporter": {
+      "name": "newTracingExporter",
+      "type": "function",
+      "summary": "Creates and registers an OTLP trace provider with configured sampling, service identity, and shutdown behavior."
+    },
+    "function:config_tracing.go:Close": {
+      "name": "Close",
+      "type": "function",
+      "summary": "Performs coordinated, idempotent shutdown of listeners, HTTP and gRPC servers, handlers, tracing, and the underlying etcd server."
+    },
+    "file:config_tracing_test.go": {
+      "name": "config_tracing_test.go",
+      "type": "file",
+      "summary": "Verifies sampler selection and tracing configuration behavior for the embedded server."
+    },
+    "function:config_tracing_test.go:TestDetermineSampler": {
+      "name": "TestDetermineSampler",
+      "type": "function",
+      "summary": "Verifies conversion of configured sampling rates into OpenTelemetry sampler decisions."
+    },
+    "function:config_tracing_test.go:TestTracingConfig": {
+      "name": "TestTracingConfig",
+      "type": "function",
+      "summary": "Covers tracing configuration validation and exporter construction behavior."
+    },
+    "file:doc.go": {
+      "name": "doc.go",
+      "type": "file",
+      "summary": "Documents the embed package as the API for configuring, starting, and stopping an etcd server inside another Go process."
+    },
+    "file:etcd.go": {
+      "name": "etcd.go",
+      "type": "file",
+      "summary": "Owns the embedded server lifecycle: startup, peer and client listener creation, serving, metrics, gRPC gateway dialing, shutdown, and error propagation."
+    },
+    "function:etcd.go:StartEtcd": {
+      "name": "StartEtcd",
+      "type": "function",
+      "summary": "Validates configuration, initializes tracing and logging, creates listeners, starts the etcd server, and launches peer, client, and metrics serving loops."
+    },
+    "function:etcd.go:print": {
+      "name": "print",
+      "type": "function",
+      "summary": "Logs the effective startup configuration, version, resource limits, data directory state, URLs, and security posture."
+    },
+    "function:etcd.go:Config": {
+      "name": "Config",
+      "type": "function",
+      "summary": "Implements config behavior for the etcd component."
+    },
+    "function:etcd.go:Close": {
+      "name": "Close",
+      "type": "function",
+      "summary": "Performs coordinated, idempotent shutdown of listeners, HTTP and gRPC servers, handlers, tracing, and the underlying etcd server."
+    },
+    "function:etcd.go:stopServers": {
+      "name": "stopServers",
+      "type": "function",
+      "summary": "Gracefully stops active HTTP and gRPC servers, falling back to forced shutdown when required."
+    },
+    "function:etcd.go:Err": {
+      "name": "Err",
+      "type": "function",
+      "summary": "Implements err behavior for the etcd component."
+    },
+    "function:etcd.go:configurePeerListeners": {
+      "name": "configurePeerListeners",
+      "type": "function",
+      "summary": "Creates peer listeners with TLS and socket options and detects an already initialized member."
+    },
+    "function:etcd.go:servePeers": {
+      "name": "servePeers",
+      "type": "function",
+      "summary": "Starts peer HTTP serving for each configured peer listener and tracks failures."
+    },
+    "function:etcd.go:configureClientListeners": {
+      "name": "configureClientListeners",
+      "type": "function",
+      "summary": "Creates client and client-HTTP listeners, applies TLS, and prepares secure and insecure serving contexts."
+    },
+    "function:etcd.go:resolveURL": {
+      "name": "resolveURL",
+      "type": "function",
+      "summary": "Implements resolve url behavior for the etcd component."
+    },
+    "function:etcd.go:serveClients": {
+      "name": "serveClients",
+      "type": "function",
+      "summary": "Starts the configured gRPC, gateway, and HTTP client endpoints across prepared listeners."
+    },
+    "function:etcd.go:grpcGatewayDial": {
+      "name": "grpcGatewayDial",
+      "type": "function",
+      "summary": "Builds the gateway dial function and transport credentials for connecting back to the local gRPC endpoint."
+    },
+    "function:etcd.go:createMetricsListener": {
+      "name": "createMetricsListener",
+      "type": "function",
+      "summary": "Creates a metrics listener and applies client TLS settings when the metrics URL requires HTTPS."
+    },
+    "function:etcd.go:serveMetrics": {
+      "name": "serveMetrics",
+      "type": "function",
+      "summary": "Serves metrics and health endpoints and reports listener failures."
+    },
+    "function:etcd.go:errHandler": {
+      "name": "errHandler",
+      "type": "function",
+      "summary": "Implements err handler behavior for the etcd component."
+    },
+    "function:etcd.go:GetLogger": {
+      "name": "GetLogger",
+      "type": "function",
+      "summary": "Implements get logger behavior for the etcd component."
+    },
+    "function:etcd.go:parseCompactionRetention": {
+      "name": "parseCompactionRetention",
+      "type": "function",
+      "summary": "Parses periodic or revision auto-compaction retention into the appropriate duration or revision value."
+    },
+    "class:etcd.go:Etcd": {
+      "name": "Etcd",
+      "type": "class",
+      "summary": "Represents a running embedded etcd instance and owns its server, listeners, error channels, HTTP/gRPC servers, and shutdown state."
+    },
+    "file:etcd_test.go": {
+      "name": "etcd_test.go",
+      "type": "file",
+      "summary": "Checks metrics-listener creation when client TLS information is empty."
+    },
+    "function:etcd_test.go:TestEmptyClientTLSInfo_createMetricsListener": {
+      "name": "TestEmptyClientTLSInfo_createMetricsListener",
+      "type": "function",
+      "summary": "Tests test empty client tlsinfo create metrics listener behavior for the etcd_test component."
+    },
+    "file:serve.go": {
+      "name": "serve.go",
+      "type": "file",
+      "summary": "Multiplexes gRPC and HTTP traffic, installs gateways and debug handlers, enforces host and CORS access rules, and coordinates listener shutdown."
+    },
+    "function:serve.go:startHandler": {
+      "name": "startHandler",
+      "type": "function",
+      "summary": "Implements start handler behavior for the serve component."
+    },
+    "function:serve.go:newServeCtx": {
+      "name": "newServeCtx",
+      "type": "function",
+      "summary": "Creates a serving context that owns one listener, its TLS state, handlers, servers, and shutdown synchronization."
+    },
+    "function:serve.go:serve": {
+      "name": "serve",
+      "type": "function",
+      "summary": "Classifies listener traffic, constructs gRPC and HTTP servers, registers services, applies TLS, and runs multiplexed serving loops."
+    },
+    "function:serve.go:grpcHandlerFunc": {
+      "name": "grpcHandlerFunc",
+      "type": "function",
+      "summary": "Routes HTTP/2 gRPC requests to the gRPC server and all other requests to the HTTP handler."
+    },
+    "function:serve.go:registerGateway": {
+      "name": "registerGateway",
+      "type": "function",
+      "summary": "Dials the local gRPC service, registers gateway handlers, and ties the connection lifecycle to the serving context."
+    },
+    "function:serve.go:Warnln": {
+      "name": "Warnln",
+      "type": "function",
+      "summary": "Implements warnln behavior for the serve component."
+    },
+    "function:serve.go:Debugln": {
+      "name": "Debugln",
+      "type": "function",
+      "summary": "Implements debugln behavior for the serve component."
+    },
+    "function:serve.go:createMux": {
+      "name": "createMux",
+      "type": "function",
+      "summary": "Builds the HTTP handler tree for legacy APIs, gRPC gateway, user handlers, pprof, and tracing endpoints."
+    },
+    "function:serve.go:ServeHTTP": {
+      "name": "ServeHTTP",
+      "type": "function",
+      "summary": "Processes an HTTP request through access-control and CORS policy before delegating to the wrapped handler."
+    },
+    "function:serve.go:errCVE20185702": {
+      "name": "errCVE20185702",
+      "type": "function",
+      "summary": "Implements err cve20185702 behavior for the serve component."
+    },
+    "function:serve.go:WrapCORS": {
+      "name": "WrapCORS",
+      "type": "function",
+      "summary": "Wraps an HTTP handler with origin checks and preflight response handling."
+    },
+    "class:serve.go:serveCtx": {
+      "name": "serveCtx",
+      "type": "class",
+      "summary": "Owns all state needed to serve one client listener, including TLS, multiplexers, handlers, servers, and lifecycle synchronization."
+    },
+    "class:serve.go:wsProxyZapLogger": {
+      "name": "wsProxyZapLogger",
+      "type": "class",
+      "summary": "Adapts zap logging to the websocket proxy logging interface."
+    },
+    "file:serve_test.go": {
+      "name": "serve_test.go",
+      "type": "file",
+      "summary": "Ensures embedded startup reports an error when the initial cluster token is invalid."
+    },
+    "function:serve_test.go:TestStartEtcdWrongToken": {
+      "name": "TestStartEtcdWrongToken",
+      "type": "function",
+      "summary": "Confirms startup fails predictably when peer discovery uses an invalid initial-cluster token."
+    },
+    "file:util.go": {
+      "name": "util.go",
+      "type": "file",
+      "summary": "Determines whether an embedded member has already initialized by checking for its persisted WAL."
+    },
+    "file:util_test.go": {
+      "name": "util_test.go",
+      "type": "file",
+      "summary": "Provides reusable dynamic URL fixtures and configuration helpers for embed package tests."
+    },
+    "function:util_test.go:newConfigTestURLs": {
+      "name": "newConfigTestURLs",
+      "type": "function",
+      "summary": "Allocates isolated peer and client URLs and returns a matching initial-cluster fixture."
+    },
+    "class:util_test.go:ConfigTestURLs": {
+      "name": "ConfigTestURLs",
+      "type": "class",
+      "summary": "Groups peer URLs, client URLs, and the corresponding initial-cluster string used by tests."
+    }
+  },
+  "totalNodes": 102,
+  "totalEdges": 143
+}

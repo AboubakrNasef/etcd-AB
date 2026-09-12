@@ -1,0 +1,597 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 7,
+  "filesSkipped": [
+    "storage/wal/testdata/TestNew.wal"
+  ],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 7,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 1,
+      "failed": 0,
+      "skipped": 6
+    }
+  },
+  "results": [
+    {
+      "path": ".ua/config.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 3,
+      "nonEmptyLines": 3,
+      "sections": [
+        {
+          "heading": "outputLanguage",
+          "level": 1,
+          "line": 2
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "etcdserver/api/snap/snappb/snap.pb.go",
+      "language": "go",
+      "fileCategory": "code",
+      "totalLines": 133,
+      "nonEmptyLines": 115,
+      "functions": [
+        {
+          "name": "Reset",
+          "startLine": 33,
+          "endLine": 38,
+          "params": []
+        },
+        {
+          "name": "String",
+          "startLine": 40,
+          "endLine": 42,
+          "params": []
+        },
+        {
+          "name": "ProtoMessage",
+          "startLine": 44,
+          "endLine": 44,
+          "params": []
+        },
+        {
+          "name": "ProtoReflect",
+          "startLine": 46,
+          "endLine": 56,
+          "params": []
+        },
+        {
+          "name": "Descriptor",
+          "startLine": 59,
+          "endLine": 61,
+          "params": []
+        },
+        {
+          "name": "GetCrc",
+          "startLine": 63,
+          "endLine": 68,
+          "params": []
+        },
+        {
+          "name": "GetData",
+          "startLine": 70,
+          "endLine": 75,
+          "params": []
+        },
+        {
+          "name": "file_snap_proto_rawDescGZIP",
+          "startLine": 92,
+          "endLine": 97,
+          "params": []
+        },
+        {
+          "name": "init",
+          "startLine": 111,
+          "endLine": 111,
+          "params": []
+        },
+        {
+          "name": "file_snap_proto_init",
+          "startLine": 112,
+          "endLine": 133,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "Snapshot",
+          "startLine": 25,
+          "endLine": 31,
+          "methods": [
+            "Reset",
+            "String",
+            "ProtoMessage",
+            "ProtoReflect",
+            "Descriptor",
+            "GetCrc",
+            "GetData"
+          ],
+          "properties": [
+            "state",
+            "Crc",
+            "Data",
+            "unknownFields",
+            "sizeCache"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Snapshot",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "Reset",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "String",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "ProtoMessage",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "ProtoReflect",
+          "line": 46,
+          "isDefault": false
+        },
+        {
+          "name": "Descriptor",
+          "line": 59,
+          "isDefault": false
+        },
+        {
+          "name": "GetCrc",
+          "line": 63,
+          "isDefault": false
+        },
+        {
+          "name": "GetData",
+          "line": 70,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Reset",
+          "callee": "protoimpl.X.MessageStateOf",
+          "lineNumber": 36
+        },
+        {
+          "caller": "Reset",
+          "callee": "protoimpl.Pointer",
+          "lineNumber": 36
+        },
+        {
+          "caller": "Reset",
+          "callee": "ms.StoreMessageInfo",
+          "lineNumber": 37
+        },
+        {
+          "caller": "String",
+          "callee": "protoimpl.X.MessageStringOf",
+          "lineNumber": 41
+        },
+        {
+          "caller": "ProtoReflect",
+          "callee": "protoimpl.X.MessageStateOf",
+          "lineNumber": 49
+        },
+        {
+          "caller": "ProtoReflect",
+          "callee": "protoimpl.Pointer",
+          "lineNumber": 49
+        },
+        {
+          "caller": "ProtoReflect",
+          "callee": "ms.LoadMessageInfo",
+          "lineNumber": 50
+        },
+        {
+          "caller": "ProtoReflect",
+          "callee": "ms.StoreMessageInfo",
+          "lineNumber": 51
+        },
+        {
+          "caller": "ProtoReflect",
+          "callee": "mi.MessageOf",
+          "lineNumber": 55
+        },
+        {
+          "caller": "Descriptor",
+          "callee": "file_snap_proto_rawDescGZIP",
+          "lineNumber": 60
+        },
+        {
+          "caller": "file_snap_proto_rawDescGZIP",
+          "callee": "file_snap_proto_rawDescOnce.Do",
+          "lineNumber": 93
+        },
+        {
+          "caller": "file_snap_proto_rawDescGZIP",
+          "callee": "protoimpl.X.CompressGZIP",
+          "lineNumber": 94
+        },
+        {
+          "caller": "file_snap_proto_rawDescGZIP",
+          "callee": "unsafe.Slice",
+          "lineNumber": 94
+        },
+        {
+          "caller": "file_snap_proto_rawDescGZIP",
+          "callee": "unsafe.StringData",
+          "lineNumber": 94
+        },
+        {
+          "caller": "file_snap_proto_rawDescGZIP",
+          "callee": "len",
+          "lineNumber": 94
+        },
+        {
+          "caller": "init",
+          "callee": "file_snap_proto_init",
+          "lineNumber": 111
+        },
+        {
+          "caller": "file_snap_proto_init",
+          "callee": "protoimpl.TypeBuilder{\r\n\t\tFile: protoimpl.DescBuilder{\r\n\t\t\tGoPackagePath: reflect.TypeOf(x{}).PkgPath(),\r\n\t\t\tRawDescriptor: unsafe.Slice(unsafe.StringData(file_snap_proto_rawDesc), len(file_snap_proto_rawDesc)),\r\n\t\t\tNumEnums:      0,\r\n\t\t\tNumMessages:   1,\r\n\t\t\tNumExtensions: 0,\r\n\t\t\tNumServices:   0,\r\n\t\t},\r\n\t\tGoTypes:           file_snap_proto_goTypes,\r\n\t\tDependencyIndexes: file_snap_proto_depIdxs,\r\n\t\tMessageInfos:      file_snap_proto_msgTypes,\r\n\t}.Build",
+          "lineNumber": 117
+        },
+        {
+          "caller": "file_snap_proto_init",
+          "callee": "reflect.TypeOf(x{}).PkgPath",
+          "lineNumber": 119
+        },
+        {
+          "caller": "file_snap_proto_init",
+          "callee": "reflect.TypeOf",
+          "lineNumber": 119
+        },
+        {
+          "caller": "file_snap_proto_init",
+          "callee": "unsafe.Slice",
+          "lineNumber": 120
+        },
+        {
+          "caller": "file_snap_proto_init",
+          "callee": "unsafe.StringData",
+          "lineNumber": 120
+        },
+        {
+          "caller": "file_snap_proto_init",
+          "callee": "len",
+          "lineNumber": 120
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 8,
+        "functionCount": 10,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "etcdserver/api/snap/snappb/snap.proto",
+      "language": "protobuf",
+      "fileCategory": "data",
+      "totalLines": 9,
+      "nonEmptyLines": 7,
+      "definitions": [
+        {
+          "name": "snapshot",
+          "kind": "message",
+          "fields": [
+            "crc",
+            "data"
+          ],
+          "startLine": 6,
+          "endLine": 9
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "definitionCount": 1,
+        "endpointCount": 0
+      }
+    },
+    {
+      "path": "etcdserver/api/v3election/v3electionpb/v3election.proto",
+      "language": "protobuf",
+      "fileCategory": "data",
+      "totalLines": 117,
+      "nonEmptyLines": 104,
+      "definitions": [
+        {
+          "name": "CampaignRequest",
+          "kind": "message",
+          "fields": [
+            "name",
+            "lease",
+            "value"
+          ],
+          "startLine": 56,
+          "endLine": 66
+        },
+        {
+          "name": "CampaignResponse",
+          "kind": "message",
+          "fields": [
+            "leader"
+          ],
+          "startLine": 68,
+          "endLine": 72
+        },
+        {
+          "name": "LeaderKey",
+          "kind": "message",
+          "fields": [
+            "name",
+            "key",
+            "rev",
+            "lease"
+          ],
+          "startLine": 74,
+          "endLine": 86
+        },
+        {
+          "name": "LeaderRequest",
+          "kind": "message",
+          "fields": [
+            "name"
+          ],
+          "startLine": 88,
+          "endLine": 91
+        },
+        {
+          "name": "LeaderResponse",
+          "kind": "message",
+          "fields": [],
+          "startLine": 93,
+          "endLine": 97
+        },
+        {
+          "name": "ResignRequest",
+          "kind": "message",
+          "fields": [
+            "leader"
+          ],
+          "startLine": 99,
+          "endLine": 102
+        },
+        {
+          "name": "ResignResponse",
+          "kind": "message",
+          "fields": [],
+          "startLine": 104,
+          "endLine": 106
+        },
+        {
+          "name": "ProclaimRequest",
+          "kind": "message",
+          "fields": [
+            "leader",
+            "value"
+          ],
+          "startLine": 108,
+          "endLine": 113
+        },
+        {
+          "name": "ProclaimResponse",
+          "kind": "message",
+          "fields": [],
+          "startLine": 115,
+          "endLine": 117
+        }
+      ],
+      "endpoints": [
+        {
+          "method": "rpc",
+          "path": "Election.Campaign",
+          "startLine": 18,
+          "endLine": 18
+        },
+        {
+          "method": "rpc",
+          "path": "Election.Proclaim",
+          "startLine": 25,
+          "endLine": 25
+        },
+        {
+          "method": "rpc",
+          "path": "Election.Leader",
+          "startLine": 32,
+          "endLine": 32
+        },
+        {
+          "method": "rpc",
+          "path": "Election.Observe",
+          "startLine": 40,
+          "endLine": 40
+        },
+        {
+          "method": "rpc",
+          "path": "Election.Resign",
+          "startLine": 48,
+          "endLine": 48
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "definitionCount": 9,
+        "endpointCount": 5
+      }
+    },
+    {
+      "path": "etcdserver/api/v3lock/v3lockpb/v3lock.proto",
+      "language": "protobuf",
+      "fileCategory": "data",
+      "totalLines": 63,
+      "nonEmptyLines": 54,
+      "definitions": [
+        {
+          "name": "LockRequest",
+          "kind": "message",
+          "fields": [
+            "name",
+            "lease"
+          ],
+          "startLine": 37,
+          "endLine": 46
+        },
+        {
+          "name": "LockResponse",
+          "kind": "message",
+          "fields": [
+            "key"
+          ],
+          "startLine": 48,
+          "endLine": 54
+        },
+        {
+          "name": "UnlockRequest",
+          "kind": "message",
+          "fields": [
+            "key"
+          ],
+          "startLine": 56,
+          "endLine": 59
+        },
+        {
+          "name": "UnlockResponse",
+          "kind": "message",
+          "fields": [],
+          "startLine": 61,
+          "endLine": 63
+        }
+      ],
+      "endpoints": [
+        {
+          "method": "rpc",
+          "path": "Lock.Lock",
+          "startLine": 19,
+          "endLine": 19
+        },
+        {
+          "method": "rpc",
+          "path": "Lock.Unlock",
+          "startLine": 29,
+          "endLine": 29
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "definitionCount": 4,
+        "endpointCount": 2
+      }
+    },
+    {
+      "path": "lease/leasepb/lease.proto",
+      "language": "protobuf",
+      "fileCategory": "data",
+      "totalLines": 20,
+      "nonEmptyLines": 15,
+      "definitions": [
+        {
+          "name": "Lease",
+          "kind": "message",
+          "fields": [
+            "ID",
+            "TTL",
+            "RemainingTTL"
+          ],
+          "startLine": 8,
+          "endLine": 12
+        },
+        {
+          "name": "LeaseInternalRequest",
+          "kind": "message",
+          "fields": [],
+          "startLine": 14,
+          "endLine": 16
+        },
+        {
+          "name": "LeaseInternalResponse",
+          "kind": "message",
+          "fields": [],
+          "startLine": 18,
+          "endLine": 20
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "definitionCount": 3,
+        "endpointCount": 0
+      }
+    },
+    {
+      "path": "storage/wal/walpb/record.proto",
+      "language": "protobuf",
+      "fileCategory": "data",
+      "totalLines": 20,
+      "nonEmptyLines": 16,
+      "definitions": [
+        {
+          "name": "Record",
+          "kind": "message",
+          "fields": [
+            "type",
+            "crc",
+            "data"
+          ],
+          "startLine": 8,
+          "endLine": 12
+        },
+        {
+          "name": "Snapshot",
+          "kind": "message",
+          "fields": [
+            "index",
+            "term"
+          ],
+          "startLine": 15,
+          "endLine": 20
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "definitionCount": 2,
+        "endpointCount": 0
+      }
+    }
+  ]
+}

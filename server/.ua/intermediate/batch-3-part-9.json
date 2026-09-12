@@ -1,0 +1,1463 @@
+{
+  "nodes": [
+    {
+      "id": "file:storage/schema/lease_test.go",
+      "type": "file",
+      "name": "lease_test.go",
+      "filePath": "storage/schema/lease_test.go",
+      "summary": "Tests the lease storage behavior, including persistence, transactions, and edge cases.",
+      "tags": [
+        "test",
+        "schema",
+        "backend",
+        "persistence"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using backend transactions and protobuf-backed storage structures."
+    },
+    {
+      "id": "file:storage/schema/membership.go",
+      "type": "file",
+      "name": "membership.go",
+      "filePath": "storage/schema/membership.go",
+      "summary": "Defines backend persistence helpers for membership data, including safe reads, writes, and bucket management.",
+      "tags": [
+        "schema",
+        "backend",
+        "persistence",
+        "serialization"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Go implementation using backend transactions and protobuf-backed storage structures."
+    },
+    {
+      "id": "file:storage/schema/migration.go",
+      "type": "file",
+      "name": "migration.go",
+      "filePath": "storage/schema/migration.go",
+      "summary": "Defines backend persistence helpers for migration data, including safe reads, writes, and bucket management.",
+      "tags": [
+        "schema",
+        "backend",
+        "persistence",
+        "serialization"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using backend transactions and protobuf-backed storage structures."
+    },
+    {
+      "id": "function:storage/schema/lease_test.go:TestLeaseBackend",
+      "type": "function",
+      "name": "TestLeaseBackend",
+      "filePath": "storage/schema/lease_test.go",
+      "lineRange": [
+        31,
+        112
+      ],
+      "summary": "Implements LeaseBackend behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/schema/membership.go:NewMembershipBackend",
+      "type": "function",
+      "name": "NewMembershipBackend",
+      "filePath": "storage/schema/membership.go",
+      "lineRange": [
+        43,
+        48
+      ],
+      "summary": "Implements NewMembershipBackend behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/membership.go:MustSaveMemberToBackend",
+      "type": "function",
+      "name": "MustSaveMemberToBackend",
+      "filePath": "storage/schema/membership.go",
+      "lineRange": [
+        50,
+        61
+      ],
+      "summary": "Implements SaveMemberToBackend behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/membership.go:TrimClusterFromBackend",
+      "type": "function",
+      "name": "TrimClusterFromBackend",
+      "filePath": "storage/schema/membership.go",
+      "lineRange": [
+        65,
+        71
+      ],
+      "summary": "Implements TrimClusterFromBackend behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/membership.go:MustDeleteMemberFromBackend",
+      "type": "function",
+      "name": "MustDeleteMemberFromBackend",
+      "filePath": "storage/schema/membership.go",
+      "lineRange": [
+        73,
+        81
+      ],
+      "summary": "Implements DeleteMemberFromBackend behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/membership.go:MustReadMembersFromBackend",
+      "type": "function",
+      "name": "MustReadMembersFromBackend",
+      "filePath": "storage/schema/membership.go",
+      "lineRange": [
+        83,
+        89
+      ],
+      "summary": "Implements ReadMembersFromBackend behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/membership.go:readMembersFromBackend",
+      "type": "function",
+      "name": "readMembersFromBackend",
+      "filePath": "storage/schema/membership.go",
+      "lineRange": [
+        91,
+        120
+      ],
+      "summary": "Implements readMembersFromBackend behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/schema/membership.go:TrimMembershipFromBackend",
+      "type": "function",
+      "name": "TrimMembershipFromBackend",
+      "filePath": "storage/schema/membership.go",
+      "lineRange": [
+        124,
+        144
+      ],
+      "summary": "Implements TrimMembershipFromBackend behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/schema/membership.go:MustSaveClusterVersionToBackend",
+      "type": "function",
+      "name": "MustSaveClusterVersionToBackend",
+      "filePath": "storage/schema/membership.go",
+      "lineRange": [
+        148,
+        155
+      ],
+      "summary": "Implements SaveClusterVersionToBackend behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/membership.go:MustSaveDowngradeToBackend",
+      "type": "function",
+      "name": "MustSaveDowngradeToBackend",
+      "filePath": "storage/schema/membership.go",
+      "lineRange": [
+        159,
+        169
+      ],
+      "summary": "Implements SaveDowngradeToBackend behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/membership.go:MustCreateBackendBuckets",
+      "type": "function",
+      "name": "MustCreateBackendBuckets",
+      "filePath": "storage/schema/membership.go",
+      "lineRange": [
+        171,
+        178
+      ],
+      "summary": "Implements CreateBackendBuckets behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/membership.go:ClusterVersionFromBackend",
+      "type": "function",
+      "name": "ClusterVersionFromBackend",
+      "filePath": "storage/schema/membership.go",
+      "lineRange": [
+        190,
+        206
+      ],
+      "summary": "Implements ClusterVersionFromBackend behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/membership.go:DowngradeInfoFromBackend",
+      "type": "function",
+      "name": "DowngradeInfoFromBackend",
+      "filePath": "storage/schema/membership.go",
+      "lineRange": [
+        210,
+        241
+      ],
+      "summary": "Implements DowngradeInfoFromBackend behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:storage/schema/membership.go:membershipBackend",
+      "type": "class",
+      "name": "membershipBackend",
+      "filePath": "storage/schema/membership.go",
+      "lineRange": [
+        35,
+        38
+      ],
+      "summary": "Defines the membershipBackend storage abstraction and its associated state.",
+      "tags": [
+        "storage",
+        "type-definition",
+        "backend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/schema/migration.go:newPlan",
+      "type": "function",
+      "name": "newPlan",
+      "filePath": "storage/schema/migration.go",
+      "lineRange": [
+        29,
+        51
+      ],
+      "summary": "Implements newPlan behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/schema/migration.go:Execute",
+      "type": "function",
+      "name": "Execute",
+      "filePath": "storage/schema/migration.go",
+      "lineRange": [
+        53,
+        57
+      ],
+      "summary": "Implements Execute behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/migration.go:unsafeExecute",
+      "type": "function",
+      "name": "unsafeExecute",
+      "filePath": "storage/schema/migration.go",
+      "lineRange": [
+        59,
+        68
+      ],
+      "summary": "Implements unsafeExecute behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/migration.go:newMigrationStep",
+      "type": "function",
+      "name": "newMigrationStep",
+      "filePath": "storage/schema/migration.go",
+      "lineRange": [
+        76,
+        91
+      ],
+      "summary": "Implements newMigrationStep behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:storage/schema/lease_test.go",
+      "target": "function:storage/schema/lease_test.go:TestLeaseBackend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/lease_test.go",
+      "target": "function:storage/schema/lease_test.go:TestLeaseBackend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "function:storage/schema/membership.go:NewMembershipBackend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "function:storage/schema/membership.go:NewMembershipBackend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "function:storage/schema/membership.go:MustSaveMemberToBackend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "function:storage/schema/membership.go:MustSaveMemberToBackend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "function:storage/schema/membership.go:TrimClusterFromBackend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "function:storage/schema/membership.go:TrimClusterFromBackend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "function:storage/schema/membership.go:MustDeleteMemberFromBackend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "function:storage/schema/membership.go:MustDeleteMemberFromBackend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "function:storage/schema/membership.go:MustReadMembersFromBackend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "function:storage/schema/membership.go:MustReadMembersFromBackend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "function:storage/schema/membership.go:readMembersFromBackend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "function:storage/schema/membership.go:TrimMembershipFromBackend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "function:storage/schema/membership.go:TrimMembershipFromBackend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "function:storage/schema/membership.go:MustSaveClusterVersionToBackend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "function:storage/schema/membership.go:MustSaveClusterVersionToBackend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "function:storage/schema/membership.go:MustSaveDowngradeToBackend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "function:storage/schema/membership.go:MustSaveDowngradeToBackend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "function:storage/schema/membership.go:MustCreateBackendBuckets",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "function:storage/schema/membership.go:MustCreateBackendBuckets",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "function:storage/schema/membership.go:ClusterVersionFromBackend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "function:storage/schema/membership.go:ClusterVersionFromBackend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "function:storage/schema/membership.go:DowngradeInfoFromBackend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "function:storage/schema/membership.go:DowngradeInfoFromBackend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "class:storage/schema/membership.go:membershipBackend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/migration.go",
+      "target": "function:storage/schema/migration.go:newPlan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/migration.go",
+      "target": "function:storage/schema/migration.go:Execute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/migration.go",
+      "target": "function:storage/schema/migration.go:Execute",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/migration.go",
+      "target": "function:storage/schema/migration.go:unsafeExecute",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/migration.go",
+      "target": "function:storage/schema/migration.go:newMigrationStep",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/lease_test.go",
+      "target": "file:lease/leasepb/lease.pb.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease_test.go",
+      "target": "file:storage/backend/backend.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease_test.go",
+      "target": "file:storage/backend/backend_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease_test.go",
+      "target": "file:storage/backend/backend_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease_test.go",
+      "target": "file:storage/backend/batch_tx.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease_test.go",
+      "target": "file:storage/backend/batch_tx_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease_test.go",
+      "target": "file:storage/backend/config_default.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease_test.go",
+      "target": "file:storage/backend/config_linux.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease_test.go",
+      "target": "file:storage/backend/config_windows.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease_test.go",
+      "target": "file:storage/backend/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease_test.go",
+      "target": "file:storage/backend/export_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease_test.go",
+      "target": "file:storage/backend/hooks.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease_test.go",
+      "target": "file:storage/backend/hooks_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease_test.go",
+      "target": "file:storage/backend/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease_test.go",
+      "target": "file:storage/backend/read_tx.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease_test.go",
+      "target": "file:storage/backend/testing/betesting.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease_test.go",
+      "target": "file:storage/backend/tx_buffer.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease_test.go",
+      "target": "file:storage/backend/tx_buffer_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease_test.go",
+      "target": "file:storage/backend/verify.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease_test.go",
+      "target": "file:storage/backend/verify_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:etcdserver/api/membership/cluster.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:etcdserver/api/membership/cluster_opts.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:etcdserver/api/membership/cluster_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:etcdserver/api/membership/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:etcdserver/api/membership/errors.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:etcdserver/api/membership/member.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:etcdserver/api/membership/member_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:etcdserver/api/membership/membership_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:etcdserver/api/membership/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:etcdserver/api/membership/store.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:etcdserver/api/membership/storev2.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:etcdserver/api/membership/storev2_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:etcdserver/version/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:etcdserver/version/downgrade.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:etcdserver/version/downgrade_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:etcdserver/version/errors.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:etcdserver/version/monitor.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:etcdserver/version/monitor_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:etcdserver/version/version.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:etcdserver/version/version_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:storage/backend/backend.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:storage/backend/backend_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:storage/backend/backend_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:storage/backend/batch_tx.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:storage/backend/batch_tx_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:storage/backend/config_default.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:storage/backend/config_linux.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:storage/backend/config_windows.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:storage/backend/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:storage/backend/export_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:storage/backend/hooks.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:storage/backend/hooks_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:storage/backend/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:storage/backend/read_tx.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:storage/backend/tx_buffer.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:storage/backend/tx_buffer_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:storage/backend/verify.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/membership.go",
+      "target": "file:storage/backend/verify_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/migration.go",
+      "target": "file:storage/backend/backend.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/migration.go",
+      "target": "file:storage/backend/backend_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/migration.go",
+      "target": "file:storage/backend/backend_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/migration.go",
+      "target": "file:storage/backend/batch_tx.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/migration.go",
+      "target": "file:storage/backend/batch_tx_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/migration.go",
+      "target": "file:storage/backend/config_default.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/migration.go",
+      "target": "file:storage/backend/config_linux.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/migration.go",
+      "target": "file:storage/backend/config_windows.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/migration.go",
+      "target": "file:storage/backend/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/migration.go",
+      "target": "file:storage/backend/export_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/migration.go",
+      "target": "file:storage/backend/hooks.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/migration.go",
+      "target": "file:storage/backend/hooks_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/migration.go",
+      "target": "file:storage/backend/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/migration.go",
+      "target": "file:storage/backend/read_tx.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/migration.go",
+      "target": "file:storage/backend/tx_buffer.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/migration.go",
+      "target": "file:storage/backend/tx_buffer_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/migration.go",
+      "target": "file:storage/backend/verify.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/migration.go",
+      "target": "file:storage/backend/verify_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:storage/schema/lease_test.go:TestLeaseBackend",
+      "target": "function:storage/schema/lease.go:MustUnsafePutLease",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/lease_test.go:TestLeaseBackend",
+      "target": "function:storage/schema/lease.go:MustUnsafePutLease",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/lease_test.go:TestLeaseBackend",
+      "target": "function:storage/schema/lease.go:MustUnsafePutLease",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/lease_test.go:TestLeaseBackend",
+      "target": "function:storage/schema/lease.go:MustUnsafePutLease",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/lease_test.go:TestLeaseBackend",
+      "target": "function:storage/schema/lease.go:UnsafeDeleteLease",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/lease_test.go:TestLeaseBackend",
+      "target": "function:storage/schema/lease.go:UnsafeCreateLeaseBucket",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/lease_test.go:TestLeaseBackend",
+      "target": "function:storage/schema/lease.go:MustUnsafeGetAllLeases",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/membership.go:MustSaveMemberToBackend",
+      "target": "function:storage/schema/bucket.go:BackendMemberKey",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/membership.go:MustSaveMemberToBackend",
+      "target": "function:storage/mvcc/kvstore_test.go:LockInsideApply",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/membership.go:MustSaveMemberToBackend",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafePut",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/membership.go:TrimClusterFromBackend",
+      "target": "function:storage/mvcc/kvstore_test.go:LockOutsideApply",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/membership.go:TrimClusterFromBackend",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeDeleteBucket",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/membership.go:MustDeleteMemberFromBackend",
+      "target": "function:storage/schema/bucket.go:BackendMemberKey",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/membership.go:MustDeleteMemberFromBackend",
+      "target": "function:storage/mvcc/kvstore_test.go:LockInsideApply",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/membership.go:MustDeleteMemberFromBackend",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeDelete",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/membership.go:MustDeleteMemberFromBackend",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafePut",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/membership.go:readMembersFromBackend",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeForEach",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/membership.go:readMembersFromBackend",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeForEach",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/membership.go:TrimMembershipFromBackend",
+      "target": "function:storage/mvcc/kvstore_test.go:LockOutsideApply",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/membership.go:TrimMembershipFromBackend",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeForEach",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/membership.go:TrimMembershipFromBackend",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeDelete",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/membership.go:TrimMembershipFromBackend",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeForEach",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/membership.go:TrimMembershipFromBackend",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeDelete",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/membership.go:MustSaveClusterVersionToBackend",
+      "target": "function:storage/mvcc/kvstore_test.go:LockInsideApply",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/membership.go:MustSaveClusterVersionToBackend",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafePut",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/membership.go:MustSaveClusterVersionToBackend",
+      "target": "function:storage/schema/bucket.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/membership.go:MustSaveDowngradeToBackend",
+      "target": "function:storage/mvcc/kvstore_test.go:LockInsideApply",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/membership.go:MustSaveDowngradeToBackend",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafePut",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/membership.go:MustCreateBackendBuckets",
+      "target": "function:storage/mvcc/kvstore_test.go:LockOutsideApply",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/membership.go:MustCreateBackendBuckets",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeCreateBucket",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/membership.go:MustCreateBackendBuckets",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeCreateBucket",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/membership.go:MustCreateBackendBuckets",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeCreateBucket",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/membership.go:ClusterVersionFromBackend",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeRange",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/membership.go:DowngradeInfoFromBackend",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeRange",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/membership.go:DowngradeInfoFromBackend",
+      "target": "function:storage/schema/bucket.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/migration.go:newPlan",
+      "target": "function:storage/schema/bucket.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/migration.go:newPlan",
+      "target": "function:storage/schema/bucket.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/migration.go:newPlan",
+      "target": "function:storage/schema/bucket.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/migration.go:newPlan",
+      "target": "function:storage/schema/bucket.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/migration.go:newPlan",
+      "target": "function:storage/mvcc/kvstore_test.go:Equal",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/migration.go:newPlan",
+      "target": "function:storage/schema/schema.go:schemaChangesForVersion",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/migration.go:Execute",
+      "target": "function:storage/mvcc/kvstore_test.go:LockOutsideApply",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/migration.go:Execute",
+      "target": "function:storage/schema/actions.go:unsafeExecute",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/migration.go:unsafeExecute",
+      "target": "function:storage/schema/actions.go:unsafeExecute",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/migration.go:unsafeExecute",
+      "target": "function:storage/schema/bucket.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/migration.go:unsafeExecute",
+      "target": "function:storage/schema/bucket.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/migration.go:newMigrationStep",
+      "target": "function:storage/mvcc/watchable_store.go:New",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/migration.go:newMigrationStep",
+      "target": "function:storage/mvcc/watchable_store.go:New",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/migration.go:unsafeExecute",
+      "target": "function:storage/schema/actions.go:unsafeExecute",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/migration.go:unsafeExecute",
+      "target": "function:storage/schema/version.go:UnsafeSetStorageVersion",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/migration.go",
+      "target": "file:storage/schema/migration_test.go",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

@@ -1,0 +1,2721 @@
+{
+  "nodes": [
+    {
+      "id": "file:etcdserver/api/v3client/doc.go",
+      "type": "file",
+      "name": "doc.go",
+      "filePath": "etcdserver/api/v3client/doc.go",
+      "summary": "Documents the v3 client API package.",
+      "tags": [
+        "documentation",
+        "package",
+        "api"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:etcdserver/api/v3discovery/discovery.go",
+      "type": "file",
+      "name": "discovery.go",
+      "filePath": "etcdserver/api/v3discovery/discovery.go",
+      "summary": "Implements cluster discovery over the v3 KV and Watch APIs, including registration, peer waiting, retries, and initial-cluster generation.",
+      "tags": [
+        "service",
+        "discovery",
+        "cluster-management",
+        "watch",
+        "retry"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery.go:GetCluster",
+      "type": "function",
+      "name": "GetCluster",
+      "filePath": "etcdserver/api/v3discovery/discovery.go",
+      "lineRange": [
+        98,
+        121
+      ],
+      "summary": "GetCluster implements GetCluster behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery.go:JoinCluster",
+      "type": "function",
+      "name": "JoinCluster",
+      "filePath": "etcdserver/api/v3discovery/discovery.go",
+      "lineRange": [
+        130,
+        153
+      ],
+      "summary": "JoinCluster implements JoinCluster behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery.go:newDiscovery",
+      "type": "function",
+      "name": "newDiscovery",
+      "filePath": "etcdserver/api/v3discovery/discovery.go",
+      "lineRange": [
+        167,
+        190
+      ],
+      "summary": "newDiscovery implements newDiscovery behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery.go:getCluster",
+      "type": "function",
+      "name": "getCluster",
+      "filePath": "etcdserver/api/v3discovery/discovery.go",
+      "lineRange": [
+        192,
+        206
+      ],
+      "summary": "getCluster implements getCluster behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery.go:joinCluster",
+      "type": "function",
+      "name": "joinCluster",
+      "filePath": "etcdserver/api/v3discovery/discovery.go",
+      "lineRange": [
+        208,
+        228
+      ],
+      "summary": "joinCluster implements joinCluster behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery.go:getClusterSize",
+      "type": "function",
+      "name": "getClusterSize",
+      "filePath": "etcdserver/api/v3discovery/discovery.go",
+      "lineRange": [
+        230,
+        255
+      ],
+      "summary": "getClusterSize implements getClusterSize behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery.go:getClusterMembers",
+      "type": "function",
+      "name": "getClusterMembers",
+      "filePath": "etcdserver/api/v3discovery/discovery.go",
+      "lineRange": [
+        257,
+        293
+      ],
+      "summary": "getClusterMembers implements getClusterMembers behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery.go:checkCluster",
+      "type": "function",
+      "name": "checkCluster",
+      "filePath": "etcdserver/api/v3discovery/discovery.go",
+      "lineRange": [
+        303,
+        332
+      ],
+      "summary": "checkCluster implements checkCluster behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery.go:registerSelf",
+      "type": "function",
+      "name": "registerSelf",
+      "filePath": "etcdserver/api/v3discovery/discovery.go",
+      "lineRange": [
+        342,
+        365
+      ],
+      "summary": "registerSelf implements registerSelf behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery.go:waitPeers",
+      "type": "function",
+      "name": "waitPeers",
+      "filePath": "etcdserver/api/v3discovery/discovery.go",
+      "lineRange": [
+        367,
+        409
+      ],
+      "summary": "waitPeers implements waitPeers behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery.go:logAndBackoffForRetry",
+      "type": "function",
+      "name": "logAndBackoffForRetry",
+      "filePath": "etcdserver/api/v3discovery/discovery.go",
+      "lineRange": [
+        411,
+        426
+      ],
+      "summary": "logAndBackoffForRetry implements logAndBackoffForRetry behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery.go:Len",
+      "type": "function",
+      "name": "Len",
+      "filePath": "etcdserver/api/v3discovery/discovery.go",
+      "lineRange": [
+        435,
+        435
+      ],
+      "summary": "Len implements Len behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery.go:Less",
+      "type": "function",
+      "name": "Less",
+      "filePath": "etcdserver/api/v3discovery/discovery.go",
+      "lineRange": [
+        436,
+        438
+      ],
+      "summary": "Less implements Less behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery.go:Swap",
+      "type": "function",
+      "name": "Swap",
+      "filePath": "etcdserver/api/v3discovery/discovery.go",
+      "lineRange": [
+        440,
+        442
+      ],
+      "summary": "Swap implements Swap behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery.go:add",
+      "type": "function",
+      "name": "add",
+      "filePath": "etcdserver/api/v3discovery/discovery.go",
+      "lineRange": [
+        444,
+        475
+      ],
+      "summary": "add implements add behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery.go:getInitClusterStr",
+      "type": "function",
+      "name": "getInitClusterStr",
+      "filePath": "etcdserver/api/v3discovery/discovery.go",
+      "lineRange": [
+        487,
+        501
+      ],
+      "summary": "getInitClusterStr implements getInitClusterStr behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/api/v3discovery/discovery.go:DiscoveryConfig",
+      "type": "class",
+      "name": "DiscoveryConfig",
+      "filePath": "etcdserver/api/v3discovery/discovery.go",
+      "lineRange": [
+        54,
+        57
+      ],
+      "summary": "Defines DiscoveryConfig, a server component used by the etcd runtime APIs.",
+      "tags": [
+        "server",
+        "component",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/api/v3discovery/discovery.go:clusterInfo",
+      "type": "class",
+      "name": "clusterInfo",
+      "filePath": "etcdserver/api/v3discovery/discovery.go",
+      "lineRange": [
+        71,
+        74
+      ],
+      "summary": "Defines clusterInfo, a server component used by the etcd runtime APIs.",
+      "tags": [
+        "server",
+        "component",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/api/v3discovery/discovery.go:discovery",
+      "type": "class",
+      "name": "discovery",
+      "filePath": "etcdserver/api/v3discovery/discovery.go",
+      "lineRange": [
+        155,
+        165
+      ],
+      "summary": "Defines discovery, a server component used by the etcd runtime APIs.",
+      "tags": [
+        "server",
+        "component",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "type": "file",
+      "name": "discovery_test.go",
+      "filePath": "etcdserver/api/v3discovery/discovery_test.go",
+      "summary": "Tests discovery cluster lookup, member registration, cluster validation, peer waiting, and initial-cluster string generation with fake KV and Watch implementations.",
+      "tags": [
+        "test",
+        "discovery",
+        "cluster-management",
+        "mocking",
+        "watch"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery_test.go:Get",
+      "type": "function",
+      "name": "Get",
+      "filePath": "etcdserver/api/v3discovery/discovery_test.go",
+      "lineRange": [
+        39,
+        52
+      ],
+      "summary": "Get implements Get behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery_test.go:TestGetClusterSize",
+      "type": "function",
+      "name": "TestGetClusterSize",
+      "filePath": "etcdserver/api/v3discovery/discovery_test.go",
+      "lineRange": [
+        54,
+        103
+      ],
+      "summary": "TestGetClusterSize implements TestGetClusterSize behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery_test.go:Get",
+      "type": "function",
+      "name": "Get",
+      "filePath": "etcdserver/api/v3discovery/discovery_test.go",
+      "lineRange": [
+        112,
+        121
+      ],
+      "summary": "Get implements Get behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery_test.go:memberInfoToKeyValues",
+      "type": "function",
+      "name": "memberInfoToKeyValues",
+      "filePath": "etcdserver/api/v3discovery/discovery_test.go",
+      "lineRange": [
+        123,
+        134
+      ],
+      "summary": "memberInfoToKeyValues implements memberInfoToKeyValues behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery_test.go:TestGetClusterMembers",
+      "type": "function",
+      "name": "TestGetClusterMembers",
+      "filePath": "etcdserver/api/v3discovery/discovery_test.go",
+      "lineRange": [
+        136,
+        220
+      ],
+      "summary": "TestGetClusterMembers implements TestGetClusterMembers behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery_test.go:Get",
+      "type": "function",
+      "name": "Get",
+      "filePath": "etcdserver/api/v3discovery/discovery_test.go",
+      "lineRange": [
+        234,
+        269
+      ],
+      "summary": "Get implements Get behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery_test.go:TestCheckCluster",
+      "type": "function",
+      "name": "TestCheckCluster",
+      "filePath": "etcdserver/api/v3discovery/discovery_test.go",
+      "lineRange": [
+        271,
+        411
+      ],
+      "summary": "TestCheckCluster implements TestCheckCluster behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery_test.go:Put",
+      "type": "function",
+      "name": "Put",
+      "filePath": "etcdserver/api/v3discovery/discovery_test.go",
+      "lineRange": [
+        423,
+        439
+      ],
+      "summary": "Put implements Put behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery_test.go:TestRegisterSelf",
+      "type": "function",
+      "name": "TestRegisterSelf",
+      "filePath": "etcdserver/api/v3discovery/discovery_test.go",
+      "lineRange": [
+        441,
+        507
+      ],
+      "summary": "TestRegisterSelf implements TestRegisterSelf behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery_test.go:Watch",
+      "type": "function",
+      "name": "Watch",
+      "filePath": "etcdserver/api/v3discovery/discovery_test.go",
+      "lineRange": [
+        518,
+        542
+      ],
+      "summary": "Watch implements Watch behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery_test.go:TestWaitPeers",
+      "type": "function",
+      "name": "TestWaitPeers",
+      "filePath": "etcdserver/api/v3discovery/discovery_test.go",
+      "lineRange": [
+        544,
+        632
+      ],
+      "summary": "TestWaitPeers implements TestWaitPeers behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery_test.go:TestGetInitClusterStr",
+      "type": "function",
+      "name": "TestGetInitClusterStr",
+      "filePath": "etcdserver/api/v3discovery/discovery_test.go",
+      "lineRange": [
+        634,
+        738
+      ],
+      "summary": "TestGetInitClusterStr implements TestGetInitClusterStr behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery_test.go:Put",
+      "type": "function",
+      "name": "Put",
+      "filePath": "etcdserver/api/v3discovery/discovery_test.go",
+      "lineRange": [
+        743,
+        745
+      ],
+      "summary": "Put implements Put behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery_test.go:Get",
+      "type": "function",
+      "name": "Get",
+      "filePath": "etcdserver/api/v3discovery/discovery_test.go",
+      "lineRange": [
+        747,
+        749
+      ],
+      "summary": "Get implements Get behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery_test.go:GetStream",
+      "type": "function",
+      "name": "GetStream",
+      "filePath": "etcdserver/api/v3discovery/discovery_test.go",
+      "lineRange": [
+        751,
+        753
+      ],
+      "summary": "GetStream implements GetStream behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery_test.go:Delete",
+      "type": "function",
+      "name": "Delete",
+      "filePath": "etcdserver/api/v3discovery/discovery_test.go",
+      "lineRange": [
+        755,
+        757
+      ],
+      "summary": "Delete implements Delete behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery_test.go:Compact",
+      "type": "function",
+      "name": "Compact",
+      "filePath": "etcdserver/api/v3discovery/discovery_test.go",
+      "lineRange": [
+        759,
+        761
+      ],
+      "summary": "Compact implements Compact behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery_test.go:Do",
+      "type": "function",
+      "name": "Do",
+      "filePath": "etcdserver/api/v3discovery/discovery_test.go",
+      "lineRange": [
+        763,
+        765
+      ],
+      "summary": "Do implements Do behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery_test.go:Txn",
+      "type": "function",
+      "name": "Txn",
+      "filePath": "etcdserver/api/v3discovery/discovery_test.go",
+      "lineRange": [
+        767,
+        769
+      ],
+      "summary": "Txn implements Txn behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery_test.go:Watch",
+      "type": "function",
+      "name": "Watch",
+      "filePath": "etcdserver/api/v3discovery/discovery_test.go",
+      "lineRange": [
+        774,
+        776
+      ],
+      "summary": "Watch implements Watch behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery_test.go:RequestProgress",
+      "type": "function",
+      "name": "RequestProgress",
+      "filePath": "etcdserver/api/v3discovery/discovery_test.go",
+      "lineRange": [
+        778,
+        780
+      ],
+      "summary": "RequestProgress implements RequestProgress behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3discovery/discovery_test.go:Close",
+      "type": "function",
+      "name": "Close",
+      "filePath": "etcdserver/api/v3discovery/discovery_test.go",
+      "lineRange": [
+        782,
+        784
+      ],
+      "summary": "Close implements Close behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/api/v3discovery/discovery_test.go:fakeBaseKV",
+      "type": "class",
+      "name": "fakeBaseKV",
+      "filePath": "etcdserver/api/v3discovery/discovery_test.go",
+      "lineRange": [
+        741,
+        741
+      ],
+      "summary": "Defines fakeBaseKV, a test double or test suite used by the etcd runtime APIs.",
+      "tags": [
+        "test",
+        "mocking",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/api/v3discovery/discovery_test.go:fakeBaseWatcher",
+      "type": "class",
+      "name": "fakeBaseWatcher",
+      "filePath": "etcdserver/api/v3discovery/discovery_test.go",
+      "lineRange": [
+        772,
+        772
+      ],
+      "summary": "Defines fakeBaseWatcher, a test double or test suite used by the etcd runtime APIs.",
+      "tags": [
+        "test",
+        "mocking",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdserver/api/v3election/election.go",
+      "type": "file",
+      "name": "election.go",
+      "filePath": "etcdserver/api/v3election/election.go",
+      "summary": "Implements the v3 election gRPC service by adapting election operations to the server election backend and sessions.",
+      "tags": [
+        "service",
+        "election",
+        "grpc",
+        "streaming"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/election.go:NewElectionServer",
+      "type": "function",
+      "name": "NewElectionServer",
+      "filePath": "etcdserver/api/v3election/election.go",
+      "lineRange": [
+        36,
+        38
+      ],
+      "summary": "NewElectionServer implements NewElectionServer behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/election.go:Campaign",
+      "type": "function",
+      "name": "Campaign",
+      "filePath": "etcdserver/api/v3election/election.go",
+      "lineRange": [
+        40,
+        58
+      ],
+      "summary": "Campaign implements Campaign behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/election.go:Proclaim",
+      "type": "function",
+      "name": "Proclaim",
+      "filePath": "etcdserver/api/v3election/election.go",
+      "lineRange": [
+        60,
+        73
+      ],
+      "summary": "Proclaim implements Proclaim behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/election.go:Observe",
+      "type": "function",
+      "name": "Observe",
+      "filePath": "etcdserver/api/v3election/election.go",
+      "lineRange": [
+        75,
+        96
+      ],
+      "summary": "Observe implements Observe behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/election.go:Leader",
+      "type": "function",
+      "name": "Leader",
+      "filePath": "etcdserver/api/v3election/election.go",
+      "lineRange": [
+        98,
+        108
+      ],
+      "summary": "Leader implements Leader behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/election.go:Resign",
+      "type": "function",
+      "name": "Resign",
+      "filePath": "etcdserver/api/v3election/election.go",
+      "lineRange": [
+        110,
+        123
+      ],
+      "summary": "Resign implements Resign behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/election.go:session",
+      "type": "function",
+      "name": "session",
+      "filePath": "etcdserver/api/v3election/election.go",
+      "lineRange": [
+        125,
+        136
+      ],
+      "summary": "session implements session behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/api/v3election/election.go:electionServer",
+      "type": "class",
+      "name": "electionServer",
+      "filePath": "etcdserver/api/v3election/election.go",
+      "lineRange": [
+        30,
+        34
+      ],
+      "summary": "Defines electionServer, a server component used by the etcd election APIs.",
+      "tags": [
+        "server",
+        "component",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go",
+      "type": "file",
+      "name": "v3election.pb.gw.go",
+      "filePath": "etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go",
+      "summary": "Generated gRPC-Gateway bindings translating HTTP requests into v3 election client calls and registering election handlers.",
+      "tags": [
+        "api-handler",
+        "grpc-gateway",
+        "generated-code",
+        "election"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Generated Go bindings expose protobuf or gRPC-Gateway APIs and should be treated as generated surface code."
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:request_Election_Campaign_0",
+      "type": "function",
+      "name": "request_Election_Campaign_0",
+      "filePath": "etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go",
+      "lineRange": [
+        39,
+        52
+      ],
+      "summary": "Generated request_Election_Campaign_0 method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:local_request_Election_Campaign_0",
+      "type": "function",
+      "name": "local_request_Election_Campaign_0",
+      "filePath": "etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go",
+      "lineRange": [
+        54,
+        64
+      ],
+      "summary": "Generated local_request_Election_Campaign_0 method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:request_Election_Proclaim_0",
+      "type": "function",
+      "name": "request_Election_Proclaim_0",
+      "filePath": "etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go",
+      "lineRange": [
+        66,
+        79
+      ],
+      "summary": "Generated request_Election_Proclaim_0 method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:local_request_Election_Proclaim_0",
+      "type": "function",
+      "name": "local_request_Election_Proclaim_0",
+      "filePath": "etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go",
+      "lineRange": [
+        81,
+        91
+      ],
+      "summary": "Generated local_request_Election_Proclaim_0 method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:request_Election_Leader_0",
+      "type": "function",
+      "name": "request_Election_Leader_0",
+      "filePath": "etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go",
+      "lineRange": [
+        93,
+        106
+      ],
+      "summary": "Generated request_Election_Leader_0 method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:local_request_Election_Leader_0",
+      "type": "function",
+      "name": "local_request_Election_Leader_0",
+      "filePath": "etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go",
+      "lineRange": [
+        108,
+        118
+      ],
+      "summary": "Generated local_request_Election_Leader_0 method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:request_Election_Observe_0",
+      "type": "function",
+      "name": "request_Election_Observe_0",
+      "filePath": "etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go",
+      "lineRange": [
+        120,
+        141
+      ],
+      "summary": "Generated request_Election_Observe_0 method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:request_Election_Resign_0",
+      "type": "function",
+      "name": "request_Election_Resign_0",
+      "filePath": "etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go",
+      "lineRange": [
+        143,
+        156
+      ],
+      "summary": "Generated request_Election_Resign_0 method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:local_request_Election_Resign_0",
+      "type": "function",
+      "name": "local_request_Election_Resign_0",
+      "filePath": "etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go",
+      "lineRange": [
+        158,
+        168
+      ],
+      "summary": "Generated local_request_Election_Resign_0 method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:RegisterElectionHandlerServer",
+      "type": "function",
+      "name": "RegisterElectionHandlerServer",
+      "filePath": "etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go",
+      "lineRange": [
+        175,
+        265
+      ],
+      "summary": "Generated RegisterElectionHandlerServer method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:RegisterElectionHandlerFromEndpoint",
+      "type": "function",
+      "name": "RegisterElectionHandlerFromEndpoint",
+      "filePath": "etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go",
+      "lineRange": [
+        269,
+        289
+      ],
+      "summary": "Generated RegisterElectionHandlerFromEndpoint method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:RegisterElectionHandler",
+      "type": "function",
+      "name": "RegisterElectionHandler",
+      "filePath": "etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go",
+      "lineRange": [
+        293,
+        295
+      ],
+      "summary": "Generated RegisterElectionHandler method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:RegisterElectionHandlerClient",
+      "type": "function",
+      "name": "RegisterElectionHandlerClient",
+      "filePath": "etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go",
+      "lineRange": [
+        302,
+        389
+      ],
+      "summary": "Generated RegisterElectionHandlerClient method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery.go",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:GetCluster",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery.go",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:GetCluster",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery.go",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:JoinCluster",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery.go",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:JoinCluster",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery.go",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:newDiscovery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery.go",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:getCluster",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery.go",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:joinCluster",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery.go",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:getClusterSize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery.go",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:getClusterMembers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery.go",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:checkCluster",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery.go",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:registerSelf",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery.go",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:waitPeers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery.go",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:logAndBackoffForRetry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery.go",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:Len",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery.go",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:Len",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery.go",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:Less",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery.go",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:Less",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery.go",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:Swap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery.go",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:Swap",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery.go",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:add",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery.go",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:getInitClusterStr",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery.go",
+      "target": "class:etcdserver/api/v3discovery/discovery.go:DiscoveryConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery.go",
+      "target": "class:etcdserver/api/v3discovery/discovery.go:DiscoveryConfig",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery.go",
+      "target": "class:etcdserver/api/v3discovery/discovery.go:clusterInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery.go",
+      "target": "class:etcdserver/api/v3discovery/discovery.go:discovery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:Get",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:Get",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:TestGetClusterSize",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:TestGetClusterSize",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:Get",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:Get",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:memberInfoToKeyValues",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:TestGetClusterMembers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:TestGetClusterMembers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:Get",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:Get",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:TestCheckCluster",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:TestCheckCluster",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:Put",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:Put",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:TestRegisterSelf",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:TestRegisterSelf",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:Watch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:Watch",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:TestWaitPeers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:TestWaitPeers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:TestGetInitClusterStr",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:TestGetInitClusterStr",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:Put",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:Put",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:Get",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:Get",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:GetStream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:GetStream",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:Delete",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:Delete",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:Compact",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:Compact",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:Do",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:Do",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:Txn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:Txn",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:Watch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:Watch",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:RequestProgress",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:RequestProgress",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:Close",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:Close",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "class:etcdserver/api/v3discovery/discovery_test.go:fakeBaseKV",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "target": "class:etcdserver/api/v3discovery/discovery_test.go:fakeBaseWatcher",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/election.go",
+      "target": "function:etcdserver/api/v3election/election.go:NewElectionServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/election.go",
+      "target": "function:etcdserver/api/v3election/election.go:NewElectionServer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/election.go",
+      "target": "function:etcdserver/api/v3election/election.go:Campaign",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/election.go",
+      "target": "function:etcdserver/api/v3election/election.go:Campaign",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/election.go",
+      "target": "function:etcdserver/api/v3election/election.go:Proclaim",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/election.go",
+      "target": "function:etcdserver/api/v3election/election.go:Proclaim",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/election.go",
+      "target": "function:etcdserver/api/v3election/election.go:Observe",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/election.go",
+      "target": "function:etcdserver/api/v3election/election.go:Observe",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/election.go",
+      "target": "function:etcdserver/api/v3election/election.go:Leader",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/election.go",
+      "target": "function:etcdserver/api/v3election/election.go:Leader",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/election.go",
+      "target": "function:etcdserver/api/v3election/election.go:Resign",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/election.go",
+      "target": "function:etcdserver/api/v3election/election.go:Resign",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/election.go",
+      "target": "function:etcdserver/api/v3election/election.go:session",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/election.go",
+      "target": "class:etcdserver/api/v3election/election.go:electionServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/election.go",
+      "target": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3election/election.go",
+      "target": "file:etcdserver/api/v3election/v3electionpb/v3election_grpc.pb.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:request_Election_Campaign_0",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:local_request_Election_Campaign_0",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:request_Election_Proclaim_0",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:local_request_Election_Proclaim_0",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:request_Election_Leader_0",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:local_request_Election_Leader_0",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:request_Election_Observe_0",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:request_Election_Resign_0",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:local_request_Election_Resign_0",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:RegisterElectionHandlerServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:RegisterElectionHandlerServer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:RegisterElectionHandlerFromEndpoint",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:RegisterElectionHandlerFromEndpoint",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:RegisterElectionHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:RegisterElectionHandler",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:RegisterElectionHandlerClient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:RegisterElectionHandlerClient",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go",
+      "target": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go",
+      "target": "file:etcdserver/api/v3election/v3electionpb/v3election_grpc.pb.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:GetCluster",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:newDiscovery",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:GetCluster",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:GetCluster",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:GetCluster",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:getCluster",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:JoinCluster",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:newDiscovery",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:JoinCluster",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:JoinCluster",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:JoinCluster",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:joinCluster",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:newDiscovery",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:newDiscovery",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:getCluster",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:checkCluster",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:getCluster",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:getInitClusterStr",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:getCluster",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:Len",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:getCluster",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:waitPeers",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:getCluster",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:getInitClusterStr",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:joinCluster",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:checkCluster",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:joinCluster",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:registerSelf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:joinCluster",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:checkCluster",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:joinCluster",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:Len",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:joinCluster",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:waitPeers",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:joinCluster",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:getInitClusterStr",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:getClusterSize",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:Get",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:getClusterSize",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:getClusterMembers",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:Get",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:getClusterMembers",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:getClusterMembers",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:add",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:getClusterMembers",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:getClusterMembers",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:getClusterMembers",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:getClusterMembers",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:checkCluster",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:getClusterSize",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:checkCluster",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:getClusterMembers",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:checkCluster",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:registerSelf",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:registerSelf",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:Put",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:registerSelf",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:registerSelf",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:registerSelf",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:waitPeers",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:Watch",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:waitPeers",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:Len",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:waitPeers",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:add",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:waitPeers",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:waitPeers",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:waitPeers",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:waitPeers",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:waitPeers",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:Len",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:waitPeers",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:Len",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery.go:logAndBackoffForRetry",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestGetClusterSize",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:getClusterSize",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:Get",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:memberInfoToKeyValues",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestGetClusterMembers",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestGetClusterMembers",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestGetClusterMembers",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestGetClusterMembers",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestGetClusterMembers",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestGetClusterMembers",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestGetClusterMembers",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestGetClusterMembers",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestGetClusterMembers",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestGetClusterMembers",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:getClusterMembers",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestGetClusterMembers",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:Len",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestGetClusterMembers",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:Len",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:Get",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:memberInfoToKeyValues",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestCheckCluster",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestCheckCluster",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestCheckCluster",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestCheckCluster",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestCheckCluster",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestCheckCluster",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestCheckCluster",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestCheckCluster",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestCheckCluster",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestCheckCluster",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:checkCluster",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestCheckCluster",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:Len",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestCheckCluster",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:Len",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestRegisterSelf",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestRegisterSelf",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestRegisterSelf",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestRegisterSelf",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:registerSelf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestWaitPeers",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestWaitPeers",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestWaitPeers",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestWaitPeers",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestWaitPeers",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestWaitPeers",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestWaitPeers",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestWaitPeers",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestWaitPeers",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestWaitPeers",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:waitPeers",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestWaitPeers",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:Len",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestWaitPeers",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:Len",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3discovery/discovery_test.go:TestGetInitClusterStr",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:getInitClusterStr",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3election/election.go:Campaign",
+      "target": "function:etcdserver/api/v3election/election.go:session",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3election/election.go:Proclaim",
+      "target": "function:etcdserver/api/v3election/election.go:session",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3election/election.go:Observe",
+      "target": "function:etcdserver/api/v3election/election.go:session",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3election/election.go:Leader",
+      "target": "function:etcdserver/api/v3election/election.go:session",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3election/election.go:Resign",
+      "target": "function:etcdserver/api/v3election/election.go:session",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:request_Election_Campaign_0",
+      "target": "function:etcdserver/api/v3election/election.go:Campaign",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:local_request_Election_Campaign_0",
+      "target": "function:etcdserver/api/v3election/election.go:Campaign",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:request_Election_Proclaim_0",
+      "target": "function:etcdserver/api/v3election/election.go:Proclaim",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:local_request_Election_Proclaim_0",
+      "target": "function:etcdserver/api/v3election/election.go:Proclaim",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:request_Election_Leader_0",
+      "target": "function:etcdserver/api/v3election/election.go:Leader",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:local_request_Election_Leader_0",
+      "target": "function:etcdserver/api/v3election/election.go:Leader",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:request_Election_Observe_0",
+      "target": "function:etcdserver/api/v3election/election.go:Observe",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:request_Election_Resign_0",
+      "target": "function:etcdserver/api/v3election/election.go:Resign",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:local_request_Election_Resign_0",
+      "target": "function:etcdserver/api/v3election/election.go:Resign",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:RegisterElectionHandlerServer",
+      "target": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:local_request_Election_Campaign_0",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:RegisterElectionHandlerServer",
+      "target": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:local_request_Election_Proclaim_0",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:RegisterElectionHandlerServer",
+      "target": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:local_request_Election_Leader_0",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:RegisterElectionHandlerServer",
+      "target": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:local_request_Election_Resign_0",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:RegisterElectionHandlerFromEndpoint",
+      "target": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:RegisterElectionHandler",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:RegisterElectionHandler",
+      "target": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:RegisterElectionHandlerClient",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:RegisterElectionHandlerClient",
+      "target": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:request_Election_Campaign_0",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:RegisterElectionHandlerClient",
+      "target": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:request_Election_Proclaim_0",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:RegisterElectionHandlerClient",
+      "target": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:request_Election_Leader_0",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:RegisterElectionHandlerClient",
+      "target": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:request_Election_Observe_0",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:RegisterElectionHandlerClient",
+      "target": "function:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go:request_Election_Resign_0",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}
+

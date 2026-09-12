@@ -1,0 +1,524 @@
+{
+  "nodes": [
+    {
+      "id": "file:storage/wal/walpb/record.pb.go",
+      "type": "file",
+      "name": "record.pb.go",
+      "filePath": "storage/wal/walpb/record.pb.go",
+      "summary": "Generated protobuf message bindings for WAL records and snapshots, including reflection and serialization metadata.",
+      "tags": [
+        "wal",
+        "storage",
+        "persistence",
+        "serialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:storage/wal/walpb/record.pb.go:Record",
+      "type": "class",
+      "name": "Record",
+      "filePath": "storage/wal/walpb/record.pb.go",
+      "lineRange": [
+        26,
+        33
+      ],
+      "summary": "Defines the Record data structure used by this package, with methods for its core storage or protocol behavior.",
+      "tags": [
+        "data-model",
+        "serialization",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:storage/wal/walpb/record.pb.go:Snapshot",
+      "type": "class",
+      "name": "Snapshot",
+      "filePath": "storage/wal/walpb/record.pb.go",
+      "lineRange": [
+        87,
+        95
+      ],
+      "summary": "Defines the Snapshot data structure used by this package, with methods for its core storage or protocol behavior.",
+      "tags": [
+        "data-model",
+        "serialization",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/walpb/record.pb.go:Reset",
+      "type": "function",
+      "name": "Reset",
+      "filePath": "storage/wal/walpb/record.pb.go",
+      "lineRange": [
+        35,
+        40
+      ],
+      "summary": "Implements Reset, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/walpb/record.pb.go:String",
+      "type": "function",
+      "name": "String",
+      "filePath": "storage/wal/walpb/record.pb.go",
+      "lineRange": [
+        42,
+        44
+      ],
+      "summary": "Implements String, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/walpb/record.pb.go:ProtoMessage",
+      "type": "function",
+      "name": "ProtoMessage",
+      "filePath": "storage/wal/walpb/record.pb.go",
+      "lineRange": [
+        46,
+        46
+      ],
+      "summary": "Implements ProtoMessage, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/walpb/record.pb.go:ProtoReflect",
+      "type": "function",
+      "name": "ProtoReflect",
+      "filePath": "storage/wal/walpb/record.pb.go",
+      "lineRange": [
+        48,
+        58
+      ],
+      "summary": "Implements ProtoReflect, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/walpb/record.pb.go:Descriptor",
+      "type": "function",
+      "name": "Descriptor",
+      "filePath": "storage/wal/walpb/record.pb.go",
+      "lineRange": [
+        61,
+        63
+      ],
+      "summary": "Implements Descriptor, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/walpb/record.pb.go:GetType",
+      "type": "function",
+      "name": "GetType",
+      "filePath": "storage/wal/walpb/record.pb.go",
+      "lineRange": [
+        65,
+        70
+      ],
+      "summary": "Implements GetType, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/walpb/record.pb.go:GetCrc",
+      "type": "function",
+      "name": "GetCrc",
+      "filePath": "storage/wal/walpb/record.pb.go",
+      "lineRange": [
+        72,
+        77
+      ],
+      "summary": "Implements GetCrc, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/walpb/record.pb.go:GetData",
+      "type": "function",
+      "name": "GetData",
+      "filePath": "storage/wal/walpb/record.pb.go",
+      "lineRange": [
+        79,
+        84
+      ],
+      "summary": "Implements GetData, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/walpb/record.pb.go:GetIndex",
+      "type": "function",
+      "name": "GetIndex",
+      "filePath": "storage/wal/walpb/record.pb.go",
+      "lineRange": [
+        127,
+        132
+      ],
+      "summary": "Implements GetIndex, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/walpb/record.pb.go:GetTerm",
+      "type": "function",
+      "name": "GetTerm",
+      "filePath": "storage/wal/walpb/record.pb.go",
+      "lineRange": [
+        134,
+        139
+      ],
+      "summary": "Implements GetTerm, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/walpb/record.pb.go:GetConfState",
+      "type": "function",
+      "name": "GetConfState",
+      "filePath": "storage/wal/walpb/record.pb.go",
+      "lineRange": [
+        141,
+        146
+      ],
+      "summary": "Implements GetConfState, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/walpb/record.pb.go:file_record_proto_init",
+      "type": "function",
+      "name": "file_record_proto_init",
+      "filePath": "storage/wal/walpb/record.pb.go",
+      "lineRange": [
+        191,
+        212
+      ],
+      "summary": "Implements file_record_proto_init, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:storage/wal/walpb/record_test.go",
+      "type": "file",
+      "name": "record_test.go",
+      "filePath": "storage/wal/walpb/record_test.go",
+      "summary": "Tests snapshot protobuf compatibility and validation rules for WAL snapshot records.",
+      "tags": [
+        "wal",
+        "storage",
+        "persistence",
+        "serialization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/wal/walpb/record_test.go:TestSnapshotMetadataCompatibility",
+      "type": "function",
+      "name": "TestSnapshotMetadataCompatibility",
+      "filePath": "storage/wal/walpb/record_test.go",
+      "lineRange": [
+        25,
+        32
+      ],
+      "summary": "Implements TestSnapshotMetadataCompatibility, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/walpb/record_test.go:TestValidateSnapshot",
+      "type": "function",
+      "name": "TestValidateSnapshot",
+      "filePath": "storage/wal/walpb/record_test.go",
+      "lineRange": [
+        34,
+        52
+      ],
+      "summary": "Implements TestValidateSnapshot, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:storage/wal/walpb/record.pb.go",
+      "target": "class:storage/wal/walpb/record.pb.go:Record",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/walpb/record.pb.go",
+      "target": "class:storage/wal/walpb/record.pb.go:Record",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/walpb/record.pb.go",
+      "target": "class:storage/wal/walpb/record.pb.go:Snapshot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/walpb/record.pb.go",
+      "target": "class:storage/wal/walpb/record.pb.go:Snapshot",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/walpb/record.pb.go",
+      "target": "function:storage/wal/walpb/record.pb.go:Reset",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/walpb/record.pb.go",
+      "target": "function:storage/wal/walpb/record.pb.go:Reset",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/walpb/record.pb.go",
+      "target": "function:storage/wal/walpb/record.pb.go:String",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/walpb/record.pb.go",
+      "target": "function:storage/wal/walpb/record.pb.go:String",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/walpb/record.pb.go",
+      "target": "function:storage/wal/walpb/record.pb.go:ProtoMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/walpb/record.pb.go",
+      "target": "function:storage/wal/walpb/record.pb.go:ProtoMessage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/walpb/record.pb.go",
+      "target": "function:storage/wal/walpb/record.pb.go:ProtoReflect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/walpb/record.pb.go",
+      "target": "function:storage/wal/walpb/record.pb.go:ProtoReflect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/walpb/record.pb.go",
+      "target": "function:storage/wal/walpb/record.pb.go:Descriptor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/walpb/record.pb.go",
+      "target": "function:storage/wal/walpb/record.pb.go:Descriptor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/walpb/record.pb.go",
+      "target": "function:storage/wal/walpb/record.pb.go:GetType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/walpb/record.pb.go",
+      "target": "function:storage/wal/walpb/record.pb.go:GetType",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/walpb/record.pb.go",
+      "target": "function:storage/wal/walpb/record.pb.go:GetCrc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/walpb/record.pb.go",
+      "target": "function:storage/wal/walpb/record.pb.go:GetCrc",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/walpb/record.pb.go",
+      "target": "function:storage/wal/walpb/record.pb.go:GetData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/walpb/record.pb.go",
+      "target": "function:storage/wal/walpb/record.pb.go:GetData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/walpb/record.pb.go",
+      "target": "function:storage/wal/walpb/record.pb.go:GetIndex",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/walpb/record.pb.go",
+      "target": "function:storage/wal/walpb/record.pb.go:GetIndex",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/walpb/record.pb.go",
+      "target": "function:storage/wal/walpb/record.pb.go:GetTerm",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/walpb/record.pb.go",
+      "target": "function:storage/wal/walpb/record.pb.go:GetTerm",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/walpb/record.pb.go",
+      "target": "function:storage/wal/walpb/record.pb.go:GetConfState",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/walpb/record.pb.go",
+      "target": "function:storage/wal/walpb/record.pb.go:GetConfState",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/walpb/record.pb.go",
+      "target": "function:storage/wal/walpb/record.pb.go:file_record_proto_init",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/walpb/record_test.go",
+      "target": "function:storage/wal/walpb/record_test.go:TestSnapshotMetadataCompatibility",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/walpb/record_test.go",
+      "target": "function:storage/wal/walpb/record_test.go:TestSnapshotMetadataCompatibility",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/walpb/record_test.go",
+      "target": "function:storage/wal/walpb/record_test.go:TestValidateSnapshot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/walpb/record_test.go",
+      "target": "function:storage/wal/walpb/record_test.go:TestValidateSnapshot",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}
+

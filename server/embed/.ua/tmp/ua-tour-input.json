@@ -1,0 +1,2752 @@
+{
+    "nodes":  [
+                  {
+                      "id":  "config:.ua/config.json",
+                      "type":  "config",
+                      "name":  "config.json",
+                      "filePath":  ".ua/config.json",
+                      "summary":  "Stores Understand Anything output-language preferences for this component graph.",
+                      "tags":  [
+                                   "configuration",
+                                   "analysis-output",
+                                   "metadata"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "file:auth_test.go",
+                      "type":  "file",
+                      "name":  "auth_test.go",
+                      "filePath":  "auth_test.go",
+                      "summary":  "Exercises embedded-server startup and the complete role, user, grant, and authentication-enablement sequence through the v3 client.",
+                      "tags":  [
+                                   "test",
+                                   "authentication",
+                                   "integration-test"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:auth_test.go:TestEnableAuth",
+                      "type":  "function",
+                      "name":  "TestEnableAuth",
+                      "filePath":  "auth_test.go",
+                      "lineRange":  [
+                                        23,
+                                        55
+                                    ],
+                      "summary":  "Starts an embedded member and verifies that role creation, user creation, role assignment, and authentication enablement succeed.",
+                      "tags":  [
+                                   "test",
+                                   "validation",
+                                   "go"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "file:config.go",
+                      "type":  "file",
+                      "name":  "config.go",
+                      "filePath":  "config.go",
+                      "summary":  "Defines the embedded etcd configuration surface, default construction, CLI flag binding, file loading, validation, discovery, URL handling, and TLS helpers.",
+                      "tags":  [
+                                   "configuration",
+                                   "validation",
+                                   "tls",
+                                   "cluster-bootstrap",
+                                   "service",
+                                   "tested"
+                               ],
+                      "complexity":  "complex"
+                  },
+                  {
+                      "id":  "function:config.go:NewConfig",
+                      "type":  "function",
+                      "name":  "NewConfig",
+                      "filePath":  "config.go",
+                      "lineRange":  [
+                                        492,
+                                        586
+                                    ],
+                      "summary":  "Constructs a Config populated with safe defaults, default URLs, feature gates, timing, storage, authentication, and logging settings.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "configuration"
+                               ],
+                      "complexity":  "moderate"
+                  },
+                  {
+                      "id":  "function:config.go:AddFlags",
+                      "type":  "function",
+                      "name":  "AddFlags",
+                      "filePath":  "config.go",
+                      "lineRange":  [
+                                        588,
+                                        756
+                                    ],
+                      "summary":  "Registers the complete embedded-server configuration surface on a flag set and binds each option to the Config instance.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "configuration"
+                               ],
+                      "complexity":  "moderate"
+                  },
+                  {
+                      "id":  "function:config.go:ConfigFromFile",
+                      "type":  "function",
+                      "name":  "ConfigFromFile",
+                      "filePath":  "config.go",
+                      "lineRange":  [
+                                        758,
+                                        764
+                                    ],
+                      "summary":  "Loads an embedded-server configuration from a YAML file and returns the normalized Config.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "configuration"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:config.go:configFromFile",
+                      "type":  "function",
+                      "name":  "configFromFile",
+                      "filePath":  "config.go",
+                      "lineRange":  [
+                                        766,
+                                        898
+                                    ],
+                      "summary":  "Decodes YAML configuration, reconciles legacy JSON-shaped fields, applies defaults, and validates the resulting Config.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "configuration"
+                               ],
+                      "complexity":  "moderate"
+                  },
+                  {
+                      "id":  "function:config.go:updateCipherSuites",
+                      "type":  "function",
+                      "name":  "updateCipherSuites",
+                      "filePath":  "config.go",
+                      "lineRange":  [
+                                        900,
+                                        912
+                                    ],
+                      "summary":  "Implements update cipher suites behavior for the config component.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "service"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:config.go:updateMinMaxVersions",
+                      "type":  "function",
+                      "name":  "updateMinMaxVersions",
+                      "filePath":  "config.go",
+                      "lineRange":  [
+                                        914,
+                                        923
+                                    ],
+                      "summary":  "Implements update min max versions behavior for the config component.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "service"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:config.go:Validate",
+                      "type":  "function",
+                      "name":  "Validate",
+                      "filePath":  "config.go",
+                      "lineRange":  [
+                                        926,
+                                        1058
+                                    ],
+                      "summary":  "Checks cross-field invariants for URLs, timing, TLS, discovery, compaction, authentication, leases, tracing, and feature gates.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "configuration"
+                               ],
+                      "complexity":  "moderate"
+                  },
+                  {
+                      "id":  "function:config.go:PeerURLsMapAndToken",
+                      "type":  "function",
+                      "name":  "PeerURLsMapAndToken",
+                      "filePath":  "config.go",
+                      "lineRange":  [
+                                        1061,
+                                        1101
+                                    ],
+                      "summary":  "Builds the initial peer URL map and cluster token from static or discovery-based configuration.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "service"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:config.go:GetDNSClusterNames",
+                      "type":  "function",
+                      "name":  "GetDNSClusterNames",
+                      "filePath":  "config.go",
+                      "lineRange":  [
+                                        1108,
+                                        1153
+                                    ],
+                      "summary":  "Queries DNS SRV discovery and derives secure or insecure cluster membership names.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "service"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:config.go:InitialClusterFromName",
+                      "type":  "function",
+                      "name":  "InitialClusterFromName",
+                      "filePath":  "config.go",
+                      "lineRange":  [
+                                        1155,
+                                        1167
+                                    ],
+                      "summary":  "Creates the initial-cluster string for a single member from its advertised peer URLs.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "service"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:config.go:InferLocalAddr",
+                      "type":  "function",
+                      "name":  "InferLocalAddr",
+                      "filePath":  "config.go",
+                      "lineRange":  [
+                                        1174,
+                                        1201
+                                    ],
+                      "summary":  "Infers the local member name and peer URL from the configured initial cluster.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "service"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:config.go:IsNewCluster",
+                      "type":  "function",
+                      "name":  "IsNewCluster",
+                      "filePath":  "config.go",
+                      "lineRange":  [
+                                        1203,
+                                        1203
+                                    ],
+                      "summary":  "Implements is new cluster behavior for the config component.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "service"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:config.go:ElectionTicks",
+                      "type":  "function",
+                      "name":  "ElectionTicks",
+                      "filePath":  "config.go",
+                      "lineRange":  [
+                                        1204,
+                                        1204
+                                    ],
+                      "summary":  "Implements election ticks behavior for the config component.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "service"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:config.go:ClientSelfCert",
+                      "type":  "function",
+                      "name":  "ClientSelfCert",
+                      "filePath":  "config.go",
+                      "lineRange":  [
+                                        1214,
+                                        1234
+                                    ],
+                      "summary":  "Generates client-facing self-signed TLS material when automatic client TLS is enabled.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "service"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:config.go:PeerSelfCert",
+                      "type":  "function",
+                      "name":  "PeerSelfCert",
+                      "filePath":  "config.go",
+                      "lineRange":  [
+                                        1236,
+                                        1253
+                                    ],
+                      "summary":  "Generates peer-facing self-signed TLS material when automatic peer TLS is enabled.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "service"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:config.go:UpdateDefaultClusterFromName",
+                      "type":  "function",
+                      "name":  "UpdateDefaultClusterFromName",
+                      "filePath":  "config.go",
+                      "lineRange":  [
+                                        1263,
+                                        1293
+                                    ],
+                      "summary":  "Rewrites default cluster and advertise URLs to match a customized member name and listening addresses.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "service"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:config.go:checkBindURLs",
+                      "type":  "function",
+                      "name":  "checkBindURLs",
+                      "filePath":  "config.go",
+                      "lineRange":  [
+                                        1296,
+                                        1315
+                                    ],
+                      "summary":  "Validates that listen URLs use supported schemes and bindable host forms.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "service"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:config.go:checkHostURLs",
+                      "type":  "function",
+                      "name":  "checkHostURLs",
+                      "filePath":  "config.go",
+                      "lineRange":  [
+                                        1317,
+                                        1331
+                                    ],
+                      "summary":  "Validates advertised URLs and rejects unsafe wildcard or malformed hosts.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "service"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "class:config.go:Config",
+                      "type":  "class",
+                      "name":  "Config",
+                      "filePath":  "config.go",
+                      "lineRange":  [
+                                        165,
+                                        453
+                                    ],
+                      "summary":  "Aggregates every embedded etcd runtime option, including storage, Raft timing, networking, TLS, discovery, authentication, observability, and feature gates.",
+                      "tags":  [
+                                   "component",
+                                   "data-model",
+                                   "go"
+                               ],
+                      "complexity":  "complex"
+                  },
+                  {
+                      "id":  "file:config_logging.go",
+                      "type":  "file",
+                      "name":  "config_logging.go",
+                      "filePath":  "config_logging.go",
+                      "summary":  "Builds and manages zap logging for embedded etcd, including output selection, global logger wiring, rotation, and synchronization.",
+                      "tags":  [
+                                   "logging",
+                                   "configuration",
+                                   "factory",
+                                   "log-rotation"
+                               ],
+                      "complexity":  "complex"
+                  },
+                  {
+                      "id":  "function:config_logging.go:GetLogger",
+                      "type":  "function",
+                      "name":  "GetLogger",
+                      "filePath":  "config_logging.go",
+                      "lineRange":  [
+                                        37,
+                                        42
+                                    ],
+                      "summary":  "Implements get logger behavior for the config_logging component.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "logging"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:config_logging.go:setupLogging",
+                      "type":  "function",
+                      "name":  "setupLogging",
+                      "filePath":  "config_logging.go",
+                      "lineRange":  [
+                                        46,
+                                        212
+                                    ],
+                      "summary":  "Creates the configured zap logger, chooses output sinks and format, enables optional rotation, and installs the logger on Config.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "logging"
+                               ],
+                      "complexity":  "moderate"
+                  },
+                  {
+                      "id":  "function:config_logging.go:NewZapLoggerBuilder",
+                      "type":  "function",
+                      "name":  "NewZapLoggerBuilder",
+                      "filePath":  "config_logging.go",
+                      "lineRange":  [
+                                        216,
+                                        223
+                                    ],
+                      "summary":  "Returns a server logger factory that derives named loggers from the configured base logger.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "logging"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:config_logging.go:SetupGlobalLoggers",
+                      "type":  "function",
+                      "name":  "SetupGlobalLoggers",
+                      "filePath":  "config_logging.go",
+                      "lineRange":  [
+                                        230,
+                                        241
+                                    ],
+                      "summary":  "Installs the configured zap logger into etcd and gRPC global logging adapters.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "logging"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:config_logging.go:Sync",
+                      "type":  "function",
+                      "name":  "Sync",
+                      "filePath":  "config_logging.go",
+                      "lineRange":  [
+                                        248,
+                                        248
+                                    ],
+                      "summary":  "Implements sync behavior for the config_logging component.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "service"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:config_logging.go:setupLogRotation",
+                      "type":  "function",
+                      "name":  "setupLogRotation",
+                      "filePath":  "config_logging.go",
+                      "lineRange":  [
+                                        251,
+                                        288
+                                    ],
+                      "summary":  "Parses rotation settings and creates lumberjack-backed zap sinks for configured log outputs.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "logging"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "file:config_logging_journal_unix.go",
+                      "type":  "file",
+                      "name":  "config_logging_journal_unix.go",
+                      "filePath":  "config_logging_journal_unix.go",
+                      "summary":  "Provides the Unix journal-backed zap write synchronizer used when journal logging is selected.",
+                      "tags":  [
+                                   "logging",
+                                   "journald",
+                                   "platform-specific"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "file:config_logging_journal_windows.go",
+                      "type":  "file",
+                      "name":  "config_logging_journal_windows.go",
+                      "filePath":  "config_logging_journal_windows.go",
+                      "summary":  "Rejects journal logging on Windows through the platform-specific write-synchronizer implementation.",
+                      "tags":  [
+                                   "logging",
+                                   "windows",
+                                   "platform-specific"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "file:config_test.go",
+                      "type":  "file",
+                      "name":  "config_test.go",
+                      "filePath":  "config_test.go",
+                      "summary":  "Covers configuration parsing, defaults, validation, discovery, TLS versions, log rotation, URL safety, feature gates, and lease options.",
+                      "tags":  [
+                                   "test",
+                                   "configuration",
+                                   "validation",
+                                   "cluster-bootstrap"
+                               ],
+                      "complexity":  "complex"
+                  },
+                  {
+                      "id":  "function:config_test.go:TestConfigFileOtherFields",
+                      "type":  "function",
+                      "name":  "TestConfigFileOtherFields",
+                      "filePath":  "config_test.go",
+                      "lineRange":  [
+                                        48,
+                                        97
+                                    ],
+                      "summary":  "Verifies that representative non-URL fields load correctly from configuration files.",
+                      "tags":  [
+                                   "test",
+                                   "validation",
+                                   "go"
+                               ],
+                      "complexity":  "moderate"
+                  },
+                  {
+                      "id":  "function:config_test.go:TestConfigFileFeatureGates",
+                      "type":  "function",
+                      "name":  "TestConfigFileFeatureGates",
+                      "filePath":  "config_test.go",
+                      "lineRange":  [
+                                        99,
+                                        219
+                                    ],
+                      "summary":  "Exercises server feature-gate parsing from configuration files.",
+                      "tags":  [
+                                   "test",
+                                   "validation",
+                                   "go"
+                               ],
+                      "complexity":  "moderate"
+                  },
+                  {
+                      "id":  "function:config_test.go:TestUpdateDefaultClusterFromName",
+                      "type":  "function",
+                      "name":  "TestUpdateDefaultClusterFromName",
+                      "filePath":  "config_test.go",
+                      "lineRange":  [
+                                        222,
+                                        240
+                                    ],
+                      "summary":  "Tests test update default cluster from name behavior for the config_test component.",
+                      "tags":  [
+                                   "test",
+                                   "validation",
+                                   "go"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:config_test.go:TestUpdateDefaultClusterFromNameOverwrite",
+                      "type":  "function",
+                      "name":  "TestUpdateDefaultClusterFromNameOverwrite",
+                      "filePath":  "config_test.go",
+                      "lineRange":  [
+                                        244,
+                                        267
+                                    ],
+                      "summary":  "Tests test update default cluster from name overwrite behavior for the config_test component.",
+                      "tags":  [
+                                   "test",
+                                   "validation",
+                                   "go"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:config_test.go:TestInferLocalAddr",
+                      "type":  "function",
+                      "name":  "TestInferLocalAddr",
+                      "filePath":  "config_test.go",
+                      "lineRange":  [
+                                        269,
+                                        398
+                                    ],
+                      "summary":  "Covers inference of local member identity and addresses from initial-cluster configuration.",
+                      "tags":  [
+                                   "test",
+                                   "validation",
+                                   "go"
+                               ],
+                      "complexity":  "moderate"
+                  },
+                  {
+                      "id":  "function:config_test.go:TestSetMemberLocalAddrValidate",
+                      "type":  "function",
+                      "name":  "TestSetMemberLocalAddrValidate",
+                      "filePath":  "config_test.go",
+                      "lineRange":  [
+                                        400,
+                                        421
+                                    ],
+                      "summary":  "Tests test set member local addr validate behavior for the config_test component.",
+                      "tags":  [
+                                   "test",
+                                   "validation",
+                                   "go"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:config_test.go:equals",
+                      "type":  "function",
+                      "name":  "equals",
+                      "filePath":  "config_test.go",
+                      "lineRange":  [
+                                        423,
+                                        432
+                                    ],
+                      "summary":  "Implements equals behavior for the config_test component.",
+                      "tags":  [
+                                   "test",
+                                   "validation",
+                                   "go"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:config_test.go:compareSlices",
+                      "type":  "function",
+                      "name":  "compareSlices",
+                      "filePath":  "config_test.go",
+                      "lineRange":  [
+                                        434,
+                                        444
+                                    ],
+                      "summary":  "Implements compare slices behavior for the config_test component.",
+                      "tags":  [
+                                   "test",
+                                   "validation",
+                                   "go"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:config_test.go:mustCreateCfgFile",
+                      "type":  "function",
+                      "name":  "mustCreateCfgFile",
+                      "filePath":  "config_test.go",
+                      "lineRange":  [
+                                        446,
+                                        458
+                                    ],
+                      "summary":  "Implements must create cfg file behavior for the config_test component.",
+                      "tags":  [
+                                   "test",
+                                   "validation",
+                                   "go"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:config_test.go:TestAutoCompactionModeInvalid",
+                      "type":  "function",
+                      "name":  "TestAutoCompactionModeInvalid",
+                      "filePath":  "config_test.go",
+                      "lineRange":  [
+                                        460,
+                                        469
+                                    ],
+                      "summary":  "Tests test auto compaction mode invalid behavior for the config_test component.",
+                      "tags":  [
+                                   "test",
+                                   "validation",
+                                   "go"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:config_test.go:TestAutoCompactionModeParse",
+                      "type":  "function",
+                      "name":  "TestAutoCompactionModeParse",
+                      "filePath":  "config_test.go",
+                      "lineRange":  [
+                                        471,
+                                        510
+                                    ],
+                      "summary":  "Tests test auto compaction mode parse behavior for the config_test component.",
+                      "tags":  [
+                                   "test",
+                                   "validation",
+                                   "go"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:config_test.go:TestPeerURLsMapAndTokenFromSRV",
+                      "type":  "function",
+                      "name":  "TestPeerURLsMapAndTokenFromSRV",
+                      "filePath":  "config_test.go",
+                      "lineRange":  [
+                                        512,
+                                        590
+                                    ],
+                      "summary":  "Tests DNS SRV discovery conversion into peer URL maps and cluster tokens.",
+                      "tags":  [
+                                   "test",
+                                   "validation",
+                                   "go"
+                               ],
+                      "complexity":  "moderate"
+                  },
+                  {
+                      "id":  "function:config_test.go:TestLeaseCheckpointValidate",
+                      "type":  "function",
+                      "name":  "TestLeaseCheckpointValidate",
+                      "filePath":  "config_test.go",
+                      "lineRange":  [
+                                        592,
+                                        625
+                                    ],
+                      "summary":  "Tests test lease checkpoint validate behavior for the config_test component.",
+                      "tags":  [
+                                   "test",
+                                   "validation",
+                                   "go"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:config_test.go:TestLogRotation",
+                      "type":  "function",
+                      "name":  "TestLogRotation",
+                      "filePath":  "config_test.go",
+                      "lineRange":  [
+                                        627,
+                                        707
+                                    ],
+                      "summary":  "Verifies rotating-log configuration parsing and output behavior.",
+                      "tags":  [
+                                   "test",
+                                   "validation",
+                                   "go"
+                               ],
+                      "complexity":  "moderate"
+                  },
+                  {
+                      "id":  "function:config_test.go:TestTLSVersionMinMax",
+                      "type":  "function",
+                      "name":  "TestTLSVersionMinMax",
+                      "filePath":  "config_test.go",
+                      "lineRange":  [
+                                        709,
+                                        784
+                                    ],
+                      "summary":  "Covers supported and invalid TLS minimum and maximum version combinations.",
+                      "tags":  [
+                                   "test",
+                                   "validation",
+                                   "go"
+                               ],
+                      "complexity":  "moderate"
+                  },
+                  {
+                      "id":  "function:config_test.go:TestUndefinedAutoCompactionModeValidate",
+                      "type":  "function",
+                      "name":  "TestUndefinedAutoCompactionModeValidate",
+                      "filePath":  "config_test.go",
+                      "lineRange":  [
+                                        786,
+                                        791
+                                    ],
+                      "summary":  "Tests test undefined auto compaction mode validate behavior for the config_test component.",
+                      "tags":  [
+                                   "test",
+                                   "validation",
+                                   "go"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:config_test.go:TestMatchNewConfigAddFlags",
+                      "type":  "function",
+                      "name":  "TestMatchNewConfigAddFlags",
+                      "filePath":  "config_test.go",
+                      "lineRange":  [
+                                        793,
+                                        804
+                                    ],
+                      "summary":  "Tests test match new config add flags behavior for the config_test component.",
+                      "tags":  [
+                                   "test",
+                                   "validation",
+                                   "go"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:config_test.go:TestCheckHostURLs",
+                      "type":  "function",
+                      "name":  "TestCheckHostURLs",
+                      "filePath":  "config_test.go",
+                      "lineRange":  [
+                                        806,
+                                        867
+                                    ],
+                      "summary":  "Exercises advertised-host validation against valid, wildcard, and malformed URLs.",
+                      "tags":  [
+                                   "test",
+                                   "validation",
+                                   "go"
+                               ],
+                      "complexity":  "moderate"
+                  },
+                  {
+                      "id":  "function:config_test.go:TestDiscoveryCfg",
+                      "type":  "function",
+                      "name":  "TestDiscoveryCfg",
+                      "filePath":  "config_test.go",
+                      "lineRange":  [
+                                        869,
+                                        915
+                                    ],
+                      "summary":  "Tests test discovery cfg behavior for the config_test component.",
+                      "tags":  [
+                                   "test",
+                                   "validation",
+                                   "go"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:config_test.go:TestFastLeaseKeepAliveValidate",
+                      "type":  "function",
+                      "name":  "TestFastLeaseKeepAliveValidate",
+                      "filePath":  "config_test.go",
+                      "lineRange":  [
+                                        917,
+                                        946
+                                    ],
+                      "summary":  "Tests test fast lease keep alive validate behavior for the config_test component.",
+                      "tags":  [
+                                   "test",
+                                   "validation",
+                                   "go"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "file:config_tracing.go",
+                      "type":  "file",
+                      "name":  "config_tracing.go",
+                      "filePath":  "config_tracing.go",
+                      "summary":  "Validates distributed-tracing settings and constructs an OpenTelemetry OTLP exporter, sampler, resource identity, and shutdown wrapper.",
+                      "tags":  [
+                                   "tracing",
+                                   "opentelemetry",
+                                   "configuration",
+                                   "observability",
+                                   "tested"
+                               ],
+                      "complexity":  "moderate"
+                  },
+                  {
+                      "id":  "function:config_tracing.go:validateTracingConfig",
+                      "type":  "function",
+                      "name":  "validateTracingConfig",
+                      "filePath":  "config_tracing.go",
+                      "lineRange":  [
+                                        34,
+                                        43
+                                    ],
+                      "summary":  "Rejects incomplete or invalid distributed-tracing endpoint, service, and sampling settings.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "configuration"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:config_tracing.go:newTracingExporter",
+                      "type":  "function",
+                      "name":  "newTracingExporter",
+                      "filePath":  "config_tracing.go",
+                      "lineRange":  [
+                                        51,
+                                        113
+                                    ],
+                      "summary":  "Creates and registers an OTLP trace provider with configured sampling, service identity, and shutdown behavior.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "observability"
+                               ],
+                      "complexity":  "moderate"
+                  },
+                  {
+                      "id":  "function:config_tracing.go:Close",
+                      "type":  "function",
+                      "name":  "Close",
+                      "filePath":  "config_tracing.go",
+                      "lineRange":  [
+                                        115,
+                                        122
+                                    ],
+                      "summary":  "Performs coordinated, idempotent shutdown of listeners, HTTP and gRPC servers, handlers, tracing, and the underlying etcd server.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "service"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "file:config_tracing_test.go",
+                      "type":  "file",
+                      "name":  "config_tracing_test.go",
+                      "filePath":  "config_tracing_test.go",
+                      "summary":  "Verifies sampler selection and tracing configuration behavior for the embedded server.",
+                      "tags":  [
+                                   "test",
+                                   "tracing",
+                                   "configuration"
+                               ],
+                      "complexity":  "moderate"
+                  },
+                  {
+                      "id":  "function:config_tracing_test.go:TestDetermineSampler",
+                      "type":  "function",
+                      "name":  "TestDetermineSampler",
+                      "filePath":  "config_tracing_test.go",
+                      "lineRange":  [
+                                        23,
+                                        48
+                                    ],
+                      "summary":  "Verifies conversion of configured sampling rates into OpenTelemetry sampler decisions.",
+                      "tags":  [
+                                   "test",
+                                   "validation",
+                                   "go"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:config_tracing_test.go:TestTracingConfig",
+                      "type":  "function",
+                      "name":  "TestTracingConfig",
+                      "filePath":  "config_tracing_test.go",
+                      "lineRange":  [
+                                        50,
+                                        83
+                                    ],
+                      "summary":  "Covers tracing configuration validation and exporter construction behavior.",
+                      "tags":  [
+                                   "test",
+                                   "validation",
+                                   "go"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "file:doc.go",
+                      "type":  "file",
+                      "name":  "doc.go",
+                      "filePath":  "doc.go",
+                      "summary":  "Documents the embed package as the API for configuring, starting, and stopping an etcd server inside another Go process.",
+                      "tags":  [
+                                   "documentation",
+                                   "package-api",
+                                   "embedding"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "file:etcd.go",
+                      "type":  "file",
+                      "name":  "etcd.go",
+                      "filePath":  "etcd.go",
+                      "summary":  "Owns the embedded server lifecycle: startup, peer and client listener creation, serving, metrics, gRPC gateway dialing, shutdown, and error propagation.",
+                      "tags":  [
+                                   "service",
+                                   "entry-point",
+                                   "lifecycle",
+                                   "networking",
+                                   "grpc",
+                                   "tested"
+                               ],
+                      "complexity":  "complex"
+                  },
+                  {
+                      "id":  "function:etcd.go:StartEtcd",
+                      "type":  "function",
+                      "name":  "StartEtcd",
+                      "filePath":  "etcd.go",
+                      "lineRange":  [
+                                        110,
+                                        303
+                                    ],
+                      "summary":  "Validates configuration, initializes tracing and logging, creates listeners, starts the etcd server, and launches peer, client, and metrics serving loops.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "service"
+                               ],
+                      "complexity":  "moderate"
+                  },
+                  {
+                      "id":  "function:etcd.go:print",
+                      "type":  "function",
+                      "name":  "print",
+                      "filePath":  "etcd.go",
+                      "lineRange":  [
+                                        305,
+                                        385
+                                    ],
+                      "summary":  "Logs the effective startup configuration, version, resource limits, data directory state, URLs, and security posture.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "service"
+                               ],
+                      "complexity":  "moderate"
+                  },
+                  {
+                      "id":  "function:etcd.go:Config",
+                      "type":  "function",
+                      "name":  "Config",
+                      "filePath":  "etcd.go",
+                      "lineRange":  [
+                                        388,
+                                        390
+                                    ],
+                      "summary":  "Implements config behavior for the etcd component.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "configuration"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:etcd.go:Close",
+                      "type":  "function",
+                      "name":  "Close",
+                      "filePath":  "etcd.go",
+                      "lineRange":  [
+                                        413,
+                                        485
+                                    ],
+                      "summary":  "Performs coordinated, idempotent shutdown of listeners, HTTP and gRPC servers, handlers, tracing, and the underlying etcd server.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "service"
+                               ],
+                      "complexity":  "moderate"
+                  },
+                  {
+                      "id":  "function:etcd.go:stopServers",
+                      "type":  "function",
+                      "name":  "stopServers",
+                      "filePath":  "etcd.go",
+                      "lineRange":  [
+                                        487,
+                                        522
+                                    ],
+                      "summary":  "Gracefully stops active HTTP and gRPC servers, falling back to forced shutdown when required.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "networking"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:etcd.go:Err",
+                      "type":  "function",
+                      "name":  "Err",
+                      "filePath":  "etcd.go",
+                      "lineRange":  [
+                                        526,
+                                        528
+                                    ],
+                      "summary":  "Implements err behavior for the etcd component.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "service"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:etcd.go:configurePeerListeners",
+                      "type":  "function",
+                      "name":  "configurePeerListeners",
+                      "filePath":  "etcd.go",
+                      "lineRange":  [
+                                        530,
+                                        590
+                                    ],
+                      "summary":  "Creates peer listeners with TLS and socket options and detects an already initialized member.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "configuration"
+                               ],
+                      "complexity":  "moderate"
+                  },
+                  {
+                      "id":  "function:etcd.go:servePeers",
+                      "type":  "function",
+                      "name":  "servePeers",
+                      "filePath":  "etcd.go",
+                      "lineRange":  [
+                                        593,
+                                        642
+                                    ],
+                      "summary":  "Starts peer HTTP serving for each configured peer listener and tracks failures.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "networking"
+                               ],
+                      "complexity":  "moderate"
+                  },
+                  {
+                      "id":  "function:etcd.go:configureClientListeners",
+                      "type":  "function",
+                      "name":  "configureClientListeners",
+                      "filePath":  "etcd.go",
+                      "lineRange":  [
+                                        644,
+                                        746
+                                    ],
+                      "summary":  "Creates client and client-HTTP listeners, applies TLS, and prepares secure and insecure serving contexts.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "configuration"
+                               ],
+                      "complexity":  "moderate"
+                  },
+                  {
+                      "id":  "function:etcd.go:resolveURL",
+                      "type":  "function",
+                      "name":  "resolveURL",
+                      "filePath":  "etcd.go",
+                      "lineRange":  [
+                                        748,
+                                        757
+                                    ],
+                      "summary":  "Implements resolve url behavior for the etcd component.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "service"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:etcd.go:serveClients",
+                      "type":  "function",
+                      "name":  "serveClients",
+                      "filePath":  "etcd.go",
+                      "lineRange":  [
+                                        759,
+                                        805
+                                    ],
+                      "summary":  "Starts the configured gRPC, gateway, and HTTP client endpoints across prepared listeners.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "networking"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:etcd.go:grpcGatewayDial",
+                      "type":  "function",
+                      "name":  "grpcGatewayDial",
+                      "filePath":  "etcd.go",
+                      "lineRange":  [
+                                        807,
+                                        841
+                                    ],
+                      "summary":  "Builds the gateway dial function and transport credentials for connecting back to the local gRPC endpoint.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "networking"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:etcd.go:createMetricsListener",
+                      "type":  "function",
+                      "name":  "createMetricsListener",
+                      "filePath":  "etcd.go",
+                      "lineRange":  [
+                                        854,
+                                        868
+                                    ],
+                      "summary":  "Creates a metrics listener and applies client TLS settings when the metrics URL requires HTTPS.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "networking"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:etcd.go:serveMetrics",
+                      "type":  "function",
+                      "name":  "serveMetrics",
+                      "filePath":  "etcd.go",
+                      "lineRange":  [
+                                        870,
+                                        894
+                                    ],
+                      "summary":  "Serves metrics and health endpoints and reports listener failures.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "networking"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:etcd.go:errHandler",
+                      "type":  "function",
+                      "name":  "errHandler",
+                      "filePath":  "etcd.go",
+                      "lineRange":  [
+                                        905,
+                                        918
+                                    ],
+                      "summary":  "Implements err handler behavior for the etcd component.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "service"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:etcd.go:GetLogger",
+                      "type":  "function",
+                      "name":  "GetLogger",
+                      "filePath":  "etcd.go",
+                      "lineRange":  [
+                                        921,
+                                        926
+                                    ],
+                      "summary":  "Implements get logger behavior for the etcd component.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "logging"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:etcd.go:parseCompactionRetention",
+                      "type":  "function",
+                      "name":  "parseCompactionRetention",
+                      "filePath":  "etcd.go",
+                      "lineRange":  [
+                                        928,
+                                        947
+                                    ],
+                      "summary":  "Parses periodic or revision auto-compaction retention into the appropriate duration or revision value.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "service"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "class:etcd.go:Etcd",
+                      "type":  "class",
+                      "name":  "Etcd",
+                      "filePath":  "etcd.go",
+                      "lineRange":  [
+                                        70,
+                                        99
+                                    ],
+                      "summary":  "Represents a running embedded etcd instance and owns its server, listeners, error channels, HTTP/gRPC servers, and shutdown state.",
+                      "tags":  [
+                                   "component",
+                                   "data-model",
+                                   "go"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "file:etcd_test.go",
+                      "type":  "file",
+                      "name":  "etcd_test.go",
+                      "filePath":  "etcd_test.go",
+                      "summary":  "Checks metrics-listener creation when client TLS information is empty.",
+                      "tags":  [
+                                   "test",
+                                   "metrics",
+                                   "tls"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:etcd_test.go:TestEmptyClientTLSInfo_createMetricsListener",
+                      "type":  "function",
+                      "name":  "TestEmptyClientTLSInfo_createMetricsListener",
+                      "filePath":  "etcd_test.go",
+                      "lineRange":  [
+                                        26,
+                                        39
+                                    ],
+                      "summary":  "Tests test empty client tlsinfo create metrics listener behavior for the etcd_test component.",
+                      "tags":  [
+                                   "test",
+                                   "validation",
+                                   "go"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "file:serve.go",
+                      "type":  "file",
+                      "name":  "serve.go",
+                      "filePath":  "serve.go",
+                      "summary":  "Multiplexes gRPC and HTTP traffic, installs gateways and debug handlers, enforces host and CORS access rules, and coordinates listener shutdown.",
+                      "tags":  [
+                                   "service",
+                                   "http",
+                                   "grpc",
+                                   "middleware",
+                                   "networking",
+                                   "tested"
+                               ],
+                      "complexity":  "complex"
+                  },
+                  {
+                      "id":  "function:serve.go:startHandler",
+                      "type":  "function",
+                      "name":  "startHandler",
+                      "filePath":  "serve.go",
+                      "lineRange":  [
+                                        84,
+                                        94
+                                    ],
+                      "summary":  "Implements start handler behavior for the serve component.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "service"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:serve.go:newServeCtx",
+                      "type":  "function",
+                      "name":  "newServeCtx",
+                      "filePath":  "serve.go",
+                      "lineRange":  [
+                                        102,
+                                        114
+                                    ],
+                      "summary":  "Creates a serving context that owns one listener, its TLS state, handlers, servers, and shutdown synchronization.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "networking"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:serve.go:serve",
+                      "type":  "function",
+                      "name":  "serve",
+                      "filePath":  "serve.go",
+                      "lineRange":  [
+                                        119,
+                                        305
+                                    ],
+                      "summary":  "Classifies listener traffic, constructs gRPC and HTTP servers, registers services, applies TLS, and runs multiplexed serving loops.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "networking"
+                               ],
+                      "complexity":  "moderate"
+                  },
+                  {
+                      "id":  "function:serve.go:grpcHandlerFunc",
+                      "type":  "function",
+                      "name":  "grpcHandlerFunc",
+                      "filePath":  "serve.go",
+                      "lineRange":  [
+                                        316,
+                                        329
+                                    ],
+                      "summary":  "Routes HTTP/2 gRPC requests to the gRPC server and all other requests to the HTTP handler.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "networking"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:serve.go:registerGateway",
+                      "type":  "function",
+                      "name":  "registerGateway",
+                      "filePath":  "serve.go",
+                      "lineRange":  [
+                                        333,
+                                        386
+                                    ],
+                      "summary":  "Dials the local gRPC service, registers gateway handlers, and ties the connection lifecycle to the serving context.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "service"
+                               ],
+                      "complexity":  "moderate"
+                  },
+                  {
+                      "id":  "function:serve.go:Warnln",
+                      "type":  "function",
+                      "name":  "Warnln",
+                      "filePath":  "serve.go",
+                      "lineRange":  [
+                                        392,
+                                        394
+                                    ],
+                      "summary":  "Implements warnln behavior for the serve component.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "service"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:serve.go:Debugln",
+                      "type":  "function",
+                      "name":  "Debugln",
+                      "filePath":  "serve.go",
+                      "lineRange":  [
+                                        396,
+                                        398
+                                    ],
+                      "summary":  "Implements debugln behavior for the serve component.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "service"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:serve.go:createMux",
+                      "type":  "function",
+                      "name":  "createMux",
+                      "filePath":  "serve.go",
+                      "lineRange":  [
+                                        400,
+                                        427
+                                    ],
+                      "summary":  "Builds the HTTP handler tree for legacy APIs, gRPC gateway, user handlers, pprof, and tracing endpoints.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "networking"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:serve.go:ServeHTTP",
+                      "type":  "function",
+                      "name":  "ServeHTTP",
+                      "filePath":  "serve.go",
+                      "lineRange":  [
+                                        446,
+                                        492
+                                    ],
+                      "summary":  "Processes an HTTP request through access-control and CORS policy before delegating to the wrapped handler.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "networking"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:serve.go:errCVE20185702",
+                      "type":  "function",
+                      "name":  "errCVE20185702",
+                      "filePath":  "serve.go",
+                      "lineRange":  [
+                                        502,
+                                        513
+                                    ],
+                      "summary":  "Implements err cve20185702 behavior for the serve component.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "service"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:serve.go:WrapCORS",
+                      "type":  "function",
+                      "name":  "WrapCORS",
+                      "filePath":  "serve.go",
+                      "lineRange":  [
+                                        517,
+                                        522
+                                    ],
+                      "summary":  "Wraps an HTTP handler with origin checks and preflight response handling.",
+                      "tags":  [
+                                   "function",
+                                   "go",
+                                   "service"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "class:serve.go:serveCtx",
+                      "type":  "class",
+                      "name":  "serveCtx",
+                      "filePath":  "serve.go",
+                      "lineRange":  [
+                                        54,
+                                        82
+                                    ],
+                      "summary":  "Owns all state needed to serve one client listener, including TLS, multiplexers, handlers, servers, and lifecycle synchronization.",
+                      "tags":  [
+                                   "component",
+                                   "data-model",
+                                   "go"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "class:serve.go:wsProxyZapLogger",
+                      "type":  "class",
+                      "name":  "wsProxyZapLogger",
+                      "filePath":  "serve.go",
+                      "lineRange":  [
+                                        388,
+                                        390
+                                    ],
+                      "summary":  "Adapts zap logging to the websocket proxy logging interface.",
+                      "tags":  [
+                                   "component",
+                                   "data-model",
+                                   "go"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "file:serve_test.go",
+                      "type":  "file",
+                      "name":  "serve_test.go",
+                      "filePath":  "serve_test.go",
+                      "summary":  "Ensures embedded startup reports an error when the initial cluster token is invalid.",
+                      "tags":  [
+                                   "test",
+                                   "cluster-bootstrap",
+                                   "validation"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "function:serve_test.go:TestStartEtcdWrongToken",
+                      "type":  "function",
+                      "name":  "TestStartEtcdWrongToken",
+                      "filePath":  "serve_test.go",
+                      "lineRange":  [
+                                        26,
+                                        39
+                                    ],
+                      "summary":  "Confirms startup fails predictably when peer discovery uses an invalid initial-cluster token.",
+                      "tags":  [
+                                   "test",
+                                   "validation",
+                                   "go"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "file:util.go",
+                      "type":  "file",
+                      "name":  "util.go",
+                      "filePath":  "util.go",
+                      "summary":  "Determines whether an embedded member has already initialized by checking for its persisted WAL.",
+                      "tags":  [
+                                   "utility",
+                                   "wal",
+                                   "startup",
+                                   "tested"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "file:util_test.go",
+                      "type":  "file",
+                      "name":  "util_test.go",
+                      "filePath":  "util_test.go",
+                      "summary":  "Provides reusable dynamic URL fixtures and configuration helpers for embed package tests.",
+                      "tags":  [
+                                   "test",
+                                   "utility",
+                                   "networking"
+                               ],
+                      "complexity":  "moderate"
+                  },
+                  {
+                      "id":  "function:util_test.go:newConfigTestURLs",
+                      "type":  "function",
+                      "name":  "newConfigTestURLs",
+                      "filePath":  "util_test.go",
+                      "lineRange":  [
+                                        30,
+                                        42
+                                    ],
+                      "summary":  "Allocates isolated peer and client URLs and returns a matching initial-cluster fixture.",
+                      "tags":  [
+                                   "test",
+                                   "validation",
+                                   "go"
+                               ],
+                      "complexity":  "simple"
+                  },
+                  {
+                      "id":  "class:util_test.go:ConfigTestURLs",
+                      "type":  "class",
+                      "name":  "ConfigTestURLs",
+                      "filePath":  "util_test.go",
+                      "lineRange":  [
+                                        23,
+                                        27
+                                    ],
+                      "summary":  "Groups peer URLs, client URLs, and the corresponding initial-cluster string used by tests.",
+                      "tags":  [
+                                   "test",
+                                   "data-model",
+                                   "go"
+                               ],
+                      "complexity":  "simple"
+                  }
+              ],
+    "edges":  [
+                  {
+                      "source":  "file:auth_test.go",
+                      "target":  "function:auth_test.go:TestEnableAuth",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:auth_test.go",
+                      "target":  "function:auth_test.go:TestEnableAuth",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config.go",
+                      "target":  "function:config.go:NewConfig",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config.go",
+                      "target":  "function:config.go:NewConfig",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config.go",
+                      "target":  "function:config.go:AddFlags",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config.go",
+                      "target":  "function:config.go:AddFlags",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config.go",
+                      "target":  "function:config.go:ConfigFromFile",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config.go",
+                      "target":  "function:config.go:ConfigFromFile",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config.go",
+                      "target":  "function:config.go:configFromFile",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config.go",
+                      "target":  "function:config.go:updateCipherSuites",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config.go",
+                      "target":  "function:config.go:updateMinMaxVersions",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config.go",
+                      "target":  "function:config.go:Validate",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config.go",
+                      "target":  "function:config.go:Validate",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config.go",
+                      "target":  "function:config.go:PeerURLsMapAndToken",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config.go",
+                      "target":  "function:config.go:PeerURLsMapAndToken",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config.go",
+                      "target":  "function:config.go:GetDNSClusterNames",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config.go",
+                      "target":  "function:config.go:GetDNSClusterNames",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config.go",
+                      "target":  "function:config.go:InitialClusterFromName",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config.go",
+                      "target":  "function:config.go:InitialClusterFromName",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config.go",
+                      "target":  "function:config.go:InferLocalAddr",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config.go",
+                      "target":  "function:config.go:InferLocalAddr",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config.go",
+                      "target":  "function:config.go:IsNewCluster",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config.go",
+                      "target":  "function:config.go:IsNewCluster",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config.go",
+                      "target":  "function:config.go:ElectionTicks",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config.go",
+                      "target":  "function:config.go:ElectionTicks",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config.go",
+                      "target":  "function:config.go:ClientSelfCert",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config.go",
+                      "target":  "function:config.go:ClientSelfCert",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config.go",
+                      "target":  "function:config.go:PeerSelfCert",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config.go",
+                      "target":  "function:config.go:PeerSelfCert",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config.go",
+                      "target":  "function:config.go:UpdateDefaultClusterFromName",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config.go",
+                      "target":  "function:config.go:UpdateDefaultClusterFromName",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config.go",
+                      "target":  "function:config.go:checkBindURLs",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config.go",
+                      "target":  "function:config.go:checkHostURLs",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config.go",
+                      "target":  "class:config.go:Config",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config.go",
+                      "target":  "class:config.go:Config",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config_logging.go",
+                      "target":  "function:config_logging.go:GetLogger",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config_logging.go",
+                      "target":  "function:config_logging.go:GetLogger",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config_logging.go",
+                      "target":  "function:config_logging.go:setupLogging",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config_logging.go",
+                      "target":  "function:config_logging.go:NewZapLoggerBuilder",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config_logging.go",
+                      "target":  "function:config_logging.go:NewZapLoggerBuilder",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config_logging.go",
+                      "target":  "function:config_logging.go:SetupGlobalLoggers",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config_logging.go",
+                      "target":  "function:config_logging.go:SetupGlobalLoggers",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config_logging.go",
+                      "target":  "function:config_logging.go:Sync",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config_logging.go",
+                      "target":  "function:config_logging.go:Sync",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config_logging.go",
+                      "target":  "function:config_logging.go:setupLogRotation",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:TestConfigFileOtherFields",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:TestConfigFileOtherFields",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:TestConfigFileFeatureGates",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:TestConfigFileFeatureGates",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:TestUpdateDefaultClusterFromName",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:TestUpdateDefaultClusterFromName",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:TestUpdateDefaultClusterFromNameOverwrite",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:TestUpdateDefaultClusterFromNameOverwrite",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:TestInferLocalAddr",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:TestInferLocalAddr",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:TestSetMemberLocalAddrValidate",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:TestSetMemberLocalAddrValidate",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:equals",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:compareSlices",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:mustCreateCfgFile",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:TestAutoCompactionModeInvalid",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:TestAutoCompactionModeInvalid",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:TestAutoCompactionModeParse",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:TestAutoCompactionModeParse",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:TestPeerURLsMapAndTokenFromSRV",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:TestPeerURLsMapAndTokenFromSRV",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:TestLeaseCheckpointValidate",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:TestLeaseCheckpointValidate",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:TestLogRotation",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:TestLogRotation",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:TestTLSVersionMinMax",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:TestTLSVersionMinMax",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:TestUndefinedAutoCompactionModeValidate",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:TestUndefinedAutoCompactionModeValidate",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:TestMatchNewConfigAddFlags",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:TestMatchNewConfigAddFlags",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:TestCheckHostURLs",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:TestCheckHostURLs",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:TestDiscoveryCfg",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:TestDiscoveryCfg",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:TestFastLeaseKeepAliveValidate",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config_test.go",
+                      "target":  "function:config_test.go:TestFastLeaseKeepAliveValidate",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config_tracing.go",
+                      "target":  "function:config_tracing.go:validateTracingConfig",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config_tracing.go",
+                      "target":  "function:config_tracing.go:newTracingExporter",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config_tracing.go",
+                      "target":  "function:config_tracing.go:Close",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config_tracing.go",
+                      "target":  "function:config_tracing.go:Close",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config_tracing_test.go",
+                      "target":  "function:config_tracing_test.go:TestDetermineSampler",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config_tracing_test.go",
+                      "target":  "function:config_tracing_test.go:TestDetermineSampler",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config_tracing_test.go",
+                      "target":  "function:config_tracing_test.go:TestTracingConfig",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:config_tracing_test.go",
+                      "target":  "function:config_tracing_test.go:TestTracingConfig",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:etcd.go",
+                      "target":  "function:etcd.go:StartEtcd",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:etcd.go",
+                      "target":  "function:etcd.go:StartEtcd",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:etcd.go",
+                      "target":  "function:etcd.go:print",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:etcd.go",
+                      "target":  "function:etcd.go:Config",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:etcd.go",
+                      "target":  "function:etcd.go:Config",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:etcd.go",
+                      "target":  "function:etcd.go:Close",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:etcd.go",
+                      "target":  "function:etcd.go:Close",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:etcd.go",
+                      "target":  "function:etcd.go:stopServers",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:etcd.go",
+                      "target":  "function:etcd.go:Err",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:etcd.go",
+                      "target":  "function:etcd.go:Err",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:etcd.go",
+                      "target":  "function:etcd.go:configurePeerListeners",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:etcd.go",
+                      "target":  "function:etcd.go:servePeers",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:etcd.go",
+                      "target":  "function:etcd.go:configureClientListeners",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:etcd.go",
+                      "target":  "function:etcd.go:resolveURL",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:etcd.go",
+                      "target":  "function:etcd.go:serveClients",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:etcd.go",
+                      "target":  "function:etcd.go:grpcGatewayDial",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:etcd.go",
+                      "target":  "function:etcd.go:createMetricsListener",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:etcd.go",
+                      "target":  "function:etcd.go:serveMetrics",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:etcd.go",
+                      "target":  "function:etcd.go:errHandler",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:etcd.go",
+                      "target":  "function:etcd.go:GetLogger",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:etcd.go",
+                      "target":  "function:etcd.go:GetLogger",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:etcd.go",
+                      "target":  "function:etcd.go:parseCompactionRetention",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:etcd.go",
+                      "target":  "class:etcd.go:Etcd",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:etcd.go",
+                      "target":  "class:etcd.go:Etcd",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:etcd_test.go",
+                      "target":  "function:etcd_test.go:TestEmptyClientTLSInfo_createMetricsListener",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:etcd_test.go",
+                      "target":  "function:etcd_test.go:TestEmptyClientTLSInfo_createMetricsListener",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:serve.go",
+                      "target":  "function:serve.go:startHandler",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:serve.go",
+                      "target":  "function:serve.go:newServeCtx",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:serve.go",
+                      "target":  "function:serve.go:serve",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:serve.go",
+                      "target":  "function:serve.go:grpcHandlerFunc",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:serve.go",
+                      "target":  "function:serve.go:registerGateway",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:serve.go",
+                      "target":  "function:serve.go:Warnln",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:serve.go",
+                      "target":  "function:serve.go:Warnln",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:serve.go",
+                      "target":  "function:serve.go:Debugln",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:serve.go",
+                      "target":  "function:serve.go:Debugln",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:serve.go",
+                      "target":  "function:serve.go:createMux",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:serve.go",
+                      "target":  "function:serve.go:ServeHTTP",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:serve.go",
+                      "target":  "function:serve.go:ServeHTTP",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:serve.go",
+                      "target":  "function:serve.go:errCVE20185702",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:serve.go",
+                      "target":  "function:serve.go:WrapCORS",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:serve.go",
+                      "target":  "function:serve.go:WrapCORS",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:serve.go",
+                      "target":  "class:serve.go:serveCtx",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:serve.go",
+                      "target":  "class:serve.go:wsProxyZapLogger",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:serve_test.go",
+                      "target":  "function:serve_test.go:TestStartEtcdWrongToken",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:serve_test.go",
+                      "target":  "function:serve_test.go:TestStartEtcdWrongToken",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:util_test.go",
+                      "target":  "function:util_test.go:newConfigTestURLs",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:util_test.go",
+                      "target":  "class:util_test.go:ConfigTestURLs",
+                      "type":  "contains",
+                      "direction":  "forward",
+                      "weight":  1
+                  },
+                  {
+                      "source":  "file:util_test.go",
+                      "target":  "class:util_test.go:ConfigTestURLs",
+                      "type":  "exports",
+                      "direction":  "forward",
+                      "weight":  0.8
+                  },
+                  {
+                      "source":  "file:config.go",
+                      "target":  "file:config_test.go",
+                      "type":  "tested_by",
+                      "direction":  "forward",
+                      "weight":  0.5,
+                      "description":  "Path-based pairing (deterministic)"
+                  },
+                  {
+                      "source":  "file:config_tracing.go",
+                      "target":  "file:config_tracing_test.go",
+                      "type":  "tested_by",
+                      "direction":  "forward",
+                      "weight":  0.5,
+                      "description":  "Path-based pairing (deterministic)"
+                  },
+                  {
+                      "source":  "file:etcd.go",
+                      "target":  "file:etcd_test.go",
+                      "type":  "tested_by",
+                      "direction":  "forward",
+                      "weight":  0.5,
+                      "description":  "Path-based pairing (deterministic)"
+                  },
+                  {
+                      "source":  "file:serve.go",
+                      "target":  "file:serve_test.go",
+                      "type":  "tested_by",
+                      "direction":  "forward",
+                      "weight":  0.5,
+                      "description":  "Path-based pairing (deterministic)"
+                  },
+                  {
+                      "source":  "file:util.go",
+                      "target":  "file:util_test.go",
+                      "type":  "tested_by",
+                      "direction":  "forward",
+                      "weight":  0.5,
+                      "description":  "Path-based pairing (deterministic)"
+                  }
+              ],
+    "layers":  {
+                   "value":  [
+                                 {
+                                     "id":  "layer:configuration",
+                                     "name":  "Configuration and Bootstrap",
+                                     "description":  "Defines embedded etcd defaults, flag and file loading, validation, TLS, discovery, and cluster bootstrap behavior.",
+                                     "nodeIds":  [
+                                                     "file:config.go"
+                                                 ]
+                                 },
+                                 {
+                                     "id":  "layer:observability",
+                                     "name":  "Logging and Tracing",
+                                     "description":  "Constructs zap logging, platform-specific journal outputs, log rotation, and OpenTelemetry tracing for the embedded server.",
+                                     "nodeIds":  [
+                                                     "file:config_logging.go",
+                                                     "file:config_logging_journal_unix.go",
+                                                     "file:config_logging_journal_windows.go",
+                                                     "file:config_tracing.go"
+                                                 ]
+                                 },
+                                 {
+                                     "id":  "layer:runtime",
+                                     "name":  "Embedded Server Runtime",
+                                     "description":  "Starts and stops the embedded member, creates listeners, serves gRPC and HTTP traffic, and coordinates gateways and shutdown.",
+                                     "nodeIds":  [
+                                                     "file:etcd.go",
+                                                     "file:serve.go"
+                                                 ]
+                                 },
+                                 {
+                                     "id":  "layer:package-support",
+                                     "name":  "Package Support",
+                                     "description":  "Documents the embedding API, detects persisted WAL state during startup, and stores graph-generation preferences.",
+                                     "nodeIds":  [
+                                                     "file:doc.go",
+                                                     "file:util.go",
+                                                     "config:.ua/config.json"
+                                                 ]
+                                 },
+                                 {
+                                     "id":  "layer:test",
+                                     "name":  "Integration and Configuration Tests",
+                                     "description":  "Exercises embedded startup, authentication, configuration validation, tracing, metrics listeners, bootstrap errors, and reusable network fixtures.",
+                                     "nodeIds":  [
+                                                     "file:auth_test.go",
+                                                     "file:config_test.go",
+                                                     "file:config_tracing_test.go",
+                                                     "file:etcd_test.go",
+                                                     "file:serve_test.go",
+                                                     "file:util_test.go"
+                                                 ]
+                                 }
+                             ],
+                   "Count":  5
+               }
+}

@@ -1,0 +1,1094 @@
+{
+  "nodes": [
+    {
+      "id": "file:etcdserver/api/v2store/event_queue.go",
+      "type": "file",
+      "name": "event_queue.go",
+      "filePath": "etcdserver/api/v2store/event_queue.go",
+      "summary": "Implements the ordered event queue used by the v2 store event history.",
+      "tags": [
+        "event",
+        "queue",
+        "legacy-api",
+        "v2-store"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Go implementation using package-level APIs and concurrency primitives where required."
+    },
+    {
+      "id": "function:etcdserver/api/v2store/event_queue.go:insert",
+      "type": "function",
+      "name": "insert",
+      "filePath": "etcdserver/api/v2store/event_queue.go",
+      "lineRange": [
+        25,
+        34
+      ],
+      "summary": "Provides the insert operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:etcdserver/api/v2store/event_test.go",
+      "type": "file",
+      "name": "event_test.go",
+      "filePath": "etcdserver/api/v2store/event_test.go",
+      "summary": "Tests v2 event creation, history lookup, and event serialization behavior.",
+      "tags": [
+        "test",
+        "event",
+        "history",
+        "legacy-api"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using package-level APIs and concurrency primitives where required."
+    },
+    {
+      "id": "function:etcdserver/api/v2store/event_test.go:TestEventQueue",
+      "type": "function",
+      "name": "TestEventQueue",
+      "filePath": "etcdserver/api/v2store/event_test.go",
+      "lineRange": [
+        26,
+        47
+      ],
+      "summary": "Provides the TestEventQueue operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/event_test.go:TestScanHistory",
+      "type": "function",
+      "name": "TestScanHistory",
+      "filePath": "etcdserver/api/v2store/event_test.go",
+      "lineRange": [
+        49,
+        90
+      ],
+      "summary": "Provides the TestScanHistory operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/event_test.go:TestEventIndexHistoryCleared",
+      "type": "function",
+      "name": "TestEventIndexHistoryCleared",
+      "filePath": "etcdserver/api/v2store/event_test.go",
+      "lineRange": [
+        92,
+        110
+      ],
+      "summary": "Provides the TestEventIndexHistoryCleared operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/event_test.go:TestFullEventQueue",
+      "type": "function",
+      "name": "TestFullEventQueue",
+      "filePath": "etcdserver/api/v2store/event_test.go",
+      "lineRange": [
+        115,
+        129
+      ],
+      "summary": "Provides the TestFullEventQueue operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/event_test.go:TestCloneEvent",
+      "type": "function",
+      "name": "TestCloneEvent",
+      "filePath": "etcdserver/api/v2store/event_test.go",
+      "lineRange": [
+        131,
+        160
+      ],
+      "summary": "Provides the TestCloneEvent operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdserver/api/v2store/heap_test.go",
+      "type": "file",
+      "name": "heap_test.go",
+      "filePath": "etcdserver/api/v2store/heap_test.go",
+      "summary": "Tests heap ordering helpers used by the v2 store implementation.",
+      "tags": [
+        "test",
+        "heap",
+        "legacy-api",
+        "utility"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using package-level APIs and concurrency primitives where required."
+    },
+    {
+      "id": "function:etcdserver/api/v2store/heap_test.go:TestHeapPushPop",
+      "type": "function",
+      "name": "TestHeapPushPop",
+      "filePath": "etcdserver/api/v2store/heap_test.go",
+      "lineRange": [
+        23,
+        44
+      ],
+      "summary": "Provides the TestHeapPushPop operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/heap_test.go:TestHeapUpdate",
+      "type": "function",
+      "name": "TestHeapUpdate",
+      "filePath": "etcdserver/api/v2store/heap_test.go",
+      "lineRange": [
+        46,
+        91
+      ],
+      "summary": "Provides the TestHeapUpdate operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:etcdserver/api/v2store/metrics.go",
+      "type": "file",
+      "name": "metrics.go",
+      "filePath": "etcdserver/api/v2store/metrics.go",
+      "summary": "Defines metrics for v2 store operations and watcher activity.",
+      "tags": [
+        "metrics",
+        "monitoring",
+        "legacy-api",
+        "v2-store"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using package-level APIs and concurrency primitives where required."
+    },
+    {
+      "id": "function:etcdserver/api/v2store/metrics.go:init",
+      "type": "function",
+      "name": "init",
+      "filePath": "etcdserver/api/v2store/metrics.go",
+      "lineRange": [
+        97,
+        107
+      ],
+      "summary": "Provides the init operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:etcdserver/api/v2store/node.go",
+      "type": "file",
+      "name": "node.go",
+      "filePath": "etcdserver/api/v2store/node.go",
+      "summary": "Models hierarchical v2 store nodes and implements recursive key-value tree operations, TTL metadata, and JSON-facing state.",
+      "tags": [
+        "data-model",
+        "legacy-api",
+        "tree",
+        "ttl",
+        "serialization"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Go implementation using package-level APIs and concurrency primitives where required."
+    },
+    {
+      "id": "function:etcdserver/api/v2store/node.go:newKV",
+      "type": "function",
+      "name": "newKV",
+      "filePath": "etcdserver/api/v2store/node.go",
+      "lineRange": [
+        57,
+        67
+      ],
+      "summary": "Provides the newKV operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/node.go:newDir",
+      "type": "function",
+      "name": "newDir",
+      "filePath": "etcdserver/api/v2store/node.go",
+      "lineRange": [
+        70,
+        80
+      ],
+      "summary": "Provides the newDir operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/node.go:IsHidden",
+      "type": "function",
+      "name": "IsHidden",
+      "filePath": "etcdserver/api/v2store/node.go",
+      "lineRange": [
+        87,
+        91
+      ],
+      "summary": "Provides the IsHidden operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/node.go:IsPermanent",
+      "type": "function",
+      "name": "IsPermanent",
+      "filePath": "etcdserver/api/v2store/node.go",
+      "lineRange": [
+        94,
+        99
+      ],
+      "summary": "Provides the IsPermanent operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/node.go:IsDir",
+      "type": "function",
+      "name": "IsDir",
+      "filePath": "etcdserver/api/v2store/node.go",
+      "lineRange": [
+        104,
+        106
+      ],
+      "summary": "Provides the IsDir operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/node.go:Read",
+      "type": "function",
+      "name": "Read",
+      "filePath": "etcdserver/api/v2store/node.go",
+      "lineRange": [
+        110,
+        116
+      ],
+      "summary": "Provides the Read operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/node.go:Write",
+      "type": "function",
+      "name": "Write",
+      "filePath": "etcdserver/api/v2store/node.go",
+      "lineRange": [
+        120,
+        129
+      ],
+      "summary": "Provides the Write operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/node.go:expirationAndTTL",
+      "type": "function",
+      "name": "expirationAndTTL",
+      "filePath": "etcdserver/api/v2store/node.go",
+      "lineRange": [
+        131,
+        149
+      ],
+      "summary": "Provides the expirationAndTTL operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/node.go:List",
+      "type": "function",
+      "name": "List",
+      "filePath": "etcdserver/api/v2store/node.go",
+      "lineRange": [
+        153,
+        167
+      ],
+      "summary": "Provides the List operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/node.go:GetChild",
+      "type": "function",
+      "name": "GetChild",
+      "filePath": "etcdserver/api/v2store/node.go",
+      "lineRange": [
+        171,
+        183
+      ],
+      "summary": "Provides the GetChild operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/node.go:Add",
+      "type": "function",
+      "name": "Add",
+      "filePath": "etcdserver/api/v2store/node.go",
+      "lineRange": [
+        189,
+        203
+      ],
+      "summary": "Provides the Add operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/node.go:Remove",
+      "type": "function",
+      "name": "Remove",
+      "filePath": "etcdserver/api/v2store/node.go",
+      "lineRange": [
+        206,
+        256
+      ],
+      "summary": "Provides the Remove operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/node.go:Repr",
+      "type": "function",
+      "name": "Repr",
+      "filePath": "etcdserver/api/v2store/node.go",
+      "lineRange": [
+        258,
+        308
+      ],
+      "summary": "Provides the Repr operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/node.go:UpdateTTL",
+      "type": "function",
+      "name": "UpdateTTL",
+      "filePath": "etcdserver/api/v2store/node.go",
+      "lineRange": [
+        310,
+        335
+      ],
+      "summary": "Provides the UpdateTTL operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/node.go:Compare",
+      "type": "function",
+      "name": "Compare",
+      "filePath": "etcdserver/api/v2store/node.go",
+      "lineRange": [
+        339,
+        354
+      ],
+      "summary": "Provides the Compare operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/node.go:Clone",
+      "type": "function",
+      "name": "Clone",
+      "filePath": "etcdserver/api/v2store/node.go",
+      "lineRange": [
+        359,
+        374
+      ],
+      "summary": "Provides the Clone operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/node.go:recoverAndclean",
+      "type": "function",
+      "name": "recoverAndclean",
+      "filePath": "etcdserver/api/v2store/node.go",
+      "lineRange": [
+        383,
+        395
+      ],
+      "summary": "Provides the recoverAndclean operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:etcdserver/api/v2store/node.go:node",
+      "type": "class",
+      "name": "node",
+      "filePath": "etcdserver/api/v2store/node.go",
+      "lineRange": [
+        40,
+        54
+      ],
+      "summary": "Represents the node state and behavior for this module.",
+      "tags": [
+        "go",
+        "data-model",
+        "state",
+        "implementation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:etcdserver/api/v2store/node_extern.go",
+      "type": "file",
+      "name": "node_extern.go",
+      "filePath": "etcdserver/api/v2store/node_extern.go",
+      "summary": "Provides external node representations and conversions for the v2 store API.",
+      "tags": [
+        "data-model",
+        "legacy-api",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using package-level APIs and concurrency primitives where required."
+    },
+    {
+      "id": "function:etcdserver/api/v2store/node_extern.go:loadInternalNode",
+      "type": "function",
+      "name": "loadInternalNode",
+      "filePath": "etcdserver/api/v2store/node_extern.go",
+      "lineRange": [
+        39,
+        71
+      ],
+      "summary": "Provides the loadInternalNode operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/node_extern.go:Clone",
+      "type": "function",
+      "name": "Clone",
+      "filePath": "etcdserver/api/v2store/node_extern.go",
+      "lineRange": [
+        73,
+        99
+      ],
+      "summary": "Provides the Clone operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/node_extern.go:Len",
+      "type": "function",
+      "name": "Len",
+      "filePath": "etcdserver/api/v2store/node_extern.go",
+      "lineRange": [
+        105,
+        107
+      ],
+      "summary": "Provides the Len operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/node_extern.go:Less",
+      "type": "function",
+      "name": "Less",
+      "filePath": "etcdserver/api/v2store/node_extern.go",
+      "lineRange": [
+        109,
+        111
+      ],
+      "summary": "Provides the Less operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/node_extern.go:Swap",
+      "type": "function",
+      "name": "Swap",
+      "filePath": "etcdserver/api/v2store/node_extern.go",
+      "lineRange": [
+        113,
+        115
+      ],
+      "summary": "Provides the Swap operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:etcdserver/api/v2store/node_extern.go:NodeExtern",
+      "type": "class",
+      "name": "NodeExtern",
+      "filePath": "etcdserver/api/v2store/node_extern.go",
+      "lineRange": [
+        28,
+        37
+      ],
+      "summary": "Represents the NodeExtern state and behavior for this module.",
+      "tags": [
+        "go",
+        "data-model",
+        "state",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:etcdserver/api/v2store/event_queue.go",
+      "target": "function:etcdserver/api/v2store/event_queue.go:insert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/event_test.go",
+      "target": "function:etcdserver/api/v2store/event_test.go:TestEventQueue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/event_test.go",
+      "target": "function:etcdserver/api/v2store/event_test.go:TestEventQueue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/event_test.go",
+      "target": "function:etcdserver/api/v2store/event_test.go:TestScanHistory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/event_test.go",
+      "target": "function:etcdserver/api/v2store/event_test.go:TestScanHistory",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/event_test.go",
+      "target": "function:etcdserver/api/v2store/event_test.go:TestEventIndexHistoryCleared",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/event_test.go",
+      "target": "function:etcdserver/api/v2store/event_test.go:TestEventIndexHistoryCleared",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/event_test.go",
+      "target": "function:etcdserver/api/v2store/event_test.go:TestFullEventQueue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/event_test.go",
+      "target": "function:etcdserver/api/v2store/event_test.go:TestFullEventQueue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/event_test.go",
+      "target": "function:etcdserver/api/v2store/event_test.go:TestCloneEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/event_test.go",
+      "target": "function:etcdserver/api/v2store/event_test.go:TestCloneEvent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/event_test.go",
+      "target": "file:etcdserver/api/v2error/error.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v2store/event_test.go",
+      "target": "file:etcdserver/api/v2error/error_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v2store/heap_test.go",
+      "target": "function:etcdserver/api/v2store/heap_test.go:TestHeapPushPop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/heap_test.go",
+      "target": "function:etcdserver/api/v2store/heap_test.go:TestHeapPushPop",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/heap_test.go",
+      "target": "function:etcdserver/api/v2store/heap_test.go:TestHeapUpdate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/heap_test.go",
+      "target": "function:etcdserver/api/v2store/heap_test.go:TestHeapUpdate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/metrics.go",
+      "target": "function:etcdserver/api/v2store/metrics.go:init",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node.go",
+      "target": "function:etcdserver/api/v2store/node.go:newKV",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node.go",
+      "target": "function:etcdserver/api/v2store/node.go:newDir",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node.go",
+      "target": "function:etcdserver/api/v2store/node.go:IsHidden",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node.go",
+      "target": "function:etcdserver/api/v2store/node.go:IsHidden",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node.go",
+      "target": "function:etcdserver/api/v2store/node.go:IsPermanent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node.go",
+      "target": "function:etcdserver/api/v2store/node.go:IsPermanent",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node.go",
+      "target": "function:etcdserver/api/v2store/node.go:IsDir",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node.go",
+      "target": "function:etcdserver/api/v2store/node.go:IsDir",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node.go",
+      "target": "function:etcdserver/api/v2store/node.go:Read",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node.go",
+      "target": "function:etcdserver/api/v2store/node.go:Read",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node.go",
+      "target": "function:etcdserver/api/v2store/node.go:Write",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node.go",
+      "target": "function:etcdserver/api/v2store/node.go:Write",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node.go",
+      "target": "function:etcdserver/api/v2store/node.go:expirationAndTTL",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node.go",
+      "target": "function:etcdserver/api/v2store/node.go:List",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node.go",
+      "target": "function:etcdserver/api/v2store/node.go:List",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node.go",
+      "target": "function:etcdserver/api/v2store/node.go:GetChild",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node.go",
+      "target": "function:etcdserver/api/v2store/node.go:GetChild",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node.go",
+      "target": "function:etcdserver/api/v2store/node.go:Add",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node.go",
+      "target": "function:etcdserver/api/v2store/node.go:Add",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node.go",
+      "target": "function:etcdserver/api/v2store/node.go:Remove",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node.go",
+      "target": "function:etcdserver/api/v2store/node.go:Remove",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node.go",
+      "target": "function:etcdserver/api/v2store/node.go:Repr",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node.go",
+      "target": "function:etcdserver/api/v2store/node.go:Repr",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node.go",
+      "target": "function:etcdserver/api/v2store/node.go:UpdateTTL",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node.go",
+      "target": "function:etcdserver/api/v2store/node.go:UpdateTTL",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node.go",
+      "target": "function:etcdserver/api/v2store/node.go:Compare",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node.go",
+      "target": "function:etcdserver/api/v2store/node.go:Compare",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node.go",
+      "target": "function:etcdserver/api/v2store/node.go:Clone",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node.go",
+      "target": "function:etcdserver/api/v2store/node.go:Clone",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node.go",
+      "target": "function:etcdserver/api/v2store/node.go:recoverAndclean",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node.go",
+      "target": "class:etcdserver/api/v2store/node.go:node",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node.go",
+      "target": "file:etcdserver/api/v2error/error.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node.go",
+      "target": "file:etcdserver/api/v2error/error_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node_extern.go",
+      "target": "function:etcdserver/api/v2store/node_extern.go:loadInternalNode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node_extern.go",
+      "target": "function:etcdserver/api/v2store/node_extern.go:Clone",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node_extern.go",
+      "target": "function:etcdserver/api/v2store/node_extern.go:Clone",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node_extern.go",
+      "target": "function:etcdserver/api/v2store/node_extern.go:Len",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node_extern.go",
+      "target": "function:etcdserver/api/v2store/node_extern.go:Len",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node_extern.go",
+      "target": "function:etcdserver/api/v2store/node_extern.go:Less",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node_extern.go",
+      "target": "function:etcdserver/api/v2store/node_extern.go:Less",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node_extern.go",
+      "target": "function:etcdserver/api/v2store/node_extern.go:Swap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node_extern.go",
+      "target": "function:etcdserver/api/v2store/node_extern.go:Swap",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node_extern.go",
+      "target": "class:etcdserver/api/v2store/node_extern.go:NodeExtern",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/node_extern.go",
+      "target": "class:etcdserver/api/v2store/node_extern.go:NodeExtern",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

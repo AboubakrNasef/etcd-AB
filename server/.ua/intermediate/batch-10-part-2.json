@@ -1,0 +1,1865 @@
+{
+  "nodes": [
+    {
+      "id": "file:etcdserver/tracing.go",
+      "type": "file",
+      "name": "tracing.go",
+      "filePath": "etcdserver/tracing.go",
+      "summary": "Provides small key-extraction helpers used to identify request fields for tracing and comparison logic.",
+      "tags": [
+        "tracing",
+        "observability",
+        "request",
+        "serialization"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using protobuf RPC types, raft interfaces, concurrency primitives, and Prometheus or zap integration where applicable."
+    },
+    {
+      "id": "file:etcdserver/util.go",
+      "type": "file",
+      "name": "util.go",
+      "filePath": "etcdserver/util.go",
+      "summary": "Implements server utility predicates for quorum connectivity, request-size limits, priority classification, and connection-duration analysis.",
+      "tags": [
+        "go",
+        "server",
+        "support",
+        "coordination"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using protobuf RPC types, raft interfaces, concurrency primitives, and Prometheus or zap integration where applicable."
+    },
+    {
+      "id": "file:etcdserver/util_test.go",
+      "type": "file",
+      "name": "util_test.go",
+      "filePath": "etcdserver/util_test.go",
+      "summary": "Tests server connectivity-duration and request-limit utilities with a controllable raft transport test double.",
+      "tags": [
+        "test",
+        "server",
+        "raft",
+        "integration"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using protobuf RPC types, raft interfaces, concurrency primitives, and Prometheus or zap integration where applicable."
+    },
+    {
+      "id": "file:etcdserver/zap_raft.go",
+      "type": "file",
+      "name": "zap_raft.go",
+      "filePath": "etcdserver/zap_raft.go",
+      "summary": "Adapts zap logging to the raft logger interface, including leveled formatting and structured error, fatal, and panic methods.",
+      "tags": [
+        "raft",
+        "logging",
+        "zap",
+        "observability"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using protobuf RPC types, raft interfaces, concurrency primitives, and Prometheus or zap integration where applicable."
+    },
+    {
+      "id": "function:etcdserver/tracing.go:firstOpKey",
+      "type": "function",
+      "name": "firstOpKey",
+      "filePath": "etcdserver/tracing.go",
+      "lineRange": [
+        31,
+        47
+      ],
+      "summary": "Implements firstOpKey behavior in this component.",
+      "tags": [
+        "tracing",
+        "observability",
+        "request"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/tracing.go:firstOpType",
+      "type": "function",
+      "name": "firstOpType",
+      "filePath": "etcdserver/tracing.go",
+      "lineRange": [
+        50,
+        64
+      ],
+      "summary": "Implements firstOpType behavior in this component.",
+      "tags": [
+        "tracing",
+        "observability",
+        "request"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/util.go:exceedsRequestLimit",
+      "type": "function",
+      "name": "exceedsRequestLimit",
+      "filePath": "etcdserver/util.go",
+      "lineRange": [
+        60,
+        70
+      ],
+      "summary": "Implements exceedsRequestLimit behavior in this component.",
+      "tags": [
+        "go",
+        "server",
+        "support"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/util.go:longestConnected",
+      "type": "function",
+      "name": "longestConnected",
+      "filePath": "etcdserver/util.go",
+      "lineRange": [
+        90,
+        113
+      ],
+      "summary": "Implements longestConnected behavior in this component.",
+      "tags": [
+        "go",
+        "server",
+        "support"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/util_test.go:TestLongestConnected",
+      "type": "function",
+      "name": "TestLongestConnected",
+      "filePath": "etcdserver/util_test.go",
+      "lineRange": [
+        33,
+        64
+      ],
+      "summary": "Tests LongestConnected behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/util_test.go:Start",
+      "type": "function",
+      "name": "Start",
+      "filePath": "etcdserver/util_test.go",
+      "lineRange": [
+        80,
+        80
+      ],
+      "summary": "Tests Start behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/util_test.go:Handler",
+      "type": "function",
+      "name": "Handler",
+      "filePath": "etcdserver/util_test.go",
+      "lineRange": [
+        81,
+        81
+      ],
+      "summary": "Tests Handler behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/util_test.go:Send",
+      "type": "function",
+      "name": "Send",
+      "filePath": "etcdserver/util_test.go",
+      "lineRange": [
+        82,
+        82
+      ],
+      "summary": "Tests Send behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/util_test.go:SendSnapshot",
+      "type": "function",
+      "name": "SendSnapshot",
+      "filePath": "etcdserver/util_test.go",
+      "lineRange": [
+        83,
+        83
+      ],
+      "summary": "Tests SendSnapshot behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/util_test.go:AddRemote",
+      "type": "function",
+      "name": "AddRemote",
+      "filePath": "etcdserver/util_test.go",
+      "lineRange": [
+        84,
+        84
+      ],
+      "summary": "Tests AddRemote behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/util_test.go:AddPeer",
+      "type": "function",
+      "name": "AddPeer",
+      "filePath": "etcdserver/util_test.go",
+      "lineRange": [
+        85,
+        85
+      ],
+      "summary": "Tests AddPeer behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/util_test.go:RemovePeer",
+      "type": "function",
+      "name": "RemovePeer",
+      "filePath": "etcdserver/util_test.go",
+      "lineRange": [
+        86,
+        86
+      ],
+      "summary": "Tests RemovePeer behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/util_test.go:RemoveAllPeers",
+      "type": "function",
+      "name": "RemoveAllPeers",
+      "filePath": "etcdserver/util_test.go",
+      "lineRange": [
+        87,
+        87
+      ],
+      "summary": "Tests RemoveAllPeers behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/util_test.go:UpdatePeer",
+      "type": "function",
+      "name": "UpdatePeer",
+      "filePath": "etcdserver/util_test.go",
+      "lineRange": [
+        88,
+        88
+      ],
+      "summary": "Tests UpdatePeer behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/util_test.go:ActiveSince",
+      "type": "function",
+      "name": "ActiveSince",
+      "filePath": "etcdserver/util_test.go",
+      "lineRange": [
+        89,
+        89
+      ],
+      "summary": "Tests ActiveSince behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/util_test.go:ActivePeers",
+      "type": "function",
+      "name": "ActivePeers",
+      "filePath": "etcdserver/util_test.go",
+      "lineRange": [
+        90,
+        90
+      ],
+      "summary": "Tests ActivePeers behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/util_test.go:Stop",
+      "type": "function",
+      "name": "Stop",
+      "filePath": "etcdserver/util_test.go",
+      "lineRange": [
+        91,
+        91
+      ],
+      "summary": "Tests Stop behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/util_test.go:Pause",
+      "type": "function",
+      "name": "Pause",
+      "filePath": "etcdserver/util_test.go",
+      "lineRange": [
+        92,
+        92
+      ],
+      "summary": "Tests Pause behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/util_test.go:Resume",
+      "type": "function",
+      "name": "Resume",
+      "filePath": "etcdserver/util_test.go",
+      "lineRange": [
+        93,
+        93
+      ],
+      "summary": "Tests Resume behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/util_test.go:TestExceedsRequestLimit",
+      "type": "function",
+      "name": "TestExceedsRequestLimit",
+      "filePath": "etcdserver/util_test.go",
+      "lineRange": [
+        96,
+        157
+      ],
+      "summary": "Tests ExceedsRequestLimit behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:etcdserver/util_test.go:nopTransporterWithActiveTime",
+      "type": "class",
+      "name": "nopTransporterWithActiveTime",
+      "filePath": "etcdserver/util_test.go",
+      "lineRange": [
+        66,
+        68
+      ],
+      "summary": "Defines the nopTransporterWithActiveTime test or adapter abstraction and its associated state and methods.",
+      "tags": [
+        "go",
+        "type-definition",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/zap_raft.go:NewRaftLogger",
+      "type": "function",
+      "name": "NewRaftLogger",
+      "filePath": "etcdserver/zap_raft.go",
+      "lineRange": [
+        27,
+        36
+      ],
+      "summary": "Implements NewRaftLogger behavior in this component.",
+      "tags": [
+        "raft",
+        "logging",
+        "zap"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/zap_raft.go:NewRaftLoggerZap",
+      "type": "function",
+      "name": "NewRaftLoggerZap",
+      "filePath": "etcdserver/zap_raft.go",
+      "lineRange": [
+        39,
+        42
+      ],
+      "summary": "Implements NewRaftLoggerZap behavior in this component.",
+      "tags": [
+        "raft",
+        "logging",
+        "zap"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/zap_raft.go:NewRaftLoggerFromZapCore",
+      "type": "function",
+      "name": "NewRaftLoggerFromZapCore",
+      "filePath": "etcdserver/zap_raft.go",
+      "lineRange": [
+        46,
+        50
+      ],
+      "summary": "Implements NewRaftLoggerFromZapCore behavior in this component.",
+      "tags": [
+        "raft",
+        "logging",
+        "zap"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/zap_raft.go:Debug",
+      "type": "function",
+      "name": "Debug",
+      "filePath": "etcdserver/zap_raft.go",
+      "lineRange": [
+        57,
+        59
+      ],
+      "summary": "Implements Debug behavior in this component.",
+      "tags": [
+        "raft",
+        "logging",
+        "zap"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/zap_raft.go:Debugf",
+      "type": "function",
+      "name": "Debugf",
+      "filePath": "etcdserver/zap_raft.go",
+      "lineRange": [
+        61,
+        63
+      ],
+      "summary": "Implements Debugf behavior in this component.",
+      "tags": [
+        "raft",
+        "logging",
+        "zap"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/zap_raft.go:Error",
+      "type": "function",
+      "name": "Error",
+      "filePath": "etcdserver/zap_raft.go",
+      "lineRange": [
+        65,
+        67
+      ],
+      "summary": "Implements Error behavior in this component.",
+      "tags": [
+        "raft",
+        "logging",
+        "zap"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/zap_raft.go:Errorf",
+      "type": "function",
+      "name": "Errorf",
+      "filePath": "etcdserver/zap_raft.go",
+      "lineRange": [
+        69,
+        71
+      ],
+      "summary": "Implements Errorf behavior in this component.",
+      "tags": [
+        "raft",
+        "logging",
+        "zap"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/zap_raft.go:Info",
+      "type": "function",
+      "name": "Info",
+      "filePath": "etcdserver/zap_raft.go",
+      "lineRange": [
+        73,
+        75
+      ],
+      "summary": "Implements Info behavior in this component.",
+      "tags": [
+        "raft",
+        "logging",
+        "zap"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/zap_raft.go:Infof",
+      "type": "function",
+      "name": "Infof",
+      "filePath": "etcdserver/zap_raft.go",
+      "lineRange": [
+        77,
+        79
+      ],
+      "summary": "Implements Infof behavior in this component.",
+      "tags": [
+        "raft",
+        "logging",
+        "zap"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/zap_raft.go:Warning",
+      "type": "function",
+      "name": "Warning",
+      "filePath": "etcdserver/zap_raft.go",
+      "lineRange": [
+        81,
+        83
+      ],
+      "summary": "Implements Warning behavior in this component.",
+      "tags": [
+        "raft",
+        "logging",
+        "zap"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/zap_raft.go:Warningf",
+      "type": "function",
+      "name": "Warningf",
+      "filePath": "etcdserver/zap_raft.go",
+      "lineRange": [
+        85,
+        87
+      ],
+      "summary": "Implements Warningf behavior in this component.",
+      "tags": [
+        "raft",
+        "logging",
+        "zap"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/zap_raft.go:Fatal",
+      "type": "function",
+      "name": "Fatal",
+      "filePath": "etcdserver/zap_raft.go",
+      "lineRange": [
+        89,
+        91
+      ],
+      "summary": "Implements Fatal behavior in this component.",
+      "tags": [
+        "raft",
+        "logging",
+        "zap"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/zap_raft.go:Fatalf",
+      "type": "function",
+      "name": "Fatalf",
+      "filePath": "etcdserver/zap_raft.go",
+      "lineRange": [
+        93,
+        95
+      ],
+      "summary": "Implements Fatalf behavior in this component.",
+      "tags": [
+        "raft",
+        "logging",
+        "zap"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/zap_raft.go:Panic",
+      "type": "function",
+      "name": "Panic",
+      "filePath": "etcdserver/zap_raft.go",
+      "lineRange": [
+        97,
+        99
+      ],
+      "summary": "Implements Panic behavior in this component.",
+      "tags": [
+        "raft",
+        "logging",
+        "zap"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/zap_raft.go:Panicf",
+      "type": "function",
+      "name": "Panicf",
+      "filePath": "etcdserver/zap_raft.go",
+      "lineRange": [
+        101,
+        103
+      ],
+      "summary": "Implements Panicf behavior in this component.",
+      "tags": [
+        "raft",
+        "logging",
+        "zap"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:etcdserver/zap_raft.go:zapRaftLogger",
+      "type": "class",
+      "name": "zapRaftLogger",
+      "filePath": "etcdserver/zap_raft.go",
+      "lineRange": [
+        52,
+        55
+      ],
+      "summary": "Defines the zapRaftLogger test or adapter abstraction and its associated state and methods.",
+      "tags": [
+        "go",
+        "type-definition",
+        "server"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:etcdserver/tracing.go",
+      "target": "function:etcdserver/tracing.go:firstOpKey",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/tracing.go",
+      "target": "function:etcdserver/tracing.go:firstOpType",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "function:etcdserver/util.go:exceedsRequestLimit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "function:etcdserver/util.go:longestConnected",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "function:etcdserver/util_test.go:TestLongestConnected",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "function:etcdserver/util_test.go:TestLongestConnected",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "function:etcdserver/util_test.go:Start",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "function:etcdserver/util_test.go:Start",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "function:etcdserver/util_test.go:Handler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "function:etcdserver/util_test.go:Handler",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "function:etcdserver/util_test.go:Send",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "function:etcdserver/util_test.go:Send",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "function:etcdserver/util_test.go:SendSnapshot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "function:etcdserver/util_test.go:SendSnapshot",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "function:etcdserver/util_test.go:AddRemote",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "function:etcdserver/util_test.go:AddRemote",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "function:etcdserver/util_test.go:AddPeer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "function:etcdserver/util_test.go:AddPeer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "function:etcdserver/util_test.go:RemovePeer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "function:etcdserver/util_test.go:RemovePeer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "function:etcdserver/util_test.go:RemoveAllPeers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "function:etcdserver/util_test.go:RemoveAllPeers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "function:etcdserver/util_test.go:UpdatePeer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "function:etcdserver/util_test.go:UpdatePeer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "function:etcdserver/util_test.go:ActiveSince",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "function:etcdserver/util_test.go:ActiveSince",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "function:etcdserver/util_test.go:ActivePeers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "function:etcdserver/util_test.go:ActivePeers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "function:etcdserver/util_test.go:Stop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "function:etcdserver/util_test.go:Stop",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "function:etcdserver/util_test.go:Pause",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "function:etcdserver/util_test.go:Pause",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "function:etcdserver/util_test.go:Resume",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "function:etcdserver/util_test.go:Resume",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "function:etcdserver/util_test.go:TestExceedsRequestLimit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "function:etcdserver/util_test.go:TestExceedsRequestLimit",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "class:etcdserver/util_test.go:nopTransporterWithActiveTime",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/zap_raft.go",
+      "target": "function:etcdserver/zap_raft.go:NewRaftLogger",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/zap_raft.go",
+      "target": "function:etcdserver/zap_raft.go:NewRaftLogger",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/zap_raft.go",
+      "target": "function:etcdserver/zap_raft.go:NewRaftLoggerZap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/zap_raft.go",
+      "target": "function:etcdserver/zap_raft.go:NewRaftLoggerZap",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/zap_raft.go",
+      "target": "function:etcdserver/zap_raft.go:NewRaftLoggerFromZapCore",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/zap_raft.go",
+      "target": "function:etcdserver/zap_raft.go:NewRaftLoggerFromZapCore",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/zap_raft.go",
+      "target": "function:etcdserver/zap_raft.go:Debug",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/zap_raft.go",
+      "target": "function:etcdserver/zap_raft.go:Debug",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/zap_raft.go",
+      "target": "function:etcdserver/zap_raft.go:Debugf",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/zap_raft.go",
+      "target": "function:etcdserver/zap_raft.go:Debugf",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/zap_raft.go",
+      "target": "function:etcdserver/zap_raft.go:Error",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/zap_raft.go",
+      "target": "function:etcdserver/zap_raft.go:Error",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/zap_raft.go",
+      "target": "function:etcdserver/zap_raft.go:Errorf",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/zap_raft.go",
+      "target": "function:etcdserver/zap_raft.go:Errorf",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/zap_raft.go",
+      "target": "function:etcdserver/zap_raft.go:Info",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/zap_raft.go",
+      "target": "function:etcdserver/zap_raft.go:Info",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/zap_raft.go",
+      "target": "function:etcdserver/zap_raft.go:Infof",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/zap_raft.go",
+      "target": "function:etcdserver/zap_raft.go:Infof",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/zap_raft.go",
+      "target": "function:etcdserver/zap_raft.go:Warning",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/zap_raft.go",
+      "target": "function:etcdserver/zap_raft.go:Warning",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/zap_raft.go",
+      "target": "function:etcdserver/zap_raft.go:Warningf",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/zap_raft.go",
+      "target": "function:etcdserver/zap_raft.go:Warningf",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/zap_raft.go",
+      "target": "function:etcdserver/zap_raft.go:Fatal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/zap_raft.go",
+      "target": "function:etcdserver/zap_raft.go:Fatal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/zap_raft.go",
+      "target": "function:etcdserver/zap_raft.go:Fatalf",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/zap_raft.go",
+      "target": "function:etcdserver/zap_raft.go:Fatalf",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/zap_raft.go",
+      "target": "function:etcdserver/zap_raft.go:Panic",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/zap_raft.go",
+      "target": "function:etcdserver/zap_raft.go:Panic",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/zap_raft.go",
+      "target": "function:etcdserver/zap_raft.go:Panicf",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/zap_raft.go",
+      "target": "function:etcdserver/zap_raft.go:Panicf",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/zap_raft.go",
+      "target": "class:etcdserver/zap_raft.go:zapRaftLogger",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/membership/cluster.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/membership/cluster_opts.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/membership/cluster_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/membership/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/membership/errors.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/membership/member.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/membership/member_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/membership/membership_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/membership/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/membership/store.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/membership/storev2.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/membership/storev2_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/rafthttp/coder.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/rafthttp/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/rafthttp/fake_roundtripper_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/rafthttp/functional_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/rafthttp/http.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/rafthttp/http_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/rafthttp/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/rafthttp/msg_codec.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/rafthttp/msg_codec_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/rafthttp/msgappv2_codec.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/rafthttp/msgappv2_codec_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/rafthttp/peer.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/rafthttp/peer_status.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/rafthttp/peer_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/rafthttp/pipeline.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/rafthttp/pipeline_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/rafthttp/probing_status.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/rafthttp/remote.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/rafthttp/snapshot_sender.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/rafthttp/snapshot_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/rafthttp/stream.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/rafthttp/stream_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/rafthttp/transport.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/rafthttp/transport_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/rafthttp/transport_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/rafthttp/urlpick.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/rafthttp/urlpick_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/rafthttp/util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/api/rafthttp/util_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/membership/cluster.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/membership/cluster_opts.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/membership/cluster_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/membership/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/membership/errors.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/membership/member.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/membership/member_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/membership/membership_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/membership/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/membership/store.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/membership/storev2.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/membership/storev2_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/rafthttp/coder.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/rafthttp/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/rafthttp/fake_roundtripper_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/rafthttp/functional_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/rafthttp/http.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/rafthttp/http_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/rafthttp/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/rafthttp/msg_codec.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/rafthttp/msg_codec_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/rafthttp/msgappv2_codec.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/rafthttp/msgappv2_codec_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/rafthttp/peer.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/rafthttp/peer_status.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/rafthttp/peer_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/rafthttp/pipeline.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/rafthttp/pipeline_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/rafthttp/probing_status.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/rafthttp/remote.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/rafthttp/snapshot_sender.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/rafthttp/snapshot_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/rafthttp/stream.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/rafthttp/stream_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/rafthttp/transport.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/rafthttp/transport_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/rafthttp/transport_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/rafthttp/urlpick.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/rafthttp/urlpick_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/rafthttp/util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/rafthttp/util_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/snap/db.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/snap/db_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/snap/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/snap/message.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/snap/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/snap/snapshotter.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/util_test.go",
+      "target": "file:etcdserver/api/snap/snapshotter_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:etcdserver/util_test.go:TestLongestConnected",
+      "target": "function:etcdserver/zap_raft.go:Fatal",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/util_test.go:TestLongestConnected",
+      "target": "function:etcdserver/zap_raft.go:Fatal",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/util_test.go:TestLongestConnected",
+      "target": "function:etcdserver/util.go:longestConnected",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/util_test.go:TestLongestConnected",
+      "target": "function:etcdserver/zap_raft.go:Fatalf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/util_test.go:TestLongestConnected",
+      "target": "function:etcdserver/zap_raft.go:Fatalf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/util_test.go:TestLongestConnected",
+      "target": "function:etcdserver/util.go:longestConnected",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/util_test.go:TestLongestConnected",
+      "target": "function:etcdserver/zap_raft.go:Fatalf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/util_test.go:TestExceedsRequestLimit",
+      "target": "function:etcdserver/util.go:exceedsRequestLimit",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/util.go",
+      "target": "file:etcdserver/util_test.go",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:etcdserver/zap_raft.go",
+      "target": "file:etcdserver/zap_raft_test.go",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}
+

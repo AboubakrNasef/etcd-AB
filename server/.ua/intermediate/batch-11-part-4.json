@@ -1,0 +1,2887 @@
+{
+  "nodes": [
+    {
+      "id": "file:storage/wal/version.go",
+      "type": "file",
+      "name": "version.go",
+      "filePath": "storage/wal/version.go",
+      "summary": "Defines WAL format versions and compatibility checks used when opening, validating, and upgrading WAL files.",
+      "tags": [
+        "wal",
+        "storage",
+        "persistence",
+        "serialization"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/wal/version.go:ReadWALVersion",
+      "type": "function",
+      "name": "ReadWALVersion",
+      "filePath": "storage/wal/version.go",
+      "lineRange": [
+        39,
+        45
+      ],
+      "summary": "Implements ReadWALVersion, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/version.go:MinimalEtcdVersion",
+      "type": "function",
+      "name": "MinimalEtcdVersion",
+      "filePath": "storage/wal/version.go",
+      "lineRange": [
+        52,
+        54
+      ],
+      "summary": "Implements MinimalEtcdVersion, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/version.go:VisitFileDescriptor",
+      "type": "function",
+      "name": "VisitFileDescriptor",
+      "filePath": "storage/wal/version.go",
+      "lineRange": [
+        78,
+        94
+      ],
+      "summary": "Implements VisitFileDescriptor, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/version.go:visitEntryData",
+      "type": "function",
+      "name": "visitEntryData",
+      "filePath": "storage/wal/version.go",
+      "lineRange": [
+        104,
+        143
+      ],
+      "summary": "Implements visitEntryData, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/version.go:visitMessageDescriptor",
+      "type": "function",
+      "name": "visitMessageDescriptor",
+      "filePath": "storage/wal/version.go",
+      "lineRange": [
+        145,
+        167
+      ],
+      "summary": "Implements visitMessageDescriptor, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/version.go:visitMessage",
+      "type": "function",
+      "name": "visitMessage",
+      "filePath": "storage/wal/version.go",
+      "lineRange": [
+        169,
+        191
+      ],
+      "summary": "Implements visitMessage, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/version.go:visitEnumDescriptor",
+      "type": "function",
+      "name": "visitEnumDescriptor",
+      "filePath": "storage/wal/version.go",
+      "lineRange": [
+        193,
+        207
+      ],
+      "summary": "Implements visitEnumDescriptor, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/version.go:visitEnumNumber",
+      "type": "function",
+      "name": "visitEnumNumber",
+      "filePath": "storage/wal/version.go",
+      "lineRange": [
+        209,
+        220
+      ],
+      "summary": "Implements visitEnumNumber, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/version.go:visitEnumValue",
+      "type": "function",
+      "name": "visitEnumValue",
+      "filePath": "storage/wal/version.go",
+      "lineRange": [
+        222,
+        232
+      ],
+      "summary": "Implements visitEnumValue, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/version.go:visitDescriptor",
+      "type": "function",
+      "name": "visitDescriptor",
+      "filePath": "storage/wal/version.go",
+      "lineRange": [
+        234,
+        244
+      ],
+      "summary": "Implements visitDescriptor, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/version.go:etcdVersionFromOptionsString",
+      "type": "function",
+      "name": "etcdVersionFromOptionsString",
+      "filePath": "storage/wal/version.go",
+      "lineRange": [
+        253,
+        280
+      ],
+      "summary": "Implements etcdVersionFromOptionsString, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:storage/wal/version_test.go",
+      "type": "file",
+      "name": "version_test.go",
+      "filePath": "storage/wal/version_test.go",
+      "summary": "Tests WAL format-version constants, compatibility behavior, and version validation.",
+      "tags": [
+        "wal",
+        "storage",
+        "persistence",
+        "serialization"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/wal/version_test.go:TestEtcdVersionFromEntry",
+      "type": "function",
+      "name": "TestEtcdVersionFromEntry",
+      "filePath": "storage/wal/version_test.go",
+      "lineRange": [
+        34,
+        117
+      ],
+      "summary": "Implements TestEtcdVersionFromEntry, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/wal/version_test.go:TestEtcdVersionFromMessage",
+      "type": "function",
+      "name": "TestEtcdVersionFromMessage",
+      "filePath": "storage/wal/version_test.go",
+      "lineRange": [
+        119,
+        187
+      ],
+      "summary": "Implements TestEtcdVersionFromMessage, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/wal/version_test.go:TestEtcdVersionFromFieldOptionsString",
+      "type": "function",
+      "name": "TestEtcdVersionFromFieldOptionsString",
+      "filePath": "storage/wal/version_test.go",
+      "lineRange": [
+        189,
+        263
+      ],
+      "summary": "Implements TestEtcdVersionFromFieldOptionsString, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/wal/version_test.go:TestMaxVersion",
+      "type": "function",
+      "name": "TestMaxVersion",
+      "filePath": "storage/wal/version_test.go",
+      "lineRange": [
+        265,
+        301
+      ],
+      "summary": "Implements TestMaxVersion, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:storage/wal/wal.go",
+      "type": "file",
+      "name": "wal.go",
+      "filePath": "storage/wal/wal.go",
+      "summary": "Implements the WAL lifecycle: create/open, append metadata and raft entries, rotate files, sync, read, recover, and close.",
+      "tags": [
+        "wal",
+        "storage",
+        "persistence",
+        "serialization"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:storage/wal/wal.go:WAL",
+      "type": "class",
+      "name": "WAL",
+      "filePath": "storage/wal/wal.go",
+      "lineRange": [
+        73,
+        96
+      ],
+      "summary": "Defines the WAL data structure used by this package, with methods for its core storage or protocol behavior.",
+      "tags": [
+        "data-model",
+        "serialization",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal.go:Create",
+      "type": "function",
+      "name": "Create",
+      "filePath": "storage/wal/wal.go",
+      "lineRange": [
+        101,
+        236
+      ],
+      "summary": "Implements Create, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/wal/wal.go:createNewWALFile",
+      "type": "function",
+      "name": "createNewWALFile",
+      "filePath": "storage/wal/wal.go",
+      "lineRange": [
+        242,
+        261
+      ],
+      "summary": "Implements createNewWALFile, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal.go:Reopen",
+      "type": "function",
+      "name": "Reopen",
+      "filePath": "storage/wal/wal.go",
+      "lineRange": [
+        263,
+        269
+      ],
+      "summary": "Implements Reopen, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal.go:SetUnsafeNoFsync",
+      "type": "function",
+      "name": "SetUnsafeNoFsync",
+      "filePath": "storage/wal/wal.go",
+      "lineRange": [
+        271,
+        273
+      ],
+      "summary": "Implements SetUnsafeNoFsync, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal.go:cleanupWAL",
+      "type": "function",
+      "name": "cleanupWAL",
+      "filePath": "storage/wal/wal.go",
+      "lineRange": [
+        275,
+        289
+      ],
+      "summary": "Implements cleanupWAL, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal.go:renameWAL",
+      "type": "function",
+      "name": "renameWAL",
+      "filePath": "storage/wal/wal.go",
+      "lineRange": [
+        291,
+        312
+      ],
+      "summary": "Implements renameWAL, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal.go:renameWALUnlock",
+      "type": "function",
+      "name": "renameWALUnlock",
+      "filePath": "storage/wal/wal.go",
+      "lineRange": [
+        314,
+        338
+      ],
+      "summary": "Implements renameWALUnlock, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal.go:Open",
+      "type": "function",
+      "name": "Open",
+      "filePath": "storage/wal/wal.go",
+      "lineRange": [
+        346,
+        355
+      ],
+      "summary": "Implements Open, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal.go:OpenForRead",
+      "type": "function",
+      "name": "OpenForRead",
+      "filePath": "storage/wal/wal.go",
+      "lineRange": [
+        359,
+        361
+      ],
+      "summary": "Implements OpenForRead, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal.go:openAtIndex",
+      "type": "function",
+      "name": "openAtIndex",
+      "filePath": "storage/wal/wal.go",
+      "lineRange": [
+        363,
+        400
+      ],
+      "summary": "Implements openAtIndex, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal.go:selectWALFiles",
+      "type": "function",
+      "name": "selectWALFiles",
+      "filePath": "storage/wal/wal.go",
+      "lineRange": [
+        402,
+        418
+      ],
+      "summary": "Implements selectWALFiles, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal.go:openWALFiles",
+      "type": "function",
+      "name": "openWALFiles",
+      "filePath": "storage/wal/wal.go",
+      "lineRange": [
+        420,
+        453
+      ],
+      "summary": "Implements openWALFiles, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal.go:ReadAll",
+      "type": "function",
+      "name": "ReadAll",
+      "filePath": "storage/wal/wal.go",
+      "lineRange": [
+        472,
+        595
+      ],
+      "summary": "Implements ReadAll, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/wal/wal.go:LatestSnapshotEntry",
+      "type": "function",
+      "name": "LatestSnapshotEntry",
+      "filePath": "storage/wal/wal.go",
+      "lineRange": [
+        597,
+        604
+      ],
+      "summary": "Implements LatestSnapshotEntry, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal.go:ValidSnapshotEntries",
+      "type": "function",
+      "name": "ValidSnapshotEntries",
+      "filePath": "storage/wal/wal.go",
+      "lineRange": [
+        608,
+        633
+      ],
+      "summary": "Implements ValidSnapshotEntries, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal.go:validSnapshotEntries",
+      "type": "function",
+      "name": "validSnapshotEntries",
+      "filePath": "storage/wal/wal.go",
+      "lineRange": [
+        635,
+        695
+      ],
+      "summary": "Implements validSnapshotEntries, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/wal/wal.go:Verify",
+      "type": "function",
+      "name": "Verify",
+      "filePath": "storage/wal/wal.go",
+      "lineRange": [
+        704,
+        780
+      ],
+      "summary": "Implements Verify, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/wal/wal.go:cut",
+      "type": "function",
+      "name": "cut",
+      "filePath": "storage/wal/wal.go",
+      "lineRange": [
+        785,
+        867
+      ],
+      "summary": "Implements cut, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/wal/wal.go:sync",
+      "type": "function",
+      "name": "sync",
+      "filePath": "storage/wal/wal.go",
+      "lineRange": [
+        869,
+        894
+      ],
+      "summary": "Implements sync, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal.go:Sync",
+      "type": "function",
+      "name": "Sync",
+      "filePath": "storage/wal/wal.go",
+      "lineRange": [
+        896,
+        898
+      ],
+      "summary": "Implements Sync, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal.go:ReleaseLockTo",
+      "type": "function",
+      "name": "ReleaseLockTo",
+      "filePath": "storage/wal/wal.go",
+      "lineRange": [
+        904,
+        945
+      ],
+      "summary": "Implements ReleaseLockTo, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/wal/wal.go:Close",
+      "type": "function",
+      "name": "Close",
+      "filePath": "storage/wal/wal.go",
+      "lineRange": [
+        948,
+        972
+      ],
+      "summary": "Implements Close, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal.go:saveEntry",
+      "type": "function",
+      "name": "saveEntry",
+      "filePath": "storage/wal/wal.go",
+      "lineRange": [
+        974,
+        983
+      ],
+      "summary": "Implements saveEntry, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal.go:Save",
+      "type": "function",
+      "name": "Save",
+      "filePath": "storage/wal/wal.go",
+      "lineRange": [
+        995,
+        1037
+      ],
+      "summary": "Implements Save, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/wal/wal.go:SaveSnapshot",
+      "type": "function",
+      "name": "SaveSnapshot",
+      "filePath": "storage/wal/wal.go",
+      "lineRange": [
+        1039,
+        1061
+      ],
+      "summary": "Implements SaveSnapshot, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal.go:seq",
+      "type": "function",
+      "name": "seq",
+      "filePath": "storage/wal/wal.go",
+      "lineRange": [
+        1074,
+        1084
+      ],
+      "summary": "Implements seq, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal.go:closeAll",
+      "type": "function",
+      "name": "closeAll",
+      "filePath": "storage/wal/wal.go",
+      "lineRange": [
+        1086,
+        1098
+      ],
+      "summary": "Implements closeAll, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:storage/wal/wal_bench_test.go",
+      "type": "file",
+      "name": "wal_bench_test.go",
+      "filePath": "storage/wal/wal_bench_test.go",
+      "summary": "Benchmarks WAL append and encoding performance for representative raft records.",
+      "tags": [
+        "wal",
+        "storage",
+        "persistence",
+        "serialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal_bench_test.go:BenchmarkWrite100EntryWithoutBatch",
+      "type": "function",
+      "name": "BenchmarkWrite100EntryWithoutBatch",
+      "filePath": "storage/wal/wal_bench_test.go",
+      "lineRange": [
+        27,
+        27
+      ],
+      "summary": "Implements BenchmarkWrite100EntryWithoutBatch, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal_bench_test.go:BenchmarkWrite100EntryBatch10",
+      "type": "function",
+      "name": "BenchmarkWrite100EntryBatch10",
+      "filePath": "storage/wal/wal_bench_test.go",
+      "lineRange": [
+        28,
+        28
+      ],
+      "summary": "Implements BenchmarkWrite100EntryBatch10, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal_bench_test.go:BenchmarkWrite100EntryBatch100",
+      "type": "function",
+      "name": "BenchmarkWrite100EntryBatch100",
+      "filePath": "storage/wal/wal_bench_test.go",
+      "lineRange": [
+        29,
+        29
+      ],
+      "summary": "Implements BenchmarkWrite100EntryBatch100, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal_bench_test.go:BenchmarkWrite100EntryBatch500",
+      "type": "function",
+      "name": "BenchmarkWrite100EntryBatch500",
+      "filePath": "storage/wal/wal_bench_test.go",
+      "lineRange": [
+        30,
+        30
+      ],
+      "summary": "Implements BenchmarkWrite100EntryBatch500, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal_bench_test.go:BenchmarkWrite100EntryBatch1000",
+      "type": "function",
+      "name": "BenchmarkWrite100EntryBatch1000",
+      "filePath": "storage/wal/wal_bench_test.go",
+      "lineRange": [
+        31,
+        31
+      ],
+      "summary": "Implements BenchmarkWrite100EntryBatch1000, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal_bench_test.go:BenchmarkWrite1000EntryWithoutBatch",
+      "type": "function",
+      "name": "BenchmarkWrite1000EntryWithoutBatch",
+      "filePath": "storage/wal/wal_bench_test.go",
+      "lineRange": [
+        33,
+        33
+      ],
+      "summary": "Implements BenchmarkWrite1000EntryWithoutBatch, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal_bench_test.go:BenchmarkWrite1000EntryBatch10",
+      "type": "function",
+      "name": "BenchmarkWrite1000EntryBatch10",
+      "filePath": "storage/wal/wal_bench_test.go",
+      "lineRange": [
+        34,
+        34
+      ],
+      "summary": "Implements BenchmarkWrite1000EntryBatch10, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal_bench_test.go:BenchmarkWrite1000EntryBatch100",
+      "type": "function",
+      "name": "BenchmarkWrite1000EntryBatch100",
+      "filePath": "storage/wal/wal_bench_test.go",
+      "lineRange": [
+        35,
+        35
+      ],
+      "summary": "Implements BenchmarkWrite1000EntryBatch100, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal_bench_test.go:BenchmarkWrite1000EntryBatch500",
+      "type": "function",
+      "name": "BenchmarkWrite1000EntryBatch500",
+      "filePath": "storage/wal/wal_bench_test.go",
+      "lineRange": [
+        36,
+        36
+      ],
+      "summary": "Implements BenchmarkWrite1000EntryBatch500, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal_bench_test.go:BenchmarkWrite1000EntryBatch1000",
+      "type": "function",
+      "name": "BenchmarkWrite1000EntryBatch1000",
+      "filePath": "storage/wal/wal_bench_test.go",
+      "lineRange": [
+        37,
+        37
+      ],
+      "summary": "Implements BenchmarkWrite1000EntryBatch1000, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal_bench_test.go:benchmarkWriteEntry",
+      "type": "function",
+      "name": "benchmarkWriteEntry",
+      "filePath": "storage/wal/wal_bench_test.go",
+      "lineRange": [
+        39,
+        64
+      ],
+      "summary": "Implements benchmarkWriteEntry, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:storage/wal/wal_test.go",
+      "type": "file",
+      "name": "wal_test.go",
+      "filePath": "storage/wal/wal_test.go",
+      "summary": "Exercises WAL creation, append, rotation, recovery, corruption handling, snapshot metadata, and read semantics.",
+      "tags": [
+        "wal",
+        "storage",
+        "persistence",
+        "serialization"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/wal/wal_test.go:TestNew",
+      "type": "function",
+      "name": "TestNew",
+      "filePath": "storage/wal/wal_test.go",
+      "lineRange": [
+        49,
+        102
+      ],
+      "summary": "Implements TestNew, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/wal/wal_test.go:TestCreateNewWALFile",
+      "type": "function",
+      "name": "TestCreateNewWALFile",
+      "filePath": "storage/wal/wal_test.go",
+      "lineRange": [
+        104,
+        171
+      ],
+      "summary": "Implements TestCreateNewWALFile, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/wal/wal_test.go:TestCreateFailFromPollutedDir",
+      "type": "function",
+      "name": "TestCreateFailFromPollutedDir",
+      "filePath": "storage/wal/wal_test.go",
+      "lineRange": [
+        173,
+        179
+      ],
+      "summary": "Implements TestCreateFailFromPollutedDir, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal_test.go:TestWalCleanup",
+      "type": "function",
+      "name": "TestWalCleanup",
+      "filePath": "storage/wal/wal_test.go",
+      "lineRange": [
+        181,
+        200
+      ],
+      "summary": "Implements TestWalCleanup, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal_test.go:TestCreateFailFromNoSpaceLeft",
+      "type": "function",
+      "name": "TestCreateFailFromNoSpaceLeft",
+      "filePath": "storage/wal/wal_test.go",
+      "lineRange": [
+        202,
+        213
+      ],
+      "summary": "Implements TestCreateFailFromNoSpaceLeft, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal_test.go:TestNewForInitedDir",
+      "type": "function",
+      "name": "TestNewForInitedDir",
+      "filePath": "storage/wal/wal_test.go",
+      "lineRange": [
+        215,
+        222
+      ],
+      "summary": "Implements TestNewForInitedDir, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal_test.go:TestOpenAtIndex",
+      "type": "function",
+      "name": "TestOpenAtIndex",
+      "filePath": "storage/wal/wal_test.go",
+      "lineRange": [
+        224,
+        264
+      ],
+      "summary": "Implements TestOpenAtIndex, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/wal/wal_test.go:TestVerify",
+      "type": "function",
+      "name": "TestVerify",
+      "filePath": "storage/wal/wal_test.go",
+      "lineRange": [
+        269,
+        318
+      ],
+      "summary": "Implements TestVerify, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/wal/wal_test.go:TestCut",
+      "type": "function",
+      "name": "TestCut",
+      "filePath": "storage/wal/wal_test.go",
+      "lineRange": [
+        322,
+        378
+      ],
+      "summary": "Implements TestCut, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/wal/wal_test.go:TestSaveWithCut",
+      "type": "function",
+      "name": "TestSaveWithCut",
+      "filePath": "storage/wal/wal_test.go",
+      "lineRange": [
+        380,
+        435
+      ],
+      "summary": "Implements TestSaveWithCut, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/wal/wal_test.go:TestRecover",
+      "type": "function",
+      "name": "TestRecover",
+      "filePath": "storage/wal/wal_test.go",
+      "lineRange": [
+        437,
+        515
+      ],
+      "summary": "Implements TestRecover, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/wal/wal_test.go:TestSearchIndex",
+      "type": "function",
+      "name": "TestSearchIndex",
+      "filePath": "storage/wal/wal_test.go",
+      "lineRange": [
+        517,
+        558
+      ],
+      "summary": "Implements TestSearchIndex, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/wal/wal_test.go:TestScanWalName",
+      "type": "function",
+      "name": "TestScanWalName",
+      "filePath": "storage/wal/wal_test.go",
+      "lineRange": [
+        560,
+        582
+      ],
+      "summary": "Implements TestScanWalName, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal_test.go:TestRecoverAfterCut",
+      "type": "function",
+      "name": "TestRecoverAfterCut",
+      "filePath": "storage/wal/wal_test.go",
+      "lineRange": [
+        584,
+        636
+      ],
+      "summary": "Implements TestRecoverAfterCut, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/wal/wal_test.go:TestOpenAtUncommittedIndex",
+      "type": "function",
+      "name": "TestOpenAtUncommittedIndex",
+      "filePath": "storage/wal/wal_test.go",
+      "lineRange": [
+        638,
+        662
+      ],
+      "summary": "Implements TestOpenAtUncommittedIndex, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal_test.go:TestOpenForRead",
+      "type": "function",
+      "name": "TestOpenForRead",
+      "filePath": "storage/wal/wal_test.go",
+      "lineRange": [
+        668,
+        701
+      ],
+      "summary": "Implements TestOpenForRead, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal_test.go:TestOpenWithMaxIndex",
+      "type": "function",
+      "name": "TestOpenWithMaxIndex",
+      "filePath": "storage/wal/wal_test.go",
+      "lineRange": [
+        703,
+        731
+      ],
+      "summary": "Implements TestOpenWithMaxIndex, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal_test.go:TestSaveEmpty",
+      "type": "function",
+      "name": "TestSaveEmpty",
+      "filePath": "storage/wal/wal_test.go",
+      "lineRange": [
+        733,
+        745
+      ],
+      "summary": "Implements TestSaveEmpty, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal_test.go:TestReleaseLockTo",
+      "type": "function",
+      "name": "TestReleaseLockTo",
+      "filePath": "storage/wal/wal_test.go",
+      "lineRange": [
+        747,
+        812
+      ],
+      "summary": "Implements TestReleaseLockTo, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/wal/wal_test.go:TestTailWriteNoSlackSpace",
+      "type": "function",
+      "name": "TestTailWriteNoSlackSpace",
+      "filePath": "storage/wal/wal_test.go",
+      "lineRange": [
+        815,
+        872
+      ],
+      "summary": "Implements TestTailWriteNoSlackSpace, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/wal/wal_test.go:TestRestartCreateWal",
+      "type": "function",
+      "name": "TestRestartCreateWal",
+      "filePath": "storage/wal/wal_test.go",
+      "lineRange": [
+        875,
+        905
+      ],
+      "summary": "Implements TestRestartCreateWal, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal_test.go:TestOpenOnTornWrite",
+      "type": "function",
+      "name": "TestOpenOnTornWrite",
+      "filePath": "storage/wal/wal_test.go",
+      "lineRange": [
+        908,
+        989
+      ],
+      "summary": "Implements TestOpenOnTornWrite, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/wal/wal_test.go:TestRenameFail",
+      "type": "function",
+      "name": "TestRenameFail",
+      "filePath": "storage/wal/wal_test.go",
+      "lineRange": [
+        991,
+        1011
+      ],
+      "summary": "Implements TestRenameFail, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal_test.go:TestReadAllFail",
+      "type": "function",
+      "name": "TestReadAllFail",
+      "filePath": "storage/wal/wal_test.go",
+      "lineRange": [
+        1014,
+        1028
+      ],
+      "summary": "Implements TestReadAllFail, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/wal_test.go:TestValidSnapshotEntries",
+      "type": "function",
+      "name": "TestValidSnapshotEntries",
+      "filePath": "storage/wal/wal_test.go",
+      "lineRange": [
+        1032,
+        1076
+      ],
+      "summary": "Implements TestValidSnapshotEntries, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/wal/wal_test.go:TestValidSnapshotEntriesAfterPurgeWal",
+      "type": "function",
+      "name": "TestValidSnapshotEntriesAfterPurgeWal",
+      "filePath": "storage/wal/wal_test.go",
+      "lineRange": [
+        1080,
+        1128
+      ],
+      "summary": "Implements TestValidSnapshotEntriesAfterPurgeWal, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/wal/wal_test.go:TestValidSnapshotEntriesRetryOnTransientNotExist",
+      "type": "function",
+      "name": "TestValidSnapshotEntriesRetryOnTransientNotExist",
+      "filePath": "storage/wal/wal_test.go",
+      "lineRange": [
+        1130,
+        1175
+      ],
+      "summary": "Implements TestValidSnapshotEntriesRetryOnTransientNotExist, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:storage/wal/wal_test.go:TestLastRecordLengthExceedFileEnd",
+      "type": "function",
+      "name": "TestLastRecordLengthExceedFileEnd",
+      "filePath": "storage/wal/wal_test.go",
+      "lineRange": [
+        1177,
+        1251
+      ],
+      "summary": "Implements TestLastRecordLengthExceedFileEnd, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:storage/wal/walpb/record.go",
+      "type": "file",
+      "name": "record.go",
+      "filePath": "storage/wal/walpb/record.go",
+      "summary": "Adds validation and cloning helpers for protobuf WAL records and snapshot metadata before persistence.",
+      "tags": [
+        "wal",
+        "storage",
+        "persistence",
+        "serialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/walpb/record.go:Validate",
+      "type": "function",
+      "name": "Validate",
+      "filePath": "storage/wal/walpb/record.go",
+      "lineRange": [
+        26,
+        31
+      ],
+      "summary": "Implements Validate, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/walpb/record.go:Clone",
+      "type": "function",
+      "name": "Clone",
+      "filePath": "storage/wal/walpb/record.go",
+      "lineRange": [
+        34,
+        39
+      ],
+      "summary": "Implements Clone, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/wal/walpb/record.go:ValidateSnapshotForWrite",
+      "type": "function",
+      "name": "ValidateSnapshotForWrite",
+      "filePath": "storage/wal/walpb/record.go",
+      "lineRange": [
+        45,
+        57
+      ],
+      "summary": "Implements ValidateSnapshotForWrite, providing focused WAL persistence or recovery behavior.",
+      "tags": [
+        "utility",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:storage/wal/version.go",
+      "target": "function:storage/wal/version.go:ReadWALVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/version.go",
+      "target": "function:storage/wal/version.go:ReadWALVersion",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/version.go",
+      "target": "function:storage/wal/version.go:MinimalEtcdVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/version.go",
+      "target": "function:storage/wal/version.go:MinimalEtcdVersion",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/version.go",
+      "target": "function:storage/wal/version.go:VisitFileDescriptor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/version.go",
+      "target": "function:storage/wal/version.go:VisitFileDescriptor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/version.go",
+      "target": "function:storage/wal/version.go:visitEntryData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/version.go",
+      "target": "function:storage/wal/version.go:visitMessageDescriptor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/version.go",
+      "target": "function:storage/wal/version.go:visitMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/version.go",
+      "target": "function:storage/wal/version.go:visitEnumDescriptor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/version.go",
+      "target": "function:storage/wal/version.go:visitEnumNumber",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/version.go",
+      "target": "function:storage/wal/version.go:visitEnumValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/version.go",
+      "target": "function:storage/wal/version.go:visitDescriptor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/version.go",
+      "target": "function:storage/wal/version.go:etcdVersionFromOptionsString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/version_test.go",
+      "target": "function:storage/wal/version_test.go:TestEtcdVersionFromEntry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/version_test.go",
+      "target": "function:storage/wal/version_test.go:TestEtcdVersionFromEntry",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/version_test.go",
+      "target": "function:storage/wal/version_test.go:TestEtcdVersionFromMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/version_test.go",
+      "target": "function:storage/wal/version_test.go:TestEtcdVersionFromMessage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/version_test.go",
+      "target": "function:storage/wal/version_test.go:TestEtcdVersionFromFieldOptionsString",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/version_test.go",
+      "target": "function:storage/wal/version_test.go:TestEtcdVersionFromFieldOptionsString",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/version_test.go",
+      "target": "function:storage/wal/version_test.go:TestMaxVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/version_test.go",
+      "target": "function:storage/wal/version_test.go:TestMaxVersion",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "class:storage/wal/wal.go:WAL",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "class:storage/wal/wal.go:WAL",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:Create",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:Create",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:createNewWALFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:Reopen",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:Reopen",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:SetUnsafeNoFsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:SetUnsafeNoFsync",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:cleanupWAL",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:renameWAL",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:renameWALUnlock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:Open",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:Open",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:OpenForRead",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:OpenForRead",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:openAtIndex",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:selectWALFiles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:openWALFiles",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:ReadAll",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:ReadAll",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:LatestSnapshotEntry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:LatestSnapshotEntry",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:ValidSnapshotEntries",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:ValidSnapshotEntries",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:validSnapshotEntries",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:Verify",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:Verify",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:cut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:sync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:Sync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:Sync",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:ReleaseLockTo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:ReleaseLockTo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:Close",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:Close",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:saveEntry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:Save",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:Save",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:SaveSnapshot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:SaveSnapshot",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:seq",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "function:storage/wal/wal.go:closeAll",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_bench_test.go",
+      "target": "function:storage/wal/wal_bench_test.go:BenchmarkWrite100EntryWithoutBatch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_bench_test.go",
+      "target": "function:storage/wal/wal_bench_test.go:BenchmarkWrite100EntryWithoutBatch",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_bench_test.go",
+      "target": "function:storage/wal/wal_bench_test.go:BenchmarkWrite100EntryBatch10",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_bench_test.go",
+      "target": "function:storage/wal/wal_bench_test.go:BenchmarkWrite100EntryBatch10",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_bench_test.go",
+      "target": "function:storage/wal/wal_bench_test.go:BenchmarkWrite100EntryBatch100",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_bench_test.go",
+      "target": "function:storage/wal/wal_bench_test.go:BenchmarkWrite100EntryBatch100",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_bench_test.go",
+      "target": "function:storage/wal/wal_bench_test.go:BenchmarkWrite100EntryBatch500",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_bench_test.go",
+      "target": "function:storage/wal/wal_bench_test.go:BenchmarkWrite100EntryBatch500",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_bench_test.go",
+      "target": "function:storage/wal/wal_bench_test.go:BenchmarkWrite100EntryBatch1000",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_bench_test.go",
+      "target": "function:storage/wal/wal_bench_test.go:BenchmarkWrite100EntryBatch1000",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_bench_test.go",
+      "target": "function:storage/wal/wal_bench_test.go:BenchmarkWrite1000EntryWithoutBatch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_bench_test.go",
+      "target": "function:storage/wal/wal_bench_test.go:BenchmarkWrite1000EntryWithoutBatch",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_bench_test.go",
+      "target": "function:storage/wal/wal_bench_test.go:BenchmarkWrite1000EntryBatch10",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_bench_test.go",
+      "target": "function:storage/wal/wal_bench_test.go:BenchmarkWrite1000EntryBatch10",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_bench_test.go",
+      "target": "function:storage/wal/wal_bench_test.go:BenchmarkWrite1000EntryBatch100",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_bench_test.go",
+      "target": "function:storage/wal/wal_bench_test.go:BenchmarkWrite1000EntryBatch100",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_bench_test.go",
+      "target": "function:storage/wal/wal_bench_test.go:BenchmarkWrite1000EntryBatch500",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_bench_test.go",
+      "target": "function:storage/wal/wal_bench_test.go:BenchmarkWrite1000EntryBatch500",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_bench_test.go",
+      "target": "function:storage/wal/wal_bench_test.go:BenchmarkWrite1000EntryBatch1000",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_bench_test.go",
+      "target": "function:storage/wal/wal_bench_test.go:BenchmarkWrite1000EntryBatch1000",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_bench_test.go",
+      "target": "function:storage/wal/wal_bench_test.go:benchmarkWriteEntry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestNew",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestNew",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestCreateNewWALFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestCreateNewWALFile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestCreateFailFromPollutedDir",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestCreateFailFromPollutedDir",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestWalCleanup",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestWalCleanup",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestCreateFailFromNoSpaceLeft",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestCreateFailFromNoSpaceLeft",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestNewForInitedDir",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestNewForInitedDir",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestOpenAtIndex",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestOpenAtIndex",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestVerify",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestVerify",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestCut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestCut",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestSaveWithCut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestSaveWithCut",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestRecover",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestRecover",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestSearchIndex",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestSearchIndex",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestScanWalName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestScanWalName",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestRecoverAfterCut",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestRecoverAfterCut",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestOpenAtUncommittedIndex",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestOpenAtUncommittedIndex",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestOpenForRead",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestOpenForRead",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestOpenWithMaxIndex",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestOpenWithMaxIndex",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestSaveEmpty",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestSaveEmpty",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestReleaseLockTo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestReleaseLockTo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestTailWriteNoSlackSpace",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestTailWriteNoSlackSpace",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestRestartCreateWal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestRestartCreateWal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestOpenOnTornWrite",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestOpenOnTornWrite",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestRenameFail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestRenameFail",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestReadAllFail",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestReadAllFail",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestValidSnapshotEntries",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestValidSnapshotEntries",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestValidSnapshotEntriesAfterPurgeWal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestValidSnapshotEntriesAfterPurgeWal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestValidSnapshotEntriesRetryOnTransientNotExist",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestValidSnapshotEntriesRetryOnTransientNotExist",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestLastRecordLengthExceedFileEnd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "function:storage/wal/wal_test.go:TestLastRecordLengthExceedFileEnd",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/walpb/record.go",
+      "target": "function:storage/wal/walpb/record.go:Validate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/walpb/record.go",
+      "target": "function:storage/wal/walpb/record.go:Validate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/walpb/record.go",
+      "target": "function:storage/wal/walpb/record.go:Clone",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/walpb/record.go",
+      "target": "function:storage/wal/walpb/record.go:Clone",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/walpb/record.go",
+      "target": "function:storage/wal/walpb/record.go:ValidateSnapshotForWrite",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/wal/walpb/record.go",
+      "target": "function:storage/wal/walpb/record.go:ValidateSnapshotForWrite",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/version.go:VisitFileDescriptor",
+      "target": "function:storage/wal/version.go:visitMessageDescriptor",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/version.go:VisitFileDescriptor",
+      "target": "function:storage/wal/version.go:visitEnumDescriptor",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/version.go:visitEntryData",
+      "target": "function:storage/wal/version.go:visitMessage",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/version.go:visitMessageDescriptor",
+      "target": "function:storage/wal/version.go:visitDescriptor",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/version.go:visitMessageDescriptor",
+      "target": "function:storage/wal/version.go:visitDescriptor",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/version.go:visitMessageDescriptor",
+      "target": "function:storage/wal/version.go:visitEnumDescriptor",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/version.go:visitMessage",
+      "target": "function:storage/wal/version.go:visitDescriptor",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/version.go:visitMessage",
+      "target": "function:storage/wal/version.go:visitDescriptor",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/version.go:visitMessage",
+      "target": "function:storage/wal/version.go:visitEnumNumber",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/version.go:visitEnumDescriptor",
+      "target": "function:storage/wal/version.go:visitDescriptor",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/version.go:visitEnumDescriptor",
+      "target": "function:storage/wal/version.go:visitDescriptor",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/version.go:visitEnumNumber",
+      "target": "function:storage/wal/version.go:visitDescriptor",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/version.go:visitEnumNumber",
+      "target": "function:storage/wal/version.go:visitEnumValue",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/version.go:visitEnumValue",
+      "target": "function:storage/wal/version.go:etcdVersionFromOptionsString",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/version.go:visitDescriptor",
+      "target": "function:storage/wal/version.go:etcdVersionFromOptionsString",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "file:storage/wal/walpb/record.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "file:storage/wal/walpb/record.pb.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/wal/wal.go",
+      "target": "file:storage/wal/walpb/record_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:storage/wal/wal.go:Create",
+      "target": "function:storage/wal/wal.go:createNewWALFile",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/wal.go:Reopen",
+      "target": "function:storage/wal/wal.go:Open",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/wal.go:renameWALUnlock",
+      "target": "function:storage/wal/wal.go:Open",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/wal.go:Open",
+      "target": "function:storage/wal/wal.go:openAtIndex",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/wal.go:OpenForRead",
+      "target": "function:storage/wal/wal.go:openAtIndex",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/wal.go:openAtIndex",
+      "target": "function:storage/wal/wal.go:selectWALFiles",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/wal.go:openAtIndex",
+      "target": "function:storage/wal/wal.go:openWALFiles",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/wal.go:openWALFiles",
+      "target": "function:storage/wal/wal.go:closeAll",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/wal.go:openWALFiles",
+      "target": "function:storage/wal/wal.go:closeAll",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/wal.go:openWALFiles",
+      "target": "function:storage/wal/wal.go:closeAll",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/wal.go:LatestSnapshotEntry",
+      "target": "function:storage/wal/wal.go:ValidSnapshotEntries",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/wal.go:ValidSnapshotEntries",
+      "target": "function:storage/wal/wal.go:validSnapshotEntries",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/wal.go:Verify",
+      "target": "function:storage/wal/wal.go:selectWALFiles",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/wal.go:Verify",
+      "target": "function:storage/wal/wal.go:openWALFiles",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/wal_bench_test.go:BenchmarkWrite100EntryWithoutBatch",
+      "target": "function:storage/wal/wal_bench_test.go:benchmarkWriteEntry",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/wal_bench_test.go:BenchmarkWrite100EntryBatch10",
+      "target": "function:storage/wal/wal_bench_test.go:benchmarkWriteEntry",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/wal_bench_test.go:BenchmarkWrite100EntryBatch100",
+      "target": "function:storage/wal/wal_bench_test.go:benchmarkWriteEntry",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/wal_bench_test.go:BenchmarkWrite100EntryBatch500",
+      "target": "function:storage/wal/wal_bench_test.go:benchmarkWriteEntry",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/wal_bench_test.go:BenchmarkWrite100EntryBatch1000",
+      "target": "function:storage/wal/wal_bench_test.go:benchmarkWriteEntry",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/wal_bench_test.go:BenchmarkWrite1000EntryWithoutBatch",
+      "target": "function:storage/wal/wal_bench_test.go:benchmarkWriteEntry",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/wal_bench_test.go:BenchmarkWrite1000EntryBatch10",
+      "target": "function:storage/wal/wal_bench_test.go:benchmarkWriteEntry",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/wal_bench_test.go:BenchmarkWrite1000EntryBatch100",
+      "target": "function:storage/wal/wal_bench_test.go:benchmarkWriteEntry",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/wal_bench_test.go:BenchmarkWrite1000EntryBatch500",
+      "target": "function:storage/wal/wal_bench_test.go:benchmarkWriteEntry",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/wal/wal_bench_test.go:BenchmarkWrite1000EntryBatch1000",
+      "target": "function:storage/wal/wal_bench_test.go:benchmarkWriteEntry",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "file:storage/wal/walpb/record.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "file:storage/wal/walpb/record.pb.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/wal/wal_test.go",
+      "target": "file:storage/wal/walpb/record_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}
+

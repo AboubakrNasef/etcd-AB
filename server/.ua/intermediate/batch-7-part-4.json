@@ -1,0 +1,483 @@
+{
+  "nodes": [
+    {
+      "id": "file:etcdserver/api/membership/member.go",
+      "type": "file",
+      "name": "member.go",
+      "filePath": "etcdserver/api/membership/member.go",
+      "summary": "Defines cluster member identities and raft attributes, including learner construction, cloning, and sorting behavior.",
+      "tags": [
+        "membership",
+        "cluster-state",
+        "reconfiguration",
+        "validation"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go package analyzed with tree-sitter structure and call-graph extraction."
+    },
+    {
+      "id": "class:etcdserver/api/membership/member.go:RaftAttributes",
+      "type": "class",
+      "name": "RaftAttributes",
+      "filePath": "etcdserver/api/membership/member.go",
+      "lineRange": [
+        29,
+        35
+      ],
+      "summary": "Type RaftAttributes implements a focused part of etcdserver/api/membership/member behavior.",
+      "tags": [
+        "membership",
+        "cluster-state",
+        "reconfiguration",
+        "validation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/api/membership/member.go:Attributes",
+      "type": "class",
+      "name": "Attributes",
+      "filePath": "etcdserver/api/membership/member.go",
+      "lineRange": [
+        38,
+        41
+      ],
+      "summary": "Type Attributes implements a focused part of etcdserver/api/membership/member behavior.",
+      "tags": [
+        "membership",
+        "cluster-state",
+        "reconfiguration",
+        "validation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/api/membership/member.go:Member",
+      "type": "class",
+      "name": "Member",
+      "filePath": "etcdserver/api/membership/member.go",
+      "lineRange": [
+        43,
+        47
+      ],
+      "summary": "Cluster member identity and raft-specific attributes used by membership management.",
+      "tags": [
+        "membership",
+        "cluster-state",
+        "reconfiguration",
+        "validation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/membership/member.go:NewMember",
+      "type": "function",
+      "name": "NewMember",
+      "filePath": "etcdserver/api/membership/member.go",
+      "lineRange": [
+        51,
+        54
+      ],
+      "summary": "Function NewMember implements a focused part of etcdserver/api/membership/member behavior.",
+      "tags": [
+        "membership",
+        "cluster-state",
+        "reconfiguration",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/member.go:NewMemberAsLearner",
+      "type": "function",
+      "name": "NewMemberAsLearner",
+      "filePath": "etcdserver/api/membership/member.go",
+      "lineRange": [
+        58,
+        61
+      ],
+      "summary": "Function NewMemberAsLearner implements a focused part of etcdserver/api/membership/member behavior.",
+      "tags": [
+        "membership",
+        "cluster-state",
+        "reconfiguration",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/member.go:computeMemberID",
+      "type": "function",
+      "name": "computeMemberID",
+      "filePath": "etcdserver/api/membership/member.go",
+      "lineRange": [
+        63,
+        76
+      ],
+      "summary": "Function computeMemberID implements a focused part of etcdserver/api/membership/member behavior.",
+      "tags": [
+        "membership",
+        "cluster-state",
+        "reconfiguration",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/member.go:newMember",
+      "type": "function",
+      "name": "newMember",
+      "filePath": "etcdserver/api/membership/member.go",
+      "lineRange": [
+        78,
+        88
+      ],
+      "summary": "Function newMember implements a focused part of etcdserver/api/membership/member behavior.",
+      "tags": [
+        "membership",
+        "cluster-state",
+        "reconfiguration",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/member.go:Clone",
+      "type": "function",
+      "name": "Clone",
+      "filePath": "etcdserver/api/membership/member.go",
+      "lineRange": [
+        90,
+        112
+      ],
+      "summary": "Function Clone implements a focused part of etcdserver/api/membership/member behavior.",
+      "tags": [
+        "membership",
+        "cluster-state",
+        "reconfiguration",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/member.go:IsStarted",
+      "type": "function",
+      "name": "IsStarted",
+      "filePath": "etcdserver/api/membership/member.go",
+      "lineRange": [
+        114,
+        116
+      ],
+      "summary": "Function IsStarted implements a focused part of etcdserver/api/membership/member behavior.",
+      "tags": [
+        "membership",
+        "cluster-state",
+        "reconfiguration",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/member.go:Len",
+      "type": "function",
+      "name": "Len",
+      "filePath": "etcdserver/api/membership/member.go",
+      "lineRange": [
+        121,
+        121
+      ],
+      "summary": "Function Len implements a focused part of etcdserver/api/membership/member behavior.",
+      "tags": [
+        "membership",
+        "cluster-state",
+        "reconfiguration",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/member.go:Less",
+      "type": "function",
+      "name": "Less",
+      "filePath": "etcdserver/api/membership/member.go",
+      "lineRange": [
+        122,
+        122
+      ],
+      "summary": "Function Less implements a focused part of etcdserver/api/membership/member behavior.",
+      "tags": [
+        "membership",
+        "cluster-state",
+        "reconfiguration",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/member.go:Swap",
+      "type": "function",
+      "name": "Swap",
+      "filePath": "etcdserver/api/membership/member.go",
+      "lineRange": [
+        123,
+        123
+      ],
+      "summary": "Function Swap implements a focused part of etcdserver/api/membership/member behavior.",
+      "tags": [
+        "membership",
+        "cluster-state",
+        "reconfiguration",
+        "validation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:etcdserver/api/membership/metrics.go",
+      "type": "file",
+      "name": "metrics.go",
+      "filePath": "etcdserver/api/membership/metrics.go",
+      "summary": "Declares Prometheus metrics for membership and cluster configuration activity.",
+      "tags": [
+        "membership",
+        "cluster-state",
+        "reconfiguration",
+        "validation"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go package analyzed with tree-sitter structure and call-graph extraction."
+    },
+    {
+      "id": "file:etcdserver/api/rafthttp/coder.go",
+      "type": "file",
+      "name": "coder.go",
+      "filePath": "etcdserver/api/rafthttp/coder.go",
+      "summary": "Defines raft HTTP message coding constants and interfaces used by the peer transport.",
+      "tags": [
+        "raft-transport",
+        "http",
+        "api-handler",
+        "peer-communication"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Go package analyzed with tree-sitter structure and call-graph extraction."
+    },
+    {
+      "id": "file:etcdserver/api/rafthttp/doc.go",
+      "type": "file",
+      "name": "doc.go",
+      "filePath": "etcdserver/api/rafthttp/doc.go",
+      "summary": "Documents the raft HTTP transport package and its peer-to-peer responsibilities.",
+      "tags": [
+        "raft-transport",
+        "http",
+        "api-handler",
+        "peer-communication"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Go package analyzed with tree-sitter structure and call-graph extraction."
+    },
+    {
+      "id": "file:etcdserver/api/rafthttp/fake_roundtripper_test.go",
+      "type": "file",
+      "name": "fake_roundtripper_test.go",
+      "filePath": "etcdserver/api/rafthttp/fake_roundtripper_test.go",
+      "summary": "Provides a fake HTTP round tripper used to isolate raft transport tests.",
+      "tags": [
+        "raft-transport",
+        "http",
+        "api-handler",
+        "peer-communication"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Go package analyzed with tree-sitter structure and call-graph extraction."
+    },
+    {
+      "id": "function:etcdserver/api/rafthttp/fake_roundtripper_test.go:RoundTrip",
+      "type": "function",
+      "name": "RoundTrip",
+      "filePath": "etcdserver/api/rafthttp/fake_roundtripper_test.go",
+      "lineRange": [
+        22,
+        36
+      ],
+      "summary": "Test case validating roundtrip behavior.",
+      "tags": [
+        "raft-transport",
+        "http",
+        "api-handler",
+        "peer-communication"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:etcdserver/api/membership/member.go",
+      "target": "class:etcdserver/api/membership/member.go:RaftAttributes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/member.go",
+      "target": "class:etcdserver/api/membership/member.go:RaftAttributes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/member.go",
+      "target": "class:etcdserver/api/membership/member.go:Attributes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/member.go",
+      "target": "class:etcdserver/api/membership/member.go:Attributes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/member.go",
+      "target": "class:etcdserver/api/membership/member.go:Member",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/member.go",
+      "target": "class:etcdserver/api/membership/member.go:Member",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/member.go",
+      "target": "function:etcdserver/api/membership/member.go:NewMember",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/member.go",
+      "target": "function:etcdserver/api/membership/member.go:NewMember",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/member.go",
+      "target": "function:etcdserver/api/membership/member.go:NewMemberAsLearner",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/member.go",
+      "target": "function:etcdserver/api/membership/member.go:NewMemberAsLearner",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/member.go",
+      "target": "function:etcdserver/api/membership/member.go:computeMemberID",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/member.go",
+      "target": "function:etcdserver/api/membership/member.go:newMember",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/member.go",
+      "target": "function:etcdserver/api/membership/member.go:Clone",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/member.go",
+      "target": "function:etcdserver/api/membership/member.go:Clone",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/member.go",
+      "target": "function:etcdserver/api/membership/member.go:IsStarted",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/member.go",
+      "target": "function:etcdserver/api/membership/member.go:IsStarted",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/member.go",
+      "target": "function:etcdserver/api/membership/member.go:Len",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/member.go",
+      "target": "function:etcdserver/api/membership/member.go:Len",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/member.go",
+      "target": "function:etcdserver/api/membership/member.go:Less",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/member.go",
+      "target": "function:etcdserver/api/membership/member.go:Less",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/member.go",
+      "target": "function:etcdserver/api/membership/member.go:Swap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/member.go",
+      "target": "function:etcdserver/api/membership/member.go:Swap",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/fake_roundtripper_test.go",
+      "target": "function:etcdserver/api/rafthttp/fake_roundtripper_test.go:RoundTrip",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/rafthttp/fake_roundtripper_test.go",
+      "target": "function:etcdserver/api/rafthttp/fake_roundtripper_test.go:RoundTrip",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

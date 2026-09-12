@@ -1,0 +1,117 @@
+{
+  "scriptCompleted": true,
+  "contentDigest": "965c2959606d8132c4b08b3515b93cb08ad12ff86a473573666ef9a57ed64bb7",
+  "files": [
+    {
+      "path": ".ua/config.json",
+      "language": "json",
+      "sizeLines": 3,
+      "fileCategory": "config"
+    },
+    {
+      "path": "auth_test.go",
+      "language": "go",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    },
+    {
+      "path": "config.go",
+      "language": "go",
+      "sizeLines": 1379,
+      "fileCategory": "code"
+    },
+    {
+      "path": "config_logging.go",
+      "language": "go",
+      "sizeLines": 288,
+      "fileCategory": "code"
+    },
+    {
+      "path": "config_logging_journal_unix.go",
+      "language": "go",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "config_logging_journal_windows.go",
+      "language": "go",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "config_test.go",
+      "language": "go",
+      "sizeLines": 946,
+      "fileCategory": "code"
+    },
+    {
+      "path": "config_tracing.go",
+      "language": "go",
+      "sizeLines": 142,
+      "fileCategory": "code"
+    },
+    {
+      "path": "config_tracing_test.go",
+      "language": "go",
+      "sizeLines": 83,
+      "fileCategory": "code"
+    },
+    {
+      "path": "doc.go",
+      "language": "go",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcd.go",
+      "language": "go",
+      "sizeLines": 947,
+      "fileCategory": "code"
+    },
+    {
+      "path": "etcd_test.go",
+      "language": "go",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "serve.go",
+      "language": "go",
+      "sizeLines": 569,
+      "fileCategory": "code"
+    },
+    {
+      "path": "serve_test.go",
+      "language": "go",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "util.go",
+      "language": "go",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    },
+    {
+      "path": "util_test.go",
+      "language": "go",
+      "sizeLines": 58,
+      "fileCategory": "code"
+    }
+  ],
+  "totalFiles": 16,
+  "filteredByIgnore": 0,
+  "estimatedComplexity": "small",
+  "failures": [],
+  "stats": {
+    "filesScanned": 16,
+    "byCategory": {
+      "config": 1,
+      "code": 15
+    },
+    "byLanguage": {
+      "json": 1,
+      "go": 15
+    }
+  }
+}

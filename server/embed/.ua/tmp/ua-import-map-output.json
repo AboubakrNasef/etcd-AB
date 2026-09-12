@@ -1,0 +1,27 @@
+{
+  "scriptCompleted": true,
+  "stats": {
+    "filesScanned": 16,
+    "filesWithImports": 0,
+    "totalEdges": 0
+  },
+  "failures": [],
+  "importMap": {
+    ".ua/config.json": [],
+    "auth_test.go": [],
+    "config.go": [],
+    "config_logging.go": [],
+    "config_logging_journal_unix.go": [],
+    "config_logging_journal_windows.go": [],
+    "config_test.go": [],
+    "config_tracing.go": [],
+    "config_tracing_test.go": [],
+    "doc.go": [],
+    "etcd.go": [],
+    "etcd_test.go": [],
+    "serve.go": [],
+    "serve_test.go": [],
+    "util.go": [],
+    "util_test.go": []
+  }
+}

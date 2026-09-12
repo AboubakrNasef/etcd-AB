@@ -1,0 +1,791 @@
+{
+  "nodes": [
+    {
+      "id": "file:etcdserver/api/membership/storev2_test.go",
+      "type": "file",
+      "name": "storev2_test.go",
+      "filePath": "etcdserver/api/membership/storev2_test.go",
+      "summary": "Validates the legacy v2 membership store implementation and its persistence behavior.",
+      "tags": [
+        "test",
+        "membership",
+        "legacy-api",
+        "persistence"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using package-level APIs and concurrency primitives where required."
+    },
+    {
+      "id": "function:etcdserver/api/membership/storev2_test.go:TestIsMetaStoreOnly",
+      "type": "function",
+      "name": "TestIsMetaStoreOnly",
+      "filePath": "etcdserver/api/membership/storev2_test.go",
+      "lineRange": [
+        28,
+        56
+      ],
+      "summary": "Provides the TestIsMetaStoreOnly operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/membership/storev2_test.go:TestIsMetaStoreOnlyWithAuthData",
+      "type": "function",
+      "name": "TestIsMetaStoreOnlyWithAuthData",
+      "filePath": "etcdserver/api/membership/storev2_test.go",
+      "lineRange": [
+        58,
+        76
+      ],
+      "summary": "Provides the TestIsMetaStoreOnlyWithAuthData operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:etcdserver/api/v2error/error.go",
+      "type": "file",
+      "name": "error.go",
+      "filePath": "etcdserver/api/v2error/error.go",
+      "summary": "Defines structured v2 API errors, error codes, and conversion or formatting helpers.",
+      "tags": [
+        "error-handling",
+        "legacy-api",
+        "validation",
+        "serialization"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using package-level APIs and concurrency primitives where required."
+    },
+    {
+      "id": "function:etcdserver/api/v2error/error.go:NewError",
+      "type": "function",
+      "name": "NewError",
+      "filePath": "etcdserver/api/v2error/error.go",
+      "lineRange": [
+        128,
+        135
+      ],
+      "summary": "Provides the NewError operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2error/error.go:Error",
+      "type": "function",
+      "name": "Error",
+      "filePath": "etcdserver/api/v2error/error.go",
+      "lineRange": [
+        138,
+        140
+      ],
+      "summary": "Provides the Error operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2error/error.go:StatusCode",
+      "type": "function",
+      "name": "StatusCode",
+      "filePath": "etcdserver/api/v2error/error.go",
+      "lineRange": [
+        147,
+        153
+      ],
+      "summary": "Provides the StatusCode operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2error/error.go:WriteTo",
+      "type": "function",
+      "name": "WriteTo",
+      "filePath": "etcdserver/api/v2error/error.go",
+      "lineRange": [
+        155,
+        161
+      ],
+      "summary": "Provides the WriteTo operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:etcdserver/api/v2error/error.go:Error",
+      "type": "class",
+      "name": "Error",
+      "filePath": "etcdserver/api/v2error/error.go",
+      "lineRange": [
+        121,
+        126
+      ],
+      "summary": "Represents the Error state and behavior for this module.",
+      "tags": [
+        "go",
+        "data-model",
+        "state",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdserver/api/v2error/error_test.go",
+      "type": "file",
+      "name": "error_test.go",
+      "filePath": "etcdserver/api/v2error/error_test.go",
+      "summary": "Tests v2 API error construction, formatting, and conversion behavior.",
+      "tags": [
+        "test",
+        "error-handling",
+        "legacy-api",
+        "validation"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Go implementation using package-level APIs and concurrency primitives where required."
+    },
+    {
+      "id": "function:etcdserver/api/v2error/error_test.go:TestErrorWriteTo",
+      "type": "function",
+      "name": "TestErrorWriteTo",
+      "filePath": "etcdserver/api/v2error/error_test.go",
+      "lineRange": [
+        25,
+        49
+      ],
+      "summary": "Provides the TestErrorWriteTo operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdserver/api/v2store/doc.go",
+      "type": "file",
+      "name": "doc.go",
+      "filePath": "etcdserver/api/v2store/doc.go",
+      "summary": "Documents the legacy v2 in-memory key-value store package and its compatibility role.",
+      "tags": [
+        "documentation",
+        "legacy-api",
+        "v2-store",
+        "package"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Go implementation using package-level APIs and concurrency primitives where required."
+    },
+    {
+      "id": "file:etcdserver/api/v2store/event.go",
+      "type": "file",
+      "name": "event.go",
+      "filePath": "etcdserver/api/v2store/event.go",
+      "summary": "Defines v2 store events and event constructors used to report key-value changes.",
+      "tags": [
+        "event",
+        "legacy-api",
+        "v2-store",
+        "watch"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using package-level APIs and concurrency primitives where required."
+    },
+    {
+      "id": "function:etcdserver/api/v2store/event.go:newEvent",
+      "type": "function",
+      "name": "newEvent",
+      "filePath": "etcdserver/api/v2store/event.go",
+      "lineRange": [
+        36,
+        47
+      ],
+      "summary": "Provides the newEvent operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/event.go:IsCreated",
+      "type": "function",
+      "name": "IsCreated",
+      "filePath": "etcdserver/api/v2store/event.go",
+      "lineRange": [
+        49,
+        54
+      ],
+      "summary": "Provides the IsCreated operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/event.go:Index",
+      "type": "function",
+      "name": "Index",
+      "filePath": "etcdserver/api/v2store/event.go",
+      "lineRange": [
+        56,
+        58
+      ],
+      "summary": "Provides the Index operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/event.go:Clone",
+      "type": "function",
+      "name": "Clone",
+      "filePath": "etcdserver/api/v2store/event.go",
+      "lineRange": [
+        60,
+        67
+      ],
+      "summary": "Provides the Clone operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/event.go:SetRefresh",
+      "type": "function",
+      "name": "SetRefresh",
+      "filePath": "etcdserver/api/v2store/event.go",
+      "lineRange": [
+        69,
+        71
+      ],
+      "summary": "Provides the SetRefresh operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:etcdserver/api/v2store/event.go:Event",
+      "type": "class",
+      "name": "Event",
+      "filePath": "etcdserver/api/v2store/event.go",
+      "lineRange": [
+        28,
+        34
+      ],
+      "summary": "Represents the Event state and behavior for this module.",
+      "tags": [
+        "go",
+        "data-model",
+        "state",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdserver/api/v2store/event_history.go",
+      "type": "file",
+      "name": "event_history.go",
+      "filePath": "etcdserver/api/v2store/event_history.go",
+      "summary": "Maintains bounded event history and retrieves events by index or key range for watchers.",
+      "tags": [
+        "event",
+        "history",
+        "legacy-api",
+        "watch",
+        "storage"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using package-level APIs and concurrency primitives where required."
+    },
+    {
+      "id": "function:etcdserver/api/v2store/event_history.go:addEvent",
+      "type": "function",
+      "name": "addEvent",
+      "filePath": "etcdserver/api/v2store/event_history.go",
+      "lineRange": [
+        43,
+        54
+      ],
+      "summary": "Provides the addEvent operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/event_history.go:scan",
+      "type": "function",
+      "name": "scan",
+      "filePath": "etcdserver/api/v2store/event_history.go",
+      "lineRange": [
+        58,
+        109
+      ],
+      "summary": "Provides the scan operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/v2store/event_history.go:clone",
+      "type": "function",
+      "name": "clone",
+      "filePath": "etcdserver/api/v2store/event_history.go",
+      "lineRange": [
+        113,
+        128
+      ],
+      "summary": "Provides the clone operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:etcdserver/api/v2store/event_history.go:EventHistory",
+      "type": "class",
+      "name": "EventHistory",
+      "filePath": "etcdserver/api/v2store/event_history.go",
+      "lineRange": [
+        26,
+        31
+      ],
+      "summary": "Represents the EventHistory state and behavior for this module.",
+      "tags": [
+        "go",
+        "data-model",
+        "state",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:etcdserver/api/membership/storev2_test.go",
+      "target": "function:etcdserver/api/membership/storev2_test.go:TestIsMetaStoreOnly",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2_test.go",
+      "target": "function:etcdserver/api/membership/storev2_test.go:TestIsMetaStoreOnly",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2_test.go",
+      "target": "function:etcdserver/api/membership/storev2_test.go:TestIsMetaStoreOnlyWithAuthData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2_test.go",
+      "target": "function:etcdserver/api/membership/storev2_test.go:TestIsMetaStoreOnlyWithAuthData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2_test.go",
+      "target": "file:etcdserver/api/v2store/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2_test.go",
+      "target": "file:etcdserver/api/v2store/event.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2_test.go",
+      "target": "file:etcdserver/api/v2store/event_history.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2_test.go",
+      "target": "file:etcdserver/api/v2store/event_queue.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2_test.go",
+      "target": "file:etcdserver/api/v2store/event_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2_test.go",
+      "target": "file:etcdserver/api/v2store/heap_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2_test.go",
+      "target": "file:etcdserver/api/v2store/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2_test.go",
+      "target": "file:etcdserver/api/v2store/node.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2_test.go",
+      "target": "file:etcdserver/api/v2store/node_extern.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2_test.go",
+      "target": "file:etcdserver/api/v2store/node_extern_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2_test.go",
+      "target": "file:etcdserver/api/v2store/node_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2_test.go",
+      "target": "file:etcdserver/api/v2store/stats.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2_test.go",
+      "target": "file:etcdserver/api/v2store/stats_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2_test.go",
+      "target": "file:etcdserver/api/v2store/store.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2_test.go",
+      "target": "file:etcdserver/api/v2store/store_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2_test.go",
+      "target": "file:etcdserver/api/v2store/store_ttl_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2_test.go",
+      "target": "file:etcdserver/api/v2store/ttl_key_heap.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2_test.go",
+      "target": "file:etcdserver/api/v2store/watcher.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2_test.go",
+      "target": "file:etcdserver/api/v2store/watcher_hub.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2_test.go",
+      "target": "file:etcdserver/api/v2store/watcher_hub_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2_test.go",
+      "target": "file:etcdserver/api/v2store/watcher_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v2error/error.go",
+      "target": "function:etcdserver/api/v2error/error.go:NewError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2error/error.go",
+      "target": "function:etcdserver/api/v2error/error.go:NewError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2error/error.go",
+      "target": "function:etcdserver/api/v2error/error.go:Error",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2error/error.go",
+      "target": "function:etcdserver/api/v2error/error.go:Error",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2error/error.go",
+      "target": "function:etcdserver/api/v2error/error.go:StatusCode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2error/error.go",
+      "target": "function:etcdserver/api/v2error/error.go:StatusCode",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2error/error.go",
+      "target": "function:etcdserver/api/v2error/error.go:WriteTo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2error/error.go",
+      "target": "function:etcdserver/api/v2error/error.go:WriteTo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2error/error.go",
+      "target": "class:etcdserver/api/v2error/error.go:Error",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2error/error.go",
+      "target": "class:etcdserver/api/v2error/error.go:Error",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2error/error_test.go",
+      "target": "function:etcdserver/api/v2error/error_test.go:TestErrorWriteTo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2error/error_test.go",
+      "target": "function:etcdserver/api/v2error/error_test.go:TestErrorWriteTo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/event.go",
+      "target": "function:etcdserver/api/v2store/event.go:newEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/event.go",
+      "target": "function:etcdserver/api/v2store/event.go:IsCreated",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/event.go",
+      "target": "function:etcdserver/api/v2store/event.go:IsCreated",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/event.go",
+      "target": "function:etcdserver/api/v2store/event.go:Index",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/event.go",
+      "target": "function:etcdserver/api/v2store/event.go:Index",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/event.go",
+      "target": "function:etcdserver/api/v2store/event.go:Clone",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/event.go",
+      "target": "function:etcdserver/api/v2store/event.go:Clone",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/event.go",
+      "target": "function:etcdserver/api/v2store/event.go:SetRefresh",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/event.go",
+      "target": "function:etcdserver/api/v2store/event.go:SetRefresh",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/event.go",
+      "target": "class:etcdserver/api/v2store/event.go:Event",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/event.go",
+      "target": "class:etcdserver/api/v2store/event.go:Event",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/event_history.go",
+      "target": "function:etcdserver/api/v2store/event_history.go:addEvent",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/event_history.go",
+      "target": "function:etcdserver/api/v2store/event_history.go:scan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/event_history.go",
+      "target": "function:etcdserver/api/v2store/event_history.go:clone",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/event_history.go",
+      "target": "class:etcdserver/api/v2store/event_history.go:EventHistory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v2store/event_history.go",
+      "target": "class:etcdserver/api/v2store/event_history.go:EventHistory",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v2store/event_history.go",
+      "target": "file:etcdserver/api/v2error/error.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v2store/event_history.go",
+      "target": "file:etcdserver/api/v2error/error_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

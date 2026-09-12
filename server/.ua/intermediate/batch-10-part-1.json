@@ -1,0 +1,4223 @@
+{
+  "nodes": [
+    {
+      "id": "file:etcdserver/server_access_control.go",
+      "type": "file",
+      "name": "server_access_control.go",
+      "filePath": "etcdserver/server_access_control.go",
+      "summary": "Defines HTTP access-control checks for CORS origins and host allowlists used by the embedded etcd server.",
+      "tags": [
+        "security",
+        "access-control",
+        "cors",
+        "validation"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using protobuf RPC types, raft interfaces, concurrency primitives, and Prometheus or zap integration where applicable."
+    },
+    {
+      "id": "file:etcdserver/server_access_control_test.go",
+      "type": "file",
+      "name": "server_access_control_test.go",
+      "filePath": "etcdserver/server_access_control_test.go",
+      "summary": "Tests CORS origin matching and host allowlist behavior, including empty and configured policy cases.",
+      "tags": [
+        "test",
+        "security",
+        "access-control",
+        "validation"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using protobuf RPC types, raft interfaces, concurrency primitives, and Prometheus or zap integration where applicable."
+    },
+    {
+      "id": "file:etcdserver/server_test.go",
+      "type": "file",
+      "name": "server_test.go",
+      "filePath": "etcdserver/server_test.go",
+      "summary": "Comprehensive etcd server integration tests covering apply/restart behavior, snapshots, membership changes, publishing, raft mocks, readiness, and feature-gate metrics.",
+      "tags": [
+        "test",
+        "server",
+        "raft",
+        "integration"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Go implementation using protobuf RPC types, raft interfaces, concurrency primitives, and Prometheus or zap integration where applicable."
+    },
+    {
+      "id": "file:etcdserver/snapshot_merge.go",
+      "type": "file",
+      "name": "snapshot_merge.go",
+      "filePath": "etcdserver/snapshot_merge.go",
+      "summary": "Combines snapshot metadata and database content into a merged snapshot stream while coordinating temporary readers and cleanup.",
+      "tags": [
+        "snapshot",
+        "storage",
+        "merge",
+        "backend"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using protobuf RPC types, raft interfaces, concurrency primitives, and Prometheus or zap integration where applicable."
+    },
+    {
+      "id": "function:etcdserver/server_access_control.go:NewAccessController",
+      "type": "function",
+      "name": "NewAccessController",
+      "filePath": "etcdserver/server_access_control.go",
+      "lineRange": [
+        28,
+        33
+      ],
+      "summary": "Implements NewAccessController behavior in this component.",
+      "tags": [
+        "security",
+        "access-control",
+        "cors"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/server_access_control.go:OriginAllowed",
+      "type": "function",
+      "name": "OriginAllowed",
+      "filePath": "etcdserver/server_access_control.go",
+      "lineRange": [
+        37,
+        49
+      ],
+      "summary": "Implements OriginAllowed behavior in this component.",
+      "tags": [
+        "security",
+        "access-control",
+        "cors"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/server_access_control.go:IsHostWhitelisted",
+      "type": "function",
+      "name": "IsHostWhitelisted",
+      "filePath": "etcdserver/server_access_control.go",
+      "lineRange": [
+        53,
+        65
+      ],
+      "summary": "Implements IsHostWhitelisted behavior in this component.",
+      "tags": [
+        "security",
+        "access-control",
+        "cors"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:etcdserver/server_access_control.go:AccessController",
+      "type": "class",
+      "name": "AccessController",
+      "filePath": "etcdserver/server_access_control.go",
+      "lineRange": [
+        20,
+        25
+      ],
+      "summary": "Defines the AccessController test or adapter abstraction and its associated state and methods.",
+      "tags": [
+        "go",
+        "type-definition",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/server_access_control_test.go:TestOriginAllowed",
+      "type": "function",
+      "name": "TestOriginAllowed",
+      "filePath": "etcdserver/server_access_control_test.go",
+      "lineRange": [
+        23,
+        70
+      ],
+      "summary": "Tests OriginAllowed behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/server_access_control_test.go:TestIsHostWhitelisted",
+      "type": "function",
+      "name": "TestIsHostWhitelisted",
+      "filePath": "etcdserver/server_access_control_test.go",
+      "lineRange": [
+        72,
+        119
+      ],
+      "summary": "Tests IsHostWhitelisted behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:TestApplyRepeat",
+      "type": "function",
+      "name": "TestApplyRepeat",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        76,
+        141
+      ],
+      "summary": "Tests ApplyRepeat behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:Apply",
+      "type": "function",
+      "name": "Apply",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        145,
+        147
+      ],
+      "summary": "Tests Apply behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:TestApplyConfStateWithRestart",
+      "type": "function",
+      "name": "TestApplyConfStateWithRestart",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        149,
+        248
+      ],
+      "summary": "Tests ApplyConfStateWithRestart behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:newServer",
+      "type": "function",
+      "name": "newServer",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        250,
+        268
+      ],
+      "summary": "Tests newServer behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:TestApplyConfChangeError",
+      "type": "function",
+      "name": "TestApplyConfChangeError",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        270,
+        362
+      ],
+      "summary": "Tests ApplyConfChangeError behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:TestApplyConfChangeShouldStop",
+      "type": "function",
+      "name": "TestApplyConfChangeShouldStop",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        364,
+        414
+      ],
+      "summary": "Tests ApplyConfChangeShouldStop behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:TestApplyConfigChangeUpdatesConsistIndex",
+      "type": "function",
+      "name": "TestApplyConfigChangeUpdatesConsistIndex",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        418,
+        481
+      ],
+      "summary": "Tests ApplyConfigChangeUpdatesConsistIndex behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:realisticRaftNode",
+      "type": "function",
+      "name": "realisticRaftNode",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        483,
+        508
+      ],
+      "summary": "Tests realisticRaftNode behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:TestApplyMultiConfChangeShouldStop",
+      "type": "function",
+      "name": "TestApplyMultiConfChangeShouldStop",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        512,
+        562
+      ],
+      "summary": "Tests ApplyMultiConfChangeShouldStop behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:TestSnapshotDisk",
+      "type": "function",
+      "name": "TestSnapshotDisk",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        565,
+        613
+      ],
+      "summary": "Tests SnapshotDisk behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:TestSnapshotMemory",
+      "type": "function",
+      "name": "TestSnapshotMemory",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        615,
+        661
+      ],
+      "summary": "Tests SnapshotMemory behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:TestSnapshotOrdering",
+      "type": "function",
+      "name": "TestSnapshotOrdering",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        665,
+        757
+      ],
+      "summary": "Tests SnapshotOrdering behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:TestConcurrentApplyAndSnapshotV3",
+      "type": "function",
+      "name": "TestConcurrentApplyAndSnapshotV3",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        761,
+        865
+      ],
+      "summary": "Tests ConcurrentApplyAndSnapshotV3 behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:TestAddMember",
+      "type": "function",
+      "name": "TestAddMember",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        868,
+        911
+      ],
+      "summary": "Tests AddMember behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:TestProcessIgnoreMismatchMessage",
+      "type": "function",
+      "name": "TestProcessIgnoreMismatchMessage",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        915,
+        963
+      ],
+      "summary": "Tests ProcessIgnoreMismatchMessage behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:TestRemoveMember",
+      "type": "function",
+      "name": "TestRemoveMember",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        966,
+        1009
+      ],
+      "summary": "Tests RemoveMember behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:TestUpdateMember",
+      "type": "function",
+      "name": "TestUpdateMember",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1012,
+        1055
+      ],
+      "summary": "Tests UpdateMember behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:TestPublishV3",
+      "type": "function",
+      "name": "TestPublishV3",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1059,
+        1102
+      ],
+      "summary": "Tests PublishV3 behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:TestPublishV3Stopped",
+      "type": "function",
+      "name": "TestPublishV3Stopped",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1105,
+        1130
+      ],
+      "summary": "Tests PublishV3Stopped behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:TestPublishV3Retry",
+      "type": "function",
+      "name": "TestPublishV3Retry",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1133,
+        1179
+      ],
+      "summary": "Tests PublishV3Retry behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:TestUpdateVersionV3",
+      "type": "function",
+      "name": "TestUpdateVersionV3",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1181,
+        1223
+      ],
+      "summary": "Tests UpdateVersionV3 behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:TestStopNotify",
+      "type": "function",
+      "name": "TestStopNotify",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1225,
+        1249
+      ],
+      "summary": "Tests StopNotify behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:TestGetOtherPeerURLs",
+      "type": "function",
+      "name": "TestGetOtherPeerURLs",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1251,
+        1288
+      ],
+      "summary": "Tests GetOtherPeerURLs behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:Tick",
+      "type": "function",
+      "name": "Tick",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1296,
+        1296
+      ],
+      "summary": "Tests Tick behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:Campaign",
+      "type": "function",
+      "name": "Campaign",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1297,
+        1300
+      ],
+      "summary": "Tests Campaign behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:Propose",
+      "type": "function",
+      "name": "Propose",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1302,
+        1305
+      ],
+      "summary": "Tests Propose behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:ProposeConfChange",
+      "type": "function",
+      "name": "ProposeConfChange",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1307,
+        1310
+      ],
+      "summary": "Tests ProposeConfChange behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:Step",
+      "type": "function",
+      "name": "Step",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1312,
+        1315
+      ],
+      "summary": "Tests Step behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:Status",
+      "type": "function",
+      "name": "Status",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1316,
+        1316
+      ],
+      "summary": "Tests Status behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:Ready",
+      "type": "function",
+      "name": "Ready",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1317,
+        1317
+      ],
+      "summary": "Tests Ready behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:TransferLeadership",
+      "type": "function",
+      "name": "TransferLeadership",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1318,
+        1318
+      ],
+      "summary": "Tests TransferLeadership behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:ReadIndex",
+      "type": "function",
+      "name": "ReadIndex",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1319,
+        1319
+      ],
+      "summary": "Tests ReadIndex behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:Advance",
+      "type": "function",
+      "name": "Advance",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1320,
+        1320
+      ],
+      "summary": "Tests Advance behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:ApplyConfChange",
+      "type": "function",
+      "name": "ApplyConfChange",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1321,
+        1324
+      ],
+      "summary": "Tests ApplyConfChange behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:Stop",
+      "type": "function",
+      "name": "Stop",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1326,
+        1328
+      ],
+      "summary": "Tests Stop behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:ReportUnreachable",
+      "type": "function",
+      "name": "ReportUnreachable",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1330,
+        1330
+      ],
+      "summary": "Tests ReportUnreachable behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:ReportSnapshot",
+      "type": "function",
+      "name": "ReportSnapshot",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1332,
+        1332
+      ],
+      "summary": "Tests ReportSnapshot behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:Compact",
+      "type": "function",
+      "name": "Compact",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1334,
+        1336
+      ],
+      "summary": "Tests Compact behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:ForgetLeader",
+      "type": "function",
+      "name": "ForgetLeader",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1338,
+        1340
+      ],
+      "summary": "Tests ForgetLeader behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:confChangeActionName",
+      "type": "function",
+      "name": "confChangeActionName",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1374,
+        1387
+      ],
+      "summary": "Tests confChangeActionName behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:Start",
+      "type": "function",
+      "name": "Start",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1420,
+        1420
+      ],
+      "summary": "Tests Start behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:Handler",
+      "type": "function",
+      "name": "Handler",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1421,
+        1421
+      ],
+      "summary": "Tests Handler behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:Send",
+      "type": "function",
+      "name": "Send",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1422,
+        1422
+      ],
+      "summary": "Tests Send behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:SendSnapshot",
+      "type": "function",
+      "name": "SendSnapshot",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1423,
+        1423
+      ],
+      "summary": "Tests SendSnapshot behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:AddRemote",
+      "type": "function",
+      "name": "AddRemote",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1424,
+        1424
+      ],
+      "summary": "Tests AddRemote behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:AddPeer",
+      "type": "function",
+      "name": "AddPeer",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1425,
+        1425
+      ],
+      "summary": "Tests AddPeer behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:RemovePeer",
+      "type": "function",
+      "name": "RemovePeer",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1426,
+        1426
+      ],
+      "summary": "Tests RemovePeer behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:RemoveAllPeers",
+      "type": "function",
+      "name": "RemoveAllPeers",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1427,
+        1427
+      ],
+      "summary": "Tests RemoveAllPeers behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:UpdatePeer",
+      "type": "function",
+      "name": "UpdatePeer",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1428,
+        1428
+      ],
+      "summary": "Tests UpdatePeer behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:ActiveSince",
+      "type": "function",
+      "name": "ActiveSince",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1429,
+        1429
+      ],
+      "summary": "Tests ActiveSince behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:ActivePeers",
+      "type": "function",
+      "name": "ActivePeers",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1430,
+        1430
+      ],
+      "summary": "Tests ActivePeers behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:Pause",
+      "type": "function",
+      "name": "Pause",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1432,
+        1432
+      ],
+      "summary": "Tests Pause behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:Resume",
+      "type": "function",
+      "name": "Resume",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1433,
+        1433
+      ],
+      "summary": "Tests Resume behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:TestWaitAppliedIndex",
+      "type": "function",
+      "name": "TestWaitAppliedIndex",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1476,
+        1529
+      ],
+      "summary": "Tests WaitAppliedIndex behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:TestIsActive",
+      "type": "function",
+      "name": "TestIsActive",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1531,
+        1571
+      ],
+      "summary": "Tests IsActive behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/server_test.go:TestAddFeatureGateMetrics",
+      "type": "function",
+      "name": "TestAddFeatureGateMetrics",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1573,
+        1598
+      ],
+      "summary": "Tests AddFeatureGateMetrics behavior in this component.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/server_test.go:nodeRecorder",
+      "type": "class",
+      "name": "nodeRecorder",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1290,
+        1290
+      ],
+      "summary": "Defines the nodeRecorder test or adapter abstraction and its associated state and methods.",
+      "tags": [
+        "go",
+        "type-definition",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/server_test.go:nodeConfChangeCommitterRecorder",
+      "type": "class",
+      "name": "nodeConfChangeCommitterRecorder",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1361,
+        1364
+      ],
+      "summary": "Defines the nodeConfChangeCommitterRecorder test or adapter abstraction and its associated state and methods.",
+      "tags": [
+        "go",
+        "type-definition",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/server_test.go:nopTransporter",
+      "type": "class",
+      "name": "nopTransporter",
+      "filePath": "etcdserver/server_test.go",
+      "lineRange": [
+        1414,
+        1414
+      ],
+      "summary": "Defines the nopTransporter test or adapter abstraction and its associated state and methods.",
+      "tags": [
+        "go",
+        "type-definition",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/snapshot_merge.go:createMergedSnapshotMessage",
+      "type": "function",
+      "name": "createMergedSnapshotMessage",
+      "filePath": "etcdserver/snapshot_merge.go",
+      "lineRange": [
+        32,
+        54
+      ],
+      "summary": "Implements createMergedSnapshotMessage behavior in this component.",
+      "tags": [
+        "snapshot",
+        "storage",
+        "merge"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/snapshot_merge.go:newSnapshotReaderCloser",
+      "type": "function",
+      "name": "newSnapshotReaderCloser",
+      "filePath": "etcdserver/snapshot_merge.go",
+      "lineRange": [
+        56,
+        80
+      ],
+      "summary": "Implements newSnapshotReaderCloser behavior in this component.",
+      "tags": [
+        "snapshot",
+        "storage",
+        "merge"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:etcdserver/server_access_control.go",
+      "target": "function:etcdserver/server_access_control.go:NewAccessController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_access_control.go",
+      "target": "function:etcdserver/server_access_control.go:NewAccessController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_access_control.go",
+      "target": "function:etcdserver/server_access_control.go:OriginAllowed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_access_control.go",
+      "target": "function:etcdserver/server_access_control.go:OriginAllowed",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_access_control.go",
+      "target": "function:etcdserver/server_access_control.go:IsHostWhitelisted",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_access_control.go",
+      "target": "function:etcdserver/server_access_control.go:IsHostWhitelisted",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_access_control.go",
+      "target": "class:etcdserver/server_access_control.go:AccessController",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_access_control.go",
+      "target": "class:etcdserver/server_access_control.go:AccessController",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_access_control_test.go",
+      "target": "function:etcdserver/server_access_control_test.go:TestOriginAllowed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_access_control_test.go",
+      "target": "function:etcdserver/server_access_control_test.go:TestOriginAllowed",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_access_control_test.go",
+      "target": "function:etcdserver/server_access_control_test.go:TestIsHostWhitelisted",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_access_control_test.go",
+      "target": "function:etcdserver/server_access_control_test.go:TestIsHostWhitelisted",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestApplyRepeat",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestApplyRepeat",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:Apply",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:Apply",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestApplyConfStateWithRestart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestApplyConfStateWithRestart",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:newServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestApplyConfChangeError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestApplyConfChangeError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestApplyConfChangeShouldStop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestApplyConfChangeShouldStop",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestApplyConfigChangeUpdatesConsistIndex",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestApplyConfigChangeUpdatesConsistIndex",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:realisticRaftNode",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestApplyMultiConfChangeShouldStop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestApplyMultiConfChangeShouldStop",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestSnapshotDisk",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestSnapshotDisk",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestSnapshotMemory",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestSnapshotMemory",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestSnapshotOrdering",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestSnapshotOrdering",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestConcurrentApplyAndSnapshotV3",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestConcurrentApplyAndSnapshotV3",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestAddMember",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestAddMember",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestProcessIgnoreMismatchMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestProcessIgnoreMismatchMessage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestRemoveMember",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestRemoveMember",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestUpdateMember",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestUpdateMember",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestPublishV3",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestPublishV3",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestPublishV3Stopped",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestPublishV3Stopped",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestPublishV3Retry",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestPublishV3Retry",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestUpdateVersionV3",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestUpdateVersionV3",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestStopNotify",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestStopNotify",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestGetOtherPeerURLs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestGetOtherPeerURLs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:Tick",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:Tick",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:Campaign",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:Campaign",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:Propose",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:Propose",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:ProposeConfChange",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:ProposeConfChange",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:Step",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:Step",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:Status",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:Status",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:Ready",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:Ready",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TransferLeadership",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TransferLeadership",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:ReadIndex",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:ReadIndex",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:Advance",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:Advance",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:ApplyConfChange",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:ApplyConfChange",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:Stop",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:Stop",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:ReportUnreachable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:ReportUnreachable",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:ReportSnapshot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:ReportSnapshot",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:Compact",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:Compact",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:ForgetLeader",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:ForgetLeader",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:confChangeActionName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:Start",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:Start",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:Handler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:Handler",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:Send",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:Send",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:SendSnapshot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:SendSnapshot",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:AddRemote",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:AddRemote",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:AddPeer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:AddPeer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:RemovePeer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:RemovePeer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:RemoveAllPeers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:RemoveAllPeers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:UpdatePeer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:UpdatePeer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:ActiveSince",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:ActiveSince",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:ActivePeers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:ActivePeers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:Pause",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:Pause",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:Resume",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:Resume",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestWaitAppliedIndex",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestWaitAppliedIndex",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestIsActive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestIsActive",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestAddFeatureGateMetrics",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "function:etcdserver/server_test.go:TestAddFeatureGateMetrics",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "class:etcdserver/server_test.go:nodeRecorder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "class:etcdserver/server_test.go:nodeConfChangeCommitterRecorder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "class:etcdserver/server_test.go:nopTransporter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/snapshot_merge.go",
+      "target": "function:etcdserver/snapshot_merge.go:createMergedSnapshotMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/snapshot_merge.go",
+      "target": "function:etcdserver/snapshot_merge.go:newSnapshotReaderCloser",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:auth/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:auth/jwt.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:auth/jwt_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:auth/main_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:auth/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:auth/nop.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:auth/options.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:auth/range_perm_cache.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:auth/range_perm_cache_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:auth/simple_token.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:auth/simple_token_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:auth/store.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:auth/store_mock_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:auth/store_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:config/config.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:config/config_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/membership/cluster.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/membership/cluster_opts.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/membership/cluster_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/membership/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/membership/errors.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/membership/member.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/membership/member_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/membership/membership_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/membership/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/membership/store.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/membership/storev2.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/membership/storev2_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/rafthttp/coder.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/rafthttp/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/rafthttp/fake_roundtripper_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/rafthttp/functional_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/rafthttp/http.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/rafthttp/http_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/rafthttp/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/rafthttp/msg_codec.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/rafthttp/msg_codec_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/rafthttp/msgappv2_codec.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/rafthttp/msgappv2_codec_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/rafthttp/peer.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/rafthttp/peer_status.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/rafthttp/peer_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/rafthttp/pipeline.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/rafthttp/pipeline_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/rafthttp/probing_status.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/rafthttp/remote.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/rafthttp/snapshot_sender.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/rafthttp/snapshot_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/rafthttp/stream.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/rafthttp/stream_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/rafthttp/transport.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/rafthttp/transport_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/rafthttp/transport_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/rafthttp/urlpick.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/rafthttp/urlpick_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/rafthttp/util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/rafthttp/util_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/snap/db.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/snap/db_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/snap/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/snap/message.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/snap/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/snap/snapshotter.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/api/snap/snapshotter_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/apply/apply.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/apply/auth.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/apply/auth_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/apply/backend.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/apply/capped.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/apply/corrupt.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/apply/interface.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/apply/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/apply/quota.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/apply/uber_applier.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/apply/uber_applier_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/cindex/cindex.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/cindex/cindex_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/cindex/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:etcdserver/errors/errors.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:features/etcd_features.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:lease/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:lease/lease.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:lease/lease_queue.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:lease/lease_queue_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:lease/lessor.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:lease/lessor_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:lease/lessor_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:lease/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:mock/mockstorage/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:mock/mockstorage/storage_recorder.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:mock/mockstore/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:mock/mockstore/store_recorder.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:mock/mockwait/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:mock/mockwait/wait_recorder.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/backend.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/backend/testing/betesting.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/hooks.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/mvcc/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/mvcc/hash.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/mvcc/hash_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/mvcc/index.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/mvcc/index_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/mvcc/index_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/mvcc/key_index.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/mvcc/key_index_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/mvcc/kv.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/mvcc/kv_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/mvcc/kv_view.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/mvcc/kvstore.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/mvcc/kvstore_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/mvcc/kvstore_compaction.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/mvcc/kvstore_compaction_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/mvcc/kvstore_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/mvcc/kvstore_txn.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/mvcc/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/mvcc/metrics_txn.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/mvcc/revision.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/mvcc/store.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/mvcc/store_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/mvcc/watchable_store.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/mvcc/watchable_store_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/mvcc/watchable_store_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/mvcc/watchable_store_txn.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/mvcc/watcher.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/mvcc/watcher_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/mvcc/watcher_group.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/mvcc/watcher_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/quota.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/quota_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/schema/actions.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/schema/actions_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/schema/alarm.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/schema/auth.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/schema/auth_roles.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/schema/auth_roles_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/schema/auth_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/schema/auth_users.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/schema/auth_users_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/schema/bucket.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/schema/changes.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/schema/changes_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/schema/cindex.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/schema/confstate.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/schema/confstate_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/schema/lease.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/schema/lease_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/schema/membership.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/schema/migration.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/schema/migration_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/schema/schema.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/schema/schema_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/schema/version.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/schema/version_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/storage.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/server_test.go",
+      "target": "file:storage/util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/snapshot_merge.go",
+      "target": "file:etcdserver/api/snap/db.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/snapshot_merge.go",
+      "target": "file:etcdserver/api/snap/db_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/snapshot_merge.go",
+      "target": "file:etcdserver/api/snap/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/snapshot_merge.go",
+      "target": "file:etcdserver/api/snap/message.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/snapshot_merge.go",
+      "target": "file:etcdserver/api/snap/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/snapshot_merge.go",
+      "target": "file:etcdserver/api/snap/snapshotter.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/snapshot_merge.go",
+      "target": "file:etcdserver/api/snap/snapshotter_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/snapshot_merge.go",
+      "target": "file:storage/backend/backend.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/snapshot_merge.go",
+      "target": "file:storage/backend/backend_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/snapshot_merge.go",
+      "target": "file:storage/backend/backend_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/snapshot_merge.go",
+      "target": "file:storage/backend/batch_tx.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/snapshot_merge.go",
+      "target": "file:storage/backend/batch_tx_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/snapshot_merge.go",
+      "target": "file:storage/backend/config_default.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/snapshot_merge.go",
+      "target": "file:storage/backend/config_linux.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/snapshot_merge.go",
+      "target": "file:storage/backend/config_windows.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/snapshot_merge.go",
+      "target": "file:storage/backend/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/snapshot_merge.go",
+      "target": "file:storage/backend/export_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/snapshot_merge.go",
+      "target": "file:storage/backend/hooks.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/snapshot_merge.go",
+      "target": "file:storage/backend/hooks_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/snapshot_merge.go",
+      "target": "file:storage/backend/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/snapshot_merge.go",
+      "target": "file:storage/backend/read_tx.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/snapshot_merge.go",
+      "target": "file:storage/backend/tx_buffer.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/snapshot_merge.go",
+      "target": "file:storage/backend/tx_buffer_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/snapshot_merge.go",
+      "target": "file:storage/backend/verify.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/snapshot_merge.go",
+      "target": "file:storage/backend/verify_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:etcdserver/server_access_control_test.go:TestOriginAllowed",
+      "target": "function:etcdserver/server_access_control.go:OriginAllowed",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_access_control_test.go:TestIsHostWhitelisted",
+      "target": "function:etcdserver/server_access_control.go:IsHostWhitelisted",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestApplyRepeat",
+      "target": "function:mock/mockstorage/storage_recorder.go:Close",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestApplyRepeat",
+      "target": "function:mock/mockstorage/storage_recorder.go:NewStorageRecorder",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestApplyRepeat",
+      "target": "function:etcdserver/util_test.go:Stop",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestApplyRepeat",
+      "target": "function:etcdserver/zap_raft.go:Fatal",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestApplyConfStateWithRestart",
+      "target": "function:etcdserver/zap_raft.go:Fatal",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestApplyConfStateWithRestart",
+      "target": "function:etcdserver/zap_raft.go:Errorf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestApplyConfStateWithRestart",
+      "target": "function:mock/mockstorage/storage_recorder.go:Close",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestApplyConfStateWithRestart",
+      "target": "function:etcdserver/zap_raft.go:Errorf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:newServer",
+      "target": "function:mock/mockstorage/storage_recorder.go:Close",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:newServer",
+      "target": "function:mock/mockstorage/storage_recorder.go:NewStorageRecorder",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:newServer",
+      "target": "function:mock/mockwait/wait_recorder.go:NewNop",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestApplyConfChangeError",
+      "target": "function:mock/mockstorage/storage_recorder.go:Close",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestApplyConfChangeError",
+      "target": "function:etcdserver/zap_raft.go:Fatal",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestApplyConfChangeError",
+      "target": "function:etcdserver/zap_raft.go:Fatal",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestApplyConfChangeError",
+      "target": "function:etcdserver/zap_raft.go:Fatal",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestApplyConfChangeError",
+      "target": "function:mock/mockstorage/storage_recorder.go:NewStorageRecorder",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestApplyConfChangeError",
+      "target": "function:etcdserver/zap_raft.go:Errorf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestApplyConfChangeError",
+      "target": "function:etcdserver/zap_raft.go:Errorf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestApplyConfChangeShouldStop",
+      "target": "function:mock/mockstorage/storage_recorder.go:Close",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestApplyConfChangeShouldStop",
+      "target": "function:mock/mockstorage/storage_recorder.go:NewStorageRecorder",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestApplyConfChangeShouldStop",
+      "target": "function:etcdserver/zap_raft.go:Fatalf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestApplyConfChangeShouldStop",
+      "target": "function:etcdserver/zap_raft.go:Errorf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestApplyConfChangeShouldStop",
+      "target": "function:etcdserver/zap_raft.go:Fatalf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestApplyConfChangeShouldStop",
+      "target": "function:etcdserver/zap_raft.go:Errorf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestApplyConfigChangeUpdatesConsistIndex",
+      "target": "function:mock/mockstorage/storage_recorder.go:Close",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestApplyConfigChangeUpdatesConsistIndex",
+      "target": "function:etcdserver/util_test.go:Stop",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestApplyConfigChangeUpdatesConsistIndex",
+      "target": "function:etcdserver/zap_raft.go:Fatal",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestApplyConfigChangeUpdatesConsistIndex",
+      "target": "function:etcdserver/zap_raft.go:Fatal",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:realisticRaftNode",
+      "target": "function:mock/mockstorage/storage_recorder.go:NewStorageRecorder",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestApplyMultiConfChangeShouldStop",
+      "target": "function:mock/mockstorage/storage_recorder.go:Close",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestApplyMultiConfChangeShouldStop",
+      "target": "function:mock/mockstorage/storage_recorder.go:NewStorageRecorder",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestApplyMultiConfChangeShouldStop",
+      "target": "function:etcdserver/zap_raft.go:Errorf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestSnapshotDisk",
+      "target": "function:mock/mockstorage/storage_recorder.go:Close",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestSnapshotDisk",
+      "target": "function:mock/mockstorage/storage_recorder.go:NewStorageRecorderStream",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestSnapshotDisk",
+      "target": "function:mock/mockstorage/storage_recorder.go:Close",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestSnapshotMemory",
+      "target": "function:mock/mockstorage/storage_recorder.go:Close",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestSnapshotMemory",
+      "target": "function:mock/mockstorage/storage_recorder.go:NewStorageRecorderStream",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestSnapshotMemory",
+      "target": "function:mock/mockstorage/storage_recorder.go:Close",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestSnapshotOrdering",
+      "target": "function:etcdserver/zap_raft.go:Fatalf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestSnapshotOrdering",
+      "target": "function:mock/mockstorage/storage_recorder.go:NewStorageRecorderStream",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestSnapshotOrdering",
+      "target": "function:features/etcd_features.go:NewDefaultServerFeatureGate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestSnapshotOrdering",
+      "target": "function:etcdserver/util_test.go:Stop",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestSnapshotOrdering",
+      "target": "function:etcdserver/zap_raft.go:Fatalf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestSnapshotOrdering",
+      "target": "function:etcdserver/zap_raft.go:Fatalf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestSnapshotOrdering",
+      "target": "function:etcdserver/zap_raft.go:Fatalf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestSnapshotOrdering",
+      "target": "function:etcdserver/zap_raft.go:Fatalf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestSnapshotOrdering",
+      "target": "function:etcdserver/zap_raft.go:Fatalf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestSnapshotOrdering",
+      "target": "function:etcdserver/zap_raft.go:Fatalf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestConcurrentApplyAndSnapshotV3",
+      "target": "function:etcdserver/zap_raft.go:Fatalf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestConcurrentApplyAndSnapshotV3",
+      "target": "function:mock/mockstorage/storage_recorder.go:NewStorageRecorder",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestConcurrentApplyAndSnapshotV3",
+      "target": "function:features/etcd_features.go:NewDefaultServerFeatureGate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestConcurrentApplyAndSnapshotV3",
+      "target": "function:etcdserver/util_test.go:Stop",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestConcurrentApplyAndSnapshotV3",
+      "target": "function:mock/mockwait/wait_recorder.go:Register",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestConcurrentApplyAndSnapshotV3",
+      "target": "function:etcdserver/zap_raft.go:Errorf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestConcurrentApplyAndSnapshotV3",
+      "target": "function:etcdserver/zap_raft.go:Errorf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestAddMember",
+      "target": "function:mock/mockstorage/storage_recorder.go:Close",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestAddMember",
+      "target": "function:mock/mockstorage/storage_recorder.go:NewStorageRecorder",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestAddMember",
+      "target": "function:proxy/grpcproxy/adapter/chan_stream.go:Context",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestAddMember",
+      "target": "function:etcdserver/util_test.go:Stop",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestAddMember",
+      "target": "function:etcdserver/zap_raft.go:Fatalf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestAddMember",
+      "target": "function:etcdserver/zap_raft.go:Errorf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestAddMember",
+      "target": "function:etcdserver/zap_raft.go:Errorf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestProcessIgnoreMismatchMessage",
+      "target": "function:mock/mockstorage/storage_recorder.go:Close",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestProcessIgnoreMismatchMessage",
+      "target": "function:etcdserver/util_test.go:Stop",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestProcessIgnoreMismatchMessage",
+      "target": "function:etcdserver/zap_raft.go:Fatalf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestProcessIgnoreMismatchMessage",
+      "target": "function:proxy/grpcproxy/adapter/chan_stream.go:Context",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestProcessIgnoreMismatchMessage",
+      "target": "function:etcdserver/zap_raft.go:Fatalf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestRemoveMember",
+      "target": "function:mock/mockstorage/storage_recorder.go:Close",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestRemoveMember",
+      "target": "function:mock/mockstorage/storage_recorder.go:NewStorageRecorder",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestRemoveMember",
+      "target": "function:proxy/grpcproxy/adapter/chan_stream.go:Context",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestRemoveMember",
+      "target": "function:etcdserver/util_test.go:Stop",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestRemoveMember",
+      "target": "function:etcdserver/zap_raft.go:Fatalf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestRemoveMember",
+      "target": "function:etcdserver/zap_raft.go:Errorf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestRemoveMember",
+      "target": "function:etcdserver/zap_raft.go:Errorf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestUpdateMember",
+      "target": "function:mock/mockstorage/storage_recorder.go:Close",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestUpdateMember",
+      "target": "function:mock/mockstorage/storage_recorder.go:NewStorageRecorder",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestUpdateMember",
+      "target": "function:proxy/grpcproxy/adapter/chan_stream.go:Context",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestUpdateMember",
+      "target": "function:etcdserver/util_test.go:Stop",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestUpdateMember",
+      "target": "function:etcdserver/zap_raft.go:Fatalf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestUpdateMember",
+      "target": "function:etcdserver/zap_raft.go:Errorf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestUpdateMember",
+      "target": "function:etcdserver/zap_raft.go:Errorf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestPublishV3",
+      "target": "function:proxy/grpcproxy/adapter/chan_stream.go:Context",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestPublishV3",
+      "target": "function:mock/mockstorage/storage_recorder.go:Close",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestPublishV3",
+      "target": "function:features/etcd_features.go:NewDefaultServerFeatureGate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestPublishV3",
+      "target": "function:mock/mockstorage/storage_recorder.go:NewStorageRecorder",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestPublishV3",
+      "target": "function:etcdserver/zap_raft.go:Fatalf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestPublishV3",
+      "target": "function:etcdserver/zap_raft.go:Fatalf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestPublishV3",
+      "target": "function:etcdserver/zap_raft.go:Fatalf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestPublishV3Stopped",
+      "target": "function:proxy/grpcproxy/adapter/chan_stream.go:Context",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestPublishV3Stopped",
+      "target": "function:mock/mockstorage/storage_recorder.go:NewStorageRecorder",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestPublishV3Stopped",
+      "target": "function:features/etcd_features.go:NewDefaultServerFeatureGate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestPublishV3Stopped",
+      "target": "function:mock/mockwait/wait_recorder.go:NewNop",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestPublishV3Stopped",
+      "target": "function:proxy/grpcproxy/watch.go:close",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestPublishV3Retry",
+      "target": "function:proxy/grpcproxy/adapter/chan_stream.go:Context",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestPublishV3Retry",
+      "target": "function:mock/mockstorage/storage_recorder.go:Close",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestPublishV3Retry",
+      "target": "function:features/etcd_features.go:NewDefaultServerFeatureGate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestPublishV3Retry",
+      "target": "function:mock/mockstorage/storage_recorder.go:NewStorageRecorder",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestPublishV3Retry",
+      "target": "function:mock/mockwait/wait_recorder.go:NewNop",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestPublishV3Retry",
+      "target": "function:proxy/grpcproxy/watch.go:close",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestPublishV3Retry",
+      "target": "function:etcdserver/zap_raft.go:Errorf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestPublishV3Retry",
+      "target": "function:proxy/grpcproxy/watch.go:close",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestUpdateVersionV3",
+      "target": "function:proxy/grpcproxy/adapter/chan_stream.go:Context",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestUpdateVersionV3",
+      "target": "function:mock/mockstorage/storage_recorder.go:Close",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestUpdateVersionV3",
+      "target": "function:features/etcd_features.go:NewDefaultServerFeatureGate",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestUpdateVersionV3",
+      "target": "function:mock/mockstorage/storage_recorder.go:NewStorageRecorder",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestUpdateVersionV3",
+      "target": "function:etcdserver/zap_raft.go:Fatalf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestUpdateVersionV3",
+      "target": "function:etcdserver/zap_raft.go:Fatalf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestUpdateVersionV3",
+      "target": "function:etcdserver/zap_raft.go:Fatalf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestStopNotify",
+      "target": "function:proxy/grpcproxy/watch.go:close",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestStopNotify",
+      "target": "function:etcdserver/zap_raft.go:Fatalf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestStopNotify",
+      "target": "function:etcdserver/util_test.go:Stop",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestStopNotify",
+      "target": "function:etcdserver/zap_raft.go:Fatalf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestGetOtherPeerURLs",
+      "target": "function:etcdserver/zap_raft.go:Errorf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestWaitAppliedIndex",
+      "target": "function:mock/mockwait/wait_recorder.go:Trigger",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/server_test.go:TestWaitAppliedIndex",
+      "target": "function:etcdserver/zap_raft.go:Errorf",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/snapshot_merge.go:createMergedSnapshotMessage",
+      "target": "function:proxy/grpcproxy/adapter/maintenance_client_adapter.go:Snapshot",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/snapshot_merge.go:newSnapshotReaderCloser",
+      "target": "function:etcdserver/zap_raft.go:Info",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/snapshot_merge.go:newSnapshotReaderCloser",
+      "target": "function:etcdserver/zap_raft.go:Error",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/snapshot_merge.go:newSnapshotReaderCloser",
+      "target": "function:mock/mockstorage/storage_recorder.go:Close",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/snapshot_merge.go:newSnapshotReaderCloser",
+      "target": "function:etcdserver/zap_raft.go:Panic",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdserver/snapshot_merge.go:newSnapshotReaderCloser",
+      "target": "function:etcdserver/zap_raft.go:Error",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/server_access_control.go",
+      "target": "file:etcdserver/server_access_control_test.go",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}
+

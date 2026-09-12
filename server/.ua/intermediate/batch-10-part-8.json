@@ -1,0 +1,21 @@
+{
+  "nodes": [
+    {
+      "id": "file:verify/doc.go",
+      "type": "file",
+      "name": "doc.go",
+      "filePath": "verify/doc.go",
+      "summary": "Documents the storage verification package.",
+      "tags": [
+        "documentation",
+        "verification",
+        "storage",
+        "consistency"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Go implementation using protobuf RPC types, raft interfaces, concurrency primitives, and Prometheus or zap integration where applicable."
+    }
+  ],
+  "edges": []
+}
+

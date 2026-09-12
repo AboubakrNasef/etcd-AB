@@ -1,0 +1,3280 @@
+{
+  "nodes": [
+    {
+      "id": "file:embed/config.go",
+      "type": "file",
+      "name": "config.go",
+      "filePath": "embed/config.go",
+      "summary": "Defines the embedded etcd configuration model, defaults, CLI/file loading, validation, URL derivation, discovery settings, and TLS helpers.",
+      "tags": [
+        "configuration",
+        "validation",
+        "cluster-bootstrap",
+        "tls"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Go package analyzed with tree-sitter structure and call-graph extraction."
+    },
+    {
+      "id": "class:embed/config.go:Config",
+      "type": "class",
+      "name": "Config",
+      "filePath": "embed/config.go",
+      "lineRange": [
+        165,
+        453
+      ],
+      "summary": "Configuration structure aggregating server, networking, security, storage, and cluster bootstrap settings.",
+      "tags": [
+        "configuration",
+        "validation",
+        "cluster-bootstrap",
+        "tls"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:embed/config.go:NewConfig",
+      "type": "function",
+      "name": "NewConfig",
+      "filePath": "embed/config.go",
+      "lineRange": [
+        492,
+        586
+      ],
+      "summary": "Function NewConfig implements a focused part of embed/config behavior.",
+      "tags": [
+        "configuration",
+        "validation",
+        "cluster-bootstrap",
+        "tls"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/config.go:AddFlags",
+      "type": "function",
+      "name": "AddFlags",
+      "filePath": "embed/config.go",
+      "lineRange": [
+        588,
+        756
+      ],
+      "summary": "Function AddFlags implements a focused part of embed/config behavior.",
+      "tags": [
+        "configuration",
+        "validation",
+        "cluster-bootstrap",
+        "tls"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:embed/config.go:ConfigFromFile",
+      "type": "function",
+      "name": "ConfigFromFile",
+      "filePath": "embed/config.go",
+      "lineRange": [
+        758,
+        764
+      ],
+      "summary": "Function ConfigFromFile implements a focused part of embed/config behavior.",
+      "tags": [
+        "configuration",
+        "validation",
+        "cluster-bootstrap",
+        "tls"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:embed/config.go:configFromFile",
+      "type": "function",
+      "name": "configFromFile",
+      "filePath": "embed/config.go",
+      "lineRange": [
+        766,
+        898
+      ],
+      "summary": "Function configFromFile implements a focused part of embed/config behavior.",
+      "tags": [
+        "configuration",
+        "validation",
+        "cluster-bootstrap",
+        "tls"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:embed/config.go:updateCipherSuites",
+      "type": "function",
+      "name": "updateCipherSuites",
+      "filePath": "embed/config.go",
+      "lineRange": [
+        900,
+        912
+      ],
+      "summary": "Function updateCipherSuites implements a focused part of embed/config behavior.",
+      "tags": [
+        "configuration",
+        "validation",
+        "cluster-bootstrap",
+        "tls"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:embed/config.go:updateMinMaxVersions",
+      "type": "function",
+      "name": "updateMinMaxVersions",
+      "filePath": "embed/config.go",
+      "lineRange": [
+        914,
+        923
+      ],
+      "summary": "Function updateMinMaxVersions implements a focused part of embed/config behavior.",
+      "tags": [
+        "configuration",
+        "validation",
+        "cluster-bootstrap",
+        "tls"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:embed/config.go:Validate",
+      "type": "function",
+      "name": "Validate",
+      "filePath": "embed/config.go",
+      "lineRange": [
+        926,
+        1058
+      ],
+      "summary": "Function Validate implements a focused part of embed/config behavior.",
+      "tags": [
+        "configuration",
+        "validation",
+        "cluster-bootstrap",
+        "tls"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:embed/config.go:PeerURLsMapAndToken",
+      "type": "function",
+      "name": "PeerURLsMapAndToken",
+      "filePath": "embed/config.go",
+      "lineRange": [
+        1061,
+        1101
+      ],
+      "summary": "Function PeerURLsMapAndToken implements a focused part of embed/config behavior.",
+      "tags": [
+        "configuration",
+        "validation",
+        "cluster-bootstrap",
+        "tls"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/config.go:GetDNSClusterNames",
+      "type": "function",
+      "name": "GetDNSClusterNames",
+      "filePath": "embed/config.go",
+      "lineRange": [
+        1108,
+        1153
+      ],
+      "summary": "Function GetDNSClusterNames implements a focused part of embed/config behavior.",
+      "tags": [
+        "configuration",
+        "validation",
+        "cluster-bootstrap",
+        "tls"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/config.go:InitialClusterFromName",
+      "type": "function",
+      "name": "InitialClusterFromName",
+      "filePath": "embed/config.go",
+      "lineRange": [
+        1155,
+        1167
+      ],
+      "summary": "Function InitialClusterFromName implements a focused part of embed/config behavior.",
+      "tags": [
+        "configuration",
+        "validation",
+        "cluster-bootstrap",
+        "tls"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:embed/config.go:InferLocalAddr",
+      "type": "function",
+      "name": "InferLocalAddr",
+      "filePath": "embed/config.go",
+      "lineRange": [
+        1174,
+        1201
+      ],
+      "summary": "Function InferLocalAddr implements a focused part of embed/config behavior.",
+      "tags": [
+        "configuration",
+        "validation",
+        "cluster-bootstrap",
+        "tls"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:embed/config.go:IsNewCluster",
+      "type": "function",
+      "name": "IsNewCluster",
+      "filePath": "embed/config.go",
+      "lineRange": [
+        1203,
+        1203
+      ],
+      "summary": "Function IsNewCluster implements a focused part of embed/config behavior.",
+      "tags": [
+        "configuration",
+        "validation",
+        "cluster-bootstrap",
+        "tls"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:embed/config.go:ElectionTicks",
+      "type": "function",
+      "name": "ElectionTicks",
+      "filePath": "embed/config.go",
+      "lineRange": [
+        1204,
+        1204
+      ],
+      "summary": "Function ElectionTicks implements a focused part of embed/config behavior.",
+      "tags": [
+        "configuration",
+        "validation",
+        "cluster-bootstrap",
+        "tls"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:embed/config.go:ClientSelfCert",
+      "type": "function",
+      "name": "ClientSelfCert",
+      "filePath": "embed/config.go",
+      "lineRange": [
+        1214,
+        1234
+      ],
+      "summary": "Function ClientSelfCert implements a focused part of embed/config behavior.",
+      "tags": [
+        "configuration",
+        "validation",
+        "cluster-bootstrap",
+        "tls"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:embed/config.go:PeerSelfCert",
+      "type": "function",
+      "name": "PeerSelfCert",
+      "filePath": "embed/config.go",
+      "lineRange": [
+        1236,
+        1253
+      ],
+      "summary": "Function PeerSelfCert implements a focused part of embed/config behavior.",
+      "tags": [
+        "configuration",
+        "validation",
+        "cluster-bootstrap",
+        "tls"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:embed/config.go:UpdateDefaultClusterFromName",
+      "type": "function",
+      "name": "UpdateDefaultClusterFromName",
+      "filePath": "embed/config.go",
+      "lineRange": [
+        1263,
+        1293
+      ],
+      "summary": "Function UpdateDefaultClusterFromName implements a focused part of embed/config behavior.",
+      "tags": [
+        "configuration",
+        "validation",
+        "cluster-bootstrap",
+        "tls"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/config.go:checkBindURLs",
+      "type": "function",
+      "name": "checkBindURLs",
+      "filePath": "embed/config.go",
+      "lineRange": [
+        1296,
+        1315
+      ],
+      "summary": "Function checkBindURLs implements a focused part of embed/config behavior.",
+      "tags": [
+        "configuration",
+        "validation",
+        "cluster-bootstrap",
+        "tls"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:embed/config.go:checkHostURLs",
+      "type": "function",
+      "name": "checkHostURLs",
+      "filePath": "embed/config.go",
+      "lineRange": [
+        1317,
+        1331
+      ],
+      "summary": "Function checkHostURLs implements a focused part of embed/config behavior.",
+      "tags": [
+        "configuration",
+        "validation",
+        "cluster-bootstrap",
+        "tls"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:embed/etcd.go",
+      "type": "file",
+      "name": "etcd.go",
+      "filePath": "embed/etcd.go",
+      "summary": "Owns the embedded etcd server lifecycle, constructing the server from configuration, starting listeners and services, and coordinating shutdown.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Go package analyzed with tree-sitter structure and call-graph extraction."
+    },
+    {
+      "id": "class:embed/etcd.go:Etcd",
+      "type": "class",
+      "name": "Etcd",
+      "filePath": "embed/etcd.go",
+      "lineRange": [
+        70,
+        99
+      ],
+      "summary": "Type Etcd implements a focused part of embed/etcd behavior.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/etcd.go:StartEtcd",
+      "type": "function",
+      "name": "StartEtcd",
+      "filePath": "embed/etcd.go",
+      "lineRange": [
+        110,
+        303
+      ],
+      "summary": "Function StartEtcd implements a focused part of embed/etcd behavior.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:embed/etcd.go:print",
+      "type": "function",
+      "name": "print",
+      "filePath": "embed/etcd.go",
+      "lineRange": [
+        305,
+        385
+      ],
+      "summary": "Function print implements a focused part of embed/etcd behavior.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/etcd.go:Config",
+      "type": "function",
+      "name": "Config",
+      "filePath": "embed/etcd.go",
+      "lineRange": [
+        388,
+        390
+      ],
+      "summary": "Configuration structure aggregating server, networking, security, storage, and cluster bootstrap settings.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:embed/etcd.go:Close",
+      "type": "function",
+      "name": "Close",
+      "filePath": "embed/etcd.go",
+      "lineRange": [
+        413,
+        485
+      ],
+      "summary": "Function Close implements a focused part of embed/etcd behavior.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/etcd.go:stopServers",
+      "type": "function",
+      "name": "stopServers",
+      "filePath": "embed/etcd.go",
+      "lineRange": [
+        487,
+        522
+      ],
+      "summary": "Function stopServers implements a focused part of embed/etcd behavior.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/etcd.go:Err",
+      "type": "function",
+      "name": "Err",
+      "filePath": "embed/etcd.go",
+      "lineRange": [
+        526,
+        528
+      ],
+      "summary": "Function Err implements a focused part of embed/etcd behavior.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:embed/etcd.go:configurePeerListeners",
+      "type": "function",
+      "name": "configurePeerListeners",
+      "filePath": "embed/etcd.go",
+      "lineRange": [
+        530,
+        590
+      ],
+      "summary": "Function configurePeerListeners implements a focused part of embed/etcd behavior.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/etcd.go:servePeers",
+      "type": "function",
+      "name": "servePeers",
+      "filePath": "embed/etcd.go",
+      "lineRange": [
+        593,
+        642
+      ],
+      "summary": "Function servePeers implements a focused part of embed/etcd behavior.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/etcd.go:configureClientListeners",
+      "type": "function",
+      "name": "configureClientListeners",
+      "filePath": "embed/etcd.go",
+      "lineRange": [
+        644,
+        746
+      ],
+      "summary": "Function configureClientListeners implements a focused part of embed/etcd behavior.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:embed/etcd.go:resolveURL",
+      "type": "function",
+      "name": "resolveURL",
+      "filePath": "embed/etcd.go",
+      "lineRange": [
+        748,
+        757
+      ],
+      "summary": "Function resolveURL implements a focused part of embed/etcd behavior.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:embed/etcd.go:serveClients",
+      "type": "function",
+      "name": "serveClients",
+      "filePath": "embed/etcd.go",
+      "lineRange": [
+        759,
+        805
+      ],
+      "summary": "Function serveClients implements a focused part of embed/etcd behavior.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/etcd.go:grpcGatewayDial",
+      "type": "function",
+      "name": "grpcGatewayDial",
+      "filePath": "embed/etcd.go",
+      "lineRange": [
+        807,
+        841
+      ],
+      "summary": "Function grpcGatewayDial implements a focused part of embed/etcd behavior.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/etcd.go:createMetricsListener",
+      "type": "function",
+      "name": "createMetricsListener",
+      "filePath": "embed/etcd.go",
+      "lineRange": [
+        854,
+        868
+      ],
+      "summary": "Function createMetricsListener implements a focused part of embed/etcd behavior.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:embed/etcd.go:serveMetrics",
+      "type": "function",
+      "name": "serveMetrics",
+      "filePath": "embed/etcd.go",
+      "lineRange": [
+        870,
+        894
+      ],
+      "summary": "Function serveMetrics implements a focused part of embed/etcd behavior.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:embed/etcd.go:errHandler",
+      "type": "function",
+      "name": "errHandler",
+      "filePath": "embed/etcd.go",
+      "lineRange": [
+        905,
+        918
+      ],
+      "summary": "HTTP handler or constructor that exposes server behavior through the peer API.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:embed/etcd.go:GetLogger",
+      "type": "function",
+      "name": "GetLogger",
+      "filePath": "embed/etcd.go",
+      "lineRange": [
+        921,
+        926
+      ],
+      "summary": "Function GetLogger implements a focused part of embed/etcd behavior.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:embed/etcd.go:parseCompactionRetention",
+      "type": "function",
+      "name": "parseCompactionRetention",
+      "filePath": "embed/etcd.go",
+      "lineRange": [
+        928,
+        947
+      ],
+      "summary": "Function parseCompactionRetention implements a focused part of embed/etcd behavior.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:embed/serve.go",
+      "type": "file",
+      "name": "serve.go",
+      "filePath": "embed/serve.go",
+      "summary": "Builds and serves the embedded etcd HTTP and gRPC endpoints, including CORS wrapping and request logging helpers.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Go package analyzed with tree-sitter structure and call-graph extraction."
+    },
+    {
+      "id": "class:embed/serve.go:serveCtx",
+      "type": "class",
+      "name": "serveCtx",
+      "filePath": "embed/serve.go",
+      "lineRange": [
+        54,
+        82
+      ],
+      "summary": "Type serveCtx implements a focused part of embed/serve behavior.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:embed/serve.go:wsProxyZapLogger",
+      "type": "class",
+      "name": "wsProxyZapLogger",
+      "filePath": "embed/serve.go",
+      "lineRange": [
+        388,
+        390
+      ],
+      "summary": "Type wsProxyZapLogger implements a focused part of embed/serve behavior.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/serve.go:startHandler",
+      "type": "function",
+      "name": "startHandler",
+      "filePath": "embed/serve.go",
+      "lineRange": [
+        84,
+        94
+      ],
+      "summary": "HTTP handler or constructor that exposes server behavior through the peer API.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:embed/serve.go:newServeCtx",
+      "type": "function",
+      "name": "newServeCtx",
+      "filePath": "embed/serve.go",
+      "lineRange": [
+        102,
+        114
+      ],
+      "summary": "Function newServeCtx implements a focused part of embed/serve behavior.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:embed/serve.go:serve",
+      "type": "function",
+      "name": "serve",
+      "filePath": "embed/serve.go",
+      "lineRange": [
+        119,
+        305
+      ],
+      "summary": "Function serve implements a focused part of embed/serve behavior.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:embed/serve.go:grpcHandlerFunc",
+      "type": "function",
+      "name": "grpcHandlerFunc",
+      "filePath": "embed/serve.go",
+      "lineRange": [
+        316,
+        329
+      ],
+      "summary": "HTTP handler or constructor that exposes server behavior through the peer API.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:embed/serve.go:registerGateway",
+      "type": "function",
+      "name": "registerGateway",
+      "filePath": "embed/serve.go",
+      "lineRange": [
+        333,
+        386
+      ],
+      "summary": "Function registerGateway implements a focused part of embed/serve behavior.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/serve.go:Warnln",
+      "type": "function",
+      "name": "Warnln",
+      "filePath": "embed/serve.go",
+      "lineRange": [
+        392,
+        394
+      ],
+      "summary": "Function Warnln implements a focused part of embed/serve behavior.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:embed/serve.go:Debugln",
+      "type": "function",
+      "name": "Debugln",
+      "filePath": "embed/serve.go",
+      "lineRange": [
+        396,
+        398
+      ],
+      "summary": "Function Debugln implements a focused part of embed/serve behavior.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:embed/serve.go:createMux",
+      "type": "function",
+      "name": "createMux",
+      "filePath": "embed/serve.go",
+      "lineRange": [
+        400,
+        427
+      ],
+      "summary": "Function createMux implements a focused part of embed/serve behavior.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:embed/serve.go:ServeHTTP",
+      "type": "function",
+      "name": "ServeHTTP",
+      "filePath": "embed/serve.go",
+      "lineRange": [
+        446,
+        492
+      ],
+      "summary": "HTTP handler or constructor that exposes server behavior through the peer API.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:embed/serve.go:errCVE20185702",
+      "type": "function",
+      "name": "errCVE20185702",
+      "filePath": "embed/serve.go",
+      "lineRange": [
+        502,
+        513
+      ],
+      "summary": "Function errCVE20185702 implements a focused part of embed/serve behavior.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:embed/serve.go:WrapCORS",
+      "type": "function",
+      "name": "WrapCORS",
+      "filePath": "embed/serve.go",
+      "lineRange": [
+        517,
+        522
+      ],
+      "summary": "Function WrapCORS implements a focused part of embed/serve behavior.",
+      "tags": [
+        "server",
+        "api",
+        "etcd"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:etcdmain/config.go",
+      "type": "file",
+      "name": "config.go",
+      "filePath": "etcdmain/config.go",
+      "summary": "Defines the command-line etcd configuration wrapper and flag parsing used to translate process arguments into server settings.",
+      "tags": [
+        "configuration",
+        "validation",
+        "cluster-bootstrap",
+        "tls"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Go package analyzed with tree-sitter structure and call-graph extraction."
+    },
+    {
+      "id": "class:etcdmain/config.go:config",
+      "type": "class",
+      "name": "config",
+      "filePath": "etcdmain/config.go",
+      "lineRange": [
+        61,
+        67
+      ],
+      "summary": "Type config implements a focused part of etcdmain/config behavior.",
+      "tags": [
+        "configuration",
+        "validation",
+        "cluster-bootstrap",
+        "tls"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/config.go:newConfig",
+      "type": "function",
+      "name": "newConfig",
+      "filePath": "etcdmain/config.go",
+      "lineRange": [
+        76,
+        107
+      ],
+      "summary": "Function newConfig implements a focused part of etcdmain/config behavior.",
+      "tags": [
+        "configuration",
+        "validation",
+        "cluster-bootstrap",
+        "tls"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/config.go:parse",
+      "type": "function",
+      "name": "parse",
+      "filePath": "etcdmain/config.go",
+      "lineRange": [
+        109,
+        155
+      ],
+      "summary": "Function parse implements a focused part of etcdmain/config behavior.",
+      "tags": [
+        "configuration",
+        "validation",
+        "cluster-bootstrap",
+        "tls"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/config.go:configFromCmdLine",
+      "type": "function",
+      "name": "configFromCmdLine",
+      "filePath": "etcdmain/config.go",
+      "lineRange": [
+        157,
+        229
+      ],
+      "summary": "Function configFromCmdLine implements a focused part of etcdmain/config behavior.",
+      "tags": [
+        "configuration",
+        "validation",
+        "cluster-bootstrap",
+        "tls"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:embed/config.go",
+      "target": "class:embed/config.go:Config",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "class:embed/config.go:Config",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "function:embed/config.go:NewConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "function:embed/config.go:NewConfig",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "function:embed/config.go:AddFlags",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "function:embed/config.go:AddFlags",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "function:embed/config.go:ConfigFromFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "function:embed/config.go:ConfigFromFile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "function:embed/config.go:configFromFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "function:embed/config.go:updateCipherSuites",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "function:embed/config.go:updateMinMaxVersions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "function:embed/config.go:Validate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "function:embed/config.go:Validate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "function:embed/config.go:PeerURLsMapAndToken",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "function:embed/config.go:PeerURLsMapAndToken",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "function:embed/config.go:GetDNSClusterNames",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "function:embed/config.go:GetDNSClusterNames",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "function:embed/config.go:InitialClusterFromName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "function:embed/config.go:InitialClusterFromName",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "function:embed/config.go:InferLocalAddr",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "function:embed/config.go:InferLocalAddr",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "function:embed/config.go:IsNewCluster",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "function:embed/config.go:IsNewCluster",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "function:embed/config.go:ElectionTicks",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "function:embed/config.go:ElectionTicks",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "function:embed/config.go:ClientSelfCert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "function:embed/config.go:ClientSelfCert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "function:embed/config.go:PeerSelfCert",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "function:embed/config.go:PeerSelfCert",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "function:embed/config.go:UpdateDefaultClusterFromName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "function:embed/config.go:UpdateDefaultClusterFromName",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "function:embed/config.go:checkBindURLs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "function:embed/config.go:checkHostURLs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/adapters.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/membership/cluster.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/membership/cluster_opts.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/membership/cluster_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/membership/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/membership/errors.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/membership/member.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/membership/member_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/membership/membership_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/membership/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/membership/store.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/membership/storev2.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/membership/storev2_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/rafthttp/coder.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/rafthttp/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/rafthttp/fake_roundtripper_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/rafthttp/functional_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/rafthttp/http.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/rafthttp/http_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/rafthttp/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/rafthttp/msg_codec.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/rafthttp/msg_codec_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/rafthttp/msgappv2_codec.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/rafthttp/msgappv2_codec_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/rafthttp/peer.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/rafthttp/peer_status.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/rafthttp/peer_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/rafthttp/pipeline.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/rafthttp/pipeline_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/rafthttp/probing_status.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/rafthttp/remote.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/rafthttp/snapshot_sender.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/rafthttp/snapshot_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/rafthttp/stream.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/rafthttp/stream_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/rafthttp/transport.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/rafthttp/transport_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/rafthttp/transport_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/rafthttp/urlpick.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/rafthttp/urlpick_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/rafthttp/util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/rafthttp/util_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/v3compactor/compactor.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/v3compactor/compactor_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/v3compactor/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/v3compactor/periodic.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/v3compactor/periodic_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/v3compactor/revision.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/v3compactor/revision_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/v3discovery/discovery.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/api/v3discovery/discovery_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/bootstrap.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/bootstrap_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/cluster_util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/cluster_util_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/corrupt.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/corrupt_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/interface.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/raft.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/raft_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/server.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/server_access_control.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/server_access_control_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/server_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/snapshot_merge.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/tracing.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/util_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/v3_server.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/zap_raft.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:etcdserver/zap_raft_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/config.go",
+      "target": "file:features/etcd_features.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "class:embed/etcd.go:Etcd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "class:embed/etcd.go:Etcd",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "function:embed/etcd.go:StartEtcd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "function:embed/etcd.go:StartEtcd",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "function:embed/etcd.go:print",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "function:embed/etcd.go:Config",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "function:embed/etcd.go:Config",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "function:embed/etcd.go:Close",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "function:embed/etcd.go:Close",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "function:embed/etcd.go:stopServers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "function:embed/etcd.go:Err",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "function:embed/etcd.go:Err",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "function:embed/etcd.go:configurePeerListeners",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "function:embed/etcd.go:servePeers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "function:embed/etcd.go:configureClientListeners",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "function:embed/etcd.go:resolveURL",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "function:embed/etcd.go:serveClients",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "function:embed/etcd.go:grpcGatewayDial",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "function:embed/etcd.go:createMetricsListener",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "function:embed/etcd.go:serveMetrics",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "function:embed/etcd.go:errHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "function:embed/etcd.go:GetLogger",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "function:embed/etcd.go:GetLogger",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "function:embed/etcd.go:parseCompactionRetention",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:config/config.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:config/config_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/adapters.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/etcdhttp/debug.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/etcdhttp/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/etcdhttp/health.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/etcdhttp/health_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/etcdhttp/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/etcdhttp/peer.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/etcdhttp/peer_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/etcdhttp/utils.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/etcdhttp/version.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/etcdhttp/version_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/rafthttp/coder.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/rafthttp/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/rafthttp/fake_roundtripper_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/rafthttp/functional_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/rafthttp/http.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/rafthttp/http_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/rafthttp/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/rafthttp/msg_codec.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/rafthttp/msg_codec_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/rafthttp/msgappv2_codec.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/rafthttp/msgappv2_codec_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/rafthttp/peer.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/rafthttp/peer_status.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/rafthttp/peer_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/rafthttp/pipeline.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/rafthttp/pipeline_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/rafthttp/probing_status.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/rafthttp/remote.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/rafthttp/snapshot_sender.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/rafthttp/snapshot_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/rafthttp/stream.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/rafthttp/stream_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/rafthttp/transport.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/rafthttp/transport_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/rafthttp/transport_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/rafthttp/urlpick.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/rafthttp/urlpick_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/rafthttp/util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/api/rafthttp/util_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/bootstrap.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/bootstrap_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/cluster_util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/cluster_util_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/corrupt.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/corrupt_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/interface.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/raft.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/raft_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/server.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/server_access_control.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/server_access_control_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/server_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/snapshot_merge.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/tracing.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/util_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/v3_server.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/zap_raft.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:etcdserver/zap_raft_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:features/etcd_features.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:storage/backend.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:storage/hooks.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:storage/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:storage/quota.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:storage/quota_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:storage/storage.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:storage/util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:verify/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/etcd.go",
+      "target": "file:verify/verify.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "class:embed/serve.go:serveCtx",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "class:embed/serve.go:wsProxyZapLogger",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "function:embed/serve.go:startHandler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "function:embed/serve.go:newServeCtx",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "function:embed/serve.go:serve",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "function:embed/serve.go:grpcHandlerFunc",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "function:embed/serve.go:registerGateway",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "function:embed/serve.go:Warnln",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "function:embed/serve.go:Warnln",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "function:embed/serve.go:Debugln",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "function:embed/serve.go:Debugln",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "function:embed/serve.go:createMux",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "function:embed/serve.go:ServeHTTP",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "function:embed/serve.go:ServeHTTP",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "function:embed/serve.go:errCVE20185702",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "function:embed/serve.go:WrapCORS",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "function:embed/serve.go:WrapCORS",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:config/config.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:config/config_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/adapters.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/api/v3client/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/api/v3client/v3client.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/api/v3election/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/api/v3election/election.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/api/v3election/v3electionpb/gw/v3election.pb.gw.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/api/v3election/v3electionpb/v3election_grpc.pb.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/api/v3lock/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/api/v3lock/lock.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/api/v3lock/v3lockpb/gw/v3lock.pb.gw.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/api/v3lock/v3lockpb/v3lock.pb.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/api/v3lock/v3lockpb/v3lock_grpc.pb.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/api/v3rpc/auth.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/api/v3rpc/codec.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/api/v3rpc/grpc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/api/v3rpc/header.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/api/v3rpc/health.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/api/v3rpc/interceptor.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/api/v3rpc/key.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/api/v3rpc/key_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/api/v3rpc/lease.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/api/v3rpc/maintenance.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/api/v3rpc/member.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/api/v3rpc/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/api/v3rpc/quota.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/api/v3rpc/util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/api/v3rpc/util_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/api/v3rpc/validationfuzz_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/api/v3rpc/watch.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/api/v3rpc/watch_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/bootstrap.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/bootstrap_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/cluster_util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/cluster_util_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/corrupt.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/corrupt_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/interface.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/raft.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/raft_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/server.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/server_access_control.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/server_access_control_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/server_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/snapshot_merge.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/tracing.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/util_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/v3_server.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/zap_raft.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:embed/serve.go",
+      "target": "file:etcdserver/zap_raft_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "class:etcdmain/config.go:config",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "function:etcdmain/config.go:newConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "function:etcdmain/config.go:parse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "function:etcdmain/config.go:configFromCmdLine",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:embed/auth_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:embed/config.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:embed/config_logging.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:embed/config_logging_journal_unix.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:embed/config_logging_journal_windows.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:embed/config_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:embed/config_tracing.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:embed/config_tracing_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:embed/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:embed/etcd.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:embed/etcd_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:embed/serve.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:embed/serve_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:embed/util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:embed/util_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:etcdserver/api/rafthttp/coder.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:etcdserver/api/rafthttp/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:etcdserver/api/rafthttp/fake_roundtripper_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:etcdserver/api/rafthttp/functional_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:etcdserver/api/rafthttp/http.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:etcdserver/api/rafthttp/http_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:etcdserver/api/rafthttp/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:etcdserver/api/rafthttp/msg_codec.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:etcdserver/api/rafthttp/msg_codec_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:etcdserver/api/rafthttp/msgappv2_codec.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:etcdserver/api/rafthttp/msgappv2_codec_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:etcdserver/api/rafthttp/peer.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:etcdserver/api/rafthttp/peer_status.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:etcdserver/api/rafthttp/peer_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:etcdserver/api/rafthttp/pipeline.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:etcdserver/api/rafthttp/pipeline_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:etcdserver/api/rafthttp/probing_status.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:etcdserver/api/rafthttp/remote.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:etcdserver/api/rafthttp/snapshot_sender.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:etcdserver/api/rafthttp/snapshot_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:etcdserver/api/rafthttp/stream.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:etcdserver/api/rafthttp/stream_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:etcdserver/api/rafthttp/transport.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:etcdserver/api/rafthttp/transport_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:etcdserver/api/rafthttp/transport_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:etcdserver/api/rafthttp/urlpick.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:etcdserver/api/rafthttp/urlpick_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:etcdserver/api/rafthttp/util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/config.go",
+      "target": "file:etcdserver/api/rafthttp/util_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

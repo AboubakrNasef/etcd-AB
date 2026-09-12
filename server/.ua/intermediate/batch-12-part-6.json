@@ -1,0 +1,2247 @@
+{
+  "nodes": [
+    {
+      "id": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "type": "file",
+      "name": "v3election.pb.go",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "summary": "Generated protobuf message and descriptor code for the v3 election API.",
+      "tags": [
+        "type-definition",
+        "serialization",
+        "generated-code",
+        "election"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Generated Go bindings expose protobuf or gRPC-Gateway APIs and should be treated as generated surface code."
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Reset",
+      "type": "function",
+      "name": "Reset",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        43,
+        48
+      ],
+      "summary": "Generated Reset method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "function",
+      "name": "String",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        50,
+        52
+      ],
+      "summary": "Generated String method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoMessage",
+      "type": "function",
+      "name": "ProtoMessage",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        54,
+        54
+      ],
+      "summary": "Generated ProtoMessage method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoReflect",
+      "type": "function",
+      "name": "ProtoReflect",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        56,
+        66
+      ],
+      "summary": "Generated ProtoReflect method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Descriptor",
+      "type": "function",
+      "name": "Descriptor",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        69,
+        71
+      ],
+      "summary": "Generated Descriptor method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetName",
+      "type": "function",
+      "name": "GetName",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        73,
+        78
+      ],
+      "summary": "Generated GetName method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetLease",
+      "type": "function",
+      "name": "GetLease",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        80,
+        85
+      ],
+      "summary": "Generated GetLease method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetValue",
+      "type": "function",
+      "name": "GetValue",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        87,
+        92
+      ],
+      "summary": "Generated GetValue method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Reset",
+      "type": "function",
+      "name": "Reset",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        103,
+        108
+      ],
+      "summary": "Generated Reset method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "function",
+      "name": "String",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        110,
+        112
+      ],
+      "summary": "Generated String method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoMessage",
+      "type": "function",
+      "name": "ProtoMessage",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        114,
+        114
+      ],
+      "summary": "Generated ProtoMessage method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoReflect",
+      "type": "function",
+      "name": "ProtoReflect",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        116,
+        126
+      ],
+      "summary": "Generated ProtoReflect method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Descriptor",
+      "type": "function",
+      "name": "Descriptor",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        129,
+        131
+      ],
+      "summary": "Generated Descriptor method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetHeader",
+      "type": "function",
+      "name": "GetHeader",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        133,
+        138
+      ],
+      "summary": "Generated GetHeader method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetLeader",
+      "type": "function",
+      "name": "GetLeader",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        140,
+        145
+      ],
+      "summary": "Generated GetLeader method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Reset",
+      "type": "function",
+      "name": "Reset",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        164,
+        169
+      ],
+      "summary": "Generated Reset method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "function",
+      "name": "String",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        171,
+        173
+      ],
+      "summary": "Generated String method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoMessage",
+      "type": "function",
+      "name": "ProtoMessage",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        175,
+        175
+      ],
+      "summary": "Generated ProtoMessage method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoReflect",
+      "type": "function",
+      "name": "ProtoReflect",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        177,
+        187
+      ],
+      "summary": "Generated ProtoReflect method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Descriptor",
+      "type": "function",
+      "name": "Descriptor",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        190,
+        192
+      ],
+      "summary": "Generated Descriptor method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetName",
+      "type": "function",
+      "name": "GetName",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        194,
+        199
+      ],
+      "summary": "Generated GetName method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetKey",
+      "type": "function",
+      "name": "GetKey",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        201,
+        206
+      ],
+      "summary": "Generated GetKey method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetRev",
+      "type": "function",
+      "name": "GetRev",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        208,
+        213
+      ],
+      "summary": "Generated GetRev method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetLease",
+      "type": "function",
+      "name": "GetLease",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        215,
+        220
+      ],
+      "summary": "Generated GetLease method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Reset",
+      "type": "function",
+      "name": "Reset",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        230,
+        235
+      ],
+      "summary": "Generated Reset method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "function",
+      "name": "String",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        237,
+        239
+      ],
+      "summary": "Generated String method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoMessage",
+      "type": "function",
+      "name": "ProtoMessage",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        241,
+        241
+      ],
+      "summary": "Generated ProtoMessage method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoReflect",
+      "type": "function",
+      "name": "ProtoReflect",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        243,
+        253
+      ],
+      "summary": "Generated ProtoReflect method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Descriptor",
+      "type": "function",
+      "name": "Descriptor",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        256,
+        258
+      ],
+      "summary": "Generated Descriptor method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetName",
+      "type": "function",
+      "name": "GetName",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        260,
+        265
+      ],
+      "summary": "Generated GetName method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Reset",
+      "type": "function",
+      "name": "Reset",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        276,
+        281
+      ],
+      "summary": "Generated Reset method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "function",
+      "name": "String",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        283,
+        285
+      ],
+      "summary": "Generated String method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoMessage",
+      "type": "function",
+      "name": "ProtoMessage",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        287,
+        287
+      ],
+      "summary": "Generated ProtoMessage method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoReflect",
+      "type": "function",
+      "name": "ProtoReflect",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        289,
+        299
+      ],
+      "summary": "Generated ProtoReflect method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Descriptor",
+      "type": "function",
+      "name": "Descriptor",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        302,
+        304
+      ],
+      "summary": "Generated Descriptor method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetHeader",
+      "type": "function",
+      "name": "GetHeader",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        306,
+        311
+      ],
+      "summary": "Generated GetHeader method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetKv",
+      "type": "function",
+      "name": "GetKv",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        313,
+        318
+      ],
+      "summary": "Generated GetKv method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Reset",
+      "type": "function",
+      "name": "Reset",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        328,
+        333
+      ],
+      "summary": "Generated Reset method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "function",
+      "name": "String",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        335,
+        337
+      ],
+      "summary": "Generated String method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoMessage",
+      "type": "function",
+      "name": "ProtoMessage",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        339,
+        339
+      ],
+      "summary": "Generated ProtoMessage method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoReflect",
+      "type": "function",
+      "name": "ProtoReflect",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        341,
+        351
+      ],
+      "summary": "Generated ProtoReflect method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Descriptor",
+      "type": "function",
+      "name": "Descriptor",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        354,
+        356
+      ],
+      "summary": "Generated Descriptor method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetLeader",
+      "type": "function",
+      "name": "GetLeader",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        358,
+        363
+      ],
+      "summary": "Generated GetLeader method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Reset",
+      "type": "function",
+      "name": "Reset",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        372,
+        377
+      ],
+      "summary": "Generated Reset method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "function",
+      "name": "String",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        379,
+        381
+      ],
+      "summary": "Generated String method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoMessage",
+      "type": "function",
+      "name": "ProtoMessage",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        383,
+        383
+      ],
+      "summary": "Generated ProtoMessage method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoReflect",
+      "type": "function",
+      "name": "ProtoReflect",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        385,
+        395
+      ],
+      "summary": "Generated ProtoReflect method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Descriptor",
+      "type": "function",
+      "name": "Descriptor",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        398,
+        400
+      ],
+      "summary": "Generated Descriptor method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetHeader",
+      "type": "function",
+      "name": "GetHeader",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        402,
+        407
+      ],
+      "summary": "Generated GetHeader method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Reset",
+      "type": "function",
+      "name": "Reset",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        419,
+        424
+      ],
+      "summary": "Generated Reset method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "function",
+      "name": "String",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        426,
+        428
+      ],
+      "summary": "Generated String method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoMessage",
+      "type": "function",
+      "name": "ProtoMessage",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        430,
+        430
+      ],
+      "summary": "Generated ProtoMessage method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoReflect",
+      "type": "function",
+      "name": "ProtoReflect",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        432,
+        442
+      ],
+      "summary": "Generated ProtoReflect method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Descriptor",
+      "type": "function",
+      "name": "Descriptor",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        445,
+        447
+      ],
+      "summary": "Generated Descriptor method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetLeader",
+      "type": "function",
+      "name": "GetLeader",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        449,
+        454
+      ],
+      "summary": "Generated GetLeader method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetValue",
+      "type": "function",
+      "name": "GetValue",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        456,
+        461
+      ],
+      "summary": "Generated GetValue method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Reset",
+      "type": "function",
+      "name": "Reset",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        470,
+        475
+      ],
+      "summary": "Generated Reset method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "function",
+      "name": "String",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        477,
+        479
+      ],
+      "summary": "Generated String method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoMessage",
+      "type": "function",
+      "name": "ProtoMessage",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        481,
+        481
+      ],
+      "summary": "Generated ProtoMessage method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoReflect",
+      "type": "function",
+      "name": "ProtoReflect",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        483,
+        493
+      ],
+      "summary": "Generated ProtoReflect method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Descriptor",
+      "type": "function",
+      "name": "Descriptor",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        496,
+        498
+      ],
+      "summary": "Generated Descriptor method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetHeader",
+      "type": "function",
+      "name": "GetHeader",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        500,
+        505
+      ],
+      "summary": "Generated GetHeader method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:file_v3election_proto_init",
+      "type": "function",
+      "name": "file_v3election_proto_init",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        598,
+        619
+      ],
+      "summary": "Generated file_v3election_proto_init method or binding supporting the v3 election protobuf API.",
+      "tags": [
+        "generated-code",
+        "serialization",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/api/v3election/v3electionpb/v3election.pb.go:CampaignRequest",
+      "type": "class",
+      "name": "CampaignRequest",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        28,
+        41
+      ],
+      "summary": "Defines CampaignRequest, a server component used by the etcd election APIs.",
+      "tags": [
+        "server",
+        "component",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/api/v3election/v3electionpb/v3election.pb.go:CampaignResponse",
+      "type": "class",
+      "name": "CampaignResponse",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        94,
+        101
+      ],
+      "summary": "Defines CampaignResponse, a server component used by the etcd election APIs.",
+      "tags": [
+        "server",
+        "component",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/api/v3election/v3electionpb/v3election.pb.go:LeaderKey",
+      "type": "class",
+      "name": "LeaderKey",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        147,
+        162
+      ],
+      "summary": "Defines LeaderKey, a server component used by the etcd election APIs.",
+      "tags": [
+        "server",
+        "component",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/api/v3election/v3electionpb/v3election.pb.go:LeaderRequest",
+      "type": "class",
+      "name": "LeaderRequest",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        222,
+        228
+      ],
+      "summary": "Defines LeaderRequest, a server component used by the etcd election APIs.",
+      "tags": [
+        "server",
+        "component",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/api/v3election/v3electionpb/v3election.pb.go:LeaderResponse",
+      "type": "class",
+      "name": "LeaderResponse",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        267,
+        274
+      ],
+      "summary": "Defines LeaderResponse, a server component used by the etcd election APIs.",
+      "tags": [
+        "server",
+        "component",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ResignRequest",
+      "type": "class",
+      "name": "ResignRequest",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        320,
+        326
+      ],
+      "summary": "Defines ResignRequest, a server component used by the etcd election APIs.",
+      "tags": [
+        "server",
+        "component",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ResignResponse",
+      "type": "class",
+      "name": "ResignResponse",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        365,
+        370
+      ],
+      "summary": "Defines ResignResponse, a server component used by the etcd election APIs.",
+      "tags": [
+        "server",
+        "component",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProclaimRequest",
+      "type": "class",
+      "name": "ProclaimRequest",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        409,
+        417
+      ],
+      "summary": "Defines ProclaimRequest, a server component used by the etcd election APIs.",
+      "tags": [
+        "server",
+        "component",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProclaimResponse",
+      "type": "class",
+      "name": "ProclaimResponse",
+      "filePath": "etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "lineRange": [
+        463,
+        468
+      ],
+      "summary": "Defines ProclaimResponse, a server component used by the etcd election APIs.",
+      "tags": [
+        "server",
+        "component",
+        "api"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Reset",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Reset",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoMessage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoReflect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoReflect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Descriptor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Descriptor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetName",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetLease",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetLease",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Reset",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Reset",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoMessage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoReflect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoReflect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Descriptor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Descriptor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetHeader",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetHeader",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetLeader",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetLeader",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Reset",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Reset",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoMessage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoReflect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoReflect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Descriptor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Descriptor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetName",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetKey",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetKey",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetRev",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetRev",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetLease",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetLease",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Reset",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Reset",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoMessage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoReflect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoReflect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Descriptor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Descriptor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetName",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Reset",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Reset",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoMessage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoReflect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoReflect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Descriptor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Descriptor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetHeader",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetHeader",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetKv",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetKv",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Reset",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Reset",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoMessage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoReflect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoReflect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Descriptor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Descriptor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetLeader",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetLeader",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Reset",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Reset",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoMessage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoReflect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoReflect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Descriptor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Descriptor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetHeader",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetHeader",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Reset",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Reset",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoMessage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoReflect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoReflect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Descriptor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Descriptor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetLeader",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetLeader",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetValue",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetValue",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Reset",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Reset",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoMessage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoMessage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoReflect",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProtoReflect",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Descriptor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:Descriptor",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetHeader",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:GetHeader",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:file_v3election_proto_init",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "class:etcdserver/api/v3election/v3electionpb/v3election.pb.go:CampaignRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "class:etcdserver/api/v3election/v3electionpb/v3election.pb.go:CampaignRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "class:etcdserver/api/v3election/v3electionpb/v3election.pb.go:CampaignResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "class:etcdserver/api/v3election/v3electionpb/v3election.pb.go:CampaignResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "class:etcdserver/api/v3election/v3electionpb/v3election.pb.go:LeaderKey",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "class:etcdserver/api/v3election/v3electionpb/v3election.pb.go:LeaderKey",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "class:etcdserver/api/v3election/v3electionpb/v3election.pb.go:LeaderRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "class:etcdserver/api/v3election/v3electionpb/v3election.pb.go:LeaderRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "class:etcdserver/api/v3election/v3electionpb/v3election.pb.go:LeaderResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "class:etcdserver/api/v3election/v3electionpb/v3election.pb.go:LeaderResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "class:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ResignRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "class:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ResignRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "class:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ResignResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "class:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ResignResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "class:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProclaimRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "class:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProclaimRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "class:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProclaimResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "target": "class:etcdserver/api/v3election/v3electionpb/v3election.pb.go:ProclaimResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}
+

@@ -1,0 +1,1666 @@
+{
+  "nodes": [
+    {
+      "id": "file:etcdserver/api/v3rpc/key.go",
+      "type": "file",
+      "name": "key.go",
+      "filePath": "etcdserver/api/v3rpc/key.go",
+      "summary": "Implements the v3 KV gRPC service, including range, put, delete, transaction, compaction, validation, and response-header handling.",
+      "tags": [
+        "api-handler",
+        "grpc",
+        "service"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/key.go:NewKVServer",
+      "type": "function",
+      "name": "NewKVServer",
+      "filePath": "etcdserver/api/v3rpc/key.go",
+      "lineRange": [
+        44,
+        46
+      ],
+      "summary": "Constructs and initializes the new kvserver component used by the server.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/key.go:Range",
+      "type": "function",
+      "name": "Range",
+      "filePath": "etcdserver/api/v3rpc/key.go",
+      "lineRange": [
+        48,
+        60
+      ],
+      "summary": "Implements range behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/key.go:RangeStream",
+      "type": "function",
+      "name": "RangeStream",
+      "filePath": "etcdserver/api/v3rpc/key.go",
+      "lineRange": [
+        62,
+        71
+      ],
+      "summary": "Implements range stream behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/key.go:Send",
+      "type": "function",
+      "name": "Send",
+      "filePath": "etcdserver/api/v3rpc/key.go",
+      "lineRange": [
+        83,
+        88
+      ],
+      "summary": "Implements send behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/key.go:Put",
+      "type": "function",
+      "name": "Put",
+      "filePath": "etcdserver/api/v3rpc/key.go",
+      "lineRange": [
+        90,
+        102
+      ],
+      "summary": "Implements put behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/key.go:DeleteRange",
+      "type": "function",
+      "name": "DeleteRange",
+      "filePath": "etcdserver/api/v3rpc/key.go",
+      "lineRange": [
+        104,
+        116
+      ],
+      "summary": "Implements delete range behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/key.go:Txn",
+      "type": "function",
+      "name": "Txn",
+      "filePath": "etcdserver/api/v3rpc/key.go",
+      "lineRange": [
+        118,
+        137
+      ],
+      "summary": "Implements txn behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/key.go:Compact",
+      "type": "function",
+      "name": "Compact",
+      "filePath": "etcdserver/api/v3rpc/key.go",
+      "lineRange": [
+        139,
+        151
+      ],
+      "summary": "Implements compact behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/key.go:checkRangeRequest",
+      "type": "function",
+      "name": "checkRangeRequest",
+      "filePath": "etcdserver/api/v3rpc/key.go",
+      "lineRange": [
+        153,
+        167
+      ],
+      "summary": "Validates check range request inputs and returns an error when the request or state is invalid.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/key.go:checkRangeStreamRequest",
+      "type": "function",
+      "name": "checkRangeStreamRequest",
+      "filePath": "etcdserver/api/v3rpc/key.go",
+      "lineRange": [
+        169,
+        180
+      ],
+      "summary": "Validates check range stream request inputs and returns an error when the request or state is invalid.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/key.go:checkPutRequest",
+      "type": "function",
+      "name": "checkPutRequest",
+      "filePath": "etcdserver/api/v3rpc/key.go",
+      "lineRange": [
+        182,
+        193
+      ],
+      "summary": "Validates check put request inputs and returns an error when the request or state is invalid.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/key.go:checkTxnRequest",
+      "type": "function",
+      "name": "checkTxnRequest",
+      "filePath": "etcdserver/api/v3rpc/key.go",
+      "lineRange": [
+        202,
+        231
+      ],
+      "summary": "Validates check txn request inputs and returns an error when the request or state is invalid.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/key.go:checkIntervals",
+      "type": "function",
+      "name": "checkIntervals",
+      "filePath": "etcdserver/api/v3rpc/key.go",
+      "lineRange": [
+        236,
+        315
+      ],
+      "summary": "Validates check intervals inputs and returns an error when the request or state is invalid.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/key.go:checkRequestOp",
+      "type": "function",
+      "name": "checkRequestOp",
+      "filePath": "etcdserver/api/v3rpc/key.go",
+      "lineRange": [
+        317,
+        332
+      ],
+      "summary": "Validates check request op inputs and returns an error when the request or state is invalid.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdserver/api/v3rpc/key_test.go",
+      "type": "file",
+      "name": "key_test.go",
+      "filePath": "etcdserver/api/v3rpc/key_test.go",
+      "summary": "Verifies validation errors produced for malformed range requests.",
+      "tags": [
+        "test",
+        "validation",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/key_test.go:TestCheckRangeRequest",
+      "type": "function",
+      "name": "TestCheckRangeRequest",
+      "filePath": "etcdserver/api/v3rpc/key_test.go",
+      "lineRange": [
+        24,
+        60
+      ],
+      "summary": "Verifies check range request behavior for the key_test.go implementation.",
+      "tags": [
+        "test",
+        "validation",
+        "behavior"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdserver/api/v3rpc/lease.go",
+      "type": "file",
+      "name": "lease.go",
+      "filePath": "etcdserver/api/v3rpc/lease.go",
+      "summary": "Implements lease grant, revoke, TTL, listing, and keep-alive RPCs over the server lessor.",
+      "tags": [
+        "api-handler",
+        "grpc",
+        "service"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/lease.go:NewLeaseServer",
+      "type": "function",
+      "name": "NewLeaseServer",
+      "filePath": "etcdserver/api/v3rpc/lease.go",
+      "lineRange": [
+        36,
+        42
+      ],
+      "summary": "Constructs and initializes the new lease server component used by the server.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/lease.go:LeaseGrant",
+      "type": "function",
+      "name": "LeaseGrant",
+      "filePath": "etcdserver/api/v3rpc/lease.go",
+      "lineRange": [
+        44,
+        51
+      ],
+      "summary": "Implements lease grant behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/lease.go:LeaseRevoke",
+      "type": "function",
+      "name": "LeaseRevoke",
+      "filePath": "etcdserver/api/v3rpc/lease.go",
+      "lineRange": [
+        53,
+        60
+      ],
+      "summary": "Implements lease revoke behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/lease.go:LeaseTimeToLive",
+      "type": "function",
+      "name": "LeaseTimeToLive",
+      "filePath": "etcdserver/api/v3rpc/lease.go",
+      "lineRange": [
+        62,
+        76
+      ],
+      "summary": "Implements lease time to live behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/lease.go:LeaseLeases",
+      "type": "function",
+      "name": "LeaseLeases",
+      "filePath": "etcdserver/api/v3rpc/lease.go",
+      "lineRange": [
+        78,
+        91
+      ],
+      "summary": "Implements lease leases behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/lease.go:LeaseKeepAlive",
+      "type": "function",
+      "name": "LeaseKeepAlive",
+      "filePath": "etcdserver/api/v3rpc/lease.go",
+      "lineRange": [
+        93,
+        109
+      ],
+      "summary": "Implements lease keep alive behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/lease.go:leaseKeepAlive",
+      "type": "function",
+      "name": "leaseKeepAlive",
+      "filePath": "etcdserver/api/v3rpc/lease.go",
+      "lineRange": [
+        111,
+        158
+      ],
+      "summary": "Implements lease keep alive behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdserver/api/v3rpc/member.go",
+      "type": "file",
+      "name": "member.go",
+      "filePath": "etcdserver/api/v3rpc/member.go",
+      "summary": "Implements cluster membership RPCs for adding, removing, updating, listing, and promoting members.",
+      "tags": [
+        "api-handler",
+        "grpc",
+        "service"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/member.go:NewClusterServer",
+      "type": "function",
+      "name": "NewClusterServer",
+      "filePath": "etcdserver/api/v3rpc/member.go",
+      "lineRange": [
+        36,
+        41
+      ],
+      "summary": "Constructs and initializes the new cluster server component used by the server.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/member.go:MemberAdd",
+      "type": "function",
+      "name": "MemberAdd",
+      "filePath": "etcdserver/api/v3rpc/member.go",
+      "lineRange": [
+        43,
+        70
+      ],
+      "summary": "Implements member add behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/member.go:MemberRemove",
+      "type": "function",
+      "name": "MemberRemove",
+      "filePath": "etcdserver/api/v3rpc/member.go",
+      "lineRange": [
+        72,
+        78
+      ],
+      "summary": "Implements member remove behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/member.go:MemberUpdate",
+      "type": "function",
+      "name": "MemberUpdate",
+      "filePath": "etcdserver/api/v3rpc/member.go",
+      "lineRange": [
+        80,
+        90
+      ],
+      "summary": "Implements member update behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/member.go:MemberList",
+      "type": "function",
+      "name": "MemberList",
+      "filePath": "etcdserver/api/v3rpc/member.go",
+      "lineRange": [
+        92,
+        100
+      ],
+      "summary": "Implements member list behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/member.go:MemberPromote",
+      "type": "function",
+      "name": "MemberPromote",
+      "filePath": "etcdserver/api/v3rpc/member.go",
+      "lineRange": [
+        102,
+        108
+      ],
+      "summary": "Implements member promote behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/member.go:membersToProtoMembers",
+      "type": "function",
+      "name": "membersToProtoMembers",
+      "filePath": "etcdserver/api/v3rpc/member.go",
+      "lineRange": [
+        114,
+        126
+      ],
+      "summary": "Implements members to proto members behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdserver/api/v3rpc/metrics.go",
+      "type": "file",
+      "name": "metrics.go",
+      "filePath": "etcdserver/api/v3rpc/metrics.go",
+      "summary": "Declares and initializes v3 RPC metrics for request counts, latencies, and response sizes.",
+      "tags": [
+        "api-handler",
+        "grpc",
+        "service"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/v3rpc/metrics.go:init",
+      "type": "function",
+      "name": "init",
+      "filePath": "etcdserver/api/v3rpc/metrics.go",
+      "lineRange": [
+        105,
+        114
+      ],
+      "summary": "Implements init behavior for the surrounding etcdserver component.",
+      "tags": [
+        "utility",
+        "server",
+        "processing"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "function:etcdserver/api/v3rpc/key.go:NewKVServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "function:etcdserver/api/v3rpc/key.go:NewKVServer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "function:etcdserver/api/v3rpc/key.go:Range",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "function:etcdserver/api/v3rpc/key.go:Range",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "function:etcdserver/api/v3rpc/key.go:RangeStream",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "function:etcdserver/api/v3rpc/key.go:RangeStream",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "function:etcdserver/api/v3rpc/key.go:Send",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "function:etcdserver/api/v3rpc/key.go:Send",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "function:etcdserver/api/v3rpc/key.go:Put",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "function:etcdserver/api/v3rpc/key.go:Put",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "function:etcdserver/api/v3rpc/key.go:DeleteRange",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "function:etcdserver/api/v3rpc/key.go:DeleteRange",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "function:etcdserver/api/v3rpc/key.go:Txn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "function:etcdserver/api/v3rpc/key.go:Txn",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "function:etcdserver/api/v3rpc/key.go:Compact",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "function:etcdserver/api/v3rpc/key.go:Compact",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "function:etcdserver/api/v3rpc/key.go:checkRangeRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "function:etcdserver/api/v3rpc/key.go:checkRangeStreamRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "function:etcdserver/api/v3rpc/key.go:checkPutRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "function:etcdserver/api/v3rpc/key.go:checkTxnRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "function:etcdserver/api/v3rpc/key.go:checkIntervals",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "function:etcdserver/api/v3rpc/key.go:checkRequestOp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "file:etcdserver/adapters.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "file:etcdserver/bootstrap.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "file:etcdserver/bootstrap_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "file:etcdserver/cluster_util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "file:etcdserver/cluster_util_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "file:etcdserver/corrupt.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "file:etcdserver/corrupt_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "file:etcdserver/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "file:etcdserver/interface.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "file:etcdserver/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "file:etcdserver/raft.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "file:etcdserver/raft_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "file:etcdserver/server.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "file:etcdserver/server_access_control.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "file:etcdserver/server_access_control_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "file:etcdserver/server_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "file:etcdserver/snapshot_merge.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "file:etcdserver/tracing.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "file:etcdserver/txn/delete.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "file:etcdserver/txn/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "file:etcdserver/txn/metrics_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "file:etcdserver/txn/put.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "file:etcdserver/txn/range.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "file:etcdserver/txn/range_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "file:etcdserver/txn/txn.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "file:etcdserver/txn/txn_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "file:etcdserver/txn/util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "file:etcdserver/txn/util_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "file:etcdserver/txn/util_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "file:etcdserver/util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "file:etcdserver/util_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "file:etcdserver/v3_server.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "file:etcdserver/zap_raft.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "file:etcdserver/zap_raft_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key_test.go",
+      "target": "function:etcdserver/api/v3rpc/key_test.go:TestCheckRangeRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key_test.go",
+      "target": "function:etcdserver/api/v3rpc/key_test.go:TestCheckRangeRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "function:etcdserver/api/v3rpc/lease.go:NewLeaseServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "function:etcdserver/api/v3rpc/lease.go:NewLeaseServer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "function:etcdserver/api/v3rpc/lease.go:LeaseGrant",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "function:etcdserver/api/v3rpc/lease.go:LeaseGrant",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "function:etcdserver/api/v3rpc/lease.go:LeaseRevoke",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "function:etcdserver/api/v3rpc/lease.go:LeaseRevoke",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "function:etcdserver/api/v3rpc/lease.go:LeaseTimeToLive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "function:etcdserver/api/v3rpc/lease.go:LeaseTimeToLive",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "function:etcdserver/api/v3rpc/lease.go:LeaseLeases",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "function:etcdserver/api/v3rpc/lease.go:LeaseLeases",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "function:etcdserver/api/v3rpc/lease.go:LeaseKeepAlive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "function:etcdserver/api/v3rpc/lease.go:LeaseKeepAlive",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "function:etcdserver/api/v3rpc/lease.go:leaseKeepAlive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "file:etcdserver/adapters.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "file:etcdserver/bootstrap.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "file:etcdserver/bootstrap_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "file:etcdserver/cluster_util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "file:etcdserver/cluster_util_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "file:etcdserver/corrupt.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "file:etcdserver/corrupt_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "file:etcdserver/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "file:etcdserver/interface.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "file:etcdserver/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "file:etcdserver/raft.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "file:etcdserver/raft_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "file:etcdserver/server.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "file:etcdserver/server_access_control.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "file:etcdserver/server_access_control_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "file:etcdserver/server_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "file:etcdserver/snapshot_merge.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "file:etcdserver/tracing.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "file:etcdserver/util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "file:etcdserver/util_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "file:etcdserver/v3_server.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "file:etcdserver/zap_raft.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "file:etcdserver/zap_raft_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "file:lease/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "file:lease/lease.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "file:lease/lease_queue.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "file:lease/lease_queue_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "file:lease/lessor.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "file:lease/lessor_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "file:lease/lessor_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/lease.go",
+      "target": "file:lease/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "function:etcdserver/api/v3rpc/member.go:NewClusterServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "function:etcdserver/api/v3rpc/member.go:NewClusterServer",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "function:etcdserver/api/v3rpc/member.go:MemberAdd",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "function:etcdserver/api/v3rpc/member.go:MemberAdd",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "function:etcdserver/api/v3rpc/member.go:MemberRemove",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "function:etcdserver/api/v3rpc/member.go:MemberRemove",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "function:etcdserver/api/v3rpc/member.go:MemberUpdate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "function:etcdserver/api/v3rpc/member.go:MemberUpdate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "function:etcdserver/api/v3rpc/member.go:MemberList",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "function:etcdserver/api/v3rpc/member.go:MemberList",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "function:etcdserver/api/v3rpc/member.go:MemberPromote",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "function:etcdserver/api/v3rpc/member.go:MemberPromote",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "function:etcdserver/api/v3rpc/member.go:membersToProtoMembers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/adapters.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/api/capability.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/api/cluster.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/api/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/api/membership/cluster.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/api/membership/cluster_opts.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/api/membership/cluster_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/api/membership/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/api/membership/errors.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/api/membership/member.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/api/membership/member_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/api/membership/membership_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/api/membership/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/api/membership/store.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/api/membership/storev2.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/api/membership/storev2_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/bootstrap.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/bootstrap_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/cluster_util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/cluster_util_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/corrupt.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/corrupt_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/interface.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/raft.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/raft_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/server.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/server_access_control.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/server_access_control_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/server_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/snapshot_merge.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/tracing.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/util_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/v3_server.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/zap_raft.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/member.go",
+      "target": "file:etcdserver/zap_raft_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/metrics.go",
+      "target": "function:etcdserver/api/v3rpc/metrics.go:init",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/v3rpc/key.go",
+      "target": "file:etcdserver/api/v3rpc/key_test.go",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

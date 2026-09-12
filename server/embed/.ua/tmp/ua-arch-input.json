@@ -1,0 +1,271 @@
+{
+    "fileNodes":  [
+                      {
+                          "id":  "config:.ua/config.json",
+                          "type":  "config",
+                          "name":  "config.json",
+                          "filePath":  ".ua/config.json",
+                          "summary":  "Stores Understand Anything output-language preferences for this component graph.",
+                          "tags":  [
+                                       "configuration",
+                                       "analysis-output",
+                                       "metadata"
+                                   ],
+                          "complexity":  "simple"
+                      },
+                      {
+                          "id":  "file:auth_test.go",
+                          "type":  "file",
+                          "name":  "auth_test.go",
+                          "filePath":  "auth_test.go",
+                          "summary":  "Exercises embedded-server startup and the complete role, user, grant, and authentication-enablement sequence through the v3 client.",
+                          "tags":  [
+                                       "test",
+                                       "authentication",
+                                       "integration-test"
+                                   ],
+                          "complexity":  "simple"
+                      },
+                      {
+                          "id":  "file:config.go",
+                          "type":  "file",
+                          "name":  "config.go",
+                          "filePath":  "config.go",
+                          "summary":  "Defines the embedded etcd configuration surface, default construction, CLI flag binding, file loading, validation, discovery, URL handling, and TLS helpers.",
+                          "tags":  [
+                                       "configuration",
+                                       "validation",
+                                       "tls",
+                                       "cluster-bootstrap",
+                                       "service",
+                                       "tested"
+                                   ],
+                          "complexity":  "complex"
+                      },
+                      {
+                          "id":  "file:config_logging.go",
+                          "type":  "file",
+                          "name":  "config_logging.go",
+                          "filePath":  "config_logging.go",
+                          "summary":  "Builds and manages zap logging for embedded etcd, including output selection, global logger wiring, rotation, and synchronization.",
+                          "tags":  [
+                                       "logging",
+                                       "configuration",
+                                       "factory",
+                                       "log-rotation"
+                                   ],
+                          "complexity":  "complex"
+                      },
+                      {
+                          "id":  "file:config_logging_journal_unix.go",
+                          "type":  "file",
+                          "name":  "config_logging_journal_unix.go",
+                          "filePath":  "config_logging_journal_unix.go",
+                          "summary":  "Provides the Unix journal-backed zap write synchronizer used when journal logging is selected.",
+                          "tags":  [
+                                       "logging",
+                                       "journald",
+                                       "platform-specific"
+                                   ],
+                          "complexity":  "simple"
+                      },
+                      {
+                          "id":  "file:config_logging_journal_windows.go",
+                          "type":  "file",
+                          "name":  "config_logging_journal_windows.go",
+                          "filePath":  "config_logging_journal_windows.go",
+                          "summary":  "Rejects journal logging on Windows through the platform-specific write-synchronizer implementation.",
+                          "tags":  [
+                                       "logging",
+                                       "windows",
+                                       "platform-specific"
+                                   ],
+                          "complexity":  "simple"
+                      },
+                      {
+                          "id":  "file:config_test.go",
+                          "type":  "file",
+                          "name":  "config_test.go",
+                          "filePath":  "config_test.go",
+                          "summary":  "Covers configuration parsing, defaults, validation, discovery, TLS versions, log rotation, URL safety, feature gates, and lease options.",
+                          "tags":  [
+                                       "test",
+                                       "configuration",
+                                       "validation",
+                                       "cluster-bootstrap"
+                                   ],
+                          "complexity":  "complex"
+                      },
+                      {
+                          "id":  "file:config_tracing.go",
+                          "type":  "file",
+                          "name":  "config_tracing.go",
+                          "filePath":  "config_tracing.go",
+                          "summary":  "Validates distributed-tracing settings and constructs an OpenTelemetry OTLP exporter, sampler, resource identity, and shutdown wrapper.",
+                          "tags":  [
+                                       "tracing",
+                                       "opentelemetry",
+                                       "configuration",
+                                       "observability",
+                                       "tested"
+                                   ],
+                          "complexity":  "moderate"
+                      },
+                      {
+                          "id":  "file:config_tracing_test.go",
+                          "type":  "file",
+                          "name":  "config_tracing_test.go",
+                          "filePath":  "config_tracing_test.go",
+                          "summary":  "Verifies sampler selection and tracing configuration behavior for the embedded server.",
+                          "tags":  [
+                                       "test",
+                                       "tracing",
+                                       "configuration"
+                                   ],
+                          "complexity":  "moderate"
+                      },
+                      {
+                          "id":  "file:doc.go",
+                          "type":  "file",
+                          "name":  "doc.go",
+                          "filePath":  "doc.go",
+                          "summary":  "Documents the embed package as the API for configuring, starting, and stopping an etcd server inside another Go process.",
+                          "tags":  [
+                                       "documentation",
+                                       "package-api",
+                                       "embedding"
+                                   ],
+                          "complexity":  "simple"
+                      },
+                      {
+                          "id":  "file:etcd.go",
+                          "type":  "file",
+                          "name":  "etcd.go",
+                          "filePath":  "etcd.go",
+                          "summary":  "Owns the embedded server lifecycle: startup, peer and client listener creation, serving, metrics, gRPC gateway dialing, shutdown, and error propagation.",
+                          "tags":  [
+                                       "service",
+                                       "entry-point",
+                                       "lifecycle",
+                                       "networking",
+                                       "grpc",
+                                       "tested"
+                                   ],
+                          "complexity":  "complex"
+                      },
+                      {
+                          "id":  "file:etcd_test.go",
+                          "type":  "file",
+                          "name":  "etcd_test.go",
+                          "filePath":  "etcd_test.go",
+                          "summary":  "Checks metrics-listener creation when client TLS information is empty.",
+                          "tags":  [
+                                       "test",
+                                       "metrics",
+                                       "tls"
+                                   ],
+                          "complexity":  "simple"
+                      },
+                      {
+                          "id":  "file:serve.go",
+                          "type":  "file",
+                          "name":  "serve.go",
+                          "filePath":  "serve.go",
+                          "summary":  "Multiplexes gRPC and HTTP traffic, installs gateways and debug handlers, enforces host and CORS access rules, and coordinates listener shutdown.",
+                          "tags":  [
+                                       "service",
+                                       "http",
+                                       "grpc",
+                                       "middleware",
+                                       "networking",
+                                       "tested"
+                                   ],
+                          "complexity":  "complex"
+                      },
+                      {
+                          "id":  "file:serve_test.go",
+                          "type":  "file",
+                          "name":  "serve_test.go",
+                          "filePath":  "serve_test.go",
+                          "summary":  "Ensures embedded startup reports an error when the initial cluster token is invalid.",
+                          "tags":  [
+                                       "test",
+                                       "cluster-bootstrap",
+                                       "validation"
+                                   ],
+                          "complexity":  "simple"
+                      },
+                      {
+                          "id":  "file:util.go",
+                          "type":  "file",
+                          "name":  "util.go",
+                          "filePath":  "util.go",
+                          "summary":  "Determines whether an embedded member has already initialized by checking for its persisted WAL.",
+                          "tags":  [
+                                       "utility",
+                                       "wal",
+                                       "startup",
+                                       "tested"
+                                   ],
+                          "complexity":  "simple"
+                      },
+                      {
+                          "id":  "file:util_test.go",
+                          "type":  "file",
+                          "name":  "util_test.go",
+                          "filePath":  "util_test.go",
+                          "summary":  "Provides reusable dynamic URL fixtures and configuration helpers for embed package tests.",
+                          "tags":  [
+                                       "test",
+                                       "utility",
+                                       "networking"
+                                   ],
+                          "complexity":  "moderate"
+                      }
+                  ],
+    "importEdges":  [
+
+                    ],
+    "allEdges":  [
+                     {
+                         "source":  "file:config.go",
+                         "target":  "file:config_test.go",
+                         "type":  "tested_by",
+                         "direction":  "forward",
+                         "weight":  0.5,
+                         "description":  "Path-based pairing (deterministic)"
+                     },
+                     {
+                         "source":  "file:config_tracing.go",
+                         "target":  "file:config_tracing_test.go",
+                         "type":  "tested_by",
+                         "direction":  "forward",
+                         "weight":  0.5,
+                         "description":  "Path-based pairing (deterministic)"
+                     },
+                     {
+                         "source":  "file:etcd.go",
+                         "target":  "file:etcd_test.go",
+                         "type":  "tested_by",
+                         "direction":  "forward",
+                         "weight":  0.5,
+                         "description":  "Path-based pairing (deterministic)"
+                     },
+                     {
+                         "source":  "file:serve.go",
+                         "target":  "file:serve_test.go",
+                         "type":  "tested_by",
+                         "direction":  "forward",
+                         "weight":  0.5,
+                         "description":  "Path-based pairing (deterministic)"
+                     },
+                     {
+                         "source":  "file:util.go",
+                         "target":  "file:util_test.go",
+                         "type":  "tested_by",
+                         "direction":  "forward",
+                         "weight":  0.5,
+                         "description":  "Path-based pairing (deterministic)"
+                     }
+                 ]
+}

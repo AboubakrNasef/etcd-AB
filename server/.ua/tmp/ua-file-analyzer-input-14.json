@@ -1,0 +1,9 @@
+{
+  "projectRoot": "D:/Programming/0.Practice/etcd/etcd-AB/server",
+  "batchFiles": [
+    {"path":".gomodguard.yaml","language":"yaml","sizeLines":9,"fileCategory":"config"},
+    {"path":"go.mod","language":"mod","sizeLines":81,"fileCategory":"config"},
+    {"path":"go.sum","language":"sum","sizeLines":162,"fileCategory":"config"}
+  ],
+  "batchImportData": {".gomodguard.yaml":[],"go.mod":[],"go.sum":[]}
+}

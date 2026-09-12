@@ -1,0 +1,3510 @@
+{
+  "nodes": [
+    {
+      "id": "file:etcdserver/api/capability.go",
+      "type": "file",
+      "name": "capability.go",
+      "filePath": "etcdserver/api/capability.go",
+      "summary": "Maintains cluster capability enablement state and validates capability changes against the server version.",
+      "tags": [
+        "capability",
+        "versioning",
+        "concurrency",
+        "api"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using package-level APIs and concurrency primitives where required."
+    },
+    {
+      "id": "function:etcdserver/api/capability.go:UpdateCapability",
+      "type": "function",
+      "name": "UpdateCapability",
+      "filePath": "etcdserver/api/capability.go",
+      "lineRange": [
+        63,
+        83
+      ],
+      "summary": "Provides the UpdateCapability operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/capability.go:IsCapabilityEnabled",
+      "type": "function",
+      "name": "IsCapabilityEnabled",
+      "filePath": "etcdserver/api/capability.go",
+      "lineRange": [
+        85,
+        92
+      ],
+      "summary": "Provides the IsCapabilityEnabled operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/capability.go:EnableCapability",
+      "type": "function",
+      "name": "EnableCapability",
+      "filePath": "etcdserver/api/capability.go",
+      "lineRange": [
+        94,
+        98
+      ],
+      "summary": "Provides the EnableCapability operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:etcdserver/api/membership/cluster.go",
+      "type": "file",
+      "name": "cluster.go",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "summary": "Implements the RaftCluster membership model, including member identity, configuration changes, learner promotion, persistence, and version or downgrade state.",
+      "tags": [
+        "membership",
+        "raft",
+        "configuration",
+        "persistence",
+        "cluster"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Go implementation using package-level APIs and concurrency primitives where required."
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:NewClusterFromURLsMap",
+      "type": "function",
+      "name": "NewClusterFromURLsMap",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        81,
+        95
+      ],
+      "summary": "Provides the NewClusterFromURLsMap operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:NewClusterFromMembers",
+      "type": "function",
+      "name": "NewClusterFromMembers",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        97,
+        104
+      ],
+      "summary": "Provides the NewClusterFromMembers operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:NewCluster",
+      "type": "function",
+      "name": "NewCluster",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        106,
+        119
+      ],
+      "summary": "Provides the NewCluster operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:ID",
+      "type": "function",
+      "name": "ID",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        121,
+        121
+      ],
+      "summary": "Provides the ID operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:Members",
+      "type": "function",
+      "name": "Members",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        123,
+        132
+      ],
+      "summary": "Provides the Members operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:Member",
+      "type": "function",
+      "name": "Member",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        134,
+        138
+      ],
+      "summary": "Provides the Member operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:VotingMembers",
+      "type": "function",
+      "name": "VotingMembers",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        140,
+        151
+      ],
+      "summary": "Provides the VotingMembers operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:MemberByName",
+      "type": "function",
+      "name": "MemberByName",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        155,
+        168
+      ],
+      "summary": "Provides the MemberByName operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:MemberIDs",
+      "type": "function",
+      "name": "MemberIDs",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        170,
+        179
+      ],
+      "summary": "Provides the MemberIDs operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:IsIDRemoved",
+      "type": "function",
+      "name": "IsIDRemoved",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        181,
+        185
+      ],
+      "summary": "Provides the IsIDRemoved operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:PeerURLs",
+      "type": "function",
+      "name": "PeerURLs",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        189,
+        198
+      ],
+      "summary": "Provides the PeerURLs operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:ClientURLs",
+      "type": "function",
+      "name": "ClientURLs",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        202,
+        211
+      ],
+      "summary": "Provides the ClientURLs operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:String",
+      "type": "function",
+      "name": "String",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        213,
+        229
+      ],
+      "summary": "Provides the String operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:SetID",
+      "type": "function",
+      "name": "SetID",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        241,
+        245
+      ],
+      "summary": "Provides the SetID operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:SetBackend",
+      "type": "function",
+      "name": "SetBackend",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        247,
+        250
+      ],
+      "summary": "Provides the SetBackend operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:SetVersionChangedNotifier",
+      "type": "function",
+      "name": "SetVersionChangedNotifier",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        252,
+        254
+      ],
+      "summary": "Provides the SetVersionChangedNotifier operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:UnsafeLoad",
+      "type": "function",
+      "name": "UnsafeLoad",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        256,
+        260
+      ],
+      "summary": "Provides the UnsafeLoad operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:Recover",
+      "type": "function",
+      "name": "Recover",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        262,
+        302
+      ],
+      "summary": "Provides the Recover operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:ValidateConfigurationChange",
+      "type": "function",
+      "name": "ValidateConfigurationChange",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        306,
+        389
+      ],
+      "summary": "Provides the ValidateConfigurationChange operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:AddMember",
+      "type": "function",
+      "name": "AddMember",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        394,
+        425
+      ],
+      "summary": "Provides the AddMember operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:RemoveMember",
+      "type": "function",
+      "name": "RemoveMember",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        429,
+        465
+      ],
+      "summary": "Provides the RemoveMember operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:UpdateAttributes",
+      "type": "function",
+      "name": "UpdateAttributes",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        467,
+        495
+      ],
+      "summary": "Provides the UpdateAttributes operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:PromoteMember",
+      "type": "function",
+      "name": "PromoteMember",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        498,
+        533
+      ],
+      "summary": "Provides the PromoteMember operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:UpdateRaftAttributes",
+      "type": "function",
+      "name": "UpdateRaftAttributes",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        535,
+        578
+      ],
+      "summary": "Provides the UpdateRaftAttributes operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:Version",
+      "type": "function",
+      "name": "Version",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        580,
+        587
+      ],
+      "summary": "Provides the Version operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:SetVersion",
+      "type": "function",
+      "name": "SetVersion",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        589,
+        624
+      ],
+      "summary": "Provides the SetVersion operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:IsReadyToAddVotingMember",
+      "type": "function",
+      "name": "IsReadyToAddVotingMember",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        626,
+        657
+      ],
+      "summary": "Provides the IsReadyToAddVotingMember operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:IsReadyToRemoveVotingMember",
+      "type": "function",
+      "name": "IsReadyToRemoveVotingMember",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        659,
+        687
+      ],
+      "summary": "Provides the IsReadyToRemoveVotingMember operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:IsReadyToPromoteMember",
+      "type": "function",
+      "name": "IsReadyToPromoteMember",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        689,
+        713
+      ],
+      "summary": "Provides the IsReadyToPromoteMember operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:MembersFromStore",
+      "type": "function",
+      "name": "MembersFromStore",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        715,
+        749
+      ],
+      "summary": "Provides the MembersFromStore operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:ValidateClusterAndAssignIDs",
+      "type": "function",
+      "name": "ValidateClusterAndAssignIDs",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        755,
+        783
+      ],
+      "summary": "Provides the ValidateClusterAndAssignIDs operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:IsLocalMemberLearner",
+      "type": "function",
+      "name": "IsLocalMemberLearner",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        786,
+        798
+      ],
+      "summary": "Provides the IsLocalMemberLearner operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:DowngradeInfo",
+      "type": "function",
+      "name": "DowngradeInfo",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        801,
+        809
+      ],
+      "summary": "Provides the DowngradeInfo operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:SetDowngradeInfo",
+      "type": "function",
+      "name": "SetDowngradeInfo",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        811,
+        820
+      ],
+      "summary": "Provides the SetDowngradeInfo operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:IsMemberExist",
+      "type": "function",
+      "name": "IsMemberExist",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        823,
+        830
+      ],
+      "summary": "Provides the IsMemberExist operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:VotingMemberIDs",
+      "type": "function",
+      "name": "VotingMemberIDs",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        833,
+        844
+      ],
+      "summary": "Provides the VotingMemberIDs operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:buildMembershipMetric",
+      "type": "function",
+      "name": "buildMembershipMetric",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        848,
+        859
+      ],
+      "summary": "Provides the buildMembershipMetric operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:updateMembershipMetric",
+      "type": "function",
+      "name": "updateMembershipMetric",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        863,
+        873
+      ],
+      "summary": "Provides the updateMembershipMetric operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:ValidateMaxLearnerConfig",
+      "type": "function",
+      "name": "ValidateMaxLearnerConfig",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        877,
+        894
+      ],
+      "summary": "Provides the ValidateMaxLearnerConfig operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster.go:Store",
+      "type": "function",
+      "name": "Store",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        896,
+        921
+      ],
+      "summary": "Provides the Store operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/api/membership/cluster.go:RaftCluster",
+      "type": "class",
+      "name": "RaftCluster",
+      "filePath": "etcdserver/api/membership/cluster.go",
+      "lineRange": [
+        43,
+        61
+      ],
+      "summary": "Represents the RaftCluster state and behavior for this module.",
+      "tags": [
+        "go",
+        "data-model",
+        "state",
+        "implementation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:etcdserver/api/membership/cluster_test.go",
+      "type": "file",
+      "name": "cluster_test.go",
+      "filePath": "etcdserver/api/membership/cluster_test.go",
+      "summary": "Exercises cluster membership construction, validation, configuration changes, learner limits, persistence, and version transitions.",
+      "tags": [
+        "test",
+        "membership",
+        "raft",
+        "validation",
+        "persistence"
+      ],
+      "complexity": "complex",
+      "languageNotes": "Go implementation using package-level APIs and concurrency primitives where required."
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster_test.go:TestClusterMember",
+      "type": "function",
+      "name": "TestClusterMember",
+      "filePath": "etcdserver/api/membership/cluster_test.go",
+      "lineRange": [
+        33,
+        56
+      ],
+      "summary": "Provides the TestClusterMember operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster_test.go:TestClusterMemberByName",
+      "type": "function",
+      "name": "TestClusterMemberByName",
+      "filePath": "etcdserver/api/membership/cluster_test.go",
+      "lineRange": [
+        58,
+        81
+      ],
+      "summary": "Provides the TestClusterMemberByName operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster_test.go:TestClusterMemberIDs",
+      "type": "function",
+      "name": "TestClusterMemberIDs",
+      "filePath": "etcdserver/api/membership/cluster_test.go",
+      "lineRange": [
+        83,
+        94
+      ],
+      "summary": "Provides the TestClusterMemberIDs operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster_test.go:TestClusterPeerURLs",
+      "type": "function",
+      "name": "TestClusterPeerURLs",
+      "filePath": "etcdserver/api/membership/cluster_test.go",
+      "lineRange": [
+        96,
+        149
+      ],
+      "summary": "Provides the TestClusterPeerURLs operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster_test.go:TestClusterClientURLs",
+      "type": "function",
+      "name": "TestClusterClientURLs",
+      "filePath": "etcdserver/api/membership/cluster_test.go",
+      "lineRange": [
+        151,
+        204
+      ],
+      "summary": "Provides the TestClusterClientURLs operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster_test.go:TestClusterValidateAndAssignIDsBad",
+      "type": "function",
+      "name": "TestClusterValidateAndAssignIDsBad",
+      "filePath": "etcdserver/api/membership/cluster_test.go",
+      "lineRange": [
+        206,
+        246
+      ],
+      "summary": "Provides the TestClusterValidateAndAssignIDsBad operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster_test.go:TestClusterValidateAndAssignIDs",
+      "type": "function",
+      "name": "TestClusterValidateAndAssignIDs",
+      "filePath": "etcdserver/api/membership/cluster_test.go",
+      "lineRange": [
+        248,
+        276
+      ],
+      "summary": "Provides the TestClusterValidateAndAssignIDs operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster_test.go:TestClusterValidateConfigurationChangeV3",
+      "type": "function",
+      "name": "TestClusterValidateConfigurationChangeV3",
+      "filePath": "etcdserver/api/membership/cluster_test.go",
+      "lineRange": [
+        278,
+        463
+      ],
+      "summary": "Provides the TestClusterValidateConfigurationChangeV3 operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster_test.go:TestClusterGenID",
+      "type": "function",
+      "name": "TestClusterGenID",
+      "filePath": "etcdserver/api/membership/cluster_test.go",
+      "lineRange": [
+        465,
+        485
+      ],
+      "summary": "Provides the TestClusterGenID operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster_test.go:TestNodeToMemberBad",
+      "type": "function",
+      "name": "TestNodeToMemberBad",
+      "filePath": "etcdserver/api/membership/cluster_test.go",
+      "lineRange": [
+        487,
+        517
+      ],
+      "summary": "Provides the TestNodeToMemberBad operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster_test.go:TestClusterAddMember",
+      "type": "function",
+      "name": "TestClusterAddMember",
+      "filePath": "etcdserver/api/membership/cluster_test.go",
+      "lineRange": [
+        519,
+        532
+      ],
+      "summary": "Provides the TestClusterAddMember operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster_test.go:TestClusterAddMemberAsLearner",
+      "type": "function",
+      "name": "TestClusterAddMemberAsLearner",
+      "filePath": "etcdserver/api/membership/cluster_test.go",
+      "lineRange": [
+        534,
+        549
+      ],
+      "summary": "Provides the TestClusterAddMemberAsLearner operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster_test.go:TestClusterMembers",
+      "type": "function",
+      "name": "TestClusterMembers",
+      "filePath": "etcdserver/api/membership/cluster_test.go",
+      "lineRange": [
+        551,
+        569
+      ],
+      "summary": "Provides the TestClusterMembers operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster_test.go:TestClusterRemoveMember",
+      "type": "function",
+      "name": "TestClusterRemoveMember",
+      "filePath": "etcdserver/api/membership/cluster_test.go",
+      "lineRange": [
+        571,
+        585
+      ],
+      "summary": "Provides the TestClusterRemoveMember operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster_test.go:TestClusterUpdateAttributes",
+      "type": "function",
+      "name": "TestClusterUpdateAttributes",
+      "filePath": "etcdserver/api/membership/cluster_test.go",
+      "lineRange": [
+        587,
+        642
+      ],
+      "summary": "Provides the TestClusterUpdateAttributes operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster_test.go:TestNodeToMember",
+      "type": "function",
+      "name": "TestNodeToMember",
+      "filePath": "etcdserver/api/membership/cluster_test.go",
+      "lineRange": [
+        644,
+        657
+      ],
+      "summary": "Provides the TestNodeToMember operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster_test.go:newTestCluster",
+      "type": "function",
+      "name": "newTestCluster",
+      "filePath": "etcdserver/api/membership/cluster_test.go",
+      "lineRange": [
+        659,
+        670
+      ],
+      "summary": "Provides the newTestCluster operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster_test.go:TestIsReadyToAddVotingMember",
+      "type": "function",
+      "name": "TestIsReadyToAddVotingMember",
+      "filePath": "etcdserver/api/membership/cluster_test.go",
+      "lineRange": [
+        674,
+        774
+      ],
+      "summary": "Provides the TestIsReadyToAddVotingMember operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster_test.go:TestIsReadyToRemoveVotingMember",
+      "type": "function",
+      "name": "TestIsReadyToRemoveVotingMember",
+      "filePath": "etcdserver/api/membership/cluster_test.go",
+      "lineRange": [
+        776,
+        906
+      ],
+      "summary": "Provides the TestIsReadyToRemoveVotingMember operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster_test.go:TestIsReadyToPromoteMember",
+      "type": "function",
+      "name": "TestIsReadyToPromoteMember",
+      "filePath": "etcdserver/api/membership/cluster_test.go",
+      "lineRange": [
+        908,
+        993
+      ],
+      "summary": "Provides the TestIsReadyToPromoteMember operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster_test.go:TestPromoteMember",
+      "type": "function",
+      "name": "TestPromoteMember",
+      "filePath": "etcdserver/api/membership/cluster_test.go",
+      "lineRange": [
+        995,
+        1053
+      ],
+      "summary": "Provides the TestPromoteMember operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster_test.go:TestUpdateRaftAttributes",
+      "type": "function",
+      "name": "TestUpdateRaftAttributes",
+      "filePath": "etcdserver/api/membership/cluster_test.go",
+      "lineRange": [
+        1055,
+        1114
+      ],
+      "summary": "Provides the TestUpdateRaftAttributes operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/membership/cluster_test.go:TestClusterStore",
+      "type": "function",
+      "name": "TestClusterStore",
+      "filePath": "etcdserver/api/membership/cluster_test.go",
+      "lineRange": [
+        1116,
+        1180
+      ],
+      "summary": "Provides the TestClusterStore operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:etcdserver/api/membership/membership_test.go",
+      "type": "file",
+      "name": "membership_test.go",
+      "filePath": "etcdserver/api/membership/membership_test.go",
+      "summary": "Tests membership-related behavior and shared membership helpers used by the server API.",
+      "tags": [
+        "test",
+        "membership",
+        "integration",
+        "validation"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using package-level APIs and concurrency primitives where required."
+    },
+    {
+      "id": "function:etcdserver/api/membership/membership_test.go:TestAddRemoveMember",
+      "type": "function",
+      "name": "TestAddRemoveMember",
+      "filePath": "etcdserver/api/membership/membership_test.go",
+      "lineRange": [
+        28,
+        50
+      ],
+      "summary": "Provides the TestAddRemoveMember operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/membership/membership_test.go:MustCreateBackendBuckets",
+      "type": "function",
+      "name": "MustCreateBackendBuckets",
+      "filePath": "etcdserver/api/membership/membership_test.go",
+      "lineRange": [
+        69,
+        69
+      ],
+      "summary": "Provides the MustCreateBackendBuckets operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/membership_test.go:ClusterVersionFromBackend",
+      "type": "function",
+      "name": "ClusterVersionFromBackend",
+      "filePath": "etcdserver/api/membership/membership_test.go",
+      "lineRange": [
+        71,
+        71
+      ],
+      "summary": "Provides the ClusterVersionFromBackend operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/membership_test.go:MustSaveClusterVersionToBackend",
+      "type": "function",
+      "name": "MustSaveClusterVersionToBackend",
+      "filePath": "etcdserver/api/membership/membership_test.go",
+      "lineRange": [
+        72,
+        74
+      ],
+      "summary": "Provides the MustSaveClusterVersionToBackend operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/membership_test.go:MustReadMembersFromBackend",
+      "type": "function",
+      "name": "MustReadMembersFromBackend",
+      "filePath": "etcdserver/api/membership/membership_test.go",
+      "lineRange": [
+        76,
+        78
+      ],
+      "summary": "Provides the MustReadMembersFromBackend operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/membership_test.go:MustSaveMemberToBackend",
+      "type": "function",
+      "name": "MustSaveMemberToBackend",
+      "filePath": "etcdserver/api/membership/membership_test.go",
+      "lineRange": [
+        80,
+        82
+      ],
+      "summary": "Provides the MustSaveMemberToBackend operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/membership_test.go:TrimMembershipFromBackend",
+      "type": "function",
+      "name": "TrimMembershipFromBackend",
+      "filePath": "etcdserver/api/membership/membership_test.go",
+      "lineRange": [
+        84,
+        88
+      ],
+      "summary": "Provides the TrimMembershipFromBackend operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/membership_test.go:MustDeleteMemberFromBackend",
+      "type": "function",
+      "name": "MustDeleteMemberFromBackend",
+      "filePath": "etcdserver/api/membership/membership_test.go",
+      "lineRange": [
+        90,
+        93
+      ],
+      "summary": "Provides the MustDeleteMemberFromBackend operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/membership_test.go:MustSaveDowngradeToBackend",
+      "type": "function",
+      "name": "MustSaveDowngradeToBackend",
+      "filePath": "etcdserver/api/membership/membership_test.go",
+      "lineRange": [
+        95,
+        97
+      ],
+      "summary": "Provides the MustSaveDowngradeToBackend operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/membership_test.go:DowngradeInfoFromBackend",
+      "type": "function",
+      "name": "DowngradeInfoFromBackend",
+      "filePath": "etcdserver/api/membership/membership_test.go",
+      "lineRange": [
+        98,
+        98
+      ],
+      "summary": "Provides the DowngradeInfoFromBackend operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "test"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:etcdserver/api/membership/membership_test.go:backendMock",
+      "type": "class",
+      "name": "backendMock",
+      "filePath": "etcdserver/api/membership/membership_test.go",
+      "lineRange": [
+        52,
+        57
+      ],
+      "summary": "Represents the backendMock state and behavior for this module.",
+      "tags": [
+        "go",
+        "data-model",
+        "state",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdserver/api/membership/store.go",
+      "type": "file",
+      "name": "store.go",
+      "filePath": "etcdserver/api/membership/store.go",
+      "summary": "Defines the membership storage abstraction used to persist and recover cluster metadata.",
+      "tags": [
+        "membership",
+        "storage",
+        "interface",
+        "persistence"
+      ],
+      "complexity": "simple",
+      "languageNotes": "Go implementation using package-level APIs and concurrency primitives where required."
+    },
+    {
+      "id": "function:etcdserver/api/membership/store.go:MustParseMemberIDFromKey",
+      "type": "function",
+      "name": "MustParseMemberIDFromKey",
+      "filePath": "etcdserver/api/membership/store.go",
+      "lineRange": [
+        51,
+        57
+      ],
+      "summary": "Provides the MustParseMemberIDFromKey operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:etcdserver/api/membership/store.go:ClusterVersionBackend",
+      "type": "class",
+      "name": "ClusterVersionBackend",
+      "filePath": "etcdserver/api/membership/store.go",
+      "lineRange": [
+        34,
+        37
+      ],
+      "summary": "Represents the ClusterVersionBackend state and behavior for this module.",
+      "tags": [
+        "go",
+        "data-model",
+        "state",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/api/membership/store.go:MemberBackend",
+      "type": "class",
+      "name": "MemberBackend",
+      "filePath": "etcdserver/api/membership/store.go",
+      "lineRange": [
+        39,
+        44
+      ],
+      "summary": "Represents the MemberBackend state and behavior for this module.",
+      "tags": [
+        "go",
+        "data-model",
+        "state",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdserver/api/membership/store.go:DowngradeInfoBackend",
+      "type": "class",
+      "name": "DowngradeInfoBackend",
+      "filePath": "etcdserver/api/membership/store.go",
+      "lineRange": [
+        46,
+        49
+      ],
+      "summary": "Represents the DowngradeInfoBackend state and behavior for this module.",
+      "tags": [
+        "go",
+        "data-model",
+        "state",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdserver/api/membership/storev2.go",
+      "type": "file",
+      "name": "storev2.go",
+      "filePath": "etcdserver/api/membership/storev2.go",
+      "summary": "Provides the legacy v2 store-backed implementation for reading and writing cluster membership metadata.",
+      "tags": [
+        "membership",
+        "legacy-api",
+        "v2-store",
+        "persistence",
+        "compatibility"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using package-level APIs and concurrency primitives where required."
+    },
+    {
+      "id": "function:etcdserver/api/membership/storev2.go:IsMetaStoreOnly",
+      "type": "function",
+      "name": "IsMetaStoreOnly",
+      "filePath": "etcdserver/api/membership/storev2.go",
+      "lineRange": [
+        45,
+        115
+      ],
+      "summary": "Provides the IsMetaStoreOnly operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdserver/api/membership/storev2.go:mustSaveMemberToStore",
+      "type": "function",
+      "name": "mustSaveMemberToStore",
+      "filePath": "etcdserver/api/membership/storev2.go",
+      "lineRange": [
+        124,
+        137
+      ],
+      "summary": "Provides the mustSaveMemberToStore operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/storev2.go:mustUpdateMemberAttrInStore",
+      "type": "function",
+      "name": "mustUpdateMemberAttrInStore",
+      "filePath": "etcdserver/api/membership/storev2.go",
+      "lineRange": [
+        149,
+        162
+      ],
+      "summary": "Provides the mustUpdateMemberAttrInStore operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/storev2.go:nodeToMember",
+      "type": "function",
+      "name": "nodeToMember",
+      "filePath": "etcdserver/api/membership/storev2.go",
+      "lineRange": [
+        176,
+        200
+      ],
+      "summary": "Provides the nodeToMember operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdserver/api/membership/storev2.go:StoreClusterVersionKey",
+      "type": "function",
+      "name": "StoreClusterVersionKey",
+      "filePath": "etcdserver/api/membership/storev2.go",
+      "lineRange": [
+        202,
+        204
+      ],
+      "summary": "Provides the StoreClusterVersionKey operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/storev2.go:RemovedMemberStoreKey",
+      "type": "function",
+      "name": "RemovedMemberStoreKey",
+      "filePath": "etcdserver/api/membership/storev2.go",
+      "lineRange": [
+        206,
+        208
+      ],
+      "summary": "Provides the RemovedMemberStoreKey operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/storev2.go:MemberStoreKey",
+      "type": "function",
+      "name": "MemberStoreKey",
+      "filePath": "etcdserver/api/membership/storev2.go",
+      "lineRange": [
+        210,
+        212
+      ],
+      "summary": "Provides the MemberStoreKey operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdserver/api/membership/storev2.go:MemberAttributesStorePath",
+      "type": "function",
+      "name": "MemberAttributesStorePath",
+      "filePath": "etcdserver/api/membership/storev2.go",
+      "lineRange": [
+        214,
+        216
+      ],
+      "summary": "Provides the MemberAttributesStorePath operation for this module.",
+      "tags": [
+        "go",
+        "operation",
+        "implementation"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:etcdserver/api/capability.go",
+      "target": "function:etcdserver/api/capability.go:UpdateCapability",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/capability.go",
+      "target": "function:etcdserver/api/capability.go:UpdateCapability",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/capability.go",
+      "target": "function:etcdserver/api/capability.go:IsCapabilityEnabled",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/capability.go",
+      "target": "function:etcdserver/api/capability.go:IsCapabilityEnabled",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/capability.go",
+      "target": "function:etcdserver/api/capability.go:EnableCapability",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/capability.go",
+      "target": "function:etcdserver/api/capability.go:EnableCapability",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/capability.go",
+      "target": "file:etcdserver/version/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/capability.go",
+      "target": "file:etcdserver/version/downgrade.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/capability.go",
+      "target": "file:etcdserver/version/downgrade_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/capability.go",
+      "target": "file:etcdserver/version/errors.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/capability.go",
+      "target": "file:etcdserver/version/monitor.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/capability.go",
+      "target": "file:etcdserver/version/monitor_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/capability.go",
+      "target": "file:etcdserver/version/version.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/capability.go",
+      "target": "file:etcdserver/version/version_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:NewClusterFromURLsMap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:NewClusterFromURLsMap",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:NewClusterFromMembers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:NewClusterFromMembers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:NewCluster",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:NewCluster",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:ID",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:ID",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:Members",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:Members",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:Member",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:Member",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:VotingMembers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:VotingMembers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:MemberByName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:MemberByName",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:MemberIDs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:MemberIDs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:IsIDRemoved",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:IsIDRemoved",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:PeerURLs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:PeerURLs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:ClientURLs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:ClientURLs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:String",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:String",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:SetID",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:SetID",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:SetBackend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:SetBackend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:SetVersionChangedNotifier",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:SetVersionChangedNotifier",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:UnsafeLoad",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:UnsafeLoad",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:Recover",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:Recover",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:ValidateConfigurationChange",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:ValidateConfigurationChange",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:AddMember",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:AddMember",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:RemoveMember",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:RemoveMember",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:UpdateAttributes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:UpdateAttributes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:PromoteMember",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:PromoteMember",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:UpdateRaftAttributes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:UpdateRaftAttributes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:Version",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:Version",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:SetVersion",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:SetVersion",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:IsReadyToAddVotingMember",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:IsReadyToAddVotingMember",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:IsReadyToRemoveVotingMember",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:IsReadyToRemoveVotingMember",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:IsReadyToPromoteMember",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:IsReadyToPromoteMember",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:MembersFromStore",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:MembersFromStore",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:ValidateClusterAndAssignIDs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:ValidateClusterAndAssignIDs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:IsLocalMemberLearner",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:IsLocalMemberLearner",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:DowngradeInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:DowngradeInfo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:SetDowngradeInfo",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:SetDowngradeInfo",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:IsMemberExist",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:IsMemberExist",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:VotingMemberIDs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:VotingMemberIDs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:buildMembershipMetric",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:updateMembershipMetric",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:ValidateMaxLearnerConfig",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:ValidateMaxLearnerConfig",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:Store",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "function:etcdserver/api/membership/cluster.go:Store",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "class:etcdserver/api/membership/cluster.go:RaftCluster",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "class:etcdserver/api/membership/cluster.go:RaftCluster",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "file:etcdserver/api/v2store/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "file:etcdserver/api/v2store/event.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "file:etcdserver/api/v2store/event_history.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "file:etcdserver/api/v2store/event_queue.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "file:etcdserver/api/v2store/event_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "file:etcdserver/api/v2store/heap_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "file:etcdserver/api/v2store/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "file:etcdserver/api/v2store/node.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "file:etcdserver/api/v2store/node_extern.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "file:etcdserver/api/v2store/node_extern_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "file:etcdserver/api/v2store/node_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "file:etcdserver/api/v2store/stats.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "file:etcdserver/api/v2store/stats_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "file:etcdserver/api/v2store/store.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "file:etcdserver/api/v2store/store_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "file:etcdserver/api/v2store/store_ttl_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "file:etcdserver/api/v2store/ttl_key_heap.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "file:etcdserver/api/v2store/watcher.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "file:etcdserver/api/v2store/watcher_hub.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "file:etcdserver/api/v2store/watcher_hub_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "file:etcdserver/api/v2store/watcher_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "file:etcdserver/version/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "file:etcdserver/version/downgrade.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "file:etcdserver/version/downgrade_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "file:etcdserver/version/errors.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "file:etcdserver/version/monitor.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "file:etcdserver/version/monitor_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "file:etcdserver/version/version.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster.go",
+      "target": "file:etcdserver/version/version_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestClusterMember",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestClusterMember",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestClusterMemberByName",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestClusterMemberByName",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestClusterMemberIDs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestClusterMemberIDs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestClusterPeerURLs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestClusterPeerURLs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestClusterClientURLs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestClusterClientURLs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestClusterValidateAndAssignIDsBad",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestClusterValidateAndAssignIDsBad",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestClusterValidateAndAssignIDs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestClusterValidateAndAssignIDs",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestClusterValidateConfigurationChangeV3",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestClusterValidateConfigurationChangeV3",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestClusterGenID",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestClusterGenID",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestNodeToMemberBad",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestNodeToMemberBad",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestClusterAddMember",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestClusterAddMember",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestClusterAddMemberAsLearner",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestClusterAddMemberAsLearner",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestClusterMembers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestClusterMembers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestClusterRemoveMember",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestClusterRemoveMember",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestClusterUpdateAttributes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestClusterUpdateAttributes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestNodeToMember",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestNodeToMember",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:newTestCluster",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestIsReadyToAddVotingMember",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestIsReadyToAddVotingMember",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestIsReadyToRemoveVotingMember",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestIsReadyToRemoveVotingMember",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestIsReadyToPromoteMember",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestIsReadyToPromoteMember",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestPromoteMember",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestPromoteMember",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestUpdateRaftAttributes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestUpdateRaftAttributes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestClusterStore",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "function:etcdserver/api/membership/cluster_test.go:TestClusterStore",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "file:etcdserver/api/v2store/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "file:etcdserver/api/v2store/event.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "file:etcdserver/api/v2store/event_history.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "file:etcdserver/api/v2store/event_queue.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "file:etcdserver/api/v2store/event_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "file:etcdserver/api/v2store/heap_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "file:etcdserver/api/v2store/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "file:etcdserver/api/v2store/node.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "file:etcdserver/api/v2store/node_extern.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "file:etcdserver/api/v2store/node_extern_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "file:etcdserver/api/v2store/node_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "file:etcdserver/api/v2store/stats.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "file:etcdserver/api/v2store/stats_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "file:etcdserver/api/v2store/store.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "file:etcdserver/api/v2store/store_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "file:etcdserver/api/v2store/store_ttl_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "file:etcdserver/api/v2store/ttl_key_heap.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "file:etcdserver/api/v2store/watcher.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "file:etcdserver/api/v2store/watcher_hub.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "file:etcdserver/api/v2store/watcher_hub_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/cluster_test.go",
+      "target": "file:etcdserver/api/v2store/watcher_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/membership_test.go",
+      "target": "function:etcdserver/api/membership/membership_test.go:TestAddRemoveMember",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/membership_test.go",
+      "target": "function:etcdserver/api/membership/membership_test.go:TestAddRemoveMember",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/membership_test.go",
+      "target": "function:etcdserver/api/membership/membership_test.go:MustCreateBackendBuckets",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/membership_test.go",
+      "target": "function:etcdserver/api/membership/membership_test.go:MustCreateBackendBuckets",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/membership_test.go",
+      "target": "function:etcdserver/api/membership/membership_test.go:ClusterVersionFromBackend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/membership_test.go",
+      "target": "function:etcdserver/api/membership/membership_test.go:ClusterVersionFromBackend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/membership_test.go",
+      "target": "function:etcdserver/api/membership/membership_test.go:MustSaveClusterVersionToBackend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/membership_test.go",
+      "target": "function:etcdserver/api/membership/membership_test.go:MustSaveClusterVersionToBackend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/membership_test.go",
+      "target": "function:etcdserver/api/membership/membership_test.go:MustReadMembersFromBackend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/membership_test.go",
+      "target": "function:etcdserver/api/membership/membership_test.go:MustReadMembersFromBackend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/membership_test.go",
+      "target": "function:etcdserver/api/membership/membership_test.go:MustSaveMemberToBackend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/membership_test.go",
+      "target": "function:etcdserver/api/membership/membership_test.go:MustSaveMemberToBackend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/membership_test.go",
+      "target": "function:etcdserver/api/membership/membership_test.go:TrimMembershipFromBackend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/membership_test.go",
+      "target": "function:etcdserver/api/membership/membership_test.go:TrimMembershipFromBackend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/membership_test.go",
+      "target": "function:etcdserver/api/membership/membership_test.go:MustDeleteMemberFromBackend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/membership_test.go",
+      "target": "function:etcdserver/api/membership/membership_test.go:MustDeleteMemberFromBackend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/membership_test.go",
+      "target": "function:etcdserver/api/membership/membership_test.go:MustSaveDowngradeToBackend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/membership_test.go",
+      "target": "function:etcdserver/api/membership/membership_test.go:MustSaveDowngradeToBackend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/membership_test.go",
+      "target": "function:etcdserver/api/membership/membership_test.go:DowngradeInfoFromBackend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/membership_test.go",
+      "target": "function:etcdserver/api/membership/membership_test.go:DowngradeInfoFromBackend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/membership_test.go",
+      "target": "class:etcdserver/api/membership/membership_test.go:backendMock",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/membership_test.go",
+      "target": "file:etcdserver/version/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/membership_test.go",
+      "target": "file:etcdserver/version/downgrade.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/membership_test.go",
+      "target": "file:etcdserver/version/downgrade_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/membership_test.go",
+      "target": "file:etcdserver/version/errors.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/membership_test.go",
+      "target": "file:etcdserver/version/monitor.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/membership_test.go",
+      "target": "file:etcdserver/version/monitor_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/membership_test.go",
+      "target": "file:etcdserver/version/version.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/membership_test.go",
+      "target": "file:etcdserver/version/version_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/store.go",
+      "target": "function:etcdserver/api/membership/store.go:MustParseMemberIDFromKey",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/store.go",
+      "target": "function:etcdserver/api/membership/store.go:MustParseMemberIDFromKey",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/store.go",
+      "target": "class:etcdserver/api/membership/store.go:ClusterVersionBackend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/store.go",
+      "target": "class:etcdserver/api/membership/store.go:ClusterVersionBackend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/store.go",
+      "target": "class:etcdserver/api/membership/store.go:MemberBackend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/store.go",
+      "target": "class:etcdserver/api/membership/store.go:MemberBackend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/store.go",
+      "target": "class:etcdserver/api/membership/store.go:DowngradeInfoBackend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/store.go",
+      "target": "class:etcdserver/api/membership/store.go:DowngradeInfoBackend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/store.go",
+      "target": "file:etcdserver/version/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/store.go",
+      "target": "file:etcdserver/version/downgrade.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/store.go",
+      "target": "file:etcdserver/version/downgrade_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/store.go",
+      "target": "file:etcdserver/version/errors.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/store.go",
+      "target": "file:etcdserver/version/monitor.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/store.go",
+      "target": "file:etcdserver/version/monitor_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/store.go",
+      "target": "file:etcdserver/version/version.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/store.go",
+      "target": "file:etcdserver/version/version_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2.go",
+      "target": "function:etcdserver/api/membership/storev2.go:IsMetaStoreOnly",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2.go",
+      "target": "function:etcdserver/api/membership/storev2.go:IsMetaStoreOnly",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2.go",
+      "target": "function:etcdserver/api/membership/storev2.go:mustSaveMemberToStore",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2.go",
+      "target": "function:etcdserver/api/membership/storev2.go:mustUpdateMemberAttrInStore",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2.go",
+      "target": "function:etcdserver/api/membership/storev2.go:nodeToMember",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2.go",
+      "target": "function:etcdserver/api/membership/storev2.go:StoreClusterVersionKey",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2.go",
+      "target": "function:etcdserver/api/membership/storev2.go:StoreClusterVersionKey",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2.go",
+      "target": "function:etcdserver/api/membership/storev2.go:RemovedMemberStoreKey",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2.go",
+      "target": "function:etcdserver/api/membership/storev2.go:RemovedMemberStoreKey",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2.go",
+      "target": "function:etcdserver/api/membership/storev2.go:MemberStoreKey",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2.go",
+      "target": "function:etcdserver/api/membership/storev2.go:MemberStoreKey",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2.go",
+      "target": "function:etcdserver/api/membership/storev2.go:MemberAttributesStorePath",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2.go",
+      "target": "function:etcdserver/api/membership/storev2.go:MemberAttributesStorePath",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2.go",
+      "target": "file:etcdserver/api/v2store/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2.go",
+      "target": "file:etcdserver/api/v2store/event.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2.go",
+      "target": "file:etcdserver/api/v2store/event_history.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2.go",
+      "target": "file:etcdserver/api/v2store/event_queue.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2.go",
+      "target": "file:etcdserver/api/v2store/event_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2.go",
+      "target": "file:etcdserver/api/v2store/heap_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2.go",
+      "target": "file:etcdserver/api/v2store/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2.go",
+      "target": "file:etcdserver/api/v2store/node.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2.go",
+      "target": "file:etcdserver/api/v2store/node_extern.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2.go",
+      "target": "file:etcdserver/api/v2store/node_extern_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2.go",
+      "target": "file:etcdserver/api/v2store/node_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2.go",
+      "target": "file:etcdserver/api/v2store/stats.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2.go",
+      "target": "file:etcdserver/api/v2store/stats_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2.go",
+      "target": "file:etcdserver/api/v2store/store.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2.go",
+      "target": "file:etcdserver/api/v2store/store_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2.go",
+      "target": "file:etcdserver/api/v2store/store_ttl_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2.go",
+      "target": "file:etcdserver/api/v2store/ttl_key_heap.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2.go",
+      "target": "file:etcdserver/api/v2store/watcher.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2.go",
+      "target": "file:etcdserver/api/v2store/watcher_hub.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2.go",
+      "target": "file:etcdserver/api/v2store/watcher_hub_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdserver/api/membership/storev2.go",
+      "target": "file:etcdserver/api/v2store/watcher_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

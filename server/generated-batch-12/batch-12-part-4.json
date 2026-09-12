@@ -1,0 +1,1365 @@
+{
+  "nodes": [
+    {
+      "id": "file:etcdmain/grpc_proxy.go",
+      "type": "file",
+      "name": "grpc_proxy.go",
+      "filePath": "etcdmain/grpc_proxy.go",
+      "summary": "Defines and starts the experimental gRPC proxy, including client construction, TLS, cmux listeners, HTTP health, metrics, and transport setup.",
+      "tags": [
+        "entry-point",
+        "grpc-proxy",
+        "networking",
+        "tls",
+        "observability"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdmain/grpc_proxy.go:newGRPCProxyStartCommand",
+      "type": "function",
+      "name": "newGRPCProxyStartCommand",
+      "filePath": "etcdmain/grpc_proxy.go",
+      "lineRange": [
+        132,
+        188
+      ],
+      "summary": "newGRPCProxyStartCommand implements newGRPCProxyStartCommand behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/grpc_proxy.go:startGRPCProxy",
+      "type": "function",
+      "name": "startGRPCProxy",
+      "filePath": "etcdmain/grpc_proxy.go",
+      "lineRange": [
+        190,
+        290
+      ],
+      "summary": "startGRPCProxy implements startGRPCProxy behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdmain/grpc_proxy.go:checkArgs",
+      "type": "function",
+      "name": "checkArgs",
+      "filePath": "etcdmain/grpc_proxy.go",
+      "lineRange": [
+        292,
+        332
+      ],
+      "summary": "checkArgs implements checkArgs behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/grpc_proxy.go:mustNewClient",
+      "type": "function",
+      "name": "mustNewClient",
+      "filePath": "etcdmain/grpc_proxy.go",
+      "lineRange": [
+        334,
+        356
+      ],
+      "summary": "mustNewClient implements mustNewClient behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/grpc_proxy.go:mustNewProxyClient",
+      "type": "function",
+      "name": "mustNewProxyClient",
+      "filePath": "etcdmain/grpc_proxy.go",
+      "lineRange": [
+        358,
+        372
+      ],
+      "summary": "mustNewProxyClient implements mustNewProxyClient behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/grpc_proxy.go:newProxyClientCfg",
+      "type": "function",
+      "name": "newProxyClientCfg",
+      "filePath": "etcdmain/grpc_proxy.go",
+      "lineRange": [
+        381,
+        395
+      ],
+      "summary": "newProxyClientCfg implements newProxyClientCfg behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/grpc_proxy.go:newClientCfg",
+      "type": "function",
+      "name": "newClientCfg",
+      "filePath": "etcdmain/grpc_proxy.go",
+      "lineRange": [
+        397,
+        436
+      ],
+      "summary": "newClientCfg implements newClientCfg behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/grpc_proxy.go:mustListenCMux",
+      "type": "function",
+      "name": "mustListenCMux",
+      "filePath": "etcdmain/grpc_proxy.go",
+      "lineRange": [
+        445,
+        465
+      ],
+      "summary": "mustListenCMux implements mustListenCMux behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/grpc_proxy.go:newGRPCProxyServer",
+      "type": "function",
+      "name": "newGRPCProxyServer",
+      "filePath": "etcdmain/grpc_proxy.go",
+      "lineRange": [
+        467,
+        554
+      ],
+      "summary": "newGRPCProxyServer implements newGRPCProxyServer behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:etcdmain/grpc_proxy.go:mustHTTPServer",
+      "type": "function",
+      "name": "mustHTTPServer",
+      "filePath": "etcdmain/grpc_proxy.go",
+      "lineRange": [
+        563,
+        596
+      ],
+      "summary": "mustHTTPServer implements mustHTTPServer behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/grpc_proxy.go:maybeServeMetrics",
+      "type": "function",
+      "name": "maybeServeMetrics",
+      "filePath": "etcdmain/grpc_proxy.go",
+      "lineRange": [
+        598,
+        617
+      ],
+      "summary": "maybeServeMetrics implements maybeServeMetrics behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/grpc_proxy.go:newHTTPTransport",
+      "type": "function",
+      "name": "newHTTPTransport",
+      "filePath": "etcdmain/grpc_proxy.go",
+      "lineRange": [
+        632,
+        657
+      ],
+      "summary": "newHTTPTransport implements newHTTPTransport behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/grpc_proxy.go:mustMetricsListener",
+      "type": "function",
+      "name": "mustMetricsListener",
+      "filePath": "etcdmain/grpc_proxy.go",
+      "lineRange": [
+        659,
+        672
+      ],
+      "summary": "mustMetricsListener implements mustMetricsListener behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdmain/grpc_proxy_logger.go",
+      "type": "file",
+      "name": "grpc_proxy_logger.go",
+      "filePath": "etcdmain/grpc_proxy_logger.go",
+      "summary": "Implements structured logging hooks for gRPC proxy requests, responses, stream messages, payload conversion, and reportability.",
+      "tags": [
+        "logging",
+        "grpc-proxy",
+        "middleware",
+        "serialization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/grpc_proxy_logger.go:PostCall",
+      "type": "function",
+      "name": "PostCall",
+      "filePath": "etcdmain/grpc_proxy_logger.go",
+      "lineRange": [
+        45,
+        47
+      ],
+      "summary": "PostCall implements PostCall behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/grpc_proxy_logger.go:PostMsgReceive",
+      "type": "function",
+      "name": "PostMsgReceive",
+      "filePath": "etcdmain/grpc_proxy_logger.go",
+      "lineRange": [
+        49,
+        53
+      ],
+      "summary": "PostMsgReceive implements PostMsgReceive behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/grpc_proxy_logger.go:PostMsgSend",
+      "type": "function",
+      "name": "PostMsgSend",
+      "filePath": "etcdmain/grpc_proxy_logger.go",
+      "lineRange": [
+        55,
+        59
+      ],
+      "summary": "PostMsgSend implements PostMsgSend behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/grpc_proxy_logger.go:logFieldsFromPayload",
+      "type": "function",
+      "name": "logFieldsFromPayload",
+      "filePath": "etcdmain/grpc_proxy_logger.go",
+      "lineRange": [
+        61,
+        76
+      ],
+      "summary": "logFieldsFromPayload implements logFieldsFromPayload behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/grpc_proxy_logger.go:reportable",
+      "type": "function",
+      "name": "reportable",
+      "filePath": "etcdmain/grpc_proxy_logger.go",
+      "lineRange": [
+        86,
+        100
+      ],
+      "summary": "reportable implements reportable behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdmain/grpc_proxy_logger.go:grpcProxyLogger",
+      "type": "class",
+      "name": "grpcProxyLogger",
+      "filePath": "etcdmain/grpc_proxy_logger.go",
+      "lineRange": [
+        33,
+        36
+      ],
+      "summary": "Defines grpcProxyLogger, a server component used by the etcd runtime APIs.",
+      "tags": [
+        "server",
+        "component",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdmain/grpc_proxy_logger_test.go",
+      "type": "file",
+      "name": "grpc_proxy_logger_test.go",
+      "filePath": "etcdmain/grpc_proxy_logger_test.go",
+      "summary": "Tests gRPC proxy logging for successful unary calls, errors, and streaming request/response sequences.",
+      "tags": [
+        "test",
+        "logging",
+        "grpc-proxy",
+        "integration"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/grpc_proxy_logger_test.go:TestLoggingPayloadSuite",
+      "type": "function",
+      "name": "TestLoggingPayloadSuite",
+      "filePath": "etcdmain/grpc_proxy_logger_test.go",
+      "lineRange": [
+        38,
+        53
+      ],
+      "summary": "TestLoggingPayloadSuite implements TestLoggingPayloadSuite behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/grpc_proxy_logger_test.go:SetupTest",
+      "type": "function",
+      "name": "SetupTest",
+      "filePath": "etcdmain/grpc_proxy_logger_test.go",
+      "lineRange": [
+        55,
+        58
+      ],
+      "summary": "SetupTest implements SetupTest behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/grpc_proxy_logger_test.go:TestPing_LogsBothRequestAndResponse",
+      "type": "function",
+      "name": "TestPing_LogsBothRequestAndResponse",
+      "filePath": "etcdmain/grpc_proxy_logger_test.go",
+      "lineRange": [
+        60,
+        66
+      ],
+      "summary": "TestPing_LogsBothRequestAndResponse implements TestPing LogsBothRequestAndResponse behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/grpc_proxy_logger_test.go:TestPingError_LogsError",
+      "type": "function",
+      "name": "TestPingError_LogsError",
+      "filePath": "etcdmain/grpc_proxy_logger_test.go",
+      "lineRange": [
+        68,
+        75
+      ],
+      "summary": "TestPingError_LogsError implements TestPingError LogsError behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/grpc_proxy_logger_test.go:TestPingStream_LogsAllRequestsAndResponses",
+      "type": "function",
+      "name": "TestPingStream_LogsAllRequestsAndResponses",
+      "filePath": "etcdmain/grpc_proxy_logger_test.go",
+      "lineRange": [
+        77,
+        102
+      ],
+      "summary": "TestPingStream_LogsAllRequestsAndResponses implements TestPingStream LogsAllRequestsAndResponses behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/grpc_proxy_logger_test.go:waitUntil",
+      "type": "function",
+      "name": "waitUntil",
+      "filePath": "etcdmain/grpc_proxy_logger_test.go",
+      "lineRange": [
+        114,
+        129
+      ],
+      "summary": "waitUntil implements waitUntil behavior for the etcd server module.",
+      "tags": [
+        "test",
+        "validation",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:etcdmain/grpc_proxy_logger_test.go:loggingPayloadSuite",
+      "type": "class",
+      "name": "loggingPayloadSuite",
+      "filePath": "etcdmain/grpc_proxy_logger_test.go",
+      "lineRange": [
+        32,
+        36
+      ],
+      "summary": "Defines loggingPayloadSuite, a test double or test suite used by the etcd runtime APIs.",
+      "tags": [
+        "test",
+        "mocking",
+        "server"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdmain/main.go",
+      "type": "file",
+      "name": "main.go",
+      "filePath": "etcdmain/main.go",
+      "summary": "Provides the etcd command entry point and optional systemd readiness notification.",
+      "tags": [
+        "entry-point",
+        "startup",
+        "systemd",
+        "cli"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:etcdmain/main.go:Main",
+      "type": "function",
+      "name": "Main",
+      "filePath": "etcdmain/main.go",
+      "lineRange": [
+        25,
+        41
+      ],
+      "summary": "Main implements Main behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:etcdmain/util.go",
+      "type": "file",
+      "name": "util.go",
+      "filePath": "etcdmain/util.go",
+      "summary": "Discovers client endpoints used by the etcd gateway and proxy startup paths.",
+      "tags": [
+        "utility",
+        "networking",
+        "discovery",
+        "proxy"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:etcdmain/util.go:discoverEndpoints",
+      "type": "function",
+      "name": "discoverEndpoints",
+      "filePath": "etcdmain/util.go",
+      "lineRange": [
+        27,
+        89
+      ],
+      "summary": "discoverEndpoints implements discoverEndpoints behavior for the etcd server module.",
+      "tags": [
+        "server",
+        "implementation",
+        "api"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "function:etcdmain/grpc_proxy.go:newGRPCProxyStartCommand",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "function:etcdmain/grpc_proxy.go:startGRPCProxy",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "function:etcdmain/grpc_proxy.go:checkArgs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "function:etcdmain/grpc_proxy.go:mustNewClient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "function:etcdmain/grpc_proxy.go:mustNewProxyClient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "function:etcdmain/grpc_proxy.go:newProxyClientCfg",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "function:etcdmain/grpc_proxy.go:newClientCfg",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "function:etcdmain/grpc_proxy.go:mustListenCMux",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "function:etcdmain/grpc_proxy.go:newGRPCProxyServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "function:etcdmain/grpc_proxy.go:mustHTTPServer",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "function:etcdmain/grpc_proxy.go:maybeServeMetrics",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "function:etcdmain/grpc_proxy.go:newHTTPTransport",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "function:etcdmain/grpc_proxy.go:mustMetricsListener",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:embed/auth_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:embed/config.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:embed/config_logging.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:embed/config_logging_journal_unix.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:embed/config_logging_journal_windows.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:embed/config_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:embed/config_tracing.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:embed/config_tracing_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:embed/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:embed/etcd.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:embed/etcd_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:embed/serve.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:embed/serve_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:embed/util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:embed/util_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:etcdserver/api/v3election/v3electionpb/v3election.pb.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:etcdserver/api/v3election/v3electionpb/v3election_grpc.pb.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:etcdserver/api/v3lock/v3lockpb/v3lock.pb.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:etcdserver/api/v3lock/v3lockpb/v3lock_grpc.pb.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:proxy/grpcproxy/auth.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:proxy/grpcproxy/cluster.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:proxy/grpcproxy/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:proxy/grpcproxy/election.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:proxy/grpcproxy/health.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:proxy/grpcproxy/kv.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:proxy/grpcproxy/leader.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:proxy/grpcproxy/lease.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:proxy/grpcproxy/lock.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:proxy/grpcproxy/maintenance.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:proxy/grpcproxy/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:proxy/grpcproxy/register.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:proxy/grpcproxy/util.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:proxy/grpcproxy/watch.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:proxy/grpcproxy/watch_broadcast.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:proxy/grpcproxy/watch_broadcasts.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:proxy/grpcproxy/watch_ranges.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy.go",
+      "target": "file:proxy/grpcproxy/watcher.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy_logger.go",
+      "target": "function:etcdmain/grpc_proxy_logger.go:PostCall",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy_logger.go",
+      "target": "function:etcdmain/grpc_proxy_logger.go:PostCall",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy_logger.go",
+      "target": "function:etcdmain/grpc_proxy_logger.go:PostMsgReceive",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy_logger.go",
+      "target": "function:etcdmain/grpc_proxy_logger.go:PostMsgReceive",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy_logger.go",
+      "target": "function:etcdmain/grpc_proxy_logger.go:PostMsgSend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy_logger.go",
+      "target": "function:etcdmain/grpc_proxy_logger.go:PostMsgSend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy_logger.go",
+      "target": "function:etcdmain/grpc_proxy_logger.go:logFieldsFromPayload",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy_logger.go",
+      "target": "function:etcdmain/grpc_proxy_logger.go:reportable",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy_logger.go",
+      "target": "class:etcdmain/grpc_proxy_logger.go:grpcProxyLogger",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy_logger_test.go",
+      "target": "function:etcdmain/grpc_proxy_logger_test.go:TestLoggingPayloadSuite",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy_logger_test.go",
+      "target": "function:etcdmain/grpc_proxy_logger_test.go:TestLoggingPayloadSuite",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy_logger_test.go",
+      "target": "function:etcdmain/grpc_proxy_logger_test.go:SetupTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy_logger_test.go",
+      "target": "function:etcdmain/grpc_proxy_logger_test.go:SetupTest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy_logger_test.go",
+      "target": "function:etcdmain/grpc_proxy_logger_test.go:TestPing_LogsBothRequestAndResponse",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy_logger_test.go",
+      "target": "function:etcdmain/grpc_proxy_logger_test.go:TestPing_LogsBothRequestAndResponse",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy_logger_test.go",
+      "target": "function:etcdmain/grpc_proxy_logger_test.go:TestPingError_LogsError",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy_logger_test.go",
+      "target": "function:etcdmain/grpc_proxy_logger_test.go:TestPingError_LogsError",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy_logger_test.go",
+      "target": "function:etcdmain/grpc_proxy_logger_test.go:TestPingStream_LogsAllRequestsAndResponses",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy_logger_test.go",
+      "target": "function:etcdmain/grpc_proxy_logger_test.go:TestPingStream_LogsAllRequestsAndResponses",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy_logger_test.go",
+      "target": "function:etcdmain/grpc_proxy_logger_test.go:waitUntil",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/grpc_proxy_logger_test.go",
+      "target": "class:etcdmain/grpc_proxy_logger_test.go:loggingPayloadSuite",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/main.go",
+      "target": "function:etcdmain/main.go:Main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:etcdmain/main.go",
+      "target": "function:etcdmain/main.go:Main",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:etcdmain/util.go",
+      "target": "function:etcdmain/util.go:discoverEndpoints",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "function:etcdmain/grpc_proxy.go:startGRPCProxy",
+      "target": "function:etcdmain/grpc_proxy.go:checkArgs",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/grpc_proxy.go:startGRPCProxy",
+      "target": "function:embed/config_logging.go:Sync",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/grpc_proxy.go:startGRPCProxy",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/grpc_proxy.go:startGRPCProxy",
+      "target": "function:etcdmain/grpc_proxy.go:mustListenCMux",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/grpc_proxy.go:startGRPCProxy",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/grpc_proxy.go:startGRPCProxy",
+      "target": "function:etcdmain/grpc_proxy.go:mustNewClient",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/grpc_proxy.go:startGRPCProxy",
+      "target": "function:etcdmain/grpc_proxy.go:newGRPCProxyServer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/grpc_proxy.go:startGRPCProxy",
+      "target": "function:etcdmain/grpc_proxy.go:mustHTTPServer",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/grpc_proxy.go:startGRPCProxy",
+      "target": "function:etcdmain/grpc_proxy.go:maybeServeMetrics",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/grpc_proxy.go:startGRPCProxy",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/grpc_proxy.go:mustNewClient",
+      "target": "function:etcdmain/util.go:discoverEndpoints",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/grpc_proxy.go:mustNewClient",
+      "target": "function:etcdmain/grpc_proxy.go:newClientCfg",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/grpc_proxy.go:mustNewProxyClient",
+      "target": "function:etcdmain/grpc_proxy.go:newProxyClientCfg",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/grpc_proxy.go:mustNewProxyClient",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/grpc_proxy.go:newClientCfg",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/grpc_proxy.go:mustListenCMux",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/grpc_proxy.go:newGRPCProxyServer",
+      "target": "function:etcdserver/api/v3discovery/discovery_test.go:Get",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/grpc_proxy.go:newGRPCProxyServer",
+      "target": "function:etcdmain/grpc_proxy_logger.go:reportable",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/grpc_proxy.go:newGRPCProxyServer",
+      "target": "function:etcdmain/grpc_proxy_logger.go:reportable",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/grpc_proxy.go:mustHTTPServer",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/grpc_proxy.go:maybeServeMetrics",
+      "target": "function:etcdmain/grpc_proxy.go:mustMetricsListener",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/grpc_proxy.go:mustMetricsListener",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/grpc_proxy.go:mustMetricsListener",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/grpc_proxy_logger.go:PostMsgReceive",
+      "target": "function:etcdmain/grpc_proxy_logger.go:logFieldsFromPayload",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/grpc_proxy_logger.go:PostMsgSend",
+      "target": "function:etcdmain/grpc_proxy_logger.go:logFieldsFromPayload",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/grpc_proxy_logger.go:logFieldsFromPayload",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/grpc_proxy_logger.go:reportable",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/grpc_proxy_logger.go:reportable",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/grpc_proxy_logger.go:reportable",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/grpc_proxy_logger.go:reportable",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/grpc_proxy_logger_test.go:TestLoggingPayloadSuite",
+      "target": "function:etcdmain/grpc_proxy_logger.go:reportable",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/grpc_proxy_logger_test.go:TestLoggingPayloadSuite",
+      "target": "function:etcdmain/grpc_proxy_logger.go:reportable",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/grpc_proxy_logger_test.go:TestPing_LogsBothRequestAndResponse",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:Len",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/grpc_proxy_logger_test.go:TestPingError_LogsError",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:Len",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/grpc_proxy_logger_test.go:TestPingStream_LogsAllRequestsAndResponses",
+      "target": "function:etcdmain/grpc_proxy_logger_test.go:waitUntil",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/grpc_proxy_logger_test.go:TestPingStream_LogsAllRequestsAndResponses",
+      "target": "function:etcdserver/api/v3discovery/discovery.go:Len",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/main.go:Main",
+      "target": "function:etcdmain/etcd.go:checkSupportArch",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/main.go:Main",
+      "target": "function:etcdmain/etcd.go:startEtcdOrProxyV2",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/util.go:discoverEndpoints",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/util.go:discoverEndpoints",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/util.go:discoverEndpoints",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:etcdmain/util.go:discoverEndpoints",
+      "target": "function:etcdserver/api/v3election/v3electionpb/v3election.pb.go:String",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

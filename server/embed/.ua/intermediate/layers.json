@@ -1,0 +1,53 @@
+[
+    {
+        "id":  "layer:configuration",
+        "name":  "Configuration and Bootstrap",
+        "description":  "Defines embedded etcd defaults, flag and file loading, validation, TLS, discovery, and cluster bootstrap behavior.",
+        "nodeIds":  [
+                        "file:config.go"
+                    ]
+    },
+    {
+        "id":  "layer:observability",
+        "name":  "Logging and Tracing",
+        "description":  "Constructs zap logging, platform-specific journal outputs, log rotation, and OpenTelemetry tracing for the embedded server.",
+        "nodeIds":  [
+                        "file:config_logging.go",
+                        "file:config_logging_journal_unix.go",
+                        "file:config_logging_journal_windows.go",
+                        "file:config_tracing.go"
+                    ]
+    },
+    {
+        "id":  "layer:runtime",
+        "name":  "Embedded Server Runtime",
+        "description":  "Starts and stops the embedded member, creates listeners, serves gRPC and HTTP traffic, and coordinates gateways and shutdown.",
+        "nodeIds":  [
+                        "file:etcd.go",
+                        "file:serve.go"
+                    ]
+    },
+    {
+        "id":  "layer:package-support",
+        "name":  "Package Support",
+        "description":  "Documents the embedding API, detects persisted WAL state during startup, and stores graph-generation preferences.",
+        "nodeIds":  [
+                        "file:doc.go",
+                        "file:util.go",
+                        "config:.ua/config.json"
+                    ]
+    },
+    {
+        "id":  "layer:test",
+        "name":  "Integration and Configuration Tests",
+        "description":  "Exercises embedded startup, authentication, configuration validation, tracing, metrics listeners, bootstrap errors, and reusable network fixtures.",
+        "nodeIds":  [
+                        "file:auth_test.go",
+                        "file:config_test.go",
+                        "file:config_tracing_test.go",
+                        "file:etcd_test.go",
+                        "file:serve_test.go",
+                        "file:util_test.go"
+                    ]
+    }
+]

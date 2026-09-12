@@ -1,0 +1,743 @@
+{
+  "nodes": [
+    {
+      "id": "file:storage/schema/confstate.go",
+      "type": "file",
+      "name": "confstate.go",
+      "filePath": "storage/schema/confstate.go",
+      "summary": "Defines backend persistence helpers for confstate data, including safe reads, writes, and bucket management.",
+      "tags": [
+        "schema",
+        "backend",
+        "persistence",
+        "serialization"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using backend transactions and protobuf-backed storage structures."
+    },
+    {
+      "id": "file:storage/schema/confstate_test.go",
+      "type": "file",
+      "name": "confstate_test.go",
+      "filePath": "storage/schema/confstate_test.go",
+      "summary": "Tests the confstate storage behavior, including persistence, transactions, and edge cases.",
+      "tags": [
+        "test",
+        "schema",
+        "backend",
+        "persistence"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using backend transactions and protobuf-backed storage structures."
+    },
+    {
+      "id": "file:storage/schema/lease.go",
+      "type": "file",
+      "name": "lease.go",
+      "filePath": "storage/schema/lease.go",
+      "summary": "Defines backend persistence helpers for lease data, including safe reads, writes, and bucket management.",
+      "tags": [
+        "schema",
+        "backend",
+        "persistence",
+        "serialization"
+      ],
+      "complexity": "moderate",
+      "languageNotes": "Go implementation using backend transactions and protobuf-backed storage structures."
+    },
+    {
+      "id": "function:storage/schema/confstate.go:MustUnsafeSaveConfStateToBackend",
+      "type": "function",
+      "name": "MustUnsafeSaveConfStateToBackend",
+      "filePath": "storage/schema/confstate.go",
+      "lineRange": [
+        29,
+        36
+      ],
+      "summary": "Implements UnsafeSaveConfStateToBackend behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/confstate.go:UnsafeConfStateFromBackend",
+      "type": "function",
+      "name": "UnsafeConfStateFromBackend",
+      "filePath": "storage/schema/confstate.go",
+      "lineRange": [
+        40,
+        59
+      ],
+      "summary": "Implements ConfStateFromBackend behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/confstate_test.go:TestConfStateFromBackendInOneTx",
+      "type": "function",
+      "name": "TestConfStateFromBackendInOneTx",
+      "filePath": "storage/schema/confstate_test.go",
+      "lineRange": [
+        27,
+        42
+      ],
+      "summary": "Implements ConfStateFromBackendInOneTx behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/confstate_test.go:TestMustUnsafeSaveConfStateToBackend",
+      "type": "function",
+      "name": "TestMustUnsafeSaveConfStateToBackend",
+      "filePath": "storage/schema/confstate_test.go",
+      "lineRange": [
+        44,
+        78
+      ],
+      "summary": "Implements UnsafeSaveConfStateToBackend behavior for this storage component.",
+      "tags": [
+        "test",
+        "validation",
+        "storage"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:storage/schema/lease.go:UnsafeCreateLeaseBucket",
+      "type": "function",
+      "name": "UnsafeCreateLeaseBucket",
+      "filePath": "storage/schema/lease.go",
+      "lineRange": [
+        27,
+        29
+      ],
+      "summary": "Implements CreateLeaseBucket behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/lease.go:MustUnsafeGetAllLeases",
+      "type": "function",
+      "name": "MustUnsafeGetAllLeases",
+      "filePath": "storage/schema/lease.go",
+      "lineRange": [
+        31,
+        46
+      ],
+      "summary": "Implements UnsafeGetAllLeases behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/lease.go:MustUnsafePutLease",
+      "type": "function",
+      "name": "MustUnsafePutLease",
+      "filePath": "storage/schema/lease.go",
+      "lineRange": [
+        48,
+        56
+      ],
+      "summary": "Implements UnsafePutLease behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/lease.go:UnsafeDeleteLease",
+      "type": "function",
+      "name": "UnsafeDeleteLease",
+      "filePath": "storage/schema/lease.go",
+      "lineRange": [
+        58,
+        60
+      ],
+      "summary": "Implements DeleteLease behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:storage/schema/lease.go:MustUnsafeGetLease",
+      "type": "function",
+      "name": "MustUnsafeGetLease",
+      "filePath": "storage/schema/lease.go",
+      "lineRange": [
+        62,
+        73
+      ],
+      "summary": "Implements UnsafeGetLease behavior for this storage component.",
+      "tags": [
+        "storage",
+        "backend",
+        "operation"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:storage/schema/confstate.go",
+      "target": "function:storage/schema/confstate.go:MustUnsafeSaveConfStateToBackend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/confstate.go",
+      "target": "function:storage/schema/confstate.go:MustUnsafeSaveConfStateToBackend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/confstate.go",
+      "target": "function:storage/schema/confstate.go:UnsafeConfStateFromBackend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/confstate.go",
+      "target": "function:storage/schema/confstate.go:UnsafeConfStateFromBackend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/confstate_test.go",
+      "target": "function:storage/schema/confstate_test.go:TestConfStateFromBackendInOneTx",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/confstate_test.go",
+      "target": "function:storage/schema/confstate_test.go:TestConfStateFromBackendInOneTx",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/confstate_test.go",
+      "target": "function:storage/schema/confstate_test.go:TestMustUnsafeSaveConfStateToBackend",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/confstate_test.go",
+      "target": "function:storage/schema/confstate_test.go:TestMustUnsafeSaveConfStateToBackend",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/lease.go",
+      "target": "function:storage/schema/lease.go:UnsafeCreateLeaseBucket",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/lease.go",
+      "target": "function:storage/schema/lease.go:UnsafeCreateLeaseBucket",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/lease.go",
+      "target": "function:storage/schema/lease.go:MustUnsafeGetAllLeases",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/lease.go",
+      "target": "function:storage/schema/lease.go:MustUnsafeGetAllLeases",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/lease.go",
+      "target": "function:storage/schema/lease.go:MustUnsafePutLease",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/lease.go",
+      "target": "function:storage/schema/lease.go:MustUnsafePutLease",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/lease.go",
+      "target": "function:storage/schema/lease.go:UnsafeDeleteLease",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/lease.go",
+      "target": "function:storage/schema/lease.go:UnsafeDeleteLease",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/lease.go",
+      "target": "function:storage/schema/lease.go:MustUnsafeGetLease",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:storage/schema/lease.go",
+      "target": "function:storage/schema/lease.go:MustUnsafeGetLease",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/confstate.go",
+      "target": "file:storage/backend/backend.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/confstate.go",
+      "target": "file:storage/backend/backend_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/confstate.go",
+      "target": "file:storage/backend/backend_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/confstate.go",
+      "target": "file:storage/backend/batch_tx.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/confstate.go",
+      "target": "file:storage/backend/batch_tx_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/confstate.go",
+      "target": "file:storage/backend/config_default.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/confstate.go",
+      "target": "file:storage/backend/config_linux.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/confstate.go",
+      "target": "file:storage/backend/config_windows.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/confstate.go",
+      "target": "file:storage/backend/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/confstate.go",
+      "target": "file:storage/backend/export_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/confstate.go",
+      "target": "file:storage/backend/hooks.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/confstate.go",
+      "target": "file:storage/backend/hooks_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/confstate.go",
+      "target": "file:storage/backend/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/confstate.go",
+      "target": "file:storage/backend/read_tx.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/confstate.go",
+      "target": "file:storage/backend/tx_buffer.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/confstate.go",
+      "target": "file:storage/backend/tx_buffer_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/confstate.go",
+      "target": "file:storage/backend/verify.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/confstate.go",
+      "target": "file:storage/backend/verify_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/confstate_test.go",
+      "target": "file:storage/backend/testing/betesting.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease.go",
+      "target": "file:lease/leasepb/lease.pb.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease.go",
+      "target": "file:storage/backend/backend.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease.go",
+      "target": "file:storage/backend/backend_bench_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease.go",
+      "target": "file:storage/backend/backend_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease.go",
+      "target": "file:storage/backend/batch_tx.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease.go",
+      "target": "file:storage/backend/batch_tx_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease.go",
+      "target": "file:storage/backend/config_default.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease.go",
+      "target": "file:storage/backend/config_linux.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease.go",
+      "target": "file:storage/backend/config_windows.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease.go",
+      "target": "file:storage/backend/doc.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease.go",
+      "target": "file:storage/backend/export_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease.go",
+      "target": "file:storage/backend/hooks.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease.go",
+      "target": "file:storage/backend/hooks_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease.go",
+      "target": "file:storage/backend/metrics.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease.go",
+      "target": "file:storage/backend/read_tx.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease.go",
+      "target": "file:storage/backend/tx_buffer.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease.go",
+      "target": "file:storage/backend/tx_buffer_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease.go",
+      "target": "file:storage/backend/verify.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:storage/schema/lease.go",
+      "target": "file:storage/backend/verify_test.go",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:storage/schema/confstate.go:MustUnsafeSaveConfStateToBackend",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafePut",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/confstate.go:UnsafeConfStateFromBackend",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeRange",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/confstate_test.go:TestConfStateFromBackendInOneTx",
+      "target": "function:storage/schema/cindex.go:CreateMetaBucket",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/confstate_test.go:TestConfStateFromBackendInOneTx",
+      "target": "function:storage/schema/confstate.go:UnsafeConfStateFromBackend",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/confstate_test.go:TestConfStateFromBackendInOneTx",
+      "target": "function:storage/schema/confstate.go:MustUnsafeSaveConfStateToBackend",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/confstate_test.go:TestConfStateFromBackendInOneTx",
+      "target": "function:storage/mvcc/kvstore_test.go:Equal",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/confstate_test.go:TestConfStateFromBackendInOneTx",
+      "target": "function:storage/schema/confstate.go:UnsafeConfStateFromBackend",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/confstate_test.go:TestMustUnsafeSaveConfStateToBackend",
+      "target": "function:storage/schema/cindex.go:CreateMetaBucket",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/confstate_test.go:TestMustUnsafeSaveConfStateToBackend",
+      "target": "function:storage/mvcc/kvstore_test.go:Commit",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/confstate_test.go:TestMustUnsafeSaveConfStateToBackend",
+      "target": "function:storage/schema/confstate.go:UnsafeConfStateFromBackend",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/confstate_test.go:TestMustUnsafeSaveConfStateToBackend",
+      "target": "function:storage/schema/confstate.go:MustUnsafeSaveConfStateToBackend",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/confstate_test.go:TestMustUnsafeSaveConfStateToBackend",
+      "target": "function:storage/mvcc/kvstore_test.go:Commit",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/confstate_test.go:TestMustUnsafeSaveConfStateToBackend",
+      "target": "function:storage/mvcc/kvstore_test.go:Equal",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/confstate_test.go:TestMustUnsafeSaveConfStateToBackend",
+      "target": "function:storage/schema/confstate.go:UnsafeConfStateFromBackend",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/lease.go:UnsafeCreateLeaseBucket",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeCreateBucket",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/lease.go:MustUnsafeGetAllLeases",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeForEach",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/lease.go:MustUnsafePutLease",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafePut",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/lease.go:UnsafeDeleteLease",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeDelete",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:storage/schema/lease.go:MustUnsafeGetLease",
+      "target": "function:storage/mvcc/kvstore_test.go:UnsafeRange",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:storage/schema/confstate.go",
+      "target": "file:storage/schema/confstate_test.go",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:storage/schema/lease.go",
+      "target": "file:storage/schema/lease_test.go",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}
