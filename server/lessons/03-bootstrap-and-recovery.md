@@ -11,7 +11,7 @@ architecture.
 - [storage/storage.go](../storage/storage.go)
 - [storage/backend.go](../storage/backend.go)
 - [storage/datadir/datadir.go](../storage/datadir/datadir.go)
-- [etcdserver/membership/](../etcdserver/membership/)
+- [etcdserver/api/membership/](../etcdserver/api/membership/)
 
 ## Startup questions
 
@@ -51,3 +51,55 @@ it creates or reopens: data directory, WAL, snapshot, backend, or membership.
 
 What would be unsafe about accepting a write before recovery establishes the
 last applied point?
+
+## File-by-file guide
+
+### etcdserver/bootstrap.go
+
+Read the main bootstrap function first, then follow helpers by their outputs:
+backend, WAL, Raft storage, cluster, and server. Whenever a helper reads disk,
+ask which in-memory invariant it establishes for the next stage.
+
+### storage/storage.go
+
+This adapts durable WAL and snapshot data to the Raft storage view. Read open,
+save, and close together to understand file ownership and ordering.
+
+### storage/backend.go
+
+This server-level wrapper opens the configured backend and connects it to
+snapshot and consistency support. It composes the lower storage/backend package
+for one etcd member.
+
+### storage/datadir/datadir.go
+
+Use this as the path reference while reading bootstrap. The data directory is a
+layout containing several recovery artifacts, not one database file.
+
+### etcdserver/api/membership/
+
+Read cluster and persistence helpers to see how member IDs, attributes,
+learners, URLs, and cluster identity are reconstructed and later used by Raft
+transport.
+
+## Useful tests
+
+- [bootstrap_test.go](../etcdserver/bootstrap_test.go) covers new and existing
+  data directories, WAL/snapshot records, and backend reopening.
+- [config_test.go](../config/config_test.go) covers data-directory, snapshot,
+  WAL, discovery, and bootstrap validation.
+
+## Recovery diagram
+
+```mermaid
+flowchart TD
+    D[Data directory] --> W[Read WAL]
+    D --> S[Read snapshot]
+    D --> B[Open backend]
+    W --> R[Rebuild Raft storage]
+    S --> R
+    B --> I[Restore applied index]
+    R --> A[Apply remaining committed entries]
+    I --> A
+    A --> READY[Ready to serve]
+```

@@ -1,0 +1,18 @@
+name: local
+variables:
+  - name: baseUrl
+    value: http://127.0.0.1:2379
+    enabled: true
+    secret: false
+    type: text
+  - name: key
+    value: bGVzc29u
+    enabled: true
+    secret: false
+    type: text
+  - name: value
+    value: aGVsbG8=
+    enabled: true
+    secret: false
+    type: text
+

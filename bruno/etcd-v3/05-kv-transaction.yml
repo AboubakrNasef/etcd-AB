@@ -1,0 +1,30 @@
+info:
+  name: KV - Transaction
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{baseUrl}}/v3/kv/txn"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "compare": [],
+        "success": [
+          {
+            "request_put": {
+              "key": "{{key}}",
+              "value": "{{value}}"
+            }
+          }
+        ],
+        "failure": []
+      }
+
+settings:
+  encodeUrl: true
+

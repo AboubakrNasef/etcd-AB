@@ -1,0 +1,23 @@
+opencollection: 1.0.0
+
+info:
+  name: etcd v3 HTTP Gateway
+
+request:
+  variables:
+    - name: baseUrl
+      value: http://127.0.0.1:2379
+    - name: key
+      value: bGVzc29u
+    - name: value
+      value: aGVsbG8=
+
+docs:
+  content: |-
+    # etcd v3 HTTP Gateway
+
+    This collection targets a local etcd server on `http://127.0.0.1:2379`.
+    The v3 gateway maps protobuf `bytes` fields to base64 strings, so keys and
+    values in KV request bodies must be base64 encoded.
+  type: text/markdown
+

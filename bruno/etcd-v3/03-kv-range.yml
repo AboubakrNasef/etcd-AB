@@ -1,0 +1,21 @@
+info:
+  name: KV - Range
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{baseUrl}}/v3/kv/range"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "key": "{{key}}"
+      }
+
+settings:
+  encodeUrl: true
+

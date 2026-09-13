@@ -9,8 +9,8 @@ coordinates readiness, snapshots, membership, and shutdown.
 
 - [etcdserver/server.go](../etcdserver/server.go)
 - [etcdserver/raft.go](../etcdserver/raft.go)
-- [etcdserver/wait.go](../etcdserver/wait.go)
-- [etcdserver/snapshot.go](../etcdserver/snapshot.go)
+- [proposal waiting in etcdserver/server.go](../etcdserver/server.go)
+- [etcdserver/snapshot_merge.go](../etcdserver/snapshot_merge.go)
 - [etcdserver/v3_server.go](../etcdserver/v3_server.go)
 
 ## How to read server.go
@@ -48,4 +48,58 @@ fail: validation, authorization, Raft, apply, storage, or shutdown.
 Which component knows that an operation is committed, and which knows how to
 apply its meaning?
 
+## File-by-file guide
+
+### etcdserver/server.go
+
+Begin with the EtcdServer fields to learn its collaborators, then read
+construction, start, coordination loops, and close. Channels and notifiers
+reveal how Raft, apply, linearizable reads, snapshots, and shutdown communicate.
+
+### etcdserver/raft.go
+
+This is the local adapter to the Raft node. Trace proposal input, Ready output,
+WAL persistence, peer messages, committed entries, and snapshots. It translates
+Raft's event model into server channels and state machines.
+
+### proposal waiting in etcdserver/server.go
+
+This matches an API caller with the result of its proposal. Follow registration,
+lookup, completion, timeout, and cancellation. The invariant is that a response
+belongs to the committed operation that created the waiter.
+
+### etcdserver/snapshot_merge.go
+
+This coordinates snapshot creation and restoration at the server boundary.
+Follow how it obtains a consistent state point, interacts with storage, and
+exposes snapshot information to Raft and peers.
+
+### etcdserver/v3_server.go
+
+This facade converts v3 operations into core-server calls. Classify each method
+as local read, coordinated read, proposal, or maintenance operation, then
+follow its error and protobuf response conversion.
+
 For the complete Raft explanation, continue with [Lesson 13](./13-raft-in-this-project.md).
+
+## Useful tests
+
+- [raft_test.go](../etcdserver/raft_test.go) tests the Raft adapter and
+  committed-entry behavior.
+- [server_test.go](../etcdserver/server_test.go) covers lifecycle coordination.
+- [server_access_control_test.go](../etcdserver/server_access_control_test.go)
+  covers lifecycle and authorization interaction.
+
+## Lifecycle diagram
+
+```mermaid
+stateDiagram-v2
+    [*] --> Constructed
+    Constructed --> Recovering
+    Recovering --> Serving
+    Serving --> Applying
+    Applying --> Serving
+    Serving --> Closing
+    Closing --> Closed
+    Closed --> [*]
+```

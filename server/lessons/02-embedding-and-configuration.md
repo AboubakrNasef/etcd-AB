@@ -44,3 +44,55 @@ validation.
 ## Checkpoint
 
 Why is embedding a lifecycle responsibility rather than merely a constructor?
+
+## Useful tests
+
+- [config_test.go](../embed/config_test.go) covers defaults, URLs, and config
+  validation.
+- [serve_test.go](../embed/serve_test.go) covers serving and bootstrap errors.
+- [util_test.go](../embed/util_test.go) covers initialization detection.
+- [config_test.go](../config/config_test.go) covers lower-level server config.
+
+## Construction diagram
+
+```mermaid
+flowchart LR
+    FLAGS[Flags and environment] --> CFG[embed.Config]
+    CFG --> VALIDATE[Validate and derive]
+    VALIDATE --> LISTEN[Create listeners]
+    VALIDATE --> STORAGE[Open storage]
+    LISTEN --> SERVER[Construct EtcdServer]
+    STORAGE --> SERVER
+    SERVER --> SERVICES[Register services]
+```
+
+## File-by-file guide
+
+### embed/config.go
+
+This is the user-facing configuration model. Read defaults, URL parsing, TLS,
+data-directory fields, and validation in that order. Defaults and derived URLs
+are startup behavior; changing them changes exposed network surfaces.
+
+### embed/etcd.go
+
+This file owns the embedded instance. Follow its fields to see listeners,
+backend, core EtcdServer, gRPC services, and close signals. Read start and
+close together: every acquired resource needs a matching shutdown path.
+
+### embed/serve.go
+
+This connects listeners to HTTP and gRPC handlers. Track client traffic, peer
+traffic, metrics, CORS, and request logging. It is an adapter, not the KV state
+machine.
+
+### config/config.go
+
+This lower layer validates cluster URLs, timing, data paths, and request-size
+calculations. It contains invariants that must hold before core construction.
+
+### storage/datadir/datadir.go
+
+This centralizes how one data directory becomes member, WAL, snapshot, and
+backend paths. It prevents bootstrap and maintenance code from disagreeing on
+the on-disk layout.

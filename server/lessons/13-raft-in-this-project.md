@@ -31,9 +31,9 @@ Start with these locations:
 - [storage/wal/](../storage/wal/): persists Raft hard state and log entries.
 - [etcdserver/api/rafthttp/](../etcdserver/api/rafthttp/): transports Raft
   messages and snapshots between members.
-- [etcdserver/membership/](../etcdserver/membership/): tracks the cluster
+- [etcdserver/api/membership/](../etcdserver/api/membership/): tracks the cluster
   members whose configuration is used by Raft.
-- [etcdserver/snapshot.go](../etcdserver/snapshot.go): coordinates compact
+- [etcdserver/snapshot_merge.go](../etcdserver/snapshot_merge.go): coordinates compact
   state transfer and local snapshot handling.
 
 Use [etcdserver/raft_test.go](../etcdserver/raft_test.go) and the related
@@ -328,4 +328,3 @@ Answer these without looking at the dashboard:
 
 If you can answer these six questions with file and package names, you have the
 correct Raft mental model for this project.
-

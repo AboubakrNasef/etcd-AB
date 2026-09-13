@@ -40,3 +40,36 @@ main.go -> etcdmain -> embed.StartEtcd
 ## Checkpoint
 
 What responsibility belongs in etcdmain but not root main.go?
+
+## Useful tests
+
+- [config_test.go](../etcdmain/config_test.go) covers command configuration and
+  flag behavior.
+- [etcd_test.go](../embed/etcd_test.go) shows command startup becoming an
+  embedded server.
+
+## File-by-file guide
+
+### main.go
+
+This is the executable boundary. Read its imports and startup call first. It
+exists so Go can build the etcd binary while keeping behavior in a reusable
+package. For flags, listeners, or Raft, continue into the next package.
+
+### etcdmain/main.go
+
+This process coordinator initializes logging, interprets command mode, handles
+signals, and invokes embedding. Follow error handling here as process-level
+failure; later failures belong to server lifecycle code.
+
+### etcdmain/config.go
+
+This maps command-line input into typed configuration. Follow one flag through
+parsing, defaulting, validation, and assignment. Lower layers should consume
+these typed settings instead of reading flags again.
+
+### etcdmain/help.go
+
+Help text describes the public process contract. Use it to discover modes and
+flags, then verify behavior in config.go. It is not a state-machine component,
+but it explains what operators are allowed to request.
