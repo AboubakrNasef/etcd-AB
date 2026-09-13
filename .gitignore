@@ -35,3 +35,11 @@ hack/tls-setup/certs
 /tools/benchmark/benchmark
 /out
 /etcd-dump-logs
+**/node_modules
+**/.gochache
+*/.gocache
+*/.gomodcache
+wal-explorer/.gocache/
+wal-explorer/.gomodcache/
+wal-explorer/web/node_modules/
+wal-explorer/web/dist/
