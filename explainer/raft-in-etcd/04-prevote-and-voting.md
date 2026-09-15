@@ -6,20 +6,27 @@ With pre-vote enabled, a real election has two phases:
 
 ```mermaid
 sequenceDiagram
-    participant A as candidate A
-    participant B as member B
-    participant C as member C
-    A->>B: MsgPreVote
-    A->>C: MsgPreVote
-    B-->>A: MsgPreVoteResp(granted)
-    C-->>A: MsgPreVoteResp(granted)
-    Note over A: increment term; become candidate
-    A->>B: MsgVote
-    A->>C: MsgVote
-    B-->>A: MsgVoteResp(granted)
-    C-->>A: MsgVoteResp(granted)
-    Note over A: quorum; become leader
+      participant A as Candidate A
+      participant B as Member B
+      participant C as Member C
+
+      A->>B: MsgPreVote
+      A->>C: MsgPreVote
+      B-->>A: MsgPreVoteResp granted
+      C-->>A: MsgPreVoteResp granted
+
+      A->>A: Pre-vote quorum
+      A->>A: Increment term and become candidate
+
+      A->>B: MsgVote
+      A->>C: MsgVote
+      B-->>A: MsgVoteResp granted
+      C-->>A: MsgVoteResp granted
+
+      A->>A: Election quorum
+      A->>A: Become leader
 ```
+
 
 Pre-vote asks whether the candidate would win without changing the durable
 term. This limits disruption from an isolated member reconnecting.
