@@ -246,6 +246,7 @@ For standalone, detailed versions of these guides, use:
 1. [Guide 1 — orientation and architecture](01-orientation-and-architecture.md)
 2. [Guide 2 — trace the request path](02-request-path.md)
 3. [Guide 3 — Raft, storage, and recovery](03-raft-and-storage.md)
+   - [Guide 3a — bbolt usage in etcd](03a-bbolt-usage.md)
 4. [Guide 4 — tests and experiments](04-tests-and-experiments.md)
 
 ### Guide 1 — Build a runnable mental model

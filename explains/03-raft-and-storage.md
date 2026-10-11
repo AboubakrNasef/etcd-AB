@@ -2,6 +2,8 @@
 
 This guide explains how etcd turns a replicated log into durable state and how a member restarts safely.
 
+For a focused explanation of etcd's bbolt backend, see [Guide 3a: bbolt usage in etcd](03a-bbolt-usage.md).
+
 ## Outcome
 
 You should be able to distinguish proposed, committed, applied, and persisted data; explain the role of WALs and snapshots; and reason about restart and catch-up behavior.
