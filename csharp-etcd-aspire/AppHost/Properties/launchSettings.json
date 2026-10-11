@@ -1,0 +1,15 @@
+{
+  "profiles": {
+    "https": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "applicationUrl": "http://localhost:18888",
+      "environmentVariables": {
+        "ASPIRE_ALLOW_UNSECURED_TRANSPORT": "true",
+        "ASPIRE_DASHBOARD_OTLP_ENDPOINT_URL": "http://0.0.0.0:4317",
+        "ASPIRE_DASHBOARD_UNSECURED_ALLOW_ANONYMOUS": "true"
+      }
+    }
+  }
+}

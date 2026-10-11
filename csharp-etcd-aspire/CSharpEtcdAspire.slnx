@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="AppHost/CSharpEtcdAspire.AppHost.csproj" />
+  <Project Path="AspireApp1/AspireApp1.ServiceDefaults/AspireApp1.ServiceDefaults.csproj" />
+  <Project Path="Watcher.Tests/CSharpEtcdAspire.Watcher.Tests.csproj" />
+  <Project Path="Watcher/CSharpEtcdAspire.Watcher.csproj" />
+</Solution>

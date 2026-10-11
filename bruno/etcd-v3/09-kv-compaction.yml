@@ -1,0 +1,32 @@
+info:
+  name: KV - Compact
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{baseUrl}}/v3/kv/compaction"
+  headers:
+    - name: Content-Type
+      value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "revision": 1
+      }
+
+docs:
+  content: |-
+    Compacts MVCC history through the specified revision. Change `revision` to
+    a revision that exists on your etcd server; compacting a future revision
+    fails. The latest value for each live key is retained, while reads or watches
+    that need compacted revisions can no longer use that history.
+
+    This request omits `physical`, so it does not wait for physical cleanup.
+    Compaction does not necessarily shrink the database file; use defragmentation
+    separately when you need to reclaim disk space.
+  type: text/markdown
+
+settings:
+  encodeUrl: true
