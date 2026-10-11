@@ -19,10 +19,67 @@ Combine the lessons by tracing one real mutation.
 6. Find watch event creation, previous-value handling, metrics, response
    construction, and tests.
 
-## Final diagram
+## Put flow observed in `.dev/logs/etcd.log`
 
-Draw the concrete call chain with function names from your checkout. It must
-contain RPC, proposal, commitment, apply, MVCC, backend, watch, and response.
+The log shows etcd starting with its existing `default.etcd` data directory,
+restoring the backend, and applying committed Raft entries. Later, it handles
+repeated `Put("lesson", "hello")` requests.
+
+One representative request appears around `2026-10-10 15:41:03`:
+
+- Raft entry index `53`, term `5`, is applied as an `EntryNormal`.
+- The apply log contains request ID `7587898130982251528` and
+  `put:{key:"lesson" value:"hello"}`.
+- About half a millisecond later, the RPC interceptor logs a completed
+  `/etcdserverpb.KV/Put` for key `lesson`, with `1.5879ms` elapsed time.
+- Similar requests follow with new request IDs and entry indexes. The RPC
+  stats and apply lines match by timing and request content; the stats line
+  does not include the Raft request ID.
+
+This is a series of writes of the same key and value. Each successful Put
+creates a new MVCC version and revision. A normal read returns the latest
+value for `lesson`; prior versions remain available until compaction removes
+them.
+
+## End-to-end flow
+
+```mermaid
+sequenceDiagram
+    participant C as Client / etcdctl
+    participant G as gRPC KV Put handler
+    participant S as EtcdServer
+    participant R as Raft
+    participant A as Raft apply path
+    participant M as MVCC and backend
+    participant W as Request waiter
+
+    C->>G: Put("lesson", "hello")
+    G->>G: Validate request
+    G->>S: Call EtcdServer.Put
+    S->>W: Register waiter with request ID
+    S->>R: Propose serialized request
+    R->>R: Replicate and commit entry
+    R->>A: Deliver committed EntryNormal
+    A->>A: Decode request and apply it
+    A->>M: Write key and value
+    M->>M: Assign MVCC revision and update backend
+    M-->>A: Return Put result
+    A->>W: Trigger waiter with result
+    W-->>S: Return result
+    S-->>G: Return PutResponse
+    G-->>C: Send response
+```
+
+The handler is [`api/v3rpc/key.go`](../etcdserver/api/v3rpc/key.go). It calls
+[`EtcdServer.Put`](../etcdserver/v3_server.go), which proposes the request and
+waits for the apply result. The committed entry is applied in
+[`server.go`](../etcdserver/server.go); MVCC assigns its revision in
+[`kvstore_txn.go`](../storage/mvcc/kvstore_txn.go). The apply path then wakes
+the waiter so the original RPC can return.
+
+For this repository's call-by-call reading guide, see
+[Lesson 5: Request application](./05-request-application.md) and
+[Lesson 13: Raft in this project](./13-raft-in-this-project.md).
 
 ## Checkpoint
 
