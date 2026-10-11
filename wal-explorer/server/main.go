@@ -6,7 +6,6 @@ import (
 	"io"
 	"net/http"
 	"os"
-	"path/filepath"
 	"strconv"
 	"strings"
 )
@@ -17,6 +16,7 @@ func main() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/api/health", healthHandler)
 	mux.HandleFunc("/api/decode", decodeHandler)
+	mux.HandleFunc("/api/inspect-db", inspectDBHandler)
 	mux.Handle("/", http.FileServer(http.Dir("../web/dist")))
 
 	server := &http.Server{Addr: ":8787", Handler: withCORS(mux)}
@@ -101,5 +101,3 @@ func withCORS(next http.Handler) http.Handler {
 		next.ServeHTTP(w, r)
 	})
 }
-
-var _ = filepath.Separator

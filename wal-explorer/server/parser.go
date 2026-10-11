@@ -25,15 +25,18 @@ type decodeOptions struct {
 }
 
 type decodedRecord struct {
-	Number     int            `json:"number"`
-	RecordType string         `json:"recordType"`
-	Term       uint64         `json:"term,omitempty"`
-	Index      uint64         `json:"index,omitempty"`
-	EntryType  string         `json:"entryType,omitempty"`
-	Data       map[string]any `json:"data,omitempty"`
-	Raw        string         `json:"raw,omitempty"`
-	Error      string         `json:"error,omitempty"`
-	included   bool
+	Number      int            `json:"number"`
+	RecordType  string         `json:"recordType"`
+	Term        uint64         `json:"term,omitempty"`
+	Index       uint64         `json:"index,omitempty"`
+	Revision    int64          `json:"revision,omitempty"`
+	SubRevision int64          `json:"subRevision,omitempty"`
+	Tombstone   bool           `json:"tombstone,omitempty"`
+	EntryType   string         `json:"entryType,omitempty"`
+	Data        map[string]any `json:"data,omitempty"`
+	Raw         string         `json:"raw,omitempty"`
+	Error       string         `json:"error,omitempty"`
+	included    bool
 }
 
 type decodeResult struct {

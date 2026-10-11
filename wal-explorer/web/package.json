@@ -8,12 +8,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
     "@vitejs/plugin-react": "latest",
-    "vite": "latest",
     "react": "latest",
     "react-dom": "latest",
     "typescript": "latest",
-    "@types/react": "latest",
-    "@types/react-dom": "latest"
+    "vite": "latest",
+    "zustand": "^5.0.15"
   }
 }

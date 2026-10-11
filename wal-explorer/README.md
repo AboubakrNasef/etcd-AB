@@ -1,8 +1,8 @@
 # etcd WAL Explorer
 
-Standalone local UI for selecting one etcd `.wal` file and viewing its framed
-records, Raft entries, metadata, hard state, snapshots, CRCs, and decoded
-internal requests.
+Standalone local UI for inspecting etcd `.wal` files and `member/snap/db`
+databases. WAL files show framed records and decoded Raft entries; database
+files show stored key/value revisions.
 
 ## Run
 
@@ -49,6 +49,10 @@ npm run dev
 
 Open `http://127.0.0.1:5173` and choose a copied WAL segment. The UI is
 read-only and uploads the selected file to the local API for decoding.
+
+Use the **Database** mode to select a copied `member/snap/db` file. It reads
+the etcd `key` bucket, including historical revisions and tombstones. Stop
+etcd before copying its database. Uploads are limited to 128 MB.
 
 The app accepts a single WAL segment. For complete history, use
 `go run ./tools/etcd-dump-logs <data-dir>`, which reads the complete

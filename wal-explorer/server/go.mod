@@ -3,6 +3,7 @@ module wal-explorer/server
 go 1.26
 
 require (
+	go.etcd.io/bbolt v1.5.0
 	go.etcd.io/etcd/api/v3 v3.8.0-alpha.0
 	go.etcd.io/etcd/client/pkg/v3 v3.8.0-alpha.0
 	go.etcd.io/etcd/server/v3 v3.8.0-alpha.0
