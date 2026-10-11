@@ -1,0 +1,17 @@
+local.file_match "etcd" {
+  path_targets = [{
+    "__path__" = "/var/log/etcd/etcd.log",
+    "job"      = "etcd",
+  }]
+}
+
+loki.source.file "etcd" {
+  targets    = local.file_match.etcd.targets
+  forward_to = [loki.write.local.receiver]
+}
+
+loki.write "local" {
+  endpoint {
+    url = "http://loki:3100/loki/api/v1/push"
+  }
+}
