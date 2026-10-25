@@ -2,7 +2,7 @@
 
 This guide runs the `Issue14370` regression scenario once on a Debian machine or VM. The scenario starts a single-member etcd process, sends KV traffic, panics at the Raft WAL save failpoint, restarts etcd, and validates the recorded client history.
 
-For a code walkthrough with flow diagrams, see [ISSUE14370_WALKTHROUGH.md](ISSUE14370_WALKTHROUGH.md). For Windows/WSL setup, see [LOCAL_TESTING.md](LOCAL_TESTING.md).
+For a code walkthrough with flow diagrams and Delve step-through instructions, see [ISSUE14370_WALKTHROUGH.md](ISSUE14370_WALKTHROUGH.md#step-through-the-test-with-delve). For Windows/WSL setup, see [LOCAL_TESTING.md](LOCAL_TESTING.md).
 
 ## 1. Install Debian prerequisites
 

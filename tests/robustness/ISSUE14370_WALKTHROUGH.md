@@ -126,3 +126,30 @@ The **“Saving robustness test report”** log line gives the exact directory. 
 4. [`failpoint/gofail.go`](failpoint/gofail.go) — panic setup, process exit, and restart.
 5. [`server/etcdserver/raft.go`](../../server/etcdserver/raft.go) — the exact failpoint location.
 6. [`validate/validate.go`](validate/validate.go) — history checks.
+
+## Step through the test with Delve
+
+First build `bin/etcd` with failpoints enabled by following [LOCAL_TESTING_DEBIAN.md](LOCAL_TESTING_DEBIAN.md). Then, from the repository root, start Delve from the `tests` Go module:
+
+Alternatively, VS Code has a `Debug robustness: Issue14370` profile in [`.vscode/launch.json`](../../.vscode/launch.json); select it in **Run and Debug** after the failpoint-enabled binary is built.
+
+```bash
+cd tests
+PERSIST_RESULTS=true RESULTS_DIR="$HOME/etcd-robustness-results" \
+dlv test ./robustness -- \
+-test.run=TestRobustnessRegression/Issue14370 -test.count=1 -test.v
+```
+
+Delve's `test` command accepts test-binary flags after `--` ([Delve test command docs](https://github.com/go-delve/delve/blob/master/Documentation/usage/dlv_test.md)). At the `(dlv)` prompt, set these breakpoints and start execution:
+
+```text
+break TestRobustnessRegression
+break runScenario
+break go.etcd.io/etcd/tests/v3/robustness/failpoint.Inject
+break testRobustness
+continue
+```
+
+Use `next` to move within a function, `step` to enter a call, and `goroutines` to inspect the traffic and failure workers. These workers run concurrently, so execution will move among goroutines rather than follow one straight line. The main path is `TestRobustnessRegression` → `runScenario` → traffic and failure workers → `CheckEndOfTestHashKV` → `validate.ValidateAndReturnVisualize`.
+
+This Delve session debugs the test process. The Raft panic at [`server/etcdserver/raft.go`](../../server/etcdserver/raft.go) runs in the separate etcd child process, so these breakpoints show the harness enabling the failpoint and observing the child exit; they do not step into the child. To inspect that server code dynamically, you would need to attach a debugger to the etcd child process separately.

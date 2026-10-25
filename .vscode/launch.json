@@ -2,6 +2,24 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Debug robustness: Issue14370",
+            "type": "go",
+            "request": "launch",
+            "mode": "test",
+            "program": "${workspaceFolder}/tests/robustness",
+            "cwd": "${workspaceFolder}/tests/robustness",
+            "env": {
+                "PERSIST_RESULTS": "true",
+                "RESULTS_DIR": "${env:HOME}/etcd-robustness-results"
+            },
+            "args": [
+                "-test.run=TestRobustnessRegression/Issue14370",
+                "-test.count=1",
+                "-test.v"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
             "name": "Launch etcd",
             "type": "go",
             "request": "launch",
