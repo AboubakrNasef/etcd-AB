@@ -6,9 +6,10 @@ Start Grafana Tempo, Loki, Grafana, and Grafana Alloy from this directory:
 make
 ```
 
-In VS Code, run **Launch etcd with Grafana tracing and logs**. It sends traces
-to Tempo and writes structured JSON logs to `logs/etcd.log`; Alloy tails that
-file and forwards entries to Loki.
+In VS Code, run **Launch etcd with Grafana tracing and logs** or **Launch 3-node
+etcd cluster with Grafana tracing and logs**. They send traces to Tempo and
+write structured JSON logs under `logs/`; Alloy tails `etcd*.log` and forwards
+entries to Loki.
 
 - Open the automatically provisioned **etcd observability** dashboard in
   Grafana at <http://localhost:3000> (login: `admin` / `admin`). It includes
@@ -20,5 +21,5 @@ file and forwards entries to Loki.
 - `make logs` follows the Docker services. `make down` stops them while keeping
   Tempo, Loki, Grafana, and Alloy data volumes.
 
-The log file is local and may contain operational details. Remove
-`logs/etcd.log` when you no longer need its contents.
+The log files are local and may contain operational details. Remove them when
+you no longer need their contents.

@@ -30,6 +30,90 @@
             ]
         },
         {
+            "name": "Launch etcd node 1 (3-node cluster)",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceFolder}/server",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "args": [
+                "--name=etcd-1",
+                "--data-dir=${workspaceFolder}/.dev/data/etcd-1",
+                "--listen-peer-urls=http://127.0.0.1:2380",
+                "--initial-advertise-peer-urls=http://127.0.0.1:2380",
+                "--listen-client-urls=http://127.0.0.1:2379",
+                "--advertise-client-urls=http://127.0.0.1:2379",
+                "--initial-cluster=etcd-1=http://127.0.0.1:2380,etcd-2=http://127.0.0.1:2381,etcd-3=http://127.0.0.1:2382",
+                "--initial-cluster-state=new",
+                "--initial-cluster-token=local-3-node-cluster",
+                "--enable-distributed-tracing",
+                "--distributed-tracing-address=localhost:4317",
+                "--distributed-tracing-service-name=etcd",
+                "--distributed-tracing-instance-id=local-1",
+                "--distributed-tracing-sampling-rate=1000000",
+                "--log-format=json",
+                "--log-level=debug",
+                "--log-outputs=${workspaceFolder}/.dev/logs/etcd-1.log"
+            ]
+        },
+        {
+            "name": "Launch etcd node 2 (3-node cluster)",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceFolder}/server",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "args": [
+                "--name=etcd-2",
+                "--data-dir=${workspaceFolder}/.dev/data/etcd-2",
+                "--listen-peer-urls=http://127.0.0.1:2381",
+                "--initial-advertise-peer-urls=http://127.0.0.1:2381",
+                "--listen-client-urls=http://127.0.0.1:2383",
+                "--advertise-client-urls=http://127.0.0.1:2383",
+                "--initial-cluster=etcd-1=http://127.0.0.1:2380,etcd-2=http://127.0.0.1:2381,etcd-3=http://127.0.0.1:2382",
+                "--initial-cluster-state=new",
+                "--initial-cluster-token=local-3-node-cluster",
+                "--enable-distributed-tracing",
+                "--distributed-tracing-address=localhost:4317",
+                "--distributed-tracing-service-name=etcd",
+                "--distributed-tracing-instance-id=local-2",
+                "--distributed-tracing-sampling-rate=1000000",
+                "--log-format=json",
+                "--log-level=debug",
+                "--log-outputs=${workspaceFolder}/.dev/logs/etcd-2.log"
+            ]
+        },
+        {
+            "name": "Launch etcd node 3 (3-node cluster)",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceFolder}/server",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "args": [
+                "--name=etcd-3",
+                "--data-dir=${workspaceFolder}/.dev/data/etcd-3",
+                "--listen-peer-urls=http://127.0.0.1:2382",
+                "--initial-advertise-peer-urls=http://127.0.0.1:2382",
+                "--listen-client-urls=http://127.0.0.1:2384",
+                "--advertise-client-urls=http://127.0.0.1:2384",
+                "--initial-cluster=etcd-1=http://127.0.0.1:2380,etcd-2=http://127.0.0.1:2381,etcd-3=http://127.0.0.1:2382",
+                "--initial-cluster-state=new",
+                "--initial-cluster-token=local-3-node-cluster",
+                "--enable-distributed-tracing",
+                "--distributed-tracing-address=localhost:4317",
+                "--distributed-tracing-service-name=etcd",
+                "--distributed-tracing-instance-id=local-3",
+                "--distributed-tracing-sampling-rate=1000000",
+                "--log-format=json",
+                "--log-level=debug",
+                "--log-outputs=${workspaceFolder}/.dev/logs/etcd-3.log"
+            ]
+        },
+        {
             "name": "Launch etcdctl",
             "type": "go",
             "request": "launch",
@@ -46,6 +130,17 @@
             "program": "${workspaceFolder}/etcdutl",
             "cwd": "${workspaceFolder}",
             "console": "integratedTerminal"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Launch 3-node etcd cluster with Grafana tracing and logs",
+            "configurations": [
+                "Launch etcd node 1 (3-node cluster)",
+                "Launch etcd node 2 (3-node cluster)",
+                "Launch etcd node 3 (3-node cluster)"
+            ],
+            "stopAll": true
         }
     ]
 }

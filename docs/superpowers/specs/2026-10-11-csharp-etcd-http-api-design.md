@@ -21,9 +21,9 @@ The watcher project will use the ASP.NET Core shared framework and host both the
 
 Each etcd member will start its built-in HTTP gateway on its client listener. The watcher API will select a configured gateway endpoint and proxy the original HTTP request to it. The proxy must stream request and response bodies to support long-lived watch responses and must pass through etcd's status code and response headers. It will not interpret protobuf JSON payloads or map every operation into bespoke Minimal API handlers.
 
-The repository's etcd v3 Swagger specification will be served by the watcher service, with its server/base path pointed at the proxy route. Swagger UI will load that local specification. Keep the checked-in spec as the source of truth; document its etcd upstream version so it can be updated with the etcd image version.
+The repository's etcd v3 Swagger specifications will be served by the watcher service: `rpc.swagger.json`, `v3lock.swagger.json`, and `v3election.swagger.json`. Swagger UI will list all three documents and route their requests through the C# proxy. Keep the checked-in specs as the source of truth and document the upstream source version; update them to match the etcd image when either version changes.
 
-Aspire will expose the watcher HTTP endpoint and configure the service to reach the etcd gateway through container-network addresses. Host-side etcd endpoints remain available for `etcdctl` and existing dashboard commands.
+Aspire runs the watcher as a host project process, so it will configure the service to reach the etcd gateway through the members' published `localhost` client ports. Host-side etcd endpoints remain available for `etcdctl` and existing dashboard commands.
 
 ## Error handling and limits
 
@@ -44,4 +44,4 @@ Review the changed project/configuration files for consistent routes and contain
 - New watcher API proxy source file(s)
 - `csharp-etcd-aspire/AppHost/Program.cs`
 - `csharp-etcd-aspire/README.md`
-- Local copy of etcd's v3 Swagger specification (if not already vendored)
+- Local copies of etcd's three v3 Swagger specifications

@@ -1,6 +1,6 @@
 local.file_match "etcd" {
   path_targets = [{
-    "__path__" = "/var/log/etcd/etcd.log",
+    "__path__" = "/var/log/etcd/etcd*.log",
     "job"      = "etcd",
   }]
 }

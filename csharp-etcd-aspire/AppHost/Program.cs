@@ -20,13 +20,14 @@ builder.AddContainer("otel-collector", "otel/opentelemetry-collector-contrib:0.1
     .WaitFor(etcd3);
 var usr= builder.AddParameter("etcd", "etcd");
 var pwd= builder.AddParameter("etcdpwd", "etcd");
-var mongo = builder.AddMongoDB("mongo", 27034);
+var mongo = builder.AddMongoDB("mongo", 27034,usr,pwd);
  
 var database = mongo.AddDatabase("etcd-watch");
 
 var watcher = builder.AddProject<Projects.CSharpEtcdAspire_Watcher>("watcher")
     .WithReference(database)
     .WithEnvironment("ETCD_ENDPOINTS", "http://localhost:23791,http://localhost:23792,http://localhost:23793")
+    .WithHttpEndpoint(targetPort: 8080, name: "http")
     .WaitFor(database)
     .WaitFor(etcd1)
     .WaitFor(etcd2)

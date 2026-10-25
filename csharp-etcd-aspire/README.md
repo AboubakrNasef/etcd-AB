@@ -22,7 +22,7 @@ From this directory:
 dotnet run --project AppHost/CSharpEtcdAspire.AppHost.csproj
 ```
 
-Open the Aspire Dashboard URL printed in the terminal. The dashboard contains `etcd1`, `etcd2`, `etcd3`, `mongo`, and `watcher` resources. Select `watcher` and use its **Put key/value** and **Get key** commands.
+Open the Aspire Dashboard URL printed in the terminal. The dashboard contains `etcd1`, `etcd2`, `etcd3`, `mongo`, and `watcher` resources. Select the `watcher` HTTP endpoint and open `/swagger` to browse and call the etcd API. The Aspire resource still has **Put key/value** and **Get key** commands.
 
 The Put command accepts a key and value; leave value blank to store an empty string. For example, put `demo/name` = `etcd-from-csharp`, then get `demo/name`. The same commands can be run with Aspire CLI:
 
@@ -30,6 +30,12 @@ The Put command accepts a key and value; leave value blank to store an empty str
 aspire resource watcher put --key demo/name --value etcd-from-csharp
 aspire resource watcher get --key demo/name
 ```
+
+## etcd API
+
+The Aspire-hosted watcher project is also a small JSON API client for etcd. It uses `dotnet-etcd` and connects directly to the three cluster client endpoints; there is no HTTP gateway forwarding. Open `/swagger` from the watcher endpoint for generated API documentation.
+
+The API accepts ordinary JSON strings for keys and values. It includes put, get, delete, compare-and-replace transaction, compaction, lease grant/revoke, cluster status, and member listing endpoints under `/api`. For example, `POST /api/kv/put` accepts `{ "key": "demo/name", "value": "etcd-from-api" }`; `POST /api/kv/get` accepts `{ "key": "demo/name" }`. The cluster and watcher endpoints have no authentication in this local demo; do not expose them to an untrusted network.
 
 ## Connect with etcdctl
 
