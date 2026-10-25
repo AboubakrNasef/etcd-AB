@@ -68,11 +68,15 @@ The robustness harness launches `bin/etcd`, so it must be built with failpoints 
 ## 4. Run only Issue14370 once
 
 ```bash
-GO_TEST_FLAGS='-v --run=TestRobustnessRegression/Issue14370 --count=1' make test-robustness
+PERSIST_RESULTS=true RESULTS_DIR="$HOME/etcd-robustness-results" \
+GO_TEST_FLAGS='-v --run=TestRobustnessRegression/Issue14370 --count=1' \
+make test-robustness
 ```
 
-This runs the named regression subtest one time using the current checkout. A passing run shows the current build survived the injected crash; it does not reproduce the historical bug. The historical `test-robustness-issue14370` target builds etcd `v3.5.4` and retries up to 100 times.
+This runs the named regression subtest one time using the current checkout. `PERSIST_RESULTS=true` keeps the report after a passing run, and `RESULTS_DIR` puts it under `$HOME/etcd-robustness-results` instead of `/tmp`. Find the exact timestamped report directory in the `Saving robustness test report` log line.
+
+A passing run shows the current build survived the injected crash; it does not reproduce the historical bug. The historical `test-robustness-issue14370` target builds etcd `v3.5.4` and retries up to 100 times.
 
 ## 5. Inspect the result
 
-If validation fails, find the `Saving robustness test report` path in the output. Open `history.html` when present; `client-*` contains recorded requests and watch observations, and `server-*` contains the etcd member's data directory. Successful-run artifacts are removed by default; set `PERSIST_RESULTS=true` before the run to keep them.
+Open `history.html` when present; `client-*` contains recorded requests and watch observations, and `server-*` contains the etcd member's data directory.
