@@ -1,0 +1,351 @@
+<mxfile host="65bd71144e">
+    <diagram id="1" name="Issue14370 flow">
+        <mxGraphModel dx="616" dy="344" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1900" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=26;fontStyle=1;fontColor=#0f172a;" value="Issue14370 | crash, recovery, and validation" vertex="1">
+                    <mxGeometry height="45" width="1700" x="40" y="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="subtitle" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=16;fontColor=#475569;" value="One scenario, three concurrent workers, then independent consistency and history checks." vertex="1">
+                    <mxGeometry height="32" width="1600" x="42" y="75" as="geometry"/>
+                </mxCell>
+                <mxCell id="start" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;strokeWidth=2;strokeColor=#334155;fillColor=#f1f5f9;fontColor=#0f172a;" value="&lt;div style=&quot;font-size:19px;font-weight:bold;margin-bottom:8px&quot;&gt;Start&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.3&quot;&gt;Choose one-run check or historical reproduction.&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="105" width="190" x="60" y="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="mode" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;strokeWidth=2;strokeColor=#64748b;fillColor=#dbeafe;fontColor=#0f172a;" value="&lt;div style=&quot;font-size:19px;font-weight:bold;margin-bottom:8px&quot;&gt;Select run mode&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.3&quot;&gt;Current checkout: make test-robustness&lt;br&gt;GO_TEST_FLAGS=&#39;-v --run=TestRobustnessRegression/Issue14370 --count=1&#39;&lt;br&gt;&lt;br&gt;Historical target: make test-robustness-issue14370 (v3.5.4, 100 runs).&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="125" width="340" x="300" y="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="scenario" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;strokeWidth=2;strokeColor=#64748b;fillColor=#dcfce7;fontColor=#0f172a;" value="&lt;div style=&quot;font-size:19px;font-weight:bold;margin-bottom:8px&quot;&gt;Configure Issue14370&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.3&quot;&gt;Regression(t): 1 member, GoFail enabled, RaftBeforeSavePanic, EtcdPutDeleteLease, KeyValueMedium, CompactionDefault (200 ms).&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="125" width="340" x="690" y="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="boot" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;strokeWidth=2;strokeColor=#64748b;fillColor=#fef3c7;fontColor=#0f172a;" value="&lt;div style=&quot;font-size:19px;font-weight:bold;margin-bottom:8px&quot;&gt;Boot real etcd process&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.3&quot;&gt;TestRobustnessRegression starts a local child via the E2E harness. Wait for readiness; use a fresh data directory for this test run.&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="125" width="360" x="1080" y="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="fork" parent="1" style="shape=hexagon;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;strokeWidth=2;strokeColor=#334155;fillColor=#cbd5e1;fontColor=#0f172a;" value="&lt;div style=&quot;font-size:19px;font-weight:bold;margin-bottom:8px&quot;&gt;Start workers&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.3&quot;&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="75" width="110" x="805" y="285" as="geometry"/>
+                </mxCell>
+                <mxCell id="laneA" parent="1" style="text;html=1;strokeColor=none;fillColor=#dbeafe;align=center;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#1e3a8a;" value="KV traffic + compaction" vertex="1">
+                    <mxGeometry height="42" width="570" x="45" y="370" as="geometry"/>
+                </mxCell>
+                <mxCell id="laneB" parent="1" style="text;html=1;strokeColor=none;fillColor=#dcfce7;align=center;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#14532d;" value="Passive watch collector" vertex="1">
+                    <mxGeometry height="42" width="570" x="675" y="370" as="geometry"/>
+                </mxCell>
+                <mxCell id="laneC" parent="1" style="text;html=1;strokeColor=none;fillColor=#f3e8ff;align=center;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#581c87;" value="Failpoint + process recovery" vertex="1">
+                    <mxGeometry height="42" width="570" x="1305" y="370" as="geometry"/>
+                </mxCell>
+                <mxCell id="traffic1" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;strokeWidth=2;strokeColor=#3b82f6;fillColor=#eff6ff;fontColor=#0f172a;" value="&lt;div style=&quot;font-size:19px;font-weight:bold;margin-bottom:8px&quot;&gt;Generate mixed requests&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.3&quot;&gt;8 recording clients (6 member + 2 cluster endpoints); 10 keys; shared limiter up to 200 QPS, requires at least 100 QPS. Reads, puts, deletes, transactions and leases.&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="150" width="570" x="45" y="425" as="geometry"/>
+                </mxCell>
+                <mxCell id="traffic2" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;strokeWidth=2;strokeColor=#3b82f6;fillColor=#eff6ff;fontColor=#0f172a;" value="&lt;div style=&quot;font-size:19px;font-weight:bold;margin-bottom:8px&quot;&gt;Overlap the crash window&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.3&quot;&gt;Requests keep running while etcd panics and restarts. Compaction runs every 200 ms. Individual client calls are timestamped with their outcomes.&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="150" width="570" x="45" y="610" as="geometry"/>
+                </mxCell>
+                <mxCell id="traffic3" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;strokeWidth=2;strokeColor=#3b82f6;fillColor=#eff6ff;fontColor=#0f172a;" value="&lt;div style=&quot;font-size:19px;font-weight:bold;margin-bottom:8px&quot;&gt;Finish workload after recovery&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.3&quot;&gt;Stop generators, await outstanding calls, send one final successful put, and publish the maximum observed revision for watch completion.&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="150" width="570" x="45" y="795" as="geometry"/>
+                </mxCell>
+                <mxCell id="watch1" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;strokeWidth=2;strokeColor=#22c55e;fillColor=#f0fdf4;fontColor=#0f172a;" value="&lt;div style=&quot;font-size:19px;font-weight:bold;margin-bottom:8px&quot;&gt;Watch from the next revision&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.3&quot;&gt;One passive stream per member; no generated watch workload for this scenario. Record events and progress responses.&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="150" width="570" x="675" y="425" as="geometry"/>
+                </mxCell>
+                <mxCell id="watch2" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;strokeWidth=2;strokeColor=#22c55e;fillColor=#f0fdf4;fontColor=#0f172a;" value="&lt;div style=&quot;font-size:19px;font-weight:bold;margin-bottom:8px&quot;&gt;Request progress / handle compaction&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.3&quot;&gt;Request progress every 100 ms. If compaction cancels a stream, resume from its compact revision.&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="150" width="570" x="675" y="610" as="geometry"/>
+                </mxCell>
+                <mxCell id="watch3" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;strokeWidth=2;strokeColor=#22c55e;fillColor=#f0fdf4;fontColor=#0f172a;" value="&lt;div style=&quot;font-size:19px;font-weight:bold;margin-bottom:8px&quot;&gt;Drain through max revision&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.3&quot;&gt;Stop only after the KV workload reports its maximum revision and the collector observes through it.&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="150" width="570" x="675" y="795" as="geometry"/>
+                </mxCell>
+                <mxCell id="fail1" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;strokeWidth=2;strokeColor=#a855f7;fillColor=#faf5ff;fontColor=#0f172a;" value="&lt;div style=&quot;font-size:19px;font-weight:bold;margin-bottom:8px&quot;&gt;Wait, check health, activate panic&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.3&quot;&gt;After ~1 s (Â±200 ms), verify member health; configure raftBeforeSave=panic over failpoint HTTP. After injection, allow another ~1 s (Â±200 ms) before traffic stops.&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="150" width="570" x="1305" y="425" as="geometry"/>
+                </mxCell>
+                <mxCell id="fail2" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;strokeWidth=2;strokeColor=#a855f7;fillColor=#faf5ff;fontColor=#0f172a;" value="&lt;div style=&quot;font-size:19px;font-weight:bold;margin-bottom:8px&quot;&gt;Panic at the persistence boundary&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.3&quot;&gt;Raft reaches the hook immediately before storage.Save(HardState, Entries). The next arrival panics the etcd child process.&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="150" width="570" x="1305" y="610" as="geometry"/>
+                </mxCell>
+                <mxCell id="fail3" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;strokeWidth=2;strokeColor=#a855f7;fillColor=#faf5ff;fontColor=#0f172a;" value="&lt;div style=&quot;font-size:19px;font-weight:bold;margin-bottom:8px&quot;&gt;Wait for exit, restart same member&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.3&quot;&gt;goPanicFailpoint.Inject waits for child exit, then starts it again with the same process configuration and data directory. Traffic remains active during recovery.&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="150" width="570" x="1305" y="795" as="geometry"/>
+                </mxCell>
+                <mxCell id="join" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;strokeWidth=2;strokeColor=#334155;fillColor=#e2e8f0;fontColor=#0f172a;" value="&lt;div style=&quot;font-size:19px;font-weight:bold;margin-bottom:8px&quot;&gt;runScenario joins the workers&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.3&quot;&gt;Collect KV/failpoint reports and watch reports. Once all workers finish, compare the recovered cluster&#39;s final hash and revision.&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="120" width="570" x="690" y="1010" as="geometry"/>
+                </mxCell>
+                <mxCell id="hash" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;strokeWidth=2;strokeColor=#f97316;fillColor=#fff7ed;fontColor=#0f172a;" value="&lt;div style=&quot;font-size:19px;font-weight:bold;margin-bottom:8px&quot;&gt;CheckEndOfTestHashKV&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.3&quot;&gt;Hash each member at a common revision; report mismatched revisions, compact revisions, or hashes. With one member this checks recovery, not peer agreement.&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="155" width="500" x="65" y="1190" as="geometry"/>
+                </mxCell>
+                <mxCell id="save" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;strokeWidth=2;strokeColor=#f97316;fillColor=#fff7ed;fontColor=#0f172a;" value="&lt;div style=&quot;font-size:19px;font-weight:bold;margin-bottom:8px&quot;&gt;Save report + read committed WAL&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.3&quot;&gt;SaveEtcdData copies server data and client reports. PersistedRequestsCluster reads WAL entries, merges committed history, and decodes normal Raft requests.&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="155" width="550" x="700" y="1190" as="geometry"/>
+                </mxCell>
+                <mxCell id="validate" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;strokeWidth=2;strokeColor=#f97316;fillColor=#fff7ed;fontColor=#0f172a;" value="&lt;div style=&quot;font-size:19px;font-weight:bold;margin-bottom:8px&quot;&gt;Validate client history&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.3&quot;&gt;ValidateAndReturnVisualize checks assumptions, then asks Porcupine whether operations fit etcd semantics and recorded real-time order.&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="155" width="470" x="1385" y="1190" as="geometry"/>
+                </mxCell>
+                <mxCell id="decision" parent="1" style="rhombus;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;strokeWidth=2;strokeColor=#d97706;fillColor=#fef3c7;fontColor=#0f172a;" value="&lt;div style=&quot;font-size:19px;font-weight:bold;margin-bottom:8px&quot;&gt;Linearizable?&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.3&quot;&gt;&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="110" width="170" x="865" y="1420" as="geometry"/>
+                </mxCell>
+                <mxCell id="failresult" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;strokeWidth=2;strokeColor=#dc2626;fillColor=#fee2e2;fontColor=#0f172a;" value="&lt;div style=&quot;font-size:19px;font-weight:bold;margin-bottom:8px&quot;&gt;No: report validation failure&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.3&quot;&gt;Linearization illegal/timeout â†’ skip watch and serializable checks so they do not hide the first failure. Preserve report for investigation.&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="145" width="620" x="260" y="1615" as="geometry"/>
+                </mxCell>
+                <mxCell id="passresult" parent="1" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;strokeWidth=2;strokeColor=#16a34a;fillColor=#dcfce7;fontColor=#0f172a;" value="&lt;div style=&quot;font-size:19px;font-weight:bold;margin-bottom:8px&quot;&gt;Yes: replay persisted requests&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.3&quot;&gt;Check watch events and serializable reads against WAL-derived state; produce visualization when available.&lt;/div&gt;" vertex="1">
+                    <mxGeometry height="145" width="650" x="1010" y="1615" as="geometry"/>
+                </mxCell>
+                <mxCell id="historical-note" parent="1" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#f59e0b;fillColor=#fffbeb;align=left;verticalAlign=middle;spacing=12;fontSize=15;fontColor=#78350f;" value="Historical target note: its Make wrapper may print â€œSuccessful reproductionâ€ after any test error. Confirm the report/log shows a robustness validation failure (for example, â€œLinearization illegalâ€)." vertex="1">
+                    <mxGeometry height="60" width="1810" x="45" y="1810" as="geometry"/>
+                </mxCell>
+                <mxCell id="e1" edge="1" parent="1" source="start" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;endArrow=block;endFill=1;fontSize=13;fontColor=#334155;" target="mode" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e2" edge="1" parent="1" source="mode" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;endArrow=block;endFill=1;fontSize=13;fontColor=#334155;" target="scenario" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e3" edge="1" parent="1" source="scenario" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;endArrow=block;endFill=1;fontSize=13;fontColor=#334155;" target="boot" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e4" edge="1" parent="1" source="boot" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;endArrow=block;endFill=1;fontSize=13;fontColor=#334155;" target="fork" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ef1" edge="1" parent="1" source="fork" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;endArrow=block;endFill=1;fontSize=13;fontColor=#334155;" target="traffic1" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ef2" edge="1" parent="1" source="fork" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;endArrow=block;endFill=1;fontSize=13;fontColor=#334155;" target="watch1" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ef3" edge="1" parent="1" source="fork" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;endArrow=block;endFill=1;fontSize=13;fontColor=#334155;" target="fail1" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="et1" edge="1" parent="1" source="traffic1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;endArrow=block;endFill=1;fontSize=13;fontColor=#334155;" target="traffic2" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="et2" edge="1" parent="1" source="traffic2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;endArrow=block;endFill=1;fontSize=13;fontColor=#334155;" target="traffic3" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ew1" edge="1" parent="1" source="watch1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;endArrow=block;endFill=1;fontSize=13;fontColor=#334155;" target="watch2" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ew2" edge="1" parent="1" source="watch2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;endArrow=block;endFill=1;fontSize=13;fontColor=#334155;" target="watch3" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ef4" edge="1" parent="1" source="fail1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;endArrow=block;endFill=1;fontSize=13;fontColor=#334155;" target="fail2" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ef5" edge="1" parent="1" source="fail2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;endArrow=block;endFill=1;fontSize=13;fontColor=#334155;" target="fail3" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ej1" edge="1" parent="1" source="traffic3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;endArrow=block;endFill=1;fontSize=13;fontColor=#334155;" target="join" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ej2" edge="1" parent="1" source="watch3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;endArrow=block;endFill=1;fontSize=13;fontColor=#334155;" target="join" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ej3" edge="1" parent="1" source="fail3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;endArrow=block;endFill=1;fontSize=13;fontColor=#334155;" target="join" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ec1" edge="1" parent="1" source="join" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;endArrow=block;endFill=1;fontSize=13;fontColor=#334155;" target="hash" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ec2" edge="1" parent="1" source="hash" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;endArrow=block;endFill=1;fontSize=13;fontColor=#334155;" target="save" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ec3" edge="1" parent="1" source="save" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;endArrow=block;endFill=1;fontSize=13;fontColor=#334155;" target="validate" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="ec4" edge="1" parent="1" source="validate" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;endArrow=block;endFill=1;fontSize=13;fontColor=#334155;" target="decision" value="">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="eno" edge="1" parent="1" source="decision" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;endArrow=block;endFill=1;fontSize=13;fontColor=#334155;" target="failresult" value="No">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="eyes" edge="1" parent="1" source="decision" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=2;endArrow=block;endFill=1;fontSize=13;fontColor=#334155;" target="passresult" value="Yes">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="2" name="Code map Ã‚Â· scenario and orchestration">
+        <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1440" pageHeight="1000" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title" value="Code map Ã‚Â· scenario and orchestration" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=28;fontStyle=1;fontColor=#0f172a;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="24" width="1320" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="desc" value="Entry points select the scenario, start the process, coordinate workers, and run validation." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=15;fontColor=#475569;" vertex="1" parent="1">
+                    <mxGeometry x="42" y="76" width="1300" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="n1" value="&lt;div style=&quot;font-size:20px;font-weight:bold;margin-bottom:10px&quot;&gt;scenarios/scenarios.go Ã‚Â· Regression(t)&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.35&quot;&gt;Reads the etcd binary version, then builds regression scenarios. Issue14370 sets the panic failpoint, medium KV profile, default compaction, one-member cluster, and failpoint instrumentation.&lt;br&gt;TestScenario is configuration passed to the runner; it does not execute workload traffic.&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=14;arcSize=12;strokeWidth=2;strokeColor=#64748b;fillColor=#dbeafe;fontColor=#0f172a;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="145" width="580" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="n2" value="&lt;div style=&quot;font-size:20px;font-weight:bold;margin-bottom:10px&quot;&gt;main_test.go Ã‚Â· TestMain / TestRobustnessRegression&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.35&quot;&gt;TestMain delegates process setup and flag parsing to the shared E2E runner, including the etcd binary path.&lt;br&gt;TestRobustnessRegression calls BeforeTest, iterates Regression scenarios, starts one cluster per subtest, defers cleanup, then calls testRobustness.&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=14;arcSize=12;strokeWidth=2;strokeColor=#64748b;fillColor=#dcfce7;fontColor=#0f172a;" vertex="1" parent="1">
+                    <mxGeometry x="740" y="145" width="580" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="n3" value="&lt;div style=&quot;font-size:20px;font-weight:bold;margin-bottom:10px&quot;&gt;framework/e2e/cluster.go Ã‚Â· NewEtcdProcessCluster&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.35&quot;&gt;Applies cluster options, initializes, and starts configured EtcdServerProcess instances. With cluster size 1, this is one real child process and one data directory.&lt;br&gt;WithGoFailEnabled(true) configures failpoint support.&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=14;arcSize=12;strokeWidth=2;strokeColor=#64748b;fillColor=#fef3c7;fontColor=#0f172a;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="400" width="580" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="n4" value="&lt;div style=&quot;font-size:20px;font-weight:bold;margin-bottom:10px&quot;&gt;framework/e2e/etcd_process.go Ã‚Â· Start / Restart / Wait&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.35&quot;&gt;Start spawns etcd and waits for the ready log line. Wait observes child exit. Restart is stop then start; Start uses the same process config and data path, so recovery reads prior disk state.&lt;br&gt;BinaryFailpoints.SetupHTTP activates a failpoint in the child.&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=14;arcSize=12;strokeWidth=2;strokeColor=#64748b;fillColor=#f3e8ff;fontColor=#0f172a;" vertex="1" parent="1">
+                    <mxGeometry x="740" y="400" width="580" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="n5" value="&lt;div style=&quot;font-size:20px;font-weight:bold;margin-bottom:10px&quot;&gt;main_test.go Ã‚Â· testRobustness(ctx, Ã¢â‚¬Â¦)&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.35&quot;&gt;Creates TestReport, runs runScenario, stores client reports, and copies server data. Then PersistedRequestsCluster reads committed WAL requests and ValidateAndReturnVisualize compares them with client history.&lt;br&gt;Finalize retains failed/panicked reports and removes clean reports unless PERSIST_RESULTS exists.&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=14;arcSize=12;strokeWidth=2;strokeColor=#64748b;fillColor=#ffe4e6;fontColor=#0f172a;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="655" width="580" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="n6" value="&lt;div style=&quot;font-size:20px;font-weight:bold;margin-bottom:10px&quot;&gt;main_test.go Ã‚Â· runScenario(ctx, Ã¢â‚¬Â¦)&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.35&quot;&gt;Creates a cancellable context and launches workers in an errgroup: delayed failure injection, SimulateTraffic, and CollectClusterWatchEvents. Joins workers, checks final HashKV, then combines traffic, watch, and failpoint reports.&lt;br&gt;WaitBeforeFailpoint / WaitAfterFailpoint are 1 s, each with Ã‚Â±200 ms jitter.&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=14;arcSize=12;strokeWidth=2;strokeColor=#64748b;fillColor=#e0f2fe;fontColor=#0f172a;" vertex="1" parent="1">
+                    <mxGeometry x="740" y="655" width="580" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="e1_2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748b;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="n1" target="n2">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e1_3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748b;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="n1" target="n3">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e3_4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748b;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="n3" target="n4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e2_5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748b;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="n2" target="n5">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e4_6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748b;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="n4" target="n6">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e5_6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748b;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="n5" target="n6">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="3" name="Code map Ã‚Â· traffic and observation">
+        <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1440" pageHeight="1000" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title" value="Code map Ã‚Â· traffic and observation" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=28;fontStyle=1;fontColor=#0f172a;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="24" width="1320" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="desc" value="Traffic uses real clientv3 requests. Recording and passive watches preserve evidence across the crash." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=15;fontColor=#475569;" vertex="1" parent="1">
+                    <mxGeometry x="42" y="76" width="1300" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="n1" value="&lt;div style=&quot;font-size:20px;font-weight:bold;margin-bottom:10px&quot;&gt;traffic/traffic.go Ã‚Â· KeyValueMedium&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.35&quot;&gt;Profile: 6 member-endpoint clients + 2 cluster-endpoint clients; minimum 100 QPS; maximum 200 QPS; burst 1000; max 3 concurrent non-unique writes.&lt;br&gt;CompactionDefault runs every 200 ms. Request timeout is 200 ms.&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=14;arcSize=12;strokeWidth=2;strokeColor=#64748b;fillColor=#dbeafe;fontColor=#0f172a;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="145" width="580" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="n2" value="&lt;div style=&quot;font-size:20px;font-weight:bold;margin-bottom:10px&quot;&gt;traffic/traffic.go Ã‚Â· SimulateTraffic(ctx, Ã¢â‚¬Â¦)&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.35&quot;&gt;Creates one shared rate limiter, verifies the database starts empty, generates ten-key KV workload, and optionally starts watch and compaction loops. Here KV and compaction run; generated watch traffic is nil.&lt;br&gt;Waits for failpoint timing, stops generators, and returns their reports.&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=14;arcSize=12;strokeWidth=2;strokeColor=#64748b;fillColor=#dcfce7;fontColor=#0f172a;" vertex="1" parent="1">
+                    <mxGeometry x="740" y="145" width="580" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="n3" value="&lt;div style=&quot;font-size:20px;font-weight:bold;margin-bottom:10px&quot;&gt;traffic/etcd.go Ã‚Â· EtcdPutDeleteLease&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.35&quot;&gt;Weighted random choices (weights total 100): Get 15; list forms 15; stale reads/lists 20; Put 20; Delete 5; multi-op transaction 10; leased Put 5; lease revoke 5; compare-and-set 5.&lt;br&gt;Delete/revoke may be temporarily suppressed at the non-unique write concurrency cap.&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=14;arcSize=12;strokeWidth=2;strokeColor=#64748b;fillColor=#fef3c7;fontColor=#0f172a;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="400" width="580" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="n4" value="&lt;div style=&quot;font-size:20px;font-weight:bold;margin-bottom:10px&quot;&gt;client/client.go Ã‚Â· RecordingClient&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.35&quot;&gt;Wraps clientv3. KV methods serialize calls per client, timestamp call/return against one monotonic base, and record request plus response. Each client and write request gets IDs.&lt;br&gt;A failed write can be ambiguous: no response does not prove the server did not persist it.&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=14;arcSize=12;strokeWidth=2;strokeColor=#64748b;fillColor=#f3e8ff;fontColor=#0f172a;" vertex="1" parent="1">
+                    <mxGeometry x="740" y="400" width="580" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="n5" value="&lt;div style=&quot;font-size:20px;font-weight:bold;margin-bottom:10px&quot;&gt;client/watch.go Ã‚Â· CollectClusterWatchEvents&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.35&quot;&gt;Starts a passive watch at each member endpoint. watchUntilRevision requests progress every 100 ms, tracks observed revisions, resumes after compaction cancellation, and exits at the workload&#39;s max revision.&lt;br&gt;No generated watch clients exist in this scenario; this collector still records watch evidence.&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=14;arcSize=12;strokeWidth=2;strokeColor=#64748b;fillColor=#ffe4e6;fontColor=#0f172a;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="655" width="580" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="n6" value="&lt;div style=&quot;font-size:20px;font-weight:bold;margin-bottom:10px&quot;&gt;Report streams Ã‚Â· combined observations&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.35&quot;&gt;runScenario returns RecordingClient KV histories, passive watch reports, and failpoint-trigger reports. OperationsMaxRevision supplies the watch completion target.&lt;br&gt;Traffic and failure workers overlap intentionally, creating the timing window around the crash.&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=14;arcSize=12;strokeWidth=2;strokeColor=#64748b;fillColor=#e0f2fe;fontColor=#0f172a;" vertex="1" parent="1">
+                    <mxGeometry x="740" y="655" width="580" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="e1_2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748b;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="n1" target="n2">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e2_3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748b;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="n2" target="n3">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e3_4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748b;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="n3" target="n4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e4_5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748b;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="n4" target="n5">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e5_6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748b;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="n5" target="n6">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="4" name="Code map Ã‚Â· panic, WAL, and validation">
+        <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1440" pageHeight="1000" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title" value="Code map Ã‚Â· panic, WAL, and validation" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=28;fontStyle=1;fontColor=#0f172a;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="24" width="1320" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="desc" value="The failure boundary and independent end checks: cluster hash consistency, then client-history validation." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=15;fontColor=#475569;" vertex="1" parent="1">
+                    <mxGeometry x="42" y="76" width="1300" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="n1" value="&lt;div style=&quot;font-size:20px;font-weight:bold;margin-bottom:10px&quot;&gt;failpoint/failpoint.go Ã‚Â· Inject(ctx, Ã¢â‚¬Â¦)&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.35&quot;&gt;Applies a timeout, checks each member is SERVING before and after injection, records start/end times, and returns timing plus any failpoint client reports.&lt;br&gt;A health-check or injection error propagates to runScenario.&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=14;arcSize=12;strokeWidth=2;strokeColor=#64748b;fillColor=#dbeafe;fontColor=#0f172a;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="145" width="580" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="n2" value="&lt;div style=&quot;font-size:20px;font-weight:bold;margin-bottom:10px&quot;&gt;failpoint/gofail.go Ã‚Â· goPanicFailpoint.Inject&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.35&quot;&gt;Chooses the target member, activates its failpoint over HTTP with payload panic, waits for child exit, then calls member.Start(ctx). Issue14370 uses AnyMember; with one member that is the sole process.&lt;br&gt;Registered failpoint name: raftBeforeSave.&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=14;arcSize=12;strokeWidth=2;strokeColor=#64748b;fillColor=#dcfce7;fontColor=#0f172a;" vertex="1" parent="1">
+                    <mxGeometry x="740" y="145" width="580" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="n3" value="&lt;div style=&quot;font-size:20px;font-weight:bold;margin-bottom:10px&quot;&gt;server/etcdserver/raft.go Ã‚Â· raftBeforeSave&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.35&quot;&gt;The gofail hook sits directly before r.storage.Save(rd.HardState, rd.Entries). When activated, the next Raft Ready batch reaching this location panics before the save call.&lt;br&gt;This targets the WAL persistence boundary for entries and hard state.&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=14;arcSize=12;strokeWidth=2;strokeColor=#64748b;fillColor=#fef3c7;fontColor=#0f172a;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="400" width="580" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="n4" value="&lt;div style=&quot;font-size:20px;font-weight:bold;margin-bottom:10px&quot;&gt;client/kvhash.go Ã‚Â· CheckEndOfTestHashKV&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.35&quot;&gt;Reads the cluster hash/revision, then asks each member for its hash at that same revision. Errors if revisions, compact revisions, or hashes differ.&lt;br&gt;A single-member run checks recovered state but cannot compare independent peers.&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=14;arcSize=12;strokeWidth=2;strokeColor=#64748b;fillColor=#f3e8ff;fontColor=#0f172a;" vertex="1" parent="1">
+                    <mxGeometry x="740" y="400" width="580" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="n5" value="&lt;div style=&quot;font-size:20px;font-weight:bold;margin-bottom:10px&quot;&gt;report/wal.go Ã‚Â· PersistedRequestsCluster Ã¢â€ â€™ PersistedRequests&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.35&quot;&gt;Collects member data directories, reads WAL hard state and entries, merges entries up to the minimum commit index, and parses committed normal Raft entries into model requests.&lt;br&gt;ReadWAL can repair one unexpected-EOF tail and retry once.&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=14;arcSize=12;strokeWidth=2;strokeColor=#64748b;fillColor=#ffe4e6;fontColor=#0f172a;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="655" width="580" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="n6" value="&lt;div style=&quot;font-size:20px;font-weight:bold;margin-bottom:10px&quot;&gt;validate/validate.go Ã‚Â· ValidateAndReturnVisualize&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.35&quot;&gt;Checks model assumptions, classifies client operations, optionally patches linearizable operations from persisted requests, then runs Porcupine. If linearization fails, later checks are skipped. On success, replays WAL requests for watch and serializable-read checks.&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=14;arcSize=12;strokeWidth=2;strokeColor=#64748b;fillColor=#e0f2fe;fontColor=#0f172a;" vertex="1" parent="1">
+                    <mxGeometry x="740" y="655" width="580" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="e1_2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748b;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="n1" target="n2">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e2_3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748b;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="n2" target="n3">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e3_4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748b;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="n3" target="n4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e4_5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748b;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="n4" target="n5">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e5_6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748b;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="n5" target="n6">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="5" name="Code map Ã‚Â· model and report internals">
+        <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1440" pageHeight="1000" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title" value="Code map Ã‚Â· model and report internals" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=28;fontStyle=1;fontColor=#0f172a;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="24" width="1320" height="45" as="geometry"/>
+                </mxCell>
+                <mxCell id="desc" value="Model methods explain ambiguous outcomes; report methods retain the evidence needed to investigate a run." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=15;fontColor=#475569;" vertex="1" parent="1">
+                    <mxGeometry x="42" y="76" width="1300" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="n1" value="&lt;div style=&quot;font-size:20px;font-weight:bold;margin-bottom:10px&quot;&gt;model/non_deterministic.go Ã‚Â· NonDeterministicModel / apply&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.35&quot;&gt;Creates an etcd model for Porcupine. A failed request forks possible states: it may have persisted or been lost. A successful response filters states to those consistent with that result.&lt;br&gt;Equal compares candidate states; compareStates orders them by revision, KV contents, and leases.&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=14;arcSize=12;strokeWidth=2;strokeColor=#64748b;fillColor=#dbeafe;fontColor=#0f172a;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="145" width="580" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="n2" value="&lt;div style=&quot;font-size:20px;font-weight:bold;margin-bottom:10px&quot;&gt;model/non_deterministic.go Ã‚Â· applyPersistedRequest&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.35&quot;&gt;Applies requests recovered from WAL to every possible model state, with or without a known revision. This provides the replay state used to check observed watches and serializable reads against durable server history.&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=14;arcSize=12;strokeWidth=2;strokeColor=#64748b;fillColor=#dcfce7;fontColor=#0f172a;" vertex="1" parent="1">
+                    <mxGeometry x="740" y="145" width="580" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="n3" value="&lt;div style=&quot;font-size:20px;font-weight:bold;margin-bottom:10px&quot;&gt;validate/operations.go Ã‚Â· linearizable check&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.35&quot;&gt;validateLinearizableOperationsAndVisualize calls porcupine.CheckOperationsVerbose with the nondeterministic etcd model and timeout. It returns success, illegal, or timeout and stores visualization metadata.&lt;br&gt;Failed client requests get an unbounded return time during linearizability analysis because commit timing is unknown.&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=14;arcSize=12;strokeWidth=2;strokeColor=#64748b;fillColor=#fef3c7;fontColor=#0f172a;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="400" width="580" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="n4" value="&lt;div style=&quot;font-size:20px;font-weight:bold;margin-bottom:10px&quot;&gt;validate/operations.go Ã‚Â· serializable read check&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.35&quot;&gt;validateSerializableOperations iterates eligible reads. validateSerializableRead gets model state at the requested revision, steps the request, and compares the expected range response with the observed one.&lt;br&gt;Persisted or errored reads are skipped; future-revision errors are treated as expected.&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=14;arcSize=12;strokeWidth=2;strokeColor=#64748b;fillColor=#f3e8ff;fontColor=#0f172a;" vertex="1" parent="1">
+                    <mxGeometry x="740" y="400" width="580" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="n5" value="&lt;div style=&quot;font-size:20px;font-weight:bold;margin-bottom:10px&quot;&gt;report/report.go Ã‚Â· SaveEtcdData / Finalize&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.35&quot;&gt;SaveEtcdData copies each member data directory, client operation/watch reports, and traffic details into the run report directory.&lt;br&gt;Finalize keeps artifacts for test failure, panic, or PERSIST_RESULTS; otherwise it removes the successful report. If available, it writes history.html visualization.&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=14;arcSize=12;strokeWidth=2;strokeColor=#64748b;fillColor=#ffe4e6;fontColor=#0f172a;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="655" width="580" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="n6" value="&lt;div style=&quot;font-size:20px;font-weight:bold;margin-bottom:10px&quot;&gt;report/wal.go Ã‚Â· ReadWAL / parseEntryNormal&lt;/div&gt;&lt;div style=&quot;font-size:14px;line-height:1.35&quot;&gt;ReadWAL reads the WAL and repairs at most one unexpected-EOF tail. parseEntryNormal decodes Raft request protobufs into model operations and ignores non-request/configuration entries.&lt;br&gt;The resulting persisted view is independent from client response logs.&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=14;arcSize=12;strokeWidth=2;strokeColor=#64748b;fillColor=#e0f2fe;fontColor=#0f172a;" vertex="1" parent="1">
+                    <mxGeometry x="740" y="655" width="580" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="e1_2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748b;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="n1" target="n2">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e1_3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748b;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="n1" target="n3">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e3_4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748b;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="n3" target="n4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e2_4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748b;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="n2" target="n4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e4_5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748b;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="n4" target="n5">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e5_6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#64748b;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="n5" target="n6">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
