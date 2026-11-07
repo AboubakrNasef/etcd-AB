@@ -34,6 +34,7 @@ body {
   min-width: 320px;
   background: var(--bg-cream);
   color: var(--text);
+  overflow-wrap: anywhere;
 }
 button,
 input,
@@ -60,6 +61,16 @@ select:focus-visible,
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.topbar > *,
+.workspace-head > *,
+.card-heading > *,
+.search-row > *,
+.detail-head > * {
+  min-width: 0;
+  max-width: 100%;
 }
 .topbar {
   margin-bottom: 42px;
@@ -117,6 +128,7 @@ h1 {
 }
 .mode-tabs {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   margin: -20px 0 16px;
 }
@@ -143,13 +155,14 @@ h1 {
 }
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.4fr 0.9fr;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.9fr);
   gap: 16px;
 }
 .dropzone,
 .config-card,
 .workspace,
 .empty-state {
+  min-width: 0;
   background: var(--color-white);
   border: 3px solid var(--text);
   border-radius: 24px;
@@ -197,6 +210,8 @@ pre,
   gap: 12px;
 }
 .file-button {
+  max-width: 100%;
+  text-align: center;
   background: var(--cta);
   color: var(--text);
   display: inline-block;
@@ -219,11 +234,14 @@ pre,
   margin-top: 18px;
   max-width: 520px;
   overflow-wrap: anywhere;
+  min-width: 0;
+  gap: 12px;
 }
 .file-name span {
   color: var(--text-muted);
   margin-left: 12px;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 .config-card {
   padding: 26px;
@@ -248,6 +266,8 @@ pre,
 }
 input,
 select {
+  min-width: 0;
+  max-width: 100%;
   background: var(--color-white);
   border: 2px solid var(--text);
   border-radius: 12px;
@@ -266,7 +286,7 @@ select:focus {
 .field-row {
   display: grid;
   gap: 12px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .mode-description {
   color: var(--text-muted);
@@ -341,10 +361,9 @@ select:focus {
     SFMono-Regular,
     Consolas,
     monospace;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  max-width: 620px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  max-width: 100%;
 }
 .stats {
   display: flex;
@@ -376,10 +395,11 @@ select:focus {
 }
 .record-grid {
   display: grid;
-  grid-template-columns: 35% 65%;
+  grid-template-columns: minmax(0, 35fr) minmax(0, 65fr);
   min-height: 430px;
 }
 .record-list {
+  min-width: 0;
   border-right: 2px solid var(--border);
   padding: 14px 14px 0 0;
   overflow: auto;
@@ -394,7 +414,7 @@ select:focus {
   cursor: pointer;
   display: grid;
   gap: 10px;
-  grid-template-columns: 36px 1fr auto;
+  grid-template-columns: 36px minmax(0, 1fr) minmax(0, auto);
   padding: 11px;
   text-align: left;
   width: 100%;
@@ -413,9 +433,8 @@ select:focus {
 }
 .record-type {
   font-size: 12px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 .detail-panel {
   padding: 24px 0 0 26px;
@@ -542,7 +561,7 @@ footer {
   opacity: 0.55;
 }
 
-.result-tabs { display: flex; gap: 10px; margin: 24px 0 16px; }
+.result-tabs { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0 16px; }
 .result-tabs button { padding: 10px 20px; border: 1px solid var(--border); border-radius: 8px; background: var(--secondary); cursor: pointer; }
 .result-tabs button[aria-pressed="true"] { background: var(--primary); border-color: var(--text); }
 button:disabled { opacity: .55; cursor: not-allowed; }
@@ -556,21 +575,41 @@ button:disabled { opacity: .55; cursor: not-allowed; }
 .diff-status.changed { background: #fff0c7; color: #684600; }
 .diff-status.unchanged { background: #eee; color: #444; }
 .compare-note { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
-.diff-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.diff-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
 .diff-row > span:first-child { overflow-wrap: anywhere; min-width: 0; }
-.diff-table-wrap { overflow-x: auto; }
+.diff-table-wrap { min-width: 0; max-width: 100%; overflow-x: auto; }
 .diff-table { border-collapse: collapse; width: 100%; table-layout: fixed; font-size: 13px; }
 .diff-table th, .diff-table td { border: 1px solid var(--border); padding: 10px; vertical-align: top; text-align: left; overflow-wrap: anywhere; }
 .diff-table th:first-child { width: 20%; }
-.diff-table td pre { margin: 0; padding: 0; background: transparent; color: inherit; white-space: pre-wrap; overflow-wrap: anywhere; }
+.diff-table td pre { margin: 0; padding: 0; border: 0; border-radius: 0; box-shadow: none; max-width: 100%; background: transparent; color: inherit; white-space: pre-wrap; overflow-wrap: anywhere; }
 @media (max-width: 700px) { .compare-controls { grid-template-columns: 1fr; } }
 
 .instance-card details { margin-top: 12px; font-size: 13px; }
 .instance-card summary { cursor: pointer; }
 .instance-card .file-name { align-items: center; gap: 12px; }
+.instance-card .file-name > span { flex: 1 1 0; min-width: 0; margin-left: 0; white-space: normal; overflow-wrap: anywhere; }
+.instance-card .file-name > button { flex-shrink: 0; }
 .expand-view { background: var(--primary); border: 1px solid var(--text); border-radius: 8px; padding: 10px 16px; cursor: pointer; white-space: nowrap; }
 .expanded-workspace { position: fixed; inset: 12px; z-index: 100; margin: 0; overflow: auto; background: var(--bg-cream); box-shadow: 0 0 0 20px rgba(0,0,0,.3); }
-.expanded-workspace .record-grid { min-height: calc(100dvh - 340px); grid-template-columns: 25% 75%; }
+.expanded-workspace .record-grid { min-height: calc(100dvh - 340px); grid-template-columns: minmax(0, 25fr) minmax(0, 75fr); }
 .expanded-workspace .record-list { max-height: calc(100dvh - 340px); }
 .expanded-workspace .detail-panel { min-width: 0; }
 @media (max-width: 700px) { .expanded-workspace { inset: 4px; padding: 14px; } .expanded-workspace .record-grid { grid-template-columns: 1fr; } .expanded-workspace .record-list { max-height: 220px; } }
+
+.folder-drop-hint { margin-top: 18px; padding: 20px 12px; border: 2px dashed var(--text-muted); border-radius: 10px; font-weight: 700; }
+.dragging-folders { outline: 3px dashed var(--primary); outline-offset: 4px; }
+.dragging-folders .folder-drop-hint { background: var(--secondary); border-color: var(--primary); }
+
+@media (max-width: 480px) {
+  .dropzone, .config-card, .workspace { padding: 18px; }
+  .field-row { grid-template-columns: minmax(0, 1fr); }
+  .file-actions { align-items: stretch; flex-direction: column; }
+  .file-button { width: 100%; }
+  .instance-card .file-name { flex-wrap: wrap; }
+  .instance-card .file-name > span { flex-basis: 100%; }
+  .record-row { grid-template-columns: 28px minmax(0, 1fr); }
+  .record-row .record-index { grid-column: 2; }
+  .diff-row { display: flex; }
+  .diff-table th, .diff-table td { padding: 6px; }
+  .expand-view { max-width: 100%; white-space: normal; }
+}

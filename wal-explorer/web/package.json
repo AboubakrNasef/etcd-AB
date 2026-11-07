@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node --experimental-strip-types tests/compare.test.ts && node --experimental-strip-types tests/instances.test.ts",
+    "test": "node --experimental-strip-types tests/compare.test.ts && node --experimental-strip-types tests/instances.test.ts && node --experimental-strip-types tests/folders.test.ts",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
