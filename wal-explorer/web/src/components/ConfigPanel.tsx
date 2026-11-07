@@ -6,6 +6,7 @@ export function ConfigPanel() {
   const startIndex = useAppStore((state) => state.startIndex)
   const endIndex = useAppStore((state) => state.endIndex)
   const fileCount = useAppStore((state) => state.files.length)
+  const sourceCount = useAppStore(state => new Set(state.files.map(item => item.instanceId ?? item.id)).size)
   const loading = useAppStore((state) => state.loading)
   const error = useAppStore((state) => state.error)
   const setEntryType = useAppStore((state) => state.setEntryType)
@@ -22,7 +23,9 @@ export function ConfigPanel() {
         <label>End index<input inputMode="numeric" placeholder="optional" value={endIndex} onChange={(event) => setEndIndex(event.target.value)} /></label>
       </div>
     </> : <p className="mode-description">Reads the etcd key bucket, including stored revisions and tombstones. Upload limit: 128 MB.</p>}
-    <button className="decode-button" disabled={!fileCount || loading} onClick={inspect}>{loading ? 'Inspecting...' : isWal ? `Decode ${fileCount} WAL${fileCount === 1 ? '' : 's'}` : `Inspect ${fileCount} database${fileCount === 1 ? '' : 's'}`} <span>&#8594;</span></button>
+    <button className="decode-button" disabled={!fileCount || loading} onClick={() => inspect()}>{loading ? 'Inspecting...' : isWal ? `Decode ${fileCount} WAL${fileCount === 1 ? '' : 's'}` : `Inspect ${fileCount} database${fileCount === 1 ? '' : 's'}`} <span>&#8594;</span></button>
+    <button className="decode-button" disabled={sourceCount < 2 || loading} onClick={() => inspect('compare')}>{loading ? 'Inspecting...' : 'Compare instances / files'} <span>&#8644;</span></button>
+    <p className="compare-note">{sourceCount} instances / standalone files selected. {sourceCount < 2 ? 'Add at least two to compare.' : 'Folder files are combined per instance.'}</p>
     {error && <div className="error">{error}</div>}
   </div>
 }

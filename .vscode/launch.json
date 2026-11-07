@@ -166,6 +166,30 @@
             "program": "${workspaceFolder}/etcdutl",
             "cwd": "${workspaceFolder}",
             "console": "integratedTerminal"
+        },
+        {
+            "name": "WAL Explorer: API",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceFolder}/wal-explorer/server",
+            "cwd": "${workspaceFolder}/wal-explorer/server",
+            "env": {
+                "GOWORK": "off"
+            },
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "WAL Explorer: Web",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "npm run dev -- --host 127.0.0.1 --port 5173 --strictPort",
+            "cwd": "${workspaceFolder}/wal-explorer/web",
+            "serverReadyAction": {
+                "pattern": "Local:.*(https?://\\S+)",
+                "uriFormat": "%s",
+                "action": "openExternally"
+            }
         }
     ],
     "compounds": [
@@ -175,6 +199,14 @@
                 "Launch etcd node 1 (3-node cluster)",
                 "Launch etcd node 2 (3-node cluster)",
                 "Launch etcd node 3 (3-node cluster)"
+            ],
+            "stopAll": true
+        },
+        {
+            "name": "Launch WAL and bbolt Explorer",
+            "configurations": [
+                "WAL Explorer: API",
+                "WAL Explorer: Web"
             ],
             "stopAll": true
         }
