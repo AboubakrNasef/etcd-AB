@@ -5,7 +5,7 @@ export function ConfigPanel() {
   const entryType = useAppStore((state) => state.entryType)
   const startIndex = useAppStore((state) => state.startIndex)
   const endIndex = useAppStore((state) => state.endIndex)
-  const file = useAppStore((state) => state.file)
+  const fileCount = useAppStore((state) => state.files.length)
   const loading = useAppStore((state) => state.loading)
   const error = useAppStore((state) => state.error)
   const setEntryType = useAppStore((state) => state.setEntryType)
@@ -22,7 +22,7 @@ export function ConfigPanel() {
         <label>End index<input inputMode="numeric" placeholder="optional" value={endIndex} onChange={(event) => setEndIndex(event.target.value)} /></label>
       </div>
     </> : <p className="mode-description">Reads the etcd key bucket, including stored revisions and tombstones. Upload limit: 128 MB.</p>}
-    <button className="decode-button" disabled={!file || loading} onClick={inspect}>{loading ? 'Inspecting...' : isWal ? 'Decode WAL' : 'Inspect database'} <span>&#8594;</span></button>
+    <button className="decode-button" disabled={!fileCount || loading} onClick={inspect}>{loading ? 'Inspecting...' : isWal ? `Decode ${fileCount} WAL${fileCount === 1 ? '' : 's'}` : `Inspect ${fileCount} database${fileCount === 1 ? '' : 's'}`} <span>&#8594;</span></button>
     {error && <div className="error">{error}</div>}
   </div>
 }

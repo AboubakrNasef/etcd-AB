@@ -3,20 +3,20 @@ import { useAppStore } from '../store'
 
 export function FilePanel() {
   const mode = useAppStore((state) => state.mode)
-  const file = useAppStore((state) => state.file)
-  const chooseFile = useAppStore((state) => state.chooseFile)
+  const files = useAppStore((state) => state.files)
+  const chooseFiles = useAppStore((state) => state.chooseFiles)
   function onChoose(event: ChangeEvent<HTMLInputElement>) {
-    chooseFile(event.target.files?.[0] ?? null)
+    chooseFiles(Array.from(event.target.files ?? []))
   }
   const isWal = mode === 'wal'
   return <div className="dropzone">
     <div className="file-mark">{isWal ? 'WAL' : 'DB'}</div>
-    <h2>{isWal ? 'Choose a WAL segment' : 'Choose an etcd database'}</h2>
-    <p>{isWal ? <>Select a copied <code>.wal</code> file. Keep the live etcd data directory stopped while inspecting it.</> : <>Select a copied <code>member/snap/db</code> file. Stop etcd before making the copy.</>}</p>
-    <label className="file-button">{file ? 'Choose another file' : isWal ? 'Browse WAL file' : 'Browse database file'}
-      <input key={mode} type="file" accept={isWal ? '.wal,application/octet-stream' : '.db,application/octet-stream'} onChange={onChoose} />
+    <h2>{isWal ? 'Choose WAL segments' : 'Choose etcd databases'}</h2>
+    <p>{isWal ? <>Select copied <code>.wal</code> files to compare. Keep the live etcd data directory stopped while inspecting them.</> : <>Select copied <code>member/snap/db</code> files to compare. Stop etcd before making the copies.</>}</p>
+    <label className="file-button">{files.length ? 'Choose files' : isWal ? 'Browse WAL files' : 'Browse database files'}
+      <input key={mode} type="file" multiple accept={isWal ? '.wal,application/octet-stream' : '.db,application/octet-stream'} onChange={onChoose} />
     </label>
-    {file && <div className="file-name">{file.name}<span>{formatBytes(file.size)}</span></div>}
+    {files.map((file) => <div className="file-name" key={`${file.name}-${file.lastModified}`}>{file.name}<span>{formatBytes(file.size)}</span></div>)}
   </div>
 }
 

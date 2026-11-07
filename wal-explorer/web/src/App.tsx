@@ -7,7 +7,7 @@ import { ResultsPanel } from './components/ResultsPanel'
 import { useAppStore } from './store'
 
 export default function App() {
-  const hasResult = useAppStore((state) => state.result !== null)
+  const results = useAppStore((state) => state.results)
 
   return <main className="shell">
     <Header />
@@ -16,7 +16,7 @@ export default function App() {
       <FilePanel />
       <ConfigPanel />
     </section>
-    {hasResult ? <ResultsPanel /> : <EmptyState />}
+    {results.length ? <div className="comparison-grid">{results.map((result, index) => <ResultsPanel key={`${result.fileName}-${index}`} result={result} />)}</div> : <EmptyState />}
     <footer>WAL Explorer · etcd files are read only and are never written back to disk</footer>
   </main>
 }

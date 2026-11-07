@@ -4,6 +4,17 @@ This document describes the etcd test integration with [Antithesis].
 Antithesis provides a testing platform that allows you to explore edge cases, race conditions, and rare
 bugs that are difficult or impossible to reproduce in a normal environment.
 
+## What Antithesis is used for
+
+Antithesis is used to check that etcd remains correct when unusual failures and timing conditions occur.
+It runs the robustness workload in a deterministic simulation, injecting faults such as process pauses
+and network problems while tracking etcd's correctness assertions. If an assertion fails, the platform
+can reproduce the execution so the bug can be investigated.
+
+Use it to find bugs that ordinary tests may miss, especially bugs involving several cluster members,
+concurrent client operations, and failures. It complements regular unit and integration tests; it does
+not replace them. The [robustness tests](../robustness) define the workload and checks used by this setup.
+
 [![Watch the video](https://img.youtube.com/vi/qgCpdb2sbh8/hqdefault.jpg)](https://youtu.be/qgCpdb2sbh8)
 
 [Antithesis]: https://antithesis.com/

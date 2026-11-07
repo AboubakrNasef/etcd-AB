@@ -47,13 +47,14 @@ npm install
 npm run dev
 ```
 
-Open `http://127.0.0.1:5173` and choose a copied WAL segment. The UI is
-read-only and uploads the selected file to the local API for decoding.
+Open `http://127.0.0.1:5173` and choose one or more copied WAL segments. The UI
+decodes them separately and displays each result side by side in a horizontally
+scrollable view. It is read-only and uploads the selected files to the local API.
 
-Use the **Database** mode to select a copied `member/snap/db` file. It reads
-the etcd `key` bucket, including historical revisions and tombstones. Stop
-etcd before copying its database. Uploads are limited to 128 MB.
+Use the **Database** mode to select one or more copied `member/snap/db` files.
+It reads the etcd `key` bucket, including historical revisions and tombstones.
+Stop etcd before copying its database. Each upload is limited to 128 MB.
 
-The app accepts a single WAL segment. For complete history, use
-`go run ./tools/etcd-dump-logs <data-dir>`, which reads the complete
+The app decodes each selected WAL segment independently. For complete history,
+use `go run ./tools/etcd-dump-logs <data-dir>`, which reads the complete
 `member/wal` directory and understands segment ordering.
